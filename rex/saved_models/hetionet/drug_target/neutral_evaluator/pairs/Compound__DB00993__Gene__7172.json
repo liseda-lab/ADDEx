@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00993 - Gene::7172",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6233,
+        "final_score": 0.6233
+      },
+      "nodes": [
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatosplenic T-cell Lymphoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mercaptopurine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tpmt",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azathioprine",
+          "target": "Hepatosplenic T-cell Lymphoma",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatosplenic T-cell Lymphoma",
+          "target": "Mercaptopurine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mercaptopurine",
+          "target": "Tpmt",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azathioprine,Mercaptopurine": [
+          "Purines"
+        ]
+      },
+      "id": "path_7815"
+    }
+  ],
+  "verbalization": ""
+}

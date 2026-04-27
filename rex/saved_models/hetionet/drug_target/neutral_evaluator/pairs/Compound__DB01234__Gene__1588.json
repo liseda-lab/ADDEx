@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01234 - Gene::1588",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6057,
+        "final_score": 0.6057
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        },
+        {
+          "id": "Testosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Cyp3a43",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a43",
+          "target": "Testosterone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Testosterone",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Testosterone": [
+          "17-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_20941"
+    }
+  ],
+  "verbalization": ""
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00446 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5239,
+        "final_score": 0.5239
+      },
+      "nodes": [
+        {
+          "id": "Chloramphenicol",
+          "type": "Compound"
+        },
+        {
+          "id": "Typhoid Fever",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ciprofloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chloramphenicol",
+          "target": "Typhoid Fever",
+          "label": "causes"
+        },
+        {
+          "source": "Typhoid Fever",
+          "target": "Ciprofloxacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ciprofloxacin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chloramphenicol,Ciprofloxacin": [
+          "Hydroxides",
+          "Antibiotic"
+        ]
+      },
+      "id": "path_26226"
+    }
+  ],
+  "verbalization": ""
+}

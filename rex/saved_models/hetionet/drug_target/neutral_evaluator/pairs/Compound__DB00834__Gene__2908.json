@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00834 - Gene::2908",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6454,
+        "final_score": 0.6454
+      },
+      "nodes": [
+        {
+          "id": "Mifepristone",
+          "type": "Compound"
+        },
+        {
+          "id": "Pgr",
+          "type": "Gene"
+        },
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mifepristone",
+          "target": "Pgr",
+          "label": "binds"
+        },
+        {
+          "source": "Pgr",
+          "target": "Spironolactone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Spironolactone",
+          "target": "Nr3c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mifepristone,Spironolactone": [
+          "3-Oxo-Delta(4) Steroid"
+        ]
+      },
+      "id": "path_8301"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5729,
+        "final_score": 0.5729
+      },
+      "nodes": [
+        {
+          "id": "Mifepristone",
+          "type": "Compound"
+        },
+        {
+          "id": "Pituitary-dependent Cushing's Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mifepristone",
+          "target": "Pituitary-dependent Cushing's Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Pituitary-dependent Cushing's Syndrome",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Nr3c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mifepristone,Methylprednisolone": [
+          "3-Oxo-Delta(4) Steroid",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_8302"
+    }
+  ],
+  "verbalization": ""
+}

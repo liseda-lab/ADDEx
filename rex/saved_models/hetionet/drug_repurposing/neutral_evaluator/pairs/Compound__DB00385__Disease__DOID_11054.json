@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00385 - Disease::DOID:11054",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4274,
+        "final_score": 0.4274
+      },
+      "nodes": [
+        {
+          "id": "Valrubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Anorectal Discomfort",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Urinary Bladder Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valrubicin",
+          "target": "Anorectal Discomfort",
+          "label": "causes"
+        },
+        {
+          "source": "Anorectal Discomfort",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Urinary Bladder Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valrubicin,Etoposide": [
+          "Topoisomerase-Ii Inhibitor",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_660"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00445 - Disease::DOID:2998",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4794,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Myeloid Leukaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Acute Myeloid Leukaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Myeloid Leukaemia",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epirubicin,Ifosfamide": [
+          "Dna Binding Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_570"
+    }
+  ]
+}

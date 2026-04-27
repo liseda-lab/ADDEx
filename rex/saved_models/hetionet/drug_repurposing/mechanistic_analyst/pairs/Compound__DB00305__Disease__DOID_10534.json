@@ -1,0 +1,57 @@
+{
+  "id": "Compound::DB00305 - Disease::DOID:10534",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3759,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Mitomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cardiotoxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mitomycin",
+          "target": "Cardiotoxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Cardiotoxicity",
+          "target": "Fluorouracil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluorouracil",
+          "target": "Stomach Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mitomycin,Fluorouracil": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Organic Cyclic Compound"
+        ],
+        "Cardiotoxicity,Stomach Cancer": [
+          "Finding"
+        ]
+      },
+      "id": "path_1047"
+    }
+  ]
+}

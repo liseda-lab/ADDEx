@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB05389 - Disease::DOID:2841",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4861,
+        "final_score": 0.4861
+      },
+      "nodes": [
+        {
+          "id": "Wf10",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ipratropium Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Wf10",
+          "target": "Lung Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Lung Disorder",
+          "target": "Ipratropium Bromide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ipratropium Bromide",
+          "target": "Asthma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lung Disorder,Asthma": [
+          "Lung Disorder"
+        ]
+      },
+      "id": "path_696"
+    }
+  ]
+}

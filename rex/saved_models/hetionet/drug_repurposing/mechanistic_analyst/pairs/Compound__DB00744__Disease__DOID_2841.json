@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00744 - Disease::DOID:2841",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5028,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Zileuton",
+          "type": "Compound"
+        },
+        {
+          "id": "Traumatic Liver Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zafirlukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zileuton",
+          "target": "Traumatic Liver Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Traumatic Liver Injury",
+          "target": "Zafirlukast",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zafirlukast",
+          "target": "Asthma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zileuton,Zafirlukast": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_43"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4925,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Zileuton",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Rigidity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Salmeterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zileuton",
+          "target": "Muscle Rigidity",
+          "label": "causes"
+        },
+        {
+          "source": "Muscle Rigidity",
+          "target": "Salmeterol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Salmeterol",
+          "target": "Asthma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zileuton,Salmeterol": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_44"
+    }
+  ]
+}

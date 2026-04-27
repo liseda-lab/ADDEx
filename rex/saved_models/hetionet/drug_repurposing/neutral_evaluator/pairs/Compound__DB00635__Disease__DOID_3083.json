@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00635 - Disease::DOID:3083",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6291,
+        "final_score": 0.6291
+      },
+      "nodes": [
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oropharyngeal Candidiasis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tiotropium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chronic Obstructive Pulmonary Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisone",
+          "target": "Oropharyngeal Candidiasis",
+          "label": "causes"
+        },
+        {
+          "source": "Oropharyngeal Candidiasis",
+          "target": "Tiotropium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tiotropium",
+          "target": "Chronic Obstructive Pulmonary Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oropharyngeal Candidiasis,Chronic Obstructive Pulmonary Disease": [
+          "Non-Neoplastic Disorder"
+        ],
+        "Prednisone,Tiotropium": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_162"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3904,
+        "final_score": 0.3904
+      },
+      "nodes": [
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        },
+        {
+          "id": "Intercostal Muscle",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Chronic Obstructive Pulmonary Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisone",
+          "target": "Asthma",
+          "label": "treats"
+        },
+        {
+          "source": "Asthma",
+          "target": "Intercostal Muscle",
+          "label": "localizes"
+        },
+        {
+          "source": "Intercostal Muscle",
+          "target": "Chronic Obstructive Pulmonary Disease",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asthma,Chronic Obstructive Pulmonary Disease": [
+          "Chronic Obstructive Pulmonary Disease"
+        ]
+      },
+      "id": "path_163"
+    }
+  ]
+}

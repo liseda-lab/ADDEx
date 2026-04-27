@@ -1,0 +1,216 @@
+{
+  "id": "Compound::DB00773 - Disease::DOID:2994",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4871,
+        "final_score": 0.4871
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Vinblastine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Vinblastine",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        }
+      ],
+      "id": "path_1"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4713,
+        "final_score": 0.4713
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Albumin Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Serum Albumin Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Albumin Decreased",
+          "target": "Methotrexate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        }
+      ],
+      "id": "path_2"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4562,
+        "final_score": 0.4562
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Blindness Cortical",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Blindness Cortical",
+          "label": "causes"
+        },
+        {
+          "source": "Blindness Cortical",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        }
+      ],
+      "id": "path_3"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4508,
+        "final_score": 0.4508
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Virilism",
+          "type": "Symptom"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Virilism",
+          "label": "presents"
+        },
+        {
+          "source": "Virilism",
+          "target": "Germ Cell Cancer",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_4"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4508,
+        "final_score": 0.4508
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Hearing Loss, High-frequency",
+          "type": "Symptom"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Hearing Loss, High-frequency",
+          "label": "presents"
+        },
+        {
+          "source": "Hearing Loss, High-frequency",
+          "target": "Germ Cell Cancer",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_5"
+    }
+  ],
+  "verbalization": "Etoposide is implicated in the pathogenesis of Germ Cell Cancer through multiple mechanistic pathways. The evidence suggests that Etoposide can directly treat Testicular Cancer, which in turn is associated with Germ Cell Cancer, and that Etoposide can cause Testicular Cancer through various mechanisms, including the induction of Virilism and Hearing Loss, High-frequency, both of which are linked to Germ Cell Cancer. Additionally, Etoposide is linked to the treatment of Germ Cell Cancer via indirect pathways, such as through the effects of Methotrexate and Cisplatin, which are themselves associated with Germ Cell Cancer. These findings collectively suggest that Etoposide may play a role in the development or treatment of Germ Cell Cancer through a complex network of biological interactions. The strength of the evidence is supported by multiple pathways, but the exact mechanisms by which Etoposide influences Germ Cell Cancer remain to be fully elucidated."
+}

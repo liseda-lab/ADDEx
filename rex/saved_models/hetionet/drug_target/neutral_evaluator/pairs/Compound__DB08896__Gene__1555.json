@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB08896 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5295,
+        "final_score": 0.5295
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a9",
+          "type": "Gene"
+        },
+        {
+          "id": "Ketobemidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Ugt1a9",
+          "label": "binds"
+        },
+        {
+          "source": "Ugt1a9",
+          "target": "Ketobemidone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ketobemidone",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Regorafenib,Ketobemidone": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_14148"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4559,
+        "final_score": 0.4559
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c9 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Cytochrome P450 2c9 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c9 Inhibitors",
+          "target": "Efavirenz",
+          "label": "includes"
+        },
+        {
+          "source": "Efavirenz",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Regorafenib,Efavirenz": [
+          "Enzyme Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_14149"
+    }
+  ],
+  "verbalization": ""
+}

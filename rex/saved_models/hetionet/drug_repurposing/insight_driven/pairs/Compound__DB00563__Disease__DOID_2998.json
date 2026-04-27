@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:2998",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5179,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Germ Cell Cancer",
+          "target": "Etoposide",
+          "label": "is treated by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Etoposide": [
+          "Antineoplastic Agent",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_572"
+    }
+  ]
+}

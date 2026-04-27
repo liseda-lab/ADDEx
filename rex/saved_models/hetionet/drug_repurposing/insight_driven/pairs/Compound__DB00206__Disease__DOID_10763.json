@@ -1,0 +1,56 @@
+{
+  "id": "Compound::DB00206 - Disease::DOID:10763",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4674,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Reserpine",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Engorgement",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Reserpine",
+          "target": "Breast Engorgement",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Engorgement",
+          "target": "Nifedipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Breast Engorgement,Hypertension (disease)": [
+          "Finding By Site Or System"
+        ],
+        "Reserpine,Nifedipine": [
+          "Methyl Ester"
+        ]
+      },
+      "id": "path_198"
+    }
+  ]
+}

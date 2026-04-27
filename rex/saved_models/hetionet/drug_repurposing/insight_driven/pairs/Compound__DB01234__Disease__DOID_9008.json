@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01234 - Disease::DOID:9008",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4096,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriatic Arthritis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        },
+        {
+          "source": "Atopic Dermatitis",
+          "target": "Triamcinolone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Triamcinolone",
+          "target": "Psoriatic Arthritis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Triamcinolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_256"
+    }
+  ]
+}

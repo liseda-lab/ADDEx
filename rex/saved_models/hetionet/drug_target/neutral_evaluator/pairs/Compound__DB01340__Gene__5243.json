@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01340 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6381,
+        "final_score": 0.6381
+      },
+      "nodes": [
+        {
+          "id": "Cilazapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Perindopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cilazapril",
+          "target": "Slc15a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a2",
+          "target": "Perindopril",
+          "label": "is bound by"
+        },
+        {
+          "source": "Perindopril",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cilazapril,Perindopril": [
+          "Ace Inhibitor",
+          "Dicarboxylic Acid Monoester"
+        ]
+      },
+      "id": "path_10608"
+    },
+    {
+      "score": {
+        "ic_mean": 0.497,
+        "final_score": 0.497
+      },
+      "nodes": [
+        {
+          "id": "Cilazapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Decompensation Cardiac",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mannitol",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cilazapril",
+          "target": "Decompensation Cardiac",
+          "label": "causes"
+        },
+        {
+          "source": "Decompensation Cardiac",
+          "target": "Mannitol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mannitol",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cilazapril,Mannitol": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_10609"
+    }
+  ],
+  "verbalization": ""
+}

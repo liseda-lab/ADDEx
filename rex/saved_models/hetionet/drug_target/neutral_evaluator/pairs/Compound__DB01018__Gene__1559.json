@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01018 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5521,
+        "final_score": 0.5521
+      },
+      "nodes": [
+        {
+          "id": "Guanfacine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Desloratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Guanfacine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Desloratadine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Desloratadine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Guanfacine,Desloratadine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_24728"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4901,
+        "final_score": 0.4901
+      },
+      "nodes": [
+        {
+          "id": "Guanfacine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertensive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tranylcypromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Guanfacine",
+          "target": "Hypertensive",
+          "label": "causes"
+        },
+        {
+          "source": "Hypertensive",
+          "target": "Tranylcypromine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tranylcypromine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Guanfacine,Tranylcypromine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_24729"
+    }
+  ],
+  "verbalization": ""
+}

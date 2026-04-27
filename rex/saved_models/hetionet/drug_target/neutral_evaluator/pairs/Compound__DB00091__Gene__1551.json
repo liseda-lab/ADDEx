@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00091 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4431,
+        "final_score": 0.4431
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Graft Loss",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tacrolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Graft Loss",
+          "label": "causes"
+        },
+        {
+          "source": "Graft Loss",
+          "target": "Tacrolimus",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tacrolimus",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Tacrolimus": [
+          "Calcineurin Inhibitor",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_25147"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4276,
+        "final_score": 0.4276
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Saquinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Saquinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Saquinavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Saquinavir": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_25148"
+    }
+  ],
+  "verbalization": ""
+}

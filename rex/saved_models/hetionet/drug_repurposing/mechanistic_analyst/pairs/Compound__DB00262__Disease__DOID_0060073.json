@@ -1,0 +1,55 @@
+{
+  "id": "Compound::DB00262 - Disease::DOID:0060073",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5615,
+        "final_score": 0.2808,
+        "agentic_score": 0
+      },
+      "nodes": [
+        {
+          "id": "Carmustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Mechlorethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphatic System Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carmustine",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Mechlorethamine",
+          "label": "includes"
+        },
+        {
+          "source": "Mechlorethamine",
+          "target": "Lymphatic System Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carmustine,Mechlorethamine": [
+          "Organochlorine Compound",
+          "Antineoplastic Alkylating Agent"
+        ]
+      },
+      "id": "path_98"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "COMPOUND:446 - DISEASE:800",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6087,
+        "final_score": 0.6087
+      },
+      "nodes": [
+        {
+          "id": "imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Personality Disorders",
+          "type": "Indication"
+        },
+        {
+          "id": "clomipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "interferon regulatory factor 6",
+          "type": "Gene"
+        },
+        {
+          "id": "Denture stomatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "imipramine",
+          "target": "Personality Disorders",
+          "label": "has indication"
+        },
+        {
+          "source": "Personality Disorders",
+          "target": "clomipramine",
+          "label": "is indication of"
+        },
+        {
+          "source": "clomipramine",
+          "target": "interferon regulatory factor 6",
+          "label": "is affecting"
+        },
+        {
+          "source": "interferon regulatory factor 6",
+          "target": "Denture stomatitis",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_463"
+    }
+  ],
+  "verbalization": ""
+}

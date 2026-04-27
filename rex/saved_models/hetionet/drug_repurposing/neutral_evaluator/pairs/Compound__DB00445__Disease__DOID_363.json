@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00445 - Disease::DOID:363",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5268,
+        "final_score": 0.5268
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Premature Menopause",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Medroxyprogesterone Acetate",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Premature Menopause",
+          "label": "causes"
+        },
+        {
+          "source": "Premature Menopause",
+          "target": "Medroxyprogesterone Acetate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Medroxyprogesterone Acetate",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epirubicin,Medroxyprogesterone Acetate": [
+          "Cyclic Ketone"
+        ]
+      },
+      "id": "path_628"
+    }
+  ]
+}

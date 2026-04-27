@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB00277 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6364,
+        "final_score": 0.6364
+      },
+      "nodes": [
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theophylline",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Caffeine",
+          "label": "includes"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theophylline,Xanthines": [
+          "Purines"
+        ],
+        "Theophylline,Caffeine": [
+          "Methylxanthine"
+        ],
+        "Xanthines,Caffeine": [
+          "Purines"
+        ]
+      },
+      "id": "path_16690"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4528,
+        "final_score": 0.4528
+      },
+      "nodes": [
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theophylline",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Pravastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theophylline,Pravastatin": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_16691"
+    }
+  ],
+  "verbalization": ""
+}

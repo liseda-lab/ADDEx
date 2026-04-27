@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00831 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6268,
+        "final_score": 0.6268
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Fluphenazine",
+          "label": "includes"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Trifluoperazine,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Fluphenazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_909"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5284,
+        "final_score": 0.5284
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Duloxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Duloxetine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Duloxetine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Duloxetine": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_910"
+    }
+  ],
+  "verbalization": ""
+}

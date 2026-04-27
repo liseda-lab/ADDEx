@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB00970 - Disease::DOID:4159",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4536,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Dacarbazine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Dacarbazine",
+          "target": "Skin Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Dacarbazine": [
+          "Dna Binding Agent",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_28"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3916,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Sepsis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Neutropenic Sepsis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Sepsis",
+          "target": "Fluorouracil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluorouracil",
+          "target": "Skin Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Fluorouracil": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_29"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3962,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Paraparesis",
+          "type": "Symptom"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Paraparesis",
+          "label": "presents"
+        },
+        {
+          "source": "Paraparesis",
+          "target": "Skin Cancer",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_30"
+    }
+  ]
+}

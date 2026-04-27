@@ -1,0 +1,48 @@
+{
+  "id": "Compound::DB01204 - Disease::DOID:1612",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3257,
+        "final_score": 0.3257
+      },
+      "nodes": [
+        {
+          "id": "Mitoxantrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostate Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Bone Tissue",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Breast Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mitoxantrone",
+          "target": "Prostate Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Prostate Cancer",
+          "target": "Bone Tissue",
+          "label": "localizes"
+        },
+        {
+          "source": "Bone Tissue",
+          "target": "Breast Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_703"
+    }
+  ]
+}

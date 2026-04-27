@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00745 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6571,
+        "final_score": 0.6571
+      },
+      "nodes": [
+        {
+          "id": "Modafinil",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Sympathetic Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Benzphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Modafinil",
+          "target": "Increased Sympathetic Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Sympathetic Activity",
+          "target": "Benzphetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Benzphetamine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Modafinil,Benzphetamine": [
+          "Organonitrogen Compound",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_29914"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4725,
+        "final_score": 0.4725
+      },
+      "nodes": [
+        {
+          "id": "Modafinil",
+          "type": "Compound"
+        },
+        {
+          "id": "Psychiatric Symptom",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Modafinil",
+          "target": "Psychiatric Symptom",
+          "label": "causes"
+        },
+        {
+          "source": "Psychiatric Symptom",
+          "target": "Efavirenz",
+          "label": "is caused by"
+        },
+        {
+          "source": "Efavirenz",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Modafinil,Efavirenz": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_29915"
+    }
+  ],
+  "verbalization": ""
+}

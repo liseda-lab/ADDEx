@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00877 - Gene::10599",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4444,
+        "final_score": 0.4444
+      },
+      "nodes": [
+        {
+          "id": "Sirolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Graft Loss",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sirolimus",
+          "target": "Graft Loss",
+          "label": "causes"
+        },
+        {
+          "source": "Graft Loss",
+          "target": "Cyclosporine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclosporine",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sirolimus,Cyclosporine": [
+          "Immunosuppressant",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_22423"
+    }
+  ],
+  "verbalization": ""
+}

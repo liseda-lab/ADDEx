@@ -1,0 +1,250 @@
+{
+  "id": "Compound::DB00799 - Disease::DOID:8893",
+  "verbalization": "The evidence suggests a potential relationship between Tazarotene and the disease Psoriasis, as Tazarotene is linked through multiple pathways to Psoriasis through its inclusion in retinoic acid agents and its role in causing various skin-related symptoms. The shared pathway involving Calcipotriol, a retinoid, and its treatment of Psoriasis indicates a mechanistic link between Tazarotene and Psoriasis. Additionally, Tazarotene's involvement in causing skin-related conditions such as erythema, exfoliation, and pain, all of which are associated with Psoriasis, further supports the proposed relationship. However, the evidence is limited to direct causal relationships and does not provide direct evidence of the compound's effect on the disease at the molecular level. The low scores in some paths suggest that the relationship may be indirect or require further investigation.",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6597,
+        "final_score": 0.5382,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinoids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Retinoids",
+          "label": "is included in"
+        },
+        {
+          "source": "Retinoids",
+          "target": "Acitretin",
+          "label": "includes"
+        },
+        {
+          "source": "Acitretin",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tazarotene,Acitretin": [
+          "Retinoic Acid Agent",
+          "Retinoid"
+        ],
+        "Tazarotene,Retinoids": [
+          "Retinoid"
+        ],
+        "Retinoids,Acitretin": [
+          "Retinoid"
+        ]
+      },
+      "id": "path_1"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5113,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Application Site Erythema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Calcipotriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Application Site Erythema",
+          "label": "causes"
+        },
+        {
+          "source": "Application Site Erythema",
+          "target": "Calcipotriol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Calcipotriol",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tazarotene,Calcipotriol": [
+          "Polycyclic Compound"
+        ]
+      },
+      "id": "path_2"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5037,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Localized Exfoliation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Calcipotriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Localized Exfoliation",
+          "label": "causes"
+        },
+        {
+          "source": "Localized Exfoliation",
+          "target": "Calcipotriol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Calcipotriol",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tazarotene,Calcipotriol": [
+          "Polycyclic Compound"
+        ]
+      },
+      "id": "path_3"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4938,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Instillation Site Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Calcipotriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Instillation Site Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Instillation Site Pain",
+          "target": "Calcipotriol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Calcipotriol",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tazarotene,Calcipotriol": [
+          "Polycyclic Compound"
+        ]
+      },
+      "id": "path_4"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4377,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Pain Of Skin",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methoxsalen",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Pain Of Skin",
+          "label": "causes"
+        },
+        {
+          "source": "Pain Of Skin",
+          "target": "Methoxsalen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methoxsalen",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tazarotene,Methoxsalen": [
+          "Antineoplastic Agent",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_5"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:2377",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4484,
+        "final_score": 0.4484
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "X-linked Lymphoproliferative Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Multiple Sclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "X-linked Lymphoproliferative Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "X-linked Lymphoproliferative Syndrome",
+          "target": "Azathioprine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Multiple Sclerosis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Azathioprine": [
+          "Antimetabolite",
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "X-linked Lymphoproliferative Syndrome,Multiple Sclerosis": [
+          "Immune System Disorder"
+        ]
+      },
+      "id": "path_56"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB00635 - Disease::DOID:9008",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5932,
+        "final_score": 0.3799,
+        "agentic_score": 0.1667
+      },
+      "nodes": [
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Corticosteroid Hormone Receptor Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriatic Arthritis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisone",
+          "target": "Corticosteroid Hormone Receptor Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Corticosteroid Hormone Receptor Agonists",
+          "target": "Triamcinolone",
+          "label": "includes"
+        },
+        {
+          "source": "Triamcinolone",
+          "target": "Psoriatic Arthritis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisone,Triamcinolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_416"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4216,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        },
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriatic Arthritis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisone",
+          "target": "Asthma",
+          "label": "treats"
+        },
+        {
+          "source": "Asthma",
+          "target": "Triamcinolone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Triamcinolone",
+          "target": "Psoriatic Arthritis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisone,Triamcinolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ],
+        "Asthma,Psoriatic Arthritis": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_417"
+    }
+  ]
+}

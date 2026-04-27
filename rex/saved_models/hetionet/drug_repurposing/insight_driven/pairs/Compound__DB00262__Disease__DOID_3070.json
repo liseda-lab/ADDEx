@@ -1,0 +1,55 @@
+{
+  "id": "Compound::DB00262 - Disease::DOID:3070",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5833,
+        "final_score": 0.3333,
+        "agentic_score": 0.0833
+      },
+      "nodes": [
+        {
+          "id": "Carmustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Temozolomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Malignant Glioma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carmustine",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Temozolomide",
+          "label": "includes"
+        },
+        {
+          "source": "Temozolomide",
+          "target": "Malignant Glioma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carmustine,Temozolomide": [
+          "Heteroorganic Entity",
+          "Antineoplastic Alkylating Agent"
+        ]
+      },
+      "id": "path_68"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB01011 - Gene::1548",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5827,
+        "final_score": 0.5827
+      },
+      "nodes": [
+        {
+          "id": "Metyrapone",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metyrapone",
+          "target": "Allergic Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Allergic Rash",
+          "target": "Azithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azithromycin",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metyrapone,Azithromycin": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_22379"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5689,
+        "final_score": 0.5689
+      },
+      "nodes": [
+        {
+          "id": "Metyrapone",
+          "type": "Compound"
+        },
+        {
+          "id": "Etofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Clofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metyrapone",
+          "target": "Etofibrate",
+          "label": "resembles"
+        },
+        {
+          "source": "Etofibrate",
+          "target": "Clofibrate",
+          "label": "resembles"
+        },
+        {
+          "source": "Clofibrate",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metyrapone,Etofibrate": [
+          "Carbonyl Compound"
+        ],
+        "Metyrapone,Clofibrate": [
+          "Carbonyl Compound"
+        ],
+        "Etofibrate,Clofibrate": [
+          "Carbonyl Compound",
+          "Fibrate Antilipidemic Agent"
+        ]
+      },
+      "id": "path_22380"
+    }
+  ],
+  "verbalization": ""
+}

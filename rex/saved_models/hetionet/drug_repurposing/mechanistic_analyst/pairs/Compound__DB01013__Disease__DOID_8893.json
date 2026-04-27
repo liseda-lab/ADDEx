@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01013 - Disease::DOID:8893",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4519,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Clobetasol Propionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Pustule",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluocinolone Acetonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clobetasol Propionate",
+          "target": "Pustule",
+          "label": "causes"
+        },
+        {
+          "source": "Pustule",
+          "target": "Fluocinolone Acetonide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluocinolone Acetonide",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clobetasol Propionate,Fluocinolone Acetonide": [
+          "11Beta-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_797"
+    }
+  ]
+}

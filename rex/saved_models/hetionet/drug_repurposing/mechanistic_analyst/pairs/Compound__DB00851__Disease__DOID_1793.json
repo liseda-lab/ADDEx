@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00851 - Disease::DOID:1793",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.306,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Skin Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Skin Cancer",
+          "target": "Fluorouracil",
+          "label": "is treated by"
+        },
+        {
+          "source": "Fluorouracil",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dacarbazine,Fluorouracil": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_461"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01197 - Disease::DOID:418",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4617,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Captopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Scald",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Systemic Scleroderma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Captopril",
+          "target": "Scald",
+          "label": "causes"
+        },
+        {
+          "source": "Scald",
+          "target": "Methotrexate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Systemic Scleroderma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Captopril,Methotrexate": [
+          "Carboxylic Acid",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_852"
+    }
+  ]
+}

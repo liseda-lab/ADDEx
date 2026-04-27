@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00215 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4557,
+        "final_score": 0.4557
+      },
+      "nodes": [
+        {
+          "id": "Citalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "Suicidal Tendency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluvoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Citalopram",
+          "target": "Suicidal Tendency",
+          "label": "causes"
+        },
+        {
+          "source": "Suicidal Tendency",
+          "target": "Fluvoxamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluvoxamine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Citalopram,Fluvoxamine": [
+          "Selective Serotonin Reuptake Inhibitor",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_4293"
+    }
+  ],
+  "verbalization": ""
+}

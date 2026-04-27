@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01182 - Gene::3757",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5909,
+        "final_score": 0.5909
+      },
+      "nodes": [
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Proarrhythmia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sotalol",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propafenone",
+          "target": "Proarrhythmia",
+          "label": "causes"
+        },
+        {
+          "source": "Proarrhythmia",
+          "target": "Sotalol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sotalol",
+          "target": "Kcnh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propafenone,Sotalol": [
+          "Ammonium Ion Derivative",
+          "Cation Channel Blocker"
+        ]
+      },
+      "id": "path_24657"
+    }
+  ],
+  "verbalization": ""
+}

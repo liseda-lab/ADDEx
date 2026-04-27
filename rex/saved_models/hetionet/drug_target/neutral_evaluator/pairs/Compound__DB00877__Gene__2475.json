@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00877 - Gene::2475",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7903,
+        "final_score": 0.7903
+      },
+      "nodes": [
+        {
+          "id": "Sirolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Fkbp1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Pimecrolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Mtor",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sirolimus",
+          "target": "Fkbp1a",
+          "label": "binds"
+        },
+        {
+          "source": "Fkbp1a",
+          "target": "Pimecrolimus",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pimecrolimus",
+          "target": "Mtor",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sirolimus,Pimecrolimus": [
+          "Immunosuppressant",
+          "Lactam"
+        ]
+      },
+      "id": "path_6238"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5462,
+        "final_score": 0.5462
+      },
+      "nodes": [
+        {
+          "id": "Sirolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Graft Loss",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tacrolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Mtor",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sirolimus",
+          "target": "Graft Loss",
+          "label": "causes"
+        },
+        {
+          "source": "Graft Loss",
+          "target": "Tacrolimus",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tacrolimus",
+          "target": "Mtor",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sirolimus,Tacrolimus": [
+          "Macrolide Lactam",
+          "Immunosuppressant"
+        ]
+      },
+      "id": "path_6239"
+    }
+  ],
+  "verbalization": ""
+}

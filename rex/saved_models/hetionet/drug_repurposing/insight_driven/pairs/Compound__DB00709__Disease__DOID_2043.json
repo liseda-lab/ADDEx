@@ -1,0 +1,55 @@
+{
+  "id": "Compound::DB00709 - Disease::DOID:2043",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7237,
+        "final_score": 0.5285,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Lamivudine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleoside Reverse Transcriptase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Telbivudine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis B",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lamivudine",
+          "target": "Nucleoside Reverse Transcriptase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleoside Reverse Transcriptase Inhibitors",
+          "target": "Telbivudine",
+          "label": "includes"
+        },
+        {
+          "source": "Telbivudine",
+          "target": "Hepatitis B",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lamivudine,Telbivudine": [
+          "Nucleoside Reverse Transcriptase Inhibitor",
+          "Oxacycle"
+        ]
+      },
+      "id": "path_571"
+    }
+  ]
+}

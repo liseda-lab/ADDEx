@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00445 - Disease::DOID:184",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3875,
+        "final_score": 0.3875
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ureteric Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Ureteric Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Ureteric Obstruction",
+          "target": "Methotrexate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Bone Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epirubicin,Methotrexate": [
+          "Enzyme Inhibitor",
+          "Hydroxides"
+        ]
+      },
+      "id": "path_1020"
+    },
+    {
+      "score": {
+        "ic_mean": 0.279,
+        "final_score": 0.279
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Bone Tissue",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Hematologic Cancer",
+          "target": "Bone Tissue",
+          "label": "localizes"
+        },
+        {
+          "source": "Bone Tissue",
+          "target": "Bone Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_1021"
+    }
+  ]
+}

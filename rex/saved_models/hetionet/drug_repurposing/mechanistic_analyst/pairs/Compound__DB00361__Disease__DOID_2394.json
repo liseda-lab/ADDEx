@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00361 - Disease::DOID:2394",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4886,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Vinorelbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenocarcinoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinorelbine",
+          "target": "Adenocarcinoma",
+          "label": "causes"
+        },
+        {
+          "source": "Adenocarcinoma",
+          "target": "Paclitaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paclitaxel",
+          "target": "Ovarian Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vinorelbine,Paclitaxel": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_1206"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4889,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Vinorelbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Localized Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinorelbine",
+          "target": "Localized Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Localized Rash",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Ovarian Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vinorelbine,Docetaxel": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_1207"
+    }
+  ]
+}

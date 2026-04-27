@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:0060073",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5179,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphatic System Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Muscle Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Muscle Cancer",
+          "target": "Vincristine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Vincristine",
+          "target": "Lymphatic System Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Vincristine": [
+          "Carbonyl Compound",
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_863"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4328,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cranial Nerve Paralysis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphatic System Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Cranial Nerve Paralysis",
+          "label": "causes"
+        },
+        {
+          "source": "Cranial Nerve Paralysis",
+          "target": "Vincristine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vincristine",
+          "target": "Lymphatic System Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Vincristine": [
+          "Carbonyl Compound",
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_864"
+    }
+  ]
+}

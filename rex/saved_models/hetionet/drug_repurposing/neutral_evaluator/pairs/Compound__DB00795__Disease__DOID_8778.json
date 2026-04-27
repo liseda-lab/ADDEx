@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00795 - Disease::DOID:8778",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7947,
+        "final_score": 0.7947
+      },
+      "nodes": [
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aminosalicylic Acids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Mesalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Crohn's Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfasalazine",
+          "target": "Aminosalicylic Acids",
+          "label": "is included in"
+        },
+        {
+          "source": "Aminosalicylic Acids",
+          "target": "Mesalazine",
+          "label": "includes"
+        },
+        {
+          "source": "Mesalazine",
+          "target": "Crohn's Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sulfasalazine,Mesalazine": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_890"
+    }
+  ]
+}

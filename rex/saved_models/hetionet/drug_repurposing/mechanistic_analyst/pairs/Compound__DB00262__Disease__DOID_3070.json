@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00262 - Disease::DOID:3070",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5833,
+        "final_score": 0.375,
+        "agentic_score": 0.1667
+      },
+      "nodes": [
+        {
+          "id": "Carmustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Temozolomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Malignant Glioma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carmustine",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Temozolomide",
+          "label": "includes"
+        },
+        {
+          "source": "Temozolomide",
+          "target": "Malignant Glioma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carmustine,Temozolomide": [
+          "Antineoplastic Alkylating Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_80"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5255,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Carmustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Brain Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Aphasia, Conduction",
+          "type": "Symptom"
+        },
+        {
+          "id": "Malignant Glioma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carmustine",
+          "target": "Brain Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Brain Cancer",
+          "target": "Aphasia, Conduction",
+          "label": "presents"
+        },
+        {
+          "source": "Aphasia, Conduction",
+          "target": "Malignant Glioma",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_81"
+    }
+  ]
+}

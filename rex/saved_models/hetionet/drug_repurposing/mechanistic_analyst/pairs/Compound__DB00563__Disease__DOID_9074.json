@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:9074",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4155,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Depigmentation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Systemic Lupus Erythematosus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Skin Depigmentation",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Depigmentation",
+          "target": "Betamethasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Betamethasone",
+          "target": "Systemic Lupus Erythematosus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Betamethasone": [
+          "Polycyclic Compound"
+        ]
+      },
+      "id": "path_471"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4167,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Depigmentation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Systemic Lupus Erythematosus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Skin Depigmentation",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Depigmentation",
+          "target": "Hydrocortisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Systemic Lupus Erythematosus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Hydrocortisone": [
+          "Polycyclic Compound"
+        ]
+      },
+      "id": "path_472"
+    }
+  ]
+}

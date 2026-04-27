@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00396 - Disease::DOID:363",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5182,
+        "final_score": 0.5182
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cleft Palate",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Medroxyprogesterone Acetate",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Cleft Palate",
+          "label": "causes"
+        },
+        {
+          "source": "Cleft Palate",
+          "target": "Medroxyprogesterone Acetate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Medroxyprogesterone Acetate",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Medroxyprogesterone Acetate": [
+          "3-Oxo-Delta(4) Steroid"
+        ]
+      },
+      "id": "path_1130"
+    }
+  ]
+}

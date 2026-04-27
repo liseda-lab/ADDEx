@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01045 - Gene::6579",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5174,
+        "final_score": 0.5174
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Erythromycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Erythromycin",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Erythromycin": [
+          "Oxacycle",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_30175"
+    }
+  ],
+  "verbalization": ""
+}

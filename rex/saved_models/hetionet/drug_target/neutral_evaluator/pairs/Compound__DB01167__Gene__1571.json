@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01167 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6739,
+        "final_score": 0.6739
+      },
+      "nodes": [
+        {
+          "id": "Itraconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp51a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Econazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Itraconazole",
+          "target": "Cyp51a1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp51a1",
+          "target": "Econazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Econazole",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Itraconazole,Econazole": [
+          "Conazole Antifungal Drug",
+          "Antifungal Agent"
+        ]
+      },
+      "id": "path_17488"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5062,
+        "final_score": 0.5062
+      },
+      "nodes": [
+        {
+          "id": "Itraconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Encephalocele",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Felbamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Itraconazole",
+          "target": "Encephalocele",
+          "label": "causes"
+        },
+        {
+          "source": "Encephalocele",
+          "target": "Felbamate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Felbamate",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Itraconazole,Felbamate": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_17489"
+    }
+  ],
+  "verbalization": ""
+}

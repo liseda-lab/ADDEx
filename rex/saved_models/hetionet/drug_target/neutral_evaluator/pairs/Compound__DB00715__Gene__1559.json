@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00715 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5664,
+        "final_score": 0.5664
+      },
+      "nodes": [
+        {
+          "id": "Paroxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        },
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paroxetine",
+          "target": "Chrm5",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm5",
+          "target": "Promethazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Promethazine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paroxetine,Promethazine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_15052"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3614,
+        "final_score": 0.3614
+      },
+      "nodes": [
+        {
+          "id": "Paroxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Vascular Headache",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paroxetine",
+          "target": "Vascular Headache",
+          "label": "causes"
+        },
+        {
+          "source": "Vascular Headache",
+          "target": "Fluoxetine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluoxetine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paroxetine,Fluoxetine": [
+          "Aromatic Ether",
+          "Selective Serotonin Reuptake Inhibitor"
+        ]
+      },
+      "id": "path_15053"
+    }
+  ],
+  "verbalization": ""
+}

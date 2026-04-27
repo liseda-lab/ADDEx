@@ -1,0 +1,151 @@
+{
+  "id": "Compound::DB01181 - Disease::DOID:2994",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6012,
+        "final_score": 0.3839,
+        "agentic_score": 0.1667
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Etoposide",
+          "label": "is treated by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Etoposide": [
+          "Antineoplastic Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_728"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5489,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Haematotoxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Haematotoxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Haematotoxicity",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Etoposide": [
+          "Antineoplastic Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_729"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5397,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Vinblastine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Vinblastine",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Vinblastine": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_730"
+    }
+  ]
+}

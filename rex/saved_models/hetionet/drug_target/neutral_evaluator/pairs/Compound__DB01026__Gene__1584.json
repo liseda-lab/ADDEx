@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01026 - Gene::1584",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7609,
+        "final_score": 0.7609
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp21a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Glucocorticoid Biosynthesis",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp21a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp21a2",
+          "target": "Glucocorticoid Biosynthesis",
+          "label": "participates"
+        },
+        {
+          "source": "Glucocorticoid Biosynthesis",
+          "target": "Cyp11b1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_16381"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7132,
+        "final_score": 0.7132
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b2",
+          "type": "Gene"
+        },
+        {
+          "id": "Metyrapone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp11b2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp11b2",
+          "target": "Metyrapone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Metyrapone",
+          "target": "Cyp11b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Metyrapone": [
+          "Enzyme Inhibitor",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_16382"
+    }
+  ],
+  "verbalization": ""
+}

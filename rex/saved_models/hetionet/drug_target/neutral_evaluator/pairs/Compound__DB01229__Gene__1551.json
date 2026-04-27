@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01229 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4289,
+        "final_score": 0.4289
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Respiratory Sounds Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fentanyl",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Respiratory Sounds Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Respiratory Sounds Decreased",
+          "target": "Fentanyl",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fentanyl",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Fentanyl": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_15954"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4044,
+        "final_score": 0.4044
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Radiation Pneumonitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Radiation Pneumonitis",
+          "label": "causes"
+        },
+        {
+          "source": "Radiation Pneumonitis",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Docetaxel": [
+          "Tetracyclic Diterpenoid"
+        ]
+      },
+      "id": "path_15955"
+    }
+  ],
+  "verbalization": ""
+}

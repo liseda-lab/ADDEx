@@ -1,0 +1,108 @@
+{
+  "id": "COMPOUND:70 - DISEASE:261",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6012,
+        "final_score": 0.6012
+      },
+      "nodes": [
+        {
+          "id": "rituximab",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 3-2",
+          "type": "Gene"
+        },
+        {
+          "id": "Ludwig's angina",
+          "type": "Disease"
+        },
+        {
+          "id": "ribosomal protein S23 pseudogene 1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arthritis, Infectious",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "rituximab",
+          "target": "keratin associated protein 3-2",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 3-2",
+          "target": "Ludwig's angina",
+          "label": "causes condition"
+        },
+        {
+          "source": "Ludwig's angina",
+          "target": "ribosomal protein S23 pseudogene 1",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "ribosomal protein S23 pseudogene 1",
+          "target": "Arthritis, Infectious",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_1"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5897,
+        "final_score": 0.5897
+      },
+      "nodes": [
+        {
+          "id": "rituximab",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 3-2",
+          "type": "Gene"
+        },
+        {
+          "id": "Ludwig's angina",
+          "type": "Disease"
+        },
+        {
+          "id": "glyceraldehyde-3-phosphate dehydrogenase pseudogene 16",
+          "type": "Gene"
+        },
+        {
+          "id": "Arthritis, Infectious",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "rituximab",
+          "target": "keratin associated protein 3-2",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 3-2",
+          "target": "Ludwig's angina",
+          "label": "causes condition"
+        },
+        {
+          "source": "Ludwig's angina",
+          "target": "glyceraldehyde-3-phosphate dehydrogenase pseudogene 16",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "glyceraldehyde-3-phosphate dehydrogenase pseudogene 16",
+          "target": "Arthritis, Infectious",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_2"
+    }
+  ],
+  "verbalization": "The visible evidence suggests that rituximab may be associated with the development of Arthritis, Infectious through a complex network of molecular interactions. The drug is linked to keratin associated protein 3-2, which is involved in Ludwig's angina, a condition that is causally associated with ribosomal protein S23 pseudogene 1 and glyceraldehyde-3-phosphate dehydrogenase pseudogene 16. These pseudogenes are implicated in the pathogenesis of Arthritis, Infectious, indicating a potential role for these genetic elements in the disease process. The scores from the two paths suggest a moderate level of confidence in this relationship, though the exact mechanisms by which rituximab influences these pseudogenes remain unclear. The evidence highlights a possible pathway where rituximab may contribute to the development of Arthritis, Infectious through the dysregulation of keratin-associated proteins and their downstream effects on ribosomal and glycolytic pseudogenes."
+}

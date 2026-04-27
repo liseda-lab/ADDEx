@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Default (light) theme, applied to :root before data-theme is set, so
+   the brief pre-hydration paint matches the light palette (no legacy flash). */
+:root,
+[data-theme="light"] {
+  --background: #F5F6FA;
+  --foreground: #1F2433;
+  --card: #FFFFFF;
+  --accent: #7FA889;
+}
+
+/* Legacy theme, preserves the OG white-backdrop look with dark navy cards. */
+[data-theme="legacy"] {
+  --background: #FFFFFF;
+  --foreground: #171717;
+  --card: #050F28;
+  --accent: #3366CC;
+}
+
+/* Dark theme, Overleaf grey + GigaScience pastel accents */
+[data-theme="dark"] {
+  --background: #3A3A3A;
+  --foreground: #F0F0F0;
+  --card: #555555;
+  --accent: #A8C8B0;
+}
+
+/* High-contrast accessibility theme, color-blind-safe (Okabe–Ito) */
+[data-theme="highContrast"] {
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --card: #111111;
+  --accent: #56B4E9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Respect the user's motion preference: kill every CSS animation/transition
+   and auto-scroll so nothing moves on users who have enabled the setting.
+   (AnimatedBg's canvas motion is disabled separately in its React hook.) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

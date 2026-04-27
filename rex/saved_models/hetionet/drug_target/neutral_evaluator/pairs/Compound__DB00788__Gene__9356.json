@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00788 - Gene::9356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5572,
+        "final_score": 0.5572
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b7",
+          "type": "Gene"
+        },
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Ugt2b7",
+          "label": "binds"
+        },
+        {
+          "source": "Ugt2b7",
+          "target": "Flurbiprofen",
+          "label": "is bound by"
+        },
+        {
+          "source": "Flurbiprofen",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Flurbiprofen": [
+          "Monocarboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_17662"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4672,
+        "final_score": 0.4672
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Papillary Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etodolac",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Renal Papillary Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Papillary Necrosis",
+          "target": "Etodolac",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etodolac",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Etodolac": [
+          "Monocarboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_17663"
+    }
+  ],
+  "verbalization": ""
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00290 - Disease::DOID:0060073",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5318,
+        "final_score": 0.5318
+      },
+      "nodes": [
+        {
+          "id": "Bleomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Toxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fludarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphatic System Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bleomycin",
+          "target": "Skin Toxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Toxicity",
+          "target": "Fludarabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fludarabine",
+          "target": "Lymphatic System Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bleomycin,Fludarabine": [
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_1059"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "Compound::DB00394 - Disease::DOID:8893",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6035,
+        "final_score": 0.4268,
+        "agentic_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Beclomethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Flumethasone Pivalate",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluocinonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Beclomethasone",
+          "target": "Flumethasone Pivalate",
+          "label": "resembles"
+        },
+        {
+          "source": "Flumethasone Pivalate",
+          "target": "Fluocinonide",
+          "label": "resembles"
+        },
+        {
+          "source": "Fluocinonide",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Beclomethasone,Flumethasone Pivalate": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ],
+        "Beclomethasone,Fluocinonide": [
+          "Organic Molecular Entity",
+          "Therapeutic Glucocorticoid"
+        ],
+        "Flumethasone Pivalate,Fluocinonide": [
+          "Organic Molecular Entity",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_313"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4754,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Beclomethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Beclomethasone",
+          "target": "Asthma",
+          "label": "treats"
+        },
+        {
+          "source": "Asthma",
+          "target": "Hydrocortisone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asthma,Psoriasis": [
+          "Disorder By Site"
+        ],
+        "Beclomethasone,Hydrocortisone": [
+          "17Alpha-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_314"
+    }
+  ]
+}

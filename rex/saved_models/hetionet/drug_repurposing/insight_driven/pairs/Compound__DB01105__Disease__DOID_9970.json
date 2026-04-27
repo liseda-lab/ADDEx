@@ -1,0 +1,153 @@
+{
+  "id": "Compound::DB01105 - Disease::DOID:9970",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7721,
+        "final_score": 0.8861,
+        "agentic_score": 1
+      },
+      "nodes": [
+        {
+          "id": "Sibutramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Appetite Suppression",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Phendimetrazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Obesity",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sibutramine",
+          "target": "Appetite Suppression",
+          "label": "is included in"
+        },
+        {
+          "source": "Appetite Suppression",
+          "target": "Phendimetrazine",
+          "label": "includes"
+        },
+        {
+          "source": "Phendimetrazine",
+          "target": "Obesity",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sibutramine,Phendimetrazine": [
+          "Anorexiant",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_473"
+    },
+    {
+      "score": {
+        "ic_mean": 0.724,
+        "final_score": 0.612,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Sibutramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Appetite Suppression",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Obesity",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sibutramine",
+          "target": "Appetite Suppression",
+          "label": "is included in"
+        },
+        {
+          "source": "Appetite Suppression",
+          "target": "Methamphetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Obesity",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sibutramine,Methamphetamine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_474"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6377,
+        "final_score": 0.3189,
+        "agentic_score": 0
+      },
+      "nodes": [
+        {
+          "id": "Sibutramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tourette's Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Obesity",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sibutramine",
+          "target": "Tourette's Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Tourette's Disorder",
+          "target": "Methamphetamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Obesity",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sibutramine,Methamphetamine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_475"
+    }
+  ]
+}

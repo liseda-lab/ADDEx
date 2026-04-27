@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+data_input_dir="public/datasets/oregano/drug_repurposing/"
+vocab_dir="public/datasets/oregano/drug_repurposing/vocab"
+total_iterations=150
+path_length=4
+hidden_size=32
+embedding_size=32
+batch_size=128
+learning_rate=0.0006
+beta=0.05
+num_rollouts=30
+LSTM_layers=2
+base_output_dir="output/oregano/drug_repurposing/insight_driven/"
+Lambda=0.02
+eval_every=10
+use_entity_embeddings=1
+train_entity_embeddings=1
+train_relation_embeddings=1
+max_num_actions=400
+early_stopping=1
+IC_reward=1
+agentic_ai_enabled=1
+persona_path="public/personas/insight_driven.txt"
+load_model=1
+model_load_dir="rex/saved_models/oregano/drug_repurposing/insight_driven/best_ckpt.json"
+viz_mode=1

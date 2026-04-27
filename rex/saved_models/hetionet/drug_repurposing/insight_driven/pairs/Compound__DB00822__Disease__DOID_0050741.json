@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00822 - Disease::DOID:0050741",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5161,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Disulfiram",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Fulminant",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Citalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "Alcohol Dependence",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disulfiram",
+          "target": "Hepatitis Fulminant",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Fulminant",
+          "target": "Citalopram",
+          "label": "is caused by"
+        },
+        {
+          "source": "Citalopram",
+          "target": "Alcohol Dependence",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disulfiram,Citalopram": [
+          "Organochalcogen Compound"
+        ]
+      },
+      "id": "path_69"
+    }
+  ]
+}

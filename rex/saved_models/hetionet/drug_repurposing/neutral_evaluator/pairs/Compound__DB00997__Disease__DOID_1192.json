@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00997 - Disease::DOID:1192",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4483,
+        "final_score": 0.4483
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ureteric Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Melphalan",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Ureteric Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Ureteric Obstruction",
+          "target": "Melphalan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Melphalan",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Melphalan": [
+          "Nitrogen Molecular Entity",
+          "Dna Binding Agent"
+        ]
+      },
+      "id": "path_402"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4309,
+        "final_score": 0.4309
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Thyroid Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Muscle Of Neck",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Thyroid Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Thyroid Cancer",
+          "target": "Muscle Of Neck",
+          "label": "localizes"
+        },
+        {
+          "source": "Muscle Of Neck",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_403"
+    }
+  ]
+}

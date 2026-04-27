@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00178 - Disease::DOID:9744",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4137,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Hypotension, Orthostatic",
+          "type": "Symptom"
+        },
+        {
+          "id": "Type 1 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Hypotension, Orthostatic",
+          "label": "presents"
+        },
+        {
+          "source": "Hypotension, Orthostatic",
+          "target": "Type 1 Diabetes Mellitus",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hypertension (disease),Hypotension, Orthostatic": [
+          "Blood Pressure Finding"
+        ]
+      },
+      "id": "path_844"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4846,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Fetal Distress",
+          "type": "Symptom"
+        },
+        {
+          "id": "Type 1 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Fetal Distress",
+          "label": "presents"
+        },
+        {
+          "source": "Fetal Distress",
+          "target": "Type 1 Diabetes Mellitus",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fetal Distress,Type 1 Diabetes Mellitus": [
+          "Disease Or Disorder"
+        ]
+      },
+      "id": "path_845"
+    }
+  ]
+}

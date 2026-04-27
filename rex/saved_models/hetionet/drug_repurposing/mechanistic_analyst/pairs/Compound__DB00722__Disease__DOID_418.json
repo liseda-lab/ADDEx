@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00722 - Disease::DOID:418",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6223,
+        "final_score": 0.3111,
+        "agentic_score": 0
+      },
+      "nodes": [
+        {
+          "id": "Lisinopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Dilated Cardiomyopathy",
+          "type": "Disease"
+        },
+        {
+          "id": "Edema, Cardiac",
+          "type": "Symptom"
+        },
+        {
+          "id": "Systemic Scleroderma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisinopril",
+          "target": "Dilated Cardiomyopathy",
+          "label": "treats"
+        },
+        {
+          "source": "Dilated Cardiomyopathy",
+          "target": "Edema, Cardiac",
+          "label": "presents"
+        },
+        {
+          "source": "Edema, Cardiac",
+          "target": "Systemic Scleroderma",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dilated Cardiomyopathy,Systemic Scleroderma": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_89"
+    }
+  ]
+}

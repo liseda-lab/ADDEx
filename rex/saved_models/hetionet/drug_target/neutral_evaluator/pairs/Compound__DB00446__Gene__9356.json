@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00446 - Gene::9356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5193,
+        "final_score": 0.5193
+      },
+      "nodes": [
+        {
+          "id": "Chloramphenicol",
+          "type": "Compound"
+        },
+        {
+          "id": "Jarisch-herxheimer Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chloramphenicol",
+          "target": "Jarisch-herxheimer Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Jarisch-herxheimer Reaction",
+          "target": "Benzylpenicillin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Benzylpenicillin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chloramphenicol,Benzylpenicillin": [
+          "Hydroxides",
+          "Antibiotic"
+        ]
+      },
+      "id": "path_29746"
+    }
+  ],
+  "verbalization": ""
+}

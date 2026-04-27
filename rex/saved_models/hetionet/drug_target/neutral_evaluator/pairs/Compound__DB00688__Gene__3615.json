@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00688 - Gene::3615",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7695,
+        "final_score": 0.7695
+      },
+      "nodes": [
+        {
+          "id": "Mycophenolate Mofetil",
+          "type": "Compound"
+        },
+        {
+          "id": "Impdh1",
+          "type": "Gene"
+        },
+        {
+          "id": "Tioguanine",
+          "type": "Compound"
+        },
+        {
+          "id": "Impdh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mycophenolate Mofetil",
+          "target": "Impdh1",
+          "label": "binds"
+        },
+        {
+          "source": "Impdh1",
+          "target": "Tioguanine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Tioguanine",
+          "target": "Impdh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mycophenolate Mofetil,Tioguanine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10993"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6071,
+        "final_score": 0.6071
+      },
+      "nodes": [
+        {
+          "id": "Mycophenolate Mofetil",
+          "type": "Compound"
+        },
+        {
+          "id": "Gastrointestinal Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tioguanine",
+          "type": "Compound"
+        },
+        {
+          "id": "Impdh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mycophenolate Mofetil",
+          "target": "Gastrointestinal Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Gastrointestinal Necrosis",
+          "target": "Tioguanine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tioguanine",
+          "target": "Impdh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mycophenolate Mofetil,Tioguanine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10994"
+    }
+  ],
+  "verbalization": ""
+}

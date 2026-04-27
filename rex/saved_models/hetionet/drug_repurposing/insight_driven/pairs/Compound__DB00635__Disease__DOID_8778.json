@@ -1,0 +1,57 @@
+{
+  "id": "Compound::DB00635 - Disease::DOID:8778",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4314,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Systemic Lupus Erythematosus",
+          "type": "Disease"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Crohn's Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisone",
+          "target": "Systemic Lupus Erythematosus",
+          "label": "treats"
+        },
+        {
+          "source": "Systemic Lupus Erythematosus",
+          "target": "Azathioprine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Crohn's Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisone,Azathioprine": [
+          "Immunosuppressant",
+          "Organic Cyclic Compound"
+        ],
+        "Systemic Lupus Erythematosus,Crohn's Disease": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_647"
+    }
+  ]
+}

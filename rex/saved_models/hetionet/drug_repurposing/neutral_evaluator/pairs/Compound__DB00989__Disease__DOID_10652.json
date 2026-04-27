@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00989 - Disease::DOID:10652",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5748,
+        "final_score": 0.5748
+      },
+      "nodes": [
+        {
+          "id": "Rivastigmine",
+          "type": "Compound"
+        },
+        {
+          "id": "Anaemia Vitamin B12 Deficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Donepezil",
+          "type": "Compound"
+        },
+        {
+          "id": "Alzheimer's Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivastigmine",
+          "target": "Anaemia Vitamin B12 Deficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Anaemia Vitamin B12 Deficiency",
+          "target": "Donepezil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Donepezil",
+          "target": "Alzheimer's Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivastigmine,Donepezil": [
+          "Acetylcholinesterase Inhibitor"
+        ]
+      },
+      "id": "path_697"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "Compound::DB00091 - Disease::DOID:9074",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3497,
+        "final_score": 0.3497
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Systemic Lupus Erythematosus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Lymphoma",
+          "label": "causes"
+        },
+        {
+          "source": "Lymphoma",
+          "target": "Azathioprine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Systemic Lupus Erythematosus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Azathioprine": [
+          "Immunosuppressant",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_292"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3234,
+        "final_score": 0.3234
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        },
+        {
+          "id": "Sacro-iliac Joint",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Systemic Lupus Erythematosus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Psoriasis",
+          "label": "treats"
+        },
+        {
+          "source": "Psoriasis",
+          "target": "Sacro-iliac Joint",
+          "label": "localizes"
+        },
+        {
+          "source": "Sacro-iliac Joint",
+          "target": "Systemic Lupus Erythematosus",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Psoriasis,Systemic Lupus Erythematosus": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_293"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3234,
+        "final_score": 0.3234
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        },
+        {
+          "id": "Carpal Region",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Systemic Lupus Erythematosus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Psoriasis",
+          "label": "treats"
+        },
+        {
+          "source": "Psoriasis",
+          "target": "Carpal Region",
+          "label": "localizes"
+        },
+        {
+          "source": "Carpal Region",
+          "target": "Systemic Lupus Erythematosus",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Psoriasis,Systemic Lupus Erythematosus": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_294"
+    }
+  ]
+}

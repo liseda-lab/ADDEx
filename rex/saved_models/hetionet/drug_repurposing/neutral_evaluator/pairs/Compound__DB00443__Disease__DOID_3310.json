@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00443 - Disease::DOID:3310",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4647,
+        "final_score": 0.4647
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Neurogenic Inflammation",
+          "type": "Symptom"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        },
+        {
+          "source": "Allergic Rhinitis",
+          "target": "Neurogenic Inflammation",
+          "label": "presents"
+        },
+        {
+          "source": "Neurogenic Inflammation",
+          "target": "Atopic Dermatitis",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_629"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3766,
+        "final_score": 0.3766
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Tuberculosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Tuberculosis",
+          "label": "causes"
+        },
+        {
+          "source": "Tuberculosis",
+          "target": "Dexamethasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dexamethasone",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Dexamethasone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_630"
+    }
+  ]
+}

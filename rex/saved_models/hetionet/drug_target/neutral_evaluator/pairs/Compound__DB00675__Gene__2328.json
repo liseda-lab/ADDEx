@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00675 - Gene::2328",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7894,
+        "final_score": 0.7894
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Fmo1",
+          "type": "Gene"
+        },
+        {
+          "id": "Fmo Oxidises Nucleophiles",
+          "type": "Pathway"
+        },
+        {
+          "id": "Fmo3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Fmo1",
+          "label": "binds"
+        },
+        {
+          "source": "Fmo1",
+          "target": "Fmo Oxidises Nucleophiles",
+          "label": "participates"
+        },
+        {
+          "source": "Fmo Oxidises Nucleophiles",
+          "target": "Fmo3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14183"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7574,
+        "final_score": 0.7574
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Fmo1",
+          "type": "Gene"
+        },
+        {
+          "id": "Voriconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Fmo3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Fmo1",
+          "label": "binds"
+        },
+        {
+          "source": "Fmo1",
+          "target": "Voriconazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Voriconazole",
+          "target": "Fmo3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Voriconazole": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_14184"
+    }
+  ],
+  "verbalization": ""
+}

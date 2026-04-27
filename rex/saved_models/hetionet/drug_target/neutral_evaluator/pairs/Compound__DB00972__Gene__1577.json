@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00972 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5633,
+        "final_score": 0.5633
+      },
+      "nodes": [
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        },
+        {
+          "id": "Modafinil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azelastine",
+          "target": "Adra1b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1b",
+          "target": "Modafinil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Modafinil",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azelastine,Modafinil": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_10683"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4651,
+        "final_score": 0.4651
+      },
+      "nodes": [
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mucosal Ulceration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azelastine",
+          "target": "Mucosal Ulceration",
+          "label": "causes"
+        },
+        {
+          "source": "Mucosal Ulceration",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azelastine,Ifosfamide": [
+          "Organochlorine Compound"
+        ]
+      },
+      "id": "path_10684"
+    }
+  ],
+  "verbalization": ""
+}

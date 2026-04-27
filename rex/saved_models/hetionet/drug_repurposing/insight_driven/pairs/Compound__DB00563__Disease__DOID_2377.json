@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:2377",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4484,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "X-linked Lymphoproliferative Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Multiple Sclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "X-linked Lymphoproliferative Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "X-linked Lymphoproliferative Syndrome",
+          "target": "Azathioprine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Multiple Sclerosis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Azathioprine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antimetabolite"
+        ],
+        "X-linked Lymphoproliferative Syndrome,Multiple Sclerosis": [
+          "Immune System Disorder"
+        ]
+      },
+      "id": "path_38"
+    },
+    {
+      "score": {
+        "ic_mean": 0.456,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypogammaglobulinaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Multiple Sclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Hypogammaglobulinaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Hypogammaglobulinaemia",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Multiple Sclerosis",
+          "label": "palliates"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Carbamazepine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_39"
+    }
+  ]
+}

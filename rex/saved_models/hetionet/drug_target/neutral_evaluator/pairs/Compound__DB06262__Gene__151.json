@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB06262 - Gene::151",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7456,
+        "final_score": 0.7456
+      },
+      "nodes": [
+        {
+          "id": "Droxidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Blood Pressure",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Droxidopa",
+          "target": "Increased Blood Pressure",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Blood Pressure",
+          "target": "Norepinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Droxidopa,Norepinephrine": [
+          "Catechols"
+        ]
+      },
+      "id": "path_3027"
+    },
+    {
+      "score": {
+        "ic_mean": 0.592,
+        "final_score": 0.592
+      },
+      "nodes": [
+        {
+          "id": "Droxidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Droxidopa",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Phentolamine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phentolamine",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Droxidopa,Phentolamine": [
+          "Agent Affecting Nervous System",
+          "Phenols"
+        ]
+      },
+      "id": "path_3028"
+    }
+  ],
+  "verbalization": ""
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01248 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4185,
+        "final_score": 0.4185
+      },
+      "nodes": [
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cancer Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fentanyl",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Docetaxel",
+          "target": "Cancer Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Cancer Pain",
+          "target": "Fentanyl",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fentanyl",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Docetaxel,Fentanyl": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_18634"
+    }
+  ],
+  "verbalization": ""
+}

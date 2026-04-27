@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00799 - Disease::DOID:8893",
+  "verbalization": "The visible evidence suggests that Tazarotene may be associated with Psoriasis through multiple interconnected pathways. Tazarotene, as a member of the Retinoids class, is linked to Acitretin, which is known to treat Psoriasis. This indicates a potential therapeutic relationship, as Retinoids are commonly used in the management of psoriasis due to their role in regulating skin cell proliferation. Additionally, Tazarotene is associated with Pain Of Skin, which is treated by Methoxsalen, further suggesting a chain of interactions that could contribute to Psoriasis pathology. The low final score in Path 2 may reflect a weaker or more indirect relationship compared to the stronger evidence from Path 1, but both pathways highlight the involvement of Tazarotene in the broader context of skin-related conditions. The integration of these pathways suggests that Tazarotene may exert a role in Psoriasis through mechanisms involving retinoid signaling and possibly other pathways, though further research is needed to clarify the exact mechanisms and clinical relevance.",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6597,
+        "final_score": 0.4965,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinoids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Retinoids",
+          "label": "is included in"
+        },
+        {
+          "source": "Retinoids",
+          "target": "Acitretin",
+          "label": "includes"
+        },
+        {
+          "source": "Acitretin",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tazarotene,Acitretin": [
+          "Retinoic Acid Agent",
+          "Retinoid"
+        ],
+        "Tazarotene,Retinoids": [
+          "Retinoid"
+        ],
+        "Retinoids,Acitretin": [
+          "Retinoid"
+        ]
+      },
+      "id": "path_1"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4377,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Pain Of Skin",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methoxsalen",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Pain Of Skin",
+          "label": "causes"
+        },
+        {
+          "source": "Pain Of Skin",
+          "target": "Methoxsalen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methoxsalen",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tazarotene,Methoxsalen": [
+          "Antineoplastic Agent",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_2"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "Compound::DB00851 - Disease::DOID:1115",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5794,
+        "final_score": 0.373,
+        "agentic_score": 0.1667
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Etoposide",
+          "label": "is treated by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Sarcoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dacarbazine,Etoposide": [
+          "Antineoplastic Agent",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_849"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5179,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Vincristine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Vincristine",
+          "target": "Sarcoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dacarbazine,Vincristine": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_850"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3652,
+        "final_score": 0.1
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Scapula",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Skin Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Skin Cancer",
+          "target": "Scapula",
+          "label": "localizes"
+        },
+        {
+          "source": "Scapula",
+          "target": "Sarcoma",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_851"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00544 - Disease::DOID:11054",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4855,
+        "final_score": 0.4855
+      },
+      "nodes": [
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Sepsis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Urinary Bladder Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluorouracil",
+          "target": "Neutropenic Sepsis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Sepsis",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Urinary Bladder Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluorouracil,Etoposide": [
+          "Enzyme Inhibitor",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_1045"
+    }
+  ]
+}

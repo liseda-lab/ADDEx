@@ -1,0 +1,152 @@
+{
+  "id": "Compound::DB00970 - Disease::DOID:1115",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5923,
+        "final_score": 0.3795,
+        "agentic_score": 0.1667
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Muscle Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Muscle Cancer",
+          "target": "Vincristine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Vincristine",
+          "target": "Sarcoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Vincristine": [
+          "Carboxamide",
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_166"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5575,
+        "final_score": 0.3621,
+        "agentic_score": 0.1667
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Radiation Recall Reaction (dermatologic)",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Radiation Recall Reaction (dermatologic)",
+          "label": "causes"
+        },
+        {
+          "source": "Radiation Recall Reaction (dermatologic)",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Sarcoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Etoposide": [
+          "Antineoplastic Agent",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_167"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5486,
+        "final_score": 0.25
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Etoposide",
+          "label": "is treated by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Sarcoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Etoposide": [
+          "Antineoplastic Agent",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_168"
+    }
+  ]
+}
