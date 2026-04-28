@@ -132,8 +132,6 @@ is auto-detected at startup.
 ### Run the web app
 
 ```bash
-git clone https://github.com/liseda-lab/ADDEx.git
-cd ADDEx
 npm install
 npm run dev
 ```
@@ -147,6 +145,22 @@ build:
 npm run build
 npm run start
 ```
+
+## Data sources
+
+ADDEx operates on three publicly available biomedical knowledge graphs:
+
+- **Hetionet** — https://github.com/hetio/hetionet
+- **PrimeKG** — https://github.com/mims-harvard/PrimeKG
+- **OREGANO** — https://gitub.u-bordeaux.fr/erias/oregano
+
+The domain ontologies used for ontological enrichment (NCIT, ChEBI, Gene
+Ontology) are publicly available through their respective repositories.
+Pre-processed versions of all datasets and ontologies, as used by ADDEx, are
+included in the repository.
+
+---
+
 
 ### How REx is invoked
 
@@ -210,7 +224,7 @@ the underlying methods:
 - **REx** — *Rewarding Explainability in Drug Repurposing with Knowledge
   Graphs.* Nunes, Badreddine, Pesquita. IJCAI 2025.
   [doi:10.24963/ijcai.2025/515](https://doi.org/10.24963/ijcai.2025/515)
-- **Adaptive personas** — *Agentic Personas for Adaptive Scientific
+- **Adaptive REx** — *Agentic Personas for Adaptive Scientific
   Explanations with Knowledge Graphs.* Nunes, Guerreiro, Pesquita. arXiv
   preprint arXiv:2603.21846.
 
@@ -219,20 +233,6 @@ citations for both papers.
 
 ---
 
-## Data sources
-
-ADDEx operates on three publicly available biomedical knowledge graphs:
-
-- **Hetionet** — https://github.com/hetio/hetionet
-- **PrimeKG** — https://github.com/mims-harvard/PrimeKG
-- **OREGANO** — https://gitub.u-bordeaux.fr/erias/oregano
-
-The domain ontologies used for ontological enrichment (NCIT, ChEBI, Gene
-Ontology) are publicly available through their respective repositories.
-Pre-processed versions of all datasets and ontologies, as used by ADDEx, are
-included in the REx PyTorch repository.
-
----
 
 ## Funding & acknowledgements
 
