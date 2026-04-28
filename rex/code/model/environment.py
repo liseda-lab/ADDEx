@@ -11,7 +11,7 @@ import logging
 logger = logging.getLogger()
 
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -249,11 +249,10 @@ def configure_env_logger(path):
 COMPLETENESS_MAP = {1: 1.0, 2: 3.0, 3: 5.0, 4: 3.0, 5: 1.0}
 
 def threshold_for_step(step: int) -> float:
-    if step < 60:   return 0.50
-    elif step < 80: return 0.55
-    elif step < 120:return 0.60
-    elif step < 150:return 0.65
-    else:           return 0.70
+    if step < 60:    return 0.65
+    elif step < 80:  return 0.70
+    elif step < 100: return 0.75
+    else:            return 0.80
 
 
 class Episode(object):
@@ -282,7 +281,7 @@ class Episode(object):
         else:
             self.num_rollouts = test_rollouts
         self.current_hop = 0
-        start_entities, query_relation,  end_entities, all_answers, batch_weights = data 
+        start_entities, query_relation,  end_entities, all_answers, batch_weights = data
         self.no_examples = start_entities.shape[0]
         self.batch_weights = batch_weights
         self.positive_reward = positive_reward
@@ -430,7 +429,7 @@ class Episode(object):
         self._path_recomputed = True
 
     def _build_paths_text(self, keep_idxs=None):
-        
+
         """
         Build a readable string representation of one or more rollouts (paths).
 
@@ -444,7 +443,7 @@ class Episode(object):
         -------
         str : Human-readable multi-line string with query context and paths
         """
-        
+
         # Try to load reverse vocabularies from the grapher (map IDs -> labels)
         rev_e = getattr(self.grapher, "rev_entity_vocab", None)
         rev_r = getattr(self.grapher, "rev_relation_vocab", None)
@@ -545,7 +544,7 @@ class Episode(object):
             Return ONLY valid JSON with an array of exactly {len(batch_idxs)} objects.
             Each object MUST be: {{"id": <int from {id_list}>, "validity": <int>, "completeness": <int>, "relevance": <int>}}.
             Use ONLY the ids from this set: {id_list}. Do not invent or omit ids. DOUBLE CHECK BEFORE RETURNING RESULTS.
-            Do NOT return any text outside the JSON array. Do not return thinking traces or internal monologue. The output MUST be a JSON array of objects with id, validity, completeness, and relevance scores as described above. 
+            Do NOT return any text outside the JSON array. Do not return thinking traces or internal monologue. The output MUST be a JSON array of objects with id, validity, completeness, and relevance scores as described above.
             """.strip()
 
 
@@ -588,7 +587,7 @@ class Episode(object):
                     allowed = set(id_list)
                     by_id = {}
                     for item in data:
-                        if not isinstance(item, dict) or "id" not in item: 
+                        if not isinstance(item, dict) or "id" not in item:
                             continue
                         try: pid = int(item["id"])
                         except: continue
@@ -614,18 +613,18 @@ class Episode(object):
                         print(f"[DEBUG] Prompt was:\n{prompt}\n")
                         print(f"[DEBUG] Raw response was:\n{raw}\n")
                     return out
-                    
+
                 except Exception as e:
                     last_err = e
                     if attempt < MAX_RETRIES:
                         delay = SLEEP_BETWEEN * (1.25 ** (attempt - 1)) + random.uniform(0, 0.2)
                         time.sleep(delay)
-            
+
             # Only reached if all retries failed
             print(f"[FAIL] Batch completely failed after {MAX_RETRIES} attempts: {last_err}")
             return [{"validity": 3.0, "completeness": 2.0, "relevance": 3.0}
                     for _ in batch_idxs]
-        
+
         # Group by example id so each prompt has a single (start, end) context
         groups = defaultdict(list)
         nr = int(self.num_rollouts)
@@ -641,7 +640,7 @@ class Episode(object):
                     time.sleep(SLEEP_BETWEEN)
 
         return results
-    
+
     def get_reward_agenticAI(self, wV=1/3, wC=1/3, wR=1/3):
         training_step = getattr(Episode, '_training_step', 0)
 
@@ -659,16 +658,18 @@ class Episode(object):
 
         threshold = threshold_for_step(training_step)
 
-        # Three tiers of paths
+        # Three tiers of paths, gated by fidelity.
+        # Fidelity gate: base > 0 means the path reached the answer entity.
+        # Fidelity=0 paths (base <= 0) get NO reward.
         high_ic_idxs = np.where(base > threshold)[0].tolist()
-        medium_ic_idxs = np.where((base > 0.5) & (base <= threshold))[0].tolist() if threshold > 0.5 else []
-        low_ic_idxs = np.where((base > 0.3) & (base <= 0.5))[0].tolist()
+        medium_ic_idxs = np.where((base >= 0.5) & (base <= threshold))[0].tolist() if threshold >= 0.5 else []
+        low_ic_idxs = np.where((base > 0) & (base < 0.5))[0].tolist()
 
         lines = [
             f"[STEP {training_step}] Threshold={threshold:.2f}",
             f"  High IC (>{threshold:.2f}): {len(high_ic_idxs)} paths for LLM",
-            f"  Medium IC (0.5-{threshold:.2f}): {len(medium_ic_idxs)} paths get 0.25",
-            f"  Low IC (0.3-0.5): {len(low_ic_idxs)} paths get 0.1",
+            f"  Medium IC [0.5-{threshold:.2f}]: {len(medium_ic_idxs)} paths get 0.25",
+            f"  Low IC (<0.5): {len(low_ic_idxs)} paths get 0.1",
         ]
         for s in lines:
             print(s)
