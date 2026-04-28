@@ -270,10 +270,10 @@ def _persona_hash(text):
     return _persona_hash_cache[text]
 
 def threshold_for_step(step: int) -> float:
-    if step < 60:    return 0.60
-    elif step < 80:  return 0.65
-    elif step < 100: return 0.70
-    else:            return 0.75
+    if step < 60:    return 0.50
+    elif step < 80:  return 0.55
+    elif step < 100: return 0.60
+    else:            return 0.65
 
 
 class Episode(object):
