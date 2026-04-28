@@ -107,8 +107,8 @@ including its code, configs, and pre-trained model checkpoints. There is
 nothing external to wire up — clone, install, run.
 
 A standalone version of the REx implementation (without the ADDEx UI) is
-maintained separately at
-[liseda-lab/REx_PyTorch](https://github.com/liseda-lab/REx_PyTorch) for users
+maintained separately
+[here](https://github.com/liseda-lab/REx_PyTorch) for users
 who want only the engine.
 
 For end-user use of the hosted instance, you do **not** need to clone or run
