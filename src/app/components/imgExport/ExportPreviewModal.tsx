@@ -137,8 +137,13 @@ export default function ExportPreviewModal({
 
   const handleCopy = async () => {
     try {
-      const res = await fetch(previewSrc);
-      const blob = await res.blob();
+      const out = await buildExportCanvas();
+      const blob: Blob = await new Promise((resolve, reject) => {
+        out.toBlob(
+          (b) => (b ? resolve(b) : reject(new Error("toBlob returned null"))),
+          "image/png"
+        );
+      });
       await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
       alert("Image copied to clipboard!");
     } catch (err) {
