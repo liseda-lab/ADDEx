@@ -768,6 +768,11 @@ class Trainer(object):
                 self.entity_trajectory.append(
                     state['current_entities'])
 
+            # Process final rewards from environment
+            #HITS@k/MRR only checks reward > 0 (i.e. fidelity).
+            # For validation tests (print_paths=False), the LLM-shaped scores in
+            # get_reward_agenticAI are computed but never used by the metric ranking.
+            # So we can skip the entire LLM call during validation
             if print_paths:
                 rewards = episode.get_reward_agenticAI()
             else:
