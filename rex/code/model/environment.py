@@ -16,13 +16,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-
-#-----NEW
 import json
 from dotenv import load_dotenv
 load_dotenv()
 
-# --- LLM setup ---
 # --llm_api 0 (default): loads Qwen 3.5 locally (needs GPU)
 # --llm_api 1 --llm_model qwen: Qwen via HuggingFace API
 # --llm_api 1 --llm_model gpt:  GPT via OpenAI API
@@ -44,7 +41,6 @@ def _extract_json_response(response):
     return "", response
 
 try:
-    # --- 1) Local Qwen 3.5  ---
     _llm_model = None
     _llm_tokenizer = None
     _llm_device = None
@@ -113,16 +109,6 @@ try:
                     #   temperature/top_p/top_k not being valid for greedy; safe to ignore.
                     # inf/nan in sampling — just let it fail and skip this batch
                     raise
-            
-            #response = _llm_tokenizer.decode(outputs[0], skip_special_tokens=True)
-            #raw = response[len(prompt):].strip()
-
-            #if "<think>" in raw:
-            #    print("[LLM] Detected <think> in response; using content after it as final output.")
-            #    raw = raw.split("<think>")[-1].strip()
-
-            #return raw
-            #return response
 
             new_tokens = outputs[0][len(inputs.input_ids[0]):]
             response = _llm_tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
@@ -132,15 +118,22 @@ try:
             print(f"[LLM LOCAL ERROR] {e}")
             return "", ""
 
-    # --- 2) Qwen via HuggingFace API (--llm_api 1 --llm_model qwen) ---
-    # Uses httpx directly (openai SDK bug with extra_body + enable_thinking)
-    import httpx as _httpx
+    # Qwen via HuggingFace API (--llm_api 1 --llm_model qwen).
+    # Uses httpx directly (openai SDK bug with extra_body + enable_thinking).
     _qwen_http_client = None
+    try:
+        import httpx as _httpx
+    except ImportError as _e:
+        _httpx = None
+        logger.warning("Qwen API mode disabled: httpx not installed (%s).", _e)
 
     import time as _time
 
     def _call_llm_qwen_api(messages, temperature=0):
         global _qwen_http_client
+        if _httpx is None:
+            print("[LLM] Qwen API mode requested but httpx is unavailable.")
+            return "", ""
         base_url = os.getenv("HF_API_BASE", "https://router.huggingface.co/together/v1")
         if _qwen_http_client is None:
             _qwen_http_client = _httpx.Client(timeout=120.0)
@@ -198,7 +191,7 @@ try:
             print(f"[LLM QWEN API ERROR] {e}")
             return "", ""
 
-    # --- 3) GPT via OpenAI API (--llm_api 1 --llm_model gpt) ---
+    # GPT via OpenAI API (--llm_api 1 --llm_model gpt).
     _gpt_api_client = None
 
     def _call_llm_gpt_api(messages, temperature=0):
@@ -231,7 +224,7 @@ except Exception as _e:
     logger.warning("LLM not available: %s", _e)
 
 
-# --- dedicated env logger (separate file, no console) ---
+# Dedicated env logger (separate file, no console)
 _env_logger = logging.getLogger("agentic.env")
 _env_logger.propagate = False  # don't bubble up into root
 
@@ -250,34 +243,21 @@ def configure_env_logger(path):
         fh.setFormatter(fmt)
         _env_logger.addHandler(fh)
         _env_logger.setLevel(logging.INFO)
-# --------------------------------------------------------
 
 
 # Completeness is best at 3; triangular mapping back to a 1–5 scale
 COMPLETENESS_MAP = {1: 1.0, 2: 3.0, 3: 5.0, 4: 3.0, 5: 1.0}
 
-# Module-level LLM score cache. Keyed by (persona_hash, query_context, path).
-# At temperature=0 the LLM is deterministic, so cached scores are byte-identical
-# to what a re-call would produce. Persists across episodes within one process.
-_llm_score_cache = {}
-_persona_hash_cache = {}
-_llm_cache_stats = {"hits": 0, "misses": 0}
-
-def _persona_hash(text):
-    if text not in _persona_hash_cache:
-        import hashlib
-        _persona_hash_cache[text] = hashlib.sha1(text.encode("utf-8")).hexdigest()[:12]
-    return _persona_hash_cache[text]
-
 def threshold_for_step(step: int) -> float:
-    if step < 60:    return 0.50
-    elif step < 80:  return 0.55
-    elif step < 100: return 0.60
-    else:            return 0.65
+    if step < 60:   return 0.50
+    elif step < 80: return 0.55
+    elif step < 120:return 0.60
+    elif step < 150:return 0.65
+    else:           return 0.70
 
 
 class Episode(object):
-    _training_step = 0  # Current training step/iteration
+    _training_step = 0
 
     @classmethod
     def set_training_step(cls, step):
@@ -286,7 +266,7 @@ class Episode(object):
     def __init__(self, graph, data, params):
         self.grapher = graph
         self.batch_size, self.path_len, num_rollouts, test_rollouts, positive_reward, negative_reward, mode, batcher, IC_reward, adjust_factor, early_stopping, prevent_cycles, persona_path, agentic_ai_enabled, llm_api, llm_model, local_model  = params
-        ## FIX TEST - set LLM caller based on --llm_api / --llm_model
+        # Set LLM caller based on --llm_api / --llm_model
         global _call_llm, _local_model_name
         _local_model_name = local_model  # set before _init_llm() is called
         if llm_api:
@@ -296,7 +276,6 @@ class Episode(object):
                 _call_llm = _call_llm_qwen_api
         else:
             _call_llm = _call_llm_local
-        ## END FIX TEST
         self.mode = mode
         if self.mode == 'train':
             self.num_rollouts = num_rollouts
@@ -321,7 +300,7 @@ class Episode(object):
         self.query_relation = batch_query_relation
         self.all_answers = all_answers
 
-        # Load persona text (empty string if file missing) #  -- NEW 
+        # Load persona text (empty string if file missing)
         self.agentic_ai_enabled = bool(agentic_ai_enabled)
         self.persona_path = persona_path
         self.persona_text = ""
@@ -332,14 +311,9 @@ class Episode(object):
         self.agentic_scores = None  # Final agentic scores for all rollouts
         self.llm_dimensions = {}    # Store v, c_conv, r for LLM-scored paths only
 
-        #---
-
-        # CREATE A DONE MASK (ONE ENTRY PER ROLLOUT IN THE BATCH)
         self.done_mask = np.zeros(self.no_examples * self.num_rollouts, dtype=bool)
 
-
-        # Initialize visited entities tracking - each rollout will have its own list
-        # Initially, just the starting entities
+        # Each rollout tracks its own visited entities; initially just the start entity
         self.visited_entities = np.zeros((self.no_examples * self.num_rollouts, 1), dtype=np.int32)
         self.visited_entities[:, 0] = self.start_entities
 
@@ -347,15 +321,15 @@ class Episode(object):
         next_actions, next_weights = self.grapher.return_next_actions(self.current_entities, self.start_entities, self.query_relation,
                                                         self.end_entities, self.all_answers, self.current_hop == self.path_len - 1,
                                                         self.num_rollouts, self.visited_entities, self.prevent_cycles)
-        
-        self.relation_history = []  # NEW - track chosen relations at each step
-    
+
+        self.relation_history = []
+
         self.state = {}
-        self.state['next_relations'] = next_actions[:, :, 1] # Relations
-        self.state['next_entities'] = next_actions[:, :, 0] # Target Entities
-        self.state['current_entities'] = self.current_entities # Current Entities
-        self.state['weights'] = next_weights # EDGE WEIGHTS
-        self.state['visited_entities'] = self.visited_entities 
+        self.state['next_relations'] = next_actions[:, :, 1]
+        self.state['next_entities'] = next_actions[:, :, 0]
+        self.state['current_entities'] = self.current_entities
+        self.state['weights'] = next_weights
+        self.state['visited_entities'] = self.visited_entities
 
     def get_state(self):
         return self.state
@@ -370,12 +344,9 @@ class Episode(object):
         Sets:
         - self.ic_mean: np.ndarray shape [B]
         """
-        ## FIX IC DECISION - use recomputed IC from visited_entities + graph
         self._recompute_from_path()
         self.ic_mean = self.recomputed_ic_mean
-        ## END FIX IC DECISION
 
-    ## FIX IC DECISION
     def _recompute_from_path(self):
         """
         Recompute IC weights and relations directly from visited_entities
@@ -403,72 +374,48 @@ class Episode(object):
             self._path_recomputed = True
             return
 
-        # Vectorized edge lookup over all (B*T) (src, dst) pairs at once.
-        # Output is identical to the previous nested-for-loop version; the only
-        # behavioral subtleties preserved are: (1) early-stop padding after the
-        # rollout reaches end_entity; (2) relation_history disambiguation for
-        # cells where multiple edges in the graph match the desired (src, dst).
-        array_store = self.grapher.array_store     # (N, max_a, 2)  [dst_id, rel_id]
-        weights_store = self.grapher.weights_store  # (N, max_a)
+        # Pre-allocate: sentinel 2.0 means padding (same convention as weight_history)
+        all_weights = np.full((T, B), 2.0, dtype=np.float32)
+        all_rels = np.full((T, B), 2.0, dtype=np.float32)
 
-        src_2d = self.visited_entities[:, :-1].astype(np.int64)  # (B, T)
-        dst_2d = self.visited_entities[:, 1:].astype(np.int64)   # (B, T)
-        src_flat = src_2d.ravel()
-        dst_flat = dst_2d.ravel()
-        n = src_flat.shape[0]
+        for b in range(B):
+            for t in range(T):
+                e1 = int(self.visited_entities[b, t])
+                e2 = int(self.visited_entities[b, t + 1])
 
-        nbrs = array_store[src_flat]   # (B*T, max_a, 2)
-        wts = weights_store[src_flat]  # (B*T, max_a)
-        nbr_dsts = nbrs[:, :, 0]
-        nbr_rels = nbrs[:, :, 1]
+                # Look up edge e1->e2 in the graph
+                neighbors = self.grapher.array_store[e1]    # [max_actions, 2]
+                edge_wts = self.grapher.weights_store[e1]    # [max_actions]
 
-        match_mask = (nbr_dsts == dst_flat[:, None])
-        has_match = match_mask.any(axis=1)
-        match_count = match_mask.sum(axis=1)
-        first_match_idx = match_mask.argmax(axis=1)
-        selected_idx = first_match_idx.copy()
+                match_idxs = np.where(neighbors[:, 0] == e2)[0]
 
-        # Disambiguation: when multiple edges match, try to pick the one whose
-        # relation matches relation_history[t][b].
-        if (match_count > 1).any() and self.relation_history:
-            T_hist = min(T, len(self.relation_history))
-            rels_hint_2d = np.full((B, T), 2.0, dtype=np.float32)
-            for t in range(T_hist):
-                rels_hint_2d[:, t] = self.relation_history[t]
-            rels_hint_flat = rels_hint_2d.ravel()
-            rel_match = (nbr_rels == rels_hint_flat[:, None].astype(nbr_rels.dtype))
-            full_match = match_mask & rel_match
-            full_has = full_match.any(axis=1)
-            full_match_idx = full_match.argmax(axis=1)
-            use_hint = (match_count > 1) & full_has & (rels_hint_flat != 2.0)
-            selected_idx = np.where(use_hint, full_match_idx, selected_idx)
+                if len(match_idxs) > 0:
+                    # Prefer non-self-loop (index > 0); disambiguate with
+                    # relation_history hint when multiple edges exist
+                    idx = match_idxs[0]
+                    if len(match_idxs) > 1:
+                        # Try relation_history as hint (best-effort)
+                        if t < len(self.relation_history):
+                            rel_hint = self.relation_history[t][b]
+                            if rel_hint != 2.0:
+                                for mi in match_idxs:
+                                    if neighbors[mi, 1] == int(rel_hint):
+                                        idx = mi
+                                        break
+                        # Otherwise prefer first non-self-loop edge
+                        elif idx == 0 and len(match_idxs) > 1:
+                            idx = match_idxs[1]
 
-        arange = np.arange(n)
-        selected_wt = wts[arange, selected_idx].astype(np.float32)
-        selected_rel = nbr_rels[arange, selected_idx].astype(np.float32)
+                    all_weights[t, b] = edge_wts[idx]
+                    all_rels[t, b] = float(neighbors[idx, 1])
+                else:
+                    # Edge not in graph — fallback
+                    all_weights[t, b] = 0.5
+                    all_rels[t, b] = -1.0
 
-        # Fallback when no neighbor matched dst
-        selected_wt = np.where(has_match, selected_wt, np.float32(0.5))
-        selected_rel = np.where(has_match, selected_rel, np.float32(-1.0))
-
-        all_weights_bt = selected_wt.reshape(B, T)
-        all_rels_bt = selected_rel.reshape(B, T)
-
-        # Early-stop padding: cells AFTER the first reach of end_entity → 2.0
-        if self.early_stopping:
-            reached = (dst_2d == self.end_entities[:B, None])  # (B, T)
-            cum_reached = np.cumsum(reached.astype(np.int32), axis=1)
-            was_reached_before = cum_reached > reached.astype(np.int32)
-            all_weights_bt = np.where(was_reached_before, np.float32(2.0), all_weights_bt)
-            all_rels_bt = np.where(was_reached_before, np.float32(2.0), all_rels_bt)
-            edges_visited = int((~was_reached_before).sum())
-            fallback_hits = int(((~has_match).reshape(B, T) & ~was_reached_before).sum())
-        else:
-            edges_visited = int(B * T)
-            fallback_hits = int((~has_match).sum())
-
-        all_weights = all_weights_bt.T.copy()  # (T, B)
-        all_rels = all_rels_bt.T.copy()        # (T, B)
+                # If we reached the target entity, remaining steps are padding
+                if self.early_stopping and e2 == self.end_entities[b]:
+                    break
 
         self.recomputed_ic_per_step = [all_weights[t] for t in range(T)]
         self.recomputed_rels_per_step = [all_rels[t] for t in range(T)]
@@ -478,16 +425,10 @@ class Episode(object):
         w = all_weights.copy()
         w[mask_2] = np.nan
         ic_mean = np.nanmean(w, axis=0)
-        self.recomputed_ic_mean = np.nan_to_num(ic_mean, nan=0.0).astype(np.float32)
-
-        # [DEBUG] expose fallback stats for the reward logger
-        self._fallback_hits = fallback_hits
-        self._edges_visited = edges_visited
+        self.recomputed_ic_mean = np.nan_to_num(ic_mean, nan=0.0)
 
         self._path_recomputed = True
-    ## END FIX IC DECISION
 
-    #-- helper that will turn relation_history + visited_entities into a human-readable path string for each rollout, ready to send into get_reward_agenticAI() for persona scoring.
     def _build_paths_text(self, keep_idxs=None):
         
         """
@@ -508,268 +449,85 @@ class Episode(object):
         rev_e = getattr(self.grapher, "rev_entity_vocab", None)
         rev_r = getattr(self.grapher, "rev_relation_vocab", None)
 
-        ## FIX IC DECISION - use recomputed relations from visited_entities + graph
         self._recompute_from_path()
         rels = (np.array(self.recomputed_rels_per_step, dtype=np.float32)
                 if self.recomputed_rels_per_step
                 else np.zeros((0, self.visited_entities.shape[0]), dtype=np.float32))
-        ## END FIX IC DECISION
 
-        #NEW CODE - Helper to map entity numeric ID -> human-readable label
+        # Map entity numeric ID -> human-readable label.
         # Flow: numeric ID -> rev_vocab -> vocab string (e.g. "Gene::134391") -> label (e.g. "SERPINC1")
         def name_e(eid):
             vocab_str = rev_e.get(int(eid), str(int(eid))) if rev_e else str(int(eid))
             return self.grapher.get_entity_label(vocab_str)
 
-        # Helper to map relation numeric ID -> human-readable label
+        # Map relation numeric ID -> human-readable label.
         # Flow: numeric ID -> rev_vocab -> vocab string (e.g. "CtD") -> label (e.g. "treats")
         def name_r(rid):
             vocab_str = rev_r.get(int(rid), str(int(rid))) if rev_r else str(int(rid))
             return self.grapher.get_relation_label(vocab_str)
-        #END NEW CODE
 
-        B = self.visited_entities.shape[0]  # Number of rollouts in the batch
+        B = self.visited_entities.shape[0]
 
         # If keep_idxs is provided, we only process those rollouts; else all
         idxs = range(B) if keep_idxs is None else keep_idxs
 
         lines = []
-        
-        # Add query context at the beginning
-        # Get the query relation name (same for all rollouts in this batch)
+
+        # The query relation name is the same for all rollouts in this batch
         if len(idxs) > 0:
             first_idx = idxs[0]
             query_rel_id = self.query_relation[first_idx]
             query_rel_name = name_r(query_rel_id)
-            
-            # Get start and end entity names for context
+
             start_ent_name = name_e(self.start_entities[first_idx])
             end_ent_name = name_e(self.end_entities[first_idx])
-            
-            # Add query header
+
             lines.append(f"Query: Explaining why {start_ent_name} --[{query_rel_name}]--> {end_ent_name}")
             lines.append(f"Finding paths that explain the '{query_rel_name}' relationship.\n")
-        
-        # Build each path
+
         for out_i, b in enumerate(idxs, 1):
-            # Start the path string with the starting entity
             path_segments = [name_e(self.visited_entities[b, 0])]
 
             # Steps = number of recorded relation hops (cannot exceed path_len-1)
             steps = min(rels.shape[0], self.visited_entities.shape[1] - 1)
 
-            # Go through each step in this rollout
             for t in range(steps):
                 rid = rels[t, b] if rels.size else 2.0
                 # Stop if this step is marked as padding / rollout finished
                 if rid == 2.0:
                     break
                 ent_id = self.visited_entities[b, t + 1]
-                # Append the relation and target entity to the path string
                 path_segments.append(f"--[{name_r(rid)}]--> {name_e(ent_id)}")
 
-            # Join all segments into one line for this rollout
-            #lines.append(f"Path {out_i}: " + " ".join(path_segments))
             lines.append(f"Path {out_i} [id={b}]: " + " ".join(path_segments))
 
-
-        # Join all path lines into one string separated by newlines
         return "\n".join(lines)
 
-    # def get_scores_AgenticAI_OG(self, keep_idxs):
-    #     """
-    #     Sync micro-batching: score ALL eligible paths by splitting into batches,
-    #     sleeping briefly between requests, and retrying on failures.
-    #     Returns a list of dicts (len == len(keep_idxs)) in the same order.
-    #     """
-    #     if not self.agentic_ai_enabled or _agentic_client is None:
-    #         return None
-    #     if not keep_idxs:
-    #         return None
-
-    #     # ---- knobs (tune without code changes) ----
-    #     BATCH_SIZE = int(os.getenv("AGENTIC_BATCH_SIZE", "20"))       # 20–40 recommended
-    #     SLEEP_BETWEEN = float(os.getenv("AGENTIC_SLEEP_BETWEEN", "0.4"))  # 0.3–0.5s
-    #     MAX_RETRIES = int(os.getenv("AGENTIC_MAX_RETRIES", "4"))
-    #     # ------------------------------------------
-
-    #     import time, random, json
-    #     def _score_batch(batch_idxs, start_num):
-    #         """One sync call with small retries + robust JSON extraction."""
-    #         paths_text = self._build_paths_text(keep_idxs=batch_idxs)
-
-    #         # # Debug: Check if paths_text looks correct
-    #         # path_lines = [line for line in paths_text.split('\n') if line.startswith('Path ')]
-    #         # print(f"[DEBUG] Generated text has {len(path_lines)} path lines for {len(batch_idxs)} indices")
-            
-
-    #         prompt = f"""
-    #         You are evaluating drug–disease explanation paths from the perspective of the following persona:
-
-    #         {self.persona_text}
-
-    #         Score EACH path individually on three criteria:
-    #         1. Scientific Validity (V): 1–5. Scientific correctness, plausibility, and coherence based on biomedical knowledge.
-    #         2. Completeness (C): 1–5 where 3 is ideal. 1 = too simple, 5 = too complex. Reward paths that are sufficiently detailed without overload.
-    #         3. Relevance (R): 1–5. Usefulness for understanding why the prediction matters and how it connects to the task.
-
-    #         Paths to evaluate ({len(batch_idxs)} paths total):
-    #             {paths_text}
-
-    #         Return a JSON array with {len(batch_idxs)} objects (one per path above):
-    #         [{{"validity": 4, "completeness": 3, "relevance": 5}}, ...]
-
-    #         IMPORTANT: Your array must have EXACTLY {len(batch_idxs)} scores. DOUBLE CHECK BEFORE RETURNING RESULTS. 
-    #         """.strip()
-
-    #         last_err = None
-    #         for attempt in range(1, MAX_RETRIES + 1):
-    #             try:
-    #                 resp = _agentic_client.chat.completions.create(
-    #                     model="gpt-4o-mini",
-    #                     messages=[{"role": "user", "content": prompt}],
-    #                     temperature=0,
-    #                 )
-    #                 raw = resp.choices[0].message.content.strip()
-
-    #                 # tolerate fenced code blocks
-    #                 if "```" in raw:
-    #                     parts = raw.split("```")
-    #                     raw = "".join(p for p in parts if "[" in p and "]" in p)
-    #                 # extract JSON slice
-    #                 a, b = raw.find("["), raw.rfind("]")
-    #                 if a != -1 and b != -1 and b > a:
-    #                     raw = raw[a:b+1]
-
-    #                 data = json.loads(raw)
-    #                 if not isinstance(data, list):
-    #                     raise ValueError("response is not a list")
-
-    #                 # normalize and clamp
-    #                 out = []
-    #                 for item in data:
-    #                     def _num(k, d=3.0):
-    #                         try: return float(item.get(k, d))
-    #                         except: return d
-    #                     out.append({
-    #                         "validity": max(1.0, min(5.0, _num("validity"))),
-    #                         "completeness": max(1.0, min(5.0, _num("completeness"))),
-    #                         "relevance": max(1.0, min(5.0, _num("relevance"))),
-    #                     })
-
-    #                 # Handle length mismatch gracefully
-    #                 if len(out) != len(batch_idxs):
-    #                     print(f"[WARN] Expected {len(batch_idxs)} scores, got {len(out)}")
-
-    #                     # # Log the raw response for debugging
-    #                     # if len(raw) < 2000:  # Only if not too long
-    #                     #     print(f"[DEBUG] Raw response: {raw[:500]}...")
-                        
-    #                     # # Check if the LLM numbered the scores
-    #                     # if out and isinstance(out[0], dict) and any('path' in str(k).lower() for k in out[0].keys()):
-    #                     #     print("[DEBUG] LLM may have added path numbers/labels")
-                        
-    #                     # Pad with defaults if too few
-    #                     while len(out) < len(batch_idxs):
-    #                         print(f"  Adding default score for missing path {len(out)+1}")
-    #                         out.append({"validity": 3.0, "completeness": 2.0, "relevance": 3.0})
-                        
-    #                     # Trim if too many
-    #                     if len(out) > len(batch_idxs):
-    #                         print(f"  Trimming extra scores")
-    #                         out = out[:len(batch_idxs)]
-                    
-    #                 return out  # Return the padded/trimmed scores
-                    
-    #             except Exception as e:
-    #                 last_err = e
-    #                 if attempt < MAX_RETRIES:
-    #                     delay = SLEEP_BETWEEN * (1.25 ** (attempt - 1)) + random.uniform(0, 0.2)
-    #                     time.sleep(delay)
-            
-    #         # Only reached if all retries failed
-    #         print(f"[FAIL] Batch completely failed after {MAX_RETRIES} attempts: {last_err}")
-    #         return [{"validity": 2.5, "completeness": 3.0, "relevance": 2.5}
-    #                 for _ in batch_idxs]
-        
-    #     # ---- NOW the main loop to process all batches ----
-    #     results = []
-    #     start_num = 1
-    #     for i in range(0, len(keep_idxs), BATCH_SIZE):
-    #         batch_idxs = keep_idxs[i:i + BATCH_SIZE]
-    #         batch_scores = _score_batch(batch_idxs, start_num=start_num)
-    #         results.extend(batch_scores)
-    #         start_num += len(batch_idxs)
-    #         if i + BATCH_SIZE < len(keep_idxs):  # Don't sleep after last batch
-    #             time.sleep(SLEEP_BETWEEN)
-
-    #     return results
-    
     def get_scores_AgenticAI(self, keep_idxs):
         """
         Sync micro-batching: score ALL eligible paths by splitting into batches,
         sleeping briefly between requests, and retrying on failures.
         Returns a list of dicts (len == len(keep_idxs)) in the same order.
         """
-        #if not self.agentic_ai_enabled or _agentic_client is None or not keep_idxs:
         if not self.agentic_ai_enabled or _call_llm is None or not keep_idxs:
+            print("[INFO] Agentic AI disabled or client/persona missing; skipping LLM scoring.")
             return None
 
-        # ---- knobs (tune without code changes) ----
         BATCH_SIZE = int(os.getenv("AGENTIC_BATCH_SIZE", "20"))       # 20–40 recommended
         SLEEP_BETWEEN = float(os.getenv("AGENTIC_SLEEP_BETWEEN", "0.4"))  # 0.3–0.5s
         MAX_RETRIES = int(os.getenv("AGENTIC_MAX_RETRIES", "4"))
-        # ------------------------------------------
 
         import time, random, json
 
-        def _build_cache_key(idx):
-            """Cache key includes persona + query context + path content.
-            Same path under same query+persona returns identical LLM score (temp=0)."""
-            ctx = (
-                int(self.start_entities[idx]),
-                int(self.end_entities[idx]),
-                int(self.query_relation[idx]),
-            )
-            visited = tuple(int(x) for x in self.visited_entities[idx])
-            rels = tuple(
-                int(self.recomputed_rels_per_step[t][idx])
-                for t in range(len(self.recomputed_rels_per_step))
-            )
-            return (_persona_hash(self.persona_text), ctx, visited, rels)
-
         def _score_batch(batch_idxs, start_num):
-            """One sync call with small retries + robust JSON extraction.
-            Skips paths whose (persona, query, path) key is already in _llm_score_cache."""
-            # ---- Cache lookup ----
-            keys = {idx: _build_cache_key(idx) for idx in batch_idxs}
-            cached = {idx: _llm_score_cache[keys[idx]]
-                      for idx in batch_idxs if keys[idx] in _llm_score_cache}
-            to_score = [idx for idx in batch_idxs if idx not in cached]
+            """One sync call with small retries + robust JSON extraction."""
+            paths_text = self._build_paths_text(keep_idxs=batch_idxs)
 
-            _llm_cache_stats["hits"] += len(cached)
-            _llm_cache_stats["misses"] += len(to_score)
-            if cached:
-                print(f"[CACHE] {len(cached)}/{len(batch_idxs)} paths from cache "
-                      f"(total hits={_llm_cache_stats['hits']}, misses={_llm_cache_stats['misses']})")
-
-            if not to_score:
-                return [cached[idx] for idx in batch_idxs]
-
-            paths_text = self._build_paths_text(keep_idxs=to_score)
-
-            # # Debug: Check if paths_text looks correct
-            # path_lines = [line for line in paths_text.split('\n') if line.startswith('Path ')]
-            # print(f"[DEBUG] Generated text has {len(path_lines)} path lines for {len(to_score)} indices")
             n_lines = sum(1 for line in paths_text.splitlines() if line.startswith("Path "))
-            if n_lines != len(to_score):
-                print(f"[WARN] Prompt contains {n_lines} Path-lines but batch size is {len(to_score)}")
+            if n_lines != len(batch_idxs):
+                print(f"[WARN] Prompt contains {n_lines} Path-lines but batch size is {len(batch_idxs)}")
 
-            id_list = list(map(int, to_score))
-
-            # Debug: show first path text sent to LLM (remove after confirming labels are correct)
-            #first_path_line = next((l for l in paths_text.splitlines() if l.startswith("Path ")), "")
-            #print(f"[DEBUG LLM INPUT] First path line: {first_path_line}")
+            id_list = list(map(int, batch_idxs))
 
             prompt = f"""
             You are evaluating drug–disease explanation paths from the perspective of the following persona:
@@ -781,13 +539,13 @@ class Episode(object):
             2. Completeness (C): 1–5 where 3 is ideal. 1 = too simple, 5 = too complex. Reward paths that are sufficiently detailed without overload.
             3. Relevance (R): 1–5. Usefulness for understanding why the prediction matters and how it connects to the task.
 
-            Paths to evaluate ({len(to_score)} total). Each line has an [id=...]:
+            Paths to evaluate ({len(batch_idxs)} total). Each line has an [id=...]:
                 {paths_text}
 
-            Return ONLY valid JSON with an array of exactly {len(to_score)} objects.
+            Return ONLY valid JSON with an array of exactly {len(batch_idxs)} objects.
             Each object MUST be: {{"id": <int from {id_list}>, "validity": <int>, "completeness": <int>, "relevance": <int>}}.
             Use ONLY the ids from this set: {id_list}. Do not invent or omit ids. DOUBLE CHECK BEFORE RETURNING RESULTS.
-            Do NOT return any text outside the JSON array. Do not return thinking traces or internal monologue. The output MUST be a JSON array of objects with id, validity, completeness, and relevance scores as described above.
+            Do NOT return any text outside the JSON array. Do not return thinking traces or internal monologue. The output MUST be a JSON array of objects with id, validity, completeness, and relevance scores as described above. 
             """.strip()
 
 
@@ -795,23 +553,8 @@ class Episode(object):
             for attempt in range(1, MAX_RETRIES + 1):
                 try:
                     print(f"Attempted LLM call at time {time.strftime('%Y-%m-%d %H:%M:%S')}")
-                    """resp = _agentic_client.chat.completions.create(
-                        model="Qwen/Qwen3.5-9B",
-                        messages=[{"role": "user", "content": prompt}],
-                        max_tokens=81920,
-                        temperature=1.0,
-                        top_p=0.95,
-                        presence_penalty=1.5, 
-                        extra_body={
-                            "top_k": 20,
-                            "chat_template_kwargs": {"enable_thinking": False},
-                        },
-                    )
-                    raw = resp.choices[0].message.content.strip()"""
-                    #messages = [{"role": "system", "content": "You are a JSON generator. Respond ONLY with valid JSON. Do not explain or output anything except JSON. Think before producing a final response."}, {"role": "user", "content": prompt}]
                     messages = [{"role": "user", "content": prompt}]
                     resp, raw = _call_llm(messages, temperature=1.0)
-                    #print(f"[DEBUG] Parsed response: {resp}")
 
                     if resp == "[]":
                         print(f"[WARN] LLM returned empty array. Raw response: {raw}")
@@ -856,43 +599,34 @@ class Episode(object):
                                 "relevance":    clamp1to5(item.get("relevance", 3)),
                             }
 
-                    # Now assemble output strictly in to_score order, filling defaults when missing
-                    new_scores, missing = [], 0
+                    # Now assemble output strictly in batch order, filling defaults when missing
+                    out, missing = [], 0
                     for pid in id_list:
                         if pid in by_id:
-                            new_scores.append(by_id[pid])
+                            out.append(by_id[pid])
                         else:
                             missing += 1
-                            new_scores.append({"validity":3.0, "completeness":2.0, "relevance":3.0})
+                            out.append({"validity":3.0, "completeness":2.0, "relevance":3.0})
 
                     if missing or len(by_id) != len(id_list):
                         print(f"[WARN] ID-mismatch: expected {len(id_list)}, got {len(by_id)}, "
                             f"filled defaults for {missing} ids")
                         print(f"[DEBUG] Prompt was:\n{prompt}\n")
                         print(f"[DEBUG] Raw response was:\n{raw}\n")
-
-                    # Cache the new scores (only successful, non-default ones)
-                    for to_idx, score in zip(to_score, new_scores):
-                        _llm_score_cache[keys[to_idx]] = score
-
-                    # Merge cached + new in original batch order
-                    score_by_idx = dict(zip(to_score, new_scores))
-                    return [cached[idx] if idx in cached else score_by_idx[idx]
-                            for idx in batch_idxs]
-
+                    return out
+                    
                 except Exception as e:
                     last_err = e
                     if attempt < MAX_RETRIES:
                         delay = SLEEP_BETWEEN * (1.25 ** (attempt - 1)) + random.uniform(0, 0.2)
                         time.sleep(delay)
-
-            # Only reached if all retries failed: defaults for uncached, cache for cached
+            
+            # Only reached if all retries failed
             print(f"[FAIL] Batch completely failed after {MAX_RETRIES} attempts: {last_err}")
-            default_score = {"validity": 3.0, "completeness": 2.0, "relevance": 3.0}
-            return [cached[idx] if idx in cached else default_score
-                    for idx in batch_idxs]
+            return [{"validity": 3.0, "completeness": 2.0, "relevance": 3.0}
+                    for _ in batch_idxs]
         
-        # ---- group by example id so each prompt has a single (start,end) context ----
+        # Group by example id so each prompt has a single (start, end) context
         groups = defaultdict(list)
         nr = int(self.num_rollouts)
         for idx in keep_idxs:
@@ -910,15 +644,14 @@ class Episode(object):
     
     def get_reward_agenticAI(self, wV=1/3, wC=1/3, wR=1/3):
         training_step = getattr(Episode, '_training_step', 0)
-        
+
         base = self.get_reward_ic_based()
         self._cache_ic_summaries()
         B = base.shape[0]
 
-        # >>> NEW: if agentic mode is disabled (or no client/persona), just use base
-        #if (not self.agentic_ai_enabled) or (_agentic_client is None) or (not self.persona_text):
         if (not self.agentic_ai_enabled) or (_call_llm is None) or (not self.persona_text):
-            # keep logging arrays coherent so the rest of the pipeline/test logger works
+            # Keep logging arrays coherent so the rest of the pipeline/test logger works
+            print("[INFO] Agentic AI disabled or client/persona missing; using IC-based rewards only.")
             self.agentic_scores = base.astype(np.float32)
             self.llm_dimensions = {}
             self.reward_kind = np.array(['ic_only'] * B, dtype=object)
@@ -927,42 +660,15 @@ class Episode(object):
         threshold = threshold_for_step(training_step)
 
         # Three tiers of paths
-        # Fidelity gate: base > 0 means the path reached the answer entity.
-        # Fidelity=0 paths (base <= 0) get NO reward.
         high_ic_idxs = np.where(base > threshold)[0].tolist()
-        medium_ic_idxs = np.where((base >= 0.5) & (base <= threshold))[0].tolist() if threshold >= 0.5 else []
-        low_ic_idxs = np.where((base > 0) & (base < 0.5))[0].tolist()
-
-        # [DEBUG] IC distribution: are paths clustering near 0.5 or genuinely spread out?
-        ic_eq_05 = int(np.sum(np.isclose(base, 0.5, atol=1e-6)))  # exact-0.5 count
-        bins = [0.0, 0.3, 0.5, 0.6, 0.7, 0.8, 1.0 + 1e-6]
-        hist, _ = np.histogram(base, bins=bins)
-        hist_str = " ".join(
-            f"[{bins[i]:.1f}-{bins[i+1]:.1f}):{int(hist[i])}" for i in range(len(hist))
-        )
-        fb = getattr(self, '_fallback_hits', None)
-        ev = getattr(self, '_edges_visited', None)
-        fb_pct = (100.0 * fb / ev) if (fb is not None and ev) else 0.0
-        fb_line = (
-            f"  [DEBUG] fallback_edges={fb}/{ev} ({fb_pct:.1f}%)"
-            if fb is not None else "  [DEBUG] fallback_edges=n/a"
-        )
-
-        n_high = len(high_ic_idxs)
-        n_med = len(medium_ic_idxs)
-        n_low = len(low_ic_idxs)
-        n_total = int(base.shape[0])
-        n_unrewarded = n_total - n_high - n_med - n_low
+        medium_ic_idxs = np.where((base > 0.5) & (base <= threshold))[0].tolist() if threshold > 0.5 else []
+        low_ic_idxs = np.where((base > 0.3) & (base <= 0.5))[0].tolist()
 
         lines = [
             f"[STEP {training_step}] Threshold={threshold:.2f}",
-            f"  High IC (>{threshold:.2f}): {n_high} paths for LLM",
-            f"  Medium IC [0.5-{threshold:.2f}]: {n_med} paths get 0.25",
-            f"  Low IC (<0.5): {n_low} paths get 0.1",
-            f"  [DEBUG] routed: LLM={n_high} medium={n_med} low={n_low} "
-            f"unrewarded={n_unrewarded} total={n_total}",
-            f"  [DEBUG] IC hist {hist_str}  exact_0.5={ic_eq_05}/{n_total}",
-            fb_line,
+            f"  High IC (>{threshold:.2f}): {len(high_ic_idxs)} paths for LLM",
+            f"  Medium IC (0.5-{threshold:.2f}): {len(medium_ic_idxs)} paths get 0.25",
+            f"  Low IC (0.3-0.5): {len(low_ic_idxs)} paths get 0.1",
         ]
         for s in lines:
             print(s)
@@ -970,36 +676,31 @@ class Episode(object):
 
         out = np.zeros((B,), dtype=np.float32)
 
-        # Initialize storage for agentic scores and clear previous dimensions
         self.agentic_scores = np.zeros((B,), dtype=np.float32)
-        self.llm_dimensions = {}  # Clear previous dimensions
-        self.reward_kind = np.array(['none']*B, dtype=object)  #  track source
+        self.llm_dimensions = {}
+        self.reward_kind = np.array(['none']*B, dtype=object)
 
-
-        # Give ALL tiers some reward
         for idx in low_ic_idxs:
-            out[idx] = 0.1   # Small reward for weak paths
+            out[idx] = 0.1
             self.agentic_scores[idx] = 0.10
             self.reward_kind[idx] = 'low_fixed'
         for idx in medium_ic_idxs:
-            out[idx] = 0.25  # Decent reward for medium paths (increased from 0.20)
+            out[idx] = 0.25
             self.agentic_scores[idx] = 0.25
             self.reward_kind[idx] = 'medium_fixed'
-        
-     
-        # Score high-IC paths with LLM
+
         llm_rewards=[]
         if high_ic_idxs:
             scores_list = self.get_scores_AgenticAI(high_ic_idxs)
             if scores_list is None:
-                # If API fails, give high-IC paths a default
+                # API failed: give high-IC paths a default
                 for idx in high_ic_idxs:
-                    out[idx] = 0.30               
-                    self.agentic_scores[idx] = 0.30  
+                    out[idx] = 0.30
+                    self.agentic_scores[idx] = 0.30
                     self.reward_kind[idx] = 'high_default'
-                    
+
             else:
-                # Process LLM scores — blend IC + LLM so neither dominates
+                # Blend IC + LLM so neither dominates
                 ALPHA = 0.5  # weight for IC; (1-ALPHA) for LLM
                 for idx, scores in zip(high_ic_idxs, scores_list):
                     sv = float(scores["validity"])
@@ -1020,7 +721,6 @@ class Episode(object):
                     self.agentic_scores[idx] = final_blend
                     self.reward_kind[idx] = 'llm+ic'
 
-                    # Store the individual dimensions for LLM-scored paths
                     self.llm_dimensions[idx] = {
                         'validity': sv,
                         'completeness_conv': comp_conv,
@@ -1031,26 +731,20 @@ class Episode(object):
 
                     llm_rewards.append(final_blend)
 
-                # Summary statistics
                 if llm_rewards:
-                    # print(f"  LLM rewards: min={min(llm_rewards):.3f}, "
-                    #     f"avg={np.mean(llm_rewards):.3f}, max={max(llm_rewards):.3f}")
                     s = (f"  LLM rewards: min={min(llm_rewards):.3f}, "
                         f"avg={np.mean(llm_rewards):.3f}, max={max(llm_rewards):.3f}")
                     print(s)
                     _env_logger.info(s)
-        
-        # Summary of all rewards
+
         positive_rewards = out[out > 0]
         if len(positive_rewards) > 0:
-            # print(f"[TOTAL] {len(positive_rewards)} paths rewarded "
-            #     f"(avg={np.mean(positive_rewards):.3f})")
             s = (f"[TOTAL] {len(positive_rewards)} paths rewarded "
             f"(avg={np.mean(positive_rewards):.3f})")
             print(s)
             _env_logger.info(s)
-        
-        # --- bonus: machine-friendly JSON line for analysis (JSONL) ---
+
+        # Bonus: machine-friendly JSON line for analysis (JSONL)
         try:
             _env_logger.info("METRICS " + json.dumps({
                 "step":               int(training_step),
@@ -1080,10 +774,9 @@ class Episode(object):
 
     def get_reward_ic_based(self):
         """
-        CALCULATE REWARD BASED ON THE POSITIVE REWARD AND THE AVERAGE WEIGHT (IC).
-        USE '2.0' AS A SENTINEL FOR PADDING AND IGNORE IT IN THE MEAN.
+        Calculate reward based on the positive reward and the average IC weight.
+        Uses 2.0 as a sentinel for padding (ignored in the mean).
         """
-        ## FIX IC DECISION - use recomputed IC from visited_entities + graph
         self._recompute_from_path()
         weights_array = np.array(self.recomputed_ic_per_step)  # [T, B]
 
@@ -1092,7 +785,6 @@ class Episode(object):
         w[mask_2] = np.nan
         average_ic = np.nanmean(w, axis=0)  # [B]
         size = np.sum(~mask_2, axis=0)       # [B]
-        ## END FIX IC DECISION
 
         success_mask = (self.current_entities == self.end_entities)
 
@@ -1113,40 +805,33 @@ class Episode(object):
             self.current_hop += 1
             bsz = self.no_examples * self.num_rollouts
 
-            # GET CHOSEN ENTITIES
             chosen_ents = self.state['next_entities'][np.arange(bsz), action]
             self.current_entities = chosen_ents
 
-            # --- NEW
-            #track chosen relations for each step
             chosen_rels = self.state['next_relations'][np.arange(bsz), action]
-            
-            # GET THE CHOSEN WEIGHTS
             chosen_weights = self.state['weights'][np.arange(bsz), action]
 
-            # ANY ROLLOUT THAT REACHES THE END_ENTITY => done_mask = TRUE
+            # Any rollout that reached end_entity gets marked done
             newly_done = (chosen_ents == self.end_entities)
             prev_done  = self.done_mask.copy()
-        
-            # PAD ONLY ROLLOUTS THAT WERE ALREADY DONE BEFORE THIS STEP
+
+            # Pad only rollouts that were already done before this step
             chosen_weights[prev_done] = 2.0
-            chosen_rels[prev_done]    = 2.0 #-- NEW 
+            chosen_rels[prev_done]    = 2.0
 
-            # APPEND REAL WEIGHT FOR THE LAST HOP OF NEWLY COMPLETED ROLLOUTS
+            # Append real weight for the last hop of newly completed rollouts
             self.weight_history.append(chosen_weights)
-            self.relation_history.append(chosen_rels) #-- NEW 
+            self.relation_history.append(chosen_rels)
 
-            # MARK NEW COMPLETION AS DONE FOR FUTURE STEPS
             self.done_mask = np.logical_or(self.done_mask, newly_done)
-     
-            # UPDATE VISITED ENTITIES
+
             new_visited = np.zeros((bsz, self.visited_entities.shape[1] + 1), dtype=np.int32)
             for i in range(bsz):
                 new_visited[i, :self.visited_entities.shape[1]] = self.visited_entities[i]
                 new_visited[i, -1] = chosen_ents[i]
             self.visited_entities = new_visited
 
-            # GET NEXT ACTIONS/WEIGHTS (WE STILL NEED THIS FOR THE ROLLOUTS NOT DONE)
+            # Still needed for rollouts not yet done
             next_actions, next_weights = self.grapher.return_next_actions(
                 self.current_entities,
                 self.start_entities,
@@ -1154,20 +839,19 @@ class Episode(object):
                 self.end_entities,
                 self.all_answers,
                 (self.current_hop == self.path_len - 1),
-                self.num_rollouts, 
-                self.visited_entities, # Pass the visited entities list
+                self.num_rollouts,
+                self.visited_entities,
                 self.prevent_cycles
 
             )
-     
-            # UPDATE STATE
+
             self.state['next_relations']  = next_actions[:, :, 1]
             self.state['next_entities']   = next_actions[:, :, 0]
             self.state['current_entities'] = self.current_entities
             self.state['weights'] = next_weights
 
             return self.state
-            
+
 
         else:
             self.current_hop += 1
@@ -1175,19 +859,16 @@ class Episode(object):
 
             self.current_entities = self.state['next_entities'][np.arange(bsz), action]
 
-            # --- NEW
             chosen_rels = self.state['next_relations'][np.arange(bsz), action]
             self.relation_history.append(chosen_rels)
 
-            # Append weights and update next actions as before
             self.weight_history.append(self.state['weights'][np.arange(bsz), action])
 
-            # Update visited entities
             new_visited = np.zeros((bsz, self.visited_entities.shape[1] + 1), dtype=np.int32)
             for i in range(bsz):
                 new_visited[i, :self.visited_entities.shape[1]] = self.visited_entities[i]
                 new_visited[i, self.visited_entities.shape[1]] = self.current_entities[i]
-                    
+
             self.visited_entities = new_visited
 
             next_actions, next_weights = self.grapher.return_next_actions(self.current_entities, self.start_entities, self.query_relation,
@@ -1197,16 +878,16 @@ class Episode(object):
             self.state['next_relations'] = next_actions[:, :, 1]
             self.state['next_entities'] = next_actions[:, :, 0]
             self.state['current_entities'] = self.current_entities
-            self.state['weights'] = next_weights # EDGE WEIGHTS
-            self.state['visited_entities'] = self.visited_entities  # Add visited entities to state
+            self.state['weights'] = next_weights
+            self.state['visited_entities'] = self.visited_entities
 
             return self.state
 
 
 class env(object):
     def __init__(self, params, mode='train'):
-        self.persona_path = params['persona_path'] # NEW
-        self.agentic_ai_enabled = params['agentic_ai_enabled'] # NEW
+        self.persona_path = params['persona_path']
+        self.agentic_ai_enabled = params['agentic_ai_enabled']
         self.llm_api = params.get('llm_api', False)
         self.llm_model = params.get('llm_model', 'qwen')
         self.local_model = params.get('local_model', 'Qwen/Qwen3.5-9B')
@@ -1219,10 +900,9 @@ class env(object):
         self.negative_reward = params['negative_reward']
         self.prevent_cycles = params['prevent_cycles']
         self.mode = mode
-         # NEW: optional separate env log file path
-        self.env_log_file = params.get('env_log_file')  # e.g. ".../env_metrics.log"
+        # Optional separate env log file path, e.g. ".../env_metrics.log"
+        self.env_log_file = params.get('env_log_file')
         configure_env_logger(self.env_log_file)
-        # ...
         self.path_len = params['path_length']
         self.test_rollouts = params['test_rollouts']
         input_dir = params['data_input_dir']
