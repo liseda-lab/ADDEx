@@ -768,7 +768,10 @@ class Trainer(object):
                 self.entity_trajectory.append(
                     state['current_entities'])
 
-            rewards = episode.get_reward_agenticAI()
+            if print_paths:
+                rewards = episode.get_reward_agenticAI()
+            else:
+                rewards = episode.get_reward_ic_based()
             reward_reshape = rewards.reshape((temp_batch_size, self.test_rollouts))
             # Reshape and sort on the *frozen* full log_probs
             self.log_probs = self.log_probs.reshape((temp_batch_size, self.test_rollouts))
