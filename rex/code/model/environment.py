@@ -661,8 +661,8 @@ class Episode(object):
 
         # Three tiers of paths
         high_ic_idxs = np.where(base > threshold)[0].tolist()
-        medium_ic_idxs = np.where((base > 0.5) & (base <= threshold))[0].tolist() if threshold > 0.5 else []
-        low_ic_idxs = np.where((base > 0.3) & (base <= 0.5))[0].tolist()
+        medium_ic_idxs = np.where((base >= 0.5) & (base <= threshold))[0].tolist() if threshold > 0.5 else []
+        low_ic_idxs = np.where((base > 0.3) & (base < 0.5))[0].tolist()
 
         lines = [
             f"[STEP {training_step}] Threshold={threshold:.2f}",
