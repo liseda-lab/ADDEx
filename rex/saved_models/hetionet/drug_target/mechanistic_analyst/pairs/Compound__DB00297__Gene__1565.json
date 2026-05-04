@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00297 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6261,
+        "final_score": 0.5214,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Bupivacaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupivacaine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3626"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5076,
+        "final_score": 0.5076
+      },
+      "nodes": [
+        {
+          "id": "Bupivacaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cauda Equina Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Enzalutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupivacaine",
+          "target": "Cauda Equina Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Cauda Equina Syndrome",
+          "target": "Enzalutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Enzalutamide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupivacaine,Enzalutamide": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_3627"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00889 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6136,
+        "final_score": 0.7234,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Granisetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Serotonin 3 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dolasetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Granisetron",
+          "target": "Serotonin 3 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Serotonin 3 Receptor Antagonists",
+          "target": "Dolasetron",
+          "label": "includes"
+        },
+        {
+          "source": "Dolasetron",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Granisetron,Dolasetron": [
+          "Antiemetic Agent",
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_2053"
+    },
+    {
+      "score": {
+        "ic_mean": 0.466,
+        "final_score": 0.466
+      },
+      "nodes": [
+        {
+          "id": "Granisetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Application Site Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Benzyl Alcohol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Granisetron",
+          "target": "Application Site Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Application Site Rash",
+          "target": "Benzyl Alcohol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Benzyl Alcohol",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Granisetron,Benzyl Alcohol": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_2054"
+    }
+  ]
+}

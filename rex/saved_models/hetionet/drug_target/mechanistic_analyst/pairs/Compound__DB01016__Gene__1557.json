@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01016 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4764,
+        "final_score": 0.4764
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypotrichosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Famotidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Hypotrichosis",
+          "label": "causes"
+        },
+        {
+          "source": "Hypotrichosis",
+          "target": "Famotidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Famotidine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glyburide,Famotidine": [
+          "Agent Affecting Digestive System Or Metabolism",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_7426"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5253,
-        "final_score": 0.5253
+        "ic_mean": 0.6298,
+        "final_score": 0.6298
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1b",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Modafinil",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Adra1b",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Adra1b",
-          "target": "Modafinil",
-          "label": "is bound by"
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Modafinil",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Modafinil": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_12961"
+      "id": "path_6577"
     },
     {
       "score": {
-        "ic_mean": 0.5051,
-        "final_score": 0.5051
+        "ic_mean": 0.6298,
+        "final_score": 0.6298
       },
       "nodes": [
         {
@@ -60,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Slc6a3",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Sertraline",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -75,32 +69,26 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Slc6a3",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Slc6a3",
-          "target": "Sertraline",
-          "label": "is bound by"
+          "source": "Cyp3a7",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
         },
         {
-          "source": "Sertraline",
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Sertraline": [
-          "Organic Amino Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12962"
+      "id": "path_6578"
     },
     {
       "score": {
-        "ic_mean": 0.4952,
-        "final_score": 0.4952
+        "ic_mean": 0.576,
+        "final_score": 0.576
       },
       "nodes": [
         {
@@ -108,11 +96,53 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1b",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Risperidone",
+          "id": "Oxygen Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Oxygen Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Oxygen Binding",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6579"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4565,
+        "final_score": 0.4565
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Astemizole",
           "type": "Compound"
         },
         {
@@ -123,32 +153,31 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Adra1b",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Adra1b",
-          "target": "Risperidone",
+          "source": "Cyp3a7",
+          "target": "Astemizole",
           "label": "is bound by"
         },
         {
-          "source": "Risperidone",
+          "source": "Astemizole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nefazodone,Risperidone": [
-          "Agent Affecting Nervous System",
+        "Nefazodone,Astemizole": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_12963"
+      "id": "path_6580"
     },
     {
       "score": {
-        "ic_mean": 0.4952,
-        "final_score": 0.4952
+        "ic_mean": 0.4565,
+        "final_score": 0.4565
       },
       "nodes": [
         {
@@ -156,11 +185,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1b",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Sertindole",
+          "id": "Propranolol",
           "type": "Compound"
         },
         {
@@ -171,272 +200,32 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Adra1b",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Adra1b",
-          "target": "Sertindole",
+          "source": "Cyp3a7",
+          "target": "Propranolol",
           "label": "is bound by"
         },
         {
-          "source": "Sertindole",
+          "source": "Propranolol",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nefazodone,Sertindole": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_12964"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4952,
-        "final_score": 0.4952
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Lisuride",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1b",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1b",
-          "target": "Lisuride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lisuride",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Lisuride": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_12965"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4825,
-        "final_score": 0.4825
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Sertraline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Slc6a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc6a2",
-          "target": "Sertraline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sertraline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Sertraline": [
-          "Organic Amino Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12966"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4683,
-        "final_score": 0.4683
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Risperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1a",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1a",
-          "target": "Risperidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Risperidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Risperidone": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_12967"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4574,
-        "final_score": 0.4574
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Olanzapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1b",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1b",
-          "target": "Olanzapine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Olanzapine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Olanzapine": [
-          "Agent Affecting Nervous System",
-          "N-Arylpiperazine"
-        ]
-      },
-      "id": "path_12968"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4538,
-        "final_score": 0.4538
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Slc6a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc6a3",
-          "target": "Cocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cocaine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Cocaine": [
-          "Tertiary Amino Compound",
+        "Nefazodone,Propranolol": [
+          "Benzenoid Aromatic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12969"
+      "id": "path_6581"
     },
     {
       "score": {
-        "ic_mean": 0.4491,
-        "final_score": 0.4491
+        "ic_mean": 0.4351,
+        "final_score": 0.4351
       },
       "nodes": [
         {
@@ -444,11 +233,11 @@
           "type": "Compound"
         },
         {
-          "id": "Malignant Syndrome Nos",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Bromocriptine",
+          "id": "Lercanidipine",
           "type": "Compound"
         },
         {
@@ -459,360 +248,26 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Malignant Syndrome Nos",
-          "label": "causes"
-        },
-        {
-          "source": "Malignant Syndrome Nos",
-          "target": "Bromocriptine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Bromocriptine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Bromocriptine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_12970"
-    },
-    {
-      "score": {
-        "ic_mean": 0.447,
-        "final_score": 0.447
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Epinastine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1a",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Adra1a",
-          "target": "Epinastine",
+          "source": "Cyp3a7",
+          "target": "Lercanidipine",
           "label": "is bound by"
         },
         {
-          "source": "Epinastine",
+          "source": "Lercanidipine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nefazodone,Epinastine": [
-          "Organonitrogen Heterocyclic Compound"
+        "Nefazodone,Lercanidipine": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_12971"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4372,
-        "final_score": 0.4372
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Alfentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Alfentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alfentanil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Alfentanil": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_12972"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4372,
-        "final_score": 0.4372
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Diltiazem": [
-          "Tertiary Amino Compound"
-        ]
-      },
-      "id": "path_12973"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4325,
-        "final_score": 0.4325
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Nortriptyline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1b",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1b",
-          "target": "Nortriptyline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nortriptyline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Nortriptyline": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12974"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4325,
-        "final_score": 0.4325
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicardipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1b",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1b",
-          "target": "Nicardipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicardipine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Nicardipine": [
-          "Benzenes"
-        ]
-      },
-      "id": "path_12975"
-    },
-    {
-      "score": {
-        "ic_mean": 0.431,
-        "final_score": 0.431
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Prl Increased",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Prl Increased",
-          "label": "causes"
-        },
-        {
-          "source": "Prl Increased",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Venlafaxine": [
-          "Tertiary Amino Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12976"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4305,
-        "final_score": 0.4305
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzphetamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1a",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1a",
-          "target": "Benzphetamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benzphetamine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Benzphetamine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_12977"
+      "id": "path_6582"
     },
     {
       "score": {
@@ -856,16 +311,16 @@
       ],
       "lowest_common_ancestors": {
         "Nefazodone,Tiagabine": [
-          "Tertiary Amino Compound",
+          "Organonitrogen Heterocyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12978"
+      "id": "path_6583"
     },
     {
       "score": {
-        "ic_mean": 0.4218,
-        "final_score": 0.4218
+        "ic_mean": 0.4186,
+        "final_score": 0.4186
       },
       "nodes": [
         {
@@ -873,11 +328,11 @@
           "type": "Compound"
         },
         {
-          "id": "Malignant Syndrome Nos",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Fluvoxamine",
+          "id": "Triazolam",
           "type": "Compound"
         },
         {
@@ -888,80 +343,32 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Malignant Syndrome Nos",
-          "label": "causes"
-        },
-        {
-          "source": "Malignant Syndrome Nos",
-          "target": "Fluvoxamine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fluvoxamine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Fluvoxamine": [
-          "Benzenes",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12979"
-    },
-    {
-      "score": {
-        "ic_mean": 0.417,
-        "final_score": 0.417
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1a",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Adra1a",
-          "target": "Citalopram",
+          "source": "Cyp3a7",
+          "target": "Triazolam",
           "label": "is bound by"
         },
         {
-          "source": "Citalopram",
+          "source": "Triazolam",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nefazodone,Citalopram": [
-          "Tertiary Amino Compound",
-          "Antidepressant Agent"
+        "Nefazodone,Triazolam": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12980"
+      "id": "path_6584"
     },
     {
       "score": {
-        "ic_mean": 0.4159,
-        "final_score": 0.4159
+        "ic_mean": 0.4186,
+        "final_score": 0.4186
       },
       "nodes": [
         {
@@ -969,11 +376,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a7-cyp3a51p",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Rifapentine",
+          "id": "Buprenorphine",
           "type": "Compound"
         },
         {
@@ -984,31 +391,79 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Cyp3a7-cyp3a51p",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Rifapentine",
+          "source": "Cyp3a7",
+          "target": "Buprenorphine",
           "label": "is bound by"
         },
         {
-          "source": "Rifapentine",
+          "source": "Buprenorphine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nefazodone,Rifapentine": [
+        "Nefazodone,Buprenorphine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6585"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4051,
+        "final_score": 0.4051
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Indinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nefazodone,Indinavir": [
           "N-Alkylpiperazine"
         ]
       },
-      "id": "path_12981"
+      "id": "path_6586"
     },
     {
       "score": {
-        "ic_mean": 0.4106,
-        "final_score": 0.4106
+        "ic_mean": 0.4051,
+        "final_score": 0.4051
       },
       "nodes": [
         {
@@ -1016,11 +471,11 @@
           "type": "Compound"
         },
         {
-          "id": "Tendinous Contracture",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Fluvoxamine",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -1031,80 +486,80 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Tendinous Contracture",
-          "label": "causes"
-        },
-        {
-          "source": "Tendinous Contracture",
-          "target": "Fluvoxamine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fluvoxamine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Fluvoxamine": [
-          "Benzenes",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12982"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4098,
-        "final_score": 0.4098
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Orphenadrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Slc6a2",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Slc6a2",
-          "target": "Orphenadrine",
+          "source": "Cyp3a7",
+          "target": "Imipramine",
           "label": "is bound by"
         },
         {
-          "source": "Orphenadrine",
+          "source": "Imipramine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nefazodone,Orphenadrine": [
-          "Tertiary Amino Compound",
+        "Nefazodone,Imipramine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_6587"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3838,
+        "final_score": 0.3838
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Phenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nefazodone,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12983"
+      "id": "path_6588"
     },
     {
       "score": {
-        "ic_mean": 0.399,
-        "final_score": 0.399
+        "ic_mean": 0.3838,
+        "final_score": 0.3838
       },
       "nodes": [
         {
@@ -1112,11 +567,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1b",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Carvedilol",
+          "id": "Ketoconazole",
           "type": "Compound"
         },
         {
@@ -1127,123 +582,26 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Adra1b",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Adra1b",
-          "target": "Carvedilol",
+          "source": "Cyp3a7",
+          "target": "Ketoconazole",
           "label": "is bound by"
         },
         {
-          "source": "Carvedilol",
+          "source": "Ketoconazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nefazodone,Carvedilol": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Nefazodone,Ketoconazole": [
+          "Azole"
         ]
       },
-      "id": "path_12984"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3963,
-        "final_score": 0.3963
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Malignant Syndrome Nos",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Risperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Malignant Syndrome Nos",
-          "label": "causes"
-        },
-        {
-          "source": "Malignant Syndrome Nos",
-          "target": "Risperidone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Risperidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Risperidone": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_12985"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3883,
-        "final_score": 0.3883
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Drug Seeking Behavior",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Drug Seeking Behavior",
-          "label": "causes"
-        },
-        {
-          "source": "Drug Seeking Behavior",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Venlafaxine": [
-          "Tertiary Amino Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12986"
+      "id": "path_6589"
     },
     {
       "score": {
@@ -1291,247 +649,7 @@
           "Antidepressant Agent"
         ]
       },
-      "id": "path_12987"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3741,
-        "final_score": 0.3741
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Malignant Syndrome Nos",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Quetiapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Malignant Syndrome Nos",
-          "label": "causes"
-        },
-        {
-          "source": "Malignant Syndrome Nos",
-          "target": "Quetiapine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Quetiapine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Quetiapine": [
-          "Agent Affecting Nervous System",
-          "N-Arylpiperazine"
-        ]
-      },
-      "id": "path_12988"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3721,
-        "final_score": 0.3721
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Carvedilol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Adra1a",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1a",
-          "target": "Carvedilol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Carvedilol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Carvedilol": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_12989"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3706,
-        "final_score": 0.3706
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Tolerance Development",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Tolerance Development",
-          "label": "causes"
-        },
-        {
-          "source": "Tolerance Development",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Venlafaxine": [
-          "Tertiary Amino Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12990"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3701,
-        "final_score": 0.3701
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Tolerance Development",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tramadol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Tolerance Development",
-          "label": "causes"
-        },
-        {
-          "source": "Tolerance Development",
-          "target": "Tramadol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tramadol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Tramadol": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_12991"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3657,
-        "final_score": 0.3657
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Drug Seeking Behavior",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ziprasidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Drug Seeking Behavior",
-          "label": "causes"
-        },
-        {
-          "source": "Drug Seeking Behavior",
-          "target": "Ziprasidone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ziprasidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Ziprasidone": [
-          "Agent Affecting Nervous System",
-          "Piperazines"
-        ]
-      },
-      "id": "path_12992"
+      "id": "path_6590"
     },
     {
       "score": {
@@ -1579,12 +697,12 @@
           "Antidepressant Agent"
         ]
       },
-      "id": "path_12993"
+      "id": "path_6591"
     },
     {
       "score": {
-        "ic_mean": 0.3581,
-        "final_score": 0.3581
+        "ic_mean": 0.3511,
+        "final_score": 0.3511
       },
       "nodes": [
         {
@@ -1592,11 +710,11 @@
           "type": "Compound"
         },
         {
-          "id": "Drug Seeking Behavior",
+          "id": "Psychomotor Retardation",
           "type": "Side Effect"
         },
         {
-          "id": "Citalopram",
+          "id": "Zaleplon",
           "type": "Compound"
         },
         {
@@ -1607,172 +725,27 @@
       "edges": [
         {
           "source": "Nefazodone",
-          "target": "Drug Seeking Behavior",
+          "target": "Psychomotor Retardation",
           "label": "causes"
         },
         {
-          "source": "Drug Seeking Behavior",
-          "target": "Citalopram",
+          "source": "Psychomotor Retardation",
+          "target": "Zaleplon",
           "label": "is caused by"
         },
         {
-          "source": "Citalopram",
+          "source": "Zaleplon",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nefazodone,Citalopram": [
-          "Tertiary Amino Compound",
-          "Antidepressant Agent"
+        "Nefazodone,Zaleplon": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12994"
-    },
-    {
-      "score": {
-        "ic_mean": 0.348,
-        "final_score": 0.348
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Tolerance Development",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ziprasidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Tolerance Development",
-          "label": "causes"
-        },
-        {
-          "source": "Tolerance Development",
-          "target": "Ziprasidone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ziprasidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Ziprasidone": [
-          "Agent Affecting Nervous System",
-          "Piperazines"
-        ]
-      },
-      "id": "path_12995"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3404,
-        "final_score": 0.3404
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Tolerance Development",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Tolerance Development",
-          "label": "causes"
-        },
-        {
-          "source": "Tolerance Development",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Citalopram": [
-          "Tertiary Amino Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12996"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3266,
-        "final_score": 0.3266
-      },
-      "nodes": [
-        {
-          "id": "Nefazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Derealisation",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nefazodone",
-          "target": "Derealisation",
-          "label": "causes"
-        },
-        {
-          "source": "Derealisation",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nefazodone,Citalopram": [
-          "Tertiary Amino Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_12997"
+      "id": "path_6592"
     }
-  ],
-  "verbalization": ""
+  ]
 }

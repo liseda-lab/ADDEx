@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00593 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6553,
+        "final_score": 0.661,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Ethosuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethosuximide",
+          "target": "Cyp3a43",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a43",
+          "target": "Rifapentine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifapentine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethosuximide,Rifapentine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_9473"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5148,
+        "final_score": 0.5148
+      },
+      "nodes": [
+        {
+          "id": "Ethosuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sleep Terror",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethosuximide",
+          "target": "Sleep Terror",
+          "label": "causes"
+        },
+        {
+          "source": "Sleep Terror",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethosuximide,Clonidine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9474"
+    }
+  ]
+}

@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00328 - Gene::3576",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5688,
+        "final_score": 0.5688
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Necrotising Fasciitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cxcl8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Necrotising Fasciitis",
+          "label": "causes"
+        },
+        {
+          "source": "Necrotising Fasciitis",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Cxcl8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Ibuprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_4042"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5688,
+        "final_score": 0.5688
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cellulitis Gangrenous",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cxcl8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Cellulitis Gangrenous",
+          "label": "causes"
+        },
+        {
+          "source": "Cellulitis Gangrenous",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Cxcl8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Ibuprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_4043"
+    }
+  ]
 }

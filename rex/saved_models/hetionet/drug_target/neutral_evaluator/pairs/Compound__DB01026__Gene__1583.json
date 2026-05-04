@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB01026 - Gene::1583",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7018,
+        "final_score": 0.7018
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b2",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Iron-sulfur Protein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp11a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp11b2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp11b2",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Iron-sulfur Protein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Iron-sulfur Protein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp11a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11213"
+    }
+  ]
 }

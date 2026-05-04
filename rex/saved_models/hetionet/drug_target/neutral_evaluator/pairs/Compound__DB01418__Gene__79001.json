@@ -1,6 +1,61 @@
 {
   "id": "Compound::DB01418 - Gene::79001",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5393,
+        "final_score": 0.5393
+      },
+      "nodes": [
+        {
+          "id": "Acenocoumarol",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenprocoumon",
+          "type": "Compound"
+        },
+        {
+          "id": "Dicoumarol",
+          "type": "Compound"
+        },
+        {
+          "id": "Vkorc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acenocoumarol",
+          "target": "Phenprocoumon",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenprocoumon",
+          "target": "Dicoumarol",
+          "label": "resembles"
+        },
+        {
+          "source": "Dicoumarol",
+          "target": "Vkorc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acenocoumarol,Phenprocoumon": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
+        ],
+        "Acenocoumarol,Dicoumarol": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
+        ],
+        "Phenprocoumon,Dicoumarol": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
+        ]
+      },
+      "id": "path_14691"
+    }
+  ]
 }

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01016 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7112,
+        "final_score": 0.6056,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfonylurea Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Chlorpropamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Sulfonylurea Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Sulfonylurea Compounds",
+          "target": "Chlorpropamide",
+          "label": "includes"
+        },
+        {
+          "source": "Chlorpropamide",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glyburide,Chlorpropamide": [
+          "N-Sulfonylurea",
+          "Sulfonylurea Antidiabetic Agent"
+        ]
+      },
+      "id": "path_826"
+    }
+  ]
+}

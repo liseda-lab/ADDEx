@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00904 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4852,
+        "final_score": 0.4852
+      },
+      "nodes": [
+        {
+          "id": "Ondansetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Burning Rectal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ondansetron",
+          "target": "Burning Rectal",
+          "label": "causes"
+        },
+        {
+          "source": "Burning Rectal",
+          "target": "Diazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diazepam",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ondansetron,Diazepam": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10222"
+    }
+  ]
+}

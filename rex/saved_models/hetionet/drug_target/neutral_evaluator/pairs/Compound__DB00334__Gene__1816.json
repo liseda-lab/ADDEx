@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7035,
-        "final_score": 0.7035
+        "ic_mean": 0.7492,
+        "final_score": 0.7492
       },
       "nodes": [
         {
@@ -12,11 +12,95 @@
           "type": "Compound"
         },
         {
-          "id": "Htr5a",
+          "id": "Hrh4",
           "type": "Gene"
         },
         {
-          "id": "Loxapine",
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Olanzapine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12750"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7039,
+        "final_score": 0.7039
+      },
+      "nodes": [
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Olanzapine",
+          "target": "Chrm4",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12751"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6521,
+        "final_score": 0.6521
+      },
+      "nodes": [
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Bromocriptine",
           "type": "Compound"
         },
         {
@@ -27,28 +111,123 @@
       "edges": [
         {
           "source": "Olanzapine",
-          "target": "Htr5a",
+          "target": "Htr1d",
           "label": "binds"
         },
         {
-          "source": "Htr5a",
-          "target": "Loxapine",
+          "source": "Htr1d",
+          "target": "Bromocriptine",
           "label": "is bound by"
         },
         {
-          "source": "Loxapine",
+          "source": "Bromocriptine",
           "target": "Drd5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Olanzapine,Loxapine": [
+        "Olanzapine,Bromocriptine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12752"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6272,
+        "final_score": 0.6272
+      },
+      "nodes": [
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Olanzapine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "Chlorpromazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Chlorpromazine",
+          "target": "Drd5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Olanzapine,Chlorpromazine": [
           "Organic Heteropolycyclic Compound",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_25149"
+      "id": "path_12753"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6008,
+        "final_score": 0.6008
+      },
+      "nodes": [
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        },
+        {
+          "id": "Methotrimeprazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Olanzapine",
+          "target": "Chrm4",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm4",
+          "target": "Methotrimeprazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methotrimeprazine",
+          "target": "Drd5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Olanzapine,Methotrimeprazine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12754"
     }
-  ],
-  "verbalization": ""
+  ]
 }

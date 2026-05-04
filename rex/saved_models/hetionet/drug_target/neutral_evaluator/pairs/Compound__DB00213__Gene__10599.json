@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00213 - Gene::10599",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4065,
+        "final_score": 0.4065
+      },
+      "nodes": [
+        {
+          "id": "Pantoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Glucose Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pantoprazole",
+          "target": "Glucose Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Glucose Increased",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pantoprazole,Indinavir": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_2254"
+    }
+  ]
 }

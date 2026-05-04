@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.783,
-        "final_score": 0.783
+        "ic_mean": 0.5321,
+        "final_score": 0.5321
       },
       "nodes": [
         {
@@ -12,8 +12,8 @@
           "type": "Compound"
         },
         {
-          "id": "Shbg",
-          "type": "Gene"
+          "id": "Mestranol",
+          "type": "Compound"
         },
         {
           "id": "Desogestrel",
@@ -27,13 +27,13 @@
       "edges": [
         {
           "source": "Estriol",
-          "target": "Shbg",
-          "label": "binds"
+          "target": "Mestranol",
+          "label": "resembles"
         },
         {
-          "source": "Shbg",
+          "source": "Mestranol",
           "target": "Desogestrel",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Desogestrel",
@@ -42,69 +42,20 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Estriol,Mestranol": [
+          "Steroidal Estrogen",
+          "17Beta-Hydroxy Steroid"
+        ],
         "Estriol,Desogestrel": [
-          "17Beta-Hydroxy Steroid",
-          "Therapeutic Steroid Hormone"
+          "Therapeutic Steroid Hormone",
+          "17Beta-Hydroxy Steroid"
+        ],
+        "Mestranol,Desogestrel": [
+          "Therapeutic Steroid Hormone",
+          "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_25206"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5082,
-        "final_score": 0.5082
-      },
-      "nodes": [
-        {
-          "id": "Estriol",
-          "type": "Compound"
-        },
-        {
-          "id": "Quinestrol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ethynodiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Esr1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Estriol",
-          "target": "Quinestrol",
-          "label": "resembles"
-        },
-        {
-          "source": "Quinestrol",
-          "target": "Ethynodiol",
-          "label": "resembles"
-        },
-        {
-          "source": "Ethynodiol",
-          "target": "Esr1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Estriol,Quinestrol": [
-          "17-Hydroxy Steroid",
-          "Steroidal Estrogen"
-        ],
-        "Estriol,Ethynodiol": [
-          "17Beta-Hydroxy Steroid",
-          "Therapeutic Steroid Hormone"
-        ],
-        "Quinestrol,Ethynodiol": [
-          "17-Hydroxy Steroid",
-          "Therapeutic Steroid Hormone"
-        ]
-      },
-      "id": "path_25207"
+      "id": "path_12767"
     }
-  ],
-  "verbalization": ""
+  ]
 }

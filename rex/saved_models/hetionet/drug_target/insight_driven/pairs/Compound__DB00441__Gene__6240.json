@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00441 - Gene::6240",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5574,
+        "final_score": 0.4454,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oligospermia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydroxyurea",
+          "type": "Compound"
+        },
+        {
+          "id": "Rrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Oligospermia",
+          "label": "causes"
+        },
+        {
+          "source": "Oligospermia",
+          "target": "Hydroxyurea",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydroxyurea",
+          "target": "Rrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Hydroxyurea": [
+          "Organic Molecular Entity",
+          "Antimetabolite"
+        ]
+      },
+      "id": "path_10341"
+    }
+  ]
+}

@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01076 - Gene::3156",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5505,
+        "final_score": 0.5505
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Bezafibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Hmgcr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Bezafibrate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Bezafibrate",
+          "target": "Hmgcr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Bezafibrate": [
+          "Monocarboxylic Acid",
+          "Antilipidemic Agent"
+        ]
+      },
+      "id": "path_12877"
+    }
+  ]
 }

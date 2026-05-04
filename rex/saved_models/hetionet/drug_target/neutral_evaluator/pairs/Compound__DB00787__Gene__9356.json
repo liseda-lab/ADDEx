@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6943,
-        "final_score": 0.6943
+        "ic_mean": 0.6733,
+        "final_score": 0.6733
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc47a1",
-          "type": "Gene"
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Bromodiphenhydramine",
+          "id": "Ganciclovir",
           "type": "Compound"
         },
         {
@@ -27,31 +27,32 @@
       "edges": [
         {
           "source": "Aciclovir",
-          "target": "Slc47a1",
-          "label": "binds"
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Slc47a1",
-          "target": "Bromodiphenhydramine",
-          "label": "is bound by"
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Ganciclovir",
+          "label": "includes"
         },
         {
-          "source": "Bromodiphenhydramine",
+          "source": "Ganciclovir",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Aciclovir,Bromodiphenhydramine": [
-          "Organonitrogen Compound"
+        "Aciclovir,Ganciclovir": [
+          "Dna Polymerase Inhibitor",
+          "2-Aminopurines"
         ]
       },
-      "id": "path_16897"
+      "id": "path_8459"
     },
     {
       "score": {
-        "ic_mean": 0.6856,
-        "final_score": 0.6856
+        "ic_mean": 0.6326,
+        "final_score": 0.6326
       },
       "nodes": [
         {
@@ -59,8 +60,8 @@
           "type": "Compound"
         },
         {
-          "id": "Slc10a2",
-          "type": "Gene"
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Valaciclovir",
@@ -74,13 +75,13 @@
       "edges": [
         {
           "source": "Aciclovir",
-          "target": "Slc10a2",
-          "label": "binds"
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Slc10a2",
+          "source": "Dna Polymerase Inhibitors",
           "target": "Valaciclovir",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Valaciclovir",
@@ -88,7 +89,55 @@
           "label": "binds"
         }
       ],
-      "id": "path_16898"
+      "id": "path_8460"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5975,
+        "final_score": 0.5975
+      },
+      "nodes": [
+        {
+          "id": "Aciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Foscarnet",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Foscarnet",
+          "label": "includes"
+        },
+        {
+          "source": "Foscarnet",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aciclovir,Foscarnet": [
+          "Organic Molecule",
+          "Antiviral Agent"
+        ]
+      },
+      "id": "path_8461"
     },
     {
       "score": {
@@ -105,7 +154,7 @@
           "type": "Gene"
         },
         {
-          "id": "Oxytetracycline",
+          "id": "Cilastatin",
           "type": "Compound"
         },
         {
@@ -121,27 +170,27 @@
         },
         {
           "source": "Slc22a8",
-          "target": "Oxytetracycline",
+          "target": "Cilastatin",
           "label": "is bound by"
         },
         {
-          "source": "Oxytetracycline",
+          "source": "Cilastatin",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Aciclovir,Oxytetracycline": [
-          "Heteroorganic Entity",
-          "Anti-Infective Agent"
+        "Aciclovir,Cilastatin": [
+          "Enzyme Inhibitor",
+          "Organic Molecule"
         ]
       },
-      "id": "path_16899"
+      "id": "path_8462"
     },
     {
       "score": {
-        "ic_mean": 0.5719,
-        "final_score": 0.5719
+        "ic_mean": 0.5751,
+        "final_score": 0.5751
       },
       "nodes": [
         {
@@ -149,11 +198,11 @@
           "type": "Compound"
         },
         {
-          "id": "Superficial Punctate Keratopathy",
-          "type": "Side Effect"
+          "id": "Slc22a8",
+          "type": "Gene"
         },
         {
-          "id": "Trifluridine",
+          "id": "Aspartame",
           "type": "Compound"
         },
         {
@@ -164,26 +213,121 @@
       "edges": [
         {
           "source": "Aciclovir",
-          "target": "Superficial Punctate Keratopathy",
-          "label": "causes"
+          "target": "Slc22a8",
+          "label": "binds"
         },
         {
-          "source": "Superficial Punctate Keratopathy",
-          "target": "Trifluridine",
-          "label": "is caused by"
+          "source": "Slc22a8",
+          "target": "Aspartame",
+          "label": "is bound by"
         },
         {
-          "source": "Trifluridine",
+          "source": "Aspartame",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Aciclovir,Trifluridine": [
+        "Aciclovir,Aspartame": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_8463"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5451,
+        "final_score": 0.5451
+      },
+      "nodes": [
+        {
+          "id": "Aciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        },
+        {
+          "id": "Piroxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aciclovir",
+          "target": "Slc22a8",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a8",
+          "target": "Piroxicam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Piroxicam",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aciclovir,Piroxicam": [
+          "Enzyme Inhibitor",
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_8464"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5451,
+        "final_score": 0.5451
+      },
+      "nodes": [
+        {
+          "id": "Aciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenylbutazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aciclovir",
+          "target": "Slc22a8",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a8",
+          "target": "Phenylbutazone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenylbutazone",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aciclovir,Phenylbutazone": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_16900"
+      "id": "path_8465"
     },
     {
       "score": {
@@ -231,7 +375,7 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_16901"
+      "id": "path_8466"
     },
     {
       "score": {
@@ -279,7 +423,7 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_16902"
+      "id": "path_8467"
     },
     {
       "score": {
@@ -323,59 +467,11 @@
       ],
       "lowest_common_ancestors": {
         "Aciclovir,Ganciclovir": [
-          "2-Aminopurines",
-          "Dna Polymerase Inhibitor"
+          "Dna Polymerase Inhibitor",
+          "2-Aminopurines"
         ]
       },
-      "id": "path_16903"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4702,
-        "final_score": 0.4702
-      },
-      "nodes": [
-        {
-          "id": "Aciclovir",
-          "type": "Compound"
-        },
-        {
-          "id": "Neutrophilia",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ofloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Aciclovir",
-          "target": "Neutrophilia",
-          "label": "causes"
-        },
-        {
-          "source": "Neutrophilia",
-          "target": "Ofloxacin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ofloxacin",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Aciclovir,Ofloxacin": [
-          "Organonitrogen Heterocyclic Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_16904"
+      "id": "path_8468"
     },
     {
       "score": {
@@ -417,8 +513,55 @@
           "label": "binds"
         }
       ],
-      "id": "path_16905"
+      "id": "path_8469"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4553,
+        "final_score": 0.4553
+      },
+      "nodes": [
+        {
+          "id": "Aciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Auditory And Visual Hallucinations",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aciclovir",
+          "target": "Auditory And Visual Hallucinations",
+          "label": "causes"
+        },
+        {
+          "source": "Auditory And Visual Hallucinations",
+          "target": "Benzylpenicillin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Benzylpenicillin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aciclovir,Benzylpenicillin": [
+          "Organic Heterobicyclic Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_8470"
     }
-  ],
-  "verbalization": ""
+  ]
 }

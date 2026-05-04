@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00655 - Gene::6579",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.545,
+        "final_score": 0.545
+      },
+      "nodes": [
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco2b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estrone",
+          "target": "Slco2b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco2b1",
+          "target": "Pravastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estrone,Pravastatin": [
+          "Organic Hydroxy Compound"
+        ]
+      },
+      "id": "path_7757"
+    }
+  ]
 }

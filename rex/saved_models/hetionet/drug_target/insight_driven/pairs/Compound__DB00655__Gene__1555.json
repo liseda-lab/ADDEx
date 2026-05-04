@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00655 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6474,
+        "final_score": 0.6571,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estrone",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2b6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_347"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4944,
+        "final_score": 0.4944
+      },
+      "nodes": [
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ectropion Of Cervix",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estrone",
+          "target": "Ectropion Of Cervix",
+          "label": "causes"
+        },
+        {
+          "source": "Ectropion Of Cervix",
+          "target": "Ethinyl Estradiol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estrone,Ethinyl Estradiol": [
+          "3-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_348"
+    }
+  ]
+}

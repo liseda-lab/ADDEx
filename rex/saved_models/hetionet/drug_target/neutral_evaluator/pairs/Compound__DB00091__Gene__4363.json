@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5639,
-        "final_score": 0.5639
+        "ic_mean": 0.4853,
+        "final_score": 0.4853
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb11",
-          "type": "Gene"
+          "id": "Hyperamylasaemia",
+          "type": "Side Effect"
         },
         {
-          "id": "Fluorescein",
+          "id": "Ritonavir",
           "type": "Compound"
         },
         {
@@ -27,73 +27,78 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Abcb11",
-          "label": "binds"
+          "target": "Hyperamylasaemia",
+          "label": "causes"
         },
         {
-          "source": "Abcb11",
-          "target": "Fluorescein",
-          "label": "is bound by"
+          "source": "Hyperamylasaemia",
+          "target": "Ritonavir",
+          "label": "is caused by"
         },
         {
-          "source": "Fluorescein",
-          "target": "Abcc1",
-          "label": "binds"
-        }
-      ],
-      "id": "path_9416"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4825,
-        "final_score": 0.4825
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Rosuvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rosuvastatin",
+          "source": "Ritonavir",
           "target": "Abcc1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Rosuvastatin": [
+        "Cyclosporine,Ritonavir": [
+          "Carboxamide"
+        ]
+      },
+      "id": "path_4565"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4741,
+        "final_score": 0.4741
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blindness Cortical",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Blindness Cortical",
+          "label": "causes"
+        },
+        {
+          "source": "Blindness Cortical",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Abcc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Etoposide": [
           "Organooxygen Compound"
         ]
       },
-      "id": "path_9417"
+      "id": "path_4566"
     },
     {
       "score": {
-        "ic_mean": 0.447,
-        "final_score": 0.447
+        "ic_mean": 0.4633,
+        "final_score": 0.4633
       },
       "nodes": [
         {
@@ -101,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Hyperamylasaemia",
+          "type": "Side Effect"
         },
         {
-          "id": "Saquinavir",
+          "id": "Lamivudine",
           "type": "Compound"
         },
         {
@@ -116,27 +121,26 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Hyperamylasaemia",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Saquinavir",
-          "label": "is bound by"
+          "source": "Hyperamylasaemia",
+          "target": "Lamivudine",
+          "label": "is caused by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Lamivudine",
           "target": "Abcc1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Saquinavir": [
+        "Cyclosporine,Lamivudine": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_9418"
+      "id": "path_4567"
     }
-  ],
-  "verbalization": ""
+  ]
 }

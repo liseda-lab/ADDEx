@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00572 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5035,
+        "final_score": 0.5035
+      },
+      "nodes": [
+        {
+          "id": "Atropine",
+          "type": "Compound"
+        },
+        {
+          "id": "Labile Blood Pressure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atropine",
+          "target": "Labile Blood Pressure",
+          "label": "causes"
+        },
+        {
+          "source": "Labile Blood Pressure",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atropine,Propafenone": [
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_7863"
+    }
+  ]
+}

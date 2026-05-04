@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.481,
-        "final_score": 0.481
+        "ic_mean": 0.4797,
+        "final_score": 0.4797
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Dirithromycin",
-          "type": "Compound"
+          "id": "Abcb1",
+          "type": "Gene"
         },
         {
-          "id": "Azithromycin",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -27,35 +27,26 @@
       "edges": [
         {
           "source": "Roxithromycin",
-          "target": "Dirithromycin",
-          "label": "resembles"
+          "target": "Abcb1",
+          "label": "binds"
         },
         {
-          "source": "Dirithromycin",
-          "target": "Azithromycin",
-          "label": "resembles"
+          "source": "Abcb1",
+          "target": "Ranitidine",
+          "label": "is bound by"
         },
         {
-          "source": "Azithromycin",
+          "source": "Ranitidine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Roxithromycin,Dirithromycin": [
-          "Macrolide Antibiotic",
-          "Macrolide Antibiotic"
-        ],
-        "Roxithromycin,Azithromycin": [
-          "Macrolide Antibiotic",
-          "Macrolide Antibiotic"
-        ],
-        "Dirithromycin,Azithromycin": [
-          "Macrolide Antibiotic",
-          "Macrolide Antibiotic"
+        "Roxithromycin,Ranitidine": [
+          "Oxacycle"
         ]
       },
-      "id": "path_9376"
+      "id": "path_4540"
     },
     {
       "score": {
@@ -111,7 +102,55 @@
           "Organooxygen Compound"
         ]
       },
-      "id": "path_9377"
+      "id": "path_4541"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4419,
+        "final_score": 0.4419
+      },
+      "nodes": [
+        {
+          "id": "Roxithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Roxithromycin",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Erythromycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Erythromycin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Roxithromycin,Erythromycin": [
+          "Macrolide Antibiotic",
+          "Erythromycins"
+        ]
+      },
+      "id": "path_4542"
     },
     {
       "score": {
@@ -128,7 +167,7 @@
           "type": "Gene"
         },
         {
-          "id": "Nafcillin",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -144,22 +183,21 @@
         },
         {
           "source": "Cyp3a4",
-          "target": "Nafcillin",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Nafcillin",
+          "source": "Ranitidine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Roxithromycin,Nafcillin": [
-          "Organic Heterocyclic Compound",
-          "Antibiotic"
+        "Roxithromycin,Ranitidine": [
+          "Oxacycle"
         ]
       },
-      "id": "path_9378"
+      "id": "path_4543"
     },
     {
       "score": {
@@ -207,64 +245,15 @@
           "Macrolide Antibiotic"
         ],
         "Roxithromycin,Erythromycin": [
-          "Erythromycins",
-          "Macrolide Antibiotic"
+          "Macrolide Antibiotic",
+          "Erythromycins"
         ],
         "Dirithromycin,Erythromycin": [
           "Macrolide Antibiotic",
           "Macrolide Antibiotic"
         ]
       },
-      "id": "path_9379"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4119,
-        "final_score": 0.4119
-      },
-      "nodes": [
-        {
-          "id": "Roxithromycin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        },
-        {
-          "id": "Telithromycin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Roxithromycin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a4",
-          "target": "Telithromycin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Telithromycin",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Roxithromycin,Telithromycin": [
-          "Macrolide Antibiotic",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_9380"
+      "id": "path_4544"
     }
-  ],
-  "verbalization": ""
+  ]
 }

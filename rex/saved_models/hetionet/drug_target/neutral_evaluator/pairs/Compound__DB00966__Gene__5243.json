@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4733,
-        "final_score": 0.4733
+        "ic_mean": 0.6611,
+        "final_score": 0.6611
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Uric Acid Increased",
+          "id": "Abcg2",
+          "type": "Gene"
+        },
+        {
+          "id": "Xenobiotic Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Telmisartan",
+          "target": "Abcg2",
+          "label": "binds"
+        },
+        {
+          "source": "Abcg2",
+          "target": "Xenobiotic Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Xenobiotic Transporter Activity",
+          "target": "Abcb1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8004"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5306,
+        "final_score": 0.5306
+      },
+      "nodes": [
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Raised Serum Uric Acid",
           "type": "Side Effect"
         },
         {
-          "id": "Caspofungin",
+          "id": "Telaprevir",
           "type": "Compound"
         },
         {
@@ -27,27 +69,121 @@
       "edges": [
         {
           "source": "Telmisartan",
-          "target": "Uric Acid Increased",
+          "target": "Raised Serum Uric Acid",
           "label": "causes"
         },
         {
-          "source": "Uric Acid Increased",
-          "target": "Caspofungin",
+          "source": "Raised Serum Uric Acid",
+          "target": "Telaprevir",
           "label": "is caused by"
         },
         {
-          "source": "Caspofungin",
+          "source": "Telaprevir",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Telmisartan,Caspofungin": [
-          "Organooxygen Compound"
+        "Telmisartan,Telaprevir": [
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_16055"
+      "id": "path_8005"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4493,
+        "final_score": 0.4493
+      },
+      "nodes": [
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Migraine Aggravated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Estriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Telmisartan",
+          "target": "Migraine Aggravated",
+          "label": "causes"
+        },
+        {
+          "source": "Migraine Aggravated",
+          "target": "Estriol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Estriol",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Telmisartan,Estriol": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_8006"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4096,
+        "final_score": 0.4096
+      },
+      "nodes": [
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Anxiety Depression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisinopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Telmisartan",
+          "target": "Anxiety Depression",
+          "label": "causes"
+        },
+        {
+          "source": "Anxiety Depression",
+          "target": "Lisinopril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisinopril",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Telmisartan,Lisinopril": [
+          "Antihypertensive Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_8007"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6233,
-        "final_score": 0.6233
+        "ic_mean": 0.5868,
+        "final_score": 0.5868
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ptgs1",
+          "id": "Gstt1",
           "type": "Gene"
         },
         {
-          "id": "Floctafenine",
+          "id": "Cisplatin",
           "type": "Compound"
         },
         {
@@ -27,31 +27,32 @@
       "edges": [
         {
           "source": "Etoposide",
-          "target": "Ptgs1",
+          "target": "Gstt1",
           "label": "binds"
         },
         {
-          "source": "Ptgs1",
-          "target": "Floctafenine",
+          "source": "Gstt1",
+          "target": "Cisplatin",
           "label": "is bound by"
         },
         {
-          "source": "Floctafenine",
+          "source": "Cisplatin",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Etoposide,Floctafenine": [
-          "Organic Molecular Entity"
+        "Etoposide,Cisplatin": [
+          "Polyatomic Entity",
+          "Antineoplastic Agent"
         ]
       },
-      "id": "path_940"
+      "id": "path_461"
     },
     {
       "score": {
-        "ic_mean": 0.5719,
-        "final_score": 0.5719
+        "ic_mean": 0.4824,
+        "final_score": 0.4824
       },
       "nodes": [
         {
@@ -59,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ptgs1",
-          "type": "Gene"
+          "id": "Neutropenic Sepsis",
+          "type": "Side Effect"
         },
         {
-          "id": "Balsalazide",
+          "id": "Pomalidomide",
           "type": "Compound"
         },
         {
@@ -74,27 +75,75 @@
       "edges": [
         {
           "source": "Etoposide",
-          "target": "Ptgs1",
-          "label": "binds"
+          "target": "Neutropenic Sepsis",
+          "label": "causes"
         },
         {
-          "source": "Ptgs1",
-          "target": "Balsalazide",
-          "label": "is bound by"
+          "source": "Neutropenic Sepsis",
+          "target": "Pomalidomide",
+          "label": "is caused by"
         },
         {
-          "source": "Balsalazide",
+          "source": "Pomalidomide",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Etoposide,Balsalazide": [
-          "Organic Cyclic Compound"
+        "Etoposide,Pomalidomide": [
+          "Organic Heteropolycyclic Compound",
+          "Antineoplastic Agent"
         ]
       },
-      "id": "path_941"
+      "id": "path_462"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4428,
+        "final_score": 0.4428
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Blindness Cortical",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Blindness Cortical",
+          "label": "causes"
+        },
+        {
+          "source": "Blindness Cortical",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Cisplatin": [
+          "Polyatomic Entity",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_463"
     }
-  ],
-  "verbalization": ""
+  ]
 }

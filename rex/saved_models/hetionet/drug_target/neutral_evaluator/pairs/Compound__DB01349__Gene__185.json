@@ -3,6 +3,62 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.6319,
+        "final_score": 0.6319
+      },
+      "nodes": [
+        {
+          "id": "Tasosartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Azilsartan Medoxomil",
+          "type": "Compound"
+        },
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Agtr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tasosartan",
+          "target": "Azilsartan Medoxomil",
+          "label": "resembles"
+        },
+        {
+          "source": "Azilsartan Medoxomil",
+          "target": "Telmisartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Telmisartan",
+          "target": "Agtr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tasosartan,Azilsartan Medoxomil": [
+          "Organic Aromatic Compound",
+          "Angiotensin Ii Receptor Antagonist"
+        ],
+        "Tasosartan,Telmisartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenyls"
+        ],
+        "Azilsartan Medoxomil,Telmisartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Benzimidazoles"
+        ]
+      },
+      "id": "path_13175"
+    },
+    {
+      "score": {
         "ic_mean": 0.6164,
         "final_score": 0.6164
       },
@@ -47,16 +103,71 @@
           "Angiotensin Ii Receptor Antagonist"
         ],
         "Tasosartan,Valsartan": [
-          "Biphenyls",
-          "Angiotensin Ii Receptor Antagonist"
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenyls"
         ],
         "Forasartan,Valsartan": [
-          "Tetrazoles",
-          "Angiotensin Ii Receptor Antagonist"
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
         ]
       },
-      "id": "path_25976"
+      "id": "path_13176"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5989,
+        "final_score": 0.5989
+      },
+      "nodes": [
+        {
+          "id": "Tasosartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Candesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Forasartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Agtr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tasosartan",
+          "target": "Candesartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Candesartan",
+          "target": "Forasartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Forasartan",
+          "target": "Agtr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tasosartan,Candesartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenyls"
+        ],
+        "Tasosartan,Forasartan": [
+          "Benzenoid Aromatic Compound",
+          "Angiotensin Ii Receptor Antagonist"
+        ],
+        "Candesartan,Forasartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
+        ]
+      },
+      "id": "path_13177"
     }
-  ],
-  "verbalization": ""
+  ]
 }

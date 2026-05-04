@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6292,
-        "final_score": 0.6292
+        "ic_mean": 0.6228,
+        "final_score": 0.6228
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abdominal Disorder",
-          "type": "Side Effect"
+          "id": "Htr6",
+          "type": "Gene"
         },
         {
-          "id": "Maprotiline",
+          "id": "Methysergide",
           "type": "Compound"
         },
         {
@@ -27,28 +27,74 @@
       "edges": [
         {
           "source": "Imipramine",
-          "target": "Abdominal Disorder",
-          "label": "causes"
+          "target": "Htr6",
+          "label": "binds"
         },
         {
-          "source": "Abdominal Disorder",
-          "target": "Maprotiline",
-          "label": "is caused by"
+          "source": "Htr6",
+          "target": "Methysergide",
+          "label": "is bound by"
         },
         {
-          "source": "Maprotiline",
+          "source": "Methysergide",
           "target": "Htr7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Imipramine,Maprotiline": [
-          "Organic Tricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Imipramine,Methysergide": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_15539"
+      "id": "path_7758"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5601,
+        "final_score": 0.5601
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Asenapine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Asenapine",
+          "target": "Htr7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imipramine,Asenapine": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7759"
     }
-  ],
-  "verbalization": ""
+  ]
 }

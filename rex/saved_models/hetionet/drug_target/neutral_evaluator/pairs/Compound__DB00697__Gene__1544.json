@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6109,
-        "final_score": 0.6109
+        "ic_mean": 0.5745,
+        "final_score": 0.5745
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Guanabenz",
+          "id": "Clonidine",
           "type": "Compound"
         },
         {
@@ -32,22 +32,70 @@
         },
         {
           "source": "Adrenergic Alpha2-agonists",
-          "target": "Guanabenz",
+          "target": "Clonidine",
           "label": "includes"
         },
         {
-          "source": "Guanabenz",
+          "source": "Clonidine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Tizanidine,Guanabenz": [
-          "Alpha-Adrenergic Agonist",
-          "Organic Aromatic Compound"
+        "Tizanidine,Clonidine": [
+          "Organic Aromatic Compound",
+          "Alpha-Adrenergic Agonist"
         ]
       },
-      "id": "path_30044"
+      "id": "path_15519"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5548,
+        "final_score": 0.5548
+      },
+      "nodes": [
+        {
+          "id": "Tizanidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Rotigotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tizanidine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Rotigotine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rotigotine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tizanidine,Rotigotine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_15520"
     },
     {
       "score": {
@@ -95,12 +143,12 @@
           "Imidazoles"
         ]
       },
-      "id": "path_30045"
+      "id": "path_15521"
     },
     {
       "score": {
-        "ic_mean": 0.476,
-        "final_score": 0.476
+        "ic_mean": 0.5383,
+        "final_score": 0.5383
       },
       "nodes": [
         {
@@ -108,11 +156,11 @@
           "type": "Compound"
         },
         {
-          "id": "Dysautonomia",
-          "type": "Side Effect"
+          "id": "Adra2b",
+          "type": "Gene"
         },
         {
-          "id": "Rasagiline",
+          "id": "Ergotamine",
           "type": "Compound"
         },
         {
@@ -123,27 +171,27 @@
       "edges": [
         {
           "source": "Tizanidine",
-          "target": "Dysautonomia",
-          "label": "causes"
+          "target": "Adra2b",
+          "label": "binds"
         },
         {
-          "source": "Dysautonomia",
-          "target": "Rasagiline",
-          "label": "is caused by"
+          "source": "Adra2b",
+          "target": "Ergotamine",
+          "label": "is bound by"
         },
         {
-          "source": "Rasagiline",
+          "source": "Ergotamine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Tizanidine,Rasagiline": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Tizanidine,Ergotamine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30046"
+      "id": "path_15522"
     },
     {
       "score": {
@@ -187,107 +235,11 @@
       ],
       "lowest_common_ancestors": {
         "Tizanidine,Zolmitriptan": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30047"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4326,
-        "final_score": 0.4326
-      },
-      "nodes": [
-        {
-          "id": "Tizanidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Uterine Fibroids Enlarged",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Riluzole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Tizanidine",
-          "target": "Uterine Fibroids Enlarged",
-          "label": "causes"
-        },
-        {
-          "source": "Uterine Fibroids Enlarged",
-          "target": "Riluzole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Riluzole",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Tizanidine,Riluzole": [
-          "Agent Affecting Nervous System",
-          "Organosulfur Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30048"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4231,
-        "final_score": 0.4231
-      },
-      "nodes": [
-        {
-          "id": "Tizanidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Respiratory Acidosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Riluzole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Tizanidine",
-          "target": "Respiratory Acidosis",
-          "label": "causes"
-        },
-        {
-          "source": "Respiratory Acidosis",
-          "target": "Riluzole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Riluzole",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Tizanidine,Riluzole": [
-          "Agent Affecting Nervous System",
-          "Organosulfur Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30049"
+      "id": "path_15523"
     },
     {
       "score": {
@@ -335,8 +287,101 @@
           "Imidazoles"
         ]
       },
-      "id": "path_30050"
+      "id": "path_15524"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4154,
+        "final_score": 0.4154
+      },
+      "nodes": [
+        {
+          "id": "Tizanidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatocellular Carcinoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tizanidine",
+          "target": "Hepatocellular Carcinoma",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatocellular Carcinoma",
+          "target": "Gemfibrozil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gemfibrozil",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tizanidine,Gemfibrozil": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_15525"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4108,
+        "final_score": 0.4108
+      },
+      "nodes": [
+        {
+          "id": "Tizanidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatic Cancer",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tizanidine",
+          "target": "Hepatic Cancer",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatic Cancer",
+          "target": "Gemfibrozil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gemfibrozil",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tizanidine,Gemfibrozil": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_15526"
     }
-  ],
-  "verbalization": ""
+  ]
 }

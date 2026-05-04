@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00582 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4118,
+        "final_score": 0.4118
+      },
+      "nodes": [
+        {
+          "id": "Voriconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Encephalitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Voriconazole",
+          "target": "Encephalitis",
+          "label": "causes"
+        },
+        {
+          "source": "Encephalitis",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Voriconazole,Ifosfamide": [
+          "Organohalogen Compound"
+        ]
+      },
+      "id": "path_9853"
+    }
+  ]
+}

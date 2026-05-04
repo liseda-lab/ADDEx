@@ -3,53 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7563,
-        "final_score": 0.7563
-      },
-      "nodes": [
-        {
-          "id": "Pancuronium",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna1",
-          "type": "Gene"
-        },
-        {
-          "id": "Rocuronium",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pancuronium",
-          "target": "Chrna1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna1",
-          "target": "Rocuronium",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rocuronium",
-          "target": "Slc22a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pancuronium,Rocuronium": [
-          "Acetate Ester"
-        ]
-      },
-      "id": "path_27826"
-    },
-    {
-      "score": {
         "ic_mean": 0.748,
         "final_score": 0.748
       },
@@ -90,57 +43,10 @@
       ],
       "lowest_common_ancestors": {
         "Pancuronium,Rocuronium": [
-          "Acetate Ester"
+          "Steroid"
         ]
       },
-      "id": "path_27827"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7263,
-        "final_score": 0.7263
-      },
-      "nodes": [
-        {
-          "id": "Pancuronium",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrnd",
-          "type": "Gene"
-        },
-        {
-          "id": "Rocuronium",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pancuronium",
-          "target": "Chrnd",
-          "label": "binds"
-        },
-        {
-          "source": "Chrnd",
-          "target": "Rocuronium",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rocuronium",
-          "target": "Slc22a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pancuronium,Rocuronium": [
-          "Acetate Ester"
-        ]
-      },
-      "id": "path_27828"
+      "id": "path_14260"
     },
     {
       "score": {
@@ -184,15 +90,15 @@
       ],
       "lowest_common_ancestors": {
         "Pancuronium,Rocuronium": [
-          "Acetate Ester"
+          "Steroid"
         ]
       },
-      "id": "path_27829"
+      "id": "path_14261"
     },
     {
       "score": {
-        "ic_mean": 0.6749,
-        "final_score": 0.6749
+        "ic_mean": 0.6148,
+        "final_score": 0.6148
       },
       "nodes": [
         {
@@ -200,8 +106,8 @@
           "type": "Compound"
         },
         {
-          "id": "Chrna2",
-          "type": "Gene"
+          "id": "Pipecuronium",
+          "type": "Compound"
         },
         {
           "id": "Rocuronium",
@@ -215,13 +121,13 @@
       "edges": [
         {
           "source": "Pancuronium",
-          "target": "Chrna2",
-          "label": "binds"
+          "target": "Pipecuronium",
+          "label": "resembles"
         },
         {
-          "source": "Chrna2",
+          "source": "Pipecuronium",
           "target": "Rocuronium",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Rocuronium",
@@ -230,11 +136,18 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Pancuronium,Pipecuronium": [
+          "Steroid Ester"
+        ],
         "Pancuronium,Rocuronium": [
-          "Acetate Ester"
+          "Steroid"
+        ],
+        "Pipecuronium,Rocuronium": [
+          "Steroid",
+          "Nicotinic Antagonist"
         ]
       },
-      "id": "path_27830"
+      "id": "path_14262"
     },
     {
       "score": {
@@ -278,11 +191,57 @@
       ],
       "lowest_common_ancestors": {
         "Pancuronium,Rocuronium": [
-          "Acetate Ester"
+          "Steroid"
         ]
       },
-      "id": "path_27831"
+      "id": "path_14263"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5017,
+        "final_score": 0.5017
+      },
+      "nodes": [
+        {
+          "id": "Pancuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Respiratory Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rocuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pancuronium",
+          "target": "Respiratory Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Respiratory Insufficiency",
+          "target": "Rocuronium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rocuronium",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pancuronium,Rocuronium": [
+          "Steroid"
+        ]
+      },
+      "id": "path_14264"
     }
-  ],
-  "verbalization": ""
+  ]
 }

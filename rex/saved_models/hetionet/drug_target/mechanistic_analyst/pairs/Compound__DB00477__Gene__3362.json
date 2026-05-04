@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00477 - Gene::3362",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.748,
+        "final_score": 0.7907,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptor Activity",
+          "target": "Htr6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7495"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7025,
+        "final_score": 0.6013,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Fluphenazine",
+          "label": "includes"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Chlorpromazine,Fluphenazine": [
+          "Tertiary Amino Compound",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Fluphenazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_7496"
+    }
+  ]
+}

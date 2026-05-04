@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00279 - Gene::6579",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5912,
+        "final_score": 0.5912
+      },
+      "nodes": [
+        {
+          "id": "Liothyronine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco4a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Liotrix",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Liothyronine",
+          "target": "Slco4a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco4a1",
+          "target": "Liotrix",
+          "label": "is bound by"
+        },
+        {
+          "source": "Liotrix",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Liothyronine,Liotrix": [
+          "Thyroid Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_8819"
+    }
+  ]
 }

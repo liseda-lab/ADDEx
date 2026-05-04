@@ -47,8 +47,103 @@
           "Cns Stimulant"
         ]
       },
-      "id": "path_23224"
+      "id": "path_11757"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6156,
+        "final_score": 0.6156
+      },
+      "nodes": [
+        {
+          "id": "Amphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tourette's Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amphetamine",
+          "target": "Tourette's Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Tourette's Disorder",
+          "target": "Methamphetamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc22a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amphetamine,Methamphetamine": [
+          "Amphetamines",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_11758"
+    },
+    {
+      "score": {
+        "ic_mean": 0.572,
+        "final_score": 0.572
+      },
+      "nodes": [
+        {
+          "id": "Amphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Nervous System Stimulation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amphetamine",
+          "target": "Central Nervous System Stimulation",
+          "label": "is included in"
+        },
+        {
+          "source": "Central Nervous System Stimulation",
+          "target": "Methamphetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc22a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amphetamine,Methamphetamine": [
+          "Amphetamines",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_11759"
     }
-  ],
-  "verbalization": ""
+  ]
 }

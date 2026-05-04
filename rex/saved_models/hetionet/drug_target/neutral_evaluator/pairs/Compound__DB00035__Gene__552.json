@@ -47,7 +47,55 @@
           "Peptide"
         ]
       },
-      "id": "path_15392"
+      "id": "path_7697"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8159,
+        "final_score": 0.8159
+      },
+      "nodes": [
+        {
+          "id": "Desmopressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Avpr2",
+          "type": "Gene"
+        },
+        {
+          "id": "Conivaptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Avpr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desmopressin",
+          "target": "Avpr2",
+          "label": "binds"
+        },
+        {
+          "source": "Avpr2",
+          "target": "Conivaptan",
+          "label": "is bound by"
+        },
+        {
+          "source": "Conivaptan",
+          "target": "Avpr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desmopressin,Conivaptan": [
+          "Organonitrogen Compound",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_7698"
     },
     {
       "score": {
@@ -95,12 +143,12 @@
           "Peptide"
         ]
       },
-      "id": "path_15393"
+      "id": "path_7699"
     },
     {
       "score": {
-        "ic_mean": 0.8039,
-        "final_score": 0.8039
+        "ic_mean": 0.7145,
+        "final_score": 0.7145
       },
       "nodes": [
         {
@@ -108,12 +156,12 @@
           "type": "Compound"
         },
         {
-          "id": "Avpr1b",
-          "type": "Gene"
+          "id": "Linaclotide",
+          "type": "Compound"
         },
         {
-          "id": "Vasopressin-like Receptors",
-          "type": "Pathway"
+          "id": "Felypressin",
+          "type": "Compound"
         },
         {
           "id": "Avpr1a",
@@ -123,26 +171,40 @@
       "edges": [
         {
           "source": "Desmopressin",
-          "target": "Avpr1b",
-          "label": "binds"
+          "target": "Linaclotide",
+          "label": "resembles"
         },
         {
-          "source": "Avpr1b",
-          "target": "Vasopressin-like Receptors",
-          "label": "participates"
+          "source": "Linaclotide",
+          "target": "Felypressin",
+          "label": "resembles"
         },
         {
-          "source": "Vasopressin-like Receptors",
+          "source": "Felypressin",
           "target": "Avpr1a",
-          "label": "is participated by"
+          "label": "binds"
         }
       ],
-      "id": "path_15394"
+      "lowest_common_ancestors": {
+        "Desmopressin,Linaclotide": [
+          "Therapeutic Hormone",
+          "Heterodetic Cyclic Peptide"
+        ],
+        "Desmopressin,Felypressin": [
+          "Antidiuretic Hormone Analogue",
+          "Heterodetic Cyclic Peptide"
+        ],
+        "Linaclotide,Felypressin": [
+          "Therapeutic Hormone",
+          "Heterodetic Cyclic Peptide"
+        ]
+      },
+      "id": "path_7700"
     },
     {
       "score": {
-        "ic_mean": 0.7588,
-        "final_score": 0.7588
+        "ic_mean": 0.6856,
+        "final_score": 0.6856
       },
       "nodes": [
         {
@@ -150,12 +212,12 @@
           "type": "Compound"
         },
         {
-          "id": "Avpr2",
-          "type": "Gene"
+          "id": "Hyponatraemic",
+          "type": "Side Effect"
         },
         {
-          "id": "Vasopressin-like Receptors",
-          "type": "Pathway"
+          "id": "Tolvaptan",
+          "type": "Compound"
         },
         {
           "id": "Avpr1a",
@@ -165,26 +227,142 @@
       "edges": [
         {
           "source": "Desmopressin",
-          "target": "Avpr2",
-          "label": "binds"
+          "target": "Hyponatraemic",
+          "label": "causes"
         },
         {
-          "source": "Avpr2",
-          "target": "Vasopressin-like Receptors",
-          "label": "participates"
+          "source": "Hyponatraemic",
+          "target": "Tolvaptan",
+          "label": "is caused by"
         },
         {
-          "source": "Vasopressin-like Receptors",
+          "source": "Tolvaptan",
           "target": "Avpr1a",
-          "label": "is participated by"
+          "label": "binds"
         }
       ],
-      "id": "path_15395"
+      "lowest_common_ancestors": {
+        "Desmopressin,Tolvaptan": [
+          "Carboxamide",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_7701"
     },
     {
       "score": {
-        "ic_mean": 0.5817,
-        "final_score": 0.5817
+        "ic_mean": 0.6792,
+        "final_score": 0.6792
+      },
+      "nodes": [
+        {
+          "id": "Desmopressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Linaclotide",
+          "type": "Compound"
+        },
+        {
+          "id": "Terlipressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Avpr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desmopressin",
+          "target": "Linaclotide",
+          "label": "resembles"
+        },
+        {
+          "source": "Linaclotide",
+          "target": "Terlipressin",
+          "label": "resembles"
+        },
+        {
+          "source": "Terlipressin",
+          "target": "Avpr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desmopressin,Linaclotide": [
+          "Therapeutic Hormone",
+          "Heterodetic Cyclic Peptide"
+        ],
+        "Desmopressin,Terlipressin": [
+          "Antidiuretic Hormone Analogue",
+          "Peptide"
+        ],
+        "Linaclotide,Terlipressin": [
+          "Therapeutic Hormone",
+          "Peptide"
+        ]
+      },
+      "id": "path_7702"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6408,
+        "final_score": 0.6408
+      },
+      "nodes": [
+        {
+          "id": "Desmopressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Bacitracin",
+          "type": "Compound"
+        },
+        {
+          "id": "Felypressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Avpr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desmopressin",
+          "target": "Bacitracin",
+          "label": "resembles"
+        },
+        {
+          "source": "Bacitracin",
+          "target": "Felypressin",
+          "label": "resembles"
+        },
+        {
+          "source": "Felypressin",
+          "target": "Avpr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desmopressin,Bacitracin": [
+          "Chemical Entity"
+        ],
+        "Desmopressin,Felypressin": [
+          "Antidiuretic Hormone Analogue",
+          "Heterodetic Cyclic Peptide"
+        ],
+        "Bacitracin,Felypressin": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_7703"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6171,
+        "final_score": 0.6171
       },
       "nodes": [
         {
@@ -196,7 +374,7 @@
           "type": "Compound"
         },
         {
-          "id": "Terlipressin",
+          "id": "Felypressin",
           "type": "Compound"
         },
         {
@@ -212,11 +390,11 @@
         },
         {
           "source": "Carbetocin",
-          "target": "Terlipressin",
+          "target": "Felypressin",
           "label": "resembles"
         },
         {
-          "source": "Terlipressin",
+          "source": "Felypressin",
           "target": "Avpr1a",
           "label": "binds"
         }
@@ -226,21 +404,21 @@
           "Therapeutic Hormone",
           "Heterodetic Cyclic Peptide"
         ],
-        "Desmopressin,Terlipressin": [
+        "Desmopressin,Felypressin": [
           "Antidiuretic Hormone Analogue",
-          "Peptide"
+          "Heterodetic Cyclic Peptide"
         ],
-        "Carbetocin,Terlipressin": [
+        "Carbetocin,Felypressin": [
           "Therapeutic Hormone",
-          "Peptide"
+          "Heterodetic Cyclic Peptide"
         ]
       },
-      "id": "path_15396"
+      "id": "path_7704"
     },
     {
       "score": {
-        "ic_mean": 0.5817,
-        "final_score": 0.5817
+        "ic_mean": 0.6171,
+        "final_score": 0.6171
       },
       "nodes": [
         {
@@ -252,7 +430,7 @@
           "type": "Compound"
         },
         {
-          "id": "Terlipressin",
+          "id": "Felypressin",
           "type": "Compound"
         },
         {
@@ -268,6 +446,60 @@
         },
         {
           "source": "Polymyxin B Sulfate",
+          "target": "Felypressin",
+          "label": "resembles"
+        },
+        {
+          "source": "Felypressin",
+          "target": "Avpr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desmopressin,Polymyxin B Sulfate": [
+          "Chemical Entity"
+        ],
+        "Desmopressin,Felypressin": [
+          "Antidiuretic Hormone Analogue",
+          "Heterodetic Cyclic Peptide"
+        ],
+        "Polymyxin B Sulfate,Felypressin": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_7705"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5817,
+        "final_score": 0.5817
+      },
+      "nodes": [
+        {
+          "id": "Desmopressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Felypressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Terlipressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Avpr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desmopressin",
+          "target": "Felypressin",
+          "label": "resembles"
+        },
+        {
+          "source": "Felypressin",
           "target": "Terlipressin",
           "label": "resembles"
         },
@@ -278,19 +510,20 @@
         }
       ],
       "lowest_common_ancestors": {
-        "Desmopressin,Polymyxin B Sulfate": [
-          "Chemical Entity"
+        "Desmopressin,Felypressin": [
+          "Antidiuretic Hormone Analogue",
+          "Heterodetic Cyclic Peptide"
         ],
         "Desmopressin,Terlipressin": [
           "Antidiuretic Hormone Analogue",
           "Peptide"
         ],
-        "Polymyxin B Sulfate,Terlipressin": [
-          "Chemical Entity"
+        "Felypressin,Terlipressin": [
+          "Antidiuretic Hormone Analogue",
+          "Peptide"
         ]
       },
-      "id": "path_15397"
+      "id": "path_7706"
     }
-  ],
-  "verbalization": ""
+  ]
 }

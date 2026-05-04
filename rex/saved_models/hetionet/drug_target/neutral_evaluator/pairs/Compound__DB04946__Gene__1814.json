@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6967,
-        "final_score": 0.6967
-      },
-      "nodes": [
-        {
-          "id": "Iloperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr7",
-          "type": "Gene"
-        },
-        {
-          "id": "Amisulpride",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd3",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Iloperidone",
-          "target": "Htr7",
-          "label": "binds"
-        },
-        {
-          "source": "Htr7",
-          "target": "Amisulpride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Amisulpride",
-          "target": "Drd3",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Iloperidone,Amisulpride": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_10757"
-    },
-    {
-      "score": {
         "ic_mean": 0.6454,
         "final_score": 0.6454
       },
@@ -60,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Sigmar1",
+          "id": "Htr1d",
           "type": "Gene"
         },
         {
-          "id": "Remoxipride",
+          "id": "Bromocriptine",
           "type": "Compound"
         },
         {
@@ -75,31 +27,32 @@
       "edges": [
         {
           "source": "Iloperidone",
-          "target": "Sigmar1",
+          "target": "Htr1d",
           "label": "binds"
         },
         {
-          "source": "Sigmar1",
-          "target": "Remoxipride",
+          "source": "Htr1d",
+          "target": "Bromocriptine",
           "label": "is bound by"
         },
         {
-          "source": "Remoxipride",
+          "source": "Bromocriptine",
           "target": "Drd3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Iloperidone,Remoxipride": [
+        "Iloperidone,Bromocriptine": [
+          "Organonitrogen Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_10758"
+      "id": "path_5363"
     },
     {
       "score": {
-        "ic_mean": 0.4815,
-        "final_score": 0.4815
+        "ic_mean": 0.4981,
+        "final_score": 0.4981
       },
       "nodes": [
         {
@@ -111,7 +64,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Rotigotine",
+          "id": "Bromocriptine",
           "type": "Compound"
         },
         {
@@ -127,23 +80,118 @@
         },
         {
           "source": "Impulse-control Disorder",
-          "target": "Rotigotine",
+          "target": "Bromocriptine",
           "label": "is caused by"
         },
         {
-          "source": "Rotigotine",
+          "source": "Bromocriptine",
           "target": "Drd3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Iloperidone,Rotigotine": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
+        "Iloperidone,Bromocriptine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_10759"
+      "id": "path_5364"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4864,
+        "final_score": 0.4864
+      },
+      "nodes": [
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Impulse-control Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Iloperidone",
+          "target": "Impulse-control Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Impulse-control Disorder",
+          "target": "Cabergoline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cabergoline",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Iloperidone,Cabergoline": [
+          "Agent Affecting Nervous System",
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_5365"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4768,
+        "final_score": 0.4768
+      },
+      "nodes": [
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Retrograde Ejaculation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Iloperidone",
+          "target": "Retrograde Ejaculation",
+          "label": "causes"
+        },
+        {
+          "source": "Retrograde Ejaculation",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Iloperidone,Paliperidone": [
+          "Agent Affecting Nervous System",
+          "1,2-Benzoxazoles"
+        ]
+      },
+      "id": "path_5366"
     }
-  ],
-  "verbalization": ""
+  ]
 }

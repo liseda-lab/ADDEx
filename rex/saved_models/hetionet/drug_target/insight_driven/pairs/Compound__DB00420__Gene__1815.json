@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00420 - Gene::1815",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6885,
+        "final_score": 0.7609,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Promazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promazine",
+          "target": "Chrm4",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10922"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4047,
+        "final_score": 0.4047
+      },
+      "nodes": [
+        {
+          "id": "Promazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Propiomazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Propiomazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Propiomazine",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Promazine,Propiomazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Dimetotiazine,Propiomazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_10923"
+    }
+  ]
+}

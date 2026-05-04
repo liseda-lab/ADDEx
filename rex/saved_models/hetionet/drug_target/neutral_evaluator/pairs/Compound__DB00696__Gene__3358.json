@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.794,
-        "final_score": 0.794
+        "ic_mean": 0.7562,
+        "final_score": 0.7562
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Methylergometrine",
-          "type": "Compound"
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Htr2c",
@@ -32,27 +32,21 @@
         },
         {
           "source": "Htr1f",
-          "target": "Methylergometrine",
-          "label": "is bound by"
+          "target": "Serotonin Binding",
+          "label": "participates"
         },
         {
-          "source": "Methylergometrine",
+          "source": "Serotonin Binding",
           "target": "Htr2c",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ergotamine,Methylergometrine": [
-          "Agent Affecting Nervous System",
-          "Alkaloid"
-        ]
-      },
-      "id": "path_29389"
+      "id": "path_15153"
     },
     {
       "score": {
-        "ic_mean": 0.764,
-        "final_score": 0.764
+        "ic_mean": 0.7421,
+        "final_score": 0.7421
       },
       "nodes": [
         {
@@ -64,8 +58,8 @@
           "type": "Gene"
         },
         {
-          "id": "Methysergide",
-          "type": "Compound"
+          "id": "Amine Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Htr2c",
@@ -80,27 +74,21 @@
         },
         {
           "source": "Htr1f",
-          "target": "Methysergide",
-          "label": "is bound by"
+          "target": "Amine Binding",
+          "label": "participates"
         },
         {
-          "source": "Methysergide",
+          "source": "Amine Binding",
           "target": "Htr2c",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ergotamine,Methysergide": [
-          "Ergot Alkaloid",
-          "Serotonin Agonist"
-        ]
-      },
-      "id": "path_29390"
+      "id": "path_15154"
     },
     {
       "score": {
-        "ic_mean": 0.7262,
-        "final_score": 0.7262
+        "ic_mean": 0.7261,
+        "final_score": 0.7261
       },
       "nodes": [
         {
@@ -108,11 +96,137 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1e",
+          "id": "Htr1f",
           "type": "Gene"
         },
         {
-          "id": "Oxymetazoline",
+          "id": "Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergotamine",
+          "target": "Htr1f",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1f",
+          "target": "Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Receptor Activity",
+          "target": "Htr2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15155"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7261,
+        "final_score": 0.7261
+      },
+      "nodes": [
+        {
+          "id": "Ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1f",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergotamine",
+          "target": "Htr1f",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1f",
+          "target": "G-protein Coupled Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Serotonin Receptor Activity",
+          "target": "Htr2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15156"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6938,
+        "final_score": 0.6938
+      },
+      "nodes": [
+        {
+          "id": "Ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        },
+        {
+          "id": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergotamine",
+          "target": "Htr2a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2a",
+          "target": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
+          "label": "participates"
+        },
+        {
+          "source": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
+          "target": "Htr2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15157"
+    },
+    {
+      "score": {
+        "ic_mean": 0.61,
+        "final_score": 0.61
+      },
+      "nodes": [
+        {
+          "id": "Ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -123,32 +237,32 @@
       "edges": [
         {
           "source": "Ergotamine",
-          "target": "Htr1e",
+          "target": "Adra2b",
           "label": "binds"
         },
         {
-          "source": "Htr1e",
-          "target": "Oxymetazoline",
+          "source": "Adra2b",
+          "target": "Lisuride",
           "label": "is bound by"
         },
         {
-          "source": "Oxymetazoline",
+          "source": "Lisuride",
           "target": "Htr2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ergotamine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Cation"
+        "Ergotamine,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_29391"
+      "id": "path_15158"
     },
     {
       "score": {
-        "ic_mean": 0.6748,
-        "final_score": 0.6748
+        "ic_mean": 0.5541,
+        "final_score": 0.5541
       },
       "nodes": [
         {
@@ -156,11 +270,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1d",
+          "id": "Htr2a",
           "type": "Gene"
         },
         {
-          "id": "Oxymetazoline",
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -171,268 +285,27 @@
       "edges": [
         {
           "source": "Ergotamine",
-          "target": "Htr1d",
+          "target": "Htr2a",
           "label": "binds"
         },
         {
-          "source": "Htr1d",
-          "target": "Oxymetazoline",
+          "source": "Htr2a",
+          "target": "Lisuride",
           "label": "is bound by"
         },
         {
-          "source": "Oxymetazoline",
+          "source": "Lisuride",
           "target": "Htr2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ergotamine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Cation"
+        "Ergotamine,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_29392"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6748,
-        "final_score": 0.6748
-      },
-      "nodes": [
-        {
-          "id": "Ergotamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2b",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2c",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ergotamine",
-          "target": "Htr2b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr2b",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2c",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ergotamine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Cation"
-        ]
-      },
-      "id": "path_29393"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6613,
-        "final_score": 0.6613
-      },
-      "nodes": [
-        {
-          "id": "Ergotamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2c",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ergotamine",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2c",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ergotamine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Cation"
-        ]
-      },
-      "id": "path_29394"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6554,
-        "final_score": 0.6554
-      },
-      "nodes": [
-        {
-          "id": "Ergotamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2c",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ergotamine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2c",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ergotamine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Cation"
-        ]
-      },
-      "id": "path_29395"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6448,
-        "final_score": 0.6448
-      },
-      "nodes": [
-        {
-          "id": "Ergotamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1e",
-          "type": "Gene"
-        },
-        {
-          "id": "Ergonovine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2c",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ergotamine",
-          "target": "Htr1e",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1e",
-          "target": "Ergonovine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ergonovine",
-          "target": "Htr2c",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ergotamine,Ergonovine": [
-          "Agent Affecting Nervous System",
-          "Ergot Alkaloid"
-        ]
-      },
-      "id": "path_29396"
-    },
-    {
-      "score": {
-        "ic_mean": 0.64,
-        "final_score": 0.64
-      },
-      "nodes": [
-        {
-          "id": "Ergotamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2c",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ergotamine",
-          "target": "Adra1b",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1b",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2c",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ergotamine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Cation"
-        ]
-      },
-      "id": "path_29397"
+      "id": "path_15159"
     }
-  ],
-  "verbalization": ""
+  ]
 }

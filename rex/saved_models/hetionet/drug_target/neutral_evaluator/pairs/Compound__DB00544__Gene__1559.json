@@ -1,6 +1,100 @@
 {
   "id": "Compound::DB00544 - Gene::1559",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.436,
+        "final_score": 0.436
+      },
+      "nodes": [
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluorouracil",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Theophylline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluorouracil,Theophylline": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_5111"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4248,
+        "final_score": 0.4248
+      },
+      "nodes": [
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Electrocardiogram St Segment",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluorouracil",
+          "target": "Electrocardiogram St Segment",
+          "label": "causes"
+        },
+        {
+          "source": "Electrocardiogram St Segment",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluorouracil,Ifosfamide": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Organohalogen Compound"
+        ]
+      },
+      "id": "path_5112"
+    }
+  ]
 }

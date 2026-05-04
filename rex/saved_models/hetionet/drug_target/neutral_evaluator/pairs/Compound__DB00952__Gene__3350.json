@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7563,
-        "final_score": 0.7563
+        "ic_mean": 0.8653,
+        "final_score": 0.8653
       },
       "nodes": [
         {
@@ -12,8 +12,8 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1f",
-          "type": "Gene"
+          "id": "Serotonin 1d Receptor Agonists",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Rizatriptan",
@@ -27,13 +27,13 @@
       "edges": [
         {
           "source": "Naratriptan",
-          "target": "Htr1f",
-          "label": "binds"
+          "target": "Serotonin 1d Receptor Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Htr1f",
+          "source": "Serotonin 1d Receptor Agonists",
           "target": "Rizatriptan",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Rizatriptan",
@@ -47,12 +47,12 @@
           "Serotonin Agonist"
         ]
       },
-      "id": "path_16738"
+      "id": "path_8386"
     },
     {
       "score": {
-        "ic_mean": 0.7563,
-        "final_score": 0.7563
+        "ic_mean": 0.8653,
+        "final_score": 0.8653
       },
       "nodes": [
         {
@@ -60,8 +60,56 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1f",
+          "id": "Serotonin 1b Receptor Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Rizatriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
           "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naratriptan",
+          "target": "Serotonin 1b Receptor Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Serotonin 1b Receptor Agonists",
+          "target": "Rizatriptan",
+          "label": "includes"
+        },
+        {
+          "source": "Rizatriptan",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naratriptan,Rizatriptan": [
+          "Tryptamines",
+          "Serotonin Agonist"
+        ]
+      },
+      "id": "path_8387"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8653,
+        "final_score": 0.8653
+      },
+      "nodes": [
+        {
+          "id": "Naratriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Serotonin 1d Receptor Agonists",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Zolmitriptan",
@@ -75,13 +123,13 @@
       "edges": [
         {
           "source": "Naratriptan",
-          "target": "Htr1f",
-          "label": "binds"
+          "target": "Serotonin 1d Receptor Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Htr1f",
+          "source": "Serotonin 1d Receptor Agonists",
           "target": "Zolmitriptan",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Zolmitriptan",
@@ -95,12 +143,12 @@
           "Serotonin Agonist"
         ]
       },
-      "id": "path_16739"
+      "id": "path_8388"
     },
     {
       "score": {
-        "ic_mean": 0.5291,
-        "final_score": 0.5291
+        "ic_mean": 0.8653,
+        "final_score": 0.8653
       },
       "nodes": [
         {
@@ -108,11 +156,11 @@
           "type": "Compound"
         },
         {
-          "id": "Phonophobia",
-          "type": "Side Effect"
+          "id": "Serotonin 1b Receptor Agonists",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Sumatriptan",
+          "id": "Zolmitriptan",
           "type": "Compound"
         },
         {
@@ -123,28 +171,267 @@
       "edges": [
         {
           "source": "Naratriptan",
-          "target": "Phonophobia",
-          "label": "causes"
+          "target": "Serotonin 1b Receptor Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Phonophobia",
-          "target": "Sumatriptan",
-          "label": "is caused by"
+          "source": "Serotonin 1b Receptor Agonists",
+          "target": "Zolmitriptan",
+          "label": "includes"
         },
         {
-          "source": "Sumatriptan",
+          "source": "Zolmitriptan",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Naratriptan,Sumatriptan": [
-          "Sulfonamide",
+        "Naratriptan,Zolmitriptan": [
+          "Tryptamines",
           "Serotonin Agonist"
         ]
       },
-      "id": "path_16740"
+      "id": "path_8389"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5556,
+        "final_score": 0.5556
+      },
+      "nodes": [
+        {
+          "id": "Naratriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Medication Overuse Headache",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rizatriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naratriptan",
+          "target": "Medication Overuse Headache",
+          "label": "causes"
+        },
+        {
+          "source": "Medication Overuse Headache",
+          "target": "Rizatriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rizatriptan",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naratriptan,Rizatriptan": [
+          "Tryptamines",
+          "Serotonin Agonist"
+        ]
+      },
+      "id": "path_8390"
+    },
+    {
+      "score": {
+        "ic_mean": 0.546,
+        "final_score": 0.546
+      },
+      "nodes": [
+        {
+          "id": "Naratriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Medication Overuse Headache",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zolmitriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naratriptan",
+          "target": "Medication Overuse Headache",
+          "label": "causes"
+        },
+        {
+          "source": "Medication Overuse Headache",
+          "target": "Zolmitriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zolmitriptan",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naratriptan,Zolmitriptan": [
+          "Tryptamines",
+          "Serotonin Agonist"
+        ]
+      },
+      "id": "path_8391"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5306,
+        "final_score": 0.5306
+      },
+      "nodes": [
+        {
+          "id": "Naratriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Prinzmetal Angina",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rizatriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naratriptan",
+          "target": "Prinzmetal Angina",
+          "label": "causes"
+        },
+        {
+          "source": "Prinzmetal Angina",
+          "target": "Rizatriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rizatriptan",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naratriptan,Rizatriptan": [
+          "Tryptamines",
+          "Serotonin Agonist"
+        ]
+      },
+      "id": "path_8392"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5211,
+        "final_score": 0.5211
+      },
+      "nodes": [
+        {
+          "id": "Naratriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Prinzmetal Angina",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zolmitriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naratriptan",
+          "target": "Prinzmetal Angina",
+          "label": "causes"
+        },
+        {
+          "source": "Prinzmetal Angina",
+          "target": "Zolmitriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zolmitriptan",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naratriptan,Zolmitriptan": [
+          "Tryptamines",
+          "Serotonin Agonist"
+        ]
+      },
+      "id": "path_8393"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4879,
+        "final_score": 0.4879
+      },
+      "nodes": [
+        {
+          "id": "Naratriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Sensation Of Pressure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rizatriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naratriptan",
+          "target": "Sensation Of Pressure",
+          "label": "causes"
+        },
+        {
+          "source": "Sensation Of Pressure",
+          "target": "Rizatriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rizatriptan",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naratriptan,Rizatriptan": [
+          "Tryptamines",
+          "Serotonin Agonist"
+        ]
+      },
+      "id": "path_8394"
     }
-  ],
-  "verbalization": ""
+  ]
 }

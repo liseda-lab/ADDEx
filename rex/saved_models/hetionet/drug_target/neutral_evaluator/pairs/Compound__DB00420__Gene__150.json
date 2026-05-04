@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6459,
-        "final_score": 0.6459
+        "ic_mean": 0.6843,
+        "final_score": 0.6843
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Oxymetazoline",
-          "type": "Compound"
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra2a",
@@ -32,22 +32,58 @@
         },
         {
           "source": "Adra1d",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Oxymetazoline",
+          "source": "Alpha-adrenergic Receptor Activity",
           "target": "Adra2a",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Promazine,Oxymetazoline": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
+      "id": "path_13889"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6616,
+        "final_score": 0.6616
       },
-      "id": "path_27206"
+      "nodes": [
+        {
+          "id": "Promazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promazine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13890"
     },
     {
       "score": {
@@ -91,16 +127,16 @@
       ],
       "lowest_common_ancestors": {
         "Promazine,Xylometazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27207"
+      "id": "path_13891"
     },
     {
       "score": {
-        "ic_mean": 0.5645,
-        "final_score": 0.5645
+        "ic_mean": 0.5461,
+        "final_score": 0.5461
       },
       "nodes": [
         {
@@ -108,11 +144,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1d",
+          "id": "Chrm4",
           "type": "Gene"
         },
         {
-          "id": "Phentolamine",
+          "id": "Olanzapine",
           "type": "Compound"
         },
         {
@@ -123,28 +159,27 @@
       "edges": [
         {
           "source": "Promazine",
-          "target": "Adra1d",
+          "target": "Chrm4",
           "label": "binds"
         },
         {
-          "source": "Adra1d",
-          "target": "Phentolamine",
+          "source": "Chrm4",
+          "target": "Olanzapine",
           "label": "is bound by"
         },
         {
-          "source": "Phentolamine",
+          "source": "Olanzapine",
           "target": "Adra2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Promazine,Phentolamine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
+        "Promazine,Olanzapine": [
+          "Organic Heteropolycyclic Compound",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_27208"
+      "id": "path_13892"
     }
-  ],
-  "verbalization": ""
+  ]
 }

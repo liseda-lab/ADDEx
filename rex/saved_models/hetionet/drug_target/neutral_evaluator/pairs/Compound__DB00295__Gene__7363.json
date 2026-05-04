@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00295 - Gene::7363",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.611,
+        "final_score": 0.611
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Diuretic Effect",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Diuretic Effect",
+          "label": "causes"
+        },
+        {
+          "source": "Diuretic Effect",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Ugt2b4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Codeine": [
+          "Organic Heteropentacyclic Compound",
+          "Opiate"
+        ]
+      },
+      "id": "path_13972"
+    }
+  ]
 }

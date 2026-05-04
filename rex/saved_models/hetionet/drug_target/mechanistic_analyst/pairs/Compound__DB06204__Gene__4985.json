@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB06204 - Gene::4985",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7107,
+        "final_score": 0.8553,
+        "agentic_score": 1
+      },
+      "nodes": [
+        {
+          "id": "Tapentadol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tapentadol",
+          "target": "Oprk1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprk1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5591"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7926,
+        "final_score": 0.6463,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Tapentadol",
+          "type": "Compound"
+        },
+        {
+          "id": "Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tapentadol",
+          "target": "Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Opioid Agonists",
+          "target": "Hydrocodone",
+          "label": "includes"
+        },
+        {
+          "source": "Hydrocodone",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tapentadol,Hydrocodone": [
+          "Agent Affecting Nervous System",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_5592"
+    }
+  ]
+}

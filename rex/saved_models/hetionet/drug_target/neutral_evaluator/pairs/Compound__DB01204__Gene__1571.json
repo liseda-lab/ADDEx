@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01204 - Gene::1571",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4219,
+        "final_score": 0.4219
+      },
+      "nodes": [
+        {
+          "id": "Mitoxantrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Altered",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mexiletine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mitoxantrone",
+          "target": "Taste Altered",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Altered",
+          "target": "Mexiletine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mexiletine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mitoxantrone,Mexiletine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_10990"
+    }
+  ]
 }

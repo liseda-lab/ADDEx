@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01136 - Gene::1543",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4506,
+        "final_score": 0.4506
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Convulsions Generalised",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Convulsions Generalised",
+          "label": "causes"
+        },
+        {
+          "source": "Convulsions Generalised",
+          "target": "Theophylline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carvedilol,Theophylline": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_560"
+    }
+  ]
+}

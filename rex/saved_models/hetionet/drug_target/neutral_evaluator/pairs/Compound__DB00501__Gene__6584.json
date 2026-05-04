@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB00501 - Gene::6584",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6719,
+        "final_score": 0.6719
+      },
+      "nodes": [
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Carnitine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cimetidine",
+          "target": "Slc22a4",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a4",
+          "target": "Carnitine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carnitine Transmembrane Transporter Activity",
+          "target": "Slc22a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_691"
+    }
+  ]
 }

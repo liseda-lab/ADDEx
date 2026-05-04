@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00619 - Gene::6582",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5058,
+        "final_score": 0.5058
+      },
+      "nodes": [
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Respiratory Failure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amantadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imatinib",
+          "target": "Acute Respiratory Failure",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Respiratory Failure",
+          "target": "Amantadine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amantadine",
+          "target": "Slc22a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imatinib,Amantadine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_11753"
+    }
+  ]
 }

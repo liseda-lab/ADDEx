@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00753 - Gene::2890",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7596,
+        "final_score": 0.6715,
+        "agentic_score": 0.5833
+      },
+      "nodes": [
+        {
+          "id": "Isoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gria1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Enflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Enflurane",
+          "target": "Gria1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoflurane,Enflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_2265"
+    }
+  ]
+}

@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB00398 - Gene::10928",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4893,
+        "final_score": 0.4893
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Thyrotropin High",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ralbp1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Thyrotropin High",
+          "label": "causes"
+        },
+        {
+          "source": "Thyrotropin High",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Ralbp1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Carbamazepine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_11889"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4893,
+        "final_score": 0.4893
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Blood Thyroid Stimulating Hormone Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ralbp1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Blood Thyroid Stimulating Hormone Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Blood Thyroid Stimulating Hormone Increased",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Ralbp1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Carbamazepine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_11890"
+    }
+  ]
 }

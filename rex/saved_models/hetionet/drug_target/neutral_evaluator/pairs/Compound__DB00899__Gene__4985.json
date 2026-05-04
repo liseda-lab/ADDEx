@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7132,
-        "final_score": 0.7132
+        "ic_mean": 0.6112,
+        "final_score": 0.6112
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprm1",
-          "type": "Gene"
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Butorphanol",
+          "id": "Levorphanol",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Remifentanil",
-          "target": "Oprm1",
-          "label": "binds"
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Oprm1",
-          "target": "Butorphanol",
-          "label": "is bound by"
+          "source": "Full Opioid Agonists",
+          "target": "Levorphanol",
+          "label": "includes"
         },
         {
-          "source": "Butorphanol",
+          "source": "Levorphanol",
           "target": "Oprd1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Remifentanil,Butorphanol": [
-          "Opioid",
-          "Organonitrogen Compound"
+        "Remifentanil,Levorphanol": [
+          "Organonitrogen Compound",
+          "Opioid"
         ]
       },
-      "id": "path_6417"
+      "id": "path_2947"
     },
     {
       "score": {
-        "ic_mean": 0.7045,
-        "final_score": 0.7045
+        "ic_mean": 0.4276,
+        "final_score": 0.4276
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprk1",
-          "type": "Gene"
+          "id": "Anileridine",
+          "type": "Compound"
         },
         {
-          "id": "Butorphanol",
+          "id": "Diphenoxylate",
           "type": "Compound"
         },
         {
@@ -75,124 +75,33 @@
       "edges": [
         {
           "source": "Remifentanil",
-          "target": "Oprk1",
-          "label": "binds"
+          "target": "Anileridine",
+          "label": "resembles"
         },
         {
-          "source": "Oprk1",
-          "target": "Butorphanol",
-          "label": "is bound by"
+          "source": "Anileridine",
+          "target": "Diphenoxylate",
+          "label": "resembles"
         },
         {
-          "source": "Butorphanol",
+          "source": "Diphenoxylate",
           "target": "Oprd1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Remifentanil,Butorphanol": [
-          "Opioid",
-          "Organonitrogen Compound"
+        "Remifentanil,Anileridine": [
+          "Piperidinecarboxylate Ester",
+          "Opioid"
+        ],
+        "Remifentanil,Diphenoxylate": [
+          "Piperidinecarboxylate Ester"
+        ],
+        "Anileridine,Diphenoxylate": [
+          "Piperidinecarboxylate Ester"
         ]
       },
-      "id": "path_6418"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6619,
-        "final_score": 0.6619
-      },
-      "nodes": [
-        {
-          "id": "Remifentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentazocine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Remifentanil",
-          "target": "Oprm1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprm1",
-          "target": "Pentazocine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentazocine",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Remifentanil,Pentazocine": [
-          "Opioid Receptor Agonist",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_6419"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6532,
-        "final_score": 0.6532
-      },
-      "nodes": [
-        {
-          "id": "Remifentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentazocine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Remifentanil",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Pentazocine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentazocine",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Remifentanil,Pentazocine": [
-          "Opioid Receptor Agonist",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_6420"
+      "id": "path_2948"
     }
-  ],
-  "verbalization": ""
+  ]
 }

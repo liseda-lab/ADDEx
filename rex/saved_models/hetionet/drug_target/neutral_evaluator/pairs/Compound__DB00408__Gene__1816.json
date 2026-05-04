@@ -1,6 +1,95 @@
 {
   "id": "Compound::DB00408 - Gene::1816",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7029,
+        "final_score": 0.7029
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Chrm5",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm5",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5250"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5919,
+        "final_score": 0.5919
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gait Shuffling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Gait Shuffling",
+          "label": "causes"
+        },
+        {
+          "source": "Gait Shuffling",
+          "target": "Chlorpromazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chlorpromazine",
+          "target": "Drd5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loxapine,Chlorpromazine": [
+          "Organic Heterotricyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_5251"
+    }
+  ]
 }

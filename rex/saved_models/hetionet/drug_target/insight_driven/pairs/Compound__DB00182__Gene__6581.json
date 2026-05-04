@@ -1,0 +1,157 @@
+{
+  "id": "Compound::DB00182 - Gene::6581",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6156,
+        "final_score": 0.7245,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Amphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tourette's Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amphetamine",
+          "target": "Tourette's Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Tourette's Disorder",
+          "target": "Methamphetamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc22a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amphetamine,Methamphetamine": [
+          "Cns Stimulant",
+          "Amphetamines"
+        ]
+      },
+      "id": "path_8767"
+    },
+    {
+      "score": {
+        "ic_mean": 0.572,
+        "final_score": 0.6194,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Amphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Nervous System Stimulation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amphetamine",
+          "target": "Central Nervous System Stimulation",
+          "label": "is included in"
+        },
+        {
+          "source": "Central Nervous System Stimulation",
+          "target": "Methamphetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc22a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amphetamine,Methamphetamine": [
+          "Cns Stimulant",
+          "Amphetamines"
+        ]
+      },
+      "id": "path_8768"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3905,
+        "final_score": 0.3905
+      },
+      "nodes": [
+        {
+          "id": "Amphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Amfecloral",
+          "type": "Compound"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amphetamine",
+          "target": "Amfecloral",
+          "label": "resembles"
+        },
+        {
+          "source": "Amfecloral",
+          "target": "Methamphetamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc22a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amphetamine,Amfecloral": [
+          "Amphetamines"
+        ],
+        "Amphetamine,Methamphetamine": [
+          "Cns Stimulant",
+          "Amphetamines"
+        ],
+        "Amfecloral,Methamphetamine": [
+          "Amphetamines"
+        ]
+      },
+      "id": "path_8769"
+    }
+  ]
+}

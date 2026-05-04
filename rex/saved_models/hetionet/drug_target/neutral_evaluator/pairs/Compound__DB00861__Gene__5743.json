@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6383,
-        "final_score": 0.6383
+        "ic_mean": 0.7219,
+        "final_score": 0.7219
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Floctafenine",
-          "type": "Compound"
+          "id": "Prostaglandin-endoperoxide Synthase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Ptgs2",
@@ -32,27 +32,21 @@
         },
         {
           "source": "Ptgs1",
-          "target": "Floctafenine",
-          "label": "is bound by"
+          "target": "Prostaglandin-endoperoxide Synthase Activity",
+          "label": "participates"
         },
         {
-          "source": "Floctafenine",
+          "source": "Prostaglandin-endoperoxide Synthase Activity",
           "target": "Ptgs2",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Diflunisal,Floctafenine": [
-          "Organic Molecular Entity",
-          "Nonsteroidal Antiinflammatory Drug"
-        ]
-      },
-      "id": "path_23667"
+      "id": "path_11979"
     },
     {
       "score": {
-        "ic_mean": 0.6383,
-        "final_score": 0.6383
+        "ic_mean": 0.6079,
+        "final_score": 0.6079
       },
       "nodes": [
         {
@@ -60,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ptgs1",
-          "type": "Gene"
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Bismuth Subsalicylate",
+          "id": "Nepafenac",
           "type": "Compound"
         },
         {
@@ -75,26 +69,123 @@
       "edges": [
         {
           "source": "Diflunisal",
-          "target": "Ptgs1",
-          "label": "binds"
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
         },
         {
-          "source": "Ptgs1",
-          "target": "Bismuth Subsalicylate",
-          "label": "is bound by"
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Nepafenac",
+          "label": "includes"
         },
         {
-          "source": "Bismuth Subsalicylate",
+          "source": "Nepafenac",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diflunisal,Bismuth Subsalicylate": [
-          "Organooxygen Compound"
+        "Diflunisal,Nepafenac": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
         ]
       },
-      "id": "path_23668"
+      "id": "path_11980"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6079,
+        "final_score": 0.6079
+      },
+      "nodes": [
+        {
+          "id": "Diflunisal",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nabumetone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diflunisal",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Nabumetone",
+          "label": "includes"
+        },
+        {
+          "source": "Nabumetone",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diflunisal,Nabumetone": [
+          "Carbonyl Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_11981"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5929,
+        "final_score": 0.5929
+      },
+      "nodes": [
+        {
+          "id": "Diflunisal",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fenoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diflunisal",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Fenoprofen",
+          "label": "includes"
+        },
+        {
+          "source": "Fenoprofen",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diflunisal,Fenoprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_11982"
     },
     {
       "score": {
@@ -111,7 +202,7 @@
           "type": "Gene"
         },
         {
-          "id": "Balsalazide",
+          "id": "Trisalicylate-choline",
           "type": "Compound"
         },
         {
@@ -127,22 +218,16 @@
         },
         {
           "source": "Ptgs1",
-          "target": "Balsalazide",
+          "target": "Trisalicylate-choline",
           "label": "is bound by"
         },
         {
-          "source": "Balsalazide",
+          "source": "Trisalicylate-choline",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
-      "lowest_common_ancestors": {
-        "Diflunisal,Balsalazide": [
-          "Monohydroxybenzoic Acid",
-          "Nonsteroidal Antiinflammatory Drug"
-        ]
-      },
-      "id": "path_23669"
+      "id": "path_11983"
     },
     {
       "score": {
@@ -159,7 +244,7 @@
           "type": "Gene"
         },
         {
-          "id": "Dihomo-gamma-linolenic Acid",
+          "id": "Nepafenac",
           "type": "Compound"
         },
         {
@@ -175,21 +260,118 @@
         },
         {
           "source": "Ptgs1",
-          "target": "Dihomo-gamma-linolenic Acid",
+          "target": "Nepafenac",
           "label": "is bound by"
         },
         {
-          "source": "Dihomo-gamma-linolenic Acid",
+          "source": "Nepafenac",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diflunisal,Dihomo-gamma-linolenic Acid": [
-          "Carboxylic Acid"
+        "Diflunisal,Nepafenac": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
         ]
       },
-      "id": "path_23670"
+      "id": "path_11984"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5869,
+        "final_score": 0.5869
+      },
+      "nodes": [
+        {
+          "id": "Diflunisal",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Fenbufen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diflunisal",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Fenbufen",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fenbufen",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diflunisal,Fenbufen": [
+          "Carboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_11985"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5869,
+        "final_score": 0.5869
+      },
+      "nodes": [
+        {
+          "id": "Diflunisal",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Nabumetone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diflunisal",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Nabumetone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nabumetone",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diflunisal,Nabumetone": [
+          "Carbonyl Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_11986"
     },
     {
       "score": {
@@ -206,7 +388,7 @@
           "type": "Gene"
         },
         {
-          "id": "Aminosalicylic Acid",
+          "id": "Carprofen",
           "type": "Compound"
         },
         {
@@ -222,122 +404,27 @@
         },
         {
           "source": "Ptgs1",
-          "target": "Aminosalicylic Acid",
+          "target": "Carprofen",
           "label": "is bound by"
         },
         {
-          "source": "Aminosalicylic Acid",
+          "source": "Carprofen",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diflunisal,Aminosalicylic Acid": [
-          "Benzoic Acids"
+        "Diflunisal,Carprofen": [
+          "Cyclooxygenase Inhibitor",
+          "Organohalogen Compound"
         ]
       },
-      "id": "path_23671"
+      "id": "path_11987"
     },
     {
       "score": {
-        "ic_mean": 0.5462,
-        "final_score": 0.5462
-      },
-      "nodes": [
-        {
-          "id": "Diflunisal",
-          "type": "Compound"
-        },
-        {
-          "id": "Necrotising Fasciitis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sulindac",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diflunisal",
-          "target": "Necrotising Fasciitis",
-          "label": "causes"
-        },
-        {
-          "source": "Necrotising Fasciitis",
-          "target": "Sulindac",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sulindac",
-          "target": "Ptgs2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diflunisal,Sulindac": [
-          "Enzyme Inhibitor",
-          "Carboxylic Acid"
-        ]
-      },
-      "id": "path_23672"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5462,
-        "final_score": 0.5462
-      },
-      "nodes": [
-        {
-          "id": "Diflunisal",
-          "type": "Compound"
-        },
-        {
-          "id": "Cellulitis Gangrenous",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sulindac",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diflunisal",
-          "target": "Cellulitis Gangrenous",
-          "label": "causes"
-        },
-        {
-          "source": "Cellulitis Gangrenous",
-          "target": "Sulindac",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sulindac",
-          "target": "Ptgs2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diflunisal,Sulindac": [
-          "Enzyme Inhibitor",
-          "Carboxylic Acid"
-        ]
-      },
-      "id": "path_23673"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5356,
-        "final_score": 0.5356
+        "ic_mean": 0.5569,
+        "final_score": 0.5569
       },
       "nodes": [
         {
@@ -349,7 +436,7 @@
           "type": "Gene"
         },
         {
-          "id": "Olsalazine",
+          "id": "Fenoprofen",
           "type": "Compound"
         },
         {
@@ -365,23 +452,70 @@
         },
         {
           "source": "Ptgs1",
-          "target": "Olsalazine",
+          "target": "Fenoprofen",
           "label": "is bound by"
         },
         {
-          "source": "Olsalazine",
+          "source": "Fenoprofen",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diflunisal,Olsalazine": [
+        "Diflunisal,Fenoprofen": [
           "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_11988"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5569,
+        "final_score": 0.5569
+      },
+      "nodes": [
+        {
+          "id": "Diflunisal",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Lornoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diflunisal",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Lornoxicam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lornoxicam",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diflunisal,Lornoxicam": [
+          "Organic Hydroxy Compound",
           "Nonsteroidal Antiinflammatory Drug"
         ]
       },
-      "id": "path_23674"
+      "id": "path_11989"
     }
-  ],
-  "verbalization": ""
+  ]
 }

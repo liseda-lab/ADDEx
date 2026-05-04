@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00248 - Gene::3350",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7649,
+        "final_score": 0.6325,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Ergolines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabergoline",
+          "target": "Ergolines",
+          "label": "is included in"
+        },
+        {
+          "source": "Ergolines",
+          "target": "Bromocriptine",
+          "label": "includes"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabergoline,Bromocriptine": [
+          "Dopamine Agonist",
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_10065"
+    },
+    {
+      "score": {
+        "ic_mean": 0.55,
+        "final_score": 0.55
+      },
+      "nodes": [
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pericarditis Constrictive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabergoline",
+          "target": "Pericarditis Constrictive",
+          "label": "causes"
+        },
+        {
+          "source": "Pericarditis Constrictive",
+          "target": "Bromocriptine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabergoline,Bromocriptine": [
+          "Dopamine Agonist",
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_10066"
+    }
+  ]
+}

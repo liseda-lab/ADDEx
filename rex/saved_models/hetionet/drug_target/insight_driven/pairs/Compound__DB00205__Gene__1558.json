@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00205 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6743,
+        "final_score": 0.7538,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Pyrimethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrofolate Reductase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Trimethoprim",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pyrimethamine",
+          "target": "Dihydrofolate Reductase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydrofolate Reductase Inhibitors",
+          "target": "Trimethoprim",
+          "label": "includes"
+        },
+        {
+          "source": "Trimethoprim",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pyrimethamine,Trimethoprim": [
+          "Aminopyrimidine",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_9851"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7373,
+        "final_score": 0.6186,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Pyrimethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pyrimethamine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9852"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.604,
-        "final_score": 0.604
+        "ic_mean": 0.527,
+        "final_score": 0.527
       },
       "nodes": [
         {
@@ -12,59 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Fmo3",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Voriconazole",
-          "target": "Fmo3",
-          "label": "binds"
-        },
-        {
-          "source": "Fmo3",
-          "target": "Dapsone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapsone",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Voriconazole,Dapsone": [
-          "Benzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_19380"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4767,
-        "final_score": 0.4767
-      },
-      "nodes": [
-        {
-          "id": "Voriconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Duodenal Ulcer Perforation",
+          "id": "Pseudoporphyria",
           "type": "Side Effect"
         },
         {
-          "id": "Meloxicam",
+          "id": "Nabumetone",
           "type": "Compound"
         },
         {
@@ -75,27 +27,73 @@
       "edges": [
         {
           "source": "Voriconazole",
-          "target": "Duodenal Ulcer Perforation",
+          "target": "Pseudoporphyria",
           "label": "causes"
         },
         {
-          "source": "Duodenal Ulcer Perforation",
-          "target": "Meloxicam",
+          "source": "Pseudoporphyria",
+          "target": "Nabumetone",
           "label": "is caused by"
         },
         {
-          "source": "Meloxicam",
+          "source": "Nabumetone",
           "target": "Ptgs1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Voriconazole,Meloxicam": [
-          "Azole"
+        "Voriconazole,Nabumetone": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_19381"
+      "id": "path_9793"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4688,
+        "final_score": 0.4688
+      },
+      "nodes": [
+        {
+          "id": "Voriconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoporphyria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Voriconazole",
+          "target": "Pseudoporphyria",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoporphyria",
+          "target": "Naproxen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Naproxen",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Voriconazole,Naproxen": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_9794"
     }
-  ],
-  "verbalization": ""
+  ]
 }

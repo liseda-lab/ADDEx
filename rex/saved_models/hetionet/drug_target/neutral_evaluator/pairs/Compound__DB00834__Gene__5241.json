@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00834 - Gene::5241",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5487,
+        "final_score": 0.5487
+      },
+      "nodes": [
+        {
+          "id": "Mifepristone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Norethindrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Pgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mifepristone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Norethindrone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Norethindrone",
+          "target": "Pgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mifepristone,Norethindrone": [
+          "3-Oxo-Delta(4) Steroid",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_8784"
+    }
+  ]
 }

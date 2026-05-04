@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00732 - Gene::1144",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6975,
+        "final_score": 0.7238,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Atracurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuromuscular Block Prolonged",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrnd",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atracurium",
+          "target": "Neuromuscular Block Prolonged",
+          "label": "causes"
+        },
+        {
+          "source": "Neuromuscular Block Prolonged",
+          "target": "Vecuronium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vecuronium",
+          "target": "Chrnd",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atracurium,Vecuronium": [
+          "Quaternary Ammonium Ion",
+          "Nicotinic Antagonist"
+        ]
+      },
+      "id": "path_6007"
+    },
+    {
+      "score": {
+        "ic_mean": 0.859,
+        "final_score": 0.7211,
+        "agentic_score": 0.5833
+      },
+      "nodes": [
+        {
+          "id": "Atracurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuromuscular Nondepolarizing Blockade",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrnd",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atracurium",
+          "target": "Neuromuscular Nondepolarizing Blockade",
+          "label": "is included in"
+        },
+        {
+          "source": "Neuromuscular Nondepolarizing Blockade",
+          "target": "Vecuronium",
+          "label": "includes"
+        },
+        {
+          "source": "Vecuronium",
+          "target": "Chrnd",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atracurium,Vecuronium": [
+          "Quaternary Ammonium Ion",
+          "Nicotinic Antagonist"
+        ]
+      },
+      "id": "path_6008"
+    }
+  ]
+}

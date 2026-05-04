@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00972 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6794,
+        "final_score": 0.7564,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azelastine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10646"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5812,
+        "final_score": 0.4989,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H1 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azelastine",
+          "target": "Histamine H1 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H1 Receptor Antagonists",
+          "target": "Carbinoxamine",
+          "label": "includes"
+        },
+        {
+          "source": "Carbinoxamine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azelastine,Carbinoxamine": [
+          "Histamine-1 Receptor Antagonist",
+          "Monochlorobenzenes"
+        ]
+      },
+      "id": "path_10647"
+    }
+  ]
+}

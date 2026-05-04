@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7111,
-        "final_score": 0.7111
+        "ic_mean": 0.874,
+        "final_score": 0.874
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Tafluprost",
+          "id": "Travoprost",
           "type": "Compound"
         },
         {
@@ -32,11 +32,11 @@
         },
         {
           "source": "Prostaglandins",
-          "target": "Tafluprost",
+          "target": "Travoprost",
           "label": "includes"
         },
         {
-          "source": "Tafluprost",
+          "source": "Travoprost",
           "target": "Ptgfr",
           "label": "binds"
         }
@@ -45,20 +45,128 @@
         "Dinoprostone,Prostaglandins": [
           "Prostaglandin"
         ],
-        "Dinoprostone,Tafluprost": [
-          "Carbonyl Compound",
-          "Prostaglandin Analogue"
+        "Dinoprostone,Travoprost": [
+          "Prostaglandin Analogue",
+          "Prostaglandin"
         ],
-        "Prostaglandins,Tafluprost": [
+        "Prostaglandins,Travoprost": [
           "Prostaglandin"
         ]
       },
-      "id": "path_28895"
+      "id": "path_14900"
     },
     {
       "score": {
-        "ic_mean": 0.6991,
-        "final_score": 0.6991
+        "ic_mean": 0.8483,
+        "final_score": 0.8483
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostaglandins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Latanoprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgfr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Prostaglandins",
+          "label": "is included in"
+        },
+        {
+          "source": "Prostaglandins",
+          "target": "Latanoprost",
+          "label": "includes"
+        },
+        {
+          "source": "Latanoprost",
+          "target": "Ptgfr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Prostaglandins": [
+          "Prostaglandin"
+        ],
+        "Dinoprostone,Latanoprost": [
+          "Organic Hydroxy Compound",
+          "Prostaglandin Analogue"
+        ],
+        "Prostaglandins,Latanoprost": [
+          "Prostaglandin"
+        ]
+      },
+      "id": "path_14901"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8483,
+        "final_score": 0.8483
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostaglandins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Carboprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgfr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Prostaglandins",
+          "label": "is included in"
+        },
+        {
+          "source": "Prostaglandins",
+          "target": "Carboprost Tromethamine",
+          "label": "includes"
+        },
+        {
+          "source": "Carboprost Tromethamine",
+          "target": "Ptgfr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Prostaglandins": [
+          "Prostaglandin"
+        ],
+        "Dinoprostone,Carboprost Tromethamine": [
+          "P-Block Molecular Entity",
+          "Prostaglandin Analogue"
+        ],
+        "Prostaglandins,Carboprost Tromethamine": [
+          "P-Block Molecular Entity"
+        ]
+      },
+      "id": "path_14902"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7304,
+        "final_score": 0.7304
       },
       "nodes": [
         {
@@ -70,8 +178,8 @@
           "type": "Gene"
         },
         {
-          "id": "Prostanoid Ligand Receptors",
-          "type": "Pathway"
+          "id": "Prostaglandin Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Ptgfr",
@@ -86,21 +194,21 @@
         },
         {
           "source": "Ptger2",
-          "target": "Prostanoid Ligand Receptors",
+          "target": "Prostaglandin Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Prostanoid Ligand Receptors",
+          "source": "Prostaglandin Receptor Activity",
           "target": "Ptgfr",
           "label": "is participated by"
         }
       ],
-      "id": "path_28896"
+      "id": "path_14903"
     },
     {
       "score": {
-        "ic_mean": 0.6855,
-        "final_score": 0.6855
+        "ic_mean": 0.723,
+        "final_score": 0.723
       },
       "nodes": [
         {
@@ -108,11 +216,53 @@
           "type": "Compound"
         },
         {
-          "id": "Foetal Heart Rate",
+          "id": "Ptger2",
+          "type": "Gene"
+        },
+        {
+          "id": "Prostanoid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ptgfr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Ptger2",
+          "label": "binds"
+        },
+        {
+          "source": "Ptger2",
+          "target": "Prostanoid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Prostanoid Receptor Activity",
+          "target": "Ptgfr",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14904"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6505,
+        "final_score": 0.6505
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Rupture",
           "type": "Side Effect"
         },
         {
-          "id": "Dinoprost Tromethamine",
+          "id": "Carboprost Tromethamine",
           "type": "Compound"
         },
         {
@@ -123,32 +273,32 @@
       "edges": [
         {
           "source": "Dinoprostone",
-          "target": "Foetal Heart Rate",
+          "target": "Uterine Rupture",
           "label": "causes"
         },
         {
-          "source": "Foetal Heart Rate",
-          "target": "Dinoprost Tromethamine",
+          "source": "Uterine Rupture",
+          "target": "Carboprost Tromethamine",
           "label": "is caused by"
         },
         {
-          "source": "Dinoprost Tromethamine",
+          "source": "Carboprost Tromethamine",
           "target": "Ptgfr",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dinoprostone,Dinoprost Tromethamine": [
-          "Prostaglandin Analogue",
-          "Organic Molecular Entity"
+        "Dinoprostone,Carboprost Tromethamine": [
+          "P-Block Molecular Entity",
+          "Prostaglandin Analogue"
         ]
       },
-      "id": "path_28897"
+      "id": "path_14905"
     },
     {
       "score": {
-        "ic_mean": 0.6829,
-        "final_score": 0.6829
+        "ic_mean": 0.6328,
+        "final_score": 0.6328
       },
       "nodes": [
         {
@@ -156,95 +306,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ptger1",
-          "type": "Gene"
-        },
-        {
-          "id": "Prostanoid Ligand Receptors",
-          "type": "Pathway"
-        },
-        {
-          "id": "Ptgfr",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dinoprostone",
-          "target": "Ptger1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptger1",
-          "target": "Prostanoid Ligand Receptors",
-          "label": "participates"
-        },
-        {
-          "source": "Prostanoid Ligand Receptors",
-          "target": "Ptgfr",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_28898"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6552,
-        "final_score": 0.6552
-      },
-      "nodes": [
-        {
-          "id": "Dinoprostone",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgir",
-          "type": "Gene"
-        },
-        {
-          "id": "Prostanoid Ligand Receptors",
-          "type": "Pathway"
-        },
-        {
-          "id": "Ptgfr",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dinoprostone",
-          "target": "Ptgir",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgir",
-          "target": "Prostanoid Ligand Receptors",
-          "label": "participates"
-        },
-        {
-          "source": "Prostanoid Ligand Receptors",
-          "target": "Ptgfr",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_28899"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6429,
-        "final_score": 0.6429
-      },
-      "nodes": [
-        {
-          "id": "Dinoprostone",
-          "type": "Compound"
-        },
-        {
-          "id": "Anaphylactoid Syndrome Of Pregnancy",
+          "id": "Endometritis",
           "type": "Side Effect"
         },
         {
-          "id": "Dinoprost Tromethamine",
+          "id": "Carboprost Tromethamine",
           "type": "Compound"
         },
         {
@@ -255,76 +321,27 @@
       "edges": [
         {
           "source": "Dinoprostone",
-          "target": "Anaphylactoid Syndrome Of Pregnancy",
+          "target": "Endometritis",
           "label": "causes"
         },
         {
-          "source": "Anaphylactoid Syndrome Of Pregnancy",
-          "target": "Dinoprost Tromethamine",
+          "source": "Endometritis",
+          "target": "Carboprost Tromethamine",
           "label": "is caused by"
         },
         {
-          "source": "Dinoprost Tromethamine",
+          "source": "Carboprost Tromethamine",
           "target": "Ptgfr",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dinoprostone,Dinoprost Tromethamine": [
-          "Prostaglandin Analogue",
-          "Organic Molecular Entity"
+        "Dinoprostone,Carboprost Tromethamine": [
+          "P-Block Molecular Entity",
+          "Prostaglandin Analogue"
         ]
       },
-      "id": "path_28900"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6429,
-        "final_score": 0.6429
-      },
-      "nodes": [
-        {
-          "id": "Dinoprostone",
-          "type": "Compound"
-        },
-        {
-          "id": "Amniotic Fluid Embolism",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Dinoprost Tromethamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgfr",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dinoprostone",
-          "target": "Amniotic Fluid Embolism",
-          "label": "causes"
-        },
-        {
-          "source": "Amniotic Fluid Embolism",
-          "target": "Dinoprost Tromethamine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Dinoprost Tromethamine",
-          "target": "Ptgfr",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dinoprostone,Dinoprost Tromethamine": [
-          "Prostaglandin Analogue",
-          "Organic Molecular Entity"
-        ]
-      },
-      "id": "path_28901"
+      "id": "path_14906"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00477 - Gene::3350",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7062,
+        "final_score": 0.7281,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Mesoridazine",
+          "label": "includes"
+        },
+        {
+          "source": "Mesoridazine",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Chlorpromazine,Mesoridazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Mesoridazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_3606"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6267,
-        "final_score": 0.6267
+        "ic_mean": 0.4582,
+        "final_score": 0.4582
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hipk4",
-          "type": "Gene"
+          "id": "Varices Oesophageal",
+          "type": "Side Effect"
         },
         {
-          "id": "Erlotinib",
+          "id": "Omeprazole",
           "type": "Compound"
         },
         {
@@ -27,28 +27,121 @@
       "edges": [
         {
           "source": "Sorafenib",
-          "target": "Hipk4",
-          "label": "binds"
+          "target": "Varices Oesophageal",
+          "label": "causes"
         },
         {
-          "source": "Hipk4",
-          "target": "Erlotinib",
-          "label": "is bound by"
+          "source": "Varices Oesophageal",
+          "target": "Omeprazole",
+          "label": "is caused by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Omeprazole",
           "target": "Abcg2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sorafenib,Erlotinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+        "Sorafenib,Omeprazole": [
+          "Aromatic Ether"
         ]
       },
-      "id": "path_21961"
+      "id": "path_11130"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4252,
+        "final_score": 0.4252
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Leukoencephalopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Leukoencephalopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Leukoencephalopathy",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Cisplatin": [
+          "Antineoplastic Agent",
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_11131"
+    },
+    {
+      "score": {
+        "ic_mean": 0.402,
+        "final_score": 0.402
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cholangitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rabeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Cholangitis",
+          "label": "causes"
+        },
+        {
+          "source": "Cholangitis",
+          "target": "Rabeprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rabeprazole",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Rabeprazole": [
+          "Pyridines"
+        ]
+      },
+      "id": "path_11132"
     }
-  ],
-  "verbalization": ""
+  ]
 }

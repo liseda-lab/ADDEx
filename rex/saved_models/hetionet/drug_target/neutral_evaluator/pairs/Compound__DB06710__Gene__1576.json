@@ -12,54 +12,6 @@
           "type": "Compound"
         },
         {
-          "id": "Androgen Receptor Agonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Danazol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Androgen Receptor Agonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Androgen Receptor Agonists",
-          "target": "Danazol",
-          "label": "includes"
-        },
-        {
-          "source": "Danazol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Danazol": [
-          "17Beta-Hydroxy Steroid",
-          "Therapeutic Androgen"
-        ]
-      },
-      "id": "path_16490"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6147,
-        "final_score": 0.6147
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
           "id": "Androstanes",
           "type": "Pharmacologic Class"
         },
@@ -91,11 +43,11 @@
       ],
       "lowest_common_ancestors": {
         "Methyltestosterone,Danazol": [
-          "17Beta-Hydroxy Steroid",
-          "Therapeutic Androgen"
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_16491"
+      "id": "path_8245"
     },
     {
       "score": {
@@ -112,7 +64,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Testosterone",
+          "id": "Danazol",
           "type": "Compound"
         },
         {
@@ -128,26 +80,27 @@
         },
         {
           "source": "Androgen Receptor Agonists",
-          "target": "Testosterone",
+          "target": "Danazol",
           "label": "includes"
         },
         {
-          "source": "Testosterone",
+          "source": "Danazol",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methyltestosterone,Testosterone": [
+        "Methyltestosterone,Danazol": [
+          "Therapeutic Androgen",
           "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_16492"
+      "id": "path_8246"
     },
     {
       "score": {
-        "ic_mean": 0.6147,
-        "final_score": 0.6147
+        "ic_mean": 0.523,
+        "final_score": 0.523
       },
       "nodes": [
         {
@@ -155,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Androstanes",
-          "type": "Pharmacologic Class"
+          "id": "Virilism",
+          "type": "Side Effect"
         },
         {
-          "id": "Testosterone",
+          "id": "Aminoglutethimide",
           "type": "Compound"
         },
         {
@@ -170,127 +123,32 @@
       "edges": [
         {
           "source": "Methyltestosterone",
-          "target": "Androstanes",
-          "label": "is included in"
+          "target": "Virilism",
+          "label": "causes"
         },
         {
-          "source": "Androstanes",
-          "target": "Testosterone",
-          "label": "includes"
+          "source": "Virilism",
+          "target": "Aminoglutethimide",
+          "label": "is caused by"
         },
         {
-          "source": "Testosterone",
+          "source": "Aminoglutethimide",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methyltestosterone,Testosterone": [
-          "17Beta-Hydroxy Steroid"
+        "Methyltestosterone,Aminoglutethimide": [
+          "Organic Cyclic Compound",
+          "Hormone Therapy Agent"
         ]
       },
-      "id": "path_16493"
+      "id": "path_8247"
     },
     {
       "score": {
-        "ic_mean": 0.5407,
-        "final_score": 0.5407
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Shbg",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Shbg",
-          "label": "binds"
-        },
-        {
-          "source": "Shbg",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Ethinyl Estradiol": [
-          "17-Hydroxy Steroid",
-          "Therapeutic Steroid Hormone"
-        ]
-      },
-      "id": "path_16494"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5407,
-        "final_score": 0.5407
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp19a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Anastrozole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Cyp19a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp19a1",
-          "target": "Anastrozole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Anastrozole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Anastrozole": [
-          "Hormone Therapy Agent",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_16495"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4893,
-        "final_score": 0.4893
+        "ic_mean": 0.4515,
+        "final_score": 0.4515
       },
       "nodes": [
         {
@@ -302,7 +160,7 @@
           "type": "Gene"
         },
         {
-          "id": "Tetracycline",
+          "id": "Doxycycline",
           "type": "Compound"
         },
         {
@@ -318,26 +176,73 @@
         },
         {
           "source": "Slc22a8",
-          "target": "Tetracycline",
+          "target": "Doxycycline",
           "label": "is bound by"
         },
         {
-          "source": "Tetracycline",
+          "source": "Doxycycline",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methyltestosterone,Tetracycline": [
+        "Methyltestosterone,Doxycycline": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_8248"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3831,
+        "final_score": 0.3831
+      },
+      "nodes": [
+        {
+          "id": "Methyltestosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cholesterol Serum Elevated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methyltestosterone",
+          "target": "Cholesterol Serum Elevated",
+          "label": "causes"
+        },
+        {
+          "source": "Cholesterol Serum Elevated",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methyltestosterone,Indinavir": [
           "Organic Hydroxy Compound"
         ]
       },
-      "id": "path_16496"
+      "id": "path_8249"
     },
     {
       "score": {
-        "ic_mean": 0.4893,
-        "final_score": 0.4893
+        "ic_mean": 0.3752,
+        "final_score": 0.3752
       },
       "nodes": [
         {
@@ -345,11 +250,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp19a1",
+          "id": "Slc22a8",
           "type": "Gene"
         },
         {
-          "id": "Methadone",
+          "id": "Quinidine",
           "type": "Compound"
         },
         {
@@ -360,419 +265,26 @@
       "edges": [
         {
           "source": "Methyltestosterone",
-          "target": "Cyp19a1",
+          "target": "Slc22a8",
           "label": "binds"
         },
         {
-          "source": "Cyp19a1",
-          "target": "Methadone",
+          "source": "Slc22a8",
+          "target": "Quinidine",
           "label": "is bound by"
         },
         {
-          "source": "Methadone",
+          "source": "Quinidine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methyltestosterone,Methadone": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_16497"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4671,
-        "final_score": 0.4671
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Paresthesia Generalized",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Testosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Paresthesia Generalized",
-          "label": "causes"
-        },
-        {
-          "source": "Paresthesia Generalized",
-          "target": "Testosterone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Testosterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Testosterone": [
-          "17Beta-Hydroxy Steroid"
-        ]
-      },
-      "id": "path_16498"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4494,
-        "final_score": 0.4494
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Enlarged Clitoris",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Testosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Enlarged Clitoris",
-          "label": "causes"
-        },
-        {
-          "source": "Enlarged Clitoris",
-          "target": "Testosterone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Testosterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Testosterone": [
-          "17Beta-Hydroxy Steroid"
-        ]
-      },
-      "id": "path_16499"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4458,
-        "final_score": 0.4458
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Slco1a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1a2",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Conjugated Estrogens": [
-          "Therapeutic Steroid Hormone"
-        ]
-      },
-      "id": "path_16500"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4458,
-        "final_score": 0.4458
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Quinine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Slco1a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1a2",
-          "target": "Quinine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Quinine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Quinine": [
+        "Methyltestosterone,Quinidine": [
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_16501"
-    },
-    {
-      "score": {
-        "ic_mean": 0.438,
-        "final_score": 0.438
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a8",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Slc22a8",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a8",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Conjugated Estrogens": [
-          "Therapeutic Steroid Hormone"
-        ]
-      },
-      "id": "path_16502"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4266,
-        "final_score": 0.4266
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a8",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Slc22a8",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a8",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Pravastatin": [
-          "Organic Hydroxy Compound"
-        ]
-      },
-      "id": "path_16503"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4003,
-        "final_score": 0.4003
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Formestane",
-          "type": "Compound"
-        },
-        {
-          "id": "Exemestane",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Formestane",
-          "label": "resembles"
-        },
-        {
-          "source": "Formestane",
-          "target": "Exemestane",
-          "label": "resembles"
-        },
-        {
-          "source": "Exemestane",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Formestane": [
-          "Hydroxy Steroid",
-          "Hormone Therapy Agent"
-        ],
-        "Methyltestosterone,Exemestane": [
-          "3-Oxo-Delta(4) Steroid",
-          "Hormone Therapy Agent"
-        ],
-        "Formestane,Exemestane": [
-          "3-Oxo-Delta(4) Steroid",
-          "Steroidal Aromatase Inhibitor"
-        ]
-      },
-      "id": "path_16504"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3994,
-        "final_score": 0.3994
-      },
-      "nodes": [
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Formestane",
-          "type": "Compound"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methyltestosterone",
-          "target": "Formestane",
-          "label": "resembles"
-        },
-        {
-          "source": "Formestane",
-          "target": "Conjugated Estrogens",
-          "label": "resembles"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methyltestosterone,Formestane": [
-          "Hydroxy Steroid",
-          "Hormone Therapy Agent"
-        ],
-        "Methyltestosterone,Conjugated Estrogens": [
-          "Therapeutic Steroid Hormone"
-        ],
-        "Formestane,Conjugated Estrogens": [
-          "Hormone Therapy Agent"
-        ]
-      },
-      "id": "path_16505"
+      "id": "path_8250"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00822 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5177,
+        "final_score": 0.5177
+      },
+      "nodes": [
+        {
+          "id": "Disulfiram",
+          "type": "Compound"
+        },
+        {
+          "id": "Polyneuritis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disulfiram",
+          "target": "Polyneuritis",
+          "label": "causes"
+        },
+        {
+          "source": "Polyneuritis",
+          "target": "Chloroquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chloroquine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disulfiram,Chloroquine": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_4722"
+    }
+  ]
+}

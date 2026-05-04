@@ -1,0 +1,142 @@
+{
+  "id": "Compound::DB08873 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5852,
+        "final_score": 0.5852
+      },
+      "nodes": [
+        {
+          "id": "Boceprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Boceprevir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8684"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4816,
+        "final_score": 0.4816
+      },
+      "nodes": [
+        {
+          "id": "Boceprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Substance Abuse",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Boceprevir",
+          "target": "Substance Abuse",
+          "label": "causes"
+        },
+        {
+          "source": "Substance Abuse",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Boceprevir,Oxycodone": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_8685"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4055,
+        "final_score": 0.4055
+      },
+      "nodes": [
+        {
+          "id": "Boceprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Lip Dry",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Boceprevir",
+          "target": "Lip Dry",
+          "label": "causes"
+        },
+        {
+          "source": "Lip Dry",
+          "target": "Telithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telithromycin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Boceprevir,Telithromycin": [
+          "Anti-Infective Agent",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_8686"
+    }
+  ]
+}

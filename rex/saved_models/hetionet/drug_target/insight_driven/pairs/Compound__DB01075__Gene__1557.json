@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB01075 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5502,
+        "final_score": 0.6918,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Diphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H1 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diphenhydramine",
+          "target": "Histamine H1 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H1 Receptor Antagonists",
+          "target": "Azelastine",
+          "label": "includes"
+        },
+        {
+          "source": "Azelastine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diphenhydramine,Azelastine": [
+          "Tertiary Amino Compound",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_10185"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6485,
+        "final_score": 0.6159,
+        "agentic_score": 0.5833
+      },
+      "nodes": [
+        {
+          "id": "Diphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diphenhydramine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2c19",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10186"
+    }
+  ]
+}

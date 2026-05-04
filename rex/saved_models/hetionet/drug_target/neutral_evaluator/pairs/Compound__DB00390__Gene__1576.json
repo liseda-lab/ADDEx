@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6933,
-        "final_score": 0.6933
+        "ic_mean": 0.4489,
+        "final_score": 0.4489
       },
       "nodes": [
         {
@@ -12,53 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc51b",
-          "type": "Gene"
+          "id": "Atrial Tachycardia",
+          "type": "Side Effect"
         },
         {
-          "id": "Drug Induction Of Bile Acid Pathway",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slc51b",
-          "label": "binds"
-        },
-        {
-          "source": "Slc51b",
-          "target": "Drug Induction Of Bile Acid Pathway",
-          "label": "participates"
-        },
-        {
-          "source": "Drug Induction Of Bile Acid Pathway",
-          "target": "Cyp3a4",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_18702"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6536,
-        "final_score": 0.6536
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco4c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Saxagliptin",
+          "id": "Enalapril",
           "type": "Compound"
         },
         {
@@ -69,31 +27,175 @@
       "edges": [
         {
           "source": "Digoxin",
-          "target": "Slco4c1",
-          "label": "binds"
+          "target": "Atrial Tachycardia",
+          "label": "causes"
         },
         {
-          "source": "Slco4c1",
-          "target": "Saxagliptin",
-          "label": "is bound by"
+          "source": "Atrial Tachycardia",
+          "target": "Enalapril",
+          "label": "is caused by"
         },
         {
-          "source": "Saxagliptin",
+          "source": "Enalapril",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Digoxin,Saxagliptin": [
+        "Digoxin,Enalapril": [
+          "Carboxylic Ester",
+          "Agent Affecting Cardiovascular System"
+        ]
+      },
+      "id": "path_9427"
+    },
+    {
+      "score": {
+        "ic_mean": 0.41,
+        "final_score": 0.41
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cardiotoxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Cardiotoxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Cardiotoxicity",
+          "target": "Lapatinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lapatinib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Lapatinib": [
+          "Antineoplastic Agent",
+          "Furans"
+        ]
+      },
+      "id": "path_9428"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4061,
+        "final_score": 0.4061
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cardiotoxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Cardiotoxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Cardiotoxicity",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Ifosfamide": [
+          "Antineoplastic Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_9429"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4057,
+        "final_score": 0.4057
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthopsia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indapamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Xanthopsia",
+          "label": "causes"
+        },
+        {
+          "source": "Xanthopsia",
+          "target": "Indapamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indapamide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Indapamide": [
           "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_18703"
+      "id": "path_9430"
     },
     {
       "score": {
-        "ic_mean": 0.6122,
-        "final_score": 0.6122
+        "ic_mean": 0.4043,
+        "final_score": 0.4043
       },
       "nodes": [
         {
@@ -101,11 +203,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco2b1",
-          "type": "Gene"
+          "id": "Dissociation",
+          "type": "Side Effect"
         },
         {
-          "id": "Ergoloid Mesylate",
+          "id": "Disopyramide",
           "type": "Compound"
         },
         {
@@ -116,1143 +218,32 @@
       "edges": [
         {
           "source": "Digoxin",
-          "target": "Slco2b1",
-          "label": "binds"
+          "target": "Dissociation",
+          "label": "causes"
         },
         {
-          "source": "Slco2b1",
-          "target": "Ergoloid Mesylate",
-          "label": "is bound by"
+          "source": "Dissociation",
+          "target": "Disopyramide",
+          "label": "is caused by"
         },
         {
-          "source": "Ergoloid Mesylate",
+          "source": "Disopyramide",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Digoxin,Ergoloid Mesylate": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_18704"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6023,
-        "final_score": 0.6023
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco4c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Digitoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco4c1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco4c1",
-          "target": "Digitoxin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Digitoxin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Digitoxin": [
-          "Cardiotonic Agent",
-          "Cardenolide Glycoside"
-        ]
-      },
-      "id": "path_18705"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5722,
-        "final_score": 0.5722
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco4c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Levothyroxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco4c1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco4c1",
-          "target": "Levothyroxine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Levothyroxine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Levothyroxine": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_18706"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5422,
-        "final_score": 0.5422
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc51b",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slc51b",
-          "label": "binds"
-        },
-        {
-          "source": "Slc51b",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_18707"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5308,
-        "final_score": 0.5308
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Montelukast",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Montelukast",
-          "label": "is bound by"
-        },
-        {
-          "source": "Montelukast",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Montelukast": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_18708"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5209,
-        "final_score": 0.5209
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco4a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco4a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco4a1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_18709"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5209,
-        "final_score": 0.5209
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco4a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Levothyroxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco4a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco4a1",
-          "target": "Levothyroxine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Levothyroxine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Levothyroxine": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_18710"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4996,
-        "final_score": 0.4996
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Digitoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Cyp11a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11a1",
-          "target": "Digitoxin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Digitoxin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Digitoxin": [
-          "Cardiotonic Agent",
-          "Cardenolide Glycoside"
-        ]
-      },
-      "id": "path_18711"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4909,
-        "final_score": 0.4909
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco1c1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1c1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_18712"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4909,
-        "final_score": 0.4909
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Levothyroxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco1c1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1c1",
-          "target": "Levothyroxine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Levothyroxine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Levothyroxine": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_18713"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4831,
-        "final_score": 0.4831
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cholecalciferol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Cyp11a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11a1",
-          "target": "Cholecalciferol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cholecalciferol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Cholecalciferol": [
-          "Steroid"
-        ]
-      },
-      "id": "path_18714"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4794,
-        "final_score": 0.4794
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_18715"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4794,
-        "final_score": 0.4794
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Rosuvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rosuvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Rosuvastatin": [
-          "Organic Heteromonocyclic Compound"
-        ]
-      },
-      "id": "path_18716"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4695,
-        "final_score": 0.4695
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco1c1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1c1",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Phenytoin": [
-          "Organic Heteromonocyclic Compound"
-        ]
-      },
-      "id": "path_18717"
-    },
-    {
-      "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Pravastatin": [
-          "Organic Anion"
-        ]
-      },
-      "id": "path_18718"
-    },
-    {
-      "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Glyburide": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_18719"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4608,
-        "final_score": 0.4608
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Simeprevir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Simeprevir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Simeprevir": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_18720"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4608,
-        "final_score": 0.4608
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pantoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Pantoprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pantoprazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Pantoprazole": [
-          "Organic Heteromonocyclic Compound"
-        ]
-      },
-      "id": "path_18721"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4608,
-        "final_score": 0.4608
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Probenecid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco1c1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1c1",
-          "target": "Probenecid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Probenecid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Probenecid": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_18722"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4581,
-        "final_score": 0.4581
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Cyp11a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11a1",
-          "target": "Saquinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Saquinavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Saquinavir": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_18723"
-    },
-    {
-      "score": {
-        "ic_mean": 0.453,
-        "final_score": 0.453
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a8",
-          "type": "Gene"
-        },
-        {
-          "id": "Tetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slc22a8",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a8",
-          "target": "Tetracycline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tetracycline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Tetracycline": [
-          "Organic Anion"
-        ]
-      },
-      "id": "path_18724"
-    },
-    {
-      "score": {
-        "ic_mean": 0.453,
-        "final_score": 0.453
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco1c1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1c1",
-          "target": "Diclofenac",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diclofenac",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Diclofenac": [
-          "Organic Anion"
-        ]
-      },
-      "id": "path_18725"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4494,
-        "final_score": 0.4494
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Erlotinib": [
-          "Organic Heterocyclic Compound",
-          "Antineoplastic Agent"
-        ]
-      },
-      "id": "path_18726"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4494,
-        "final_score": 0.4494
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Atorvastatin": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_18727"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4482,
-        "final_score": 0.4482
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Cyp11a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11a1",
-          "target": "Ketoconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Digoxin,Ketoconazole": [
+        "Digoxin,Disopyramide": [
           "Organic Heteromonocyclic Compound",
-          "Antineoplastic Agent"
+          "Agent Affecting Cardiovascular System"
         ]
       },
-      "id": "path_18728"
+      "id": "path_9431"
     },
     {
       "score": {
-        "ic_mean": 0.4095,
-        "final_score": 0.4095
+        "ic_mean": 0.4033,
+        "final_score": 0.4033
       },
       "nodes": [
         {
@@ -1260,11 +251,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Dissociation",
+          "type": "Side Effect"
         },
         {
-          "id": "Conjugated Estrogens",
+          "id": "Diltiazem",
           "type": "Compound"
         },
         {
@@ -1275,111 +266,217 @@
       "edges": [
         {
           "source": "Digoxin",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Dissociation",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
+          "source": "Dissociation",
+          "target": "Diltiazem",
+          "label": "is caused by"
         },
         {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_18729"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4017,
-        "final_score": 0.4017
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a8",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slc22a8",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a8",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_18730"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3981,
-        "final_score": 0.3981
-      },
-      "nodes": [
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Digoxin",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
+          "source": "Diltiazem",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Digoxin,Pravastatin": [
-          "Organic Anion"
+        "Digoxin,Diltiazem": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Cardiovascular System"
         ]
       },
-      "id": "path_18731"
+      "id": "path_9432"
+    },
+    {
+      "score": {
+        "ic_mean": 0.379,
+        "final_score": 0.379
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthopsia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Xanthopsia",
+          "label": "causes"
+        },
+        {
+          "source": "Xanthopsia",
+          "target": "Sildenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sildenafil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Sildenafil": [
+          "Organic Heteromonocyclic Compound",
+          "Agent Affecting Cardiovascular System"
+        ]
+      },
+      "id": "path_9433"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3666,
+        "final_score": 0.3666
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dissociation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Dissociation",
+          "label": "causes"
+        },
+        {
+          "source": "Dissociation",
+          "target": "Sildenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sildenafil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Sildenafil": [
+          "Organic Heteromonocyclic Compound",
+          "Agent Affecting Cardiovascular System"
+        ]
+      },
+      "id": "path_9434"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3515,
+        "final_score": 0.3515
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ventricular Bigeminy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zaleplon",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Ventricular Bigeminy",
+          "label": "causes"
+        },
+        {
+          "source": "Ventricular Bigeminy",
+          "target": "Zaleplon",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zaleplon",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Zaleplon": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_9435"
+    },
+    {
+      "score": {
+        "ic_mean": 0.346,
+        "final_score": 0.346
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cardiotoxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Cardiotoxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Cardiotoxicity",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Docetaxel": [
+          "Lipid"
+        ]
+      },
+      "id": "path_9436"
     }
-  ],
-  "verbalization": ""
+  ]
 }

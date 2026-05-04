@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6184,
-        "final_score": 0.6184
+        "ic_mean": 0.3399,
+        "final_score": 0.3399
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm1",
-          "type": "Gene"
+          "id": "Azatadine",
+          "type": "Compound"
         },
         {
-          "id": "Molindone",
+          "id": "Mianserin",
           "type": "Compound"
         },
         {
@@ -27,27 +27,87 @@
       "edges": [
         {
           "source": "Cyproheptadine",
-          "target": "Chrm1",
-          "label": "binds"
+          "target": "Azatadine",
+          "label": "resembles"
         },
         {
-          "source": "Chrm1",
-          "target": "Molindone",
-          "label": "is bound by"
+          "source": "Azatadine",
+          "target": "Mianserin",
+          "label": "resembles"
         },
         {
-          "source": "Molindone",
+          "source": "Mianserin",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyproheptadine,Molindone": [
+        "Cyproheptadine,Azatadine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Cyproheptadine,Mianserin": [
           "Organonitrogen Heterocyclic Compound"
+        ],
+        "Azatadine,Mianserin": [
+          "Organic Heterotricyclic Compound"
         ]
       },
-      "id": "path_8443"
+      "id": "path_4044"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3298,
+        "final_score": 0.3298
+      },
+      "nodes": [
+        {
+          "id": "Cyproheptadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenindamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyproheptadine",
+          "target": "Phenindamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenindamine",
+          "target": "Mianserin",
+          "label": "resembles"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyproheptadine,Phenindamine": [
+          "Histamine-1 Receptor Antagonist",
+          "Organic Cyclic Compound"
+        ],
+        "Cyproheptadine,Mianserin": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Phenindamine,Mianserin": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_4045"
     }
-  ],
-  "verbalization": ""
+  ]
 }

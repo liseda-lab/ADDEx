@@ -1,0 +1,113 @@
+{
+  "id": "Compound::DB01235 - Gene::1644",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.9404,
+        "final_score": 0.8035,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "L-dopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Dopa Decarboxylase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Carbidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Ddc",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-dopa",
+          "target": "Dopa Decarboxylase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dopa Decarboxylase Inhibitors",
+          "target": "Carbidopa",
+          "label": "includes"
+        },
+        {
+          "source": "Carbidopa",
+          "target": "Ddc",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "L-dopa,Carbidopa": [
+          "Nitrogen Molecular Entity"
+        ],
+        "L-dopa,Ddc": [
+          "Organonitrogen Compound"
+        ],
+        "Carbidopa,Ddc": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_8220"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6905,
+        "final_score": 0.5119,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "L-dopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Choreiform",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Ddc",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-dopa",
+          "target": "Choreiform",
+          "label": "causes"
+        },
+        {
+          "source": "Choreiform",
+          "target": "Carbidopa",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbidopa",
+          "target": "Ddc",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "L-dopa,Carbidopa": [
+          "Nitrogen Molecular Entity"
+        ],
+        "L-dopa,Ddc": [
+          "Organonitrogen Compound"
+        ],
+        "Carbidopa,Ddc": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_8221"
+    }
+  ]
+}

@@ -3,6 +3,90 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.6846,
+        "final_score": 0.6846
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp21a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp21a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp21a2",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6207"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6372,
+        "final_score": 0.6372
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp19a1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp19a1",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6208"
+    },
+    {
+      "score": {
         "ic_mean": 0.6155,
         "final_score": 0.6155
       },
@@ -12,12 +96,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp11a1",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Glutethimide",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2d6",
@@ -27,31 +111,26 @@
       "edges": [
         {
           "source": "Ketoconazole",
-          "target": "Cyp11a1",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Cyp11a1",
-          "target": "Glutethimide",
-          "label": "is bound by"
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Glutethimide",
+          "source": "Aromatase Activity",
           "target": "Cyp2d6",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Glutethimide": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_12316"
+      "id": "path_6209"
     },
     {
       "score": {
-        "ic_mean": 0.599,
-        "final_score": 0.599
+        "ic_mean": 0.6155,
+        "final_score": 0.6155
       },
       "nodes": [
         {
@@ -59,11 +138,53 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp51a1",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Itraconazole",
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6210"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4875,
+        "final_score": 0.4875
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Terbinafine",
           "type": "Compound"
         },
         {
@@ -74,32 +195,32 @@
       "edges": [
         {
           "source": "Ketoconazole",
-          "target": "Cyp51a1",
+          "target": "Cyp19a1",
           "label": "binds"
         },
         {
-          "source": "Cyp51a1",
-          "target": "Itraconazole",
+          "source": "Cyp19a1",
+          "target": "Terbinafine",
           "label": "is bound by"
         },
         {
-          "source": "Itraconazole",
+          "source": "Terbinafine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ketoconazole,Itraconazole": [
-          "Conazole Antifungal Drug",
+        "Ketoconazole,Terbinafine": [
+          "Benzenoid Aromatic Compound",
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_12317"
+      "id": "path_6211"
     },
     {
       "score": {
-        "ic_mean": 0.4963,
-        "final_score": 0.4963
+        "ic_mean": 0.3812,
+        "final_score": 0.3812
       },
       "nodes": [
         {
@@ -107,11 +228,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp11a1",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Cholecalciferol",
+          "id": "Cimetidine",
           "type": "Compound"
         },
         {
@@ -122,31 +243,31 @@
       "edges": [
         {
           "source": "Ketoconazole",
-          "target": "Cyp11a1",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Cyp11a1",
-          "target": "Cholecalciferol",
+          "source": "Cyp3a7",
+          "target": "Cimetidine",
           "label": "is bound by"
         },
         {
-          "source": "Cholecalciferol",
+          "source": "Cimetidine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ketoconazole,Cholecalciferol": [
-          "Organic Cyclic Compound"
+        "Ketoconazole,Cimetidine": [
+          "Imidazoles"
         ]
       },
-      "id": "path_12318"
+      "id": "path_6212"
     },
     {
       "score": {
-        "ic_mean": 0.4713,
-        "final_score": 0.4713
+        "ic_mean": 0.362,
+        "final_score": 0.362
       },
       "nodes": [
         {
@@ -154,11 +275,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp11b1",
+          "id": "Cyp3a7-cyp3a51p",
           "type": "Gene"
         },
         {
-          "id": "Clotrimazole",
+          "id": "Cimetidine",
           "type": "Compound"
         },
         {
@@ -169,218 +290,26 @@
       "edges": [
         {
           "source": "Ketoconazole",
-          "target": "Cyp11b1",
+          "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         },
         {
-          "source": "Cyp11b1",
-          "target": "Clotrimazole",
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Cimetidine",
           "label": "is bound by"
         },
         {
-          "source": "Clotrimazole",
+          "source": "Cimetidine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ketoconazole,Clotrimazole": [
-          "Conazole Antifungal Drug",
-          "Anti-Infective Agent"
+        "Ketoconazole,Cimetidine": [
+          "Imidazoles"
         ]
       },
-      "id": "path_12319"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4713,
-        "final_score": 0.4713
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp11a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11a1",
-          "target": "Saquinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Saquinavir",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Saquinavir": [
-          "Organonitrogen Heterocyclic Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_12320"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4468,
-        "final_score": 0.4468
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Antipyrine": [
-          "Diazole"
-        ]
-      },
-      "id": "path_12321"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4354,
-        "final_score": 0.4354
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Pravastatin": [
-          "Carbocyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_12322"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4034,
-        "final_score": 0.4034
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Hair Discoloration",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Hair Discoloration",
-          "label": "causes"
-        },
-        {
-          "source": "Hair Discoloration",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Venlafaxine": [
-          "Tertiary Amino Compound"
-        ]
-      },
-      "id": "path_12323"
+      "id": "path_6213"
     }
-  ],
-  "verbalization": ""
+  ]
 }

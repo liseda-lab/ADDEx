@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00619 - Gene::1577",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4274,
+        "final_score": 0.4274
+      },
+      "nodes": [
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Nipple Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dutasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imatinib",
+          "target": "Nipple Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Nipple Pain",
+          "target": "Dutasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dutasteride",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imatinib,Dutasteride": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_1353"
+    }
+  ]
 }

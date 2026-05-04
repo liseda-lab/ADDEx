@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5921,
-        "final_score": 0.5921
+        "ic_mean": 0.7573,
+        "final_score": 0.7573
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Alcohol Intoxication",
-          "type": "Side Effect"
+          "id": "Gabrg2",
+          "type": "Gene"
         },
         {
-          "id": "Eszopiclone",
-          "type": "Compound"
+          "id": "Benzodiazepine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Gabra3",
@@ -27,28 +27,21 @@
       "edges": [
         {
           "source": "Clonazepam",
-          "target": "Alcohol Intoxication",
-          "label": "causes"
-        },
-        {
-          "source": "Alcohol Intoxication",
-          "target": "Eszopiclone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Eszopiclone",
-          "target": "Gabra3",
+          "target": "Gabrg2",
           "label": "binds"
+        },
+        {
+          "source": "Gabrg2",
+          "target": "Benzodiazepine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Benzodiazepine Receptor Activity",
+          "target": "Gabra3",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Clonazepam,Eszopiclone": [
-          "Organic Heteropolycyclic Compound",
-          "Sedative And Hypnotic"
-        ]
-      },
-      "id": "path_4318"
+      "id": "path_1966"
     }
-  ],
-  "verbalization": ""
+  ]
 }

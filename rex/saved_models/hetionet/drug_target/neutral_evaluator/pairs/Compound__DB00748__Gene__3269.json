@@ -16,7 +16,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Desloratadine",
+          "id": "Cetirizine",
           "type": "Compound"
         },
         {
@@ -32,27 +32,27 @@
         },
         {
           "source": "Histamine H1 Receptor Antagonists",
-          "target": "Desloratadine",
+          "target": "Cetirizine",
           "label": "includes"
         },
         {
-          "source": "Desloratadine",
+          "source": "Cetirizine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Carbinoxamine,Desloratadine": [
-          "Histamine-1 Receptor Antagonist",
-          "Organonitrogen Heterocyclic Compound"
+        "Carbinoxamine,Cetirizine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Histamine-1 Receptor Antagonist"
         ]
       },
-      "id": "path_31304"
+      "id": "path_16034"
     },
     {
       "score": {
-        "ic_mean": 0.6027,
-        "final_score": 0.6027
+        "ic_mean": 0.6172,
+        "final_score": 0.6172
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Labyrinthitis",
-          "type": "Side Effect"
+          "id": "Histamine H1 Receptor Antagonists",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Clemastine",
+          "id": "Fexofenadine",
           "type": "Compound"
         },
         {
@@ -75,27 +75,75 @@
       "edges": [
         {
           "source": "Carbinoxamine",
-          "target": "Labyrinthitis",
-          "label": "causes"
+          "target": "Histamine H1 Receptor Antagonists",
+          "label": "is included in"
         },
         {
-          "source": "Labyrinthitis",
-          "target": "Clemastine",
-          "label": "is caused by"
+          "source": "Histamine H1 Receptor Antagonists",
+          "target": "Fexofenadine",
+          "label": "includes"
         },
         {
-          "source": "Clemastine",
+          "source": "Fexofenadine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Carbinoxamine,Clemastine": [
-          "Tertiary Amino Compound",
+        "Carbinoxamine,Fexofenadine": [
+          "Organonitrogen Heterocyclic Compound",
           "Histamine-1 Receptor Antagonist"
         ]
       },
-      "id": "path_31305"
+      "id": "path_16035"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6022,
+        "final_score": 0.6022
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H1 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Histamine H1 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H1 Receptor Antagonists",
+          "target": "Azelastine",
+          "label": "includes"
+        },
+        {
+          "source": "Azelastine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Azelastine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_16036"
     },
     {
       "score": {
@@ -139,156 +187,394 @@
       ],
       "lowest_common_ancestors": {
         "Carbinoxamine,Diphenhydramine": [
-          "Tertiary Amino Compound",
-          "Histamine-1 Receptor Antagonist"
-        ]
-      },
-      "id": "path_31306"
-    },
-    {
-      "score": {
-        "ic_mean": 0.582,
-        "final_score": 0.582
-      },
-      "nodes": [
-        {
-          "id": "Carbinoxamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hysteria",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Clemastine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Carbinoxamine",
-          "target": "Hysteria",
-          "label": "causes"
-        },
-        {
-          "source": "Hysteria",
-          "target": "Clemastine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Clemastine",
-          "target": "Hrh1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Carbinoxamine,Clemastine": [
-          "Tertiary Amino Compound",
-          "Histamine-1 Receptor Antagonist"
-        ]
-      },
-      "id": "path_31307"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5777,
-        "final_score": 0.5777
-      },
-      "nodes": [
-        {
-          "id": "Carbinoxamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Conversion Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Clemastine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Carbinoxamine",
-          "target": "Conversion Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Conversion Disorder",
-          "target": "Clemastine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Clemastine",
-          "target": "Hrh1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Carbinoxamine,Clemastine": [
-          "Tertiary Amino Compound",
-          "Histamine-1 Receptor Antagonist"
-        ]
-      },
-      "id": "path_31308"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5595,
-        "final_score": 0.5595
-      },
-      "nodes": [
-        {
-          "id": "Carbinoxamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Histamine H1 Receptor Antagonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Emedastine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Carbinoxamine",
-          "target": "Histamine H1 Receptor Antagonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Histamine H1 Receptor Antagonists",
-          "target": "Emedastine",
-          "label": "includes"
-        },
-        {
-          "source": "Emedastine",
-          "target": "Hrh1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Carbinoxamine,Emedastine": [
           "Histamine-1 Receptor Antagonist",
-          "Organonitrogen Heterocyclic Compound"
+          "Tertiary Amino Compound"
         ]
       },
-      "id": "path_31309"
+      "id": "path_16037"
+    },
+    {
+      "score": {
+        "ic_mean": 0.534,
+        "final_score": 0.534
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Captodiame",
+          "type": "Compound"
+        },
+        {
+          "id": "Dexbrompheniramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Captodiame",
+          "label": "resembles"
+        },
+        {
+          "source": "Captodiame",
+          "target": "Dexbrompheniramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dexbrompheniramine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Captodiame": [
+          "Organic Aromatic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Carbinoxamine,Dexbrompheniramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Pyridines"
+        ],
+        "Captodiame,Dexbrompheniramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_16038"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4838,
+        "final_score": 0.4838
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Captodiame",
+          "type": "Compound"
+        },
+        {
+          "id": "Bromodiphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Captodiame",
+          "label": "resembles"
+        },
+        {
+          "source": "Captodiame",
+          "target": "Bromodiphenhydramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Bromodiphenhydramine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Captodiame": [
+          "Organic Aromatic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Carbinoxamine,Bromodiphenhydramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Organohalogen Compound"
+        ],
+        "Captodiame,Bromodiphenhydramine": [
+          "Organic Molecular Entity",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_16039"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4603,
+        "final_score": 0.4603
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mepyramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dexbrompheniramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Mepyramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Mepyramine",
+          "target": "Dexbrompheniramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dexbrompheniramine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Mepyramine": [
+          "Organic Aromatic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Carbinoxamine,Dexbrompheniramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Pyridines"
+        ],
+        "Mepyramine,Dexbrompheniramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_16040"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4297,
+        "final_score": 0.4297
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bepotastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dexbrompheniramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Bepotastine",
+          "label": "resembles"
+        },
+        {
+          "source": "Bepotastine",
+          "target": "Dexbrompheniramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dexbrompheniramine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Bepotastine": [
+          "Histamine-1 Receptor Antagonist",
+          "Pyridines"
+        ],
+        "Carbinoxamine,Dexbrompheniramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Pyridines"
+        ],
+        "Bepotastine,Dexbrompheniramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Pyridines"
+        ]
+      },
+      "id": "path_16041"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4234,
+        "final_score": 0.4234
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mepyramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tripelennamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Mepyramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Mepyramine",
+          "target": "Tripelennamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Tripelennamine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Mepyramine": [
+          "Organic Aromatic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Carbinoxamine,Tripelennamine": [
+          "Organic Aromatic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Mepyramine,Tripelennamine": [
+          "Organic Aromatic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_16042"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4163,
+        "final_score": 0.4163
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bepotastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fexofenadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Bepotastine",
+          "label": "resembles"
+        },
+        {
+          "source": "Bepotastine",
+          "target": "Fexofenadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Fexofenadine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Bepotastine": [
+          "Histamine-1 Receptor Antagonist",
+          "Pyridines"
+        ],
+        "Carbinoxamine,Fexofenadine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Bepotastine,Fexofenadine": [
+          "Piperidines",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_16043"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3132,
+        "final_score": 0.3132
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chlorcyclizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ifenprodil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Chlorcyclizine",
+          "label": "resembles"
+        },
+        {
+          "source": "Chlorcyclizine",
+          "target": "Ifenprodil",
+          "label": "resembles"
+        },
+        {
+          "source": "Ifenprodil",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Chlorcyclizine": [
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_16044"
     }
-  ],
-  "verbalization": ""
+  ]
 }

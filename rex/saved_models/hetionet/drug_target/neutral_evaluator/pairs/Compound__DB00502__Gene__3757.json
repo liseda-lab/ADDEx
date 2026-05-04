@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.552,
-        "final_score": 0.552
+        "ic_mean": 0.5784,
+        "final_score": 0.5784
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Sigmar1",
+          "id": "Hrh1",
           "type": "Gene"
         },
         {
-          "id": "Ifenprodil",
+          "id": "Dexbrompheniramine",
           "type": "Compound"
         },
         {
@@ -27,27 +27,80 @@
       "edges": [
         {
           "source": "Haloperidol",
-          "target": "Sigmar1",
+          "target": "Hrh1",
           "label": "binds"
         },
         {
-          "source": "Sigmar1",
-          "target": "Ifenprodil",
+          "source": "Hrh1",
+          "target": "Dexbrompheniramine",
           "label": "is bound by"
         },
         {
-          "source": "Ifenprodil",
+          "source": "Dexbrompheniramine",
           "target": "Kcnh2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Haloperidol,Ifenprodil": [
-          "Agent Affecting Nervous System"
+        "Haloperidol,Dexbrompheniramine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_8822"
+      "id": "path_4267"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4486,
+        "final_score": 0.4486
+      },
+      "nodes": [
+        {
+          "id": "Haloperidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Bepotastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dexbrompheniramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Haloperidol",
+          "target": "Bepotastine",
+          "label": "resembles"
+        },
+        {
+          "source": "Bepotastine",
+          "target": "Dexbrompheniramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dexbrompheniramine",
+          "target": "Kcnh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Haloperidol,Bepotastine": [
+          "Hydroxides"
+        ],
+        "Haloperidol,Dexbrompheniramine": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Bepotastine,Dexbrompheniramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Pyridines"
+        ]
+      },
+      "id": "path_4268"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01234 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5311,
+        "final_score": 0.5311
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Depigmentation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mometasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Skin Depigmentation",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Depigmentation",
+          "target": "Mometasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mometasone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Mometasone": [
+          "3-Oxo-Delta(1),Delta(4)-Steroid",
+          "Therapeutic Corticosteroid"
+        ]
+      },
+      "id": "path_7088"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4218,
+        "final_score": 0.4218
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Depigmentation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Skin Depigmentation",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Depigmentation",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Pazopanib": [
+          "Polycyclic Compound"
+        ]
+      },
+      "id": "path_7089"
+    }
+  ]
+}

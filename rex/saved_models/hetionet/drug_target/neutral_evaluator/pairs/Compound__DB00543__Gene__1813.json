@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6947,
-        "final_score": 0.6947
+        "ic_mean": 0.7525,
+        "final_score": 0.7525
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Htr7",
+          "id": "Hrh4",
           "type": "Gene"
         },
         {
-          "id": "Amisulpride",
-          "type": "Compound"
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Drd2",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Amoxapine",
-          "target": "Htr7",
+          "target": "Hrh4",
           "label": "binds"
         },
         {
-          "source": "Htr7",
-          "target": "Amisulpride",
-          "label": "is bound by"
+          "source": "Hrh4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Amisulpride",
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
           "target": "Drd2",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Amoxapine,Amisulpride": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_8812"
+      "id": "path_4255"
     },
     {
       "score": {
-        "ic_mean": 0.6698,
-        "final_score": 0.6698
+        "ic_mean": 0.6812,
+        "final_score": 0.6812
       },
       "nodes": [
         {
@@ -60,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Hrh4",
           "type": "Gene"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Promethazine",
           "type": "Compound"
         },
         {
@@ -75,27 +69,27 @@
       "edges": [
         {
           "source": "Amoxapine",
-          "target": "Htr6",
+          "target": "Hrh4",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
+          "source": "Hrh4",
+          "target": "Promethazine",
           "label": "is bound by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Promethazine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amoxapine,Mesoridazine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+        "Amoxapine,Promethazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_8813"
+      "id": "path_4256"
     },
     {
       "score": {
@@ -108,11 +102,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr7",
+          "id": "Hrh4",
           "type": "Gene"
         },
         {
-          "id": "Molindone",
+          "id": "Olanzapine",
           "type": "Compound"
         },
         {
@@ -123,27 +117,75 @@
       "edges": [
         {
           "source": "Amoxapine",
-          "target": "Htr7",
+          "target": "Hrh4",
           "label": "binds"
         },
         {
-          "source": "Htr7",
-          "target": "Molindone",
+          "source": "Hrh4",
+          "target": "Olanzapine",
           "label": "is bound by"
         },
         {
-          "source": "Molindone",
+          "source": "Olanzapine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amoxapine,Molindone": [
+        "Amoxapine,Olanzapine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_8814"
+      "id": "path_4257"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6184,
+        "final_score": 0.6184
+      },
+      "nodes": [
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxapine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "Chlorpromazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Chlorpromazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxapine,Chlorpromazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4258"
     },
     {
       "score": {
@@ -160,7 +202,7 @@
           "type": "Gene"
         },
         {
-          "id": "Pramipexole",
+          "id": "Cabergoline",
           "type": "Compound"
         },
         {
@@ -176,23 +218,214 @@
         },
         {
           "source": "Htr1b",
-          "target": "Pramipexole",
+          "target": "Cabergoline",
           "label": "is bound by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Cabergoline",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amoxapine,Pramipexole": [
-          "Organic Heteropolycyclic Compound",
-          "Antidepressant Agent"
+        "Amoxapine,Cabergoline": [
+          "Agent Affecting Nervous System",
+          "P-Block Molecular Entity"
         ]
       },
-      "id": "path_8815"
+      "id": "path_4259"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5751,
+        "final_score": 0.5751
+      },
+      "nodes": [
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxapine",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Trimipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxapine,Trimipramine": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_4260"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5751,
+        "final_score": 0.5751
+      },
+      "nodes": [
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxapine",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Trimipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxapine,Trimipramine": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_4261"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5501,
+        "final_score": 0.5501
+      },
+      "nodes": [
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Parotid Swelling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxapine",
+          "target": "Parotid Swelling",
+          "label": "causes"
+        },
+        {
+          "source": "Parotid Swelling",
+          "target": "Trimipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxapine,Trimipramine": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_4262"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5349,
+        "final_score": 0.5349
+      },
+      "nodes": [
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Appetite Exaggerated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxapine",
+          "target": "Appetite Exaggerated",
+          "label": "causes"
+        },
+        {
+          "source": "Appetite Exaggerated",
+          "target": "Doxepin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxapine,Doxepin": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_4263"
     }
-  ],
-  "verbalization": ""
+  ]
 }

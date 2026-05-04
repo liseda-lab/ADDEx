@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01033 - Gene::10257",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5461,
+        "final_score": 0.5461
+      },
+      "nodes": [
+        {
+          "id": "Mercaptopurine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytopenia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tioguanine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mercaptopurine",
+          "target": "Cytopenia",
+          "label": "causes"
+        },
+        {
+          "source": "Cytopenia",
+          "target": "Tioguanine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tioguanine",
+          "target": "Abcc4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mercaptopurine,Tioguanine": [
+          "Purines"
+        ]
+      },
+      "id": "path_11983"
+    }
+  ]
+}

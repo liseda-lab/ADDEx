@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00648 - Gene::866",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6096,
+        "final_score": 0.6096
+      },
+      "nodes": [
+        {
+          "id": "Mitotane",
+          "type": "Compound"
+        },
+        {
+          "id": "Secondary Adrenocortical Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Beclomethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Serpina6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mitotane",
+          "target": "Secondary Adrenocortical Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Secondary Adrenocortical Insufficiency",
+          "target": "Beclomethasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Beclomethasone",
+          "target": "Serpina6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mitotane,Beclomethasone": [
+          "Organic Cyclic Compound",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_15429"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5728,
+        "final_score": 0.5728
+      },
+      "nodes": [
+        {
+          "id": "Mitotane",
+          "type": "Compound"
+        },
+        {
+          "id": "Maculopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluocinolone Acetonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Serpina6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mitotane",
+          "target": "Maculopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Maculopathy",
+          "target": "Fluocinolone Acetonide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluocinolone Acetonide",
+          "target": "Serpina6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mitotane,Fluocinolone Acetonide": [
+          "Organic Cyclic Compound",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_15430"
+    }
+  ]
 }

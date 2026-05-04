@@ -3,102 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6131,
-        "final_score": 0.5757
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp51a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Itraconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp51a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp51a1",
-          "target": "Itraconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Itraconazole",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Itraconazole": [
-          "Conazole Antifungal Drug",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_3217"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5482,
-        "final_score": 0.5482
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Fluconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Fluconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Fluconazole",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Fluconazole": [
-          "Conazole Antifungal Drug",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_3218"
-    },
-    {
-      "score": {
         "ic_mean": 0.5317,
         "final_score": 0.5317
       },
@@ -142,12 +46,12 @@
           "Oxacycle"
         ]
       },
-      "id": "path_3219"
+      "id": "path_1545"
     },
     {
       "score": {
-        "ic_mean": 0.4913,
-        "final_score": 0.4913
+        "ic_mean": 0.4882,
+        "final_score": 0.4882
       },
       "nodes": [
         {
@@ -155,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cytochrome P450 3a5 Inhibitors",
-          "type": "Pharmacologic Class"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Boceprevir",
+          "id": "Gestodene",
           "type": "Compound"
         },
         {
@@ -170,28 +74,75 @@
       "edges": [
         {
           "source": "Ketoconazole",
-          "target": "Cytochrome P450 3a5 Inhibitors",
-          "label": "is included in"
+          "target": "Cyp3a7",
+          "label": "binds"
         },
         {
-          "source": "Cytochrome P450 3a5 Inhibitors",
-          "target": "Boceprevir",
-          "label": "includes"
+          "source": "Cyp3a7",
+          "target": "Gestodene",
+          "label": "is bound by"
         },
         {
-          "source": "Boceprevir",
+          "source": "Gestodene",
           "target": "Cyp3a5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ketoconazole,Boceprevir": [
-          "Organic Amino Compound",
+        "Ketoconazole,Gestodene": [
+          "Organic Cyclic Compound",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_1546"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4503,
+        "final_score": 0.4503
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Nelfinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Slco1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1a2",
+          "target": "Nelfinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nelfinavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Nelfinavir": [
+          "Organic Heterocyclic Compound",
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_3220"
+      "id": "path_1547"
     }
-  ],
-  "verbalization": ""
+  ]
 }

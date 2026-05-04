@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6967,
-        "final_score": 0.6967
+        "ic_mean": 0.6762,
+        "final_score": 0.6762
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Ca3",
+          "id": "Ca7",
           "type": "Gene"
         },
         {
-          "id": "Acetazolamide",
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ca14",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imatinib",
+          "target": "Ca7",
+          "label": "binds"
+        },
+        {
+          "source": "Ca7",
+          "target": "Carbonate Dehydratase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carbonate Dehydratase Activity",
+          "target": "Ca14",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15256"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6619,
+        "final_score": 0.6619
+      },
+      "nodes": [
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenamide",
           "type": "Compound"
         },
         {
@@ -27,32 +69,31 @@
       "edges": [
         {
           "source": "Imatinib",
-          "target": "Ca3",
+          "target": "Ca7",
           "label": "binds"
         },
         {
-          "source": "Ca3",
-          "target": "Acetazolamide",
+          "source": "Ca7",
+          "target": "Diclofenamide",
           "label": "is bound by"
         },
         {
-          "source": "Acetazolamide",
+          "source": "Diclofenamide",
           "target": "Ca14",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Imatinib,Acetazolamide": [
-          "Organic Heteromonocyclic Compound",
-          "Enzyme Inhibitor"
+        "Imatinib,Diclofenamide": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_29594"
+      "id": "path_15257"
     },
     {
       "score": {
-        "ic_mean": 0.6038,
-        "final_score": 0.6038
+        "ic_mean": 0.6506,
+        "final_score": 0.6506
       },
       "nodes": [
         {
@@ -60,12 +101,12 @@
           "type": "Compound"
         },
         {
-          "id": "Renal Cancer",
-          "type": "Side Effect"
+          "id": "Ca1",
+          "type": "Gene"
         },
         {
-          "id": "Zoledronate",
-          "type": "Compound"
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Ca14",
@@ -75,22 +116,21 @@
       "edges": [
         {
           "source": "Imatinib",
-          "target": "Renal Cancer",
-          "label": "causes"
-        },
-        {
-          "source": "Renal Cancer",
-          "target": "Zoledronate",
-          "label": "is caused by"
-        },
-        {
-          "source": "Zoledronate",
-          "target": "Ca14",
+          "target": "Ca1",
           "label": "binds"
+        },
+        {
+          "source": "Ca1",
+          "target": "Carbonate Dehydratase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carbonate Dehydratase Activity",
+          "target": "Ca14",
+          "label": "is participated by"
         }
       ],
-      "id": "path_29595"
+      "id": "path_15258"
     }
-  ],
-  "verbalization": ""
+  ]
 }

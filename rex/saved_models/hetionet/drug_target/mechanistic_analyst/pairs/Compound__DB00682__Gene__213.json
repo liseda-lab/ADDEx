@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00682 - Gene::213",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.874,
+        "final_score": 0.7703,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Vitamin K Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Phenprocoumon",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Vitamin K Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Vitamin K Inhibitors",
+          "target": "Phenprocoumon",
+          "label": "includes"
+        },
+        {
+          "source": "Phenprocoumon",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Phenprocoumon": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
+        ]
+      },
+      "id": "path_11252"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6168,
-        "final_score": 0.6168
+        "ic_mean": 0.6229,
+        "final_score": 0.6229
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Abdominal Disorder",
-          "type": "Side Effect"
+          "id": "Slc22a2",
+          "type": "Gene"
         },
         {
-          "id": "Maprotiline",
+          "id": "Dopamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc6a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Slc22a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a2",
+          "target": "Dopamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Dopamine Transmembrane Transporter Activity",
+          "target": "Slc6a3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6374"
+    },
+    {
+      "score": {
+        "ic_mean": 0.589,
+        "final_score": 0.589
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Atomoxetine",
           "type": "Compound"
         },
         {
@@ -27,28 +69,75 @@
       "edges": [
         {
           "source": "Imipramine",
-          "target": "Abdominal Disorder",
-          "label": "causes"
+          "target": "Htr6",
+          "label": "binds"
         },
         {
-          "source": "Abdominal Disorder",
-          "target": "Maprotiline",
-          "label": "is caused by"
+          "source": "Htr6",
+          "target": "Atomoxetine",
+          "label": "is bound by"
         },
         {
-          "source": "Maprotiline",
+          "source": "Atomoxetine",
           "target": "Slc6a3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Imipramine,Maprotiline": [
-          "Organic Tricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Imipramine,Atomoxetine": [
+          "Organic Cyclic Compound",
+          "Antidepressant Agent"
         ]
       },
-      "id": "path_12600"
+      "id": "path_6375"
+    },
+    {
+      "score": {
+        "ic_mean": 0.589,
+        "final_score": 0.589
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Mianserin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Slc6a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imipramine,Mianserin": [
+          "Dibenzoazepine",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_6376"
     }
-  ],
-  "verbalization": ""
+  ]
 }

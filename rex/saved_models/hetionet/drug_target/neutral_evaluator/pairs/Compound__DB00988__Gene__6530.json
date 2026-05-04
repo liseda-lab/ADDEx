@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6298,
-        "final_score": 0.6298
+        "ic_mean": 0.6704,
+        "final_score": 0.6704
       },
       "nodes": [
         {
@@ -12,11 +12,95 @@
           "type": "Compound"
         },
         {
-          "id": "Maob",
+          "id": "Slc22a1",
           "type": "Gene"
         },
         {
-          "id": "Phentermine",
+          "id": "Norepinephrine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Slc22a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a1",
+          "target": "Norepinephrine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Norepinephrine Transmembrane Transporter Activity",
+          "target": "Slc6a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7128"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6337,
+        "final_score": 0.6337
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        },
+        {
+          "id": "Monoamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Slc22a3",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a3",
+          "target": "Monoamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Monoamine Transmembrane Transporter Activity",
+          "target": "Slc6a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7129"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6306,
+        "final_score": 0.6306
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Droxidopa",
           "type": "Compound"
         },
         {
@@ -27,27 +111,221 @@
       "edges": [
         {
           "source": "Dopamine",
-          "target": "Maob",
-          "label": "binds"
+          "target": "Catecholamines",
+          "label": "is included in"
         },
         {
-          "source": "Maob",
-          "target": "Phentermine",
-          "label": "is bound by"
+          "source": "Catecholamines",
+          "target": "Droxidopa",
+          "label": "includes"
         },
         {
-          "source": "Phentermine",
+          "source": "Droxidopa",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dopamine,Phentermine": [
+        "Dopamine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Dopamine,Droxidopa": [
+          "Catechols"
+        ],
+        "Catecholamines,Droxidopa": [
+          "Catechols"
+        ]
+      },
+      "id": "path_7130"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6132,
+        "final_score": 0.6132
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Norepinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dopamine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Dopamine,Norepinephrine": [
+          "Catecholamine"
+        ],
+        "Catecholamines,Norepinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_7131"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6054,
+        "final_score": 0.6054
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Monoamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Slc22a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a2",
+          "target": "Monoamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Monoamine Transmembrane Transporter Activity",
+          "target": "Slc6a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7132"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5184,
+        "final_score": 0.5184
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Slc22a3",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a3",
+          "target": "Methamphetamine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dopamine,Methamphetamine": [
           "Organic Amino Compound"
         ]
       },
-      "id": "path_14224"
+      "id": "path_7133"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4517,
+        "final_score": 0.4517
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Trimipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dopamine,Trimipramine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_7134"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00233 - Gene::5743",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5452,
+        "final_score": 0.5452
+      },
+      "nodes": [
+        {
+          "id": "Aminosalicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Infectious Mononucleosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aminosalicylic Acid",
+          "target": "Infectious Mononucleosis",
+          "label": "causes"
+        },
+        {
+          "source": "Infectious Mononucleosis",
+          "target": "Dapsone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dapsone",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aminosalicylic Acid,Dapsone": [
+          "Anti-Infective Agent",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_6128"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4829,
+        "final_score": 0.4829
+      },
+      "nodes": [
+        {
+          "id": "Aminosalicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Salicylamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Salicylate-sodium",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aminosalicylic Acid",
+          "target": "Salicylamide",
+          "label": "resembles"
+        },
+        {
+          "source": "Salicylamide",
+          "target": "Salicylate-sodium",
+          "label": "resembles"
+        },
+        {
+          "source": "Salicylate-sodium",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aminosalicylic Acid,Salicylamide": [
+          "Organonitrogen Compound"
+        ],
+        "Aminosalicylic Acid,Salicylate-sodium": [
+          "Organic Molecular Entity"
+        ],
+        "Salicylamide,Salicylate-sodium": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_6129"
+    }
+  ]
+}

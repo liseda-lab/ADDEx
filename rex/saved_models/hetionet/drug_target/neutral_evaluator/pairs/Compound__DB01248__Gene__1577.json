@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4185,
-        "final_score": 0.4185
+        "ic_mean": 0.4444,
+        "final_score": 0.4444
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cancer Pain",
+          "id": "Liver Function Test Normal",
           "type": "Side Effect"
         },
         {
-          "id": "Fentanyl",
+          "id": "Valproic Acid",
           "type": "Compound"
         },
         {
@@ -27,27 +27,73 @@
       "edges": [
         {
           "source": "Docetaxel",
-          "target": "Cancer Pain",
+          "target": "Liver Function Test Normal",
           "label": "causes"
         },
         {
-          "source": "Cancer Pain",
-          "target": "Fentanyl",
+          "source": "Liver Function Test Normal",
+          "target": "Valproic Acid",
           "label": "is caused by"
         },
         {
-          "source": "Fentanyl",
+          "source": "Valproic Acid",
           "target": "Cyp3a5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Docetaxel,Fentanyl": [
-          "Organooxygen Compound"
+        "Docetaxel,Valproic Acid": [
+          "Hydroxides"
         ]
       },
-      "id": "path_18634"
+      "id": "path_9396"
+    },
+    {
+      "score": {
+        "ic_mean": 0.433,
+        "final_score": 0.433
+      },
+      "nodes": [
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Metastatic Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Docetaxel",
+          "target": "Metastatic Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Metastatic Disease",
+          "target": "Lapatinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lapatinib",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Docetaxel,Lapatinib": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_9397"
     }
-  ],
-  "verbalization": ""
+  ]
 }

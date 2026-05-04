@@ -1,6 +1,100 @@
 {
   "id": "Compound::DB00818 - Gene::1571",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4329,
+        "final_score": 0.4329
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Respiratory Acidosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Respiratory Acidosis",
+          "label": "causes"
+        },
+        {
+          "source": "Respiratory Acidosis",
+          "target": "Dexmedetomidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Dexmedetomidine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6275"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4203,
+        "final_score": 0.4203
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Effect Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Drug Effect Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Effect Increased",
+          "target": "Sildenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sildenafil",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Sildenafil": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6276"
+    }
+  ]
 }

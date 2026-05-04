@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00656 - Gene::5004",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5944,
+        "final_score": 0.4639,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Trazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Orm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trazodone",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Amoxapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amoxapine",
+          "target": "Orm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trazodone,Amoxapine": [
+          "Antidepressant Agent",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_6294"
+    }
+  ]
+}

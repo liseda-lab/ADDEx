@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6856,
-        "final_score": 0.6856
+        "ic_mean": 0.5555,
+        "final_score": 0.5555
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a11",
-          "type": "Gene"
+          "id": "Cefapirin",
+          "type": "Compound"
         },
         {
-          "id": "Cefoperazone",
+          "id": "Cefpiramide",
           "type": "Compound"
         },
         {
@@ -27,28 +27,91 @@
       "edges": [
         {
           "source": "Cefazolin",
-          "target": "Slc22a11",
-          "label": "binds"
+          "target": "Cefapirin",
+          "label": "resembles"
         },
         {
-          "source": "Slc22a11",
-          "target": "Cefoperazone",
-          "label": "is bound by"
+          "source": "Cefapirin",
+          "target": "Cefpiramide",
+          "label": "resembles"
         },
         {
-          "source": "Cefoperazone",
+          "source": "Cefpiramide",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cefazolin,Cefoperazone": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin"
+        "Cefazolin,Cefapirin": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cefazolin,Cefpiramide": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cefapirin,Cefpiramide": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
         ]
       },
-      "id": "path_25785"
+      "id": "path_13081"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5362,
+        "final_score": 0.5362
+      },
+      "nodes": [
+        {
+          "id": "Cefazolin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cefmenoxime",
+          "type": "Compound"
+        },
+        {
+          "id": "Cefpiramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cefazolin",
+          "target": "Cefmenoxime",
+          "label": "resembles"
+        },
+        {
+          "source": "Cefmenoxime",
+          "target": "Cefpiramide",
+          "label": "resembles"
+        },
+        {
+          "source": "Cefpiramide",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cefazolin,Cefmenoxime": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cefazolin,Cefpiramide": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cefmenoxime,Cefpiramide": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ]
+      },
+      "id": "path_13082"
     }
-  ],
-  "verbalization": ""
+  ]
 }

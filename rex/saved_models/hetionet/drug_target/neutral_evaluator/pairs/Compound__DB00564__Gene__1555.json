@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5942,
-        "final_score": 0.5942
-      },
-      "nodes": [
-        {
-          "id": "Carbamazepine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 1a2 Inducers",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Carbamazepine",
-          "target": "Cytochrome P450 1a2 Inducers",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 1a2 Inducers",
-          "target": "Phenytoin",
-          "label": "includes"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Carbamazepine,Phenytoin": [
-          "Anticonvulsant Agent",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_26977"
-    },
-    {
-      "score": {
         "ic_mean": 0.5785,
         "final_score": 0.5785
       },
@@ -94,54 +46,7 @@
           "Organic Heterotricyclic Compound"
         ]
       },
-      "id": "path_26978"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5754,
-        "final_score": 0.5754
-      },
-      "nodes": [
-        {
-          "id": "Carbamazepine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn4a",
-          "type": "Gene"
-        },
-        {
-          "id": "Mexiletine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Carbamazepine",
-          "target": "Scn4a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn4a",
-          "target": "Mexiletine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mexiletine",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Carbamazepine,Mexiletine": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_26979"
+      "id": "path_13771"
     },
     {
       "score": {
@@ -188,12 +93,12 @@
           "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_26980"
+      "id": "path_13772"
     },
     {
       "score": {
-        "ic_mean": 0.5027,
-        "final_score": 0.5027
+        "ic_mean": 0.5085,
+        "final_score": 0.5085
       },
       "nodes": [
         {
@@ -201,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn4a",
-          "type": "Gene"
+          "id": "Cytochrome P450 2c9 Inducers",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Phenytoin",
+          "id": "Enzalutamide",
           "type": "Compound"
         },
         {
@@ -216,32 +121,31 @@
       "edges": [
         {
           "source": "Carbamazepine",
-          "target": "Scn4a",
-          "label": "binds"
+          "target": "Cytochrome P450 2c9 Inducers",
+          "label": "is included in"
         },
         {
-          "source": "Scn4a",
-          "target": "Phenytoin",
-          "label": "is bound by"
+          "source": "Cytochrome P450 2c9 Inducers",
+          "target": "Enzalutamide",
+          "label": "includes"
         },
         {
-          "source": "Phenytoin",
+          "source": "Enzalutamide",
           "target": "Cyp2b6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Carbamazepine,Phenytoin": [
-          "Anticonvulsant Agent",
+        "Carbamazepine,Enzalutamide": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_26981"
+      "id": "path_13773"
     },
     {
       "score": {
-        "ic_mean": 0.5027,
-        "final_score": 0.5027
+        "ic_mean": 0.4956,
+        "final_score": 0.4956
       },
       "nodes": [
         {
@@ -249,11 +153,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn4a",
-          "type": "Gene"
+          "id": "Enzyme Induction",
+          "type": "Side Effect"
         },
         {
-          "id": "Orphenadrine",
+          "id": "Efavirenz",
           "type": "Compound"
         },
         {
@@ -264,27 +168,73 @@
       "edges": [
         {
           "source": "Carbamazepine",
-          "target": "Scn4a",
-          "label": "binds"
+          "target": "Enzyme Induction",
+          "label": "causes"
         },
         {
-          "source": "Scn4a",
-          "target": "Orphenadrine",
-          "label": "is bound by"
+          "source": "Enzyme Induction",
+          "target": "Efavirenz",
+          "label": "is caused by"
         },
         {
-          "source": "Orphenadrine",
+          "source": "Efavirenz",
           "target": "Cyp2b6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Carbamazepine,Orphenadrine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Carbamazepine,Efavirenz": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_26982"
+      "id": "path_13774"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4669,
+        "final_score": 0.4669
+      },
+      "nodes": [
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c19 Inducers",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Enzalutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbamazepine",
+          "target": "Cytochrome P450 2c19 Inducers",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c19 Inducers",
+          "target": "Enzalutamide",
+          "label": "includes"
+        },
+        {
+          "source": "Enzalutamide",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbamazepine,Enzalutamide": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13775"
     },
     {
       "score": {
@@ -331,12 +281,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_26983"
+      "id": "path_13776"
     },
     {
       "score": {
-        "ic_mean": 0.4352,
-        "final_score": 0.4352
+        "ic_mean": 0.3665,
+        "final_score": 0.3665
       },
       "nodes": [
         {
@@ -344,11 +294,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cytochrome P450 2c9 Inducers",
+          "id": "Cytochrome P450 3a4 Inducers",
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Phenytoin",
+          "id": "Enzalutamide",
           "type": "Compound"
         },
         {
@@ -359,124 +309,26 @@
       "edges": [
         {
           "source": "Carbamazepine",
-          "target": "Cytochrome P450 2c9 Inducers",
+          "target": "Cytochrome P450 3a4 Inducers",
           "label": "is included in"
         },
         {
-          "source": "Cytochrome P450 2c9 Inducers",
-          "target": "Phenytoin",
+          "source": "Cytochrome P450 3a4 Inducers",
+          "target": "Enzalutamide",
           "label": "includes"
         },
         {
-          "source": "Phenytoin",
+          "source": "Enzalutamide",
           "target": "Cyp2b6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Carbamazepine,Phenytoin": [
-          "Anticonvulsant Agent",
+        "Carbamazepine,Enzalutamide": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_26984"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4352,
-        "final_score": 0.4352
-      },
-      "nodes": [
-        {
-          "id": "Carbamazepine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 2b6 Inducers",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Carbamazepine",
-          "target": "Cytochrome P450 2b6 Inducers",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 2b6 Inducers",
-          "target": "Phenytoin",
-          "label": "includes"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Carbamazepine,Phenytoin": [
-          "Anticonvulsant Agent",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_26985"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3935,
-        "final_score": 0.3936
-      },
-      "nodes": [
-        {
-          "id": "Carbamazepine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 2c19 Inducers",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Carbamazepine",
-          "target": "Cytochrome P450 2c19 Inducers",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 2c19 Inducers",
-          "target": "Phenytoin",
-          "label": "includes"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Carbamazepine,Phenytoin": [
-          "Anticonvulsant Agent",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_26986"
+      "id": "path_13777"
     }
-  ],
-  "verbalization": ""
+  ]
 }

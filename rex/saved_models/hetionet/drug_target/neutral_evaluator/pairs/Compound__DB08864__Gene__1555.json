@@ -12,7 +12,7 @@
           "type": "Compound"
         },
         {
-          "id": "Non-nucleoside Analog",
+          "id": "Non-nucleoside Reverse Transcriptase Inhibitors",
           "type": "Pharmacologic Class"
         },
         {
@@ -27,11 +27,11 @@
       "edges": [
         {
           "source": "Rilpivirine",
-          "target": "Non-nucleoside Analog",
+          "target": "Non-nucleoside Reverse Transcriptase Inhibitors",
           "label": "is included in"
         },
         {
-          "source": "Non-nucleoside Analog",
+          "source": "Non-nucleoside Reverse Transcriptase Inhibitors",
           "target": "Nevirapine",
           "label": "includes"
         },
@@ -47,7 +47,7 @@
           "Non-Nucleoside Reverse Transcriptase Inhibitor"
         ]
       },
-      "id": "path_1522"
+      "id": "path_747"
     },
     {
       "score": {
@@ -60,7 +60,7 @@
           "type": "Compound"
         },
         {
-          "id": "Non-nucleoside Reverse Transcriptase Inhibitors",
+          "id": "Non-nucleoside Analog",
           "type": "Pharmacologic Class"
         },
         {
@@ -75,11 +75,11 @@
       "edges": [
         {
           "source": "Rilpivirine",
-          "target": "Non-nucleoside Reverse Transcriptase Inhibitors",
+          "target": "Non-nucleoside Analog",
           "label": "is included in"
         },
         {
-          "source": "Non-nucleoside Reverse Transcriptase Inhibitors",
+          "source": "Non-nucleoside Analog",
           "target": "Nevirapine",
           "label": "includes"
         },
@@ -95,7 +95,55 @@
           "Non-Nucleoside Reverse Transcriptase Inhibitor"
         ]
       },
-      "id": "path_1523"
+      "id": "path_748"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7878,
+        "final_score": 0.7878
+      },
+      "nodes": [
+        {
+          "id": "Rilpivirine",
+          "type": "Compound"
+        },
+        {
+          "id": "Non-nucleoside Reverse Transcriptase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rilpivirine",
+          "target": "Non-nucleoside Reverse Transcriptase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Non-nucleoside Reverse Transcriptase Inhibitors",
+          "target": "Efavirenz",
+          "label": "includes"
+        },
+        {
+          "source": "Efavirenz",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rilpivirine,Efavirenz": [
+          "Organonitrogen Heterocyclic Compound",
+          "Non-Nucleoside Reverse Transcriptase Inhibitor"
+        ]
+      },
+      "id": "path_749"
     },
     {
       "score": {
@@ -143,55 +191,7 @@
           "Non-Nucleoside Reverse Transcriptase Inhibitor"
         ]
       },
-      "id": "path_1524"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7878,
-        "final_score": 0.7878
-      },
-      "nodes": [
-        {
-          "id": "Rilpivirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Non-nucleoside Reverse Transcriptase Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Efavirenz",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rilpivirine",
-          "target": "Non-nucleoside Reverse Transcriptase Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Non-nucleoside Reverse Transcriptase Inhibitors",
-          "target": "Efavirenz",
-          "label": "includes"
-        },
-        {
-          "source": "Efavirenz",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rilpivirine,Efavirenz": [
-          "Organonitrogen Heterocyclic Compound",
-          "Non-Nucleoside Reverse Transcriptase Inhibitor"
-        ]
-      },
-      "id": "path_1525"
+      "id": "path_750"
     },
     {
       "score": {
@@ -238,12 +238,12 @@
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_1526"
+      "id": "path_751"
     },
     {
       "score": {
-        "ic_mean": 0.4896,
-        "final_score": 0.4896
+        "ic_mean": 0.4736,
+        "final_score": 0.4736
       },
       "nodes": [
         {
@@ -251,11 +251,11 @@
           "type": "Compound"
         },
         {
-          "id": "High Cholesterol",
+          "id": "Glomerulonephritis",
           "type": "Side Effect"
         },
         {
-          "id": "Efavirenz",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -266,28 +266,26 @@
       "edges": [
         {
           "source": "Rilpivirine",
-          "target": "High Cholesterol",
+          "target": "Glomerulonephritis",
           "label": "causes"
         },
         {
-          "source": "High Cholesterol",
-          "target": "Efavirenz",
+          "source": "Glomerulonephritis",
+          "target": "Clopidogrel",
           "label": "is caused by"
         },
         {
-          "source": "Efavirenz",
+          "source": "Clopidogrel",
           "target": "Cyp2b6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rilpivirine,Efavirenz": [
-          "Organonitrogen Heterocyclic Compound",
-          "Non-Nucleoside Reverse Transcriptase Inhibitor"
+        "Rilpivirine,Clopidogrel": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_1527"
+      "id": "path_752"
     }
-  ],
-  "verbalization": ""
+  ]
 }

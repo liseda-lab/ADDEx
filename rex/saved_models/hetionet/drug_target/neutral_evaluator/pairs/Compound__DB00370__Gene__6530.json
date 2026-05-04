@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4625,
-        "final_score": 0.4625
+        "ic_mean": 0.5612,
+        "final_score": 0.5612
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Orthostatic Hypertension",
-          "type": "Side Effect"
+          "id": "Htr3a",
+          "type": "Gene"
         },
         {
-          "id": "Duloxetine",
+          "id": "Trimipramine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,74 @@
       "edges": [
         {
           "source": "Mirtazapine",
-          "target": "Orthostatic Hypertension",
-          "label": "causes"
+          "target": "Htr3a",
+          "label": "binds"
         },
         {
-          "source": "Orthostatic Hypertension",
-          "target": "Duloxetine",
-          "label": "is caused by"
+          "source": "Htr3a",
+          "target": "Trimipramine",
+          "label": "is bound by"
         },
         {
-          "source": "Duloxetine",
+          "source": "Trimipramine",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mirtazapine,Duloxetine": [
-          "Organic Heterocyclic Compound",
+        "Mirtazapine,Trimipramine": [
+          "Organic Heteropolycyclic Compound",
           "Antidepressant Agent"
         ]
       },
-      "id": "path_16463"
+      "id": "path_8230"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5,
+        "final_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Norepinephrine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Norepinephrine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_8231"
     }
-  ],
-  "verbalization": ""
+  ]
 }

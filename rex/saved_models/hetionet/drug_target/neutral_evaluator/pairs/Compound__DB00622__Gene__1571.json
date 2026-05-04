@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5723,
-        "final_score": 0.5723
+        "ic_mean": 0.606,
+        "final_score": 0.606
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna2d1",
-          "type": "Gene"
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Nilvadipine",
+          "id": "Clevidipine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,38 @@
       "edges": [
         {
           "source": "Nicardipine",
-          "target": "Cacna2d1",
-          "label": "binds"
+          "target": "Dihydropyridines",
+          "label": "is included in"
         },
         {
-          "source": "Cacna2d1",
-          "target": "Nilvadipine",
-          "label": "is bound by"
+          "source": "Dihydropyridines",
+          "target": "Clevidipine",
+          "label": "includes"
         },
         {
-          "source": "Nilvadipine",
+          "source": "Clevidipine",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nicardipine,Nilvadipine": [
-          "Calcium Channel Blocker",
+        "Nicardipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nicardipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Clevidipine": [
           "Dihydropyridine"
         ]
       },
-      "id": "path_26475"
+      "id": "path_13489"
     },
     {
       "score": {
-        "ic_mean": 0.5723,
-        "final_score": 0.5723
+        "ic_mean": 0.5473,
+        "final_score": 0.5473
       },
       "nodes": [
         {
@@ -60,11 +66,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
-          "type": "Gene"
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Brompheniramine",
+          "id": "Clevidipine",
           "type": "Compound"
         },
         {
@@ -75,27 +81,75 @@
       "edges": [
         {
           "source": "Nicardipine",
-          "target": "Chrm4",
-          "label": "binds"
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
         },
         {
-          "source": "Chrm4",
-          "target": "Brompheniramine",
-          "label": "is bound by"
+          "source": "Calcium Channel Antagonists",
+          "target": "Clevidipine",
+          "label": "includes"
         },
         {
-          "source": "Brompheniramine",
+          "source": "Clevidipine",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nicardipine,Brompheniramine": [
-          "Pyridines"
+        "Nicardipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
         ]
       },
-      "id": "path_26476"
+      "id": "path_13490"
+    },
+    {
+      "score": {
+        "ic_mean": 0.509,
+        "final_score": 0.509
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxygen Saturation Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Oxygen Saturation Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Oxygen Saturation Decreased",
+          "target": "Clevidipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicardipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_13491"
     }
-  ],
-  "verbalization": ""
+  ]
 }

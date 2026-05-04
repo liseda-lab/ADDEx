@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.8516,
-        "final_score": 0.8516
+        "ic_mean": 0.7191,
+        "final_score": 0.7191
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Vitamin K Inhibitors",
-          "type": "Pharmacologic Class"
+          "id": "Cyp2c8",
+          "type": "Gene"
         },
         {
-          "id": "Phenprocoumon",
-          "type": "Compound"
+          "id": "Caffeine Oxidase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2c9",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Warfarin",
-          "target": "Vitamin K Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Vitamin K Inhibitors",
-          "target": "Phenprocoumon",
-          "label": "includes"
-        },
-        {
-          "source": "Phenprocoumon",
-          "target": "Cyp2c9",
+          "target": "Cyp2c8",
           "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Caffeine Oxidase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Caffeine Oxidase Activity",
+          "target": "Cyp2c9",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Warfarin,Phenprocoumon": [
-          "Anticoagulant Agent",
-          "Hydroxycoumarin"
-        ]
-      },
-      "id": "path_20259"
+      "id": "path_10221"
     },
     {
       "score": {
-        "ic_mean": 0.7445,
-        "final_score": 0.7445
+        "ic_mean": 0.6491,
+        "final_score": 0.6491
       },
       "nodes": [
         {
@@ -60,11 +54,53 @@
           "type": "Compound"
         },
         {
-          "id": "Vkorc1",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Dicoumarol",
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10222"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5439,
+        "final_score": 0.5439
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Fenofibrate",
           "type": "Compound"
         },
         {
@@ -75,32 +111,31 @@
       "edges": [
         {
           "source": "Warfarin",
-          "target": "Vkorc1",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Vkorc1",
-          "target": "Dicoumarol",
+          "source": "Cyp2c8",
+          "target": "Fenofibrate",
           "label": "is bound by"
         },
         {
-          "source": "Dicoumarol",
+          "source": "Fenofibrate",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Warfarin,Dicoumarol": [
-          "Coumarin Compound",
-          "Hydroxycoumarin"
+        "Warfarin,Fenofibrate": [
+          "Ketone"
         ]
       },
-      "id": "path_20260"
+      "id": "path_10223"
     },
     {
       "score": {
-        "ic_mean": 0.6553,
-        "final_score": 0.6553
+        "ic_mean": 0.5439,
+        "final_score": 0.5439
       },
       "nodes": [
         {
@@ -108,7 +143,7 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
@@ -123,11 +158,11 @@
       "edges": [
         {
           "source": "Warfarin",
-          "target": "Cyp2c18",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
+          "source": "Cyp2c8",
           "target": "Troleandomycin",
           "label": "is bound by"
         },
@@ -142,12 +177,12 @@
           "Oxacycle"
         ]
       },
-      "id": "path_20261"
+      "id": "path_10224"
     },
     {
       "score": {
-        "ic_mean": 0.604,
-        "final_score": 0.604
+        "ic_mean": 0.5264,
+        "final_score": 0.5264
       },
       "nodes": [
         {
@@ -155,7 +190,54 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Delavirdine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Delavirdine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Delavirdine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Delavirdine": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_10225"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4926,
+        "final_score": 0.4926
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
@@ -170,11 +252,11 @@
       "edges": [
         {
           "source": "Warfarin",
-          "target": "Cyp2c18",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
+          "source": "Cyp2c8",
           "target": "Ifosfamide",
           "label": "is bound by"
         },
@@ -189,12 +271,12 @@
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_20262"
+      "id": "path_10226"
     },
     {
       "score": {
-        "ic_mean": 0.604,
-        "final_score": 0.604
+        "ic_mean": 0.4926,
+        "final_score": 0.4926
       },
       "nodes": [
         {
@@ -202,11 +284,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Aminophenazone",
+          "id": "Ticlopidine",
           "type": "Compound"
         },
         {
@@ -217,31 +299,32 @@
       "edges": [
         {
           "source": "Warfarin",
-          "target": "Cyp2c18",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Aminophenazone",
+          "source": "Cyp2c8",
+          "target": "Ticlopidine",
           "label": "is bound by"
         },
         {
-          "source": "Aminophenazone",
+          "source": "Ticlopidine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Warfarin,Aminophenazone": [
-          "Organic Heterocyclic Compound"
+        "Warfarin,Ticlopidine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Blood Or Body Fluid"
         ]
       },
-      "id": "path_20263"
+      "id": "path_10227"
     },
     {
       "score": {
-        "ic_mean": 0.5739,
-        "final_score": 0.5739
+        "ic_mean": 0.4653,
+        "final_score": 0.4653
       },
       "nodes": [
         {
@@ -249,11 +332,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Cyp1a1",
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Fluvastatin",
           "type": "Compound"
         },
         {
@@ -264,496 +347,26 @@
       "edges": [
         {
           "source": "Warfarin",
-          "target": "Cyp2c18",
+          "target": "Cyp1a1",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Antipyrine",
+          "source": "Cyp1a1",
+          "target": "Fluvastatin",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Fluvastatin",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Warfarin,Antipyrine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_20264"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5526,
-        "final_score": 0.5526
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Methadone": [
-          "Racemate"
-        ]
-      },
-      "id": "path_20265"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5526,
-        "final_score": 0.5526
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Cyclophosphamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Cyclophosphamide": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_20266"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5526,
-        "final_score": 0.5526
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Omeprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Omeprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Omeprazole",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Omeprazole": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_20267"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5361,
-        "final_score": 0.5361
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Diphenhydramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Diphenhydramine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diphenhydramine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Diphenhydramine": [
+        "Warfarin,Fluvastatin": [
           "Organooxygen Compound"
         ]
       },
-      "id": "path_20268"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5361,
-        "final_score": 0.5361
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Dapsone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Dapsone": [
-          "Benzenes"
-        ]
-      },
-      "id": "path_20269"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5361,
-        "final_score": 0.5361
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Tolbutamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Tolbutamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tolbutamide",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Tolbutamide": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_20270"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5226,
-        "final_score": 0.5226
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Lidocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Lidocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lidocaine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Lidocaine": [
-          "Benzenes"
-        ]
-      },
-      "id": "path_20271"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5112,
-        "final_score": 0.5112
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Lansoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Lansoprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lansoprazole",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Lansoprazole": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_20272"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5013,
-        "final_score": 0.5013
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Phenytoin": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_20273"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4777,
-        "final_score": 0.4777
-      },
-      "nodes": [
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Tretinoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Tretinoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tretinoin",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Warfarin,Tretinoin": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_20274"
+      "id": "path_10228"
     },
     {
       "score": {
@@ -770,7 +383,7 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Pioglitazone",
           "type": "Compound"
         },
         {
@@ -786,21 +399,21 @@
         },
         {
           "source": "Cyp2c8",
-          "target": "Antipyrine",
+          "target": "Pioglitazone",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Pioglitazone",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Warfarin,Antipyrine": [
+        "Warfarin,Pioglitazone": [
           "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_20275"
+      "id": "path_10229"
     },
     {
       "score": {
@@ -817,7 +430,7 @@
           "type": "Gene"
         },
         {
-          "id": "Rifapentine",
+          "id": "Perphenazine",
           "type": "Compound"
         },
         {
@@ -833,22 +446,225 @@
         },
         {
           "source": "Cyp2c8",
-          "target": "Rifapentine",
+          "target": "Perphenazine",
           "label": "is bound by"
         },
         {
-          "source": "Rifapentine",
+          "source": "Perphenazine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Warfarin,Rifapentine": [
+        "Warfarin,Perphenazine": [
           "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_20276"
+      "id": "path_10230"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4112,
+        "final_score": 0.4112
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Lidocaine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Lidocaine": [
+          "Benzenes"
+        ]
+      },
+      "id": "path_10231"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4112,
+        "final_score": 0.4112
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Rifampicin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Rifampicin": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_10232"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3371,
+        "final_score": 0.3371
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenprocoumon",
+          "type": "Compound"
+        },
+        {
+          "id": "Dicoumarol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Phenprocoumon",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenprocoumon",
+          "target": "Dicoumarol",
+          "label": "resembles"
+        },
+        {
+          "source": "Dicoumarol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Phenprocoumon": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
+        ],
+        "Warfarin,Dicoumarol": [
+          "Coumarin Compound",
+          "Hydroxycoumarin"
+        ],
+        "Phenprocoumon,Dicoumarol": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
+        ]
+      },
+      "id": "path_10233"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2327,
+        "final_score": 0.2327
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenprocoumon",
+          "type": "Compound"
+        },
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Phenprocoumon",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenprocoumon",
+          "target": "Ketoprofen",
+          "label": "resembles"
+        },
+        {
+          "source": "Ketoprofen",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Phenprocoumon": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
+        ],
+        "Warfarin,Ketoprofen": [
+          "Ketone"
+        ],
+        "Phenprocoumon,Ketoprofen": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_10234"
     }
-  ],
-  "verbalization": ""
+  ]
 }

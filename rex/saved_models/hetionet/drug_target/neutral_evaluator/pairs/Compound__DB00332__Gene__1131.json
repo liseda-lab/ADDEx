@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7018,
-        "final_score": 0.7018
+        "ic_mean": 0.7123,
+        "final_score": 0.7123
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Chrm3",
@@ -32,21 +32,105 @@
         },
         {
           "source": "Chrm5",
-          "target": "Methylscopolamine Bromide",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
+          "target": "Chrm3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2701"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6838,
+        "final_score": 0.6838
+      },
+      "nodes": [
+        {
+          "id": "Ipratropium Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ipratropium Bromide",
+          "target": "Chrm5",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm5",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Chrm3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2702"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6505,
+        "final_score": 0.6505
+      },
+      "nodes": [
+        {
+          "id": "Ipratropium Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxyphenonium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ipratropium Bromide",
+          "target": "Chrm1",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm1",
+          "target": "Oxyphenonium",
           "label": "is bound by"
         },
         {
-          "source": "Methylscopolamine Bromide",
+          "source": "Oxyphenonium",
           "target": "Chrm3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ipratropium Bromide,Methylscopolamine Bromide": [
-          "Bromide Salt"
+        "Ipratropium Bromide,Oxyphenonium": [
+          "Antimuscarinic Agent"
         ]
       },
-      "id": "path_5836"
+      "id": "path_2703"
     },
     {
       "score": {
@@ -90,11 +174,11 @@
       ],
       "lowest_common_ancestors": {
         "Ipratropium Bromide,Homatropine Methylbromide": [
-          "Organic Bromide Salt",
-          "Antimuscarinic Agent"
+          "Antimuscarinic Agent",
+          "Organic Bromide Salt"
         ]
       },
-      "id": "path_5837"
+      "id": "path_2704"
     },
     {
       "score": {
@@ -107,11 +191,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm5",
+          "id": "Chrm1",
           "type": "Gene"
         },
         {
-          "id": "Solifenacin",
+          "id": "Dicyclomine",
           "type": "Compound"
         },
         {
@@ -122,27 +206,27 @@
       "edges": [
         {
           "source": "Ipratropium Bromide",
-          "target": "Chrm5",
+          "target": "Chrm1",
           "label": "binds"
         },
         {
-          "source": "Chrm5",
-          "target": "Solifenacin",
+          "source": "Chrm1",
+          "target": "Dicyclomine",
           "label": "is bound by"
         },
         {
-          "source": "Solifenacin",
+          "source": "Dicyclomine",
           "target": "Chrm3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ipratropium Bromide,Solifenacin": [
+        "Ipratropium Bromide,Dicyclomine": [
           "Antimuscarinic Agent",
           "P-Block Molecular Entity"
         ]
       },
-      "id": "path_5838"
+      "id": "path_2705"
     },
     {
       "score": {
@@ -155,11 +239,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm5",
+          "id": "Chrm1",
           "type": "Gene"
         },
         {
-          "id": "Tolterodine",
+          "id": "Clidinium",
           "type": "Compound"
         },
         {
@@ -170,27 +254,27 @@
       "edges": [
         {
           "source": "Ipratropium Bromide",
-          "target": "Chrm5",
+          "target": "Chrm1",
           "label": "binds"
         },
         {
-          "source": "Chrm5",
-          "target": "Tolterodine",
+          "source": "Chrm1",
+          "target": "Clidinium",
           "label": "is bound by"
         },
         {
-          "source": "Tolterodine",
+          "source": "Clidinium",
           "target": "Chrm3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ipratropium Bromide,Tolterodine": [
+        "Ipratropium Bromide,Clidinium": [
           "Antimuscarinic Agent",
           "P-Block Molecular Entity"
         ]
       },
-      "id": "path_5839"
+      "id": "path_2706"
     },
     {
       "score": {
@@ -238,150 +322,7 @@
           "P-Block Molecular Entity"
         ]
       },
-      "id": "path_5840"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6204,
-        "final_score": 0.6204
-      },
-      "nodes": [
-        {
-          "id": "Ipratropium Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Metixene",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ipratropium Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Metixene",
-          "label": "is bound by"
-        },
-        {
-          "source": "Metixene",
-          "target": "Chrm3",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ipratropium Bromide,Metixene": [
-          "P-Block Molecular Entity"
-        ]
-      },
-      "id": "path_5841"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6204,
-        "final_score": 0.6204
-      },
-      "nodes": [
-        {
-          "id": "Ipratropium Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxybutynin",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ipratropium Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Oxybutynin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxybutynin",
-          "target": "Chrm3",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ipratropium Bromide,Oxybutynin": [
-          "Antimuscarinic Agent",
-          "P-Block Molecular Entity"
-        ]
-      },
-      "id": "path_5842"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6204,
-        "final_score": 0.6204
-      },
-      "nodes": [
-        {
-          "id": "Ipratropium Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ipratropium Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Scopolamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Scopolamine",
-          "target": "Chrm3",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ipratropium Bromide,Scopolamine": [
-          "Antimuscarinic Agent",
-          "P-Block Molecular Entity"
-        ]
-      },
-      "id": "path_5843"
+      "id": "path_2707"
     },
     {
       "score": {
@@ -398,7 +339,7 @@
           "type": "Gene"
         },
         {
-          "id": "Trihexyphenidyl",
+          "id": "Carbachol",
           "type": "Compound"
         },
         {
@@ -414,27 +355,74 @@
         },
         {
           "source": "Chrm1",
-          "target": "Trihexyphenidyl",
+          "target": "Carbachol",
           "label": "is bound by"
         },
         {
-          "source": "Trihexyphenidyl",
+          "source": "Carbachol",
           "target": "Chrm3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ipratropium Bromide,Trihexyphenidyl": [
+        "Ipratropium Bromide,Carbachol": [
+          "P-Block Molecular Entity"
+        ]
+      },
+      "id": "path_2708"
+    },
+    {
+      "score": {
+        "ic_mean": 0.543,
+        "final_score": 0.543
+      },
+      "nodes": [
+        {
+          "id": "Ipratropium Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Angle-closure Glaucoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ipratropium Bromide",
+          "target": "Acute Angle-closure Glaucoma",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Angle-closure Glaucoma",
+          "target": "Hyoscyamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ipratropium Bromide,Hyoscyamine": [
           "Antimuscarinic Agent",
           "P-Block Molecular Entity"
         ]
       },
-      "id": "path_5844"
+      "id": "path_2709"
     },
     {
       "score": {
-        "ic_mean": 0.5566,
-        "final_score": 0.5566
+        "ic_mean": 0.543,
+        "final_score": 0.543
       },
       "nodes": [
         {
@@ -442,11 +430,11 @@
           "type": "Compound"
         },
         {
-          "id": "Acute Glaucoma",
+          "id": "Acute Angle-closure Glaucoma",
           "type": "Side Effect"
         },
         {
-          "id": "Tiotropium",
+          "id": "Atropine",
           "type": "Compound"
         },
         {
@@ -457,32 +445,32 @@
       "edges": [
         {
           "source": "Ipratropium Bromide",
-          "target": "Acute Glaucoma",
+          "target": "Acute Angle-closure Glaucoma",
           "label": "causes"
         },
         {
-          "source": "Acute Glaucoma",
-          "target": "Tiotropium",
+          "source": "Acute Angle-closure Glaucoma",
+          "target": "Atropine",
           "label": "is caused by"
         },
         {
-          "source": "Tiotropium",
+          "source": "Atropine",
           "target": "Chrm3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ipratropium Bromide,Tiotropium": [
+        "Ipratropium Bromide,Atropine": [
           "Antimuscarinic Agent",
           "P-Block Molecular Entity"
         ]
       },
-      "id": "path_5845"
+      "id": "path_2710"
     },
     {
       "score": {
-        "ic_mean": 0.4589,
-        "final_score": 0.4589
+        "ic_mean": 0.4885,
+        "final_score": 0.4885
       },
       "nodes": [
         {
@@ -490,11 +478,11 @@
           "type": "Compound"
         },
         {
-          "id": "Nasal Oedema",
-          "type": "Side Effect"
+          "id": "Cyclandelate",
+          "type": "Compound"
         },
         {
-          "id": "Tramadol",
+          "id": "Hyoscyamine",
           "type": "Compound"
         },
         {
@@ -505,76 +493,33 @@
       "edges": [
         {
           "source": "Ipratropium Bromide",
-          "target": "Nasal Oedema",
-          "label": "causes"
+          "target": "Cyclandelate",
+          "label": "resembles"
         },
         {
-          "source": "Nasal Oedema",
-          "target": "Tramadol",
-          "label": "is caused by"
+          "source": "Cyclandelate",
+          "target": "Hyoscyamine",
+          "label": "resembles"
         },
         {
-          "source": "Tramadol",
+          "source": "Hyoscyamine",
           "target": "Chrm3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ipratropium Bromide,Tramadol": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
+        "Ipratropium Bromide,Cyclandelate": [
+          "Heteroatomic Molecular Entity"
+        ],
+        "Ipratropium Bromide,Hyoscyamine": [
+          "Antimuscarinic Agent",
+          "P-Block Molecular Entity"
+        ],
+        "Cyclandelate,Hyoscyamine": [
+          "Carboxylic Ester"
         ]
       },
-      "id": "path_5846"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4494,
-        "final_score": 0.4494
-      },
-      "nodes": [
-        {
-          "id": "Ipratropium Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Prostatomegaly",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tramadol",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ipratropium Bromide",
-          "target": "Prostatomegaly",
-          "label": "causes"
-        },
-        {
-          "source": "Prostatomegaly",
-          "target": "Tramadol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tramadol",
-          "target": "Chrm3",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ipratropium Bromide,Tramadol": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_5847"
+      "id": "path_2711"
     }
-  ],
-  "verbalization": ""
+  ]
 }

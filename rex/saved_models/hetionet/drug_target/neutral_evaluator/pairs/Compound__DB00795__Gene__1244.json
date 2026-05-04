@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB00795 - Gene::1244",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5448,
+        "final_score": 0.5448
+      },
+      "nodes": [
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Gadoxetate",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfasalazine",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Gadoxetate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Gadoxetate",
+          "target": "Abcc2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_746"
+    }
+  ]
 }

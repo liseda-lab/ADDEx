@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5614,
-        "final_score": 0.5614
+        "ic_mean": 0.4864,
+        "final_score": 0.4864
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco2b1",
-          "type": "Gene"
+          "id": "Abnormalities Of The Hair",
+          "type": "Side Effect"
         },
         {
-          "id": "Montelukast",
+          "id": "Irbesartan",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Pravastatin",
-          "target": "Slco2b1",
-          "label": "binds"
+          "target": "Abnormalities Of The Hair",
+          "label": "causes"
         },
         {
-          "source": "Slco2b1",
-          "target": "Montelukast",
-          "label": "is bound by"
+          "source": "Abnormalities Of The Hair",
+          "target": "Irbesartan",
+          "label": "is caused by"
         },
         {
-          "source": "Montelukast",
+          "source": "Irbesartan",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pravastatin,Montelukast": [
-          "Monocarboxylic Acid Anion"
+        "Pravastatin,Irbesartan": [
+          "Carbocyclic Compound"
         ]
       },
-      "id": "path_16692"
+      "id": "path_8365"
     },
     {
       "score": {
-        "ic_mean": 0.5428,
-        "final_score": 0.5428
+        "ic_mean": 0.4478,
+        "final_score": 0.4478
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a11",
-          "type": "Gene"
+          "id": "Lung Infection",
+          "type": "Side Effect"
         },
         {
-          "id": "Piroxicam",
+          "id": "Enzalutamide",
           "type": "Compound"
         },
         {
@@ -74,32 +74,31 @@
       "edges": [
         {
           "source": "Pravastatin",
-          "target": "Slc22a11",
-          "label": "binds"
+          "target": "Lung Infection",
+          "label": "causes"
         },
         {
-          "source": "Slc22a11",
-          "target": "Piroxicam",
-          "label": "is bound by"
+          "source": "Lung Infection",
+          "target": "Enzalutamide",
+          "label": "is caused by"
         },
         {
-          "source": "Piroxicam",
+          "source": "Enzalutamide",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pravastatin,Piroxicam": [
-          "Enzyme Inhibitor",
-          "Organic Cyclic Compound"
+        "Pravastatin,Enzalutamide": [
+          "Carbocyclic Compound"
         ]
       },
-      "id": "path_16693"
+      "id": "path_8366"
     },
     {
       "score": {
-        "ic_mean": 0.5049,
-        "final_score": 0.5049
+        "ic_mean": 0.4401,
+        "final_score": 0.4401
       },
       "nodes": [
         {
@@ -107,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a11",
+          "id": "Slco1a2",
           "type": "Gene"
         },
         {
-          "id": "Ketoprofen",
+          "id": "Spironolactone",
           "type": "Compound"
         },
         {
@@ -122,409 +121,73 @@
       "edges": [
         {
           "source": "Pravastatin",
-          "target": "Slc22a11",
+          "target": "Slco1a2",
           "label": "binds"
         },
         {
-          "source": "Slc22a11",
-          "target": "Ketoprofen",
+          "source": "Slco1a2",
+          "target": "Spironolactone",
           "label": "is bound by"
         },
         {
-          "source": "Ketoprofen",
+          "source": "Spironolactone",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pravastatin,Ketoprofen": [
+        "Pravastatin,Spironolactone": [
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_8367"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4401,
+        "final_score": 0.4401
+      },
+      "nodes": [
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Pharmacokinetic Interaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pravastatin",
+          "target": "Pharmacokinetic Interaction",
+          "label": "causes"
+        },
+        {
+          "source": "Pharmacokinetic Interaction",
+          "target": "Valproic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valproic Acid",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pravastatin,Valproic Acid": [
           "Monocarboxylic Acid"
         ]
       },
-      "id": "path_16694"
-    },
-    {
-      "score": {
-        "ic_mean": 0.49,
-        "final_score": 0.49
-      },
-      "nodes": [
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Peripheral Nerve Palsy",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Lovastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pravastatin",
-          "target": "Peripheral Nerve Palsy",
-          "label": "causes"
-        },
-        {
-          "source": "Peripheral Nerve Palsy",
-          "target": "Lovastatin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Lovastatin",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pravastatin,Lovastatin": [
-          "Carboxylic Ester",
-          "Hmg-Coa Reductase Inhibitor"
-        ]
-      },
-      "id": "path_16695"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4894,
-        "final_score": 0.4894
-      },
-      "nodes": [
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Muscle Swelling",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Fluvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pravastatin",
-          "target": "Muscle Swelling",
-          "label": "causes"
-        },
-        {
-          "source": "Muscle Swelling",
-          "target": "Fluvastatin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fluvastatin",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pravastatin,Fluvastatin": [
-          "Hmg-Coa Reductase Inhibitor",
-          "Statin"
-        ]
-      },
-      "id": "path_16696"
-    },
-    {
-      "score": {
-        "ic_mean": 0.48,
-        "final_score": 0.48
-      },
-      "nodes": [
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pravastatin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pravastatin,Erlotinib": [
-          "Enzyme Inhibitor",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_16697"
-    },
-    {
-      "score": {
-        "ic_mean": 0.48,
-        "final_score": 0.48
-      },
-      "nodes": [
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pravastatin",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pravastatin,Atorvastatin": [
-          "Carboxylic Acid Anion",
-          "Hmg-Coa Reductase Inhibitor"
-        ]
-      },
-      "id": "path_16698"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4642,
-        "final_score": 0.4642
-      },
-      "nodes": [
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pravastatin",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pravastatin,Ethinyl Estradiol": [
-          "Organic Hydroxy Compound"
-        ]
-      },
-      "id": "path_16699"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4614,
-        "final_score": 0.4614
-      },
-      "nodes": [
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Ibuprofen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pravastatin",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Ibuprofen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ibuprofen",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pravastatin,Ibuprofen": [
-          "Enzyme Inhibitor",
-          "Monocarboxylic Acid Anion"
-        ]
-      },
-      "id": "path_16700"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4536,
-        "final_score": 0.4536
-      },
-      "nodes": [
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pravastatin",
-          "target": "Slc22a6",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pravastatin,Antipyrine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_16701"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4096,
-        "final_score": 0.4096
-      },
-      "nodes": [
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Hepatitis Chronic Active",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pravastatin",
-          "target": "Hepatitis Chronic Active",
-          "label": "causes"
-        },
-        {
-          "source": "Hepatitis Chronic Active",
-          "target": "Saquinavir",
-          "label": "is caused by"
-        },
-        {
-          "source": "Saquinavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pravastatin,Saquinavir": [
-          "Enzyme Inhibitor",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_16702"
+      "id": "path_8368"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.8309,
-        "final_score": 0.8309
+        "ic_mean": 0.7568,
+        "final_score": 0.7568
       },
       "nodes": [
         {
@@ -16,7 +16,49 @@
           "type": "Gene"
         },
         {
-          "id": "L-tyrosine",
+          "id": "Thyroid Hormone Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc16a10",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-tryptophan",
+          "target": "Slc16a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc16a2",
+          "target": "Thyroid Hormone Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Thyroid Hormone Transmembrane Transporter Activity",
+          "target": "Slc16a10",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5831"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6868,
+        "final_score": 0.6868
+      },
+      "nodes": [
+        {
+          "id": "L-tryptophan",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc16a2",
+          "type": "Gene"
+        },
+        {
+          "id": "L-leucine",
           "type": "Compound"
         },
         {
@@ -32,27 +74,27 @@
         },
         {
           "source": "Slc16a2",
-          "target": "L-tyrosine",
+          "target": "L-leucine",
           "label": "is bound by"
         },
         {
-          "source": "L-tyrosine",
+          "source": "L-leucine",
           "target": "Slc16a10",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "L-tryptophan,L-tyrosine": [
-          "Aromatic Amino Acid",
-          "Dietary Amino Acid"
+        "L-tryptophan,L-leucine": [
+          "Dietary Amino Acid",
+          "Proteinogenic Amino Acid"
         ]
       },
-      "id": "path_11667"
+      "id": "path_5832"
     },
     {
       "score": {
-        "ic_mean": 0.6435,
-        "final_score": 0.6435
+        "ic_mean": 0.6438,
+        "final_score": 0.6438
       },
       "nodes": [
         {
@@ -60,11 +102,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oxitriptan",
-          "type": "Compound"
+          "id": "Ddc",
+          "type": "Gene"
         },
         {
-          "id": "L-histidine",
+          "id": "Droxidopa",
           "type": "Compound"
         },
         {
@@ -75,89 +117,32 @@
       "edges": [
         {
           "source": "L-tryptophan",
-          "target": "Oxitriptan",
-          "label": "resembles"
+          "target": "Ddc",
+          "label": "binds"
         },
         {
-          "source": "Oxitriptan",
-          "target": "L-histidine",
-          "label": "resembles"
+          "source": "Ddc",
+          "target": "Droxidopa",
+          "label": "is bound by"
         },
         {
-          "source": "L-histidine",
+          "source": "Droxidopa",
           "target": "Slc16a10",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "L-tryptophan,Oxitriptan": [
-          "L-Alpha-Amino Acid"
+        "L-tryptophan,Ddc": [
+          "Organonitrogen Heterocyclic Compound"
         ],
-        "L-tryptophan,L-histidine": [
-          "Aromatic Amino Acid",
-          "Dietary Amino Acid"
+        "L-tryptophan,Droxidopa": [
+          "Hydroxides"
         ],
-        "Oxitriptan,L-histidine": [
-          "L-Alpha-Amino Acid"
+        "Ddc,Droxidopa": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_11668"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6154,
-        "final_score": 0.6154
-      },
-      "nodes": [
-        {
-          "id": "L-tryptophan",
-          "type": "Compound"
-        },
-        {
-          "id": "Oxitriptan",
-          "type": "Compound"
-        },
-        {
-          "id": "L-tyrosine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc16a10",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "L-tryptophan",
-          "target": "Oxitriptan",
-          "label": "resembles"
-        },
-        {
-          "source": "Oxitriptan",
-          "target": "L-tyrosine",
-          "label": "resembles"
-        },
-        {
-          "source": "L-tyrosine",
-          "target": "Slc16a10",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "L-tryptophan,Oxitriptan": [
-          "L-Alpha-Amino Acid"
-        ],
-        "L-tryptophan,L-tyrosine": [
-          "Aromatic Amino Acid",
-          "Dietary Amino Acid"
-        ],
-        "Oxitriptan,L-tyrosine": [
-          "Amino Acid, Peptide, Or Protein",
-          "L-Alpha-Amino Acid"
-        ]
-      },
-      "id": "path_11669"
+      "id": "path_5833"
     }
-  ],
-  "verbalization": ""
+  ]
 }

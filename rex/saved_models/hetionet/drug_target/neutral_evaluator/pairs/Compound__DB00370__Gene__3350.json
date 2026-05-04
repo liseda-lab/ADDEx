@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6027,
-        "final_score": 0.6027
+        "ic_mean": 0.5612,
+        "final_score": 0.5612
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr7",
+          "id": "Htr3a",
           "type": "Gene"
         },
         {
-          "id": "Molindone",
+          "id": "Trimipramine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,177 @@
       "edges": [
         {
           "source": "Mirtazapine",
-          "target": "Htr7",
+          "target": "Htr3a",
           "label": "binds"
         },
         {
-          "source": "Htr7",
-          "target": "Molindone",
+          "source": "Htr3a",
+          "target": "Trimipramine",
           "label": "is bound by"
         },
         {
-          "source": "Molindone",
+          "source": "Trimipramine",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mirtazapine,Molindone": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
+        "Mirtazapine,Trimipramine": [
+          "Organic Heteropolycyclic Compound",
+          "Antidepressant Agent"
         ]
       },
-      "id": "path_26896"
+      "id": "path_13728"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4904,
+        "final_score": 0.4904
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Abdomen",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pergolide",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Acute Abdomen",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Abdomen",
+          "target": "Pergolide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pergolide",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Pergolide": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotetracyclic Compound"
+        ]
+      },
+      "id": "path_13729"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4125,
+        "final_score": 0.4125
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Seeking Behavior",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Drug Seeking Behavior",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Seeking Behavior",
+          "target": "Ziprasidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ziprasidone",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Ziprasidone": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_13730"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3818,
+        "final_score": 0.3818
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Mianserin",
+          "label": "resembles"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Azatadine": [
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Mirtazapine,Mianserin": [
+          "Organic Heteropolycyclic Compound",
+          "Antidepressant Agent"
+        ],
+        "Azatadine,Mianserin": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_13731"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01098 - Gene::6579",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5316,
+        "final_score": 0.5316
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Swelling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Muscle Swelling",
+          "label": "causes"
+        },
+        {
+          "source": "Muscle Swelling",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosuvastatin,Pravastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Monocarboxylic Acid Anion"
+        ]
+      },
+      "id": "path_2732"
+    }
+  ]
+}

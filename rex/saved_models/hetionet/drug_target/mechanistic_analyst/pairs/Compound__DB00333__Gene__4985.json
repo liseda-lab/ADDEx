@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00333 - Gene::4985",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6112,
+        "final_score": 0.5556,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Levorphanol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methadone",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Levorphanol",
+          "label": "includes"
+        },
+        {
+          "source": "Levorphanol",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methadone,Levorphanol": [
+          "Opioid",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_1317"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5536,
+        "final_score": 0.5536
+      },
+      "nodes": [
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemorrhagic Urticaria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methadone",
+          "target": "Haemorrhagic Urticaria",
+          "label": "causes"
+        },
+        {
+          "source": "Haemorrhagic Urticaria",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methadone,Morphine": [
+          "Opioid",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_1318"
+    }
+  ]
+}

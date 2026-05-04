@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00705 - Gene::1551",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4488,
+        "final_score": 0.4488
+      },
+      "nodes": [
+        {
+          "id": "Delavirdine",
+          "type": "Compound"
+        },
+        {
+          "id": "Granulocytosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zalcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Delavirdine",
+          "target": "Granulocytosis",
+          "label": "causes"
+        },
+        {
+          "source": "Granulocytosis",
+          "target": "Zalcitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zalcitabine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Delavirdine,Zalcitabine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antiviral Agent"
+        ]
+      },
+      "id": "path_5162"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4434,
+        "final_score": 0.4434
+      },
+      "nodes": [
+        {
+          "id": "Delavirdine",
+          "type": "Compound"
+        },
+        {
+          "id": "Spleen Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Delavirdine",
+          "target": "Spleen Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Spleen Disorder",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Delavirdine,Indinavir": [
+          "Piperazines",
+          "Antiviral Agent"
+        ]
+      },
+      "id": "path_5163"
+    }
+  ]
 }

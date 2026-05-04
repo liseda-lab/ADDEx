@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00501 - Gene::55244",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7639,
+        "final_score": 0.5903,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Famotidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc47a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cimetidine",
+          "target": "Histamine H2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H2 Receptor Antagonists",
+          "target": "Famotidine",
+          "label": "includes"
+        },
+        {
+          "source": "Famotidine",
+          "target": "Slc47a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cimetidine,Famotidine": [
+          "Histamine-2 Receptor Antagonist",
+          "Azole"
+        ]
+      },
+      "id": "path_503"
+    }
+  ]
+}

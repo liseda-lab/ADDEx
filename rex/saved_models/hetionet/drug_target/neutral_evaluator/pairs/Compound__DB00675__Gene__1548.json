@@ -1,6 +1,148 @@
 {
   "id": "Compound::DB00675 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5173,
+        "final_score": 0.5173
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Oestrogenic Effect",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Letrozole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Oestrogenic Effect",
+          "label": "causes"
+        },
+        {
+          "source": "Oestrogenic Effect",
+          "target": "Letrozole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Letrozole",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Letrozole": [
+          "Organic Aromatic Compound",
+          "Antiestrogen"
+        ]
+      },
+      "id": "path_6214"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4535,
+        "final_score": 0.4535
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Sarcoma",
+          "label": "causes"
+        },
+        {
+          "source": "Sarcoma",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Cyclophosphamide": [
+          "Organonitrogen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_6215"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4008,
+        "final_score": 0.4008
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Walking Disability",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Walking Disability",
+          "label": "causes"
+        },
+        {
+          "source": "Walking Disability",
+          "target": "Progesterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Progesterone": [
+          "Olefinic Compound"
+        ]
+      },
+      "id": "path_6216"
+    }
+  ]
 }

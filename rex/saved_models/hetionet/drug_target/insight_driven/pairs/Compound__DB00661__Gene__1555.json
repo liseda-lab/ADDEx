@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00661 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5265,
+        "final_score": 0.5265
+      },
+      "nodes": [
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Verapamil",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Nifedipine",
+          "label": "includes"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Verapamil,Nifedipine": [
+          "Organooxygen Compound",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_10598"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4934,
+        "final_score": 0.4934
+      },
+      "nodes": [
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Symptom",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Verapamil",
+          "target": "Hepatitis Symptom",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Symptom",
+          "target": "Erythromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Erythromycin",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Verapamil,Erythromycin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_10599"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00404 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5149,
+        "final_score": 0.5149
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Substance Abuse",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Substance Abuse",
+          "label": "causes"
+        },
+        {
+          "source": "Substance Abuse",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Oxycodone": [
+          "Nitrogen Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8810"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4498,
+        "final_score": 0.4498
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Withdrawal Convulsions",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Drug Withdrawal Convulsions",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Withdrawal Convulsions",
+          "target": "Midazolam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Midazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_8811"
+    }
+  ]
+}

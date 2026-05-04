@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01156 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4145,
+        "final_score": 0.4145
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Tooth Infection",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Montelukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Tooth Infection",
+          "label": "causes"
+        },
+        {
+          "source": "Tooth Infection",
+          "target": "Montelukast",
+          "label": "is caused by"
+        },
+        {
+          "source": "Montelukast",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Montelukast": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2277"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3663,
+        "final_score": 0.3663
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Poor Quality Sleep",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Poor Quality Sleep",
+          "label": "causes"
+        },
+        {
+          "source": "Poor Quality Sleep",
+          "target": "Buprenorphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Buprenorphine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2278"
+    }
+  ]
+}

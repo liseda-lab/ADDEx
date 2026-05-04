@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7099,
-        "final_score": 0.7099
+        "ic_mean": 0.7002,
+        "final_score": 0.7002
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Zuclopenthixol",
-          "type": "Compound"
+          "id": "Dopamine Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Drd1",
@@ -32,27 +32,21 @@
         },
         {
           "source": "Drd5",
-          "target": "Zuclopenthixol",
-          "label": "is bound by"
+          "target": "Dopamine Neurotransmitter Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Zuclopenthixol",
+          "source": "Dopamine Neurotransmitter Receptor Activity",
           "target": "Drd1",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Chlorpromazine,Zuclopenthixol": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_2723"
+      "id": "path_1290"
     },
     {
       "score": {
-        "ic_mean": 0.6893,
-        "final_score": 0.6893
+        "ic_mean": 0.7002,
+        "final_score": 0.7002
       },
       "nodes": [
         {
@@ -60,11 +54,95 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
+          "id": "Drd5",
+          "type": "Gene"
         },
         {
-          "id": "Fluphenazine",
+          "id": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gs",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Drd5",
+          "label": "binds"
+        },
+        {
+          "source": "Drd5",
+          "target": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gs",
+          "label": "participates"
+        },
+        {
+          "source": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gs",
+          "target": "Drd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1291"
+    },
+    {
+      "score": {
+        "ic_mean": 0.698,
+        "final_score": 0.698
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1292"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6252,
+        "final_score": 0.6252
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pregnancy Test False Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propericiazine",
           "type": "Compound"
         },
         {
@@ -75,178 +153,26 @@
       "edges": [
         {
           "source": "Chlorpromazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
+          "target": "Pregnancy Test False Positive",
+          "label": "causes"
         },
         {
-          "source": "Phenothiazines",
-          "target": "Fluphenazine",
-          "label": "includes"
+          "source": "Pregnancy Test False Positive",
+          "target": "Propericiazine",
+          "label": "is caused by"
         },
         {
-          "source": "Fluphenazine",
+          "source": "Propericiazine",
           "target": "Drd1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpromazine,Phenothiazines": [
+        "Chlorpromazine,Propericiazine": [
           "Phenothiazines"
-        ],
-        "Chlorpromazine,Fluphenazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
-        ],
-        "Phenothiazines,Fluphenazine": [
-          "Phenothiazines"
         ]
       },
-      "id": "path_2724"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6586,
-        "final_score": 0.6586
-      },
-      "nodes": [
-        {
-          "id": "Chlorpromazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd5",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorpromazine",
-          "target": "Drd5",
-          "label": "binds"
-        },
-        {
-          "source": "Drd5",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Drd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorpromazine,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_2725"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6285,
-        "final_score": 0.6285
-      },
-      "nodes": [
-        {
-          "id": "Chlorpromazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd5",
-          "type": "Gene"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorpromazine",
-          "target": "Drd5",
-          "label": "binds"
-        },
-        {
-          "source": "Drd5",
-          "target": "Pramipexole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Drd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorpromazine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_2726"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6072,
-        "final_score": 0.6072
-      },
-      "nodes": [
-        {
-          "id": "Chlorpromazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd5",
-          "type": "Gene"
-        },
-        {
-          "id": "Rotigotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorpromazine",
-          "target": "Drd5",
-          "label": "binds"
-        },
-        {
-          "source": "Drd5",
-          "target": "Rotigotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rotigotine",
-          "target": "Drd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorpromazine,Rotigotine": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_2727"
+      "id": "path_1293"
     }
-  ],
-  "verbalization": ""
+  ]
 }

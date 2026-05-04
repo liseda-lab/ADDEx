@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00433 - Gene::1814",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6284,
+        "final_score": 0.3975,
+        "agentic_score": 0.1667
+      },
+      "nodes": [
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tetanus",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Metoclopramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prochlorperazine",
+          "target": "Tetanus",
+          "label": "causes"
+        },
+        {
+          "source": "Tetanus",
+          "target": "Metoclopramide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Metoclopramide",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prochlorperazine,Metoclopramide": [
+          "Antiemetic Agent",
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_8472"
+    }
+  ]
+}

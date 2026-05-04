@@ -3,104 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6925,
-        "final_score": 0.6925
-      },
-      "nodes": [
-        {
-          "id": "Nilutamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Androgen Receptor Antagonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Bicalutamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nilutamide",
-          "target": "Androgen Receptor Antagonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Androgen Receptor Antagonists",
-          "target": "Bicalutamide",
-          "label": "includes"
-        },
-        {
-          "source": "Bicalutamide",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nilutamide,Bicalutamide": [
-          "(Trifluoromethyl)Benzenes",
-          "Androgen Receptor Inhibitor"
-        ]
-      },
-      "id": "path_26614"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5723,
-        "final_score": 0.5723
-      },
-      "nodes": [
-        {
-          "id": "Nilutamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Androgen Receptor Antagonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Enzalutamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nilutamide",
-          "target": "Androgen Receptor Antagonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Androgen Receptor Antagonists",
-          "target": "Enzalutamide",
-          "label": "includes"
-        },
-        {
-          "source": "Enzalutamide",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nilutamide,Enzalutamide": [
-          "(Trifluoromethyl)Benzenes",
-          "Androgen Receptor Inhibitor"
-        ]
-      },
-      "id": "path_26615"
-    },
-    {
-      "score": {
-        "ic_mean": 0.445,
-        "final_score": 0.445
+        "ic_mean": 0.741,
+        "final_score": 0.741
       },
       "nodes": [
         {
@@ -112,7 +16,91 @@
           "type": "Gene"
         },
         {
-          "id": "Lumiracoxib",
+          "id": "Limonene Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilutamide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Limonene Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Limonene Monooxygenase Activity",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13584"
+    },
+    {
+      "score": {
+        "ic_mean": 0.741,
+        "final_score": 0.741
+      },
+      "nodes": [
+        {
+          "id": "Nilutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "(r)-limonene 6-monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilutamide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "(r)-limonene 6-monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "(r)-limonene 6-monooxygenase Activity",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13585"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5264,
+        "final_score": 0.5264
+      },
+      "nodes": [
+        {
+          "id": "Nilutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Delavirdine",
           "type": "Compound"
         },
         {
@@ -128,22 +116,115 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Lumiracoxib",
+          "target": "Delavirdine",
           "label": "is bound by"
         },
         {
-          "source": "Lumiracoxib",
+          "source": "Delavirdine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nilutamide,Lumiracoxib": [
-          "Organonitrogen Compound"
+        "Nilutamide,Delavirdine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_26616"
+      "id": "path_13586"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4237,
+        "final_score": 0.4237
+      },
+      "nodes": [
+        {
+          "id": "Nilutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilutamide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Perphenazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nilutamide,Perphenazine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13587"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3937,
+        "final_score": 0.3937
+      },
+      "nodes": [
+        {
+          "id": "Nilutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilutamide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Rifampicin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nilutamide,Rifampicin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13588"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00213 - Gene::10599",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4828,
+        "final_score": 0.4828
+      },
+      "nodes": [
+        {
+          "id": "Pantoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "External Ophthalmoplegia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ritonavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pantoprazole",
+          "target": "External Ophthalmoplegia",
+          "label": "causes"
+        },
+        {
+          "source": "External Ophthalmoplegia",
+          "target": "Ritonavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ritonavir",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pantoprazole,Ritonavir": [
+          "Organosulfur Compound"
+        ]
+      },
+      "id": "path_1801"
+    }
+  ]
+}

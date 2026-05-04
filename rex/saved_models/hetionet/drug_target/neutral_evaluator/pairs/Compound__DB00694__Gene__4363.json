@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6625,
-        "final_score": 0.6625
+        "ic_mean": 0.4835,
+        "final_score": 0.4835
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc6",
-          "type": "Gene"
+          "id": "Recall Phenomenon",
+          "type": "Side Effect"
         },
         {
-          "id": "Dactinomycin",
+          "id": "Etoposide",
           "type": "Compound"
         },
         {
@@ -27,70 +27,27 @@
       "edges": [
         {
           "source": "Daunorubicin",
-          "target": "Abcc6",
-          "label": "binds"
+          "target": "Recall Phenomenon",
+          "label": "causes"
         },
         {
-          "source": "Abcc6",
-          "target": "Dactinomycin",
-          "label": "is bound by"
+          "source": "Recall Phenomenon",
+          "target": "Etoposide",
+          "label": "is caused by"
         },
         {
-          "source": "Dactinomycin",
+          "source": "Etoposide",
           "target": "Abcc1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Daunorubicin,Dactinomycin": [
-          "Organooxygen Compound",
-          "Dna Minor Groove Binding Agent"
+        "Daunorubicin,Etoposide": [
+          "Organic Cyclic Compound",
+          "Topoisomerase-Ii Inhibitor"
         ]
       },
-      "id": "path_4218"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5839,
-        "final_score": 0.5839
-      },
-      "nodes": [
-        {
-          "id": "Daunorubicin",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Fluorescein",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Daunorubicin",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Fluorescein",
-          "label": "is bound by"
-        },
-        {
-          "source": "Fluorescein",
-          "target": "Abcc1",
-          "label": "binds"
-        }
-      ],
-      "id": "path_4219"
+      "id": "path_1934"
     }
-  ],
-  "verbalization": ""
+  ]
 }

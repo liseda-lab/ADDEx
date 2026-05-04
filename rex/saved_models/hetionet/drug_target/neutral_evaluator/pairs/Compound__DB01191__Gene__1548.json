@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01191 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5198,
+        "final_score": 0.5198
+      },
+      "nodes": [
+        {
+          "id": "Dexfenfluramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Methimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexfenfluramine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Methimazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methimazole",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexfenfluramine,Methimazole": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_1884"
+    }
+  ]
 }

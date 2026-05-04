@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00454 - Gene::4986",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5962,
+        "final_score": 0.5962
+      },
+      "nodes": [
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oxymorphone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pethidine",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Oxymorphone",
+          "label": "includes"
+        },
+        {
+          "source": "Oxymorphone",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pethidine,Oxymorphone": [
+          "Organonitrogen Compound",
+          "Opioid Receptor Agonist"
+        ]
+      },
+      "id": "path_14381"
+    }
+  ]
 }

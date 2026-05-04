@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.9186,
-        "final_score": 0.9186
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Partial Opioid Agonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Nalbuphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Partial Opioid Agonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Partial Opioid Agonists",
-          "target": "Nalbuphine",
-          "label": "includes"
-        },
-        {
-          "source": "Nalbuphine",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Nalbuphine": [
-          "Heteroorganic Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_26429"
-    },
-    {
-      "score": {
         "ic_mean": 0.8929,
         "final_score": 0.8929
       },
@@ -95,7 +47,7 @@
           "Opioid"
         ]
       },
-      "id": "path_26430"
+      "id": "path_13460"
     },
     {
       "score": {
@@ -140,15 +92,15 @@
       "lowest_common_ancestors": {
         "Buprenorphine,Pentazocine": [
           "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_26431"
+      "id": "path_13461"
     },
     {
       "score": {
-        "ic_mean": 0.6449,
-        "final_score": 0.6449
+        "ic_mean": 0.7669,
+        "final_score": 0.7669
       },
       "nodes": [
         {
@@ -156,8 +108,98 @@
           "type": "Compound"
         },
         {
-          "id": "Oprk1",
+          "id": "Oprl1",
           "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Oprl1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprl1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13462"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7398,
+        "final_score": 0.7398
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprl1",
+          "type": "Gene"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Oprl1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprl1",
+          "target": "Morphine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Morphine": [
+          "Morphinane Alkaloid",
+          "Opioid"
+        ]
+      },
+      "id": "path_13463"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6072,
+        "final_score": 0.6072
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Methylnaltrexone",
+          "type": "Compound"
         },
         {
           "id": "Hydrocodone",
@@ -171,13 +213,13 @@
       "edges": [
         {
           "source": "Buprenorphine",
-          "target": "Oprk1",
-          "label": "binds"
+          "target": "Methylnaltrexone",
+          "label": "resembles"
         },
         {
-          "source": "Oprk1",
+          "source": "Methylnaltrexone",
           "target": "Hydrocodone",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Hydrocodone",
@@ -186,300 +228,20 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Buprenorphine,Methylnaltrexone": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
+        ],
         "Buprenorphine,Hydrocodone": [
           "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_26432"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6449,
-        "final_score": 0.6449
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Butorphanol",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Butorphanol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Butorphanol",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Butorphanol": [
-          "Morphinane Alkaloid",
           "Opioid"
+        ],
+        "Methylnaltrexone,Hydrocodone": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_26433"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5935,
-        "final_score": 0.5935
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentazocine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Pentazocine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentazocine",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Pentazocine": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_26434"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5935,
-        "final_score": 0.5935
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Methadone": [
-          "Chemical Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_26435"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5876,
-        "final_score": 0.5876
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Ketobemidone": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_26436"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5857,
-        "final_score": 0.5857
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Methadone": [
-          "Chemical Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_26437"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5663,
-        "final_score": 0.5663
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydromorphone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Hydromorphone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydromorphone",
-          "target": "Oprd1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Hydromorphone": [
-          "Morphinane Alkaloid",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_26438"
+      "id": "path_13464"
     },
     {
       "score": {
@@ -523,12 +285,11 @@
       ],
       "lowest_common_ancestors": {
         "Buprenorphine,Naltrexone": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_26439"
+      "id": "path_13465"
     }
-  ],
-  "verbalization": ""
+  ]
 }

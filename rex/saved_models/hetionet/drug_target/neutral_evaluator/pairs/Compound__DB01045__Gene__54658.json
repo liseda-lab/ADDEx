@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01045 - Gene::54658",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5491,
+        "final_score": 0.5491
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Abcc1",
+          "label": "binds"
+        },
+        {
+          "source": "Abcc1",
+          "target": "Etoposide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Ugt1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Etoposide": [
+          "Enzyme Inhibitor",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_6470"
+    }
+  ]
 }

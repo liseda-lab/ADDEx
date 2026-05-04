@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB00863 - Gene::1577",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4768,
+        "final_score": 0.4768
+      },
+      "nodes": [
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Chloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ranitidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Chloroquine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Chloroquine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ranitidine,Chloroquine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_14972"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4467,
+        "final_score": 0.4467
+      },
+      "nodes": [
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Enzalutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ranitidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Enzalutamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Enzalutamide",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ranitidine,Enzalutamide": [
+          "Organic Heteromonocyclic Compound"
+        ]
+      },
+      "id": "path_14973"
+    }
+  ]
 }

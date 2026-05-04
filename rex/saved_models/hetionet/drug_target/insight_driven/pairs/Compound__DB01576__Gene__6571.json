@@ -1,0 +1,200 @@
+{
+  "id": "Compound::DB01576 - Gene::6571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.628,
+        "final_score": 0.7307,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Monoamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextroamphetamine",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Monoamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Monoamine Transmembrane Transporter Activity",
+          "target": "Slc18a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7997"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5814,
+        "final_score": 0.499,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Nervous System Stimulation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextroamphetamine",
+          "target": "Central Nervous System Stimulation",
+          "label": "is included in"
+        },
+        {
+          "source": "Central Nervous System Stimulation",
+          "target": "Methamphetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc18a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextroamphetamine,Methamphetamine": [
+          "Cns Stimulant",
+          "Amine"
+        ]
+      },
+      "id": "path_7998"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6249,
+        "final_score": 0.4791,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tourette's Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextroamphetamine",
+          "target": "Tourette's Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Tourette's Disorder",
+          "target": "Methamphetamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc18a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextroamphetamine,Methamphetamine": [
+          "Cns Stimulant",
+          "Amine"
+        ]
+      },
+      "id": "path_7999"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3998,
+        "final_score": 0.3998
+      },
+      "nodes": [
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Amfecloral",
+          "type": "Compound"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextroamphetamine",
+          "target": "Amfecloral",
+          "label": "resembles"
+        },
+        {
+          "source": "Amfecloral",
+          "target": "Methamphetamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc18a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextroamphetamine,Amfecloral": [
+          "Amine"
+        ],
+        "Dextroamphetamine,Methamphetamine": [
+          "Cns Stimulant",
+          "Amine"
+        ],
+        "Amfecloral,Methamphetamine": [
+          "Amphetamines"
+        ]
+      },
+      "id": "path_8000"
+    }
+  ]
+}

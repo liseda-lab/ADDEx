@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01221 - Gene::6530",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6304,
+        "final_score": 0.6485,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Ketamine",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketamine",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Dexmedetomidine",
+          "label": "includes"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketamine,Dexmedetomidine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_11627"
+    }
+  ]
+}

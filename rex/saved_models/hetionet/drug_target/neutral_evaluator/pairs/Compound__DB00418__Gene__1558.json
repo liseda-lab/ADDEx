@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00418 - Gene::1558",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6071,
+        "final_score": 0.6071
+      },
+      "nodes": [
+        {
+          "id": "Secobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gria2",
+          "type": "Gene"
+        },
+        {
+          "id": "Primidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Secobarbital",
+          "target": "Gria2",
+          "label": "binds"
+        },
+        {
+          "source": "Gria2",
+          "target": "Primidone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Primidone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Secobarbital,Primidone": [
+          "Barbiturate",
+          "Pyrimidone"
+        ]
+      },
+      "id": "path_12600"
+    }
+  ]
 }

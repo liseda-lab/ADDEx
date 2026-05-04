@@ -3,6 +3,48 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.7116,
+        "final_score": 0.7116
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp2a6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5984"
+    },
+    {
+      "score": {
         "ic_mean": 0.4901,
         "final_score": 0.4901
       },
@@ -47,8 +89,245 @@
           "Antineoplastic Agent"
         ]
       },
-      "id": "path_11948"
+      "id": "path_5985"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4687,
+        "final_score": 0.4687
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Mucosal Ulceration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Mucosal Ulceration",
+          "label": "causes"
+        },
+        {
+          "source": "Mucosal Ulceration",
+          "target": "Azelastine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azelastine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Azelastine": [
+          "Organochlorine Compound"
+        ]
+      },
+      "id": "path_5986"
+    },
+    {
+      "score": {
+        "ic_mean": 0.444,
+        "final_score": 0.444
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Sarcoma",
+          "label": "causes"
+        },
+        {
+          "source": "Sarcoma",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Cyclophosphamide": [
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
+        ]
+      },
+      "id": "path_5987"
+    },
+    {
+      "score": {
+        "ic_mean": 0.444,
+        "final_score": 0.444
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Cell Carcinoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Renal Cell Carcinoma",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Cell Carcinoma",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Cyclophosphamide": [
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
+        ]
+      },
+      "id": "path_5988"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4303,
+        "final_score": 0.4303
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Microsomia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Microsomia",
+          "label": "causes"
+        },
+        {
+          "source": "Microsomia",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Cyclophosphamide": [
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
+        ]
+      },
+      "id": "path_5989"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4202,
+        "final_score": 0.4202
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Failure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Ovarian Failure",
+          "label": "causes"
+        },
+        {
+          "source": "Ovarian Failure",
+          "target": "Progesterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Progesterone": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_5990"
     }
-  ],
-  "verbalization": ""
+  ]
 }

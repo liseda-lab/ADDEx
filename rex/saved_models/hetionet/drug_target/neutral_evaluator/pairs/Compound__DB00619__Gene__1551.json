@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00619 - Gene::1551",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4254,
+        "final_score": 0.4254
+      },
+      "nodes": [
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Orbital Oedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imatinib",
+          "target": "Orbital Oedema",
+          "label": "causes"
+        },
+        {
+          "source": "Orbital Oedema",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imatinib,Indinavir": [
+          "Enzyme Inhibitor",
+          "N-Alkylpiperazine"
+        ]
+      },
+      "id": "path_6315"
+    }
+  ]
 }

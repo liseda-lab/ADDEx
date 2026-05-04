@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00415 - Gene::6584",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6214,
+        "final_score": 0.7274,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Ampicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Penicillins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ampicillin",
+          "target": "Penicillins",
+          "label": "is included in"
+        },
+        {
+          "source": "Penicillins",
+          "target": "Benzylpenicillin",
+          "label": "includes"
+        },
+        {
+          "source": "Benzylpenicillin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ampicillin,Penicillins": [
+          "Penicillin"
+        ],
+        "Ampicillin,Benzylpenicillin": [
+          "Penicillin Antibiotic",
+          "Penicillin Allergen"
+        ],
+        "Penicillins,Benzylpenicillin": [
+          "Penicillin"
+        ]
+      },
+      "id": "path_1469"
+    }
+  ]
+}

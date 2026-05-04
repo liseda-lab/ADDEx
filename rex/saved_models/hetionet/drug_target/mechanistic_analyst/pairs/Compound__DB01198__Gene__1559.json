@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01198 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3901,
+        "final_score": 0.3901
+      },
+      "nodes": [
+        {
+          "id": "Zopiclone",
+          "type": "Compound"
+        },
+        {
+          "id": "Somnambulism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Montelukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zopiclone",
+          "target": "Somnambulism",
+          "label": "causes"
+        },
+        {
+          "source": "Somnambulism",
+          "target": "Montelukast",
+          "label": "is caused by"
+        },
+        {
+          "source": "Montelukast",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zopiclone,Montelukast": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6130"
+    }
+  ]
+}

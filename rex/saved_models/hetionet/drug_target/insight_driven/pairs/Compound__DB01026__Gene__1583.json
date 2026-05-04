@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB01026 - Gene::1583",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4533,
+        "final_score": 0.4533
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clotrimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Clotrimazole",
+          "label": "includes"
+        },
+        {
+          "source": "Clotrimazole",
+          "target": "Cyp11a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Azoles": [
+          "Azole"
+        ],
+        "Ketoconazole,Clotrimazole": [
+          "Chlorobenzenes",
+          "Anti-Infective Agent"
+        ],
+        "Azoles,Clotrimazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_8369"
+    }
+  ]
+}

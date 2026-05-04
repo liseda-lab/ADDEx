@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5827,
-        "final_score": 0.5827
+        "ic_mean": 0.5081,
+        "final_score": 0.5081
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Allergic Rash",
-          "type": "Side Effect"
+          "id": "Dirithromycin",
+          "type": "Compound"
         },
         {
-          "id": "Metyrapone",
+          "id": "Troleandomycin",
           "type": "Compound"
         },
         {
@@ -27,26 +27,35 @@
       "edges": [
         {
           "source": "Azithromycin",
-          "target": "Allergic Rash",
-          "label": "causes"
+          "target": "Dirithromycin",
+          "label": "resembles"
         },
         {
-          "source": "Allergic Rash",
-          "target": "Metyrapone",
-          "label": "is caused by"
+          "source": "Dirithromycin",
+          "target": "Troleandomycin",
+          "label": "resembles"
         },
         {
-          "source": "Metyrapone",
+          "source": "Troleandomycin",
           "target": "Cyp2a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Azithromycin,Metyrapone": [
-          "Carbonyl Compound"
+        "Azithromycin,Dirithromycin": [
+          "Macrolide Antibiotic",
+          "Macrolide Antibiotic"
+        ],
+        "Azithromycin,Troleandomycin": [
+          "Macrolide Antibiotic",
+          "Macrolide Antibiotic"
+        ],
+        "Dirithromycin,Troleandomycin": [
+          "Macrolide Antibiotic",
+          "Macrolide Antibiotic"
         ]
       },
-      "id": "path_7852"
+      "id": "path_3709"
     },
     {
       "score": {
@@ -90,11 +99,57 @@
       ],
       "lowest_common_ancestors": {
         "Azithromycin,Dapagliflozin": [
-          "Glycosyl Compound"
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_7853"
+      "id": "path_3710"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4644,
+        "final_score": 0.4644
+      },
+      "nodes": [
+        {
+          "id": "Azithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug-induced Liver Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dapagliflozin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azithromycin",
+          "target": "Drug-induced Liver Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Drug-induced Liver Injury",
+          "target": "Dapagliflozin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dapagliflozin",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azithromycin,Dapagliflozin": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_3711"
     }
-  ],
-  "verbalization": ""
+  ]
 }

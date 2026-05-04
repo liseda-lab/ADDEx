@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7243,
-        "final_score": 0.7243
+        "ic_mean": 0.7488,
+        "final_score": 0.7488
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
-          "type": "Pathway"
+          "id": "Vascular Endothelial Growth Factor-activated Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Flt4",
@@ -32,17 +32,196 @@
         },
         {
           "source": "Flt1",
-          "target": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
+          "target": "Vascular Endothelial Growth Factor-activated Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
+          "source": "Vascular Endothelial Growth Factor-activated Receptor Activity",
           "target": "Flt4",
           "label": "is participated by"
         }
       ],
-      "id": "path_16171"
+      "id": "path_8062"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7101,
+        "final_score": 0.7101
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Kdr",
+          "type": "Gene"
+        },
+        {
+          "id": "Vascular Endothelial Growth Factor-activated Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Flt4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Kdr",
+          "label": "binds"
+        },
+        {
+          "source": "Kdr",
+          "target": "Vascular Endothelial Growth Factor-activated Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Vascular Endothelial Growth Factor-activated Receptor Activity",
+          "target": "Flt4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8063"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6994,
+        "final_score": 0.6994
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Pdgfra",
+          "type": "Gene"
+        },
+        {
+          "id": "Vascular Endothelial Growth Factor-activated Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Flt4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Pdgfra",
+          "label": "binds"
+        },
+        {
+          "source": "Pdgfra",
+          "target": "Vascular Endothelial Growth Factor-activated Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Vascular Endothelial Growth Factor-activated Receptor Activity",
+          "target": "Flt4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8064"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5409,
+        "final_score": 0.5409
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Gastrointestinal Fistula",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Flt4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Gastrointestinal Fistula",
+          "label": "causes"
+        },
+        {
+          "source": "Gastrointestinal Fistula",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Flt4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Regorafenib,Pazopanib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_8065"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5409,
+        "final_score": 0.5409
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Fistula",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Flt4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Fistula",
+          "label": "causes"
+        },
+        {
+          "source": "Fistula",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Flt4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Regorafenib,Pazopanib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_8066"
     }
-  ],
-  "verbalization": ""
+  ]
 }

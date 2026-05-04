@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01142 - Gene::150",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6401,
+        "final_score": 0.695,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1468"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5719,
+        "final_score": 0.5719
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Appetite Exaggerated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Appetite Exaggerated",
+          "label": "causes"
+        },
+        {
+          "source": "Appetite Exaggerated",
+          "target": "Amoxapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amoxapine",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxepin,Amoxapine": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_1469"
+    }
+  ]
+}

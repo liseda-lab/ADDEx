@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01267 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4739,
+        "final_score": 0.4739
+      },
+      "nodes": [
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Testosterone Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paliperidone",
+          "target": "Serum Testosterone Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Testosterone Decreased",
+          "target": "Methadone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methadone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paliperidone,Methadone": [
+          "Agent Affecting Nervous System",
+          "Racemate"
+        ]
+      },
+      "id": "path_2111"
+    }
+  ]
+}

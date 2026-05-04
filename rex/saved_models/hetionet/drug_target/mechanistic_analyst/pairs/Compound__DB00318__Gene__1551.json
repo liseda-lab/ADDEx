@@ -1,0 +1,139 @@
+{
+  "id": "Compound::DB00318 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6098,
+        "final_score": 0.7215,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Codeine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5065"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6319,
+        "final_score": 0.6493,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Codeine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5066"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5607,
+        "final_score": 0.5607
+      },
+      "nodes": [
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Spasm Biliary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Codeine",
+          "target": "Spasm Biliary",
+          "label": "causes"
+        },
+        {
+          "source": "Spasm Biliary",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Codeine,Oxycodone": [
+          "Opioid",
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_5067"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7423,
-        "final_score": 0.7423
+        "ic_mean": 0.5665,
+        "final_score": 0.5665
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Central Nervous System Depression",
-          "type": "Pharmacologic Class"
+          "id": "Gabra1",
+          "type": "Gene"
         },
         {
-          "id": "Zolpidem",
+          "id": "Alprazolam",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Zaleplon",
-          "target": "Central Nervous System Depression",
-          "label": "is included in"
+          "target": "Gabra1",
+          "label": "binds"
         },
         {
-          "source": "Central Nervous System Depression",
-          "target": "Zolpidem",
-          "label": "includes"
+          "source": "Gabra1",
+          "target": "Alprazolam",
+          "label": "is bound by"
         },
         {
-          "source": "Zolpidem",
+          "source": "Alprazolam",
           "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Zaleplon,Zolpidem": [
-          "Organic Heterobicyclic Compound",
+        "Zaleplon,Alprazolam": [
+          "Organic Heteropolycyclic Compound",
           "Sedative And Hypnotic"
         ]
       },
-      "id": "path_12838"
+      "id": "path_6497"
     },
     {
       "score": {
-        "ic_mean": 0.6836,
-        "final_score": 0.6836
+        "ic_mean": 0.5578,
+        "final_score": 0.5578
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Gaba A Agonists",
-          "type": "Pharmacologic Class"
+          "id": "Gabrg2",
+          "type": "Gene"
         },
         {
-          "id": "Zolpidem",
+          "id": "Alprazolam",
           "type": "Compound"
         },
         {
@@ -75,28 +75,75 @@
       "edges": [
         {
           "source": "Zaleplon",
-          "target": "Gaba A Agonists",
-          "label": "is included in"
+          "target": "Gabrg2",
+          "label": "binds"
         },
         {
-          "source": "Gaba A Agonists",
-          "target": "Zolpidem",
-          "label": "includes"
+          "source": "Gabrg2",
+          "target": "Alprazolam",
+          "label": "is bound by"
         },
         {
-          "source": "Zolpidem",
+          "source": "Alprazolam",
           "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Zaleplon,Zolpidem": [
-          "Organic Heterobicyclic Compound",
+        "Zaleplon,Alprazolam": [
+          "Organic Heteropolycyclic Compound",
           "Sedative And Hypnotic"
         ]
       },
-      "id": "path_12839"
+      "id": "path_6498"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4719,
+        "final_score": 0.4719
+      },
+      "nodes": [
+        {
+          "id": "Zaleplon",
+          "type": "Compound"
+        },
+        {
+          "id": "Sleep Talking",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zaleplon",
+          "target": "Sleep Talking",
+          "label": "causes"
+        },
+        {
+          "source": "Sleep Talking",
+          "target": "Alprazolam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Alprazolam",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zaleplon,Alprazolam": [
+          "Organic Heteropolycyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_6499"
     }
-  ],
-  "verbalization": ""
+  ]
 }

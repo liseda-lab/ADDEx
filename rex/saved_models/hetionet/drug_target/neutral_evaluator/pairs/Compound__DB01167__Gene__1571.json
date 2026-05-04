@@ -47,12 +47,12 @@
           "Antifungal Agent"
         ]
       },
-      "id": "path_17488"
+      "id": "path_8789"
     },
     {
       "score": {
-        "ic_mean": 0.5062,
-        "final_score": 0.5062
+        "ic_mean": 0.4723,
+        "final_score": 0.4723
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Encephalocele",
-          "type": "Side Effect"
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Felbamate",
+          "id": "Tioconazole",
           "type": "Compound"
         },
         {
@@ -75,27 +75,134 @@
       "edges": [
         {
           "source": "Itraconazole",
-          "target": "Encephalocele",
-          "label": "causes"
+          "target": "Azoles",
+          "label": "is included in"
         },
         {
-          "source": "Encephalocele",
-          "target": "Felbamate",
-          "label": "is caused by"
+          "source": "Azoles",
+          "target": "Tioconazole",
+          "label": "includes"
         },
         {
-          "source": "Felbamate",
+          "source": "Tioconazole",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Itraconazole,Felbamate": [
-          "Organooxygen Compound"
+        "Itraconazole,Azoles": [
+          "Azole"
+        ],
+        "Itraconazole,Tioconazole": [
+          "Conazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Azoles,Tioconazole": [
+          "Azole"
         ]
       },
-      "id": "path_17489"
+      "id": "path_8790"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4573,
+        "final_score": 0.4573
+      },
+      "nodes": [
+        {
+          "id": "Itraconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Econazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Itraconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Econazole",
+          "label": "includes"
+        },
+        {
+          "source": "Econazole",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Itraconazole,Azoles": [
+          "Azole"
+        ],
+        "Itraconazole,Econazole": [
+          "Conazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Azoles,Econazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_8791"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3991,
+        "final_score": 0.3991
+      },
+      "nodes": [
+        {
+          "id": "Itraconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Itraconazole",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Cimetidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Itraconazole,Cimetidine": [
+          "Azole"
+        ]
+      },
+      "id": "path_8792"
     }
-  ],
-  "verbalization": ""
+  ]
 }

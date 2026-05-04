@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01623 - Gene::6580",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5275,
+        "final_score": 0.5275
+      },
+      "nodes": [
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Thioproperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thiothixene",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Thioproperazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Thioproperazine",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thiothixene,Thioproperazine": [
+          "Antipsychotic Agent",
+          "N-Methylpiperazine"
+        ]
+      },
+      "id": "path_8067"
+    }
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.705,
-        "final_score": 0.705
+        "ic_mean": 0.6161,
+        "final_score": 0.6161
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Dhfr",
+          "id": "Cyp2d6",
           "type": "Gene"
         },
         {
-          "id": "Trimethoprim",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,123 +27,21 @@
       "edges": [
         {
           "source": "Proguanil",
-          "target": "Dhfr",
+          "target": "Cyp2d6",
           "label": "binds"
         },
         {
-          "source": "Dhfr",
-          "target": "Trimethoprim",
-          "label": "is bound by"
+          "source": "Cyp2d6",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Trimethoprim",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Proguanil,Trimethoprim": [
-          "Benzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_16966"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6486,
-        "final_score": 0.6486
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Dihydrofolate Reductase Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Trimethoprim",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Dihydrofolate Reductase Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Dihydrofolate Reductase Inhibitors",
-          "target": "Trimethoprim",
-          "label": "includes"
-        },
-        {
-          "source": "Trimethoprim",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Trimethoprim": [
-          "Benzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_16967"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5402,
-        "final_score": 0.5402
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2e1",
-          "type": "Gene"
-        },
-        {
-          "id": "Sulfadiazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2e1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2e1",
-          "target": "Sulfadiazine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sulfadiazine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Sulfadiazine": [
-          "Benzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_16968"
+      "id": "path_8510"
     },
     {
       "score": {
@@ -160,7 +58,7 @@
           "type": "Gene"
         },
         {
-          "id": "Guanfacine",
+          "id": "Luliconazole",
           "type": "Compound"
         },
         {
@@ -176,69 +74,22 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Guanfacine",
+          "target": "Luliconazole",
           "label": "is bound by"
         },
         {
-          "source": "Guanfacine",
+          "source": "Luliconazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Guanfacine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_16969"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5082,
-        "final_score": 0.5082
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Efavirenz",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Efavirenz",
-          "label": "is bound by"
-        },
-        {
-          "source": "Efavirenz",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Efavirenz": [
-          "Organochlorine Compound",
+        "Proguanil,Luliconazole": [
+          "Chlorobenzenes",
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_16970"
+      "id": "path_8511"
     },
     {
       "score": {
@@ -286,7 +137,7 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_16971"
+      "id": "path_8512"
     },
     {
       "score": {
@@ -303,7 +154,7 @@
           "type": "Gene"
         },
         {
-          "id": "Tipranavir",
+          "id": "Trabectedin",
           "type": "Compound"
         },
         {
@@ -319,122 +170,26 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Tipranavir",
+          "target": "Trabectedin",
           "label": "is bound by"
         },
         {
-          "source": "Tipranavir",
+          "source": "Trabectedin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Tipranavir": [
-          "Heteroorganic Entity",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_16972"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5082,
-        "final_score": 0.5082
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Lopinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Lopinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lopinavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Lopinavir": [
-          "Organonitrogen Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_16973"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4888,
-        "final_score": 0.4888
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2e1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methimazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2e1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2e1",
-          "target": "Methimazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methimazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Methimazole": [
+        "Proguanil,Trabectedin": [
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_16974"
+      "id": "path_8513"
     },
     {
       "score": {
-        "ic_mean": 0.4888,
-        "final_score": 0.4888
+        "ic_mean": 0.5082,
+        "final_score": 0.5082
       },
       "nodes": [
         {
@@ -442,11 +197,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2e1",
+          "id": "Cyp2c19",
           "type": "Gene"
         },
         {
-          "id": "Ticlopidine",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -457,26 +212,26 @@
       "edges": [
         {
           "source": "Proguanil",
-          "target": "Cyp2e1",
+          "target": "Cyp2c19",
           "label": "binds"
         },
         {
-          "source": "Cyp2e1",
-          "target": "Ticlopidine",
+          "source": "Cyp2c19",
+          "target": "Clopidogrel",
           "label": "is bound by"
         },
         {
-          "source": "Ticlopidine",
+          "source": "Clopidogrel",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Ticlopidine": [
+        "Proguanil,Clopidogrel": [
           "Monochlorobenzenes"
         ]
       },
-      "id": "path_16975"
+      "id": "path_8514"
     },
     {
       "score": {
@@ -523,54 +278,7 @@
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_16976"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4588,
-        "final_score": 0.4588
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2e1",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2e1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2e1",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Antipyrine": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_16977"
+      "id": "path_8515"
     },
     {
       "score": {
@@ -587,7 +295,7 @@
           "type": "Gene"
         },
         {
-          "id": "Methimazole",
+          "id": "Etravirine",
           "type": "Compound"
         },
         {
@@ -603,21 +311,22 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Methimazole",
+          "target": "Etravirine",
           "label": "is bound by"
         },
         {
-          "source": "Methimazole",
+          "source": "Etravirine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Methimazole": [
-          "Organic Aromatic Compound"
+        "Proguanil,Etravirine": [
+          "Organic Aromatic Compound",
+          "Anti-Infective Agent"
         ]
       },
-      "id": "path_16978"
+      "id": "path_8516"
     },
     {
       "score": {
@@ -664,7 +373,144 @@
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_16979"
+      "id": "path_8517"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4568,
+        "final_score": 0.4568
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Pipotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Pipotiazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pipotiazine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "id": "path_8518"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4568,
+        "final_score": 0.4568
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Tranylcypromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Tranylcypromine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Tranylcypromine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Proguanil,Tranylcypromine": [
+          "Enzyme Inhibitor",
+          "Benzenes"
+        ]
+      },
+      "id": "path_8519"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4568,
+        "final_score": 0.4568
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxcarbazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Oxcarbazepine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Oxcarbazepine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Proguanil,Oxcarbazepine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_8520"
     },
     {
       "score": {
@@ -711,102 +557,7 @@
           "Monochlorobenzenes"
         ]
       },
-      "id": "path_16980"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4568,
-        "final_score": 0.4568
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Tioconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Tioconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tioconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Tioconazole": [
-          "Chlorobenzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_16981"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4568,
-        "final_score": 0.4568
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Tolterodine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Tolterodine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tolterodine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Tolterodine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_16982"
+      "id": "path_8521"
     },
     {
       "score": {
@@ -853,7 +604,101 @@
           "Monochlorobenzenes"
         ]
       },
-      "id": "path_16983"
+      "id": "path_8522"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4494,
+        "final_score": 0.4494
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Ranitidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Proguanil,Ranitidine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_8523"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4494,
+        "final_score": 0.4494
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Hydrocodone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Hydrocodone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Proguanil,Hydrocodone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_8524"
     },
     {
       "score": {
@@ -901,7 +746,7 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_16984"
+      "id": "path_8525"
     },
     {
       "score": {
@@ -945,292 +790,10 @@
       ],
       "lowest_common_ancestors": {
         "Proguanil,Indapamide": [
-          "Organochlorine Compound"
-        ]
-      },
-      "id": "path_16985"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4379,
-        "final_score": 0.4379
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Elevated Liver Enzyme Levels",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Omeprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Elevated Liver Enzyme Levels",
-          "label": "causes"
-        },
-        {
-          "source": "Elevated Liver Enzyme Levels",
-          "target": "Omeprazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Omeprazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Omeprazole": [
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_16986"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4375,
-        "final_score": 0.4375
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2e1",
-          "type": "Gene"
-        },
-        {
-          "id": "Thiopental",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2e1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2e1",
-          "target": "Thiopental",
-          "label": "is bound by"
-        },
-        {
-          "source": "Thiopental",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Thiopental": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_16987"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4308,
-        "final_score": 0.4308
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp1a2",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp1a2",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Antipyrine": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_16988"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4294,
-        "final_score": 0.4294
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c9",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c9",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Antipyrine": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_16989"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4294,
-        "final_score": 0.4294
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c9",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c9",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Diltiazem": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_16990"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4277,
-        "final_score": 0.4277
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Elevated Liver Enzyme Levels",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Risperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Elevated Liver Enzyme Levels",
-          "label": "causes"
-        },
-        {
-          "source": "Elevated Liver Enzyme Levels",
-          "target": "Risperidone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Risperidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Risperidone": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_16991"
+      "id": "path_8526"
     },
     {
       "score": {
@@ -1247,7 +810,7 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Bifonazole",
           "type": "Compound"
         },
         {
@@ -1263,21 +826,22 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Antipyrine",
+          "target": "Bifonazole",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Bifonazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Antipyrine": [
-          "Organic Aromatic Compound"
+        "Proguanil,Bifonazole": [
+          "Benzenoid Aromatic Compound",
+          "Anti-Infective Agent"
         ]
       },
-      "id": "path_16992"
+      "id": "path_8527"
     },
     {
       "score": {
@@ -1324,242 +888,7 @@
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_16993"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4268,
-        "final_score": 0.4268
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Sertraline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Sertraline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sertraline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Sertraline": [
-          "Chlorobenzenes"
-        ]
-      },
-      "id": "path_16994"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4268,
-        "final_score": 0.4268
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Pantoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Pantoprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pantoprazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Pantoprazole": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_16995"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4268,
-        "final_score": 0.4268
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Bupivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Bupivacaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bupivacaine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Bupivacaine": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_16996"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4268,
-        "final_score": 0.4268
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Diltiazem": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_16997"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4268,
-        "final_score": 0.4268
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Trimethadione",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Trimethadione",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trimethadione",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Trimethadione": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_16998"
+      "id": "path_8528"
     },
     {
       "score": {
@@ -1606,7 +935,7 @@
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_16999"
+      "id": "path_8529"
     },
     {
       "score": {
@@ -1623,7 +952,7 @@
           "type": "Gene"
         },
         {
-          "id": "Ketobemidone",
+          "id": "Antipyrine",
           "type": "Compound"
         },
         {
@@ -1639,21 +968,21 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Ketobemidone",
+          "target": "Antipyrine",
           "label": "is bound by"
         },
         {
-          "source": "Ketobemidone",
+          "source": "Antipyrine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Ketobemidone": [
-          "Organic Cyclic Compound"
+        "Proguanil,Antipyrine": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_17000"
+      "id": "path_8530"
     },
     {
       "score": {
@@ -1670,7 +999,7 @@
           "type": "Gene"
         },
         {
-          "id": "Loratadine",
+          "id": "Pioglitazone",
           "type": "Compound"
         },
         {
@@ -1686,21 +1015,115 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Loratadine",
+          "target": "Pioglitazone",
           "label": "is bound by"
         },
         {
-          "source": "Loratadine",
+          "source": "Pioglitazone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Loratadine": [
-          "Organochlorine Compound"
+        "Proguanil,Pioglitazone": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_17001"
+      "id": "path_8531"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4268,
+        "final_score": 0.4268
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Azelastine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Azelastine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Proguanil,Azelastine": [
+          "Monochlorobenzenes"
+        ]
+      },
+      "id": "path_8532"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4268,
+        "final_score": 0.4268
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Propranolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Propranolol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Propranolol",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Proguanil,Propranolol": [
+          "Benzenoid Aromatic Compound"
+        ]
+      },
+      "id": "path_8533"
     },
     {
       "score": {
@@ -1717,7 +1140,7 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Oxymorphone",
           "type": "Compound"
         },
         {
@@ -1733,116 +1156,68 @@
         },
         {
           "source": "Cyp2d6",
-          "target": "Antipyrine",
+          "target": "Oxymorphone",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Oxymorphone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Antipyrine": [
+        "Proguanil,Oxymorphone": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_8534"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4055,
+        "final_score": 0.4055
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Zafirlukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Zafirlukast",
+          "label": "is bound by"
+        },
+        {
+          "source": "Zafirlukast",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Proguanil,Zafirlukast": [
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_17002"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4074,
-        "final_score": 0.4074
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2e1",
-          "type": "Gene"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2e1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2e1",
-          "target": "Citalopram",
-          "label": "is bound by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Citalopram": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_17003"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4074,
-        "final_score": 0.4074
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2e1",
-          "type": "Gene"
-        },
-        {
-          "id": "Quinine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2e1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2e1",
-          "target": "Quinine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Quinine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Quinine": [
-          "Organonitrogen Compound",
-          "Antimalarial Agent"
-        ]
-      },
-      "id": "path_17004"
+      "id": "path_8535"
     },
     {
       "score": {
@@ -1859,7 +1234,7 @@
           "type": "Gene"
         },
         {
-          "id": "Levomilnacipran",
+          "id": "Atomoxetine",
           "type": "Compound"
         },
         {
@@ -1875,304 +1250,68 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Levomilnacipran",
+          "target": "Atomoxetine",
           "label": "is bound by"
         },
         {
-          "source": "Levomilnacipran",
+          "source": "Atomoxetine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Levomilnacipran": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_17005"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4055,
-        "final_score": 0.4055
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Methadone": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_17006"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4055,
-        "final_score": 0.4055
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentamidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Pentamidine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentamidine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Pentamidine": [
-          "Organic Aromatic Compound",
-          "Antiprotozoal Agent"
-        ]
-      },
-      "id": "path_17007"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4055,
-        "final_score": 0.4055
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Pentobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Pentobarbital": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_17008"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4055,
-        "final_score": 0.4055
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Temazepam",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Temazepam",
-          "label": "is bound by"
-        },
-        {
-          "source": "Temazepam",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Temazepam": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_17009"
-    },
-    {
-      "score": {
-        "ic_mean": 0.396,
-        "final_score": 0.396
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2e1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methoxyflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2e1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2e1",
-          "target": "Methoxyflurane",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methoxyflurane",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Methoxyflurane": [
-          "Organochlorine Compound"
-        ]
-      },
-      "id": "path_17010"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3889,
-        "final_score": 0.3889
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Aprepitant",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Aprepitant",
-          "label": "is bound by"
-        },
-        {
-          "source": "Aprepitant",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Aprepitant": [
+        "Proguanil,Atomoxetine": [
           "Benzenes"
         ]
       },
-      "id": "path_17011"
+      "id": "path_8536"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3981,
+        "final_score": 0.3981
+      },
+      "nodes": [
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Histamine Phosphate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Proguanil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Histamine Phosphate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Histamine Phosphate",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Proguanil,Histamine Phosphate": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_8537"
     },
     {
       "score": {
@@ -2189,7 +1328,7 @@
           "type": "Gene"
         },
         {
-          "id": "Nilvadipine",
+          "id": "Olanzapine",
           "type": "Compound"
         },
         {
@@ -2205,21 +1344,21 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Nilvadipine",
+          "target": "Olanzapine",
           "label": "is bound by"
         },
         {
-          "source": "Nilvadipine",
+          "source": "Olanzapine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Nilvadipine": [
-          "Organic Cyclic Compound"
+        "Proguanil,Olanzapine": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_17012"
+      "id": "path_8538"
     },
     {
       "score": {
@@ -2236,7 +1375,7 @@
           "type": "Gene"
         },
         {
-          "id": "Cholecalciferol",
+          "id": "Primidone",
           "type": "Compound"
         },
         {
@@ -2252,26 +1391,26 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Cholecalciferol",
+          "target": "Primidone",
           "label": "is bound by"
         },
         {
-          "source": "Cholecalciferol",
+          "source": "Primidone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Cholecalciferol": [
+        "Proguanil,Primidone": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_17013"
+      "id": "path_8539"
     },
     {
       "score": {
-        "ic_mean": 0.3889,
-        "final_score": 0.3889
+        "ic_mean": 0.3815,
+        "final_score": 0.3815
       },
       "nodes": [
         {
@@ -2279,11 +1418,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c19",
+          "id": "Cyp2d6",
           "type": "Gene"
         },
         {
-          "id": "Nicotine",
+          "id": "Donepezil",
           "type": "Compound"
         },
         {
@@ -2294,31 +1433,31 @@
       "edges": [
         {
           "source": "Proguanil",
-          "target": "Cyp2c19",
+          "target": "Cyp2d6",
           "label": "binds"
         },
         {
-          "source": "Cyp2c19",
-          "target": "Nicotine",
+          "source": "Cyp2d6",
+          "target": "Donepezil",
           "label": "is bound by"
         },
         {
-          "source": "Nicotine",
+          "source": "Donepezil",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Nicotine": [
-          "Organic Cyclic Compound"
+        "Proguanil,Donepezil": [
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_17014"
+      "id": "path_8540"
     },
     {
       "score": {
-        "ic_mean": 0.3861,
-        "final_score": 0.3861
+        "ic_mean": 0.3815,
+        "final_score": 0.3815
       },
       "nodes": [
         {
@@ -2326,11 +1465,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2e1",
+          "id": "Cyp2d6",
           "type": "Gene"
         },
         {
-          "id": "Orphenadrine",
+          "id": "Fluvastatin",
           "type": "Compound"
         },
         {
@@ -2341,26 +1480,27 @@
       "edges": [
         {
           "source": "Proguanil",
-          "target": "Cyp2e1",
+          "target": "Cyp2d6",
           "label": "binds"
         },
         {
-          "source": "Cyp2e1",
-          "target": "Orphenadrine",
+          "source": "Cyp2d6",
+          "target": "Fluvastatin",
           "label": "is bound by"
         },
         {
-          "source": "Orphenadrine",
+          "source": "Fluvastatin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Orphenadrine": [
-          "Organonitrogen Compound"
+        "Proguanil,Fluvastatin": [
+          "Enzyme Inhibitor",
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_17015"
+      "id": "path_8541"
     },
     {
       "score": {
@@ -2377,7 +1517,7 @@
           "type": "Gene"
         },
         {
-          "id": "Citalopram",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -2393,21 +1533,21 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Citalopram",
+          "target": "Imipramine",
           "label": "is bound by"
         },
         {
-          "source": "Citalopram",
+          "source": "Imipramine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Citalopram": [
+        "Proguanil,Imipramine": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_17016"
+      "id": "path_8542"
     },
     {
       "score": {
@@ -2424,7 +1564,7 @@
           "type": "Gene"
         },
         {
-          "id": "Quinine",
+          "id": "Progesterone",
           "type": "Compound"
         },
         {
@@ -2440,213 +1580,21 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Quinine",
+          "target": "Progesterone",
           "label": "is bound by"
         },
         {
-          "source": "Quinine",
+          "source": "Progesterone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Proguanil,Quinine": [
-          "Organonitrogen Compound",
-          "Antimalarial Agent"
-        ]
-      },
-      "id": "path_17017"
-    },
-    {
-      "score": {
-        "ic_mean": 0.364,
-        "final_score": 0.364
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Lapatinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Lapatinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lapatinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Lapatinib": [
-          "Enzyme Inhibitor",
-          "Organochlorine Compound"
-        ]
-      },
-      "id": "path_17018"
-    },
-    {
-      "score": {
-        "ic_mean": 0.364,
-        "final_score": 0.364
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Glyburide": [
-          "Monochlorobenzenes"
-        ]
-      },
-      "id": "path_17019"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3541,
-        "final_score": 0.3541
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Phenytoin": [
+        "Proguanil,Progesterone": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_17020"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3454,
-        "final_score": 0.3454
-      },
-      "nodes": [
-        {
-          "id": "Proguanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Proguanil",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Proguanil,Atorvastatin": [
-          "Enzyme Inhibitor",
-          "Benzenes"
-        ]
-      },
-      "id": "path_17021"
+      "id": "path_8543"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01041 - Gene::1543",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4272,
+        "final_score": 0.4272
+      },
+      "nodes": [
+        {
+          "id": "Thalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Anaemia Macrocytic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thalidomide",
+          "target": "Anaemia Macrocytic",
+          "label": "causes"
+        },
+        {
+          "source": "Anaemia Macrocytic",
+          "target": "Flutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flutamide",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thalidomide,Flutamide": [
+          "Amide"
+        ]
+      },
+      "id": "path_10482"
+    }
+  ]
+}

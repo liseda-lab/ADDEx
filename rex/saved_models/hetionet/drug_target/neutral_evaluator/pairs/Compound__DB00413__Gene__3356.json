@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6703,
-        "final_score": 0.6703
+        "ic_mean": 0.4835,
+        "final_score": 0.4835
       },
       "nodes": [
         {
@@ -12,59 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Drd5",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pramipexole",
-          "target": "Drd5",
-          "label": "binds"
-        },
-        {
-          "source": "Drd5",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pramipexole,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_5593"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5278,
-        "final_score": 0.5278
-      },
-      "nodes": [
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Atrial Septal Defect",
+          "id": "Excessive Daytime Sleepiness",
           "type": "Side Effect"
         },
         {
-          "id": "Risperidone",
+          "id": "Cabergoline",
           "type": "Compound"
         },
         {
@@ -75,28 +27,75 @@
       "edges": [
         {
           "source": "Pramipexole",
-          "target": "Atrial Septal Defect",
+          "target": "Excessive Daytime Sleepiness",
           "label": "causes"
         },
         {
-          "source": "Atrial Septal Defect",
-          "target": "Risperidone",
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Cabergoline",
           "label": "is caused by"
         },
         {
-          "source": "Risperidone",
+          "source": "Cabergoline",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pramipexole,Risperidone": [
+        "Pramipexole,Cabergoline": [
           "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
+          "Nitrogen Molecular Entity"
         ]
       },
-      "id": "path_5594"
+      "id": "path_2566"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4666,
+        "final_score": 0.4666
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Binge Eating",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Binge Eating",
+          "label": "causes"
+        },
+        {
+          "source": "Binge Eating",
+          "target": "Lisuride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_2567"
     }
-  ],
-  "verbalization": ""
+  ]
 }

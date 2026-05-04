@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5845,
-        "final_score": 0.5845
+        "ic_mean": 0.5533,
+        "final_score": 0.5533
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adenitis",
-          "type": "Side Effect"
+          "id": "Htr6",
+          "type": "Gene"
         },
         {
-          "id": "Protriptyline",
+          "id": "Asenapine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Doxepin",
-          "target": "Adenitis",
-          "label": "causes"
+          "target": "Htr6",
+          "label": "binds"
         },
         {
-          "source": "Adenitis",
-          "target": "Protriptyline",
-          "label": "is caused by"
+          "source": "Htr6",
+          "target": "Asenapine",
+          "label": "is bound by"
         },
         {
-          "source": "Protriptyline",
+          "source": "Asenapine",
           "target": "Slc6a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxepin,Protriptyline": [
-          "Organic Tricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Doxepin,Asenapine": [
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_21397"
+      "id": "path_10865"
     },
     {
       "score": {
-        "ic_mean": 0.5845,
-        "final_score": 0.5845
+        "ic_mean": 0.4976,
+        "final_score": 0.4976
       },
       "nodes": [
         {
@@ -60,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Taste Peculiar",
+          "id": "Cardiac Death",
           "type": "Side Effect"
         },
         {
-          "id": "Protriptyline",
+          "id": "Dexmethylphenidate",
           "type": "Compound"
         },
         {
@@ -75,76 +74,27 @@
       "edges": [
         {
           "source": "Doxepin",
-          "target": "Taste Peculiar",
+          "target": "Cardiac Death",
           "label": "causes"
         },
         {
-          "source": "Taste Peculiar",
-          "target": "Protriptyline",
+          "source": "Cardiac Death",
+          "target": "Dexmethylphenidate",
           "label": "is caused by"
         },
         {
-          "source": "Protriptyline",
+          "source": "Dexmethylphenidate",
           "target": "Slc6a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxepin,Protriptyline": [
-          "Organic Tricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Doxepin,Dexmethylphenidate": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_21398"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4974,
-        "final_score": 0.4974
-      },
-      "nodes": [
-        {
-          "id": "Doxepin",
-          "type": "Compound"
-        },
-        {
-          "id": "Adjustment Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxepin",
-          "target": "Adjustment Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Adjustment Disorder",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Slc6a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxepin,Venlafaxine": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_21399"
+      "id": "path_10866"
     }
-  ],
-  "verbalization": ""
+  ]
 }

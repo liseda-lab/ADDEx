@@ -1,0 +1,157 @@
+{
+  "id": "Compound::DB01068 - Gene::2561",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6865,
+        "final_score": 0.7183,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Clonazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Chlordiazepoxide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Chlordiazepoxide",
+          "label": "includes"
+        },
+        {
+          "source": "Chlordiazepoxide",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Clonazepam,Chlordiazepoxide": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Chlordiazepoxide": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_6368"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5419,
+        "final_score": 0.5419
+      },
+      "nodes": [
+        {
+          "id": "Clonazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Disinhibition",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonazepam",
+          "target": "Disinhibition",
+          "label": "causes"
+        },
+        {
+          "source": "Disinhibition",
+          "target": "Etomidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonazepam,Etomidate": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6369"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5796,
+        "final_score": 0.4565,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Clonazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alcohol Intoxication",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zopiclone",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonazepam",
+          "target": "Alcohol Intoxication",
+          "label": "causes"
+        },
+        {
+          "source": "Alcohol Intoxication",
+          "target": "Zopiclone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zopiclone",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonazepam,Zopiclone": [
+          "Sedative And Hypnotic",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6370"
+    }
+  ]
+}

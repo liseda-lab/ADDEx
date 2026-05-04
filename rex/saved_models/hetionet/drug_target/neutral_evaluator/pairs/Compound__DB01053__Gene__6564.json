@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7077,
-        "final_score": 0.7077
+        "ic_mean": 0.6782,
+        "final_score": 0.6782
       },
       "nodes": [
         {
@@ -12,56 +12,8 @@
           "type": "Compound"
         },
         {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Ceftibuten",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzylpenicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Ceftibuten",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ceftibuten",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzylpenicillin,Ceftibuten": [
-          "Organosulfur Heterocyclic Compound",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_21049"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7077,
-        "final_score": 0.7077
-      },
-      "nodes": [
-        {
-          "id": "Benzylpenicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
+          "id": "Penicillins",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Oxacillin",
@@ -75,13 +27,121 @@
       "edges": [
         {
           "source": "Benzylpenicillin",
-          "target": "Slc15a2",
-          "label": "binds"
+          "target": "Penicillins",
+          "label": "is included in"
         },
         {
-          "source": "Slc15a2",
+          "source": "Penicillins",
           "target": "Oxacillin",
-          "label": "is bound by"
+          "label": "includes"
+        },
+        {
+          "source": "Oxacillin",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzylpenicillin,Penicillins": [
+          "Penicillin"
+        ],
+        "Benzylpenicillin,Oxacillin": [
+          "Penicillin Antibiotic",
+          "Penicillinate Anion"
+        ],
+        "Penicillins,Oxacillin": [
+          "Penicillin"
+        ]
+      },
+      "id": "path_10643"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6525,
+        "final_score": 0.6525
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Penicillins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dicloxacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "Penicillins",
+          "label": "is included in"
+        },
+        {
+          "source": "Penicillins",
+          "target": "Dicloxacillin",
+          "label": "includes"
+        },
+        {
+          "source": "Dicloxacillin",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzylpenicillin,Penicillins": [
+          "Penicillin"
+        ],
+        "Benzylpenicillin,Dicloxacillin": [
+          "Penicillin Antibiotic",
+          "Penicillinate Anion"
+        ],
+        "Penicillins,Dicloxacillin": [
+          "Penicillin"
+        ]
+      },
+      "id": "path_10644"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6495,
+        "final_score": 0.6495
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Tongue Hairy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "Tongue Hairy",
+          "label": "causes"
+        },
+        {
+          "source": "Tongue Hairy",
+          "target": "Oxacillin",
+          "label": "is caused by"
         },
         {
           "source": "Oxacillin",
@@ -95,12 +155,12 @@
           "Penicillinate Anion"
         ]
       },
-      "id": "path_21050"
+      "id": "path_10645"
     },
     {
       "score": {
-        "ic_mean": 0.7077,
-        "final_score": 0.7077
+        "ic_mean": 0.6059,
+        "final_score": 0.6059
       },
       "nodes": [
         {
@@ -108,11 +168,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc15a2",
-          "type": "Gene"
+          "id": "Tongue Hairy",
+          "type": "Side Effect"
         },
         {
-          "id": "Ceftazidime",
+          "id": "Dicloxacillin",
           "type": "Compound"
         },
         {
@@ -123,314 +183,123 @@
       "edges": [
         {
           "source": "Benzylpenicillin",
-          "target": "Slc15a2",
-          "label": "binds"
+          "target": "Tongue Hairy",
+          "label": "causes"
         },
         {
-          "source": "Slc15a2",
-          "target": "Ceftazidime",
-          "label": "is bound by"
+          "source": "Tongue Hairy",
+          "target": "Dicloxacillin",
+          "label": "is caused by"
         },
         {
-          "source": "Ceftazidime",
+          "source": "Dicloxacillin",
           "target": "Slc15a1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Benzylpenicillin,Ceftazidime": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_21051"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7077,
-        "final_score": 0.7077
-      },
-      "nodes": [
-        {
-          "id": "Benzylpenicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Spirapril",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzylpenicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Spirapril",
-          "label": "is bound by"
-        },
-        {
-          "source": "Spirapril",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzylpenicillin,Spirapril": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_21052"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6564,
-        "final_score": 0.6564
-      },
-      "nodes": [
-        {
-          "id": "Benzylpenicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Moexipril",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzylpenicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Moexipril",
-          "label": "is bound by"
-        },
-        {
-          "source": "Moexipril",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzylpenicillin,Moexipril": [
-          "Carboxamide"
-        ]
-      },
-      "id": "path_21053"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6263,
-        "final_score": 0.6263
-      },
-      "nodes": [
-        {
-          "id": "Benzylpenicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefadroxil",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzylpenicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefadroxil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefadroxil",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzylpenicillin,Cefadroxil": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_21054"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6263,
-        "final_score": 0.6263
-      },
-      "nodes": [
-        {
-          "id": "Benzylpenicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzylpenicillin",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzylpenicillin,Cefalotin": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_21055"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6263,
-        "final_score": 0.6263
-      },
-      "nodes": [
-        {
-          "id": "Benzylpenicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzylpenicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzylpenicillin,Cefalotin": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_21056"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5411,
-        "final_score": 0.5411
-      },
-      "nodes": [
-        {
-          "id": "Benzylpenicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclacillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzylpenicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cyclacillin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclacillin",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzylpenicillin,Cyclacillin": [
+        "Benzylpenicillin,Dicloxacillin": [
           "Penicillin Antibiotic",
-          "Penicillin"
+          "Penicillinate Anion"
         ]
       },
-      "id": "path_21057"
+      "id": "path_10646"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5719,
+        "final_score": 0.5719
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Jarisch-herxheimer Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cefuroxime",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "Jarisch-herxheimer Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Jarisch-herxheimer Reaction",
+          "target": "Cefuroxime",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cefuroxime",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzylpenicillin,Cefuroxime": [
+          "Organic Heterobicyclic Compound",
+          "Beta-Lactam Antibiotic"
+        ]
+      },
+      "id": "path_10647"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5182,
+        "final_score": 0.5182
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Sodium High",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cefaclor",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "Sodium High",
+          "label": "causes"
+        },
+        {
+          "source": "Sodium High",
+          "target": "Cefaclor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cefaclor",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzylpenicillin,Cefaclor": [
+          "Organic Heterobicyclic Compound",
+          "Beta-Lactam Antibiotic"
+        ]
+      },
+      "id": "path_10648"
     }
-  ],
-  "verbalization": ""
+  ]
 }

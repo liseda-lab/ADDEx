@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00497 - Gene::4986",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5757,
+        "final_score": 0.5757
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Spasm Biliary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Spasm Biliary",
+          "label": "causes"
+        },
+        {
+          "source": "Spasm Biliary",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Codeine": [
+          "Opioid",
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_6187"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5746,
+        "final_score": 0.5746
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Opioid Abuse",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Opioid Abuse",
+          "label": "causes"
+        },
+        {
+          "source": "Opioid Abuse",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Morphine": [
+          "Opioid",
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_6188"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00641 - Gene::10599",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.53,
+        "final_score": 0.53
+      },
+      "nodes": [
+        {
+          "id": "Simvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nerve Palsy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lovastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simvastatin",
+          "target": "Peripheral Nerve Palsy",
+          "label": "causes"
+        },
+        {
+          "source": "Peripheral Nerve Palsy",
+          "target": "Lovastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lovastatin",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simvastatin,Lovastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Statin"
+        ]
+      },
+      "id": "path_8379"
+    }
+  ]
+}

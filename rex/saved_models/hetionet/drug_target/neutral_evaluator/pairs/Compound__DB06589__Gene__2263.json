@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB06589 - Gene::2263",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5748,
+        "final_score": 0.5748
+      },
+      "nodes": [
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Gastrointestinal Fistula",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Fgfr2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pazopanib",
+          "target": "Gastrointestinal Fistula",
+          "label": "causes"
+        },
+        {
+          "source": "Gastrointestinal Fistula",
+          "target": "Regorafenib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Regorafenib",
+          "target": "Fgfr2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pazopanib,Regorafenib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_13759"
+    }
+  ]
 }

@@ -47,7 +47,55 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_24331"
+      "id": "path_12321"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4734,
+        "final_score": 0.4734
+      },
+      "nodes": [
+        {
+          "id": "Ivermectin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ivermectin",
+          "target": "Abcc1",
+          "label": "binds"
+        },
+        {
+          "source": "Abcc1",
+          "target": "Indinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ivermectin,Indinavir": [
+          "Chemical Entity",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_12322"
     },
     {
       "score": {
@@ -64,7 +112,7 @@
           "type": "Gene"
         },
         {
-          "id": "Ethinyl Estradiol",
+          "id": "Indinavir",
           "type": "Compound"
         },
         {
@@ -80,22 +128,69 @@
         },
         {
           "source": "Abcc2",
-          "target": "Ethinyl Estradiol",
+          "target": "Indinavir",
           "label": "is bound by"
         },
         {
-          "source": "Ethinyl Estradiol",
+          "source": "Indinavir",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ivermectin,Ethinyl Estradiol": [
+        "Ivermectin,Indinavir": [
+          "Chemical Entity",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_12323"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4434,
+        "final_score": 0.4434
+      },
+      "nodes": [
+        {
+          "id": "Ivermectin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc2",
+          "type": "Gene"
+        },
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ivermectin",
+          "target": "Abcc2",
+          "label": "binds"
+        },
+        {
+          "source": "Abcc2",
+          "target": "Spironolactone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Spironolactone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ivermectin,Spironolactone": [
           "Chemical Entity"
         ]
       },
-      "id": "path_24332"
+      "id": "path_12324"
     }
-  ],
-  "verbalization": ""
+  ]
 }

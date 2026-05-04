@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5679,
-        "final_score": 0.5679
+        "ic_mean": 0.4916,
+        "final_score": 0.4916
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Abnormal Withdrawal Bleeding",
+          "type": "Side Effect"
         },
         {
-          "id": "Repaglinide",
+          "id": "Estrone",
           "type": "Compound"
         },
         {
@@ -27,31 +27,32 @@
       "edges": [
         {
           "source": "Estradiol",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Abnormal Withdrawal Bleeding",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Repaglinide",
-          "label": "is bound by"
+          "source": "Abnormal Withdrawal Bleeding",
+          "target": "Estrone",
+          "label": "is caused by"
         },
         {
-          "source": "Repaglinide",
+          "source": "Estrone",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estradiol,Repaglinide": [
-          "Organic Cyclic Compound"
+        "Estradiol,Estrone": [
+          "Phenolic Steroid",
+          "Estrogen"
         ]
       },
-      "id": "path_21463"
+      "id": "path_10900"
     },
     {
       "score": {
-        "ic_mean": 0.5165,
-        "final_score": 0.5165
+        "ic_mean": 0.4916,
+        "final_score": 0.4916
       },
       "nodes": [
         {
@@ -59,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Superficial Phlebothrombosis",
+          "type": "Side Effect"
         },
         {
-          "id": "Valsartan",
+          "id": "Estrone",
           "type": "Compound"
         },
         {
@@ -74,31 +75,32 @@
       "edges": [
         {
           "source": "Estradiol",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Superficial Phlebothrombosis",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Valsartan",
-          "label": "is bound by"
+          "source": "Superficial Phlebothrombosis",
+          "target": "Estrone",
+          "label": "is caused by"
         },
         {
-          "source": "Valsartan",
+          "source": "Estrone",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estradiol,Valsartan": [
-          "Hydroxides"
+        "Estradiol,Estrone": [
+          "Phenolic Steroid",
+          "Estrogen"
         ]
       },
-      "id": "path_21464"
+      "id": "path_10901"
     },
     {
       "score": {
-        "ic_mean": 0.4865,
-        "final_score": 0.4865
+        "ic_mean": 0.4632,
+        "final_score": 0.4632
       },
       "nodes": [
         {
@@ -106,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Facial Rash",
+          "type": "Side Effect"
         },
         {
-          "id": "Simeprevir",
+          "id": "Oxcarbazepine",
           "type": "Compound"
         },
         {
@@ -121,27 +123,120 @@
       "edges": [
         {
           "source": "Estradiol",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Facial Rash",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Simeprevir",
-          "label": "is bound by"
+          "source": "Facial Rash",
+          "target": "Oxcarbazepine",
+          "label": "is caused by"
         },
         {
-          "source": "Simeprevir",
+          "source": "Oxcarbazepine",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estradiol,Simeprevir": [
-          "Organic Cyclic Compound"
+        "Estradiol,Oxcarbazepine": [
+          "Organic Polycyclic Compound"
         ]
       },
-      "id": "path_21465"
+      "id": "path_10902"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4513,
+        "final_score": 0.4513
+      },
+      "nodes": [
+        {
+          "id": "Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Mass",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ivacaftor",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estradiol",
+          "target": "Breast Mass",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Mass",
+          "target": "Ivacaftor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ivacaftor",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estradiol,Ivacaftor": [
+          "Phenols"
+        ]
+      },
+      "id": "path_10903"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4431,
+        "final_score": 0.4431
+      },
+      "nodes": [
+        {
+          "id": "Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Nipple Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ivacaftor",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estradiol",
+          "target": "Nipple Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Nipple Pain",
+          "target": "Ivacaftor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ivacaftor",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estradiol,Ivacaftor": [
+          "Phenols"
+        ]
+      },
+      "id": "path_10904"
     }
-  ],
-  "verbalization": ""
+  ]
 }

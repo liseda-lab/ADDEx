@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00486 - Gene::1268",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8887,
+        "final_score": 0.861,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Nabilone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cnr2",
+          "type": "Gene"
+        },
+        {
+          "id": "Cannabinoid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cnr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nabilone",
+          "target": "Cnr2",
+          "label": "binds"
+        },
+        {
+          "source": "Cnr2",
+          "target": "Cannabinoid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Cannabinoid Receptor Activity",
+          "target": "Cnr1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9836"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.75,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Nabilone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cannabinoids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cnr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nabilone",
+          "target": "Cannabinoids",
+          "label": "is included in"
+        },
+        {
+          "source": "Cannabinoids",
+          "target": "Dronabinol",
+          "label": "includes"
+        },
+        {
+          "source": "Dronabinol",
+          "target": "Cnr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nabilone,Cannabinoids": [
+          "Organooxygen Compound"
+        ],
+        "Nabilone,Dronabinol": [
+          "Antiemetic Agent",
+          "Organic Heterotricyclic Compound"
+        ],
+        "Cannabinoids,Dronabinol": [
+          "Cannabinoid"
+        ]
+      },
+      "id": "path_9837"
+    }
+  ]
+}

@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB01234 - Gene::4306",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6536,
+        "final_score": 0.6536
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkalosis Hypokalaemic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fludrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Alkalosis Hypokalaemic",
+          "label": "causes"
+        },
+        {
+          "source": "Alkalosis Hypokalaemic",
+          "target": "Fludrocortisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fludrocortisone",
+          "target": "Nr3c2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Fludrocortisone": [
+          "Therapeutic Glucocorticoid",
+          "17Alpha-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_11744"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6109,
+        "final_score": 0.6109
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nitrogen Balance Negative",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fludrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Nitrogen Balance Negative",
+          "label": "causes"
+        },
+        {
+          "source": "Nitrogen Balance Negative",
+          "target": "Fludrocortisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fludrocortisone",
+          "target": "Nr3c2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Fludrocortisone": [
+          "Therapeutic Glucocorticoid",
+          "17Alpha-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_11745"
+    }
+  ]
 }

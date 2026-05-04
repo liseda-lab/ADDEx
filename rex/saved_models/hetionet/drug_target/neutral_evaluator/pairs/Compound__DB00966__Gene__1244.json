@@ -43,16 +43,16 @@
       ],
       "lowest_common_ancestors": {
         "Telmisartan,Eprosartan": [
-          "Carboxylic Acid",
+          "Organonitrogen Heterocyclic Compound",
           "Angiotensin Ii Receptor Antagonist"
         ]
       },
-      "id": "path_12777"
+      "id": "path_6467"
     },
     {
       "score": {
-        "ic_mean": 0.6876,
-        "final_score": 0.6876
+        "ic_mean": 0.6461,
+        "final_score": 0.6461
       },
       "nodes": [
         {
@@ -60,7 +60,7 @@
           "type": "Compound"
         },
         {
-          "id": "Agtr1",
+          "id": "Slco1b3",
           "type": "Gene"
         },
         {
@@ -75,11 +75,11 @@
       "edges": [
         {
           "source": "Telmisartan",
-          "target": "Agtr1",
+          "target": "Slco1b3",
           "label": "binds"
         },
         {
-          "source": "Agtr1",
+          "source": "Slco1b3",
           "target": "Olmesartan",
           "label": "is bound by"
         },
@@ -91,12 +91,59 @@
       ],
       "lowest_common_ancestors": {
         "Telmisartan,Olmesartan": [
-          "Angiotensin Ii Receptor Antagonist",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Angiotensin Ii Receptor Antagonist"
         ]
       },
-      "id": "path_12778"
+      "id": "path_6468"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5024,
+        "final_score": 0.5024
+      },
+      "nodes": [
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Arthritis Aggravated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Eprosartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Telmisartan",
+          "target": "Arthritis Aggravated",
+          "label": "causes"
+        },
+        {
+          "source": "Arthritis Aggravated",
+          "target": "Eprosartan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Eprosartan",
+          "target": "Abcc2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Telmisartan,Eprosartan": [
+          "Organonitrogen Heterocyclic Compound",
+          "Angiotensin Ii Receptor Antagonist"
+        ]
+      },
+      "id": "path_6469"
     }
-  ],
-  "verbalization": ""
+  ]
 }

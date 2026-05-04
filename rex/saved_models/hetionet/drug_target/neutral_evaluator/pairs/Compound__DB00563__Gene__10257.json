@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6367,
-        "final_score": 0.6367
+        "ic_mean": 0.4493,
+        "final_score": 0.4493
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ggh",
-          "type": "Gene"
+          "id": "Chronic Hepatitis",
+          "type": "Side Effect"
         },
         {
-          "id": "Folic Acid",
+          "id": "Lamivudine",
           "type": "Compound"
         },
         {
@@ -27,215 +27,27 @@
       "edges": [
         {
           "source": "Methotrexate",
-          "target": "Ggh",
-          "label": "binds"
+          "target": "Chronic Hepatitis",
+          "label": "causes"
         },
         {
-          "source": "Ggh",
-          "target": "Folic Acid",
-          "label": "is bound by"
+          "source": "Chronic Hepatitis",
+          "target": "Lamivudine",
+          "label": "is caused by"
         },
         {
-          "source": "Folic Acid",
+          "source": "Lamivudine",
           "target": "Abcc4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methotrexate,Folic Acid": [
-          "Carboxylic Acid"
+        "Methotrexate,Lamivudine": [
+          "Enzyme Inhibitor",
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_23182"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6232,
-        "final_score": 0.6232
-      },
-      "nodes": [
-        {
-          "id": "Methotrexate",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco3a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Alprostadil",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methotrexate",
-          "target": "Slco3a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco3a1",
-          "target": "Alprostadil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alprostadil",
-          "target": "Abcc4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methotrexate,Alprostadil": [
-          "Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_23183"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6066,
-        "final_score": 0.6066
-      },
-      "nodes": [
-        {
-          "id": "Methotrexate",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc11",
-          "type": "Gene"
-        },
-        {
-          "id": "Folic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methotrexate",
-          "target": "Abcc11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc11",
-          "target": "Folic Acid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Folic Acid",
-          "target": "Abcc4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methotrexate,Folic Acid": [
-          "Carboxylic Acid"
-        ]
-      },
-      "id": "path_23184"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6066,
-        "final_score": 0.6066
-      },
-      "nodes": [
-        {
-          "id": "Methotrexate",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc46a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Folic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methotrexate",
-          "target": "Slc46a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slc46a1",
-          "target": "Folic Acid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Folic Acid",
-          "target": "Abcc4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methotrexate,Folic Acid": [
-          "Carboxylic Acid"
-        ]
-      },
-      "id": "path_23185"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5553,
-        "final_score": 0.5553
-      },
-      "nodes": [
-        {
-          "id": "Methotrexate",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco3a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Dinoprostone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methotrexate",
-          "target": "Slco3a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco3a1",
-          "target": "Dinoprostone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dinoprostone",
-          "target": "Abcc4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methotrexate,Dinoprostone": [
-          "Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_23186"
+      "id": "path_11752"
     }
-  ],
-  "verbalization": ""
+  ]
 }

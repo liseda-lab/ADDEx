@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00215 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.467,
+        "final_score": 0.467
+      },
+      "nodes": [
+        {
+          "id": "Citalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "Streptococcal Infection",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Citalopram",
+          "target": "Streptococcal Infection",
+          "label": "causes"
+        },
+        {
+          "source": "Streptococcal Infection",
+          "target": "Erythromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Erythromycin",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Citalopram,Erythromycin": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_8081"
+    }
+  ]
+}

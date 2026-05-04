@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.788,
-        "final_score": 0.788
+        "ic_mean": 0.7377,
+        "final_score": 0.7377
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Htr4",
+          "id": "Htr2c",
           "type": "Gene"
         },
         {
-          "id": "Cinitapride",
-          "type": "Compound"
+          "id": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Htr2a",
@@ -27,74 +27,26 @@
       "edges": [
         {
           "source": "Cisapride",
-          "target": "Htr4",
+          "target": "Htr2c",
           "label": "binds"
         },
         {
-          "source": "Htr4",
-          "target": "Cinitapride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cinitapride",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cisapride,Cinitapride": [
-          "Agent Affecting Nervous System",
-          "Aromatic Ether"
-        ]
-      },
-      "id": "path_4400"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7511,
-        "final_score": 0.7511
-      },
-      "nodes": [
-        {
-          "id": "Cisapride",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr4",
-          "type": "Gene"
-        },
-        {
-          "id": "Serotonin Receptors",
-          "type": "Pathway"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cisapride",
-          "target": "Htr4",
-          "label": "binds"
-        },
-        {
-          "source": "Htr4",
-          "target": "Serotonin Receptors",
+          "source": "Htr2c",
+          "target": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
           "label": "participates"
         },
         {
-          "source": "Serotonin Receptors",
+          "source": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
           "target": "Htr2a",
           "label": "is participated by"
         }
       ],
-      "id": "path_4401"
+      "id": "path_1985"
     },
     {
       "score": {
-        "ic_mean": 0.6225,
-        "final_score": 0.6225
+        "ic_mean": 0.7175,
+        "final_score": 0.7175
       },
       "nodes": [
         {
@@ -102,11 +54,137 @@
           "type": "Compound"
         },
         {
-          "id": "Kcnh2",
+          "id": "Htr4",
           "type": "Gene"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisapride",
+          "target": "Htr4",
+          "label": "binds"
+        },
+        {
+          "source": "Htr4",
+          "target": "Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Receptor Activity",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1986"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7175,
+        "final_score": 0.7175
+      },
+      "nodes": [
+        {
+          "id": "Cisapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr4",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisapride",
+          "target": "Htr4",
+          "label": "binds"
+        },
+        {
+          "source": "Htr4",
+          "target": "G-protein Coupled Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Serotonin Receptor Activity",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1987"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6677,
+        "final_score": 0.6677
+      },
+      "nodes": [
+        {
+          "id": "Cisapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisapride",
+          "target": "Htr2c",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2c",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1988"
+    },
+    {
+      "score": {
+        "ic_mean": 0.598,
+        "final_score": 0.598
+      },
+      "nodes": [
+        {
+          "id": "Cisapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -117,32 +195,32 @@
       "edges": [
         {
           "source": "Cisapride",
-          "target": "Kcnh2",
+          "target": "Htr2c",
           "label": "binds"
         },
         {
-          "source": "Kcnh2",
-          "target": "Mesoridazine",
+          "source": "Htr2c",
+          "target": "Lisuride",
           "label": "is bound by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Lisuride",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cisapride,Mesoridazine": [
+        "Cisapride,Lisuride": [
           "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+          "Monocarboxylic Acid Amide"
         ]
       },
-      "id": "path_4402"
+      "id": "path_1989"
     },
     {
       "score": {
-        "ic_mean": 0.6174,
-        "final_score": 0.6174
+        "ic_mean": 0.5185,
+        "final_score": 0.5185
       },
       "nodes": [
         {
@@ -150,11 +228,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr2b",
+          "id": "Cyp2c19",
           "type": "Gene"
         },
         {
-          "id": "Pramipexole",
+          "id": "Pipotiazine",
           "type": "Compound"
         },
         {
@@ -165,28 +243,26 @@
       "edges": [
         {
           "source": "Cisapride",
-          "target": "Htr2b",
+          "target": "Cyp2c19",
           "label": "binds"
         },
         {
-          "source": "Htr2b",
-          "target": "Pramipexole",
+          "source": "Cyp2c19",
+          "target": "Pipotiazine",
           "label": "is bound by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Pipotiazine",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cisapride,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Cisapride,Pipotiazine": [
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_4403"
+      "id": "path_1990"
     }
-  ],
-  "verbalization": ""
+  ]
 }

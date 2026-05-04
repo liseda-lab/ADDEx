@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00186 - Gene::706",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7239,
+        "final_score": 0.7239
+      },
+      "nodes": [
+        {
+          "id": "Lorazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Ketazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Tspo",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lorazepam",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Ketazolam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ketazolam",
+          "target": "Tspo",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lorazepam,Ketazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_10002"
+    }
+  ]
 }

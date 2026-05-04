@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00420 - Gene::1815",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5959,
+        "final_score": 0.5959
+      },
+      "nodes": [
+        {
+          "id": "Promazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Propiomazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promazine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Propiomazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Propiomazine",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promazine,Propiomazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_14690"
+    }
+  ]
 }

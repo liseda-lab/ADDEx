@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6477,
-        "final_score": 0.6477
+        "ic_mean": 0.6627,
+        "final_score": 0.6627
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a7",
-          "type": "Gene"
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Oxytetracycline",
+          "id": "Aciclovir",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Ganciclovir",
-          "target": "Slc22a7",
-          "label": "binds"
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Slc22a7",
-          "target": "Oxytetracycline",
-          "label": "is bound by"
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Aciclovir",
+          "label": "includes"
         },
         {
-          "source": "Oxytetracycline",
+          "source": "Aciclovir",
           "target": "Slc22a8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ganciclovir,Oxytetracycline": [
-          "Heteroorganic Entity",
-          "Anti-Infective Agent"
+        "Ganciclovir,Aciclovir": [
+          "Dna Polymerase Inhibitor",
+          "2-Aminopurines"
         ]
       },
-      "id": "path_17024"
+      "id": "path_8545"
     },
     {
       "score": {
-        "ic_mean": 0.6177,
-        "final_score": 0.6177
+        "ic_mean": 0.5557,
+        "final_score": 0.5557
       },
       "nodes": [
         {
@@ -60,7 +60,55 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a7",
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Piroxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Piroxicam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Piroxicam",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ganciclovir,Piroxicam": [
+          "Enzyme Inhibitor",
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_8546"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5557,
+        "final_score": 0.5557
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
           "type": "Gene"
         },
         {
@@ -75,11 +123,11 @@
       "edges": [
         {
           "source": "Ganciclovir",
-          "target": "Slc22a7",
+          "target": "Slc22a6",
           "label": "binds"
         },
         {
-          "source": "Slc22a7",
+          "source": "Slc22a6",
           "target": "Cefamandole",
           "label": "is bound by"
         },
@@ -95,8 +143,102 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_17025"
+      "id": "path_8547"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5557,
+        "final_score": 0.5557
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenylbutazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Phenylbutazone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenylbutazone",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ganciclovir,Phenylbutazone": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8548"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4688,
+        "final_score": 0.4688
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Injection Site Phlebitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Injection Site Phlebitis",
+          "label": "causes"
+        },
+        {
+          "source": "Injection Site Phlebitis",
+          "target": "Aciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aciclovir",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ganciclovir,Aciclovir": [
+          "Dna Polymerase Inhibitor",
+          "2-Aminopurines"
+        ]
+      },
+      "id": "path_8549"
     }
-  ],
-  "verbalization": ""
+  ]
 }

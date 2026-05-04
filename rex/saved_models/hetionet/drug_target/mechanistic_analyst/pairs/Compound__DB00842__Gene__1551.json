@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00842 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6109,
+        "final_score": 0.5554,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Midazolam",
+          "label": "includes"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Oxazepam,Midazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Midazolam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_9002"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5725,
-        "final_score": 0.5725
+        "ic_mean": 0.5097,
+        "final_score": 0.5097
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hipk4",
+          "id": "Orm1",
           "type": "Gene"
         },
         {
-          "id": "Imatinib",
+          "id": "Acenocoumarol",
           "type": "Compound"
         },
         {
@@ -27,28 +27,120 @@
       "edges": [
         {
           "source": "Gefitinib",
-          "target": "Hipk4",
+          "target": "Orm1",
           "label": "binds"
         },
         {
-          "source": "Hipk4",
-          "target": "Imatinib",
+          "source": "Orm1",
+          "target": "Acenocoumarol",
           "label": "is bound by"
         },
         {
-          "source": "Imatinib",
+          "source": "Acenocoumarol",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Gefitinib,Imatinib": [
-          "Tertiary Amino Compound",
-          "Antineoplastic Enzyme Inhibitor"
+        "Gefitinib,Acenocoumarol": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_25574"
+      "id": "path_12985"
+    },
+    {
+      "score": {
+        "ic_mean": 0.463,
+        "final_score": 0.463
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Sinoatrial Node Dysfunction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diltiazem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Sinoatrial Node Dysfunction",
+          "label": "causes"
+        },
+        {
+          "source": "Sinoatrial Node Dysfunction",
+          "target": "Diltiazem",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diltiazem",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Diltiazem": [
+          "Aromatic Ether"
+        ]
+      },
+      "id": "path_12986"
+    },
+    {
+      "score": {
+        "ic_mean": 0.458,
+        "final_score": 0.458
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Alveolitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Alveolitis",
+          "label": "causes"
+        },
+        {
+          "source": "Alveolitis",
+          "target": "Fenofibrate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenofibrate",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Fenofibrate": [
+          "Aromatic Ether"
+        ]
+      },
+      "id": "path_12987"
     }
-  ],
-  "verbalization": ""
+  ]
 }

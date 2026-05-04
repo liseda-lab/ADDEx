@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7819,
-        "final_score": 0.7819
+        "ic_mean": 0.791,
+        "final_score": 0.791
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cholinergic Antagonists",
-          "type": "Pharmacologic Class"
+          "id": "Chrm5",
+          "type": "Gene"
         },
         {
-          "id": "Aclidinium",
-          "type": "Compound"
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Chrm2",
@@ -27,26 +27,21 @@
       "edges": [
         {
           "source": "Methylscopolamine Bromide",
-          "target": "Cholinergic Antagonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Cholinergic Antagonists",
-          "target": "Aclidinium",
-          "label": "includes"
-        },
-        {
-          "source": "Aclidinium",
-          "target": "Chrm2",
+          "target": "Chrm5",
           "label": "binds"
+        },
+        {
+          "source": "Chrm5",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
+          "target": "Chrm2",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Aclidinium": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_25537"
+      "id": "path_12961"
     },
     {
       "score": {
@@ -93,378 +88,7 @@
           "Organic Molecule"
         ]
       },
-      "id": "path_25538"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7535,
-        "final_score": 0.7535
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Muscarinic Acetylcholine Receptors",
-          "type": "Pathway"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Muscarinic Acetylcholine Receptors",
-          "label": "participates"
-        },
-        {
-          "source": "Muscarinic Acetylcholine Receptors",
-          "target": "Chrm2",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_25539"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7381,
-        "final_score": 0.7381
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Glycopyrrolate",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Glycopyrrolate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glycopyrrolate",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Glycopyrrolate": [
-          "Quaternary Ammonium Salt"
-        ]
-      },
-      "id": "path_25540"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6868,
-        "final_score": 0.6868
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Anisotropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Anisotropine Methylbromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Anisotropine Methylbromide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Anisotropine Methylbromide": [
-          "Quaternary Ammonium Salt"
-        ]
-      },
-      "id": "path_25541"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6868,
-        "final_score": 0.6868
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Homatropine Methylbromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Homatropine Methylbromide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25542"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6868,
-        "final_score": 0.6868
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Dicyclomine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Dicyclomine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dicyclomine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Dicyclomine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_25543"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6868,
-        "final_score": 0.6868
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Atropine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Atropine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atropine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Atropine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_25544"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6769,
-        "final_score": 0.6769
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Anisotropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Anisotropine Methylbromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Anisotropine Methylbromide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Anisotropine Methylbromide": [
-          "Quaternary Ammonium Salt"
-        ]
-      },
-      "id": "path_25545"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6769,
-        "final_score": 0.6769
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Dicyclomine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Dicyclomine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dicyclomine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Dicyclomine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_25546"
+      "id": "path_12962"
     },
     {
       "score": {
@@ -511,7 +135,7 @@
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25547"
+      "id": "path_12963"
     },
     {
       "score": {
@@ -528,7 +152,7 @@
           "type": "Gene"
         },
         {
-          "id": "Metixene",
+          "id": "Propiomazine",
           "type": "Compound"
         },
         {
@@ -544,350 +168,21 @@
         },
         {
           "source": "Chrm5",
-          "target": "Metixene",
+          "target": "Propiomazine",
           "label": "is bound by"
         },
         {
-          "source": "Metixene",
+          "source": "Propiomazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Metixene": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25548"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6568,
-        "final_score": 0.6568
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Scopolamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Scopolamine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Scopolamine": [
+        "Methylscopolamine Bromide,Propiomazine": [
           "Carbonyl Compound"
         ]
       },
-      "id": "path_25549"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6354,
-        "final_score": 0.6354
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxyphencyclimine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Oxyphencyclimine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxyphencyclimine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Oxyphencyclimine": [
-          "Carboxylic Acid"
-        ]
-      },
-      "id": "path_25550"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6354,
-        "final_score": 0.6354
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Mepenzolate",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Mepenzolate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mepenzolate",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Mepenzolate": [
-          "Organic Molecule"
-        ]
-      },
-      "id": "path_25551"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6256,
-        "final_score": 0.6256
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxyphencyclimine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Oxyphencyclimine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxyphencyclimine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Oxyphencyclimine": [
-          "Carboxylic Acid"
-        ]
-      },
-      "id": "path_25552"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6256,
-        "final_score": 0.6256
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Mepenzolate",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Mepenzolate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mepenzolate",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Mepenzolate": [
-          "Organic Molecule"
-        ]
-      },
-      "id": "path_25553"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6256,
-        "final_score": 0.6256
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Homatropine Methylbromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Homatropine Methylbromide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25554"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6256,
-        "final_score": 0.6256
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Hyoscyamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Hyoscyamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hyoscyamine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Hyoscyamine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_25555"
+      "id": "path_12964"
     },
     {
       "score": {
@@ -934,12 +229,12 @@
           "Organic Molecule"
         ]
       },
-      "id": "path_25556"
+      "id": "path_12965"
     },
     {
       "score": {
-        "ic_mean": 0.6054,
-        "final_score": 0.6054
+        "ic_mean": 0.6048,
+        "final_score": 0.6048
       },
       "nodes": [
         {
@@ -947,11 +242,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm1",
-          "type": "Gene"
+          "id": "Cycloplegia",
+          "type": "Side Effect"
         },
         {
-          "id": "Trihexyphenidyl",
+          "id": "Propantheline",
           "type": "Compound"
         },
         {
@@ -962,73 +257,26 @@
       "edges": [
         {
           "source": "Methylscopolamine Bromide",
-          "target": "Chrm1",
-          "label": "binds"
+          "target": "Cycloplegia",
+          "label": "causes"
         },
         {
-          "source": "Chrm1",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
+          "source": "Cycloplegia",
+          "target": "Propantheline",
+          "label": "is caused by"
         },
         {
-          "source": "Trihexyphenidyl",
+          "source": "Propantheline",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Trihexyphenidyl": [
-          "Organonitrogen Compound"
+        "Methylscopolamine Bromide,Propantheline": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_25557"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6054,
-        "final_score": 0.6054
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Procyclidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Procyclidine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Procyclidine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Procyclidine": [
-          "Organic Hydroxy Compound"
-        ]
-      },
-      "id": "path_25558"
+      "id": "path_12966"
     },
     {
       "score": {
@@ -1075,106 +323,12 @@
           "Organic Molecule"
         ]
       },
-      "id": "path_25559"
+      "id": "path_12967"
     },
     {
       "score": {
-        "ic_mean": 0.5955,
-        "final_score": 0.5955
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Trihexyphenidyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trihexyphenidyl",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Trihexyphenidyl": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25560"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5955,
-        "final_score": 0.5955
-      },
-      "nodes": [
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Procyclidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Procyclidine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Procyclidine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Procyclidine": [
-          "Organic Hydroxy Compound"
-        ]
-      },
-      "id": "path_25561"
-    },
-    {
-      "score": {
-        "ic_mean": 0.584,
-        "final_score": 0.584
+        "ic_mean": 0.5936,
+        "final_score": 0.5936
       },
       "nodes": [
         {
@@ -1186,7 +340,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Dicyclomine",
+          "id": "Propantheline",
           "type": "Compound"
         },
         {
@@ -1202,21 +356,21 @@
         },
         {
           "source": "Bloated Feeling",
-          "target": "Dicyclomine",
+          "target": "Propantheline",
           "label": "is caused by"
         },
         {
-          "source": "Dicyclomine",
+          "source": "Propantheline",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methylscopolamine Bromide,Dicyclomine": [
-          "Carbonyl Compound"
+        "Methylscopolamine Bromide,Propantheline": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_25562"
+      "id": "path_12968"
     },
     {
       "score": {
@@ -1263,7 +417,242 @@
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25563"
+      "id": "path_12969"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5615,
+        "final_score": 0.5615
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypohidrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mepenzolate",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Hypohidrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Hypohidrosis",
+          "target": "Mepenzolate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mepenzolate",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Mepenzolate": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_12970"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5615,
+        "final_score": 0.5615
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sweating Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mepenzolate",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Sweating Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Sweating Decreased",
+          "target": "Mepenzolate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mepenzolate",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Mepenzolate": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_12971"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5563,
+        "final_score": 0.5563
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypohidrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propantheline",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Hypohidrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Hypohidrosis",
+          "target": "Propantheline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propantheline",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Propantheline": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_12972"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5563,
+        "final_score": 0.5563
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sweating Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propantheline",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Sweating Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Sweating Decreased",
+          "target": "Propantheline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propantheline",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Propantheline": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_12973"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5497,
+        "final_score": 0.5497
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cycloplegia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Cycloplegia",
+          "label": "causes"
+        },
+        {
+          "source": "Cycloplegia",
+          "target": "Hyoscyamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Hyoscyamine": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_12974"
     },
     {
       "score": {
@@ -1310,8 +699,208 @@
           "Carbonyl Compound"
         ]
       },
-      "id": "path_25564"
+      "id": "path_12975"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5012,
+        "final_score": 0.5012
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypohidrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Hypohidrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Hypohidrosis",
+          "target": "Hyoscyamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Hyoscyamine": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_12976"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5012,
+        "final_score": 0.5012
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sweating Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Sweating Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Sweating Decreased",
+          "target": "Hyoscyamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Hyoscyamine": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_12977"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4832,
+        "final_score": 0.4832
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclandelate",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Cyclandelate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclandelate",
+          "target": "Hyoscyamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Cyclandelate": [
+          "Organic Hydroxy Compound"
+        ],
+        "Methylscopolamine Bromide,Hyoscyamine": [
+          "Carbonyl Compound"
+        ],
+        "Cyclandelate,Hyoscyamine": [
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_12978"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4832,
+        "final_score": 0.4832
+      },
+      "nodes": [
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Homatropine Methylbromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Homatropine Methylbromide",
+          "label": "resembles"
+        },
+        {
+          "source": "Homatropine Methylbromide",
+          "target": "Hyoscyamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylscopolamine Bromide,Homatropine Methylbromide": [
+          "Bromide Salt"
+        ],
+        "Methylscopolamine Bromide,Hyoscyamine": [
+          "Carbonyl Compound"
+        ],
+        "Homatropine Methylbromide,Hyoscyamine": [
+          "Antimuscarinic Agent",
+          "Azabicycloalkane"
+        ]
+      },
+      "id": "path_12979"
     }
-  ],
-  "verbalization": ""
+  ]
 }

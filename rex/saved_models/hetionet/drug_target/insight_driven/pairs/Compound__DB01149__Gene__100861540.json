@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01149 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.39,
+        "final_score": 0.39
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Keratoconjunctivitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nisoldipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Keratoconjunctivitis",
+          "label": "causes"
+        },
+        {
+          "source": "Keratoconjunctivitis",
+          "target": "Nisoldipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nisoldipine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nefazodone,Nisoldipine": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_1829"
+    }
+  ]
+}

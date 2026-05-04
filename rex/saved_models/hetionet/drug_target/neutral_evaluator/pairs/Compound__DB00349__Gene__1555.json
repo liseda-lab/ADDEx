@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.564,
-        "final_score": 0.564
+        "ic_mean": 0.594,
+        "final_score": 0.594
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -32,23 +32,69 @@
         },
         {
           "source": "Cyp2c18",
-          "target": "Antipyrine",
+          "target": "Ifosfamide",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Ifosfamide",
           "target": "Cyp2b6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clobazam,Antipyrine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+        "Clobazam,Ifosfamide": [
+          "Organochlorine Compound"
         ]
       },
-      "id": "path_22963"
+      "id": "path_11654"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5592,
+        "final_score": 0.5592
+      },
+      "nodes": [
+        {
+          "id": "Clobazam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Methylphenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clobazam",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Methylphenobarbital",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methylphenobarbital",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clobazam,Methylphenobarbital": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_11655"
     }
-  ],
-  "verbalization": ""
+  ]
 }

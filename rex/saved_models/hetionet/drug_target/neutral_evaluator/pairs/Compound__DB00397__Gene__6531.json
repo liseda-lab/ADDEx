@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6585,
-        "final_score": 0.6585
+        "ic_mean": 0.3752,
+        "final_score": 0.3752
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc6a2",
-          "type": "Gene"
+          "id": "Phenol",
+          "type": "Compound"
         },
         {
-          "id": "Phenmetrazine",
+          "id": "Dextroamphetamine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,33 @@
       "edges": [
         {
           "source": "Phenylpropanolamine",
-          "target": "Slc6a2",
-          "label": "binds"
+          "target": "Phenol",
+          "label": "resembles"
         },
         {
-          "source": "Slc6a2",
-          "target": "Phenmetrazine",
-          "label": "is bound by"
+          "source": "Phenol",
+          "target": "Dextroamphetamine",
+          "label": "resembles"
         },
         {
-          "source": "Phenmetrazine",
+          "source": "Dextroamphetamine",
           "target": "Slc6a3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phenylpropanolamine,Phenmetrazine": [
+        "Phenylpropanolamine,Phenol": [
+          "Organic Molecular Entity"
+        ],
+        "Phenylpropanolamine,Dextroamphetamine": [
           "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+          "Amine"
+        ],
+        "Phenol,Dextroamphetamine": [
+          "Organic Molecular Entity"
         ]
       },
-      "id": "path_11525"
+      "id": "path_5755"
     }
-  ],
-  "verbalization": ""
+  ]
 }

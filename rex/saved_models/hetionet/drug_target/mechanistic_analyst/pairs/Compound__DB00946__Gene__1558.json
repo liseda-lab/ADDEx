@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00946 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.6667,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Phenprocoumon",
+          "type": "Compound"
+        },
+        {
+          "id": "Vitamin K Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenprocoumon",
+          "target": "Vitamin K Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Vitamin K Inhibitors",
+          "target": "Warfarin",
+          "label": "includes"
+        },
+        {
+          "source": "Warfarin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenprocoumon,Warfarin": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
+        ]
+      },
+      "id": "path_6264"
+    }
+  ]
+}

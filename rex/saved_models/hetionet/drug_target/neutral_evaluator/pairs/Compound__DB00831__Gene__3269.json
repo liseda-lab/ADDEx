@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7175,
-        "final_score": 0.7175
+        "ic_mean": 0.7224,
+        "final_score": 0.7224
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
+          "id": "Htr6",
+          "type": "Gene"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptor Activity",
+          "target": "Hrh1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5400"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5535,
+        "final_score": 0.5535
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pill Rolling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -27,33 +69,27 @@
       "edges": [
         {
           "source": "Trifluoperazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
+          "target": "Pill Rolling",
+          "label": "causes"
         },
         {
-          "source": "Phenothiazines",
-          "target": "Mesoridazine",
-          "label": "includes"
+          "source": "Pill Rolling",
+          "target": "Chlorpromazine",
+          "label": "is caused by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Chlorpromazine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trifluoperazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
-        "Trifluoperazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
-        ],
-        "Phenothiazines,Mesoridazine": [
-          "Phenothiazines"
+        "Trifluoperazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_10879"
+      "id": "path_5401"
     },
     {
       "score": {
@@ -100,8 +136,111 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_10880"
+      "id": "path_5402"
+    },
+    {
+      "score": {
+        "ic_mean": 0.513,
+        "final_score": 0.513
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Fluphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_5403"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4159,
+        "final_score": 0.4159
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Fluphenazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Trifluoperazine,Fluphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Clocapramine,Fluphenazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5404"
     }
-  ],
-  "verbalization": ""
+  ]
 }

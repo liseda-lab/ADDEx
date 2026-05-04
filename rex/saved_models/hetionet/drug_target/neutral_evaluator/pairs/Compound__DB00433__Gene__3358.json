@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7203,
-        "final_score": 0.7203
+        "ic_mean": 0.5402,
+        "final_score": 0.5402
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
+          "id": "Obstipation",
+          "type": "Side Effect"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -27,34 +27,27 @@
       "edges": [
         {
           "source": "Prochlorperazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
+          "target": "Obstipation",
+          "label": "causes"
         },
         {
-          "source": "Phenothiazines",
-          "target": "Mesoridazine",
-          "label": "includes"
+          "source": "Obstipation",
+          "target": "Lisuride",
+          "label": "is caused by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Lisuride",
           "target": "Htr2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Prochlorperazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
-        "Prochlorperazine,Mesoridazine": [
-          "Tertiary Amino Compound",
+        "Prochlorperazine,Lisuride": [
+          "Organonitrogen Compound",
           "Agent Affecting Nervous System"
-        ],
-        "Phenothiazines,Mesoridazine": [
-          "Phenothiazines"
         ]
       },
-      "id": "path_10555"
+      "id": "path_5207"
     }
-  ],
-  "verbalization": ""
+  ]
 }

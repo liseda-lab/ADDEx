@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01118 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6926,
+        "final_score": 0.763,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amiodarone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2582"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4226,
+        "final_score": 0.4226
+      },
+      "nodes": [
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2d6 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amiodarone",
+          "target": "Cytochrome P450 2d6 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2d6 Inhibitors",
+          "target": "Quinidine",
+          "label": "includes"
+        },
+        {
+          "source": "Quinidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amiodarone,Quinidine": [
+          "Cation Channel Blocker",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2583"
+    }
+  ]
+}

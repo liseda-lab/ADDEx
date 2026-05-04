@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB01587 - Gene::5243",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5896,
+        "final_score": 0.5896
+      },
+      "nodes": [
+        {
+          "id": "Ketazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrd",
+          "type": "Gene"
+        },
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketazolam",
+          "target": "Gabrd",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrd",
+          "target": "Flurazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Flurazepam",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketazolam,Flurazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_12988"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5383,
+        "final_score": 0.5383
+      },
+      "nodes": [
+        {
+          "id": "Ketazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketazolam",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Flurazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Flurazepam",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketazolam,Flurazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_12989"
+    }
+  ]
 }

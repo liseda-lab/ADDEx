@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB00472 - Gene::10280",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4652,
+        "final_score": 0.4652
+      },
+      "nodes": [
+        {
+          "id": "Fluoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Physical Assault",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Donepezil",
+          "type": "Compound"
+        },
+        {
+          "id": "Sigmar1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxetine",
+          "target": "Physical Assault",
+          "label": "causes"
+        },
+        {
+          "source": "Physical Assault",
+          "target": "Donepezil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Donepezil",
+          "target": "Sigmar1",
+          "label": "binds"
+        }
+      ],
+      "id": "path_14600"
+    }
+  ]
 }

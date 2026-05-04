@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01156 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4394,
+        "final_score": 0.4394
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Vaginal Irritation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Letrozole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Vaginal Irritation",
+          "label": "causes"
+        },
+        {
+          "source": "Vaginal Irritation",
+          "target": "Letrozole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Letrozole",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Letrozole": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_12984"
+    }
+  ]
 }

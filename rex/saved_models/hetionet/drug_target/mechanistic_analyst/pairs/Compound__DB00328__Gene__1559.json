@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00328 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5469,
+        "final_score": 0.5469
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ankylosing Spondylitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Ankylosing Spondylitis",
+          "label": "causes"
+        },
+        {
+          "source": "Ankylosing Spondylitis",
+          "target": "Meloxicam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Meloxicam",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Meloxicam": [
+          "Cyclooxygenase Inhibitor",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_6675"
+    }
+  ]
+}

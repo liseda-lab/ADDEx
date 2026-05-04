@@ -3,6 +3,132 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.6298,
+        "final_score": 0.6298
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1174"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6232,
+        "final_score": 0.6232
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1175"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6232,
+        "final_score": 0.6232
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1176"
+    },
+    {
+      "score": {
         "ic_mean": 0.5376,
         "final_score": 0.5376
       },
@@ -46,54 +172,7 @@
           "Oxacycle"
         ]
       },
-      "id": "path_2457"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5359,
-        "final_score": 0.5359
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Mifepristone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Mifepristone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mifepristone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Mifepristone": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_2458"
+      "id": "path_1177"
     },
     {
       "score": {
@@ -110,7 +189,7 @@
           "type": "Gene"
         },
         {
-          "id": "Efavirenz",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -126,27 +205,26 @@
         },
         {
           "source": "Cyp2b6",
-          "target": "Efavirenz",
+          "target": "Clopidogrel",
           "label": "is bound by"
         },
         {
-          "source": "Efavirenz",
+          "source": "Clopidogrel",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Efavirenz": [
-          "Oxacycle",
-          "Antiviral Agent"
+        "Amprenavir,Clopidogrel": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2459"
+      "id": "path_1178"
     },
     {
       "score": {
-        "ic_mean": 0.5107,
-        "final_score": 0.5107
+        "ic_mean": 0.5272,
+        "final_score": 0.5272
       },
       "nodes": [
         {
@@ -154,11 +232,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
+          "id": "Cyp2b6",
           "type": "Gene"
         },
         {
-          "id": "Sulfadiazine",
+          "id": "Lopinavir",
           "type": "Compound"
         },
         {
@@ -169,127 +247,32 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Cyp2c8",
+          "target": "Cyp2b6",
           "label": "binds"
         },
         {
-          "source": "Cyp2c8",
-          "target": "Sulfadiazine",
+          "source": "Cyp2b6",
+          "target": "Lopinavir",
           "label": "is bound by"
         },
         {
-          "source": "Sulfadiazine",
+          "source": "Lopinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Sulfadiazine": [
-          "Sulfonamide",
-          "Anti-Infective Agent"
+        "Amprenavir,Lopinavir": [
+          "Organooxygen Compound",
+          "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2460"
+      "id": "path_1179"
     },
     {
       "score": {
-        "ic_mean": 0.5059,
-        "final_score": 0.5059
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Colchicine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Colchicine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Colchicine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Colchicine": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_2461"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5059,
-        "final_score": 0.5059
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ivermectin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Ivermectin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ivermectin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Ivermectin": [
-          "Chemical Entity",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_2462"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5019,
-        "final_score": 0.5019
+        "ic_mean": 0.5226,
+        "final_score": 0.5226
       },
       "nodes": [
         {
@@ -301,7 +284,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Nevirapine",
+          "id": "Fosamprenavir",
           "type": "Compound"
         },
         {
@@ -317,27 +300,27 @@
         },
         {
           "source": "Insulin Resistance",
-          "target": "Nevirapine",
+          "target": "Fosamprenavir",
           "label": "is caused by"
         },
         {
-          "source": "Nevirapine",
+          "source": "Fosamprenavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Nevirapine": [
-          "Organic Heterocyclic Compound",
-          "Antiviral Agent"
+        "Amprenavir,Fosamprenavir": [
+          "Sulfonamide",
+          "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2463"
+      "id": "path_1180"
     },
     {
       "score": {
-        "ic_mean": 0.4924,
-        "final_score": 0.4924
+        "ic_mean": 0.5131,
+        "final_score": 0.5131
       },
       "nodes": [
         {
@@ -345,11 +328,11 @@
           "type": "Compound"
         },
         {
-          "id": "Lipodystrophy",
+          "id": "Fat Redistribution",
           "type": "Side Effect"
         },
         {
-          "id": "Nevirapine",
+          "id": "Fosamprenavir",
           "type": "Compound"
         },
         {
@@ -360,27 +343,27 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Lipodystrophy",
+          "target": "Fat Redistribution",
           "label": "causes"
         },
         {
-          "source": "Lipodystrophy",
-          "target": "Nevirapine",
+          "source": "Fat Redistribution",
+          "target": "Fosamprenavir",
           "label": "is caused by"
         },
         {
-          "source": "Nevirapine",
+          "source": "Fosamprenavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Nevirapine": [
-          "Organic Heterocyclic Compound",
-          "Antiviral Agent"
+        "Amprenavir,Fosamprenavir": [
+          "Sulfonamide",
+          "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2464"
+      "id": "path_1181"
     },
     {
       "score": {
@@ -427,108 +410,12 @@
           "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2465"
+      "id": "path_1182"
     },
     {
       "score": {
-        "ic_mean": 0.4846,
-        "final_score": 0.4846
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Abiraterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Abiraterone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Abiraterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Abiraterone": [
-          "Organic Heteromonocyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_2466"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4846,
-        "final_score": 0.4846
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ritonavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Ritonavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ritonavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Ritonavir": [
-          "Organosulfur Compound",
-          "Hiv Protease Inhibitor"
-        ]
-      },
-      "id": "path_2467"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4828,
-        "final_score": 0.4828
+        "ic_mean": 0.477,
+        "final_score": 0.477
       },
       "nodes": [
         {
@@ -540,7 +427,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Efavirenz",
+          "id": "Darunavir",
           "type": "Compound"
         },
         {
@@ -556,27 +443,27 @@
         },
         {
           "source": "Insulin Resistance",
-          "target": "Efavirenz",
+          "target": "Darunavir",
           "label": "is caused by"
         },
         {
-          "source": "Efavirenz",
+          "source": "Darunavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Efavirenz": [
+        "Amprenavir,Darunavir": [
           "Oxacycle",
-          "Antiviral Agent"
+          "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2468"
+      "id": "path_1183"
     },
     {
       "score": {
-        "ic_mean": 0.477,
-        "final_score": 0.477
+        "ic_mean": 0.4768,
+        "final_score": 0.4768
       },
       "nodes": [
         {
@@ -588,7 +475,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Darunavir",
+          "id": "Etravirine",
           "type": "Compound"
         },
         {
@@ -604,70 +491,22 @@
         },
         {
           "source": "Hepatitis B",
-          "target": "Darunavir",
+          "target": "Etravirine",
           "label": "is caused by"
         },
         {
-          "source": "Darunavir",
+          "source": "Etravirine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Darunavir": [
-          "Sulfonamide",
-          "Hiv Protease Inhibitor"
+        "Amprenavir,Etravirine": [
+          "Antiviral Agent",
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2469"
-    },
-    {
-      "score": {
-        "ic_mean": 0.477,
-        "final_score": 0.477
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Insulin Resistance",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Darunavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Insulin Resistance",
-          "label": "causes"
-        },
-        {
-          "source": "Insulin Resistance",
-          "target": "Darunavir",
-          "label": "is caused by"
-        },
-        {
-          "source": "Darunavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Darunavir": [
-          "Sulfonamide",
-          "Hiv Protease Inhibitor"
-        ]
-      },
-      "id": "path_2470"
+      "id": "path_1184"
     },
     {
       "score": {
@@ -684,7 +523,7 @@
           "type": "Gene"
         },
         {
-          "id": "Ticlopidine",
+          "id": "Permethrin",
           "type": "Compound"
         },
         {
@@ -700,26 +539,26 @@
         },
         {
           "source": "Cyp2b6",
-          "target": "Ticlopidine",
+          "target": "Permethrin",
           "label": "is bound by"
         },
         {
-          "source": "Ticlopidine",
+          "source": "Permethrin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Ticlopidine": [
-          "Organosulfur Compound"
+        "Amprenavir,Permethrin": [
+          "Carboxylic Ester"
         ]
       },
-      "id": "path_2471"
+      "id": "path_1185"
     },
     {
       "score": {
-        "ic_mean": 0.4733,
-        "final_score": 0.4733
+        "ic_mean": 0.4758,
+        "final_score": 0.4758
       },
       "nodes": [
         {
@@ -727,11 +566,11 @@
           "type": "Compound"
         },
         {
-          "id": "Lipodystrophy",
-          "type": "Side Effect"
+          "id": "Cyp2b6",
+          "type": "Gene"
         },
         {
-          "id": "Efavirenz",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -742,123 +581,26 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Lipodystrophy",
-          "label": "causes"
+          "target": "Cyp2b6",
+          "label": "binds"
         },
         {
-          "source": "Lipodystrophy",
-          "target": "Efavirenz",
-          "label": "is caused by"
+          "source": "Cyp2b6",
+          "target": "Ifosfamide",
+          "label": "is bound by"
         },
         {
-          "source": "Efavirenz",
+          "source": "Ifosfamide",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Efavirenz": [
-          "Oxacycle",
-          "Antiviral Agent"
+        "Amprenavir,Ifosfamide": [
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_2472"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4733,
-        "final_score": 0.4733
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Buffalo Hump",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Efavirenz",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Buffalo Hump",
-          "label": "causes"
-        },
-        {
-          "source": "Buffalo Hump",
-          "target": "Efavirenz",
-          "label": "is caused by"
-        },
-        {
-          "source": "Efavirenz",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Efavirenz": [
-          "Oxacycle",
-          "Antiviral Agent"
-        ]
-      },
-      "id": "path_2473"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4733,
-        "final_score": 0.4733
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Fat Redistribution",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Efavirenz",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Fat Redistribution",
-          "label": "causes"
-        },
-        {
-          "source": "Fat Redistribution",
-          "target": "Efavirenz",
-          "label": "is caused by"
-        },
-        {
-          "source": "Efavirenz",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Efavirenz": [
-          "Oxacycle",
-          "Antiviral Agent"
-        ]
-      },
-      "id": "path_2474"
+      "id": "path_1186"
     },
     {
       "score": {
@@ -905,12 +647,12 @@
           "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2475"
+      "id": "path_1187"
     },
     {
       "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
+        "ic_mean": 0.4674,
+        "final_score": 0.4674
       },
       "nodes": [
         {
@@ -918,107 +660,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Vemurafenib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Vemurafenib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Vemurafenib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Vemurafenib": [
-          "Sulfonamide",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_2476"
-    },
-    {
-      "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Erythromycin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Erythromycin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erythromycin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Erythromycin": [
-          "Oxacycle",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_2477"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4667,
-        "final_score": 0.4667
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Hepatitis B",
+          "id": "Buffalo Hump",
           "type": "Side Effect"
         },
         {
-          "id": "Rilpivirine",
+          "id": "Etravirine",
           "type": "Compound"
         },
         {
@@ -1029,32 +675,32 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Hepatitis B",
+          "target": "Buffalo Hump",
           "label": "causes"
         },
         {
-          "source": "Hepatitis B",
-          "target": "Rilpivirine",
+          "source": "Buffalo Hump",
+          "target": "Etravirine",
           "label": "is caused by"
         },
         {
-          "source": "Rilpivirine",
+          "source": "Etravirine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Rilpivirine": [
-          "Organic Heteromonocyclic Compound",
-          "Antiviral Agent"
+        "Amprenavir,Etravirine": [
+          "Antiviral Agent",
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2478"
+      "id": "path_1188"
     },
     {
       "score": {
-        "ic_mean": 0.4593,
-        "final_score": 0.4593
+        "ic_mean": 0.4674,
+        "final_score": 0.4674
       },
       "nodes": [
         {
@@ -1062,58 +708,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Ticlopidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Ticlopidine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ticlopidine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Ticlopidine": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_2479"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4576,
-        "final_score": 0.4576
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Depressive Disorder",
+          "id": "Lipodystrophy",
           "type": "Side Effect"
         },
         {
-          "id": "Alosetron",
+          "id": "Etravirine",
           "type": "Compound"
         },
         {
@@ -1124,31 +723,32 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Depressive Disorder",
+          "target": "Lipodystrophy",
           "label": "causes"
         },
         {
-          "source": "Depressive Disorder",
-          "target": "Alosetron",
+          "source": "Lipodystrophy",
+          "target": "Etravirine",
           "label": "is caused by"
         },
         {
-          "source": "Alosetron",
+          "source": "Etravirine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Alosetron": [
-          "Organic Heterocyclic Compound"
+        "Amprenavir,Etravirine": [
+          "Antiviral Agent",
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2480"
+      "id": "path_1189"
     },
     {
       "score": {
-        "ic_mean": 0.4572,
-        "final_score": 0.4572
+        "ic_mean": 0.4591,
+        "final_score": 0.4591
       },
       "nodes": [
         {
@@ -1156,11 +756,11 @@
           "type": "Compound"
         },
         {
-          "id": "Depressive Disorder",
+          "id": "Lipodystrophy Acquired",
           "type": "Side Effect"
         },
         {
-          "id": "Rilpivirine",
+          "id": "Etravirine",
           "type": "Compound"
         },
         {
@@ -1171,32 +771,32 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Depressive Disorder",
+          "target": "Lipodystrophy Acquired",
           "label": "causes"
         },
         {
-          "source": "Depressive Disorder",
-          "target": "Rilpivirine",
+          "source": "Lipodystrophy Acquired",
+          "target": "Etravirine",
           "label": "is caused by"
         },
         {
-          "source": "Rilpivirine",
+          "source": "Etravirine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Rilpivirine": [
-          "Organic Heteromonocyclic Compound",
-          "Antiviral Agent"
+        "Amprenavir,Etravirine": [
+          "Antiviral Agent",
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2481"
+      "id": "path_1190"
     },
     {
       "score": {
-        "ic_mean": 0.4545,
-        "final_score": 0.4545
+        "ic_mean": 0.4582,
+        "final_score": 0.4582
       },
       "nodes": [
         {
@@ -1204,11 +804,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc1",
-          "type": "Gene"
+          "id": "Insulin Resistance",
+          "type": "Side Effect"
         },
         {
-          "id": "Sulfinpyrazone",
+          "id": "Atazanavir",
           "type": "Compound"
         },
         {
@@ -1219,169 +819,32 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
+          "target": "Insulin Resistance",
+          "label": "causes"
         },
         {
-          "source": "Abcc1",
-          "target": "Sulfinpyrazone",
-          "label": "is bound by"
+          "source": "Insulin Resistance",
+          "target": "Atazanavir",
+          "label": "is caused by"
         },
         {
-          "source": "Sulfinpyrazone",
+          "source": "Atazanavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Sulfinpyrazone": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_2482"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4545,
-        "final_score": 0.4545
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Rosuvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rosuvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Rosuvastatin": [
-          "Sulfonamide",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_2483"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4545,
-        "final_score": 0.4545
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_2484"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4545,
-        "final_score": 0.4545
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Indinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Indinavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Indinavir": [
-          "Organic Heteromonocyclic Compound",
+        "Amprenavir,Atazanavir": [
+          "Heteroorganic Entity",
           "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2485"
+      "id": "path_1191"
     },
     {
       "score": {
-        "ic_mean": 0.4545,
-        "final_score": 0.4545
+        "ic_mean": 0.4463,
+        "final_score": 0.4463
       },
       "nodes": [
         {
@@ -1389,11 +852,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc1",
-          "type": "Gene"
+          "id": "Insulin Resistance",
+          "type": "Side Effect"
         },
         {
-          "id": "Progesterone",
+          "id": "Nelfinavir",
           "type": "Compound"
         },
         {
@@ -1404,73 +867,27 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
+          "target": "Insulin Resistance",
+          "label": "causes"
         },
         {
-          "source": "Abcc1",
-          "target": "Progesterone",
-          "label": "is bound by"
+          "source": "Insulin Resistance",
+          "target": "Nelfinavir",
+          "label": "is caused by"
         },
         {
-          "source": "Progesterone",
+          "source": "Nelfinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Progesterone": [
-          "Carbonyl Compound"
+        "Amprenavir,Nelfinavir": [
+          "Organic Heterocyclic Compound",
+          "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2486"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4458,
-        "final_score": 0.4458
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2b6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2b6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Antipyrine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2487"
+      "id": "path_1192"
     },
     {
       "score": {
@@ -1487,7 +904,7 @@
           "type": "Gene"
         },
         {
-          "id": "Sertraline",
+          "id": "Bifonazole",
           "type": "Compound"
         },
         {
@@ -1503,21 +920,22 @@
         },
         {
           "source": "Cyp2b6",
-          "target": "Sertraline",
+          "target": "Bifonazole",
           "label": "is bound by"
         },
         {
-          "source": "Sertraline",
+          "source": "Bifonazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Sertraline": [
-          "Organic Cyclic Compound"
+        "Amprenavir,Bifonazole": [
+          "Organic Heterocyclic Compound",
+          "Anti-Infective Agent"
         ]
       },
-      "id": "path_2488"
+      "id": "path_1193"
     },
     {
       "score": {
@@ -1564,12 +982,12 @@
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_2489"
+      "id": "path_1194"
     },
     {
       "score": {
-        "ic_mean": 0.4431,
-        "final_score": 0.4431
+        "ic_mean": 0.4368,
+        "final_score": 0.4368
       },
       "nodes": [
         {
@@ -1577,11 +995,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc1",
-          "type": "Gene"
+          "id": "Fat Redistribution",
+          "type": "Side Effect"
         },
         {
-          "id": "Saquinavir",
+          "id": "Nelfinavir",
           "type": "Compound"
         },
         {
@@ -1592,311 +1010,27 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
+          "target": "Fat Redistribution",
+          "label": "causes"
         },
         {
-          "source": "Abcc1",
-          "target": "Saquinavir",
-          "label": "is bound by"
+          "source": "Fat Redistribution",
+          "target": "Nelfinavir",
+          "label": "is caused by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Nelfinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Saquinavir": [
+        "Amprenavir,Nelfinavir": [
           "Organic Heterocyclic Compound",
           "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2490"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4431,
-        "final_score": 0.4431
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Glyburide": [
-          "Sulfonamide"
-        ]
-      },
-      "id": "path_2491"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4417,
-        "final_score": 0.4417
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Dysthymic Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Rilpivirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Dysthymic Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Dysthymic Disorder",
-          "target": "Rilpivirine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Rilpivirine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Rilpivirine": [
-          "Organic Heteromonocyclic Compound",
-          "Antiviral Agent"
-        ]
-      },
-      "id": "path_2492"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4351,
-        "final_score": 0.4351
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abdominal Symptom",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Testosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abdominal Symptom",
-          "label": "causes"
-        },
-        {
-          "source": "Abdominal Symptom",
-          "target": "Testosterone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Testosterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Testosterone": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_2493"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4293,
-        "final_score": 0.4293
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Sitagliptin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Sitagliptin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sitagliptin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Sitagliptin": [
-          "Organic Heterocyclic Compound",
-          "Protease Inhibitor"
-        ]
-      },
-      "id": "path_2494"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4293,
-        "final_score": 0.4293
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Antipyrine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2495"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4293,
-        "final_score": 0.4293
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Diltiazem": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_2496"
+      "id": "path_1195"
     },
     {
       "score": {
@@ -1943,12 +1077,12 @@
           "Carbonyl Compound"
         ]
       },
-      "id": "path_2497"
+      "id": "path_1196"
     },
     {
       "score": {
-        "ic_mean": 0.4245,
-        "final_score": 0.4245
+        "ic_mean": 0.4165,
+        "final_score": 0.4165
       },
       "nodes": [
         {
@@ -1956,342 +1090,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Atorvastatin": [
-          "Organic Heterocyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_2498"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4245,
-        "final_score": 0.4245
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2b6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2b6",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Methadone": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_2499"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4245,
-        "final_score": 0.4245
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        },
-        {
-          "id": "Temazepam",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2b6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2b6",
-          "target": "Temazepam",
-          "label": "is bound by"
-        },
-        {
-          "source": "Temazepam",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Temazepam": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2500"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4167,
-        "final_score": 0.4167
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Phenobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Phenobarbital": [
-          "Organic Heteromonocyclic Compound"
-        ]
-      },
-      "id": "path_2501"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4167,
-        "final_score": 0.4167
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Diclofenac",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diclofenac",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Diclofenac": [
-          "Carbonyl Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_2502"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4118,
-        "final_score": 0.4118
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Antipyrine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2503"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4118,
-        "final_score": 0.4118
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Diltiazem": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_2504"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4115,
-        "final_score": 0.4115
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Depressive Disorder",
+          "id": "Insulin Resistance",
           "type": "Side Effect"
         },
         {
-          "id": "Venlafaxine",
+          "id": "Indinavir",
           "type": "Compound"
         },
         {
@@ -2302,73 +1105,27 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Depressive Disorder",
+          "target": "Insulin Resistance",
           "label": "causes"
         },
         {
-          "source": "Depressive Disorder",
-          "target": "Venlafaxine",
+          "source": "Insulin Resistance",
+          "target": "Indinavir",
           "label": "is caused by"
         },
         {
-          "source": "Venlafaxine",
+          "source": "Indinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Venlafaxine": [
-          "Organic Cyclic Compound"
+        "Amprenavir,Indinavir": [
+          "Hiv Protease Inhibitor",
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2505"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4096,
-        "final_score": 0.4096
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Docetaxel",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Docetaxel",
-          "label": "is bound by"
-        },
-        {
-          "source": "Docetaxel",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Docetaxel": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_2506"
+      "id": "path_1197"
     },
     {
       "score": {
@@ -2381,11 +1138,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
+          "id": "Cyp2b6",
           "type": "Gene"
         },
         {
-          "id": "Rifapentine",
+          "id": "Domperidone",
           "type": "Compound"
         },
         {
@@ -2396,27 +1153,26 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Cyp2c8",
+          "target": "Cyp2b6",
           "label": "binds"
         },
         {
-          "source": "Cyp2c8",
-          "target": "Rifapentine",
+          "source": "Cyp2b6",
+          "target": "Domperidone",
           "label": "is bound by"
         },
         {
-          "source": "Rifapentine",
+          "source": "Domperidone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Rifapentine": [
-          "Organic Heteromonocyclic Compound",
-          "Anti-Infective Agent"
+        "Amprenavir,Domperidone": [
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2507"
+      "id": "path_1198"
     },
     {
       "score": {
@@ -2429,11 +1185,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
+          "id": "Cyp2b6",
           "type": "Gene"
         },
         {
-          "id": "Methadone",
+          "id": "Nelfinavir",
           "type": "Compound"
         },
         {
@@ -2444,26 +1200,27 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Cyp2c8",
+          "target": "Cyp2b6",
           "label": "binds"
         },
         {
-          "source": "Cyp2c8",
-          "target": "Methadone",
+          "source": "Cyp2b6",
+          "target": "Nelfinavir",
           "label": "is bound by"
         },
         {
-          "source": "Methadone",
+          "source": "Nelfinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Methadone": [
-          "Chemical Entity"
+        "Amprenavir,Nelfinavir": [
+          "Organic Heterocyclic Compound",
+          "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2508"
+      "id": "path_1199"
     },
     {
       "score": {
@@ -2476,11 +1233,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
+          "id": "Cyp2b6",
           "type": "Gene"
         },
         {
-          "id": "Temazepam",
+          "id": "Fluvastatin",
           "type": "Compound"
         },
         {
@@ -2491,26 +1248,75 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Cyp2c8",
+          "target": "Cyp2b6",
           "label": "binds"
         },
         {
-          "source": "Cyp2c8",
-          "target": "Temazepam",
+          "source": "Cyp2b6",
+          "target": "Fluvastatin",
           "label": "is bound by"
         },
         {
-          "source": "Temazepam",
+          "source": "Fluvastatin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Temazepam": [
-          "Organic Heterocyclic Compound"
+        "Amprenavir,Fluvastatin": [
+          "Enzyme Inhibitor",
+          "Organooxygen Compound"
         ]
       },
-      "id": "path_2509"
+      "id": "path_1200"
+    },
+    {
+      "score": {
+        "ic_mean": 0.407,
+        "final_score": 0.407
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Fat Redistribution",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Fat Redistribution",
+          "label": "causes"
+        },
+        {
+          "source": "Fat Redistribution",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amprenavir,Indinavir": [
+          "Hiv Protease Inhibitor",
+          "Organic Heteromonocyclic Compound"
+        ]
+      },
+      "id": "path_1201"
     },
     {
       "score": {
@@ -2557,12 +1363,12 @@
           "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2510"
+      "id": "path_1202"
     },
     {
       "score": {
-        "ic_mean": 0.3952,
-        "final_score": 0.3952
+        "ic_mean": 0.3948,
+        "final_score": 0.3948
       },
       "nodes": [
         {
@@ -2570,11 +1376,11 @@
           "type": "Compound"
         },
         {
-          "id": "Insulin Resistance",
-          "type": "Side Effect"
+          "id": "Cyp3a5",
+          "type": "Gene"
         },
         {
-          "id": "Saquinavir",
+          "id": "Domperidone",
           "type": "Compound"
         },
         {
@@ -2585,27 +1391,169 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Insulin Resistance",
-          "label": "causes"
+          "target": "Cyp3a5",
+          "label": "binds"
         },
         {
-          "source": "Insulin Resistance",
-          "target": "Saquinavir",
-          "label": "is caused by"
+          "source": "Cyp3a5",
+          "target": "Domperidone",
+          "label": "is bound by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Domperidone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Saquinavir": [
+        "Amprenavir,Domperidone": [
+          "Organic Heteromonocyclic Compound"
+        ]
+      },
+      "id": "path_1203"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3948,
+        "final_score": 0.3948
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Nelfinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Nelfinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nelfinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amprenavir,Nelfinavir": [
           "Organic Heterocyclic Compound",
           "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_2511"
+      "id": "path_1204"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3948,
+        "final_score": 0.3948
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Fluvastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amprenavir,Fluvastatin": [
+          "Enzyme Inhibitor",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_1205"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3948,
+        "final_score": 0.3948
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Eplerenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Eplerenone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Eplerenone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amprenavir,Eplerenone": [
+          "Oxacycle"
+        ]
+      },
+      "id": "path_1206"
     },
     {
       "score": {
@@ -2622,7 +1570,7 @@
           "type": "Gene"
         },
         {
-          "id": "Ethinyl Estradiol",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -2638,26 +1586,26 @@
         },
         {
           "source": "Cyp2b6",
-          "target": "Ethinyl Estradiol",
+          "target": "Imipramine",
           "label": "is bound by"
         },
         {
-          "source": "Ethinyl Estradiol",
+          "source": "Imipramine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Ethinyl Estradiol": [
-          "Organic Cyclic Compound"
+        "Amprenavir,Imipramine": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2512"
+      "id": "path_1207"
     },
     {
       "score": {
-        "ic_mean": 0.3928,
-        "final_score": 0.3928
+        "ic_mean": 0.3813,
+        "final_score": 0.3813
       },
       "nodes": [
         {
@@ -2665,11 +1613,11 @@
           "type": "Compound"
         },
         {
-          "id": "Affective Disorder",
-          "type": "Side Effect"
+          "id": "Cyp3a5",
+          "type": "Gene"
         },
         {
-          "id": "Risperidone",
+          "id": "Zaleplon",
           "type": "Compound"
         },
         {
@@ -2680,31 +1628,79 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Affective Disorder",
-          "label": "causes"
+          "target": "Cyp3a5",
+          "label": "binds"
         },
         {
-          "source": "Affective Disorder",
-          "target": "Risperidone",
-          "label": "is caused by"
+          "source": "Cyp3a5",
+          "target": "Zaleplon",
+          "label": "is bound by"
         },
         {
-          "source": "Risperidone",
+          "source": "Zaleplon",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Risperidone": [
+        "Amprenavir,Zaleplon": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1208"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3699,
+        "final_score": 0.3699
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Lapatinib",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lapatinib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amprenavir,Lapatinib": [
+          "Enzyme Inhibitor",
           "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2513"
+      "id": "path_1209"
     },
     {
       "score": {
-        "ic_mean": 0.3918,
-        "final_score": 0.3918
+        "ic_mean": 0.3699,
+        "final_score": 0.3699
       },
       "nodes": [
         {
@@ -2712,11 +1708,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc1",
+          "id": "Cyp3a5",
           "type": "Gene"
         },
         {
-          "id": "Vandetanib",
+          "id": "Felodipine",
           "type": "Compound"
         },
         {
@@ -2727,268 +1723,31 @@
       "edges": [
         {
           "source": "Amprenavir",
-          "target": "Abcc1",
+          "target": "Cyp3a5",
           "label": "binds"
         },
         {
-          "source": "Abcc1",
-          "target": "Vandetanib",
+          "source": "Cyp3a5",
+          "target": "Felodipine",
           "label": "is bound by"
         },
         {
-          "source": "Vandetanib",
+          "source": "Felodipine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Vandetanib": [
-          "Organic Heteromonocyclic Compound",
-          "Enzyme Inhibitor"
+        "Amprenavir,Felodipine": [
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2514"
+      "id": "path_1210"
     },
     {
       "score": {
-        "ic_mean": 0.3852,
-        "final_score": 0.3852
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Affective Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Testosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Affective Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Affective Disorder",
-          "target": "Testosterone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Testosterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Testosterone": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_2515"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3806,
-        "final_score": 0.3806
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 3a4 Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Ivacaftor",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cytochrome P450 3a4 Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 3a4 Inhibitors",
-          "target": "Ivacaftor",
-          "label": "includes"
-        },
-        {
-          "source": "Ivacaftor",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Ivacaftor": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2516"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3779,
-        "final_score": 0.3779
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Ethinyl Estradiol": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_2517"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3779,
-        "final_score": 0.3779
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Quinine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Quinine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Quinine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Quinine": [
-          "Heteroorganic Entity",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_2518"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3779,
-        "final_score": 0.3779
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Cocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cocaine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Cocaine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2519"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3731,
-        "final_score": 0.3731
+        "ic_mean": 0.3644,
+        "final_score": 0.3644
       },
       "nodes": [
         {
@@ -3000,7 +1759,7 @@
           "type": "Gene"
         },
         {
-          "id": "Orphenadrine",
+          "id": "Nifedipine",
           "type": "Compound"
         },
         {
@@ -3016,168 +1775,73 @@
         },
         {
           "source": "Cyp2b6",
-          "target": "Orphenadrine",
+          "target": "Nifedipine",
           "label": "is bound by"
         },
         {
-          "source": "Orphenadrine",
+          "source": "Nifedipine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Orphenadrine": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_2520"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3619,
-        "final_score": 0.3619
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 3a4 Inducers",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Enzalutamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cytochrome P450 3a4 Inducers",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 3a4 Inducers",
-          "target": "Enzalutamide",
-          "label": "includes"
-        },
-        {
-          "source": "Enzalutamide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Enzalutamide": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_2521"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3479,
-        "final_score": 0.3479
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Erlotinib": [
-          "Organic Heterocyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_2522"
-    },
-    {
-      "score": {
-        "ic_mean": 0.343,
-        "final_score": 0.343
-      },
-      "nodes": [
-        {
-          "id": "Amprenavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 3a4 Inducers",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Aprepitant",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amprenavir",
-          "target": "Cytochrome P450 3a4 Inducers",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 3a4 Inducers",
-          "target": "Aprepitant",
-          "label": "includes"
-        },
-        {
-          "source": "Aprepitant",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amprenavir,Aprepitant": [
+        "Amprenavir,Nifedipine": [
           "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_2523"
+      "id": "path_1211"
     },
     {
       "score": {
-        "ic_mean": 0.3411,
-        "final_score": 0.3411
+        "ic_mean": 0.36,
+        "final_score": 0.36
+      },
+      "nodes": [
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amprenavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Phenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amprenavir,Phenytoin": [
+          "Organic Heteromonocyclic Compound"
+        ]
+      },
+      "id": "path_1212"
+    },
+    {
+      "score": {
+        "ic_mean": 0.34,
+        "final_score": 0.34
       },
       "nodes": [
         {
@@ -3189,7 +1853,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Simeprevir",
+          "id": "Ticagrelor",
           "type": "Compound"
         },
         {
@@ -3205,22 +1869,21 @@
         },
         {
           "source": "Cytochrome P450 3a4 Inhibitors",
-          "target": "Simeprevir",
+          "target": "Ticagrelor",
           "label": "includes"
         },
         {
-          "source": "Simeprevir",
+          "source": "Ticagrelor",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amprenavir,Simeprevir": [
-          "Organic Heterocyclic Compound",
-          "Protease Inhibitor"
+        "Amprenavir,Ticagrelor": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2524"
+      "id": "path_1213"
     },
     {
       "score": {
@@ -3267,8 +1930,7 @@
           "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2525"
+      "id": "path_1214"
     }
-  ],
-  "verbalization": ""
+  ]
 }

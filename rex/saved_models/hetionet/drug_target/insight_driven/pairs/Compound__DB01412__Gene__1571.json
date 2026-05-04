@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB01412 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5523,
+        "final_score": 0.6928,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Theobromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora2a",
+          "type": "Gene"
+        },
+        {
+          "id": "Aminophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theobromine",
+          "target": "Adora2a",
+          "label": "binds"
+        },
+        {
+          "source": "Adora2a",
+          "target": "Aminophylline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aminophylline",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theobromine,Aminophylline": [
+          "Chemical Entity",
+          "Bronchodilator"
+        ]
+      },
+      "id": "path_11032"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6502,
+        "final_score": 0.5751,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Theobromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Enprofylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theobromine",
+          "target": "Enprofylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Enprofylline",
+          "target": "Theophylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theobromine,Enprofylline": [
+          "Purines"
+        ],
+        "Theobromine,Theophylline": [
+          "Dimethylxanthine",
+          "Bronchodilator"
+        ],
+        "Enprofylline,Theophylline": [
+          "Purines"
+        ]
+      },
+      "id": "path_11033"
+    }
+  ]
+}

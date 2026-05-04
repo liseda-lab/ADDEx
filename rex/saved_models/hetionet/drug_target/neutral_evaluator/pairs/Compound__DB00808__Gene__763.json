@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7946,
-        "final_score": 0.7946
+        "ic_mean": 0.7639,
+        "final_score": 0.7639
       },
       "nodes": [
         {
@@ -12,8 +12,8 @@
           "type": "Compound"
         },
         {
-          "id": "Slc12a3",
-          "type": "Gene"
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Metolazone",
@@ -27,13 +27,13 @@
       "edges": [
         {
           "source": "Indapamide",
-          "target": "Slc12a3",
-          "label": "binds"
+          "target": "Increased Diuresis",
+          "label": "is included in"
         },
         {
-          "source": "Slc12a3",
+          "source": "Increased Diuresis",
           "target": "Metolazone",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Metolazone",
@@ -43,16 +43,16 @@
       ],
       "lowest_common_ancestors": {
         "Indapamide,Metolazone": [
-          "Sulfonamide",
+          "Organic Heterobicyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_19948"
+      "id": "path_10079"
     },
     {
       "score": {
-        "ic_mean": 0.7267,
-        "final_score": 0.7267
+        "ic_mean": 0.6832,
+        "final_score": 0.6832
       },
       "nodes": [
         {
@@ -60,7 +60,7 @@
           "type": "Compound"
         },
         {
-          "id": "Ca9",
+          "id": "Ca4",
           "type": "Gene"
         },
         {
@@ -75,11 +75,11 @@
       "edges": [
         {
           "source": "Indapamide",
-          "target": "Ca9",
+          "target": "Ca4",
           "label": "binds"
         },
         {
-          "source": "Ca9",
+          "source": "Ca4",
           "target": "Metolazone",
           "label": "is bound by"
         },
@@ -91,16 +91,16 @@
       ],
       "lowest_common_ancestors": {
         "Indapamide,Metolazone": [
-          "Sulfonamide",
+          "Organic Heterobicyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_19949"
+      "id": "path_10080"
     },
     {
       "score": {
-        "ic_mean": 0.7018,
-        "final_score": 0.7018
+        "ic_mean": 0.6718,
+        "final_score": 0.6718
       },
       "nodes": [
         {
@@ -108,8 +108,103 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5b",
+          "id": "Ca12",
           "type": "Gene"
+        },
+        {
+          "id": "Dorzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indapamide",
+          "target": "Ca12",
+          "label": "binds"
+        },
+        {
+          "source": "Ca12",
+          "target": "Dorzolamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dorzolamide",
+          "target": "Ca5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indapamide,Dorzolamide": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10081"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6532,
+        "final_score": 0.6532
+      },
+      "nodes": [
+        {
+          "id": "Indapamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        },
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indapamide",
+          "target": "Ca4",
+          "label": "binds"
+        },
+        {
+          "source": "Ca4",
+          "target": "Chlorthalidone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Chlorthalidone",
+          "target": "Ca5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indapamide,Chlorthalidone": [
+          "Thiazide Diuretic",
+          "Benzopyrrole"
+        ]
+      },
+      "id": "path_10082"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5338,
+        "final_score": 0.5338
+      },
+      "nodes": [
+        {
+          "id": "Indapamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypochloraemia",
+          "type": "Side Effect"
         },
         {
           "id": "Metolazone",
@@ -123,13 +218,13 @@
       "edges": [
         {
           "source": "Indapamide",
-          "target": "Ca5b",
-          "label": "binds"
+          "target": "Hypochloraemia",
+          "label": "causes"
         },
         {
-          "source": "Ca5b",
+          "source": "Hypochloraemia",
           "target": "Metolazone",
-          "label": "is bound by"
+          "label": "is caused by"
         },
         {
           "source": "Metolazone",
@@ -139,12 +234,11 @@
       ],
       "lowest_common_ancestors": {
         "Indapamide,Metolazone": [
-          "Sulfonamide",
+          "Organic Heterobicyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_19950"
+      "id": "path_10083"
     }
-  ],
-  "verbalization": ""
+  ]
 }

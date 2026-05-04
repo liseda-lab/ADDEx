@@ -3,6 +3,60 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.923,
+        "final_score": 0.923
+      },
+      "nodes": [
+        {
+          "id": "Hydrochlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Thiazides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Chlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrochlorothiazide",
+          "target": "Thiazides",
+          "label": "is included in"
+        },
+        {
+          "source": "Thiazides",
+          "target": "Chlorothiazide",
+          "label": "includes"
+        },
+        {
+          "source": "Chlorothiazide",
+          "target": "Ca1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hydrochlorothiazide,Thiazides": [
+          "Thiazide"
+        ],
+        "Hydrochlorothiazide,Chlorothiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ],
+        "Thiazides,Chlorothiazide": [
+          "Thiazide"
+        ]
+      },
+      "id": "path_15311"
+    },
+    {
+      "score": {
         "ic_mean": 0.8973,
         "final_score": 0.8973
       },
@@ -46,14 +100,14 @@
           "Thiazide"
         ],
         "Hydrochlorothiazide,Bendroflumethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ],
         "Thiazides,Bendroflumethiazide": [
           "Thiazide"
         ]
       },
-      "id": "path_29705"
+      "id": "path_15312"
     },
     {
       "score": {
@@ -100,19 +154,19 @@
           "Thiazide"
         ],
         "Hydrochlorothiazide,Methyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ],
         "Thiazides,Methyclothiazide": [
           "Thiazide"
         ]
       },
-      "id": "path_29706"
+      "id": "path_15313"
     },
     {
       "score": {
-        "ic_mean": 0.8716,
-        "final_score": 0.8716
+        "ic_mean": 0.7267,
+        "final_score": 0.7267
       },
       "nodes": [
         {
@@ -120,11 +174,11 @@
           "type": "Compound"
         },
         {
-          "id": "Thiazides",
-          "type": "Pharmacologic Class"
+          "id": "Ca9",
+          "type": "Gene"
         },
         {
-          "id": "Hydroflumethiazide",
+          "id": "Brinzolamide",
           "type": "Compound"
         },
         {
@@ -135,653 +189,26 @@
       "edges": [
         {
           "source": "Hydrochlorothiazide",
-          "target": "Thiazides",
-          "label": "is included in"
-        },
-        {
-          "source": "Thiazides",
-          "target": "Hydroflumethiazide",
-          "label": "includes"
-        },
-        {
-          "source": "Hydroflumethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Thiazides": [
-          "Thiazide"
-        ],
-        "Hydrochlorothiazide,Hydroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ],
-        "Thiazides,Hydroflumethiazide": [
-          "Thiazide"
-        ]
-      },
-      "id": "path_29707"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7946,
-        "final_score": 0.7946
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzthiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Slc12a3",
+          "target": "Ca9",
           "label": "binds"
         },
         {
-          "source": "Slc12a3",
-          "target": "Benzthiazide",
+          "source": "Ca9",
+          "target": "Brinzolamide",
           "label": "is bound by"
         },
         {
-          "source": "Benzthiazide",
+          "source": "Brinzolamide",
           "target": "Ca1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Benzthiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29708"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7946,
-        "final_score": 0.7946
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Bendroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Bendroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bendroflumethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Bendroflumethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29709"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7946,
-        "final_score": 0.7946
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Cyclothiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclothiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Cyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29710"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7646,
-        "final_score": 0.7646
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Methyclothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Methyclothiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methyclothiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Methyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29711"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7646,
-        "final_score": 0.7646
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Quinethazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Quinethazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Quinethazone",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Quinethazone": [
-          "Thiazide Diuretic",
+        "Hydrochlorothiazide,Brinzolamide": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_29712"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7433,
-        "final_score": 0.7433
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29713"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7433,
-        "final_score": 0.7433
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Hydroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydroflumethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Hydroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29714"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7267,
-        "final_score": 0.7267
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzthiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Benzthiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benzthiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Benzthiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29715"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7267,
-        "final_score": 0.7267
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Diclofenamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Diclofenamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diclofenamide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Diclofenamide": [
-          "Sulfonamide"
-        ]
-      },
-      "id": "path_29716"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7267,
-        "final_score": 0.7267
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Lacosamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Lacosamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lacosamide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Lacosamide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_29717"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7018,
-        "final_score": 0.7018
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca12",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzthiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca12",
-          "label": "binds"
-        },
-        {
-          "source": "Ca12",
-          "target": "Benzthiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benzthiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Benzthiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29718"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7018,
-        "final_score": 0.7018
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5b",
-          "type": "Gene"
-        },
-        {
-          "id": "Diclofenamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca5b",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5b",
-          "target": "Diclofenamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diclofenamide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Diclofenamide": [
-          "Sulfonamide"
-        ]
-      },
-      "id": "path_29719"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7018,
-        "final_score": 0.7018
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5b",
-          "type": "Gene"
-        },
-        {
-          "id": "Lacosamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca5b",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5b",
-          "target": "Lacosamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lacosamide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Lacosamide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_29720"
+      "id": "path_15314"
     },
     {
       "score": {
@@ -825,588 +252,11 @@
       ],
       "lowest_common_ancestors": {
         "Hydrochlorothiazide,Benzthiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ]
       },
-      "id": "path_29721"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6832,
-        "final_score": 0.6832
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        },
-        {
-          "id": "Bendroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        },
-        {
-          "source": "Ca4",
-          "target": "Bendroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bendroflumethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Bendroflumethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29722"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6832,
-        "final_score": 0.6832
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        },
-        {
-          "source": "Ca4",
-          "target": "Cyclothiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclothiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Cyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29723"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6754,
-        "final_score": 0.6754
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29724"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6754,
-        "final_score": 0.6754
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Hydroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydroflumethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Hydroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29725"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6532,
-        "final_score": 0.6532
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        },
-        {
-          "id": "Methyclothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        },
-        {
-          "source": "Ca4",
-          "target": "Methyclothiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methyclothiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Methyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29726"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6505,
-        "final_score": 0.6505
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5b",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca5b",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5b",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29727"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6505,
-        "final_score": 0.6505
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5b",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca5b",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5b",
-          "target": "Hydroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydroflumethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Hydroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29728"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6505,
-        "final_score": 0.6505
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca12",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca12",
-          "label": "binds"
-        },
-        {
-          "source": "Ca12",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29729"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6505,
-        "final_score": 0.6505
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca12",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca12",
-          "label": "binds"
-        },
-        {
-          "source": "Ca12",
-          "target": "Hydroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydroflumethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Hydroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29730"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6319,
-        "final_score": 0.6319
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        },
-        {
-          "source": "Ca4",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29731"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6319,
-        "final_score": 0.6319
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        },
-        {
-          "source": "Ca4",
-          "target": "Hydroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydroflumethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Hydroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29732"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6105,
-        "final_score": 0.6105
-      },
-      "nodes": [
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca2",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca2",
-          "label": "binds"
-        },
-        {
-          "source": "Ca2",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrochlorothiazide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_29733"
+      "id": "path_15315"
     }
-  ],
-  "verbalization": ""
+  ]
 }

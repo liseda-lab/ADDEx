@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4993,
-        "final_score": 0.4993
+        "ic_mean": 0.5155,
+        "final_score": 0.5155
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Blood Pressure Normal",
-          "type": "Side Effect"
+          "id": "Slc15a1",
+          "type": "Gene"
         },
         {
-          "id": "Doxazosin",
+          "id": "Midodrine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,120 @@
       "edges": [
         {
           "source": "Captopril",
-          "target": "Blood Pressure Normal",
-          "label": "causes"
+          "target": "Slc15a1",
+          "label": "binds"
         },
         {
-          "source": "Blood Pressure Normal",
-          "target": "Doxazosin",
-          "label": "is caused by"
+          "source": "Slc15a1",
+          "target": "Midodrine",
+          "label": "is bound by"
         },
         {
-          "source": "Doxazosin",
+          "source": "Midodrine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Captopril,Doxazosin": [
-          "Agent Affecting Cardiovascular System",
-          "Organonitrogen Heterocyclic Compound"
+        "Captopril,Midodrine": [
+          "Hydroxides"
         ]
       },
-      "id": "path_14908"
+      "id": "path_7474"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4957,
+        "final_score": 0.4957
+      },
+      "nodes": [
+        {
+          "id": "Captopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Thermal Burn",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Benzyl Alcohol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Captopril",
+          "target": "Thermal Burn",
+          "label": "causes"
+        },
+        {
+          "source": "Thermal Burn",
+          "target": "Benzyl Alcohol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Benzyl Alcohol",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Captopril,Benzyl Alcohol": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_7475"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4203,
+        "final_score": 0.4203
+      },
+      "nodes": [
+        {
+          "id": "Captopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Microsomia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Captopril",
+          "target": "Microsomia",
+          "label": "causes"
+        },
+        {
+          "source": "Microsomia",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Captopril,Cyclophosphamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_7476"
     }
-  ],
-  "verbalization": ""
+  ]
 }

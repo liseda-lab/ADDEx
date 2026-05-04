@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB08901 - Gene::5156",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5555,
+        "final_score": 0.5555
+      },
+      "nodes": [
+        {
+          "id": "Ponatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Glucose Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Pdgfra",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ponatinib",
+          "target": "Glucose Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Glucose Decreased",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Pdgfra",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ponatinib,Pazopanib": [
+          "Organic Heterobicyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_177"
+    }
+  ]
 }

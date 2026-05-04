@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB00755 - Gene::1562",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5226,
+        "final_score": 0.5226
+      },
+      "nodes": [
+        {
+          "id": "Tretinoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Wegener's Granulomatosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tretinoin",
+          "target": "Wegener's Granulomatosis",
+          "label": "causes"
+        },
+        {
+          "source": "Wegener's Granulomatosis",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c18",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tretinoin,Cyclophosphamide": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_12623"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5226,
+        "final_score": 0.5226
+      },
+      "nodes": [
+        {
+          "id": "Tretinoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Granulomatosis With Polyangiitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tretinoin",
+          "target": "Granulomatosis With Polyangiitis",
+          "label": "causes"
+        },
+        {
+          "source": "Granulomatosis With Polyangiitis",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c18",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tretinoin,Cyclophosphamide": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_12624"
+    }
+  ]
 }

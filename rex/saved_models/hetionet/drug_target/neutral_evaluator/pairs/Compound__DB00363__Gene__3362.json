@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6629,
-        "final_score": 0.6629
+        "ic_mean": 0.6164,
+        "final_score": 0.6164
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Caly",
+          "id": "Htr7",
           "type": "Gene"
         },
         {
-          "id": "Trifluoperazine",
+          "id": "Methysergide",
           "type": "Compound"
         },
         {
@@ -27,28 +27,128 @@
       "edges": [
         {
           "source": "Clozapine",
-          "target": "Caly",
+          "target": "Htr7",
           "label": "binds"
         },
         {
-          "source": "Caly",
-          "target": "Trifluoperazine",
+          "source": "Htr7",
+          "target": "Methysergide",
           "label": "is bound by"
         },
         {
-          "source": "Trifluoperazine",
+          "source": "Methysergide",
           "target": "Htr6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clozapine,Trifluoperazine": [
-          "N-Methylpiperazine",
+        "Clozapine,Methysergide": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12446"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5536,
+        "final_score": 0.5536
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr7",
+          "type": "Gene"
+        },
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Htr7",
+          "label": "binds"
+        },
+        {
+          "source": "Htr7",
+          "target": "Asenapine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Asenapine",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Asenapine": [
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_24596"
+      "id": "path_12447"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3641,
+        "final_score": 0.3641
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Mianserin",
+          "label": "resembles"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Azatadine": [
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Clozapine,Mianserin": [
+          "Organic Heteropolycyclic Compound",
+          "Serotonin Antagonist"
+        ],
+        "Azatadine,Mianserin": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_12448"
     }
-  ],
-  "verbalization": ""
+  ]
 }

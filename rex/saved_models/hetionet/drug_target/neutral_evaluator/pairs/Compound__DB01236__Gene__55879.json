@@ -3,6 +3,54 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.7439,
+        "final_score": 0.7439
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra6",
+          "type": "Gene"
+        },
+        {
+          "id": "Thiamylal",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabra6",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra6",
+          "target": "Thiamylal",
+          "label": "is bound by"
+        },
+        {
+          "source": "Thiamylal",
+          "target": "Gabrq",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Thiamylal": [
+          "Organochalcogen Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_5222"
+    },
+    {
+      "score": {
         "ic_mean": 0.7324,
         "final_score": 0.7324
       },
@@ -47,12 +95,12 @@
           "Anesthetic Agent"
         ]
       },
-      "id": "path_10578"
+      "id": "path_5223"
     },
     {
       "score": {
-        "ic_mean": 0.7324,
-        "final_score": 0.7324
+        "ic_mean": 0.7316,
+        "final_score": 0.7316
       },
       "nodes": [
         {
@@ -60,8 +108,134 @@
           "type": "Compound"
         },
         {
-          "id": "Kcnk10",
+          "id": "Gabrg3",
           "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabrg3",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrg3",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrq",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5224"
+    },
+    {
+      "score": {
+        "ic_mean": 0.731,
+        "final_score": 0.731
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra6",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabra6",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra6",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrq",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5225"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7254,
+        "final_score": 0.7254
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrp",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabrp",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrp",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrq",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5226"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7175,
+        "final_score": 0.7175
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Desflurane",
@@ -75,13 +249,13 @@
       "edges": [
         {
           "source": "Sevoflurane",
-          "target": "Kcnk10",
-          "label": "binds"
+          "target": "General Anesthesia",
+          "label": "is included in"
         },
         {
-          "source": "Kcnk10",
+          "source": "General Anesthesia",
           "target": "Desflurane",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Desflurane",
@@ -95,12 +269,12 @@
           "Anesthetic Agent"
         ]
       },
-      "id": "path_10579"
+      "id": "path_5227"
     },
     {
       "score": {
-        "ic_mean": 0.7225,
-        "final_score": 0.7225
+        "ic_mean": 0.7171,
+        "final_score": 0.7171
       },
       "nodes": [
         {
@@ -108,11 +282,95 @@
           "type": "Compound"
         },
         {
-          "id": "Gabrd",
+          "id": "Gabra5",
           "type": "Gene"
         },
         {
-          "id": "Thiamylal",
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabra5",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra5",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrq",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5228"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6996,
+        "final_score": 0.6996
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrq",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5229"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6925,
+        "final_score": 0.6925
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra6",
+          "type": "Gene"
+        },
+        {
+          "id": "Talbutal",
           "type": "Compound"
         },
         {
@@ -123,32 +381,32 @@
       "edges": [
         {
           "source": "Sevoflurane",
-          "target": "Gabrd",
+          "target": "Gabra6",
           "label": "binds"
         },
         {
-          "source": "Gabrd",
-          "target": "Thiamylal",
+          "source": "Gabra6",
+          "target": "Talbutal",
           "label": "is bound by"
         },
         {
-          "source": "Thiamylal",
+          "source": "Talbutal",
           "target": "Gabrq",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sevoflurane,Thiamylal": [
-          "Anesthetic Agent",
-          "Organochalcogen Compound"
+        "Sevoflurane,Talbutal": [
+          "Agent Affecting Nervous System",
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_10580"
+      "id": "path_5230"
     },
     {
       "score": {
-        "ic_mean": 0.7225,
-        "final_score": 0.7225
+        "ic_mean": 0.6712,
+        "final_score": 0.6712
       },
       "nodes": [
         {
@@ -160,7 +418,7 @@
           "type": "Gene"
         },
         {
-          "id": "Thiamylal",
+          "id": "Nitrazepam",
           "type": "Compound"
         },
         {
@@ -176,27 +434,27 @@
         },
         {
           "source": "Gabrp",
-          "target": "Thiamylal",
+          "target": "Nitrazepam",
           "label": "is bound by"
         },
         {
-          "source": "Thiamylal",
+          "source": "Nitrazepam",
           "target": "Gabrq",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sevoflurane,Thiamylal": [
-          "Anesthetic Agent",
-          "Organochalcogen Compound"
+        "Sevoflurane,Nitrazepam": [
+          "Agent Affecting Nervous System",
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_10581"
+      "id": "path_5231"
     },
     {
       "score": {
-        "ic_mean": 0.7225,
-        "final_score": 0.7225
+        "ic_mean": 0.6547,
+        "final_score": 0.6547
       },
       "nodes": [
         {
@@ -208,7 +466,7 @@
           "type": "Gene"
         },
         {
-          "id": "Thiamylal",
+          "id": "Oxazepam",
           "type": "Compound"
         },
         {
@@ -224,27 +482,27 @@
         },
         {
           "source": "Gabrg3",
-          "target": "Thiamylal",
+          "target": "Oxazepam",
           "label": "is bound by"
         },
         {
-          "source": "Thiamylal",
+          "source": "Oxazepam",
           "target": "Gabrq",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sevoflurane,Thiamylal": [
-          "Anesthetic Agent",
-          "Organochalcogen Compound"
+        "Sevoflurane,Oxazepam": [
+          "Agent Affecting Nervous System",
+          "Organohalogen Compound"
         ]
       },
-      "id": "path_10582"
+      "id": "path_5232"
     },
     {
       "score": {
-        "ic_mean": 0.7225,
-        "final_score": 0.7225
+        "ic_mean": 0.6312,
+        "final_score": 0.6312
       },
       "nodes": [
         {
@@ -252,152 +510,8 @@
           "type": "Compound"
         },
         {
-          "id": "Kcnk18",
-          "type": "Gene"
-        },
-        {
-          "id": "Isoflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Gabrq",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sevoflurane",
-          "target": "Kcnk18",
-          "label": "binds"
-        },
-        {
-          "source": "Kcnk18",
-          "target": "Isoflurane",
-          "label": "is bound by"
-        },
-        {
-          "source": "Isoflurane",
-          "target": "Gabrq",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sevoflurane,Isoflurane": [
-          "Organofluorine Compound",
-          "Anesthetic Agent"
-        ]
-      },
-      "id": "path_10583"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7225,
-        "final_score": 0.7225
-      },
-      "nodes": [
-        {
-          "id": "Sevoflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Kcnk10",
-          "type": "Gene"
-        },
-        {
-          "id": "Isoflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Gabrq",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sevoflurane",
-          "target": "Kcnk10",
-          "label": "binds"
-        },
-        {
-          "source": "Kcnk10",
-          "target": "Isoflurane",
-          "label": "is bound by"
-        },
-        {
-          "source": "Isoflurane",
-          "target": "Gabrq",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sevoflurane,Isoflurane": [
-          "Organofluorine Compound",
-          "Anesthetic Agent"
-        ]
-      },
-      "id": "path_10584"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7225,
-        "final_score": 0.7225
-      },
-      "nodes": [
-        {
-          "id": "Sevoflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Gabre",
-          "type": "Gene"
-        },
-        {
-          "id": "Thiamylal",
-          "type": "Compound"
-        },
-        {
-          "id": "Gabrq",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sevoflurane",
-          "target": "Gabre",
-          "label": "binds"
-        },
-        {
-          "source": "Gabre",
-          "target": "Thiamylal",
-          "label": "is bound by"
-        },
-        {
-          "source": "Thiamylal",
-          "target": "Gabrq",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sevoflurane,Thiamylal": [
-          "Anesthetic Agent",
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_10585"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6811,
-        "final_score": 0.6811
-      },
-      "nodes": [
-        {
-          "id": "Sevoflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Kcnk9",
-          "type": "Gene"
+          "id": "Breath Holding",
+          "type": "Side Effect"
         },
         {
           "id": "Desflurane",
@@ -411,13 +525,13 @@
       "edges": [
         {
           "source": "Sevoflurane",
-          "target": "Kcnk9",
-          "label": "binds"
+          "target": "Breath Holding",
+          "label": "causes"
         },
         {
-          "source": "Kcnk9",
+          "source": "Breath Holding",
           "target": "Desflurane",
-          "label": "is bound by"
+          "label": "is caused by"
         },
         {
           "source": "Desflurane",
@@ -431,103 +545,7 @@
           "Anesthetic Agent"
         ]
       },
-      "id": "path_10586"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6712,
-        "final_score": 0.6712
-      },
-      "nodes": [
-        {
-          "id": "Sevoflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Kcnk9",
-          "type": "Gene"
-        },
-        {
-          "id": "Isoflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Gabrq",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sevoflurane",
-          "target": "Kcnk9",
-          "label": "binds"
-        },
-        {
-          "source": "Kcnk9",
-          "target": "Isoflurane",
-          "label": "is bound by"
-        },
-        {
-          "source": "Isoflurane",
-          "target": "Gabrq",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sevoflurane,Isoflurane": [
-          "Organofluorine Compound",
-          "Anesthetic Agent"
-        ]
-      },
-      "id": "path_10587"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6511,
-        "final_score": 0.6511
-      },
-      "nodes": [
-        {
-          "id": "Sevoflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Nd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Desflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Gabrq",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sevoflurane",
-          "target": "Nd1",
-          "label": "binds"
-        },
-        {
-          "source": "Nd1",
-          "target": "Desflurane",
-          "label": "is bound by"
-        },
-        {
-          "source": "Desflurane",
-          "target": "Gabrq",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sevoflurane,Desflurane": [
-          "Organofluorine Compound",
-          "Anesthetic Agent"
-        ]
-      },
-      "id": "path_10588"
+      "id": "path_5233"
     },
     {
       "score": {
@@ -575,7 +593,7 @@
           "Anesthetic Agent"
         ]
       },
-      "id": "path_10589"
+      "id": "path_5234"
     },
     {
       "score": {
@@ -588,7 +606,7 @@
           "type": "Compound"
         },
         {
-          "id": "Gabrd",
+          "id": "Gabrg3",
           "type": "Gene"
         },
         {
@@ -603,11 +621,11 @@
       "edges": [
         {
           "source": "Sevoflurane",
-          "target": "Gabrd",
+          "target": "Gabrg3",
           "label": "binds"
         },
         {
-          "source": "Gabrd",
+          "source": "Gabrg3",
           "target": "Desflurane",
           "label": "is bound by"
         },
@@ -623,8 +641,103 @@
           "Anesthetic Agent"
         ]
       },
-      "id": "path_10590"
+      "id": "path_5235"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6297,
+        "final_score": 0.6297
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrp",
+          "type": "Gene"
+        },
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabrp",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrp",
+          "target": "Desflurane",
+          "label": "is bound by"
+        },
+        {
+          "source": "Desflurane",
+          "target": "Gabrq",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Desflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_5236"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5883,
+        "final_score": 0.5883
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Desflurane",
+          "label": "is bound by"
+        },
+        {
+          "source": "Desflurane",
+          "target": "Gabrq",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Desflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_5237"
     }
-  ],
-  "verbalization": ""
+  ]
 }

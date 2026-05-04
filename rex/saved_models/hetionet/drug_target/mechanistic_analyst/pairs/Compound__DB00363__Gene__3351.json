@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB00363 - Gene::3351",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6754,
+        "final_score": 0.7127,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Htr3a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr3a",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr1b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8925"
+    },
+    {
+      "score": {
+        "ic_mean": 0.441,
+        "final_score": 0.441
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cloxazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Cloxazolam",
+          "label": "resembles"
+        },
+        {
+          "source": "Cloxazolam",
+          "target": "Amoxapine",
+          "label": "resembles"
+        },
+        {
+          "source": "Amoxapine",
+          "target": "Htr1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Cloxazolam": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ],
+        "Clozapine,Amoxapine": [
+          "Agent Affecting Nervous System",
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Cloxazolam,Amoxapine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_8926"
+    }
+  ]
+}

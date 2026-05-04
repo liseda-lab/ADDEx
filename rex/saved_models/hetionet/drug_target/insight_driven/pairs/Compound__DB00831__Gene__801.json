@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00831 - Gene::801",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.715,
+        "final_score": 0.7325,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Fluphenazine",
+          "label": "includes"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Calm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Trifluoperazine,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Fluphenazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_8795"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5511,
+        "final_score": 0.5672,
+        "agentic_score": 0.5833
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Calm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_8796"
+    }
+  ]
+}

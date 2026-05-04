@@ -1,6 +1,107 @@
 {
   "id": "Compound::DB00363 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5465,
+        "final_score": 0.5465
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr7",
+          "type": "Gene"
+        },
+        {
+          "id": "Eletriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Htr7",
+          "label": "binds"
+        },
+        {
+          "source": "Htr7",
+          "target": "Eletriptan",
+          "label": "is bound by"
+        },
+        {
+          "source": "Eletriptan",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Eletriptan": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5837"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2808,
+        "final_score": 0.2808
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Desipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Azatadine": [
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Clozapine,Desipramine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Azatadine,Desipramine": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_5838"
+    }
+  ]
 }

@@ -52,12 +52,59 @@
           "Purines"
         ]
       },
-      "id": "path_16690"
+      "id": "path_8362"
     },
     {
       "score": {
-        "ic_mean": 0.4528,
-        "final_score": 0.4528
+        "ic_mean": 0.4618,
+        "final_score": 0.4618
+      },
+      "nodes": [
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Convulsions Generalised",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theophylline",
+          "target": "Convulsions Generalised",
+          "label": "causes"
+        },
+        {
+          "source": "Convulsions Generalised",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theophylline,Ifosfamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_8363"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4342,
+        "final_score": 0.4342
       },
       "nodes": [
         {
@@ -69,7 +116,7 @@
           "type": "Gene"
         },
         {
-          "id": "Pravastatin",
+          "id": "Fluorouracil",
           "type": "Compound"
         },
         {
@@ -85,22 +132,21 @@
         },
         {
           "source": "Slc22a7",
-          "target": "Pravastatin",
+          "target": "Fluorouracil",
           "label": "is bound by"
         },
         {
-          "source": "Pravastatin",
+          "source": "Fluorouracil",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Theophylline,Pravastatin": [
+        "Theophylline,Fluorouracil": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_16691"
+      "id": "path_8364"
     }
-  ],
-  "verbalization": ""
+  ]
 }

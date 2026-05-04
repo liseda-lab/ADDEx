@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01242 - Gene::3357",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.504,
+        "final_score": 0.504
+      },
+      "nodes": [
+        {
+          "id": "Clomipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Parkinson's Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Apomorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clomipramine",
+          "target": "Parkinson's Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Parkinson's Disease",
+          "target": "Apomorphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Apomorphine",
+          "target": "Htr2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clomipramine,Apomorphine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_218"
+    }
+  ]
 }

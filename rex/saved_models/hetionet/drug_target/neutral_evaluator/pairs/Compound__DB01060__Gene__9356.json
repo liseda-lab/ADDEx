@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.641,
-        "final_score": 0.641
+        "ic_mean": 0.6154,
+        "final_score": 0.6154
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Carbenicillin",
+          "id": "Nafcillin",
           "type": "Compound"
         },
         {
@@ -32,11 +32,11 @@
         },
         {
           "source": "Penicillins",
-          "target": "Carbenicillin",
+          "target": "Nafcillin",
           "label": "includes"
         },
         {
-          "source": "Carbenicillin",
+          "source": "Nafcillin",
           "target": "Slc22a6",
           "label": "binds"
         }
@@ -45,20 +45,20 @@
         "Amoxicillin,Penicillins": [
           "Penicillin"
         ],
-        "Amoxicillin,Carbenicillin": [
-          "Penicillin Antibiotic",
-          "Penicillinate Anion"
+        "Amoxicillin,Nafcillin": [
+          "Penicillinate Anion",
+          "Beta-Lactam Antibiotic"
         ],
-        "Penicillins,Carbenicillin": [
+        "Penicillins,Nafcillin": [
           "Penicillin"
         ]
       },
-      "id": "path_14135"
+      "id": "path_7068"
     },
     {
       "score": {
-        "ic_mean": 0.6279,
-        "final_score": 0.6279
+        "ic_mean": 0.6003,
+        "final_score": 0.6003
       },
       "nodes": [
         {
@@ -66,11 +66,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc15a2",
-          "type": "Gene"
+          "id": "Penicillins",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Ceftazidime",
+          "id": "Benzylpenicillin",
           "type": "Compound"
         },
         {
@@ -81,328 +81,38 @@
       "edges": [
         {
           "source": "Amoxicillin",
-          "target": "Slc15a2",
-          "label": "binds"
+          "target": "Penicillins",
+          "label": "is included in"
         },
         {
-          "source": "Slc15a2",
-          "target": "Ceftazidime",
-          "label": "is bound by"
+          "source": "Penicillins",
+          "target": "Benzylpenicillin",
+          "label": "includes"
         },
         {
-          "source": "Ceftazidime",
+          "source": "Benzylpenicillin",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amoxicillin,Ceftazidime": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_14136"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5465,
-        "final_score": 0.5465
-      },
-      "nodes": [
-        {
-          "id": "Amoxicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefadroxil",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amoxicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefadroxil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefadroxil",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amoxicillin,Cefadroxil": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_14137"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5465,
-        "final_score": 0.5465
-      },
-      "nodes": [
-        {
-          "id": "Amoxicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cloxacillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amoxicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cloxacillin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cloxacillin",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amoxicillin,Cloxacillin": [
-          "Penicillin Antibiotic",
-          "Penicillinate Anion"
-        ]
-      },
-      "id": "path_14138"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5465,
-        "final_score": 0.5465
-      },
-      "nodes": [
-        {
-          "id": "Amoxicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amoxicillin",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amoxicillin,Cefalotin": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_14139"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5317,
-        "final_score": 0.5317
-      },
-      "nodes": [
-        {
-          "id": "Amoxicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefadroxil",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amoxicillin",
-          "target": "Slc15a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a1",
-          "target": "Cefadroxil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefadroxil",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amoxicillin,Cefadroxil": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_14140"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5317,
-        "final_score": 0.5317
-      },
-      "nodes": [
-        {
-          "id": "Amoxicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amoxicillin",
-          "target": "Slc15a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a1",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amoxicillin,Cefalotin": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_14141"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4931,
-        "final_score": 0.4931
-      },
-      "nodes": [
-        {
-          "id": "Amoxicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Meticillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Carbenicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amoxicillin",
-          "target": "Meticillin",
-          "label": "resembles"
-        },
-        {
-          "source": "Meticillin",
-          "target": "Carbenicillin",
-          "label": "resembles"
-        },
-        {
-          "source": "Carbenicillin",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amoxicillin,Meticillin": [
+        "Amoxicillin,Penicillins": [
+          "Penicillin"
+        ],
+        "Amoxicillin,Benzylpenicillin": [
           "Penicillin Antibiotic",
           "Penicillinate Anion"
         ],
-        "Amoxicillin,Carbenicillin": [
-          "Penicillin Antibiotic",
-          "Penicillinate Anion"
-        ],
-        "Meticillin,Carbenicillin": [
-          "Penicillin Antibiotic",
-          "Penicillinate Anion"
+        "Penicillins,Benzylpenicillin": [
+          "Penicillin"
         ]
       },
-      "id": "path_14142"
+      "id": "path_7069"
     },
     {
       "score": {
-        "ic_mean": 0.4931,
-        "final_score": 0.4931
+        "ic_mean": 0.4674,
+        "final_score": 0.4674
       },
       "nodes": [
         {
@@ -410,11 +120,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pivampicillin",
+          "id": "Cyclacillin",
           "type": "Compound"
         },
         {
-          "id": "Carbenicillin",
+          "id": "Nafcillin",
           "type": "Compound"
         },
         {
@@ -425,36 +135,203 @@
       "edges": [
         {
           "source": "Amoxicillin",
-          "target": "Pivampicillin",
+          "target": "Cyclacillin",
           "label": "resembles"
         },
         {
-          "source": "Pivampicillin",
-          "target": "Carbenicillin",
+          "source": "Cyclacillin",
+          "target": "Nafcillin",
           "label": "resembles"
         },
         {
-          "source": "Carbenicillin",
+          "source": "Nafcillin",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amoxicillin,Pivampicillin": [
-          "Penicillin Antibiotic",
-          "Penams"
+        "Amoxicillin,Cyclacillin": [
+          "Penicillin",
+          "Penicillin Antibiotic"
         ],
-        "Amoxicillin,Carbenicillin": [
+        "Amoxicillin,Nafcillin": [
+          "Penicillinate Anion",
+          "Beta-Lactam Antibiotic"
+        ],
+        "Cyclacillin,Nafcillin": [
+          "Penicillin",
+          "Beta-Lactam Antibiotic"
+        ]
+      },
+      "id": "path_7070"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4524,
+        "final_score": 0.4524
+      },
+      "nodes": [
+        {
+          "id": "Amoxicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxicillin",
+          "target": "Cyclacillin",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclacillin",
+          "target": "Benzylpenicillin",
+          "label": "resembles"
+        },
+        {
+          "source": "Benzylpenicillin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxicillin,Cyclacillin": [
+          "Penicillin",
+          "Penicillin Antibiotic"
+        ],
+        "Amoxicillin,Benzylpenicillin": [
           "Penicillin Antibiotic",
           "Penicillinate Anion"
         ],
-        "Pivampicillin,Carbenicillin": [
-          "Penicillin Antibiotic",
-          "Penams"
+        "Cyclacillin,Benzylpenicillin": [
+          "Penicillin",
+          "Penicillin Antibiotic"
         ]
       },
-      "id": "path_14143"
+      "id": "path_7071"
+    },
+    {
+      "score": {
+        "ic_mean": 0.451,
+        "final_score": 0.451
+      },
+      "nodes": [
+        {
+          "id": "Amoxicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hetacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Nafcillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxicillin",
+          "target": "Hetacillin",
+          "label": "resembles"
+        },
+        {
+          "source": "Hetacillin",
+          "target": "Nafcillin",
+          "label": "resembles"
+        },
+        {
+          "source": "Nafcillin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxicillin,Hetacillin": [
+          "Penicillin Antibiotic",
+          "Penicillinate Anion"
+        ],
+        "Amoxicillin,Nafcillin": [
+          "Penicillinate Anion",
+          "Beta-Lactam Antibiotic"
+        ],
+        "Hetacillin,Nafcillin": [
+          "Penicillinate Anion",
+          "Beta-Lactam Antibiotic"
+        ]
+      },
+      "id": "path_7072"
+    },
+    {
+      "score": {
+        "ic_mean": 0.436,
+        "final_score": 0.436
+      },
+      "nodes": [
+        {
+          "id": "Amoxicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hetacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxicillin",
+          "target": "Hetacillin",
+          "label": "resembles"
+        },
+        {
+          "source": "Hetacillin",
+          "target": "Benzylpenicillin",
+          "label": "resembles"
+        },
+        {
+          "source": "Benzylpenicillin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxicillin,Hetacillin": [
+          "Penicillin Antibiotic",
+          "Penicillinate Anion"
+        ],
+        "Amoxicillin,Benzylpenicillin": [
+          "Penicillin Antibiotic",
+          "Penicillinate Anion"
+        ],
+        "Hetacillin,Benzylpenicillin": [
+          "Penicillin Antibiotic",
+          "Penicillinate Anion"
+        ]
+      },
+      "id": "path_7073"
     }
-  ],
-  "verbalization": ""
+  ]
 }

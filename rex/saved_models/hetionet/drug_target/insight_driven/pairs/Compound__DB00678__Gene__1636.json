@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00678 - Gene::1636",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6159,
+        "final_score": 0.7246,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Chloride Ion Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ace",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Losartan",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Chloride Ion Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Chloride Ion Binding",
+          "target": "Ace",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_862"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5916,
+        "final_score": 0.5458,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Persistent Dry Cough",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Captopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Ace",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Losartan",
+          "target": "Persistent Dry Cough",
+          "label": "causes"
+        },
+        {
+          "source": "Persistent Dry Cough",
+          "target": "Captopril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Captopril",
+          "target": "Ace",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Losartan,Captopril": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antihypertensive Agent"
+        ]
+      },
+      "id": "path_863"
+    }
+  ]
+}

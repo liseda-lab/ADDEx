@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01118 - Gene::1543",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4497,
+        "final_score": 0.4497
+      },
+      "nodes": [
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2d6 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amiodarone",
+          "target": "Cytochrome P450 2d6 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2d6 Inhibitors",
+          "target": "Quinidine",
+          "label": "includes"
+        },
+        {
+          "source": "Quinidine",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amiodarone,Quinidine": [
+          "Cation Channel Blocker",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_10645"
+    }
+  ]
+}

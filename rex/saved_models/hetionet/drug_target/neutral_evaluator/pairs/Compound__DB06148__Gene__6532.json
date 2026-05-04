@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB06148 - Gene::6532",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5419,
+        "final_score": 0.5419
+      },
+      "nodes": [
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mianserin",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Trimipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Slc6a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mianserin,Trimipramine": [
+          "Dibenzoazepine",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_12508"
+    }
+  ]
 }

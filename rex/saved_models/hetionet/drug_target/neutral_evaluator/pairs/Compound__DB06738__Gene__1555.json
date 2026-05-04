@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB06738 - Gene::1555",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5446,
+        "final_score": 0.5446
+      },
+      "nodes": [
+        {
+          "id": "Ketobemidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketobemidone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Clopidogrel",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketobemidone,Clopidogrel": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_11839"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4932,
+        "final_score": 0.4932
+      },
+      "nodes": [
+        {
+          "id": "Ketobemidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketobemidone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Ifosfamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketobemidone,Ifosfamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_11840"
+    }
+  ]
 }

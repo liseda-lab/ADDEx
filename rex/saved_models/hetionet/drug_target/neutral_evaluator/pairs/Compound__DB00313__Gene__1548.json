@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00313 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5247,
+        "final_score": 0.5247
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b15",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Ugt2b15",
+          "label": "binds"
+        },
+        {
+          "source": "Ugt2b15",
+          "target": "Acetaminophen",
+          "label": "is bound by"
+        },
+        {
+          "source": "Acetaminophen",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valproic Acid,Acetaminophen": [
+          "Hydroxides",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_589"
+    },
+    {
+      "score": {
+        "ic_mean": 0.435,
+        "final_score": 0.435
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Catatonic Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Eletriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Catatonic Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Catatonic Reaction",
+          "target": "Eletriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Eletriptan",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valproic Acid,Eletriptan": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_590"
+    }
+  ]
 }

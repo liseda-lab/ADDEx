@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6192,
-        "final_score": 0.6192
+        "ic_mean": 0.6623,
+        "final_score": 0.6623
       },
       "nodes": [
         {
@@ -12,11 +12,95 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Hydrocodone",
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextropropoxyphene",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3551"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6623,
+        "final_score": 0.6623
+      },
+      "nodes": [
+        {
+          "id": "Dextropropoxyphene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextropropoxyphene",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3552"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5513,
+        "final_score": 0.5513
+      },
+      "nodes": [
+        {
+          "id": "Dextropropoxyphene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Fenofibrate",
           "type": "Compound"
         },
         {
@@ -27,32 +111,31 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Oprd1",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Oprd1",
-          "target": "Hydrocodone",
+          "source": "Cyp2c8",
+          "target": "Fenofibrate",
           "label": "is bound by"
         },
         {
-          "source": "Hydrocodone",
+          "source": "Fenofibrate",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Hydrocodone": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
+        "Dextropropoxyphene,Fenofibrate": [
+          "Carboxylic Ester"
         ]
       },
-      "id": "path_7523"
+      "id": "path_3553"
     },
     {
       "score": {
-        "ic_mean": 0.6192,
-        "final_score": 0.6192
+        "ic_mean": 0.5513,
+        "final_score": 0.5513
       },
       "nodes": [
         {
@@ -60,11 +143,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Oxycodone",
+          "id": "Metronidazole",
           "type": "Compound"
         },
         {
@@ -75,32 +158,31 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Oprd1",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Oprd1",
-          "target": "Oxycodone",
+          "source": "Cyp2c8",
+          "target": "Metronidazole",
           "label": "is bound by"
         },
         {
-          "source": "Oxycodone",
+          "source": "Metronidazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Oxycodone": [
-          "Heteroorganic Entity",
-          "Opioid Receptor Agonist"
+        "Dextropropoxyphene,Metronidazole": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_7524"
+      "id": "path_3554"
     },
     {
       "score": {
-        "ic_mean": 0.6192,
-        "final_score": 0.6192
+        "ic_mean": 0.5513,
+        "final_score": 0.5513
       },
       "nodes": [
         {
@@ -108,11 +190,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprk1",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Hydrocodone",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -123,32 +205,31 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Oprk1",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Oprk1",
-          "target": "Hydrocodone",
+          "source": "Cyp2c8",
+          "target": "Clopidogrel",
           "label": "is bound by"
         },
         {
-          "source": "Hydrocodone",
+          "source": "Clopidogrel",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Hydrocodone": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
+        "Dextropropoxyphene,Clopidogrel": [
+          "Carboxylic Ester"
         ]
       },
-      "id": "path_7525"
+      "id": "path_3555"
     },
     {
       "score": {
-        "ic_mean": 0.6192,
-        "final_score": 0.6192
+        "ic_mean": 0.526,
+        "final_score": 0.526
       },
       "nodes": [
         {
@@ -156,8 +237,8 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
-          "type": "Gene"
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Sufentanil",
@@ -171,13 +252,13 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Oprd1",
+          "source": "Full Opioid Agonists",
           "target": "Sufentanil",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Sufentanil",
@@ -187,16 +268,16 @@
       ],
       "lowest_common_ancestors": {
         "Dextropropoxyphene,Sufentanil": [
-          "Organooxygen Compound",
+          "Organic Molecule",
           "Opioid Receptor Agonist"
         ]
       },
-      "id": "path_7526"
+      "id": "path_3556"
     },
     {
       "score": {
-        "ic_mean": 0.5979,
-        "final_score": 0.5979
+        "ic_mean": 0.5109,
+        "final_score": 0.5109
       },
       "nodes": [
         {
@@ -204,56 +285,8 @@
           "type": "Compound"
         },
         {
-          "id": "Oprm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Alfentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprm1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprm1",
-          "target": "Alfentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alfentanil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Alfentanil": [
-          "Organooxygen Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_7527"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5892,
-        "final_score": 0.5892
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Oxymorphone",
@@ -267,13 +300,13 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Oprd1",
+          "source": "Full Opioid Agonists",
           "target": "Oxymorphone",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Oxymorphone",
@@ -287,12 +320,12 @@
           "Opioid Receptor Agonist"
         ]
       },
-      "id": "path_7528"
+      "id": "path_3557"
     },
     {
       "score": {
-        "ic_mean": 0.5892,
-        "final_score": 0.5892
+        "ic_mean": 0.5109,
+        "final_score": 0.5109
       },
       "nodes": [
         {
@@ -300,11 +333,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
-          "type": "Gene"
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Ketobemidone",
+          "id": "Alfentanil",
           "type": "Compound"
         },
         {
@@ -315,32 +348,32 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Oprd1",
-          "target": "Ketobemidone",
-          "label": "is bound by"
+          "source": "Full Opioid Agonists",
+          "target": "Alfentanil",
+          "label": "includes"
         },
         {
-          "source": "Ketobemidone",
+          "source": "Alfentanil",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Ketobemidone": [
-          "Organonitrogen Compound",
+        "Dextropropoxyphene,Alfentanil": [
+          "Organic Molecule",
           "Opioid Receptor Agonist"
         ]
       },
-      "id": "path_7529"
+      "id": "path_3558"
     },
     {
       "score": {
-        "ic_mean": 0.5892,
-        "final_score": 0.5892
+        "ic_mean": 0.5,
+        "final_score": 0.5
       },
       "nodes": [
         {
@@ -348,11 +381,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Fentanyl",
+          "id": "Paramethadione",
           "type": "Compound"
         },
         {
@@ -363,32 +396,127 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Oprd1",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Oprd1",
-          "target": "Fentanyl",
+          "source": "Cyp2c8",
+          "target": "Paramethadione",
           "label": "is bound by"
         },
         {
-          "source": "Fentanyl",
+          "source": "Paramethadione",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Fentanyl": [
-          "Organooxygen Compound",
+        "Dextropropoxyphene,Paramethadione": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3559"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5,
+        "final_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Dextropropoxyphene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextropropoxyphene",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Ifosfamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextropropoxyphene,Ifosfamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_3560"
+    },
+    {
+      "score": {
+        "ic_mean": 0.492,
+        "final_score": 0.492
+      },
+      "nodes": [
+        {
+          "id": "Dextropropoxyphene",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextropropoxyphene",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Morphine",
+          "label": "includes"
+        },
+        {
+          "source": "Morphine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextropropoxyphene,Morphine": [
+          "Organic Molecule",
           "Opioid Receptor Agonist"
         ]
       },
-      "id": "path_7530"
+      "id": "path_3561"
     },
     {
       "score": {
-        "ic_mean": 0.5892,
-        "final_score": 0.5892
+        "ic_mean": 0.4751,
+        "final_score": 0.4751
       },
       "nodes": [
         {
@@ -396,11 +524,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
+          "id": "Cyp2d6",
           "type": "Gene"
         },
         {
-          "id": "Tramadol",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -411,457 +539,26 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Oprd1",
+          "target": "Cyp2d6",
           "label": "binds"
         },
         {
-          "source": "Oprd1",
-          "target": "Tramadol",
+          "source": "Cyp2d6",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Tramadol",
+          "source": "Ranitidine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Tramadol": [
-          "Racemate",
-          "Analgesic Agent"
+        "Dextropropoxyphene,Ranitidine": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_7531"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5892,
-        "final_score": 0.5892
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Ketobemidone": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_7532"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5766,
-        "final_score": 0.5766
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprm1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprm1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Methadone": [
-          "Racemate",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_7533"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5679,
-        "final_score": 0.5679
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Methadone": [
-          "Racemate",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_7534"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5679,
-        "final_score": 0.5679
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydromorphone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Hydromorphone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydromorphone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Hydromorphone": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_7535"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5679,
-        "final_score": 0.5679
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Codeine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Codeine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Codeine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Codeine": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_7536"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5679,
-        "final_score": 0.5679
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Methadone": [
-          "Racemate",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_7537"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5513,
-        "final_score": 0.5513
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Loperamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Loperamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Loperamide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Loperamide": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_7538"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5264,
-        "final_score": 0.5264
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Dextromethorphan",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dextromethorphan",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Dextromethorphan": [
-          "Organooxygen Compound",
-          "Analgesic Agent"
-        ]
-      },
-      "id": "path_7539"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4886,
-        "final_score": 0.4886
-      },
-      "nodes": [
-        {
-          "id": "Dextropropoxyphene",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextropropoxyphene",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextropropoxyphene,Diltiazem": [
-          "Tertiary Amino Compound"
-        ]
-      },
-      "id": "path_7540"
+      "id": "path_3562"
     },
     {
       "score": {
@@ -878,7 +575,7 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Fosphenytoin",
           "type": "Compound"
         },
         {
@@ -894,22 +591,69 @@
         },
         {
           "source": "Cyp2c8",
-          "target": "Antipyrine",
+          "target": "Fosphenytoin",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Fosphenytoin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Antipyrine": [
-          "Carbonyl Compound",
-          "Analgesic Agent"
+        "Dextropropoxyphene,Fosphenytoin": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_7541"
+      "id": "path_3563"
+    },
+    {
+      "score": {
+        "ic_mean": 0.47,
+        "final_score": 0.47
+      },
+      "nodes": [
+        {
+          "id": "Dextropropoxyphene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextropropoxyphene",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Pioglitazone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pioglitazone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextropropoxyphene,Pioglitazone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_3564"
     },
     {
       "score": {
@@ -953,15 +697,15 @@
       ],
       "lowest_common_ancestors": {
         "Dextropropoxyphene,Anastrozole": [
-          "Organonitrogen Compound"
+          "Organic Molecule"
         ]
       },
-      "id": "path_7542"
+      "id": "path_3565"
     },
     {
       "score": {
-        "ic_mean": 0.4527,
-        "final_score": 0.4527
+        "ic_mean": 0.4487,
+        "final_score": 0.4487
       },
       "nodes": [
         {
@@ -969,11 +713,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hip Fracture",
-          "type": "Side Effect"
+          "id": "Cyp2c8",
+          "type": "Gene"
         },
         {
-          "id": "Chenodeoxycholic Acid",
+          "id": "Zafirlukast",
           "type": "Compound"
         },
         {
@@ -984,31 +728,31 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Hip Fracture",
-          "label": "causes"
+          "target": "Cyp2c8",
+          "label": "binds"
         },
         {
-          "source": "Hip Fracture",
-          "target": "Chenodeoxycholic Acid",
-          "label": "is caused by"
+          "source": "Cyp2c8",
+          "target": "Zafirlukast",
+          "label": "is bound by"
         },
         {
-          "source": "Chenodeoxycholic Acid",
+          "source": "Zafirlukast",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Chenodeoxycholic Acid": [
-          "Carbonyl Compound"
+        "Dextropropoxyphene,Zafirlukast": [
+          "Carboxylic Ester"
         ]
       },
-      "id": "path_7543"
+      "id": "path_3566"
     },
     {
       "score": {
-        "ic_mean": 0.4313,
-        "final_score": 0.4313
+        "ic_mean": 0.4186,
+        "final_score": 0.4186
       },
       "nodes": [
         {
@@ -1016,11 +760,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hip Fracture",
-          "type": "Side Effect"
+          "id": "Cyp2c8",
+          "type": "Gene"
         },
         {
-          "id": "Rivastigmine",
+          "id": "Lidocaine",
           "type": "Compound"
         },
         {
@@ -1031,27 +775,130 @@
       "edges": [
         {
           "source": "Dextropropoxyphene",
-          "target": "Hip Fracture",
-          "label": "causes"
+          "target": "Cyp2c8",
+          "label": "binds"
         },
         {
-          "source": "Hip Fracture",
-          "target": "Rivastigmine",
-          "label": "is caused by"
+          "source": "Cyp2c8",
+          "target": "Lidocaine",
+          "label": "is bound by"
         },
         {
-          "source": "Rivastigmine",
+          "source": "Lidocaine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextropropoxyphene,Rivastigmine": [
-          "Tertiary Amino Compound"
+        "Dextropropoxyphene,Lidocaine": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_7544"
+      "id": "path_3567"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3798,
+        "final_score": 0.3798
+      },
+      "nodes": [
+        {
+          "id": "Dextropropoxyphene",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Tolerance",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mefloquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextropropoxyphene",
+          "target": "Drug Tolerance",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Tolerance",
+          "target": "Mefloquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mefloquine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextropropoxyphene,Mefloquine": [
+          "Racemate"
+        ]
+      },
+      "id": "path_3568"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2167,
+        "final_score": 0.2167
+      },
+      "nodes": [
+        {
+          "id": "Dextropropoxyphene",
+          "type": "Compound"
+        },
+        {
+          "id": "Alverine",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextropropoxyphene",
+          "target": "Alverine",
+          "label": "resembles"
+        },
+        {
+          "source": "Alverine",
+          "target": "Benzphetamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Benzphetamine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextropropoxyphene,Alverine": [
+          "Tertiary Amine",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextropropoxyphene,Benzphetamine": [
+          "Tertiary Amine",
+          "Agent Affecting Nervous System"
+        ],
+        "Alverine,Benzphetamine": [
+          "Tertiary Amine",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3569"
     }
-  ],
-  "verbalization": ""
+  ]
 }

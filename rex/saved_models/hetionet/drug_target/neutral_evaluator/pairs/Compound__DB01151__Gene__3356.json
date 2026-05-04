@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6206,
-        "final_score": 0.6206
+        "ic_mean": 0.5696,
+        "final_score": 0.5696
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Painful Ejaculation",
+          "id": "Adenitis",
           "type": "Side Effect"
         },
         {
-          "id": "Amoxapine",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,80 @@
       "edges": [
         {
           "source": "Desipramine",
-          "target": "Painful Ejaculation",
+          "target": "Adenitis",
           "label": "causes"
         },
         {
-          "source": "Painful Ejaculation",
-          "target": "Amoxapine",
+          "source": "Adenitis",
+          "target": "Imipramine",
           "label": "is caused by"
         },
         {
-          "source": "Amoxapine",
+          "source": "Imipramine",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Desipramine,Amoxapine": [
-          "Organic Heterotricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Desipramine,Imipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
         ]
       },
-      "id": "path_2454"
+      "id": "path_1170"
     },
     {
       "score": {
-        "ic_mean": 0.4131,
-        "final_score": 0.4131
+        "ic_mean": 0.5696,
+        "final_score": 0.5696
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Imipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Imipramine",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Imipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
+        ]
+      },
+      "id": "path_1171"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3892,
+        "final_score": 0.3892
       },
       "nodes": [
         {
@@ -64,7 +112,7 @@
           "type": "Compound"
         },
         {
-          "id": "Thioproperazine",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -80,11 +128,11 @@
         },
         {
           "source": "Clocapramine",
-          "target": "Thioproperazine",
+          "target": "Imipramine",
           "label": "resembles"
         },
         {
-          "source": "Thioproperazine",
+          "source": "Imipramine",
           "target": "Htr2a",
           "label": "binds"
         }
@@ -94,21 +142,21 @@
           "Organic Heterotricyclic Compound",
           "Antidepressant Agent"
         ],
-        "Desipramine,Thioproperazine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Desipramine,Imipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
         ],
-        "Clocapramine,Thioproperazine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+        "Clocapramine,Imipramine": [
+          "Organic Heterotricyclic Compound",
+          "Antidepressant Agent"
         ]
       },
-      "id": "path_2455"
+      "id": "path_1172"
     },
     {
       "score": {
-        "ic_mean": 0.3981,
-        "final_score": 0.3981
+        "ic_mean": 0.3001,
+        "final_score": 0.3001
       },
       "nodes": [
         {
@@ -116,11 +164,11 @@
           "type": "Compound"
         },
         {
-          "id": "Clocapramine",
+          "id": "Demexiptiline",
           "type": "Compound"
         },
         {
-          "id": "Clomipramine",
+          "id": "Atomoxetine",
           "type": "Compound"
         },
         {
@@ -131,36 +179,35 @@
       "edges": [
         {
           "source": "Desipramine",
-          "target": "Clocapramine",
+          "target": "Demexiptiline",
           "label": "resembles"
         },
         {
-          "source": "Clocapramine",
-          "target": "Clomipramine",
+          "source": "Demexiptiline",
+          "target": "Atomoxetine",
           "label": "resembles"
         },
         {
-          "source": "Clomipramine",
+          "source": "Atomoxetine",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Desipramine,Clocapramine": [
-          "Organic Heterotricyclic Compound",
+        "Desipramine,Demexiptiline": [
+          "Tricyclic Antidepressant",
+          "Organic Cyclic Compound"
+        ],
+        "Desipramine,Atomoxetine": [
+          "Organic Cyclic Compound",
           "Antidepressant Agent"
         ],
-        "Desipramine,Clomipramine": [
-          "Dibenzoazepine",
-          "Tricyclic Antidepressant"
-        ],
-        "Clocapramine,Clomipramine": [
-          "Organic Heterotricyclic Compound",
+        "Demexiptiline,Atomoxetine": [
+          "Benzenoid Aromatic Compound",
           "Antidepressant Agent"
         ]
       },
-      "id": "path_2456"
+      "id": "path_1173"
     }
-  ],
-  "verbalization": ""
+  ]
 }

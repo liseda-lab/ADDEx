@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01577 - Gene::152",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6129,
+        "final_score": 0.6129
+      },
+      "nodes": [
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methamphetamine",
+          "target": "Slc18a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc18a1",
+          "target": "Norepinephrine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methamphetamine,Norepinephrine": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_15179"
+    }
+  ]
 }

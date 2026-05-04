@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00353 - Gene::3354",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6951,
+        "final_score": 0.7226,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Methylergometrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr1e",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylergometrine",
+          "target": "Htr2c",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2c",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr1e",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9182"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5927,
+        "final_score": 0.5927
+      },
+      "nodes": [
+        {
+          "id": "Methylergometrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Water Intoxication",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ergonovine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1e",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylergometrine",
+          "target": "Water Intoxication",
+          "label": "causes"
+        },
+        {
+          "source": "Water Intoxication",
+          "target": "Ergonovine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ergonovine",
+          "target": "Htr1e",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylergometrine,Ergonovine": [
+          "Alkaloid",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9183"
+    }
+  ]
+}

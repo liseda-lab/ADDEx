@@ -1,0 +1,62 @@
+{
+  "id": "Compound::DB01015 - Gene::213",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8003,
+        "final_score": 0.7752,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Sulfamethoxazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfacytine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfamerazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfamethoxazole",
+          "target": "Sulfacytine",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfacytine",
+          "target": "Sulfamerazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfamerazine",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sulfamethoxazole,Sulfacytine": [
+          "Sulfonamide",
+          "Sulfonamide Anti-Infective Agent"
+        ],
+        "Sulfamethoxazole,Sulfamerazine": [
+          "Sulfonamide Antibiotic",
+          "Sulfonamide Anti-Infective Agent"
+        ],
+        "Sulfacytine,Sulfamerazine": [
+          "Sulfonamide",
+          "Sulfonamide Anti-Infective Agent"
+        ]
+      },
+      "id": "path_5957"
+    }
+  ]
+}

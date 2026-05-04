@@ -1,6 +1,95 @@
 {
   "id": "Compound::DB00353 - Gene::3354",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6951,
+        "final_score": 0.6951
+      },
+      "nodes": [
+        {
+          "id": "Methylergometrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr1e",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylergometrine",
+          "target": "Htr2c",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2c",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr1e",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12242"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5927,
+        "final_score": 0.5927
+      },
+      "nodes": [
+        {
+          "id": "Methylergometrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Water Intoxication",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ergonovine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1e",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylergometrine",
+          "target": "Water Intoxication",
+          "label": "causes"
+        },
+        {
+          "source": "Water Intoxication",
+          "target": "Ergonovine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ergonovine",
+          "target": "Htr1e",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylergometrine,Ergonovine": [
+          "Agent Affecting Nervous System",
+          "Alkaloid"
+        ]
+      },
+      "id": "path_12243"
+    }
+  ]
 }

@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00949 - Gene::2903",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7242,
+        "final_score": 0.7788,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Felbamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin3a",
+          "type": "Gene"
+        },
+        {
+          "id": "Nmda Glutamate Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Grin2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felbamate",
+          "target": "Grin3a",
+          "label": "binds"
+        },
+        {
+          "source": "Grin3a",
+          "target": "Nmda Glutamate Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Nmda Glutamate Receptor Activity",
+          "target": "Grin2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7462"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5644,
+        "final_score": 0.5644
+      },
+      "nodes": [
+        {
+          "id": "Felbamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Livedo Reticularis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amantadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felbamate",
+          "target": "Livedo Reticularis",
+          "label": "causes"
+        },
+        {
+          "source": "Livedo Reticularis",
+          "target": "Amantadine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amantadine",
+          "target": "Grin2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Felbamate,Amantadine": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7463"
+    }
+  ]
+}

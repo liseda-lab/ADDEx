@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB01151 - Gene::1813",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6515,
+        "final_score": 0.7007,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Chrm4",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2435"
+    },
+    {
+      "score": {
+        "ic_mean": 0.409,
+        "final_score": 0.409
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Thioproperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Thioproperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Thioproperazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Clocapramine": [
+          "Antidepressant Agent",
+          "Organic Heterotricyclic Compound"
+        ],
+        "Desipramine,Thioproperazine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ],
+        "Clocapramine,Thioproperazine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_2436"
+    }
+  ]
+}

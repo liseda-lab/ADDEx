@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5616,
-        "final_score": 0.5616
+        "ic_mean": 0.5207,
+        "final_score": 0.5207
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Endotracheal Intubation Complication",
+          "id": "Pain Worsened",
           "type": "Side Effect"
         },
         {
-          "id": "Alfentanil",
+          "id": "Oxycodone",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Lidocaine",
-          "target": "Endotracheal Intubation Complication",
+          "target": "Pain Worsened",
           "label": "causes"
         },
         {
-          "source": "Endotracheal Intubation Complication",
-          "target": "Alfentanil",
+          "source": "Pain Worsened",
+          "target": "Oxycodone",
           "label": "is caused by"
         },
         {
-          "source": "Alfentanil",
+          "source": "Oxycodone",
           "target": "Cyp3a7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Lidocaine,Alfentanil": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Lidocaine,Oxycodone": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_936"
+      "id": "path_457"
+    },
+    {
+      "score": {
+        "ic_mean": 0.487,
+        "final_score": 0.487
+      },
+      "nodes": [
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lidocaine",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Phenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lidocaine,Phenytoin": [
+          "Organic Cyclic Compound",
+          "Cation Channel Blocker"
+        ]
+      },
+      "id": "path_458"
     }
-  ],
-  "verbalization": ""
+  ]
 }

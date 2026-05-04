@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB08896 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6415,
+        "final_score": 0.7374,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2b6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5383"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4559,
+        "final_score": 0.4559
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c9 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Cytochrome P450 2c9 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c9 Inhibitors",
+          "target": "Efavirenz",
+          "label": "includes"
+        },
+        {
+          "source": "Efavirenz",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Regorafenib,Efavirenz": [
+          "Organooxygen Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_5384"
+    }
+  ]
+}

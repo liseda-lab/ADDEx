@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00788 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4173,
+        "final_score": 0.4173
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Vascular Anomaly",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Betaxolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Vascular Anomaly",
+          "label": "causes"
+        },
+        {
+          "source": "Vascular Anomaly",
+          "target": "Betaxolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Betaxolol",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Betaxolol": [
+          "Agent Affecting Nervous System",
+          "Hydroxides"
+        ]
+      },
+      "id": "path_6289"
+    }
+  ]
+}

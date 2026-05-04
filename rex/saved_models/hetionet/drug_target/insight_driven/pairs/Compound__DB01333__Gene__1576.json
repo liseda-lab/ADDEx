@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB01333 - Gene::1576",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5044,
+        "final_score": 0.5044
+      },
+      "nodes": [
+        {
+          "id": "Cefradine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Nafcillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cefradine",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Nafcillin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nafcillin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cefradine,Nafcillin": [
+          "Beta-Lactam Antibiotic",
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_11866"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4267,
+        "final_score": 0.4267
+      },
+      "nodes": [
+        {
+          "id": "Cefradine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cefditoren",
+          "type": "Compound"
+        },
+        {
+          "id": "Cephalexin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cefradine",
+          "target": "Cefditoren",
+          "label": "resembles"
+        },
+        {
+          "source": "Cefditoren",
+          "target": "Cephalexin",
+          "label": "resembles"
+        },
+        {
+          "source": "Cephalexin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cefradine,Cefditoren": [
+          "Cephalosporin Antibiotic",
+          "Cephalosporin"
+        ],
+        "Cefradine,Cephalexin": [
+          "Cephalosporin Antibiotic",
+          "Cephalosporin"
+        ],
+        "Cefditoren,Cephalexin": [
+          "Cephalosporin Antibiotic",
+          "Cephalosporin"
+        ]
+      },
+      "id": "path_11867"
+    }
+  ]
+}

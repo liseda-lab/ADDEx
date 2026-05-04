@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6667,
-        "final_score": 0.6667
+        "ic_mean": 0.5973,
+        "final_score": 0.5973
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Nat2",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Isoniazid",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,337 +27,21 @@
       "edges": [
         {
           "source": "Acetaminophen",
-          "target": "Nat2",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Nat2",
-          "target": "Isoniazid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Isoniazid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Isoniazid": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_3061"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6667,
-        "final_score": 0.6667
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Nat2",
-          "type": "Gene"
-        },
-        {
-          "id": "Clonazepam",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Nat2",
-          "label": "binds"
-        },
-        {
-          "source": "Nat2",
-          "target": "Clonazepam",
-          "label": "is bound by"
-        },
-        {
-          "source": "Clonazepam",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Clonazepam": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_3062"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6655,
-        "final_score": 0.6655
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a10",
-          "type": "Gene"
-        },
-        {
-          "id": "Tamoxifen Metabolism",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a10",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a10",
-          "target": "Tamoxifen Metabolism",
+          "source": "Cyp2a6",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "label": "participates"
         },
         {
-          "source": "Tamoxifen Metabolism",
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "target": "Cyp3a4",
           "label": "is participated by"
         }
       ],
-      "id": "path_3063"
-    },
-    {
-      "score": {
-        "ic_mean": 0.662,
-        "final_score": 0.662
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Estrogen Metabolism",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a6",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a6",
-          "target": "Estrogen Metabolism",
-          "label": "participates"
-        },
-        {
-          "source": "Estrogen Metabolism",
-          "target": "Cyp3a4",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_3064"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6596,
-        "final_score": 0.6596
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a10",
-          "type": "Gene"
-        },
-        {
-          "id": "Irinotecan Pathway",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a10",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a10",
-          "target": "Irinotecan Pathway",
-          "label": "participates"
-        },
-        {
-          "source": "Irinotecan Pathway",
-          "target": "Cyp3a4",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_3065"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6548,
-        "final_score": 0.6548
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt2b15",
-          "type": "Gene"
-        },
-        {
-          "id": "Tamoxifen Metabolism",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt2b15",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt2b15",
-          "target": "Tamoxifen Metabolism",
-          "label": "participates"
-        },
-        {
-          "source": "Tamoxifen Metabolism",
-          "target": "Cyp3a4",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_3066"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6153,
-        "final_score": 0.6153
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cnr1",
-          "type": "Gene"
-        },
-        {
-          "id": "Rimonabant",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Cnr1",
-          "label": "binds"
-        },
-        {
-          "source": "Cnr1",
-          "target": "Rimonabant",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rimonabant",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Rimonabant": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_3067"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6039,
-        "final_score": 0.6039
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Mycophenolate Mofetil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a6",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a6",
-          "target": "Mycophenolate Mofetil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mycophenolate Mofetil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Mycophenolate Mofetil": [
-          "Phenols"
-        ]
-      },
-      "id": "path_3068"
+      "id": "path_1479"
     },
     {
       "score": {
@@ -404,103 +88,7 @@
           "Organic Hydroxy Compound"
         ]
       },
-      "id": "path_3069"
-    },
-    {
-      "score": {
-        "ic_mean": 0.594,
-        "final_score": 0.594
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Propofol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a6",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a6",
-          "target": "Propofol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Propofol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Propofol": [
-          "Agent Affecting Nervous System",
-          "Phenols"
-        ]
-      },
-      "id": "path_3070"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5853,
-        "final_score": 0.5853
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Valproic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a6",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a6",
-          "target": "Valproic Acid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Valproic Acid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Valproic Acid": [
-          "Agent Affecting Nervous System",
-          "Hydroxides"
-        ]
-      },
-      "id": "path_3071"
+      "id": "path_1480"
     },
     {
       "score": {
@@ -547,12 +135,12 @@
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_3072"
+      "id": "path_1481"
     },
     {
       "score": {
-        "ic_mean": 0.564,
-        "final_score": 0.564
+        "ic_mean": 0.5067,
+        "final_score": 0.5067
       },
       "nodes": [
         {
@@ -560,11 +148,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a10",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Losartan",
+          "id": "Troleandomycin",
           "type": "Compound"
         },
         {
@@ -575,311 +163,26 @@
       "edges": [
         {
           "source": "Acetaminophen",
-          "target": "Ugt1a10",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Ugt1a10",
-          "target": "Losartan",
+          "source": "Cyp2a6",
+          "target": "Troleandomycin",
           "label": "is bound by"
         },
         {
-          "source": "Losartan",
+          "source": "Troleandomycin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetaminophen,Losartan": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_3073"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5474,
-        "final_score": 0.5474
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Nat2",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Nat2",
-          "label": "binds"
-        },
-        {
-          "source": "Nat2",
-          "target": "Dapsone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapsone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Dapsone": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_3074"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5261,
-        "final_score": 0.5261
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt2b15",
-          "type": "Gene"
-        },
-        {
-          "id": "Morphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt2b15",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt2b15",
-          "target": "Morphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Morphine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Morphine": [
-          "Agent Affecting Nervous System",
+        "Acetaminophen,Troleandomycin": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_3075"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5261,
-        "final_score": 0.5261
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt2b15",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxazepam",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt2b15",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt2b15",
-          "target": "Oxazepam",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxazepam",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Oxazepam": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_3076"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5225,
-        "final_score": 0.5225
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a10",
-          "type": "Gene"
-        },
-        {
-          "id": "Mycophenolate Mofetil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a10",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a10",
-          "target": "Mycophenolate Mofetil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mycophenolate Mofetil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Mycophenolate Mofetil": [
-          "Phenols"
-        ]
-      },
-      "id": "path_3077"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5039,
-        "final_score": 0.5039
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a10",
-          "type": "Gene"
-        },
-        {
-          "id": "Valproic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a10",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a10",
-          "target": "Valproic Acid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Valproic Acid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Valproic Acid": [
-          "Agent Affecting Nervous System",
-          "Hydroxides"
-        ]
-      },
-      "id": "path_3078"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5012,
-        "final_score": 0.5012
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt2b15",
-          "type": "Gene"
-        },
-        {
-          "id": "Ezetimibe",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt2b15",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt2b15",
-          "target": "Ezetimibe",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ezetimibe",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Ezetimibe": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_3079"
+      "id": "path_1482"
     },
     {
       "score": {
@@ -923,203 +226,11 @@
       ],
       "lowest_common_ancestors": {
         "Acetaminophen,Levobupivacaine": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_3080"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4848,
-        "final_score": 0.4848
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Bladder Neck Obstruction",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tiotropium",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Bladder Neck Obstruction",
-          "label": "causes"
-        },
-        {
-          "source": "Bladder Neck Obstruction",
-          "target": "Tiotropium",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tiotropium",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Tiotropium": [
-          "Agent Affecting Nervous System",
-          "Organic Molecular Entity"
-        ]
-      },
-      "id": "path_3081"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4826,
-        "final_score": 0.4826
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt2b15",
-          "type": "Gene"
-        },
-        {
-          "id": "Valproic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt2b15",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt2b15",
-          "target": "Valproic Acid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Valproic Acid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Valproic Acid": [
-          "Agent Affecting Nervous System",
-          "Hydroxides"
-        ]
-      },
-      "id": "path_3082"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4767,
-        "final_score": 0.4767
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Ketobemidone": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_3083"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4586,
-        "final_score": 0.4586
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Anaemia Postoperative",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Bupivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Anaemia Postoperative",
-          "label": "causes"
-        },
-        {
-          "source": "Anaemia Postoperative",
-          "target": "Bupivacaine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Bupivacaine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Bupivacaine": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_3084"
+      "id": "path_1483"
     },
     {
       "score": {
@@ -1132,11 +243,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a9",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Dapagliflozin",
+          "id": "Cisapride",
           "type": "Compound"
         },
         {
@@ -1147,264 +258,74 @@
       "edges": [
         {
           "source": "Acetaminophen",
-          "target": "Ugt1a9",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Ugt1a9",
-          "target": "Dapagliflozin",
+          "source": "Cyp2a6",
+          "target": "Cisapride",
           "label": "is bound by"
         },
         {
-          "source": "Dapagliflozin",
+          "source": "Cisapride",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetaminophen,Dapagliflozin": [
+        "Acetaminophen,Cisapride": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_1484"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4304,
+        "final_score": 0.4304
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Alveolitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Alveolitis",
+          "label": "causes"
+        },
+        {
+          "source": "Alveolitis",
+          "target": "Fenofibrate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenofibrate",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetaminophen,Fenofibrate": [
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_3085"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4525,
-        "final_score": 0.4525
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Acute Angle-closure Glaucoma",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ipratropium Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Acute Angle-closure Glaucoma",
-          "label": "causes"
-        },
-        {
-          "source": "Acute Angle-closure Glaucoma",
-          "target": "Ipratropium Bromide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ipratropium Bromide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Ipratropium Bromide": [
-          "Agent Affecting Nervous System",
-          "P-Block Molecular Entity"
-        ]
-      },
-      "id": "path_3086"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4388,
-        "final_score": 0.4388
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxazepam",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Oxazepam",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxazepam",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Oxazepam": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_3087"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4372,
-        "final_score": 0.4372
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Sult1a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Tamoxifen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Sult1a1",
-          "label": "binds"
-        },
-        {
-          "source": "Sult1a1",
-          "target": "Tamoxifen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tamoxifen",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Tamoxifen": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_3088"
-    },
-    {
-      "score": {
-        "ic_mean": 0.436,
-        "final_score": 0.436
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Postoperative Hemorrhage",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Cevimeline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Postoperative Hemorrhage",
-          "label": "causes"
-        },
-        {
-          "source": "Postoperative Hemorrhage",
-          "target": "Cevimeline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Cevimeline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Cevimeline": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_3089"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4317,
-        "final_score": 0.4317
-      },
-      "nodes": [
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Nephrosis Lower Nephron",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Efavirenz",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetaminophen",
-          "target": "Nephrosis Lower Nephron",
-          "label": "causes"
-        },
-        {
-          "source": "Nephrosis Lower Nephron",
-          "target": "Efavirenz",
-          "label": "is caused by"
-        },
-        {
-          "source": "Efavirenz",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetaminophen,Efavirenz": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_3090"
+      "id": "path_1485"
     },
     {
       "score": {
@@ -1417,11 +338,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a9",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Regorafenib",
+          "id": "Pilocarpine",
           "type": "Compound"
         },
         {
@@ -1432,31 +353,32 @@
       "edges": [
         {
           "source": "Acetaminophen",
-          "target": "Ugt1a9",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Ugt1a9",
-          "target": "Regorafenib",
+          "source": "Cyp2a6",
+          "target": "Pilocarpine",
           "label": "is bound by"
         },
         {
-          "source": "Regorafenib",
+          "source": "Pilocarpine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetaminophen,Regorafenib": [
-          "Organic Aromatic Compound"
+        "Acetaminophen,Pilocarpine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_3091"
+      "id": "path_1486"
     },
     {
       "score": {
-        "ic_mean": 0.3898,
-        "final_score": 0.3898
+        "ic_mean": 0.4253,
+        "final_score": 0.4253
       },
       "nodes": [
         {
@@ -1464,11 +386,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a1",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Erlotinib",
+          "id": "Azelastine",
           "type": "Compound"
         },
         {
@@ -1479,27 +401,215 @@
       "edges": [
         {
           "source": "Acetaminophen",
-          "target": "Ugt1a1",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Ugt1a1",
-          "target": "Erlotinib",
+          "source": "Cyp2a6",
+          "target": "Azelastine",
           "label": "is bound by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Azelastine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetaminophen,Erlotinib": [
+        "Acetaminophen,Azelastine": [
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_3092"
+      "id": "path_1487"
+    },
+    {
+      "score": {
+        "ic_mean": 0.424,
+        "final_score": 0.424
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Dystonic Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Domperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Dystonic Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Dystonic Reaction",
+          "target": "Domperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Domperidone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetaminophen,Domperidone": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_1488"
+    },
+    {
+      "score": {
+        "ic_mean": 0.404,
+        "final_score": 0.404
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Prednisolone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetaminophen,Prednisolone": [
+          "Organic Hydroxy Compound"
+        ]
+      },
+      "id": "path_1489"
+    },
+    {
+      "score": {
+        "ic_mean": 0.374,
+        "final_score": 0.374
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Progesterone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetaminophen,Progesterone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1490"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3439,
+        "final_score": 0.3439
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Nifedipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetaminophen,Nifedipine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1491"
     }
-  ],
-  "verbalization": ""
+  ]
 }

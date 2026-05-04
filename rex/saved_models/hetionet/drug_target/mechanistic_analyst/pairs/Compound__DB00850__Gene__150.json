@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00850 - Gene::150",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6618,
+        "final_score": 0.6642,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Fluphenazine",
+          "label": "includes"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Perphenazine,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Fluphenazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_1380"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5176,
+        "final_score": 0.5176
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bizarre Dreams",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Bizarre Dreams",
+          "label": "causes"
+        },
+        {
+          "source": "Bizarre Dreams",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_1381"
+    }
+  ]
+}

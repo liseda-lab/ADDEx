@@ -3,8 +3,56 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5872,
-        "final_score": 0.5872
+        "ic_mean": 0.574,
+        "final_score": 0.574
+      },
+      "nodes": [
+        {
+          "id": "Fexofenadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        },
+        {
+          "id": "Tripelennamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fexofenadine",
+          "target": "Hrh1",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh1",
+          "target": "Tripelennamine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Tripelennamine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fexofenadine,Tripelennamine": [
+          "Histamine-1 Receptor Antagonist",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_12827"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5615,
+        "final_score": 0.5615
       },
       "nodes": [
         {
@@ -16,7 +64,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Desloratadine",
+          "id": "Chlorphenamine",
           "type": "Compound"
         },
         {
@@ -32,22 +80,21 @@
         },
         {
           "source": "Histamine H1 Receptor Antagonists",
-          "target": "Desloratadine",
+          "target": "Chlorphenamine",
           "label": "includes"
         },
         {
-          "source": "Desloratadine",
+          "source": "Chlorphenamine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fexofenadine,Desloratadine": [
-          "Histamine-1 Receptor Antagonist",
+        "Fexofenadine,Chlorphenamine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_25305"
+      "id": "path_12828"
     },
     {
       "score": {
@@ -60,11 +107,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco2b1",
+          "id": "Hrh1",
           "type": "Gene"
         },
         {
-          "id": "Niacin",
+          "id": "Mequitazine",
           "type": "Compound"
         },
         {
@@ -75,31 +122,32 @@
       "edges": [
         {
           "source": "Fexofenadine",
-          "target": "Slco2b1",
+          "target": "Hrh1",
           "label": "binds"
         },
         {
-          "source": "Slco2b1",
-          "target": "Niacin",
+          "source": "Hrh1",
+          "target": "Mequitazine",
           "label": "is bound by"
         },
         {
-          "source": "Niacin",
+          "source": "Mequitazine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fexofenadine,Niacin": [
-          "Organonitrogen Heterocyclic Compound"
+        "Fexofenadine,Mequitazine": [
+          "Organic Heterocyclic Compound",
+          "Histamine-1 Receptor Antagonist"
         ]
       },
-      "id": "path_25306"
+      "id": "path_12829"
     },
     {
       "score": {
-        "ic_mean": 0.4543,
-        "final_score": 0.4543
+        "ic_mean": 0.5275,
+        "final_score": 0.5275
       },
       "nodes": [
         {
@@ -107,11 +155,11 @@
           "type": "Compound"
         },
         {
-          "id": "Rhinitis Perennial",
-          "type": "Side Effect"
+          "id": "Histamine H1 Receptor Antagonists",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Citalopram",
+          "id": "Diphenhydramine",
           "type": "Compound"
         },
         {
@@ -122,27 +170,135 @@
       "edges": [
         {
           "source": "Fexofenadine",
-          "target": "Rhinitis Perennial",
-          "label": "causes"
+          "target": "Histamine H1 Receptor Antagonists",
+          "label": "is included in"
         },
         {
-          "source": "Rhinitis Perennial",
-          "target": "Citalopram",
-          "label": "is caused by"
+          "source": "Histamine H1 Receptor Antagonists",
+          "target": "Diphenhydramine",
+          "label": "includes"
         },
         {
-          "source": "Citalopram",
+          "source": "Diphenhydramine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fexofenadine,Citalopram": [
+        "Fexofenadine,Diphenhydramine": [
+          "Histamine-1 Receptor Antagonist",
           "Tertiary Amino Compound"
         ]
       },
-      "id": "path_25307"
+      "id": "path_12830"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3556,
+        "final_score": 0.3556
+      },
+      "nodes": [
+        {
+          "id": "Fexofenadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bepotastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chlorphenamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fexofenadine",
+          "target": "Bepotastine",
+          "label": "resembles"
+        },
+        {
+          "source": "Bepotastine",
+          "target": "Chlorphenamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Chlorphenamine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fexofenadine,Bepotastine": [
+          "Piperidines",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Fexofenadine,Chlorphenamine": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Bepotastine,Chlorphenamine": [
+          "Pyridines"
+        ]
+      },
+      "id": "path_12831"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3308,
+        "final_score": 0.3308
+      },
+      "nodes": [
+        {
+          "id": "Fexofenadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Diphenidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Trospium",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fexofenadine",
+          "target": "Diphenidol",
+          "label": "resembles"
+        },
+        {
+          "source": "Diphenidol",
+          "target": "Trospium",
+          "label": "resembles"
+        },
+        {
+          "source": "Trospium",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fexofenadine,Diphenidol": [
+          "Piperidines"
+        ],
+        "Fexofenadine,Trospium": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Diphenidol,Trospium": [
+          "Tertiary Alcohol",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12832"
     }
-  ],
-  "verbalization": ""
+  ]
 }

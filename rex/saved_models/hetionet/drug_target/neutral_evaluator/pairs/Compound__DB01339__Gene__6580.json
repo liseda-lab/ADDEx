@@ -1,6 +1,149 @@
 {
   "id": "Compound::DB01339 - Gene::6580",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.748,
+        "final_score": 0.748
+      },
+      "nodes": [
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuromuscular Nondepolarizing Blockade",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Rocuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vecuronium",
+          "target": "Neuromuscular Nondepolarizing Blockade",
+          "label": "is included in"
+        },
+        {
+          "source": "Neuromuscular Nondepolarizing Blockade",
+          "target": "Rocuronium",
+          "label": "includes"
+        },
+        {
+          "source": "Rocuronium",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vecuronium,Rocuronium": [
+          "Nicotinic Antagonist",
+          "Androstane"
+        ]
+      },
+      "id": "path_11453"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6884,
+        "final_score": 0.6884
+      },
+      "nodes": [
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrnb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Rocuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vecuronium",
+          "target": "Chrnb1",
+          "label": "binds"
+        },
+        {
+          "source": "Chrnb1",
+          "target": "Rocuronium",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rocuronium",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vecuronium,Rocuronium": [
+          "Nicotinic Antagonist",
+          "Androstane"
+        ]
+      },
+      "id": "path_11454"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5927,
+        "final_score": 0.5927
+      },
+      "nodes": [
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Skeletal Muscle Paralysis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rocuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vecuronium",
+          "target": "Skeletal Muscle Paralysis",
+          "label": "causes"
+        },
+        {
+          "source": "Skeletal Muscle Paralysis",
+          "target": "Rocuronium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rocuronium",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vecuronium,Rocuronium": [
+          "Nicotinic Antagonist",
+          "Androstane"
+        ]
+      },
+      "id": "path_11455"
+    }
+  ]
 }

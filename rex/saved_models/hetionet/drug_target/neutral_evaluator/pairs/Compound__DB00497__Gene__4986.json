@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6275,
-        "final_score": 0.6275
+        "ic_mean": 0.5746,
+        "final_score": 0.5746
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
-          "type": "Gene"
+          "id": "Cheyne-stokes Respiration",
+          "type": "Side Effect"
         },
         {
-          "id": "Pentazocine",
+          "id": "Morphine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,315 @@
       "edges": [
         {
           "source": "Oxycodone",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Cheyne-stokes Respiration",
+          "label": "causes"
         },
         {
-          "source": "Oprd1",
-          "target": "Pentazocine",
-          "label": "is bound by"
+          "source": "Cheyne-stokes Respiration",
+          "target": "Morphine",
+          "label": "is caused by"
         },
         {
-          "source": "Pentazocine",
+          "source": "Morphine",
           "target": "Oprk1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Oxycodone,Pentazocine": [
-          "Organic Heteropolycyclic Compound",
-          "Opioid Receptor Agonist"
+        "Oxycodone,Morphine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
         ]
       },
-      "id": "path_16338"
+      "id": "path_8145"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5746,
+        "final_score": 0.5746
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Breakthrough Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Breakthrough Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Breakthrough Pain",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Morphine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_8146"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5319,
+        "final_score": 0.5319
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Urethral Stenosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Urethral Stenosis",
+          "label": "causes"
+        },
+        {
+          "source": "Urethral Stenosis",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Morphine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_8147"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5319,
+        "final_score": 0.5319
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Vt",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Vt",
+          "label": "causes"
+        },
+        {
+          "source": "Vt",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Morphine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_8148"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5319,
+        "final_score": 0.5319
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Post Herpetic Neuralgia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Post Herpetic Neuralgia",
+          "label": "causes"
+        },
+        {
+          "source": "Post Herpetic Neuralgia",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Morphine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_8149"
+    },
+    {
+      "score": {
+        "ic_mean": 0.507,
+        "final_score": 0.507
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cutis Anserina",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Cutis Anserina",
+          "label": "causes"
+        },
+        {
+          "source": "Cutis Anserina",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Morphine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_8150"
+    },
+    {
+      "score": {
+        "ic_mean": 0.507,
+        "final_score": 0.507
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Accidental Overdose",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Accidental Overdose",
+          "label": "causes"
+        },
+        {
+          "source": "Accidental Overdose",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Morphine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_8151"
     }
-  ],
-  "verbalization": ""
+  ]
 }

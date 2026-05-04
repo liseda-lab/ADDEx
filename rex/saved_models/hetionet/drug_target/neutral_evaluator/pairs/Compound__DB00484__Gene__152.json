@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6739,
-        "final_score": 0.6739
+        "ic_mean": 0.5933,
+        "final_score": 0.5933
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Eyelid Retraction",
+          "id": "Follicular Conjunctivitis",
           "type": "Side Effect"
         },
         {
-          "id": "Apraclonidine",
+          "id": "Dipivefrin",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Brimonidine",
-          "target": "Eyelid Retraction",
+          "target": "Follicular Conjunctivitis",
           "label": "causes"
         },
         {
-          "source": "Eyelid Retraction",
-          "target": "Apraclonidine",
+          "source": "Follicular Conjunctivitis",
+          "target": "Dipivefrin",
           "label": "is caused by"
         },
         {
-          "source": "Apraclonidine",
+          "source": "Dipivefrin",
           "target": "Adra2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Brimonidine,Apraclonidine": [
-          "Alpha-Adrenergic Agonist",
-          "Organonitrogen Heterocyclic Compound"
+        "Brimonidine,Dipivefrin": [
+          "Organic Molecule",
+          "Anti-Glaucoma Agent"
         ]
       },
-      "id": "path_4394"
+      "id": "path_1981"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5425,
+        "final_score": 0.5425
+      },
+      "nodes": [
+        {
+          "id": "Brimonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blanching",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Brimonidine",
+          "target": "Blanching",
+          "label": "causes"
+        },
+        {
+          "source": "Blanching",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Brimonidine,Clonidine": [
+          "Organic Aromatic Compound",
+          "Alpha-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_1982"
     }
-  ],
-  "verbalization": ""
+  ]
 }

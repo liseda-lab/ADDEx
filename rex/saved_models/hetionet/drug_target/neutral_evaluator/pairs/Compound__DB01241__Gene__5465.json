@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.859,
-        "final_score": 0.859
+        "ic_mean": 0.6168,
+        "final_score": 0.6168
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Peroxisome Proliferator-activated Receptor Alpha Agonists",
-          "type": "Pharmacologic Class"
+          "id": "Slco1b1",
+          "type": "Gene"
         },
         {
-          "id": "Fenofibrate",
+          "id": "Bezafibrate",
           "type": "Compound"
         },
         {
@@ -27,76 +27,27 @@
       "edges": [
         {
           "source": "Gemfibrozil",
-          "target": "Peroxisome Proliferator-activated Receptor Alpha Agonists",
-          "label": "is included in"
+          "target": "Slco1b1",
+          "label": "binds"
         },
         {
-          "source": "Peroxisome Proliferator-activated Receptor Alpha Agonists",
-          "target": "Fenofibrate",
-          "label": "includes"
+          "source": "Slco1b1",
+          "target": "Bezafibrate",
+          "label": "is bound by"
         },
         {
-          "source": "Fenofibrate",
+          "source": "Bezafibrate",
           "target": "Ppara",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Gemfibrozil,Fenofibrate": [
-          "Fibrate Antilipidemic Agent",
-          "Aromatic Ether"
+        "Gemfibrozil,Bezafibrate": [
+          "Aromatic Ether",
+          "Fibrate Antilipidemic Agent"
         ]
       },
-      "id": "path_23255"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7586,
-        "final_score": 0.7586
-      },
-      "nodes": [
-        {
-          "id": "Gemfibrozil",
-          "type": "Compound"
-        },
-        {
-          "id": "Ppar Alpha",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Fenofibrate",
-          "type": "Compound"
-        },
-        {
-          "id": "Ppara",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Gemfibrozil",
-          "target": "Ppar Alpha",
-          "label": "is included in"
-        },
-        {
-          "source": "Ppar Alpha",
-          "target": "Fenofibrate",
-          "label": "includes"
-        },
-        {
-          "source": "Fenofibrate",
-          "target": "Ppara",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Gemfibrozil,Fenofibrate": [
-          "Fibrate Antilipidemic Agent",
-          "Aromatic Ether"
-        ]
-      },
-      "id": "path_23256"
+      "id": "path_11790"
     }
-  ],
-  "verbalization": ""
+  ]
 }

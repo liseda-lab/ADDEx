@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7143,
-        "final_score": 0.7143
+        "ic_mean": 0.6801,
+        "final_score": 0.6801
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna2d1",
-          "type": "Gene"
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Isradipine",
+          "id": "Clevidipine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,38 @@
       "edges": [
         {
           "source": "Nicardipine",
-          "target": "Cacna2d1",
-          "label": "binds"
+          "target": "Dihydropyridines",
+          "label": "is included in"
         },
         {
-          "source": "Cacna2d1",
-          "target": "Isradipine",
-          "label": "is bound by"
+          "source": "Dihydropyridines",
+          "target": "Clevidipine",
+          "label": "includes"
         },
         {
-          "source": "Isradipine",
+          "source": "Clevidipine",
           "target": "Cacna1d",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nicardipine,Isradipine": [
-          "Calcium Channel Blocker",
+        "Nicardipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nicardipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Clevidipine": [
           "Dihydropyridine"
         ]
       },
-      "id": "path_5688"
+      "id": "path_2599"
     },
     {
       "score": {
-        "ic_mean": 0.6464,
-        "final_score": 0.6464
+        "ic_mean": 0.6676,
+        "final_score": 0.6676
       },
       "nodes": [
         {
@@ -60,11 +66,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna2d1",
-          "type": "Gene"
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Nilvadipine",
+          "id": "Felodipine",
           "type": "Compound"
         },
         {
@@ -75,28 +81,177 @@
       "edges": [
         {
           "source": "Nicardipine",
-          "target": "Cacna2d1",
-          "label": "binds"
+          "target": "Dihydropyridines",
+          "label": "is included in"
         },
         {
-          "source": "Cacna2d1",
-          "target": "Nilvadipine",
-          "label": "is bound by"
+          "source": "Dihydropyridines",
+          "target": "Felodipine",
+          "label": "includes"
         },
         {
-          "source": "Nilvadipine",
+          "source": "Felodipine",
           "target": "Cacna1d",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nicardipine,Nilvadipine": [
-          "Calcium Channel Blocker",
+        "Nicardipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nicardipine,Felodipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Felodipine": [
           "Dihydropyridine"
         ]
       },
-      "id": "path_5689"
+      "id": "path_2600"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6542,
+        "final_score": 0.6542
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Bepridil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Pde1a",
+          "label": "binds"
+        },
+        {
+          "source": "Pde1a",
+          "target": "Bepridil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Bepridil",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicardipine,Bepridil": [
+          "Organonitrogen Heterocyclic Compound",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_2601"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6214,
+        "final_score": 0.6214
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Clevidipine",
+          "label": "includes"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicardipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_2602"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6089,
+        "final_score": 0.6089
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Felodipine",
+          "label": "includes"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicardipine,Felodipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_2603"
     }
-  ],
-  "verbalization": ""
+  ]
 }

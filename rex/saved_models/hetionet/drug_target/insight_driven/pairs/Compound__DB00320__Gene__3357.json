@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00320 - Gene::3357",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7211,
+        "final_score": 0.8606,
+        "agentic_score": 1
+      },
+      "nodes": [
+        {
+          "id": "Dihydroergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dihydroergotamine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr2b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7946"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7548,
+        "final_score": 0.794,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Dihydroergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ergotamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dihydroergotamine",
+          "target": "Ergotamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Ergotamines",
+          "target": "Ergotamine",
+          "label": "includes"
+        },
+        {
+          "source": "Ergotamine",
+          "target": "Htr2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dihydroergotamine,Ergotamine": [
+          "Ergot Alkaloid",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7947"
+    }
+  ]
+}

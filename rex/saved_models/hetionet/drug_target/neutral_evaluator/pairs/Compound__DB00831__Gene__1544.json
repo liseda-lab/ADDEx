@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6268,
-        "final_score": 0.6268
+        "ic_mean": 0.463,
+        "final_score": 0.463
       },
       "nodes": [
         {
@@ -12,8 +12,8 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
         },
         {
           "id": "Fluphenazine",
@@ -27,13 +27,13 @@
       "edges": [
         {
           "source": "Trifluoperazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
         },
         {
-          "source": "Phenothiazines",
+          "source": "Pseudoparkinsonism",
           "target": "Fluphenazine",
-          "label": "includes"
+          "label": "is caused by"
         },
         {
           "source": "Fluphenazine",
@@ -42,23 +42,17 @@
         }
       ],
       "lowest_common_ancestors": {
-        "Trifluoperazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
         "Trifluoperazine,Fluphenazine": [
-          "N-Alkylpiperazine",
+          "Phenothiazines",
           "Antipsychotic Agent"
-        ],
-        "Phenothiazines,Fluphenazine": [
-          "Phenothiazines"
         ]
       },
-      "id": "path_909"
+      "id": "path_452"
     },
     {
       "score": {
-        "ic_mean": 0.5284,
-        "final_score": 0.5284
+        "ic_mean": 0.3659,
+        "final_score": 0.3659
       },
       "nodes": [
         {
@@ -66,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Clocapramine",
+          "type": "Compound"
         },
         {
-          "id": "Duloxetine",
+          "id": "Fluphenazine",
           "type": "Compound"
         },
         {
@@ -81,28 +75,35 @@
       "edges": [
         {
           "source": "Trifluoperazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Clocapramine",
+          "label": "resembles"
         },
         {
-          "source": "Htr6",
-          "target": "Duloxetine",
-          "label": "is bound by"
+          "source": "Clocapramine",
+          "target": "Fluphenazine",
+          "label": "resembles"
         },
         {
-          "source": "Duloxetine",
+          "source": "Fluphenazine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trifluoperazine,Duloxetine": [
-          "Organic Heterocyclic Compound",
+        "Trifluoperazine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Trifluoperazine,Fluphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Clocapramine,Fluphenazine": [
+          "Organic Heterotricyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_910"
+      "id": "path_453"
     }
-  ],
-  "verbalization": ""
+  ]
 }

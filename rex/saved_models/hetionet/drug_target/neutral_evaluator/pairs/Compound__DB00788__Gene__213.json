@@ -3,6 +3,54 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.4977,
+        "final_score": 0.4977
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuritis Retrobulbar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Neuritis Retrobulbar",
+          "label": "causes"
+        },
+        {
+          "source": "Neuritis Retrobulbar",
+          "target": "Flurbiprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurbiprofen",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Flurbiprofen": [
+          "Monocarboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_7772"
+    },
+    {
+      "score": {
         "ic_mean": 0.4909,
         "final_score": 0.4909
       },
@@ -43,59 +91,11 @@
       ],
       "lowest_common_ancestors": {
         "Naproxen,Fenoprofen": [
-          "Cyclooxygenase Inhibitor",
-          "Monocarboxylic Acid Anion"
+          "Monocarboxylic Acid",
+          "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_15557"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4418,
-        "final_score": 0.4418
-      },
-      "nodes": [
-        {
-          "id": "Naproxen",
-          "type": "Compound"
-        },
-        {
-          "id": "Nephrosclerosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tacrolimus",
-          "type": "Compound"
-        },
-        {
-          "id": "Alb",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Naproxen",
-          "target": "Nephrosclerosis",
-          "label": "causes"
-        },
-        {
-          "source": "Nephrosclerosis",
-          "target": "Tacrolimus",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tacrolimus",
-          "target": "Alb",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Naproxen,Tacrolimus": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_15558"
+      "id": "path_7773"
     }
-  ],
-  "verbalization": ""
+  ]
 }

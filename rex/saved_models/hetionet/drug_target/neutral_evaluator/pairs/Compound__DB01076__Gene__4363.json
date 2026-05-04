@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.539,
-        "final_score": 0.539
+        "ic_mean": 0.4691,
+        "final_score": 0.4691
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco2b1",
+          "id": "Slco1b1",
           "type": "Gene"
         },
         {
-          "id": "Rosuvastatin",
+          "id": "Indinavir",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Atorvastatin",
-          "target": "Slco2b1",
+          "target": "Slco1b1",
           "label": "binds"
         },
         {
-          "source": "Slco2b1",
-          "target": "Rosuvastatin",
+          "source": "Slco1b1",
+          "target": "Indinavir",
           "label": "is bound by"
         },
         {
-          "source": "Rosuvastatin",
+          "source": "Indinavir",
           "target": "Abcc1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atorvastatin,Rosuvastatin": [
-          "Carboxylic Acid Anion",
-          "Hmg-Coa Reductase Inhibitor"
+        "Atorvastatin,Indinavir": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_20334"
+      "id": "path_10291"
     },
     {
       "score": {
-        "ic_mean": 0.4877,
-        "final_score": 0.4877
+        "ic_mean": 0.4691,
+        "final_score": 0.4691
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc4",
+          "id": "Slco1b1",
           "type": "Gene"
         },
         {
-          "id": "Sulfinpyrazone",
+          "id": "Rifampicin",
           "type": "Compound"
         },
         {
@@ -75,27 +75,123 @@
       "edges": [
         {
           "source": "Atorvastatin",
-          "target": "Abcc4",
+          "target": "Slco1b1",
           "label": "binds"
         },
         {
-          "source": "Abcc4",
-          "target": "Sulfinpyrazone",
+          "source": "Slco1b1",
+          "target": "Rifampicin",
           "label": "is bound by"
         },
         {
-          "source": "Sulfinpyrazone",
+          "source": "Rifampicin",
           "target": "Abcc1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atorvastatin,Sulfinpyrazone": [
-          "Organonitrogen Heterocyclic Compound"
+        "Atorvastatin,Rifampicin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_20335"
+      "id": "path_10292"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4391,
+        "final_score": 0.4391
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Indinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Abcc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Indinavir": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_10293"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4391,
+        "final_score": 0.4391
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Rifampicin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Abcc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Rifampicin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_10294"
     }
-  ],
-  "verbalization": ""
+  ]
 }

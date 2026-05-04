@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5721,
-        "final_score": 0.5721
+        "ic_mean": 0.64,
+        "final_score": 0.64
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Chrna4",
           "type": "Gene"
         },
         {
-          "id": "Ifosfamide",
+          "id": "Amobarbital",
           "type": "Compound"
         },
         {
@@ -27,27 +27,75 @@
       "edges": [
         {
           "source": "Phenobarbital",
-          "target": "Cyp2c18",
+          "target": "Chrna4",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Ifosfamide",
+          "source": "Chrna4",
+          "target": "Amobarbital",
           "label": "is bound by"
         },
         {
-          "source": "Ifosfamide",
+          "source": "Amobarbital",
           "target": "Cyp2a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phenobarbital,Ifosfamide": [
-          "Organonitrogen Compound"
+        "Phenobarbital,Amobarbital": [
+          "Barbiturate",
+          "Barbiturates"
         ]
       },
-      "id": "path_25919"
+      "id": "path_13148"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5073,
+        "final_score": 0.5073
+      },
+      "nodes": [
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Flunitrazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenobarbital",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Flunitrazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Flunitrazepam",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenobarbital,Flunitrazepam": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_13149"
     }
-  ],
-  "verbalization": ""
+  ]
 }

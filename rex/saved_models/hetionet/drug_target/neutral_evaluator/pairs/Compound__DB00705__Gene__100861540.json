@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4337,
-        "final_score": 0.4337
+        "ic_mean": 0.4671,
+        "final_score": 0.4671
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Spleen Disorder",
+          "id": "Haematospermia",
           "type": "Side Effect"
         },
         {
-          "id": "Indinavir",
+          "id": "Sildenafil",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Delavirdine",
-          "target": "Spleen Disorder",
+          "target": "Haematospermia",
           "label": "causes"
         },
         {
-          "source": "Spleen Disorder",
-          "target": "Indinavir",
+          "source": "Haematospermia",
+          "target": "Sildenafil",
           "label": "is caused by"
         },
         {
-          "source": "Indinavir",
+          "source": "Sildenafil",
           "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Delavirdine,Indinavir": [
-          "Organic Amino Compound",
+        "Delavirdine,Sildenafil": [
+          "Enzyme Inhibitor",
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_9444"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4392,
+        "final_score": 0.4392
+      },
+      "nodes": [
+        {
+          "id": "Delavirdine",
+          "type": "Compound"
+        },
+        {
+          "id": "Granulocytosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zalcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Delavirdine",
+          "target": "Granulocytosis",
+          "label": "causes"
+        },
+        {
+          "source": "Granulocytosis",
+          "target": "Zalcitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zalcitabine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Delavirdine,Zalcitabine": [
+          "Organonitrogen Heterocyclic Compound",
           "Antiviral Agent"
         ]
       },
-      "id": "path_18743"
+      "id": "path_9445"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB06148 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5069,
+        "final_score": 0.5069
+      },
+      "nodes": [
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mianserin",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Asenapine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Asenapine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mianserin,Asenapine": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6845"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4534,
+        "final_score": 0.4534
+      },
+      "nodes": [
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Depressive Symptom",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mianserin",
+          "target": "Depressive Symptom",
+          "label": "causes"
+        },
+        {
+          "source": "Depressive Symptom",
+          "target": "Rimonabant",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rimonabant",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mianserin,Rimonabant": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6846"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "Compound::DB00819 - Gene::766",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8143,
+        "final_score": 0.8238,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Acetazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca3",
+          "type": "Gene"
+        },
+        {
+          "id": "Reversible Hydration Of Carbon Dioxide",
+          "type": "Pathway"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetazolamide",
+          "target": "Ca3",
+          "label": "binds"
+        },
+        {
+          "source": "Ca3",
+          "target": "Reversible Hydration Of Carbon Dioxide",
+          "label": "participates"
+        },
+        {
+          "source": "Reversible Hydration Of Carbon Dioxide",
+          "target": "Ca7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8801"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7406,
+        "final_score": 0.787,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Acetazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca3",
+          "type": "Gene"
+        },
+        {
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetazolamide",
+          "target": "Ca3",
+          "label": "binds"
+        },
+        {
+          "source": "Ca3",
+          "target": "Carbonate Dehydratase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carbonate Dehydratase Activity",
+          "target": "Ca7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8802"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6379,
+        "final_score": 0.569,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Acetazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfonamides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Diclofenamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetazolamide",
+          "target": "Sulfonamides",
+          "label": "is included in"
+        },
+        {
+          "source": "Sulfonamides",
+          "target": "Diclofenamide",
+          "label": "includes"
+        },
+        {
+          "source": "Diclofenamide",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetazolamide,Sulfonamides": [
+          "Sulfonamide"
+        ],
+        "Acetazolamide,Diclofenamide": [
+          "Sulfonamide"
+        ],
+        "Sulfonamides,Diclofenamide": [
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_8803"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5593,
+        "final_score": 0.5297,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Acetazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatic Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diclofenamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetazolamide",
+          "target": "Hepatic Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatic Insufficiency",
+          "target": "Diclofenamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diclofenamide",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetazolamide,Diclofenamide": [
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_8804"
+    }
+  ]
+}

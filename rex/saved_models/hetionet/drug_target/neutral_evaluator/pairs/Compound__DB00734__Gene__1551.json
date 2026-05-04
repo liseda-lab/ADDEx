@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00734 - Gene::1551",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4873,
+        "final_score": 0.4873
+      },
+      "nodes": [
+        {
+          "id": "Risperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Myotonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propranolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Risperidone",
+          "target": "Myotonia",
+          "label": "causes"
+        },
+        {
+          "source": "Myotonia",
+          "target": "Propranolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propranolol",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Risperidone,Propranolol": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3190"
+    }
+  ]
 }

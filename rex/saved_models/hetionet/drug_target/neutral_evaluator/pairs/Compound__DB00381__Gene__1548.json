@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6367,
-        "final_score": 0.6367
+        "ic_mean": 0.5973,
+        "final_score": 0.5973
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna2d3",
-          "type": "Gene"
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Nilvadipine",
+          "id": "Nifedipine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,38 @@
       "edges": [
         {
           "source": "Amlodipine",
-          "target": "Cacna2d3",
-          "label": "binds"
+          "target": "Dihydropyridines",
+          "label": "is included in"
         },
         {
-          "source": "Cacna2d3",
-          "target": "Nilvadipine",
-          "label": "is bound by"
+          "source": "Dihydropyridines",
+          "target": "Nifedipine",
+          "label": "includes"
         },
         {
-          "source": "Nilvadipine",
+          "source": "Nifedipine",
           "target": "Cyp2a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amlodipine,Nilvadipine": [
-          "Calcium Channel Blocker",
+        "Amlodipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Amlodipine,Nifedipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Nifedipine": [
           "Dihydropyridine"
         ]
       },
-      "id": "path_30724"
+      "id": "path_15772"
     },
     {
       "score": {
-        "ic_mean": 0.5853,
-        "final_score": 0.5853
+        "ic_mean": 0.5418,
+        "final_score": 0.5418
       },
       "nodes": [
         {
@@ -64,7 +70,7 @@
           "type": "Gene"
         },
         {
-          "id": "Nilvadipine",
+          "id": "Nifedipine",
           "type": "Compound"
         },
         {
@@ -80,23 +86,165 @@
         },
         {
           "source": "Cacna2d1",
-          "target": "Nilvadipine",
+          "target": "Nifedipine",
           "label": "is bound by"
         },
         {
-          "source": "Nilvadipine",
+          "source": "Nifedipine",
           "target": "Cyp2a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amlodipine,Nilvadipine": [
-          "Calcium Channel Blocker",
-          "Dihydropyridine"
+        "Amlodipine,Nifedipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
         ]
       },
-      "id": "path_30725"
+      "id": "path_15773"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5386,
+        "final_score": 0.5386
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Nifedipine",
+          "label": "includes"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Nifedipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_15774"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4112,
+        "final_score": 0.4112
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Progesterone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Progesterone": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_15775"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3811,
+        "final_score": 0.3811
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Nifedipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Nifedipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_15776"
     }
-  ],
-  "verbalization": ""
+  ]
 }

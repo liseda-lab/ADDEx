@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6218,
-        "final_score": 0.6218
+        "ic_mean": 0.4516,
+        "final_score": 0.4516
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Xdh",
-          "type": "Gene"
+          "id": "Heart Sounds Abnormal",
+          "type": "Side Effect"
         },
         {
-          "id": "Nitrofural",
+          "id": "Propafenone",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Doxorubicin",
-          "target": "Xdh",
-          "label": "binds"
+          "target": "Heart Sounds Abnormal",
+          "label": "causes"
         },
         {
-          "source": "Xdh",
-          "target": "Nitrofural",
-          "label": "is bound by"
+          "source": "Heart Sounds Abnormal",
+          "target": "Propafenone",
+          "label": "is caused by"
         },
         {
-          "source": "Nitrofural",
+          "source": "Propafenone",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxorubicin,Nitrofural": [
-          "Organic Cyclic Compound"
+        "Doxorubicin,Propafenone": [
+          "Alcohol"
         ]
       },
-      "id": "path_24264"
+      "id": "path_12269"
     },
     {
       "score": {
-        "ic_mean": 0.4955,
-        "final_score": 0.4955
+        "ic_mean": 0.4423,
+        "final_score": 0.4423
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc6",
-          "type": "Gene"
+          "id": "Abnormal Pigmentation",
+          "type": "Side Effect"
         },
         {
-          "id": "Vinblastine",
+          "id": "Hydroxychloroquine",
           "type": "Compound"
         },
         {
@@ -74,32 +74,31 @@
       "edges": [
         {
           "source": "Doxorubicin",
-          "target": "Abcc6",
-          "label": "binds"
+          "target": "Abnormal Pigmentation",
+          "label": "causes"
         },
         {
-          "source": "Abcc6",
-          "target": "Vinblastine",
-          "label": "is bound by"
+          "source": "Abnormal Pigmentation",
+          "target": "Hydroxychloroquine",
+          "label": "is caused by"
         },
         {
-          "source": "Vinblastine",
+          "source": "Hydroxychloroquine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxorubicin,Vinblastine": [
-          "Tertiary Alcohol",
-          "Cytotoxic Chemotherapeutic Agent"
+        "Doxorubicin,Hydroxychloroquine": [
+          "Primary Alcohol"
         ]
       },
-      "id": "path_24265"
+      "id": "path_12270"
     },
     {
       "score": {
-        "ic_mean": 0.4776,
-        "final_score": 0.4776
+        "ic_mean": 0.4117,
+        "final_score": 0.4117
       },
       "nodes": [
         {
@@ -107,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp1b1",
-          "type": "Gene"
+          "id": "Chemical Cystitis",
+          "type": "Side Effect"
         },
         {
-          "id": "Primaquine",
+          "id": "Cyclophosphamide",
           "type": "Compound"
         },
         {
@@ -122,27 +121,75 @@
       "edges": [
         {
           "source": "Doxorubicin",
-          "target": "Cyp1b1",
-          "label": "binds"
+          "target": "Chemical Cystitis",
+          "label": "causes"
         },
         {
-          "source": "Cyp1b1",
-          "target": "Primaquine",
-          "label": "is bound by"
+          "source": "Chemical Cystitis",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
         },
         {
-          "source": "Primaquine",
+          "source": "Cyclophosphamide",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxorubicin,Primaquine": [
+        "Doxorubicin,Cyclophosphamide": [
+          "Heteroorganic Entity",
+          "Dna Binding Agent"
+        ]
+      },
+      "id": "path_12271"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3897,
+        "final_score": 0.3897
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Tumour Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Tumour Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Tumour Necrosis",
+          "target": "Imatinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Imatinib",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Imatinib": [
+          "Antineoplastic Enzyme Inhibitor",
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_24266"
+      "id": "path_12272"
     }
-  ],
-  "verbalization": ""
+  ]
 }

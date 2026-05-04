@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5997,
-        "final_score": 0.5997
+        "ic_mean": 0.5358,
+        "final_score": 0.5358
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Serotonin Uptake Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Levomilnacipran",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Duloxetine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Serotonin Uptake Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
-          "label": "is bound by"
+          "source": "Serotonin Uptake Inhibitors",
+          "target": "Levomilnacipran",
+          "label": "includes"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Levomilnacipran",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Duloxetine,Mesoridazine": [
-          "Agent Affecting Nervous System",
-          "Organosulfur Compound"
+        "Duloxetine,Levomilnacipran": [
+          "Organochalcogen Compound",
+          "Antidepressant Agent"
         ]
       },
-      "id": "path_27520"
+      "id": "path_14088"
     },
     {
       "score": {
-        "ic_mean": 0.467,
-        "final_score": 0.467
+        "ic_mean": 0.5358,
+        "final_score": 0.5358
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Syndrome Sicca",
-          "type": "Side Effect"
+          "id": "Norepinephrine Uptake Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Timolol",
+          "id": "Atomoxetine",
           "type": "Compound"
         },
         {
@@ -75,27 +75,122 @@
       "edges": [
         {
           "source": "Duloxetine",
-          "target": "Syndrome Sicca",
-          "label": "causes"
+          "target": "Norepinephrine Uptake Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Syndrome Sicca",
-          "target": "Timolol",
-          "label": "is caused by"
+          "source": "Norepinephrine Uptake Inhibitors",
+          "target": "Atomoxetine",
+          "label": "includes"
         },
         {
-          "source": "Timolol",
+          "source": "Atomoxetine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Duloxetine,Timolol": [
+        "Duloxetine,Atomoxetine": [
+          "Organic Cyclic Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_14089"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4523,
+        "final_score": 0.4523
+      },
+      "nodes": [
+        {
+          "id": "Duloxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Diastolic Hypertension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoricoxib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Duloxetine",
+          "target": "Diastolic Hypertension",
+          "label": "causes"
+        },
+        {
+          "source": "Diastolic Hypertension",
+          "target": "Etoricoxib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoricoxib",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Duloxetine,Etoricoxib": [
           "Organic Heterocyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27521"
+      "id": "path_14090"
+    },
+    {
+      "score": {
+        "ic_mean": 0.451,
+        "final_score": 0.451
+      },
+      "nodes": [
+        {
+          "id": "Duloxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Essential Hypertension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Duloxetine",
+          "target": "Essential Hypertension",
+          "label": "causes"
+        },
+        {
+          "source": "Essential Hypertension",
+          "target": "Irbesartan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Irbesartan",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Duloxetine,Irbesartan": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_14091"
     },
     {
       "score": {
@@ -143,12 +238,12 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27522"
+      "id": "path_14092"
     },
     {
       "score": {
-        "ic_mean": 0.4443,
-        "final_score": 0.4443
+        "ic_mean": 0.4509,
+        "final_score": 0.4509
       },
       "nodes": [
         {
@@ -156,11 +251,11 @@
           "type": "Compound"
         },
         {
-          "id": "Maculopathy",
+          "id": "Diastolic Hypertension",
           "type": "Side Effect"
         },
         {
-          "id": "Hydroxychloroquine",
+          "id": "Dexmedetomidine",
           "type": "Compound"
         },
         {
@@ -171,26 +266,27 @@
       "edges": [
         {
           "source": "Duloxetine",
-          "target": "Maculopathy",
+          "target": "Diastolic Hypertension",
           "label": "causes"
         },
         {
-          "source": "Maculopathy",
-          "target": "Hydroxychloroquine",
+          "source": "Diastolic Hypertension",
+          "target": "Dexmedetomidine",
           "label": "is caused by"
         },
         {
-          "source": "Hydroxychloroquine",
+          "source": "Dexmedetomidine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Duloxetine,Hydroxychloroquine": [
-          "Organic Heterocyclic Compound"
+        "Duloxetine,Dexmedetomidine": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27523"
+      "id": "path_14093"
     },
     {
       "score": {
@@ -238,12 +334,12 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27524"
+      "id": "path_14094"
     },
     {
       "score": {
-        "ic_mean": 0.4315,
-        "final_score": 0.4315
+        "ic_mean": 0.4367,
+        "final_score": 0.4367
       },
       "nodes": [
         {
@@ -251,11 +347,11 @@
           "type": "Compound"
         },
         {
-          "id": "Blood Pressure Diastolic Increased",
+          "id": "Acute Liver Injury",
           "type": "Side Effect"
         },
         {
-          "id": "Venlafaxine",
+          "id": "Diltiazem",
           "type": "Compound"
         },
         {
@@ -266,32 +362,174 @@
       "edges": [
         {
           "source": "Duloxetine",
-          "target": "Blood Pressure Diastolic Increased",
+          "target": "Acute Liver Injury",
           "label": "causes"
         },
         {
-          "source": "Blood Pressure Diastolic Increased",
-          "target": "Venlafaxine",
+          "source": "Acute Liver Injury",
+          "target": "Diltiazem",
           "label": "is caused by"
         },
         {
-          "source": "Venlafaxine",
+          "source": "Diltiazem",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Duloxetine,Venlafaxine": [
+        "Duloxetine,Diltiazem": [
+          "Organosulfur Heterocyclic Compound"
+        ]
+      },
+      "id": "path_14095"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4269,
+        "final_score": 0.4269
+      },
+      "nodes": [
+        {
+          "id": "Duloxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Macular Degeneration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Duloxetine",
+          "target": "Macular Degeneration",
+          "label": "causes"
+        },
+        {
+          "source": "Macular Degeneration",
+          "target": "Chloroquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chloroquine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Duloxetine,Chloroquine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_14096"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4208,
+        "final_score": 0.4208
+      },
+      "nodes": [
+        {
+          "id": "Duloxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sjogren's Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoricoxib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Duloxetine",
+          "target": "Sjogren's Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Sjogren's Syndrome",
+          "target": "Etoricoxib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoricoxib",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Duloxetine,Etoricoxib": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_14097"
+    },
+    {
+      "score": {
+        "ic_mean": 0.407,
+        "final_score": 0.407
+      },
+      "nodes": [
+        {
+          "id": "Duloxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Urine Flow Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Atomoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Duloxetine",
+          "target": "Urine Flow Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Urine Flow Decreased",
+          "target": "Atomoxetine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Atomoxetine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Duloxetine,Atomoxetine": [
           "Organic Cyclic Compound",
           "Antidepressant Agent"
         ]
       },
-      "id": "path_27525"
+      "id": "path_14098"
     },
     {
       "score": {
-        "ic_mean": 0.4133,
-        "final_score": 0.4133
+        "ic_mean": 0.4031,
+        "final_score": 0.4031
       },
       "nodes": [
         {
@@ -299,11 +537,11 @@
           "type": "Compound"
         },
         {
-          "id": "Essential Hypertension",
+          "id": "Orthostatic Hypertension",
           "type": "Side Effect"
         },
         {
-          "id": "Tramadol",
+          "id": "Mirtazapine",
           "type": "Compound"
         },
         {
@@ -314,32 +552,32 @@
       "edges": [
         {
           "source": "Duloxetine",
-          "target": "Essential Hypertension",
+          "target": "Orthostatic Hypertension",
           "label": "causes"
         },
         {
-          "source": "Essential Hypertension",
-          "target": "Tramadol",
+          "source": "Orthostatic Hypertension",
+          "target": "Mirtazapine",
           "label": "is caused by"
         },
         {
-          "source": "Tramadol",
+          "source": "Mirtazapine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Duloxetine,Tramadol": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
+        "Duloxetine,Mirtazapine": [
+          "Organic Heterocyclic Compound",
+          "Antidepressant Agent"
         ]
       },
-      "id": "path_27526"
+      "id": "path_14099"
     },
     {
       "score": {
-        "ic_mean": 0.3025,
-        "final_score": 0.3025
+        "ic_mean": 0.3294,
+        "final_score": 0.3294
       },
       "nodes": [
         {
@@ -351,7 +589,7 @@
           "type": "Compound"
         },
         {
-          "id": "Protriptyline",
+          "id": "Cinacalcet",
           "type": "Compound"
         },
         {
@@ -367,11 +605,11 @@
         },
         {
           "source": "Demexiptiline",
-          "target": "Protriptyline",
+          "target": "Cinacalcet",
           "label": "resembles"
         },
         {
-          "source": "Protriptyline",
+          "source": "Cinacalcet",
           "target": "Cyp2d6",
           "label": "binds"
         }
@@ -381,17 +619,14 @@
           "Organic Cyclic Compound",
           "Antidepressant Agent"
         ],
-        "Duloxetine,Protriptyline": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
+        "Duloxetine,Cinacalcet": [
+          "Organic Cyclic Compound"
         ],
-        "Demexiptiline,Protriptyline": [
-          "Carbocyclic Compound",
-          "Tricyclic Antidepressant"
+        "Demexiptiline,Cinacalcet": [
+          "Benzenoid Aromatic Compound"
         ]
       },
-      "id": "path_27527"
+      "id": "path_14100"
     }
-  ],
-  "verbalization": ""
+  ]
 }

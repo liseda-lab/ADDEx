@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01234 - Gene::6579",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.508,
+        "final_score": 0.508
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Spinal Compression Fracture",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Spinal Compression Fracture",
+          "label": "causes"
+        },
+        {
+          "source": "Spinal Compression Fracture",
+          "target": "Prednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Prednisolone": [
+          "3-Oxo-Delta(1),Delta(4)-Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_8996"
+    }
+  ]
+}

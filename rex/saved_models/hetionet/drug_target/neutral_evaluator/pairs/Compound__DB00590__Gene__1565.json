@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4978,
-        "final_score": 0.4978
+        "ic_mean": 0.5345,
+        "final_score": 0.5345
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1b",
+          "id": "Adra1d",
           "type": "Gene"
         },
         {
-          "id": "Dextroamphetamine",
+          "id": "Midodrine",
           "type": "Compound"
         },
         {
@@ -27,128 +27,32 @@
       "edges": [
         {
           "source": "Doxazosin",
-          "target": "Adra1b",
+          "target": "Adra1d",
           "label": "binds"
         },
         {
-          "source": "Adra1b",
-          "target": "Dextroamphetamine",
+          "source": "Adra1d",
+          "target": "Midodrine",
           "label": "is bound by"
         },
         {
-          "source": "Dextroamphetamine",
+          "source": "Midodrine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxazosin,Dextroamphetamine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Doxazosin,Midodrine": [
+          "Organic Aromatic Compound",
+          "Adrenergic Agent"
         ]
       },
-      "id": "path_10881"
+      "id": "path_5405"
     },
     {
       "score": {
-        "ic_mean": 0.4679,
-        "final_score": 0.4679
-      },
-      "nodes": [
-        {
-          "id": "Doxazosin",
-          "type": "Compound"
-        },
-        {
-          "id": "Blood Pressure Normal",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Captopril",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxazosin",
-          "target": "Blood Pressure Normal",
-          "label": "causes"
-        },
-        {
-          "source": "Blood Pressure Normal",
-          "target": "Captopril",
-          "label": "is caused by"
-        },
-        {
-          "source": "Captopril",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxazosin,Captopril": [
-          "Agent Affecting Cardiovascular System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_10882"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4454,
-        "final_score": 0.4454
-      },
-      "nodes": [
-        {
-          "id": "Doxazosin",
-          "type": "Compound"
-        },
-        {
-          "id": "Bronchospasm Aggravated",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ipratropium Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxazosin",
-          "target": "Bronchospasm Aggravated",
-          "label": "causes"
-        },
-        {
-          "source": "Bronchospasm Aggravated",
-          "target": "Ipratropium Bromide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ipratropium Bromide",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxazosin,Ipratropium Bromide": [
-          "Agent Affecting Nervous System",
-          "P-Block Molecular Entity"
-        ]
-      },
-      "id": "path_10883"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4256,
-        "final_score": 0.4256
+        "ic_mean": 0.4603,
+        "final_score": 0.4603
       },
       "nodes": [
         {
@@ -160,7 +64,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Duloxetine",
+          "id": "Irbesartan",
           "type": "Compound"
         },
         {
@@ -176,23 +80,213 @@
         },
         {
           "source": "Essential Hypertension",
-          "target": "Duloxetine",
+          "target": "Irbesartan",
           "label": "is caused by"
         },
         {
-          "source": "Duloxetine",
+          "source": "Irbesartan",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxazosin,Duloxetine": [
-          "Organic Heterocyclic Compound",
+        "Doxazosin,Irbesartan": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Cardiovascular System"
+        ]
+      },
+      "id": "path_5406"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4278,
+        "final_score": 0.4278
+      },
+      "nodes": [
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Aneurysm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tiotropium",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxazosin",
+          "target": "Aneurysm",
+          "label": "causes"
+        },
+        {
+          "source": "Aneurysm",
+          "target": "Tiotropium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tiotropium",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxazosin,Tiotropium": [
+          "Organic Molecular Entity",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_10884"
+      "id": "path_5407"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4087,
+        "final_score": 0.4087
+      },
+      "nodes": [
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Retrograde Ejaculation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxazosin",
+          "target": "Retrograde Ejaculation",
+          "label": "causes"
+        },
+        {
+          "source": "Retrograde Ejaculation",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxazosin,Paliperidone": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5408"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4087,
+        "final_score": 0.4087
+      },
+      "nodes": [
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Floppy Iris Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxazosin",
+          "target": "Floppy Iris Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Floppy Iris Syndrome",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxazosin,Paliperidone": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5409"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3895,
+        "final_score": 0.3895
+      },
+      "nodes": [
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis Flare-up",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Terbinafine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxazosin",
+          "target": "Psoriasis Flare-up",
+          "label": "causes"
+        },
+        {
+          "source": "Psoriasis Flare-up",
+          "target": "Terbinafine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Terbinafine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxazosin,Terbinafine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_5410"
     }
-  ],
-  "verbalization": ""
+  ]
 }

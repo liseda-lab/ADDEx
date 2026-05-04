@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01173 - Gene::1576",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5458,
+        "final_score": 0.5458
+      },
+      "nodes": [
+        {
+          "id": "Orphenadrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Orphenadrine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4040"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6003,
+        "final_score": 0.5085,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Orphenadrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Centrally-mediated Muscle Relaxation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cyclobenzaprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Orphenadrine",
+          "target": "Centrally-mediated Muscle Relaxation",
+          "label": "is included in"
+        },
+        {
+          "source": "Centrally-mediated Muscle Relaxation",
+          "target": "Cyclobenzaprine",
+          "label": "includes"
+        },
+        {
+          "source": "Cyclobenzaprine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Orphenadrine,Cyclobenzaprine": [
+          "Organic Molecular Entity",
+          "Muscle Relaxant"
+        ]
+      },
+      "id": "path_4041"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "Compound::DB01259 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.562,
+        "final_score": 0.562
+      },
+      "nodes": [
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Tamoxifen Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lapatinib",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Tamoxifen Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Tamoxifen Metabolism",
+          "target": "Cyp2c19",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11269"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5178,
+        "final_score": 0.5178
+      },
+      "nodes": [
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lapatinib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp2c19",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11270"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4484,
+        "final_score": 0.4484
+      },
+      "nodes": [
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Metastatic Neoplasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lapatinib",
+          "target": "Metastatic Neoplasm",
+          "label": "causes"
+        },
+        {
+          "source": "Metastatic Neoplasm",
+          "target": "Flutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flutamide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lapatinib,Flutamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_11271"
+    }
+  ]
+}

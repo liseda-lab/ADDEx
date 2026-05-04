@@ -1,0 +1,152 @@
+{
+  "id": "Compound::DB01136 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6102,
+        "final_score": 0.5551,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9253"
+    },
+    {
+      "score": {
+        "ic_mean": 0.467,
+        "final_score": 0.467
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Angina Pectoris Aggravated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tiotropium",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Angina Pectoris Aggravated",
+          "label": "causes"
+        },
+        {
+          "source": "Angina Pectoris Aggravated",
+          "target": "Tiotropium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tiotropium",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carvedilol,Tiotropium": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9254"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3337,
+        "final_score": 0.3337
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Demexiptiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Protriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Demexiptiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Demexiptiline",
+          "target": "Protriptyline",
+          "label": "resembles"
+        },
+        {
+          "source": "Protriptyline",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carvedilol,Demexiptiline": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Carvedilol,Protriptyline": [
+          "Organic Tricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Demexiptiline,Protriptyline": [
+          "Carbocyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_9255"
+    }
+  ]
+}

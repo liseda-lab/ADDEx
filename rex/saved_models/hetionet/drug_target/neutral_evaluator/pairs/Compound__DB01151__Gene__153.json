@@ -1,6 +1,100 @@
 {
   "id": "Compound::DB01151 - Gene::153",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5106,
+        "final_score": 0.5106
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Formoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Formoterol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Formoterol",
+          "target": "Adrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Formoterol": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_399"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5106,
+        "final_score": 0.5106
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arformoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Arformoterol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Arformoterol",
+          "target": "Adrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Arformoterol": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_400"
+    }
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6766,
-        "final_score": 0.6766
+        "ic_mean": 0.7712,
+        "final_score": 0.7712
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Praziquantel",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a5",
@@ -32,21 +32,58 @@
         },
         {
           "source": "Cyp3a43",
-          "target": "Praziquantel",
-          "label": "is bound by"
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Praziquantel",
+          "source": "Aromatase Activity",
           "target": "Cyp3a5",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ethosuximide,Praziquantel": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
+      "id": "path_12787"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7712,
+        "final_score": 0.7712
       },
-      "id": "path_25252"
+      "nodes": [
+        {
+          "id": "Ethosuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethosuximide",
+          "target": "Cyp3a43",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a43",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12788"
     },
     {
       "score": {
@@ -93,12 +130,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_25253"
+      "id": "path_12789"
     },
     {
       "score": {
-        "ic_mean": 0.6553,
-        "final_score": 0.6553
+        "ic_mean": 0.5148,
+        "final_score": 0.5148
       },
       "nodes": [
         {
@@ -106,11 +143,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
-          "type": "Gene"
+          "id": "Sleep Terror",
+          "type": "Side Effect"
         },
         {
-          "id": "Zalcitabine",
+          "id": "Clonidine",
           "type": "Compound"
         },
         {
@@ -121,74 +158,27 @@
       "edges": [
         {
           "source": "Ethosuximide",
-          "target": "Cyp3a43",
-          "label": "binds"
+          "target": "Sleep Terror",
+          "label": "causes"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Zalcitabine",
-          "label": "is bound by"
+          "source": "Sleep Terror",
+          "target": "Clonidine",
+          "label": "is caused by"
         },
         {
-          "source": "Zalcitabine",
+          "source": "Clonidine",
           "target": "Cyp3a5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ethosuximide,Zalcitabine": [
-          "Organonitrogen Heterocyclic Compound"
+        "Ethosuximide,Clonidine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_25254"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6253,
-        "final_score": 0.6253
-      },
-      "nodes": [
-        {
-          "id": "Ethosuximide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ethosuximide",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Phenelzine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenelzine",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ethosuximide,Phenelzine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25255"
+      "id": "path_12790"
     },
     {
       "score": {
@@ -235,8 +225,7 @@
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_25256"
+      "id": "path_12791"
     }
-  ],
-  "verbalization": ""
+  ]
 }

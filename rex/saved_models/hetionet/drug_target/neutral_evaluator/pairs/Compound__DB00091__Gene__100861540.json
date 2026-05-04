@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.418,
-        "final_score": 0.418
+        "ic_mean": 0.4563,
+        "final_score": 0.4563
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Hyperamylasaemia",
+          "type": "Side Effect"
         },
         {
-          "id": "Saquinavir",
+          "id": "Ritonavir",
           "type": "Compound"
         },
         {
@@ -27,27 +27,120 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Hyperamylasaemia",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Saquinavir",
-          "label": "is bound by"
+          "source": "Hyperamylasaemia",
+          "target": "Ritonavir",
+          "label": "is caused by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Ritonavir",
           "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Saquinavir": [
-          "Organonitrogen Compound"
+        "Cyclosporine,Ritonavir": [
+          "Carboxamide"
         ]
       },
-      "id": "path_11181"
+      "id": "path_5546"
+    },
+    {
+      "score": {
+        "ic_mean": 0.428,
+        "final_score": 0.428
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cerebellar Ataxia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Cerebellar Ataxia",
+          "label": "causes"
+        },
+        {
+          "source": "Cerebellar Ataxia",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Amiodarone": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_5547"
+    },
+    {
+      "score": {
+        "ic_mean": 0.428,
+        "final_score": 0.428
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pustular Psoriasis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Pustular Psoriasis",
+          "label": "causes"
+        },
+        {
+          "source": "Pustular Psoriasis",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Amiodarone": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_5548"
     }
-  ],
-  "verbalization": ""
+  ]
 }

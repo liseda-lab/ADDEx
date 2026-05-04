@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00404 - Gene::2561",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6865,
+        "final_score": 0.7599,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Chlordiazepoxide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Chlordiazepoxide",
+          "label": "includes"
+        },
+        {
+          "source": "Chlordiazepoxide",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Alprazolam,Chlordiazepoxide": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Chlordiazepoxide": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_7331"
+    },
+    {
+      "score": {
+        "ic_mean": 0.556,
+        "final_score": 0.528,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Disinhibition",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Disinhibition",
+          "label": "causes"
+        },
+        {
+          "source": "Disinhibition",
+          "target": "Etomidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Etomidate": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7332"
+    }
+  ]
+}

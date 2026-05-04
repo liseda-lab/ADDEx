@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6255,
-        "final_score": 0.6255
+        "ic_mean": 0.729,
+        "final_score": 0.729
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Pramipexole",
-          "type": "Compound"
+          "id": "Dopamine Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Drd2",
@@ -32,27 +32,165 @@
         },
         {
           "source": "Drd5",
-          "target": "Pramipexole",
+          "target": "Dopamine Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Dopamine Neurotransmitter Receptor Activity",
+          "target": "Drd2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6139"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6042,
+        "final_score": 0.6042
+      },
+      "nodes": [
+        {
+          "id": "Rotigotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rotigotine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Lisuride",
           "label": "is bound by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Lisuride",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Rotigotine,Lisuride": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12185"
+      "id": "path_6140"
     },
     {
       "score": {
-        "ic_mean": 0.538,
-        "final_score": 0.538
+        "ic_mean": 0.5414,
+        "final_score": 0.5414
+      },
+      "nodes": [
+        {
+          "id": "Rotigotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rotigotine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Trimipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rotigotine,Trimipramine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6141"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5401,
+        "final_score": 0.5401
+      },
+      "nodes": [
+        {
+          "id": "Rotigotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Sertindole",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rotigotine",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Sertindole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Sertindole",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rotigotine,Sertindole": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6142"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5263,
+        "final_score": 0.5263
       },
       "nodes": [
         {
@@ -64,7 +202,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "L-dopa",
+          "id": "Cabergoline",
           "type": "Compound"
         },
         {
@@ -80,218 +218,27 @@
         },
         {
           "source": "Excessive Daytime Sleepiness",
-          "target": "L-dopa",
+          "target": "Cabergoline",
           "label": "is caused by"
         },
         {
-          "source": "L-dopa",
+          "source": "Cabergoline",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rotigotine,L-dopa": [
-          "Organic Aromatic Compound"
+        "Rotigotine,Cabergoline": [
+          "P-Block Molecular Entity",
+          "Dopamine Agonist"
         ]
       },
-      "id": "path_12186"
+      "id": "path_6143"
     },
     {
       "score": {
-        "ic_mean": 0.5278,
-        "final_score": 0.5278
-      },
-      "nodes": [
-        {
-          "id": "Rotigotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Sleep Attacks",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rotigotine",
-          "target": "Sleep Attacks",
-          "label": "causes"
-        },
-        {
-          "source": "Sleep Attacks",
-          "target": "Pramipexole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12187"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5278,
-        "final_score": 0.5278
-      },
-      "nodes": [
-        {
-          "id": "Rotigotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Compulsive Shopping",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rotigotine",
-          "target": "Compulsive Shopping",
-          "label": "causes"
-        },
-        {
-          "source": "Compulsive Shopping",
-          "target": "Pramipexole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12188"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4851,
-        "final_score": 0.4851
-      },
-      "nodes": [
-        {
-          "id": "Rotigotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Excessive Daytime Sleepiness",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rotigotine",
-          "target": "Excessive Daytime Sleepiness",
-          "label": "causes"
-        },
-        {
-          "source": "Excessive Daytime Sleepiness",
-          "target": "Pramipexole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12189"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4602,
-        "final_score": 0.4602
-      },
-      "nodes": [
-        {
-          "id": "Rotigotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Compulsions",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rotigotine",
-          "target": "Compulsions",
-          "label": "causes"
-        },
-        {
-          "source": "Compulsions",
-          "target": "Pramipexole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12190"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4602,
-        "final_score": 0.4602
+        "ic_mean": 0.5189,
+        "final_score": 0.5189
       },
       "nodes": [
         {
@@ -303,7 +250,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Pramipexole",
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -319,27 +266,27 @@
         },
         {
           "source": "Sudden Onset Of Sleep",
-          "target": "Pramipexole",
+          "target": "Lisuride",
           "label": "is caused by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Lisuride",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Rotigotine,Lisuride": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12191"
+      "id": "path_6144"
     },
     {
       "score": {
-        "ic_mean": 0.4602,
-        "final_score": 0.4602
+        "ic_mean": 0.5188,
+        "final_score": 0.5188
       },
       "nodes": [
         {
@@ -347,11 +294,11 @@
           "type": "Compound"
         },
         {
-          "id": "Fall",
-          "type": "Side Effect"
+          "id": "Htr1a",
+          "type": "Gene"
         },
         {
-          "id": "Pramipexole",
+          "id": "Thioproperazine",
           "type": "Compound"
         },
         {
@@ -362,32 +309,32 @@
       "edges": [
         {
           "source": "Rotigotine",
-          "target": "Fall",
-          "label": "causes"
+          "target": "Htr1a",
+          "label": "binds"
         },
         {
-          "source": "Fall",
-          "target": "Pramipexole",
-          "label": "is caused by"
+          "source": "Htr1a",
+          "target": "Thioproperazine",
+          "label": "is bound by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Thioproperazine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Rotigotine,Thioproperazine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12192"
+      "id": "path_6145"
     },
     {
       "score": {
-        "ic_mean": 0.4507,
-        "final_score": 0.4507
+        "ic_mean": 0.5094,
+        "final_score": 0.5094
       },
       "nodes": [
         {
@@ -399,7 +346,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Pramipexole",
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -415,75 +362,27 @@
         },
         {
           "source": "Binge Eating",
-          "target": "Pramipexole",
+          "target": "Lisuride",
           "label": "is caused by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Lisuride",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Rotigotine,Lisuride": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12193"
+      "id": "path_6146"
     },
     {
       "score": {
-        "ic_mean": 0.4498,
-        "final_score": 0.4498
-      },
-      "nodes": [
-        {
-          "id": "Rotigotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Compulsions",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ropinirole",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rotigotine",
-          "target": "Compulsions",
-          "label": "causes"
-        },
-        {
-          "source": "Compulsions",
-          "target": "Ropinirole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ropinirole",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rotigotine,Ropinirole": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_12194"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4498,
-        "final_score": 0.4498
+        "ic_mean": 0.5014,
+        "final_score": 0.5014
       },
       "nodes": [
         {
@@ -495,7 +394,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Ropinirole",
+          "id": "Cabergoline",
           "type": "Compound"
         },
         {
@@ -511,27 +410,27 @@
         },
         {
           "source": "Sudden Onset Of Sleep",
-          "target": "Ropinirole",
+          "target": "Cabergoline",
           "label": "is caused by"
         },
         {
-          "source": "Ropinirole",
+          "source": "Cabergoline",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rotigotine,Ropinirole": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
+        "Rotigotine,Cabergoline": [
+          "P-Block Molecular Entity",
+          "Dopamine Agonist"
         ]
       },
-      "id": "path_12195"
+      "id": "path_6147"
     },
     {
       "score": {
-        "ic_mean": 0.4425,
-        "final_score": 0.4425
+        "ic_mean": 0.5012,
+        "final_score": 0.5012
       },
       "nodes": [
         {
@@ -539,11 +438,11 @@
           "type": "Compound"
         },
         {
-          "id": "Impulse-control Disorder",
+          "id": "Pathological Gambling",
           "type": "Side Effect"
         },
         {
-          "id": "Pramipexole",
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -554,28 +453,27 @@
       "edges": [
         {
           "source": "Rotigotine",
-          "target": "Impulse-control Disorder",
+          "target": "Pathological Gambling",
           "label": "causes"
         },
         {
-          "source": "Impulse-control Disorder",
-          "target": "Pramipexole",
+          "source": "Pathological Gambling",
+          "target": "Lisuride",
           "label": "is caused by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Lisuride",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rotigotine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Rotigotine,Lisuride": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12196"
+      "id": "path_6148"
     }
-  ],
-  "verbalization": ""
+  ]
 }

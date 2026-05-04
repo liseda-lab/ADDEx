@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7099,
-        "final_score": 0.7099
+        "ic_mean": 0.7038,
+        "final_score": 0.7038
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Increased Blood Pressure",
-          "type": "Pharmacologic Class"
+          "id": "Adrb3",
+          "type": "Gene"
         },
         {
-          "id": "Norepinephrine",
-          "type": "Compound"
+          "id": "Norepinephrine Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra2a",
@@ -27,31 +27,26 @@
       "edges": [
         {
           "source": "Droxidopa",
-          "target": "Increased Blood Pressure",
-          "label": "is included in"
-        },
-        {
-          "source": "Increased Blood Pressure",
-          "target": "Norepinephrine",
-          "label": "includes"
-        },
-        {
-          "source": "Norepinephrine",
-          "target": "Adra2a",
+          "target": "Adrb3",
           "label": "binds"
+        },
+        {
+          "source": "Adrb3",
+          "target": "Norepinephrine Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Norepinephrine Binding",
+          "target": "Adra2a",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Droxidopa,Norepinephrine": [
-          "Catechols"
-        ]
-      },
-      "id": "path_19793"
+      "id": "path_10022"
     },
     {
       "score": {
-        "ic_mean": 0.5562,
-        "final_score": 0.5562
+        "ic_mean": 0.6877,
+        "final_score": 0.6877
       },
       "nodes": [
         {
@@ -59,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1d",
+          "id": "Adrb3",
           "type": "Gene"
         },
         {
-          "id": "Phentolamine",
-          "type": "Compound"
+          "id": "Epinephrine Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra2a",
@@ -74,28 +69,105 @@
       "edges": [
         {
           "source": "Droxidopa",
-          "target": "Adra1d",
+          "target": "Adrb3",
           "label": "binds"
         },
         {
-          "source": "Adra1d",
-          "target": "Phentolamine",
-          "label": "is bound by"
+          "source": "Adrb3",
+          "target": "Epinephrine Binding",
+          "label": "participates"
         },
         {
-          "source": "Phentolamine",
+          "source": "Epinephrine Binding",
           "target": "Adra2a",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Droxidopa,Phentolamine": [
-          "Agent Affecting Nervous System",
-          "Phenols"
-        ]
+      "id": "path_10023"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6651,
+        "final_score": 0.6651
       },
-      "id": "path_19794"
+      "nodes": [
+        {
+          "id": "Droxidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb3",
+          "type": "Gene"
+        },
+        {
+          "id": "Adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Droxidopa",
+          "target": "Adrb3",
+          "label": "binds"
+        },
+        {
+          "source": "Adrb3",
+          "target": "Adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10024"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6603,
+        "final_score": 0.6603
+      },
+      "nodes": [
+        {
+          "id": "Droxidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Droxidopa",
+          "target": "Adra1b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1b",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10025"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6084,
-        "final_score": 0.6084
+        "ic_mean": 0.5783,
+        "final_score": 0.5783
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Protriptyline",
+          "id": "Trimipramine",
           "type": "Compound"
         },
         {
@@ -32,27 +32,75 @@
         },
         {
           "source": "Adenitis",
-          "target": "Protriptyline",
+          "target": "Trimipramine",
           "label": "is caused by"
         },
         {
-          "source": "Protriptyline",
+          "source": "Trimipramine",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Desipramine,Protriptyline": [
-          "Organic Tricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Desipramine,Trimipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
         ]
       },
-      "id": "path_8932"
+      "id": "path_4326"
     },
     {
       "score": {
-        "ic_mean": 0.6084,
-        "final_score": 0.6084
+        "ic_mean": 0.5382,
+        "final_score": 0.5382
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Doxepin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Doxepin": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_4327"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5382,
+        "final_score": 0.5382
       },
       "nodes": [
         {
@@ -64,7 +112,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Protriptyline",
+          "id": "Doxepin",
           "type": "Compound"
         },
         {
@@ -80,27 +128,27 @@
         },
         {
           "source": "Taste Peculiar",
-          "target": "Protriptyline",
+          "target": "Doxepin",
           "label": "is caused by"
         },
         {
-          "source": "Protriptyline",
+          "source": "Doxepin",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Desipramine,Protriptyline": [
-          "Organic Tricyclic Compound",
+        "Desipramine,Doxepin": [
+          "Organic Heterotricyclic Compound",
           "Tricyclic Antidepressant"
         ]
       },
-      "id": "path_8933"
+      "id": "path_4328"
     },
     {
       "score": {
-        "ic_mean": 0.5382,
-        "final_score": 0.5382
+        "ic_mean": 0.4813,
+        "final_score": 0.4813
       },
       "nodes": [
         {
@@ -108,11 +156,11 @@
           "type": "Compound"
         },
         {
-          "id": "Painful Ejaculation",
-          "type": "Side Effect"
+          "id": "Orm1",
+          "type": "Gene"
         },
         {
-          "id": "Bupropion",
+          "id": "Doxepin",
           "type": "Compound"
         },
         {
@@ -123,28 +171,83 @@
       "edges": [
         {
           "source": "Desipramine",
-          "target": "Painful Ejaculation",
-          "label": "causes"
+          "target": "Orm1",
+          "label": "binds"
         },
         {
-          "source": "Painful Ejaculation",
-          "target": "Bupropion",
-          "label": "is caused by"
+          "source": "Orm1",
+          "target": "Doxepin",
+          "label": "is bound by"
         },
         {
-          "source": "Bupropion",
+          "source": "Doxepin",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Desipramine,Bupropion": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
+        "Desipramine,Doxepin": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
         ]
       },
-      "id": "path_8934"
+      "id": "path_4329"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2905,
+        "final_score": 0.2905
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Demexiptiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Demexiptiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Demexiptiline",
+          "target": "Nortriptyline",
+          "label": "resembles"
+        },
+        {
+          "source": "Nortriptyline",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Demexiptiline": [
+          "Tricyclic Antidepressant",
+          "Organic Cyclic Compound"
+        ],
+        "Desipramine,Nortriptyline": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ],
+        "Demexiptiline,Nortriptyline": [
+          "Tricyclic Antidepressant",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_4330"
     }
-  ],
-  "verbalization": ""
+  ]
 }

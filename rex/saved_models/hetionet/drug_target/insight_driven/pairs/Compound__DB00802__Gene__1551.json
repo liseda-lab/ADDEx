@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00802 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5449,
+        "final_score": 0.5449
+      },
+      "nodes": [
+        {
+          "id": "Alfentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alfentanil",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Methadone",
+          "label": "includes"
+        },
+        {
+          "source": "Methadone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alfentanil,Methadone": [
+          "Chemical Entity",
+          "Opioid Receptor Agonist"
+        ]
+      },
+      "id": "path_3292"
+    }
+  ]
+}

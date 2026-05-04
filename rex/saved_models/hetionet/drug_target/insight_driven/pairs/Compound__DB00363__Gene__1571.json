@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00363 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6185,
+        "final_score": 0.7259,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9442"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2677,
+        "final_score": 0.2677
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Desipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Azatadine": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Clozapine,Desipramine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Azatadine,Desipramine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_9443"
+    }
+  ]
+}

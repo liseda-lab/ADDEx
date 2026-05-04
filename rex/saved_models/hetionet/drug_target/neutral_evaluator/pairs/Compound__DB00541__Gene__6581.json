@@ -1,6 +1,100 @@
 {
   "id": "Compound::DB00541 - Gene::6581",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5475,
+        "final_score": 0.5475
+      },
+      "nodes": [
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Colonic Pseudo-obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vincristine",
+          "target": "Colonic Pseudo-obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Colonic Pseudo-obstruction",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Slc22a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vincristine,Clonidine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_2538"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5001,
+        "final_score": 0.5001
+      },
+      "nodes": [
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Venoocclusive Liver Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Melphalan",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vincristine",
+          "target": "Venoocclusive Liver Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Venoocclusive Liver Disease",
+          "target": "Melphalan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Melphalan",
+          "target": "Slc22a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vincristine,Melphalan": [
+          "Hydroxides",
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_2539"
+    }
+  ]
 }

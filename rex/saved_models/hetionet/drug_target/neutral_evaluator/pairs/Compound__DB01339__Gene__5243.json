@@ -1,6 +1,148 @@
 {
   "id": "Compound::DB01339 - Gene::5243",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5754,
+        "final_score": 0.5754
+      },
+      "nodes": [
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna2",
+          "type": "Gene"
+        },
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vecuronium",
+          "target": "Chrna2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrna2",
+          "target": "Dextromethorphan",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dextromethorphan",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vecuronium,Dextromethorphan": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10026"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5364,
+        "final_score": 0.5364
+      },
+      "nodes": [
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Airway Complication Of Anaesthesia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Alfentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vecuronium",
+          "target": "Airway Complication Of Anaesthesia",
+          "label": "causes"
+        },
+        {
+          "source": "Airway Complication Of Anaesthesia",
+          "target": "Alfentanil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Alfentanil",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vecuronium,Alfentanil": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10027"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5035,
+        "final_score": 0.5035
+      },
+      "nodes": [
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Steroid Myopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vecuronium",
+          "target": "Steroid Myopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Steroid Myopathy",
+          "target": "Hydrocortisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vecuronium,Hydrocortisone": [
+          "Steroid"
+        ]
+      },
+      "id": "path_10028"
+    }
+  ]
 }

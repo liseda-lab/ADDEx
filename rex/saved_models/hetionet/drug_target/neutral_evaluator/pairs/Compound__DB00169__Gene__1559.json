@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6592,
-        "final_score": 0.6592
+        "ic_mean": 0.71,
+        "final_score": 0.71
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2j2",
+          "id": "Cyp2r1",
           "type": "Gene"
         },
         {
-          "id": "Apixaban",
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cholecalciferol",
+          "target": "Cyp2r1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2r1",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4309"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3824,
+        "final_score": 0.3824
+      },
+      "nodes": [
+        {
+          "id": "Cholecalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Histamine Phosphate",
           "type": "Compound"
         },
         {
@@ -27,27 +69,73 @@
       "edges": [
         {
           "source": "Cholecalciferol",
-          "target": "Cyp2j2",
+          "target": "Cyp2d6",
           "label": "binds"
         },
         {
-          "source": "Cyp2j2",
-          "target": "Apixaban",
+          "source": "Cyp2d6",
+          "target": "Histamine Phosphate",
           "label": "is bound by"
         },
         {
-          "source": "Apixaban",
+          "source": "Histamine Phosphate",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cholecalciferol,Apixaban": [
+        "Cholecalciferol,Histamine Phosphate": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_4310"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3658,
+        "final_score": 0.3658
+      },
+      "nodes": [
+        {
+          "id": "Cholecalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cholecalciferol",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Clevidipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cholecalciferol,Clevidipine": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_8900"
+      "id": "path_4311"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -43,11 +43,11 @@
       ],
       "lowest_common_ancestors": {
         "Fluoxymesterone,Oxandrolone": [
-          "Anabolic Steroid",
+          "Therapeutic Androgen",
           "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_20313"
+      "id": "path_10268"
     },
     {
       "score": {
@@ -91,11 +91,11 @@
       ],
       "lowest_common_ancestors": {
         "Fluoxymesterone,Oxandrolone": [
-          "Anabolic Steroid",
+          "Therapeutic Androgen",
           "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_20314"
+      "id": "path_10269"
     },
     {
       "score": {
@@ -139,11 +139,11 @@
       ],
       "lowest_common_ancestors": {
         "Fluoxymesterone,Testosterone Propionate": [
-          "Anabolic Steroid",
+          "Therapeutic Androgen",
           "Steroid"
         ]
       },
-      "id": "path_20315"
+      "id": "path_10270"
     },
     {
       "score": {
@@ -187,11 +187,11 @@
       ],
       "lowest_common_ancestors": {
         "Fluoxymesterone,Oxandrolone": [
-          "Anabolic Steroid",
+          "Therapeutic Androgen",
           "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_20316"
+      "id": "path_10271"
     },
     {
       "score": {
@@ -235,11 +235,67 @@
       ],
       "lowest_common_ancestors": {
         "Fluoxymesterone,Oxandrolone": [
-          "Anabolic Steroid",
+          "Therapeutic Androgen",
           "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_20317"
+      "id": "path_10272"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6397,
+        "final_score": 0.6397
+      },
+      "nodes": [
+        {
+          "id": "Fluoxymesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Stanozolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxandrolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ar",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxymesterone",
+          "target": "Stanozolol",
+          "label": "resembles"
+        },
+        {
+          "source": "Stanozolol",
+          "target": "Oxandrolone",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxandrolone",
+          "target": "Ar",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluoxymesterone,Stanozolol": [
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
+        ],
+        "Fluoxymesterone,Oxandrolone": [
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
+        ],
+        "Stanozolol,Oxandrolone": [
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_10273"
     },
     {
       "score": {
@@ -283,16 +339,16 @@
       ],
       "lowest_common_ancestors": {
         "Fluoxymesterone,Testosterone Propionate": [
-          "Anabolic Steroid",
+          "Therapeutic Androgen",
           "Steroid"
         ]
       },
-      "id": "path_20318"
+      "id": "path_10274"
     },
     {
       "score": {
-        "ic_mean": 0.6308,
-        "final_score": 0.6308
+        "ic_mean": 0.5937,
+        "final_score": 0.5937
       },
       "nodes": [
         {
@@ -304,7 +360,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Nandrolone Decanoate",
+          "id": "Testosterone Propionate",
           "type": "Compound"
         },
         {
@@ -320,27 +376,27 @@
         },
         {
           "source": "Peliosis Hepatis",
-          "target": "Nandrolone Decanoate",
+          "target": "Testosterone Propionate",
           "label": "is caused by"
         },
         {
-          "source": "Nandrolone Decanoate",
+          "source": "Testosterone Propionate",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluoxymesterone,Nandrolone Decanoate": [
-          "Steroid",
-          "Therapeutic Androgen"
+        "Fluoxymesterone,Testosterone Propionate": [
+          "Therapeutic Androgen",
+          "Steroid"
         ]
       },
-      "id": "path_20319"
+      "id": "path_10275"
     },
     {
       "score": {
-        "ic_mean": 0.6308,
-        "final_score": 0.6308
+        "ic_mean": 0.5522,
+        "final_score": 0.5522
       },
       "nodes": [
         {
@@ -348,11 +404,11 @@
           "type": "Compound"
         },
         {
-          "id": "Virilism",
+          "id": "Coma Hepatic",
           "type": "Side Effect"
         },
         {
-          "id": "Nandrolone Decanoate",
+          "id": "Cyproterone Acetate",
           "type": "Compound"
         },
         {
@@ -363,28 +419,75 @@
       "edges": [
         {
           "source": "Fluoxymesterone",
-          "target": "Virilism",
+          "target": "Coma Hepatic",
           "label": "causes"
         },
         {
-          "source": "Virilism",
-          "target": "Nandrolone Decanoate",
+          "source": "Coma Hepatic",
+          "target": "Cyproterone Acetate",
           "label": "is caused by"
         },
         {
-          "source": "Nandrolone Decanoate",
+          "source": "Cyproterone Acetate",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluoxymesterone,Nandrolone Decanoate": [
-          "Steroid",
-          "Therapeutic Androgen"
+        "Fluoxymesterone,Cyproterone Acetate": [
+          "3-Oxo-Delta(4) Steroid",
+          "Hormone Therapy Agent"
         ]
       },
-      "id": "path_20320"
+      "id": "path_10276"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5373,
+        "final_score": 0.5373
+      },
+      "nodes": [
+        {
+          "id": "Fluoxymesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Polycythaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Testosterone Propionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Ar",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxymesterone",
+          "target": "Polycythaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Polycythaemia",
+          "target": "Testosterone Propionate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Testosterone Propionate",
+          "target": "Ar",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluoxymesterone,Testosterone Propionate": [
+          "Therapeutic Androgen",
+          "Steroid"
+        ]
+      },
+      "id": "path_10277"
     }
-  ],
-  "verbalization": ""
+  ]
 }

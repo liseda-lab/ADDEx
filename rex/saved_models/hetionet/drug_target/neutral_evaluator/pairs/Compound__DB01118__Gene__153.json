@@ -1,6 +1,100 @@
 {
   "id": "Compound::DB01118 - Gene::153",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5865,
+        "final_score": 0.5865
+      },
+      "nodes": [
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Pulseless Electrical Activity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Esmolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amiodarone",
+          "target": "Pulseless Electrical Activity",
+          "label": "causes"
+        },
+        {
+          "source": "Pulseless Electrical Activity",
+          "target": "Esmolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Esmolol",
+          "target": "Adrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amiodarone,Esmolol": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_12595"
+    },
+    {
+      "score": {
+        "ic_mean": 0.567,
+        "final_score": 0.567
+      },
+      "nodes": [
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Multifocal Ventricular Tachycardia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sotalol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amiodarone",
+          "target": "Multifocal Ventricular Tachycardia",
+          "label": "causes"
+        },
+        {
+          "source": "Multifocal Ventricular Tachycardia",
+          "target": "Sotalol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sotalol",
+          "target": "Adrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amiodarone,Sotalol": [
+          "Organic Amino Compound",
+          "Cation Channel Blocker"
+        ]
+      },
+      "id": "path_12596"
+    }
+  ]
 }

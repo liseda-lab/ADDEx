@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.671,
-        "final_score": 0.671
+        "ic_mean": 0.5728,
+        "final_score": 0.5728
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pgr",
-          "type": "Gene"
+          "id": "Difluprednate",
+          "type": "Compound"
         },
         {
-          "id": "Spironolactone",
+          "id": "Halobetasol Propionate",
           "type": "Compound"
         },
         {
@@ -27,31 +27,96 @@
       "edges": [
         {
           "source": "Megestrol Acetate",
-          "target": "Pgr",
-          "label": "binds"
+          "target": "Difluprednate",
+          "label": "resembles"
         },
         {
-          "source": "Pgr",
-          "target": "Spironolactone",
-          "label": "is bound by"
+          "source": "Difluprednate",
+          "target": "Halobetasol Propionate",
+          "label": "resembles"
         },
         {
-          "source": "Spironolactone",
+          "source": "Halobetasol Propionate",
           "target": "Nr3c1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Megestrol Acetate,Spironolactone": [
-          "3-Oxo-Delta(4) Steroid"
+        "Megestrol Acetate,Difluprednate": [
+          "Therapeutic Steroid Hormone",
+          "Steroid"
+        ],
+        "Megestrol Acetate,Halobetasol Propionate": [
+          "Therapeutic Steroid Hormone",
+          "Steroid"
+        ],
+        "Difluprednate,Halobetasol Propionate": [
+          "Corticosteroid Hormone",
+          "Therapeutic Glucocorticoid"
         ]
       },
-      "id": "path_22421"
+      "id": "path_11382"
     },
     {
       "score": {
-        "ic_mean": 0.5275,
-        "final_score": 0.5275
+        "ic_mean": 0.5491,
+        "final_score": 0.5491
+      },
+      "nodes": [
+        {
+          "id": "Megestrol Acetate",
+          "type": "Compound"
+        },
+        {
+          "id": "Prednicarbate",
+          "type": "Compound"
+        },
+        {
+          "id": "Halobetasol Propionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Megestrol Acetate",
+          "target": "Prednicarbate",
+          "label": "resembles"
+        },
+        {
+          "source": "Prednicarbate",
+          "target": "Halobetasol Propionate",
+          "label": "resembles"
+        },
+        {
+          "source": "Halobetasol Propionate",
+          "target": "Nr3c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Megestrol Acetate,Prednicarbate": [
+          "Therapeutic Steroid Hormone",
+          "Steroid"
+        ],
+        "Megestrol Acetate,Halobetasol Propionate": [
+          "Therapeutic Steroid Hormone",
+          "Steroid"
+        ],
+        "Prednicarbate,Halobetasol Propionate": [
+          "Corticosteroid Hormone",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_11383"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5193,
+        "final_score": 0.5193
       },
       "nodes": [
         {
@@ -63,7 +128,7 @@
           "type": "Compound"
         },
         {
-          "id": "Medrysone",
+          "id": "Fluoxymesterone",
           "type": "Compound"
         },
         {
@@ -79,31 +144,30 @@
         },
         {
           "source": "Dydrogesterone",
-          "target": "Medrysone",
+          "target": "Fluoxymesterone",
           "label": "resembles"
         },
         {
-          "source": "Medrysone",
+          "source": "Fluoxymesterone",
           "target": "Nr3c1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
         "Megestrol Acetate,Dydrogesterone": [
-          "20-Oxo Steroid",
-          "Progestin"
+          "Progestin",
+          "3-Oxo-Delta(4) Steroid"
         ],
-        "Megestrol Acetate,Medrysone": [
-          "Steroid",
-          "Therapeutic Steroid Hormone"
+        "Megestrol Acetate,Fluoxymesterone": [
+          "Therapeutic Steroid Hormone",
+          "3-Oxo-Delta(4) Steroid"
         ],
-        "Dydrogesterone,Medrysone": [
-          "Steroid",
-          "Therapeutic Steroid Hormone"
+        "Dydrogesterone,Fluoxymesterone": [
+          "Therapeutic Steroid Hormone",
+          "3-Oxo-Delta(4) Steroid"
         ]
       },
-      "id": "path_22422"
+      "id": "path_11384"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -46,8 +46,54 @@
           "Monocarboxylic Acid"
         ]
       },
-      "id": "path_13819"
+      "id": "path_6952"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6254,
+        "final_score": 0.6254
+      },
+      "nodes": [
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco2b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Salicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc16a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pravastatin",
+          "target": "Slco2b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco2b1",
+          "target": "Salicylic Acid",
+          "label": "is bound by"
+        },
+        {
+          "source": "Salicylic Acid",
+          "target": "Slc16a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pravastatin,Salicylic Acid": [
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_6953"
     }
-  ],
-  "verbalization": ""
+  ]
 }

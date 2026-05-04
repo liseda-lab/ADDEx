@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7389,
-        "final_score": 0.7389
+        "ic_mean": 0.8049,
+        "final_score": 0.8049
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Metyrapone",
-          "type": "Compound"
+          "id": "Steroid 11-beta-monooxygenase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp11b1",
@@ -32,63 +32,100 @@
         },
         {
           "source": "Cyp11b2",
-          "target": "Metyrapone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrocortisone,Metyrapone": [
-          "Ketone"
-        ]
-      },
-      "id": "path_27789"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7202,
-        "final_score": 0.7202
-      },
-      "nodes": [
-        {
-          "id": "Hydrocortisone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b2",
-          "type": "Gene"
-        },
-        {
-          "id": "Glucocorticoid Biosynthesis",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrocortisone",
-          "target": "Cyp11b2",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b2",
-          "target": "Glucocorticoid Biosynthesis",
+          "target": "Steroid 11-beta-monooxygenase Activity",
           "label": "participates"
         },
         {
-          "source": "Glucocorticoid Biosynthesis",
+          "source": "Steroid 11-beta-monooxygenase Activity",
           "target": "Cyp11b1",
           "label": "is participated by"
         }
       ],
-      "id": "path_27790"
+      "id": "path_14242"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8049,
+        "final_score": 0.8049
+      },
+      "nodes": [
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b2",
+          "type": "Gene"
+        },
+        {
+          "id": "Corticosterone 18-monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrocortisone",
+          "target": "Cyp11b2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp11b2",
+          "target": "Corticosterone 18-monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Corticosterone 18-monooxygenase Activity",
+          "target": "Cyp11b1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14243"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7275,
+        "final_score": 0.7275
+      },
+      "nodes": [
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b2",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Iron-sulfur Protein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrocortisone",
+          "target": "Cyp11b2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp11b2",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Iron-sulfur Protein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Iron-sulfur Protein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp11b1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14244"
     },
     {
       "score": {
@@ -135,7 +172,7 @@
           "Carbonyl Compound"
         ]
       },
-      "id": "path_27791"
+      "id": "path_14245"
     },
     {
       "score": {
@@ -182,8 +219,54 @@
           "3-Oxo-Delta(4) Steroid"
         ]
       },
-      "id": "path_27792"
+      "id": "path_14246"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4833,
+        "final_score": 0.4833
+      },
+      "nodes": [
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrocortisone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Cimetidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Cyp11b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hydrocortisone,Cimetidine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_14247"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7239,
-        "final_score": 0.7239
+        "ic_mean": 0.7199,
+        "final_score": 0.7199
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Ethosuximide",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a7",
@@ -32,26 +32,21 @@
         },
         {
           "source": "Cyp3a43",
-          "target": "Ethosuximide",
-          "label": "is bound by"
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Ethosuximide",
+          "source": "Aromatase Activity",
           "target": "Cyp3a7",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Rifapentine,Ethosuximide": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_17214"
+      "id": "path_8617"
     },
     {
       "score": {
-        "ic_mean": 0.6425,
-        "final_score": 0.6425
+        "ic_mean": 0.6525,
+        "final_score": 0.6525
       },
       "nodes": [
         {
@@ -59,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
-          "type": "Gene"
+          "id": "Rifamycins",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Praziquantel",
+          "id": "Rifampicin",
           "type": "Compound"
         },
         {
@@ -74,75 +69,33 @@
       "edges": [
         {
           "source": "Rifapentine",
-          "target": "Cyp3a43",
-          "label": "binds"
+          "target": "Rifamycins",
+          "label": "is included in"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Praziquantel",
-          "label": "is bound by"
+          "source": "Rifamycins",
+          "target": "Rifampicin",
+          "label": "includes"
         },
         {
-          "source": "Praziquantel",
+          "source": "Rifampicin",
           "target": "Cyp3a7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rifapentine,Praziquantel": [
-          "Organic Heterotricyclic Compound",
-          "Anti-Infective Agent"
+        "Rifapentine,Rifamycins": [
+          "Rifamycins"
+        ],
+        "Rifapentine,Rifampicin": [
+          "Antitubercular Agent",
+          "Rifamycins"
+        ],
+        "Rifamycins,Rifampicin": [
+          "Rifamycins"
         ]
       },
-      "id": "path_17215"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6212,
-        "final_score": 0.6212
-      },
-      "nodes": [
-        {
-          "id": "Rifapentine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Zalcitabine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rifapentine",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Zalcitabine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Zalcitabine",
-          "target": "Cyp3a7",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rifapentine,Zalcitabine": [
-          "Organonitrogen Heterocyclic Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_17216"
+      "id": "path_8618"
     },
     {
       "score": {
@@ -159,7 +112,7 @@
           "type": "Gene"
         },
         {
-          "id": "Phenelzine",
+          "id": "Rifampicin",
           "type": "Compound"
         },
         {
@@ -175,22 +128,163 @@
         },
         {
           "source": "Cyp3a43",
-          "target": "Phenelzine",
+          "target": "Rifampicin",
           "label": "is bound by"
         },
         {
-          "source": "Phenelzine",
+          "source": "Rifampicin",
           "target": "Cyp3a7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rifapentine,Phenelzine": [
-          "Organic Amino Compound"
+        "Rifapentine,Rifampicin": [
+          "Antitubercular Agent",
+          "Rifamycins"
         ]
       },
-      "id": "path_17217"
+      "id": "path_8619"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4966,
+        "final_score": 0.4966
+      },
+      "nodes": [
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Gestodene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifapentine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Gestodene",
+          "label": "is bound by"
+        },
+        {
+          "source": "Gestodene",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifapentine,Gestodene": [
+          "Organic Polycyclic Compound"
+        ]
+      },
+      "id": "path_8620"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4605,
+        "final_score": 0.4605
+      },
+      "nodes": [
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Lercanidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifapentine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Lercanidipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lercanidipine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifapentine,Lercanidipine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_8621"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4605,
+        "final_score": 0.4605
+      },
+      "nodes": [
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifapentine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Finasteride",
+          "label": "is bound by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifapentine,Finasteride": [
+          "Lactam"
+        ]
+      },
+      "id": "path_8622"
     }
-  ],
-  "verbalization": ""
+  ]
 }

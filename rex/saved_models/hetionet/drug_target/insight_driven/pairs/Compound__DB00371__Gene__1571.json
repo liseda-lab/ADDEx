@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00371 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6573,
+        "final_score": 0.787,
+        "agentic_score": 0.9167
+      },
+      "nodes": [
+        {
+          "id": "Meprobamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meprobamate",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4840"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5673,
+        "final_score": 0.6587,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Meprobamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Bromazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meprobamate",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Bromazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Bromazepam",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meprobamate,Bromazepam": [
+          "Sedative And Hypnotic",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_4841"
+    }
+  ]
+}

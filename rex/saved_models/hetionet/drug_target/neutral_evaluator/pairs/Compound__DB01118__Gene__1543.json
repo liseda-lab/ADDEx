@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB01118 - Gene::1543",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4146,
+        "final_score": 0.4146
+      },
+      "nodes": [
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Orchitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rabeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amiodarone",
+          "target": "Orchitis",
+          "label": "causes"
+        },
+        {
+          "source": "Orchitis",
+          "target": "Rabeprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rabeprazole",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amiodarone,Rabeprazole": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_14333"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4079,
+        "final_score": 0.4079
+      },
+      "nodes": [
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Thyroid Neoplasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amiodarone",
+          "target": "Thyroid Neoplasm",
+          "label": "causes"
+        },
+        {
+          "source": "Thyroid Neoplasm",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amiodarone,Clomifene": [
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_14334"
+    }
+  ]
 }

@@ -43,16 +43,111 @@
       ],
       "lowest_common_ancestors": {
         "Carbamazepine,Phenytoin": [
-          "Anticonvulsant Agent",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Anticonvulsant Agent"
         ]
       },
-      "id": "path_8474"
+      "id": "path_4061"
     },
     {
       "score": {
-        "ic_mean": 0.5002,
-        "final_score": 0.5002
+        "ic_mean": 0.5029,
+        "final_score": 0.5029
+      },
+      "nodes": [
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Arterial Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propranolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbamazepine",
+          "target": "Arterial Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Arterial Insufficiency",
+          "target": "Propranolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propranolol",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbamazepine,Propranolol": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4062"
+    },
+    {
+      "score": {
+        "ic_mean": 0.446,
+        "final_score": 0.446
+      },
+      "nodes": [
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c19 Inducers",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ritonavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbamazepine",
+          "target": "Cytochrome P450 2c19 Inducers",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c19 Inducers",
+          "target": "Ritonavir",
+          "label": "includes"
+        },
+        {
+          "source": "Ritonavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbamazepine,Ritonavir": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4063"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4459,
+        "final_score": 0.4459
       },
       "nodes": [
         {
@@ -64,7 +159,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Aprepitant",
+          "id": "Phenytoin",
           "type": "Compound"
         },
         {
@@ -80,23 +175,118 @@
         },
         {
           "source": "Cytochrome P450 2c9 Inducers",
-          "target": "Aprepitant",
+          "target": "Phenytoin",
           "label": "includes"
         },
         {
-          "source": "Aprepitant",
+          "source": "Phenytoin",
           "target": "Cyp3a7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Carbamazepine,Aprepitant": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+        "Carbamazepine,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anticonvulsant Agent"
         ]
       },
-      "id": "path_8475"
+      "id": "path_4064"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4459,
+        "final_score": 0.4459
+      },
+      "nodes": [
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2b6 Inducers",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbamazepine",
+          "target": "Cytochrome P450 2b6 Inducers",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2b6 Inducers",
+          "target": "Phenytoin",
+          "label": "includes"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbamazepine,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anticonvulsant Agent"
+        ]
+      },
+      "id": "path_4065"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4042,
+        "final_score": 0.4042
+      },
+      "nodes": [
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c19 Inducers",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbamazepine",
+          "target": "Cytochrome P450 2c19 Inducers",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c19 Inducers",
+          "target": "Phenytoin",
+          "label": "includes"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbamazepine,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anticonvulsant Agent"
+        ]
+      },
+      "id": "path_4066"
     }
-  ],
-  "verbalization": ""
+  ]
 }

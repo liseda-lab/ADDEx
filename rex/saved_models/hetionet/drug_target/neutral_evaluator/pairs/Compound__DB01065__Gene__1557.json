@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6812,
-        "final_score": 0.6812
+        "ic_mean": 0.4557,
+        "final_score": 0.4557
       },
       "nodes": [
         {
@@ -12,95 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Mtnr1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Ramelteon",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Melatonin",
-          "target": "Mtnr1a",
-          "label": "binds"
-        },
-        {
-          "source": "Mtnr1a",
-          "target": "Ramelteon",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ramelteon",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "id": "path_25618"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6812,
-        "final_score": 0.6812
-      },
-      "nodes": [
-        {
-          "id": "Melatonin",
-          "type": "Compound"
-        },
-        {
-          "id": "Mtnr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Ramelteon",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Melatonin",
-          "target": "Mtnr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Mtnr1b",
-          "target": "Ramelteon",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ramelteon",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "id": "path_25619"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4517,
-        "final_score": 0.4517
-      },
-      "nodes": [
-        {
-          "id": "Melatonin",
-          "type": "Compound"
-        },
-        {
-          "id": "Hand Dermatitis",
+          "id": "Stress Symptoms",
           "type": "Side Effect"
         },
         {
-          "id": "Citalopram",
+          "id": "Zolpidem",
           "type": "Compound"
         },
         {
@@ -111,26 +27,26 @@
       "edges": [
         {
           "source": "Melatonin",
-          "target": "Hand Dermatitis",
+          "target": "Stress Symptoms",
           "label": "causes"
         },
         {
-          "source": "Hand Dermatitis",
-          "target": "Citalopram",
+          "source": "Stress Symptoms",
+          "target": "Zolpidem",
           "label": "is caused by"
         },
         {
-          "source": "Citalopram",
+          "source": "Zolpidem",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Melatonin,Citalopram": [
-          "Organic Heteropolycyclic Compound"
+        "Melatonin,Zolpidem": [
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_25620"
+      "id": "path_13021"
     },
     {
       "score": {
@@ -177,12 +93,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_25621"
+      "id": "path_13022"
     },
     {
       "score": {
-        "ic_mean": 0.3998,
-        "final_score": 0.3998
+        "ic_mean": 0.4326,
+        "final_score": 0.4326
       },
       "nodes": [
         {
@@ -190,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oral Mucosal Blistering",
+          "id": "Terminal Insomnia",
           "type": "Side Effect"
         },
         {
-          "id": "Lansoprazole",
+          "id": "Atomoxetine",
           "type": "Compound"
         },
         {
@@ -205,27 +121,115 @@
       "edges": [
         {
           "source": "Melatonin",
-          "target": "Oral Mucosal Blistering",
+          "target": "Terminal Insomnia",
           "label": "causes"
         },
         {
-          "source": "Oral Mucosal Blistering",
-          "target": "Lansoprazole",
+          "source": "Terminal Insomnia",
+          "target": "Atomoxetine",
           "label": "is caused by"
         },
         {
-          "source": "Lansoprazole",
+          "source": "Atomoxetine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Melatonin,Lansoprazole": [
+        "Melatonin,Atomoxetine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_13023"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4195,
+        "final_score": 0.4195
+      },
+      "nodes": [
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Stress",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Melatonin",
+          "target": "Stress",
+          "label": "causes"
+        },
+        {
+          "source": "Stress",
+          "target": "Zolpidem",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zolpidem",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Melatonin,Zolpidem": [
           "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_25622"
+      "id": "path_13024"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4126,
+        "final_score": 0.4126
+      },
+      "nodes": [
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Oedema Mouth",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Formoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Melatonin",
+          "target": "Oedema Mouth",
+          "label": "causes"
+        },
+        {
+          "source": "Oedema Mouth",
+          "target": "Formoterol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Formoterol",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "id": "path_13025"
     }
-  ],
-  "verbalization": ""
+  ]
 }

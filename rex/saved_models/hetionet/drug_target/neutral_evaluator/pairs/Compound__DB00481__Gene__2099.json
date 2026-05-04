@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00481 - Gene::2099",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4617,
+        "final_score": 0.4617
+      },
+      "nodes": [
+        {
+          "id": "Raloxifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Bladder Cancer",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Esr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Raloxifene",
+          "target": "Bladder Cancer",
+          "label": "causes"
+        },
+        {
+          "source": "Bladder Cancer",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Esr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Raloxifene,Clomifene": [
+          "Tertiary Amino Compound",
+          "Selective Estrogen Receptor Modulator"
+        ]
+      },
+      "id": "path_6231"
+    }
+  ]
 }

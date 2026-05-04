@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5541,
-        "final_score": 0.5541
+        "ic_mean": 0.428,
+        "final_score": 0.428
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1a",
-          "type": "Gene"
+          "id": "Dimetotiazine",
+          "type": "Compound"
         },
         {
-          "id": "Flupentixol",
+          "id": "Triflupromazine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,87 @@
       "edges": [
         {
           "source": "Acepromazine",
-          "target": "Adra1a",
-          "label": "binds"
+          "target": "Dimetotiazine",
+          "label": "resembles"
         },
         {
-          "source": "Adra1a",
-          "target": "Flupentixol",
-          "label": "is bound by"
+          "source": "Dimetotiazine",
+          "target": "Triflupromazine",
+          "label": "resembles"
         },
         {
-          "source": "Flupentixol",
+          "source": "Triflupromazine",
           "target": "Drd1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acepromazine,Flupentixol": [
-          "Tertiary Amino Compound",
-          "Dopamine Antagonist"
+        "Acepromazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Acepromazine,Triflupromazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ],
+        "Dimetotiazine,Triflupromazine": [
+          "Phenothiazines"
         ]
       },
-      "id": "path_15480"
+      "id": "path_7749"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4066,
+        "final_score": 0.4066
+      },
+      "nodes": [
+        {
+          "id": "Acepromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Thioproperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acepromazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Thioproperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Thioproperazine",
+          "target": "Drd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acepromazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Acepromazine,Thioproperazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ],
+        "Dimetotiazine,Thioproperazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_7750"
     }
-  ],
-  "verbalization": ""
+  ]
 }

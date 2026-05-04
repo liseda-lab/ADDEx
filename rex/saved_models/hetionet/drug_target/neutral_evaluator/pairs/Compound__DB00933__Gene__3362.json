@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00933 - Gene::3362",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6028,
+        "final_score": 0.6028
+      },
+      "nodes": [
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Methysergide",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mesoridazine",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Methysergide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methysergide",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mesoridazine,Methysergide": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12601"
+    }
+  ]
 }

@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB01181 - Gene::1551",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4959,
+        "final_score": 0.4959
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Metastases To Central Nervous System",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Metastases To Central Nervous System",
+          "label": "causes"
+        },
+        {
+          "source": "Metastases To Central Nervous System",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Oxycodone": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_11548"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4959,
+        "final_score": 0.4959
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Brain Cancer Metastatic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Brain Cancer Metastatic",
+          "label": "causes"
+        },
+        {
+          "source": "Brain Cancer Metastatic",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Oxycodone": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_11549"
+    }
+  ]
 }

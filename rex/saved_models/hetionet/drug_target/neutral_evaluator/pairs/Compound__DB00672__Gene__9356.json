@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6706,
-        "final_score": 0.6706
+        "ic_mean": 0.7141,
+        "final_score": 0.7141
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc15a2",
-          "type": "Gene"
+          "id": "Sulfonylurea Compounds",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Ceftazidime",
+          "id": "Tolbutamide",
           "type": "Compound"
         },
         {
@@ -27,31 +27,32 @@
       "edges": [
         {
           "source": "Chlorpropamide",
-          "target": "Slc15a2",
-          "label": "binds"
+          "target": "Sulfonylurea Compounds",
+          "label": "is included in"
         },
         {
-          "source": "Slc15a2",
-          "target": "Ceftazidime",
-          "label": "is bound by"
+          "source": "Sulfonylurea Compounds",
+          "target": "Tolbutamide",
+          "label": "includes"
         },
         {
-          "source": "Ceftazidime",
+          "source": "Tolbutamide",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpropamide,Ceftazidime": [
-          "Organosulfur Compound"
+        "Chlorpropamide,Tolbutamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
         ]
       },
-      "id": "path_34"
+      "id": "path_19"
     },
     {
       "score": {
-        "ic_mean": 0.6557,
-        "final_score": 0.6557
+        "ic_mean": 0.5743,
+        "final_score": 0.5743
       },
       "nodes": [
         {
@@ -63,7 +64,7 @@
           "type": "Gene"
         },
         {
-          "id": "Ceftazidime",
+          "id": "Cefadroxil",
           "type": "Compound"
         },
         {
@@ -79,53 +80,6 @@
         },
         {
           "source": "Slc15a1",
-          "target": "Ceftazidime",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ceftazidime",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorpropamide,Ceftazidime": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_35"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5892,
-        "final_score": 0.5892
-      },
-      "nodes": [
-        {
-          "id": "Chlorpropamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefadroxil",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorpropamide",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
           "target": "Cefadroxil",
           "label": "is bound by"
         },
@@ -137,15 +91,15 @@
       ],
       "lowest_common_ancestors": {
         "Chlorpropamide,Cefadroxil": [
-          "Organosulfur Compound"
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_36"
+      "id": "path_20"
     },
     {
       "score": {
-        "ic_mean": 0.5892,
-        "final_score": 0.5892
+        "ic_mean": 0.5604,
+        "final_score": 0.5604
       },
       "nodes": [
         {
@@ -153,11 +107,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc15a2",
-          "type": "Gene"
+          "id": "Porphyria Hepatic",
+          "type": "Side Effect"
         },
         {
-          "id": "Cloxacillin",
+          "id": "Tolbutamide",
           "type": "Compound"
         },
         {
@@ -168,78 +122,32 @@
       "edges": [
         {
           "source": "Chlorpropamide",
-          "target": "Slc15a2",
-          "label": "binds"
+          "target": "Porphyria Hepatic",
+          "label": "causes"
         },
         {
-          "source": "Slc15a2",
-          "target": "Cloxacillin",
-          "label": "is bound by"
+          "source": "Porphyria Hepatic",
+          "target": "Tolbutamide",
+          "label": "is caused by"
         },
         {
-          "source": "Cloxacillin",
+          "source": "Tolbutamide",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpropamide,Cloxacillin": [
-          "Organosulfur Compound"
+        "Chlorpropamide,Tolbutamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
         ]
       },
-      "id": "path_37"
+      "id": "path_21"
     },
     {
       "score": {
-        "ic_mean": 0.5892,
-        "final_score": 0.5892
-      },
-      "nodes": [
-        {
-          "id": "Chlorpropamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorpropamide",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorpropamide,Cefalotin": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_38"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5884,
-        "final_score": 0.5884
+        "ic_mean": 0.5604,
+        "final_score": 0.5604
       },
       "nodes": [
         {
@@ -251,7 +159,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Ceftazidime",
+          "id": "Tolbutamide",
           "type": "Compound"
         },
         {
@@ -267,26 +175,75 @@
         },
         {
           "source": "Disulfiram Like Reaction",
-          "target": "Ceftazidime",
+          "target": "Tolbutamide",
           "label": "is caused by"
         },
         {
-          "source": "Ceftazidime",
+          "source": "Tolbutamide",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpropamide,Ceftazidime": [
-          "Organosulfur Compound"
+        "Chlorpropamide,Tolbutamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
         ]
       },
-      "id": "path_39"
+      "id": "path_22"
     },
     {
       "score": {
-        "ic_mean": 0.5743,
-        "final_score": 0.5743
+        "ic_mean": 0.5178,
+        "final_score": 0.5178
+      },
+      "nodes": [
+        {
+          "id": "Chlorpropamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Porphyria Non-acute",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tolbutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpropamide",
+          "target": "Porphyria Non-acute",
+          "label": "causes"
+        },
+        {
+          "source": "Porphyria Non-acute",
+          "target": "Tolbutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tolbutamide",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpropamide,Tolbutamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
+        ]
+      },
+      "id": "path_23"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5116,
+        "final_score": 0.5116
       },
       "nodes": [
         {
@@ -298,7 +255,7 @@
           "type": "Gene"
         },
         {
-          "id": "Cefadroxil",
+          "id": "Captopril",
           "type": "Compound"
         },
         {
@@ -314,69 +271,21 @@
         },
         {
           "source": "Slc15a1",
-          "target": "Cefadroxil",
+          "target": "Captopril",
           "label": "is bound by"
         },
         {
-          "source": "Cefadroxil",
+          "source": "Captopril",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpropamide,Cefadroxil": [
-          "Organosulfur Compound"
+        "Chlorpropamide,Captopril": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_40"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5743,
-        "final_score": 0.5743
-      },
-      "nodes": [
-        {
-          "id": "Chlorpropamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorpropamide",
-          "target": "Slc15a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a1",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorpropamide,Cefalotin": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_41"
+      "id": "path_24"
     }
-  ],
-  "verbalization": ""
+  ]
 }

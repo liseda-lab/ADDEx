@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5712,
-        "final_score": 0.5712
+        "ic_mean": 0.4617,
+        "final_score": 0.4617
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hipk4",
-          "type": "Gene"
+          "id": "Sinoatrial Node Dysfunction",
+          "type": "Side Effect"
         },
         {
-          "id": "Imatinib",
+          "id": "Nicardipine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Gefitinib",
-          "target": "Hipk4",
-          "label": "binds"
+          "target": "Sinoatrial Node Dysfunction",
+          "label": "causes"
         },
         {
-          "source": "Hipk4",
-          "target": "Imatinib",
-          "label": "is bound by"
+          "source": "Sinoatrial Node Dysfunction",
+          "target": "Nicardipine",
+          "label": "is caused by"
         },
         {
-          "source": "Imatinib",
+          "source": "Nicardipine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Gefitinib,Imatinib": [
-          "Tertiary Amino Compound",
-          "Antineoplastic Enzyme Inhibitor"
+        "Gefitinib,Nicardipine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_25109"
+      "id": "path_12722"
     },
     {
       "score": {
-        "ic_mean": 0.5598,
-        "final_score": 0.5598
+        "ic_mean": 0.4405,
+        "final_score": 0.4405
       },
       "nodes": [
         {
@@ -60,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hipk4",
+          "id": "Orm1",
           "type": "Gene"
         },
         {
-          "id": "Sorafenib",
+          "id": "Olanzapine",
           "type": "Compound"
         },
         {
@@ -75,28 +74,73 @@
       "edges": [
         {
           "source": "Gefitinib",
-          "target": "Hipk4",
+          "target": "Orm1",
           "label": "binds"
         },
         {
-          "source": "Hipk4",
-          "target": "Sorafenib",
+          "source": "Orm1",
+          "target": "Olanzapine",
           "label": "is bound by"
         },
         {
-          "source": "Sorafenib",
+          "source": "Olanzapine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Gefitinib,Sorafenib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Monochlorobenzenes"
+        "Gefitinib,Olanzapine": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_25110"
+      "id": "path_12723"
+    },
+    {
+      "score": {
+        "ic_mean": 0.397,
+        "final_score": 0.397
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Orm1",
+          "type": "Gene"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Orm1",
+          "label": "binds"
+        },
+        {
+          "source": "Orm1",
+          "target": "Desipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Desipramine": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_12724"
     }
-  ],
-  "verbalization": ""
+  ]
 }

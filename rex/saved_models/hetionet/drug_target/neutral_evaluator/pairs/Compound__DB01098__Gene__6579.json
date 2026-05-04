@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6939,
-        "final_score": 0.6939
+        "ic_mean": 0.5316,
+        "final_score": 0.5316
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc7a11",
-          "type": "Gene"
+          "id": "Muscle Swelling",
+          "type": "Side Effect"
         },
         {
-          "id": "Tauroursodeoxycholic Acid",
+          "id": "Pravastatin",
           "type": "Compound"
         },
         {
@@ -27,27 +27,75 @@
       "edges": [
         {
           "source": "Rosuvastatin",
-          "target": "Slc7a11",
-          "label": "binds"
+          "target": "Muscle Swelling",
+          "label": "causes"
         },
         {
-          "source": "Slc7a11",
-          "target": "Tauroursodeoxycholic Acid",
-          "label": "is bound by"
+          "source": "Muscle Swelling",
+          "target": "Pravastatin",
+          "label": "is caused by"
         },
         {
-          "source": "Tauroursodeoxycholic Acid",
+          "source": "Pravastatin",
           "target": "Slco1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rosuvastatin,Tauroursodeoxycholic Acid": [
-          "Organic Cyclic Compound"
+        "Rosuvastatin,Pravastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Hydroxy Monocarboxylic Acid"
         ]
       },
-      "id": "path_7312"
+      "id": "path_3439"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5174,
+        "final_score": 0.5174
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb11",
+          "type": "Gene"
+        },
+        {
+          "id": "Ursodeoxycholic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Abcb11",
+          "label": "binds"
+        },
+        {
+          "source": "Abcb11",
+          "target": "Ursodeoxycholic Acid",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ursodeoxycholic Acid",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosuvastatin,Ursodeoxycholic Acid": [
+          "Monocarboxylic Acid",
+          "Antilipidemic Agent"
+        ]
+      },
+      "id": "path_3440"
     }
-  ],
-  "verbalization": ""
+  ]
 }

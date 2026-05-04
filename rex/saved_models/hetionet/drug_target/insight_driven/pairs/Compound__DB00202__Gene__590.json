@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00202 - Gene::590",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5531,
+        "final_score": 0.6516,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Succinylcholine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fasciculation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Edrophonium",
+          "type": "Compound"
+        },
+        {
+          "id": "Bche",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Succinylcholine",
+          "target": "Fasciculation",
+          "label": "causes"
+        },
+        {
+          "source": "Fasciculation",
+          "target": "Edrophonium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Edrophonium",
+          "target": "Bche",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Succinylcholine,Edrophonium": [
+          "Oxygen Molecular Entity"
+        ]
+      },
+      "id": "path_11610"
+    }
+  ]
+}

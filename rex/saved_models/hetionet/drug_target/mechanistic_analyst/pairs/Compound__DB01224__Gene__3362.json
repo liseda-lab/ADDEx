@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01224 - Gene::3362",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4732,
+        "final_score": 0.4732
+      },
+      "nodes": [
+        {
+          "id": "Quetiapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Schizophrenia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quetiapine",
+          "target": "Schizophrenia",
+          "label": "causes"
+        },
+        {
+          "source": "Schizophrenia",
+          "target": "Asenapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Asenapine",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quetiapine,Asenapine": [
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_1609"
+    }
+  ]
+}

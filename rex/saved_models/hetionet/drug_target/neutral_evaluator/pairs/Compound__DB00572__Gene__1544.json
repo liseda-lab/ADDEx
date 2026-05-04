@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4583,
-        "final_score": 0.4583
+        "ic_mean": 0.5035,
+        "final_score": 0.5035
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Labored Breathing",
+          "id": "Labile Blood Pressure",
           "type": "Side Effect"
         },
         {
-          "id": "Sertraline",
+          "id": "Propafenone",
           "type": "Compound"
         },
         {
@@ -27,27 +27,73 @@
       "edges": [
         {
           "source": "Atropine",
-          "target": "Labored Breathing",
+          "target": "Labile Blood Pressure",
           "label": "causes"
         },
         {
-          "source": "Labored Breathing",
-          "target": "Sertraline",
+          "source": "Labile Blood Pressure",
+          "target": "Propafenone",
           "label": "is caused by"
         },
         {
-          "source": "Sertraline",
+          "source": "Propafenone",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atropine,Sertraline": [
-          "Agent Affecting Nervous System",
-          "Ammonium Ion Derivative"
+        "Atropine,Propafenone": [
+          "Carbonyl Compound"
         ]
       },
-      "id": "path_20575"
+      "id": "path_10404"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4858,
+        "final_score": 0.4858
+      },
+      "nodes": [
+        {
+          "id": "Atropine",
+          "type": "Compound"
+        },
+        {
+          "id": "Atrioventricular Dissociation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atropine",
+          "target": "Atrioventricular Dissociation",
+          "label": "causes"
+        },
+        {
+          "source": "Atrioventricular Dissociation",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atropine,Propafenone": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_10405"
     },
     {
       "score": {
@@ -94,8 +140,55 @@
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_20576"
+      "id": "path_10406"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4304,
+        "final_score": 0.4304
+      },
+      "nodes": [
+        {
+          "id": "Atropine",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Angle-closure Glaucoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atropine",
+          "target": "Acute Angle-closure Glaucoma",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Angle-closure Glaucoma",
+          "target": "Acetaminophen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Acetaminophen",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atropine,Acetaminophen": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10407"
     }
-  ],
-  "verbalization": ""
+  ]
 }

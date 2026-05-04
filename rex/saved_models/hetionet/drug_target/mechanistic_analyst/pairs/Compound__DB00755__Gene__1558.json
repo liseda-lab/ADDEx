@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00755 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.447,
+        "final_score": 0.447
+      },
+      "nodes": [
+        {
+          "id": "Tretinoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluid Imbalance",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tretinoin",
+          "target": "Fluid Imbalance",
+          "label": "causes"
+        },
+        {
+          "source": "Fluid Imbalance",
+          "target": "Losartan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Losartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tretinoin,Losartan": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_894"
+    }
+  ]
+}

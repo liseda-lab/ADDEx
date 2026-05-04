@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7132,
-        "final_score": 0.7132
+        "ic_mean": 0.7218,
+        "final_score": 0.7218
       },
       "nodes": [
         {
@@ -12,7 +12,145 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5a",
+          "id": "Ca5b",
+          "type": "Gene"
+        },
+        {
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Ca5b",
+          "label": "binds"
+        },
+        {
+          "source": "Ca5b",
+          "target": "Carbonate Dehydratase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carbonate Dehydratase Activity",
+          "target": "Ca4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1574"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7,
+        "final_score": 0.7
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis At Loop Of Henle",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Increased Diuresis At Loop Of Henle",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis At Loop Of Henle",
+          "target": "Furosemide",
+          "label": "includes"
+        },
+        {
+          "source": "Furosemide",
+          "target": "Ca4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bumetanide,Furosemide": [
+          "Loop Diuretic",
+          "Benzoic Acids"
+        ]
+      },
+      "id": "path_1575"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6967,
+        "final_score": 0.6967
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca9",
+          "type": "Gene"
+        },
+        {
+          "id": "Hydrochlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Ca9",
+          "label": "binds"
+        },
+        {
+          "source": "Ca9",
+          "target": "Hydrochlorothiazide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Hydrochlorothiazide",
+          "target": "Ca4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bumetanide,Hydrochlorothiazide": [
+          "Organic Cyclic Compound",
+          "Diuretic"
+        ]
+      },
+      "id": "path_1576"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6718,
+        "final_score": 0.6718
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5b",
           "type": "Gene"
         },
         {
@@ -27,11 +165,11 @@
       "edges": [
         {
           "source": "Bumetanide",
-          "target": "Ca5a",
+          "target": "Ca5b",
           "label": "binds"
         },
         {
-          "source": "Ca5a",
+          "source": "Ca5b",
           "target": "Metolazone",
           "label": "is bound by"
         },
@@ -43,16 +181,16 @@
       ],
       "lowest_common_ancestors": {
         "Bumetanide,Metolazone": [
-          "Sulfonamide",
+          "Organic Cyclic Compound",
           "Diuretic"
         ]
       },
-      "id": "path_3356"
+      "id": "path_1577"
     },
     {
       "score": {
-        "ic_mean": 0.6832,
-        "final_score": 0.6832
+        "ic_mean": 0.6718,
+        "final_score": 0.6718
       },
       "nodes": [
         {
@@ -60,11 +198,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca14",
+          "id": "Ca5b",
           "type": "Gene"
         },
         {
-          "id": "Hydroflumethiazide",
+          "id": "Hydrochlorothiazide",
           "type": "Compound"
         },
         {
@@ -75,32 +213,32 @@
       "edges": [
         {
           "source": "Bumetanide",
-          "target": "Ca14",
+          "target": "Ca5b",
           "label": "binds"
         },
         {
-          "source": "Ca14",
-          "target": "Hydroflumethiazide",
+          "source": "Ca5b",
+          "target": "Hydrochlorothiazide",
           "label": "is bound by"
         },
         {
-          "source": "Hydroflumethiazide",
+          "source": "Hydrochlorothiazide",
           "target": "Ca4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bumetanide,Hydroflumethiazide": [
-          "Organosulfur Compound",
+        "Bumetanide,Hydrochlorothiazide": [
+          "Organic Cyclic Compound",
           "Diuretic"
         ]
       },
-      "id": "path_3357"
+      "id": "path_1578"
     },
     {
       "score": {
-        "ic_mean": 0.6619,
-        "final_score": 0.6619
+        "ic_mean": 0.6718,
+        "final_score": 0.6718
       },
       "nodes": [
         {
@@ -108,11 +246,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5a",
+          "id": "Ca5b",
           "type": "Gene"
         },
         {
-          "id": "Trichlormethiazide",
+          "id": "Lacosamide",
           "type": "Compound"
         },
         {
@@ -123,27 +261,26 @@
       "edges": [
         {
           "source": "Bumetanide",
-          "target": "Ca5a",
+          "target": "Ca5b",
           "label": "binds"
         },
         {
-          "source": "Ca5a",
-          "target": "Trichlormethiazide",
+          "source": "Ca5b",
+          "target": "Lacosamide",
           "label": "is bound by"
         },
         {
-          "source": "Trichlormethiazide",
+          "source": "Lacosamide",
           "target": "Ca4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bumetanide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Diuretic"
+        "Bumetanide,Lacosamide": [
+          "Carboxylic Acid"
         ]
       },
-      "id": "path_3358"
+      "id": "path_1579"
     },
     {
       "score": {
@@ -187,11 +324,11 @@
       ],
       "lowest_common_ancestors": {
         "Bumetanide,Methyclothiazide": [
-          "Organosulfur Compound",
+          "Organic Cyclic Compound",
           "Diuretic"
         ]
       },
-      "id": "path_3359"
+      "id": "path_1580"
     },
     {
       "score": {
@@ -208,7 +345,7 @@
           "type": "Gene"
         },
         {
-          "id": "Trichlormethiazide",
+          "id": "Hydroflumethiazide",
           "type": "Compound"
         },
         {
@@ -224,22 +361,22 @@
         },
         {
           "source": "Ca9",
-          "target": "Trichlormethiazide",
+          "target": "Hydroflumethiazide",
           "label": "is bound by"
         },
         {
-          "source": "Trichlormethiazide",
+          "source": "Hydroflumethiazide",
           "target": "Ca4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bumetanide,Trichlormethiazide": [
-          "Sulfonamide",
+        "Bumetanide,Hydroflumethiazide": [
+          "Organic Cyclic Compound",
           "Diuretic"
         ]
       },
-      "id": "path_3360"
+      "id": "path_1581"
     },
     {
       "score": {
@@ -256,7 +393,7 @@
           "type": "Gene"
         },
         {
-          "id": "Trichlormethiazide",
+          "id": "Hydroflumethiazide",
           "type": "Compound"
         },
         {
@@ -272,71 +409,22 @@
         },
         {
           "source": "Slc12a1",
-          "target": "Trichlormethiazide",
+          "target": "Hydroflumethiazide",
           "label": "is bound by"
         },
         {
-          "source": "Trichlormethiazide",
+          "source": "Hydroflumethiazide",
           "target": "Ca4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bumetanide,Trichlormethiazide": [
-          "Sulfonamide",
+        "Bumetanide,Hydroflumethiazide": [
+          "Organic Cyclic Compound",
           "Diuretic"
         ]
       },
-      "id": "path_3361"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6204,
-        "final_score": 0.6204
-      },
-      "nodes": [
-        {
-          "id": "Bumetanide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5b",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bumetanide",
-          "target": "Ca5b",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5b",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bumetanide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Diuretic"
-        ]
-      },
-      "id": "path_3362"
+      "id": "path_1582"
     }
-  ],
-  "verbalization": ""
+  ]
 }

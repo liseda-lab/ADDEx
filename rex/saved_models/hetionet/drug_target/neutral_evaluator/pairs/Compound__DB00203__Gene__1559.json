@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4676,
-        "final_score": 0.4676
+        "ic_mean": 0.5168,
+        "final_score": 0.5168
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Sickle Cell Anaemia With Crisis",
+          "id": "Haematospermia",
           "type": "Side Effect"
         },
         {
-          "id": "Medroxyprogesterone Acetate",
+          "id": "Delavirdine",
           "type": "Compound"
         },
         {
@@ -27,31 +27,79 @@
       "edges": [
         {
           "source": "Sildenafil",
-          "target": "Sickle Cell Anaemia With Crisis",
+          "target": "Haematospermia",
           "label": "causes"
         },
         {
-          "source": "Sickle Cell Anaemia With Crisis",
-          "target": "Medroxyprogesterone Acetate",
+          "source": "Haematospermia",
+          "target": "Delavirdine",
           "label": "is caused by"
         },
         {
-          "source": "Medroxyprogesterone Acetate",
+          "source": "Delavirdine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sildenafil,Medroxyprogesterone Acetate": [
-          "Organic Cyclic Compound"
+        "Sildenafil,Delavirdine": [
+          "Enzyme Inhibitor",
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_21293"
+      "id": "path_10799"
     },
     {
       "score": {
-        "ic_mean": 0.4544,
-        "final_score": 0.4544
+        "ic_mean": 0.474,
+        "final_score": 0.474
+      },
+      "nodes": [
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinal Oedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sildenafil",
+          "target": "Retinal Oedema",
+          "label": "causes"
+        },
+        {
+          "source": "Retinal Oedema",
+          "target": "Gemfibrozil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gemfibrozil",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sildenafil,Gemfibrozil": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_10800"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3658,
+        "final_score": 0.3658
       },
       "nodes": [
         {
@@ -63,7 +111,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Bexarotene",
+          "id": "Valproic Acid",
           "type": "Compound"
         },
         {
@@ -79,22 +127,21 @@
         },
         {
           "source": "Vascular Anomaly",
-          "target": "Bexarotene",
+          "target": "Valproic Acid",
           "label": "is caused by"
         },
         {
-          "source": "Bexarotene",
+          "source": "Valproic Acid",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sildenafil,Bexarotene": [
-          "Organic Cyclic Compound"
+        "Sildenafil,Valproic Acid": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_21294"
+      "id": "path_10801"
     }
-  ],
-  "verbalization": ""
+  ]
 }

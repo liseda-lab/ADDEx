@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5026,
-        "final_score": 0.5026
+        "ic_mean": 0.5527,
+        "final_score": 0.5527
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Neuroma",
+          "id": "Narcolepsy",
           "type": "Side Effect"
         },
         {
-          "id": "Ropinirole",
+          "id": "Prazosin",
           "type": "Compound"
         },
         {
@@ -27,28 +27,123 @@
       "edges": [
         {
           "source": "Pramipexole",
-          "target": "Neuroma",
+          "target": "Narcolepsy",
           "label": "causes"
         },
         {
-          "source": "Neuroma",
-          "target": "Ropinirole",
+          "source": "Narcolepsy",
+          "target": "Prazosin",
           "label": "is caused by"
         },
         {
-          "source": "Ropinirole",
+          "source": "Prazosin",
           "target": "Adra2b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pramipexole,Ropinirole": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Pramipexole,Prazosin": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_22322"
+      "id": "path_11322"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5065,
+        "final_score": 0.5065
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Excessive Daytime Sleepiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rotigotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Excessive Daytime Sleepiness",
+          "label": "causes"
+        },
+        {
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Rotigotine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rotigotine",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Rotigotine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_11323"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4945,
+        "final_score": 0.4945
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Binge Eating",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Binge Eating",
+          "label": "causes"
+        },
+        {
+          "source": "Binge Eating",
+          "target": "Lisuride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_11324"
     }
-  ],
-  "verbalization": ""
+  ]
 }

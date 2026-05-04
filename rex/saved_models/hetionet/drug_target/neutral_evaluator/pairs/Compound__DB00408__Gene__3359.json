@@ -1,6 +1,89 @@
 {
   "id": "Compound::DB00408 - Gene::3359",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6986,
+        "final_score": 0.6986
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr5a",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Htr5a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr5a",
+          "target": "Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Receptor Activity",
+          "target": "Htr3a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4084"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6578,
+        "final_score": 0.6578
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr3a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4085"
+    }
+  ]
 }

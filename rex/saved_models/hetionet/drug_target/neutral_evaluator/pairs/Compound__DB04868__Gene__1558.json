@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5635,
-        "final_score": 0.5635
+        "ic_mean": 0.3891,
+        "final_score": 0.3891
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Epha6",
-          "type": "Gene"
+          "id": "Albumin Low",
+          "type": "Side Effect"
         },
         {
-          "id": "Erlotinib",
+          "id": "Pazopanib",
           "type": "Compound"
         },
         {
@@ -27,28 +27,27 @@
       "edges": [
         {
           "source": "Nilotinib",
-          "target": "Epha6",
-          "label": "binds"
+          "target": "Albumin Low",
+          "label": "causes"
         },
         {
-          "source": "Epha6",
-          "target": "Erlotinib",
-          "label": "is bound by"
+          "source": "Albumin Low",
+          "target": "Pazopanib",
+          "label": "is caused by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Pazopanib",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nilotinib,Erlotinib": [
-          "Secondary Amino Compound",
-          "Antineoplastic Enzyme Inhibitor"
+        "Nilotinib,Pazopanib": [
+          "C-Kit Inhibitor",
+          "Pyrimidines"
         ]
       },
-      "id": "path_27438"
+      "id": "path_14048"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6418,
-        "final_score": 0.6418
+        "ic_mean": 0.7389,
+        "final_score": 0.7389
       },
       "nodes": [
         {
@@ -12,8 +12,8 @@
           "type": "Compound"
         },
         {
-          "id": "Nat2",
-          "type": "Gene"
+          "id": "Sulfamoxole",
+          "type": "Compound"
         },
         {
           "id": "Sulfamethoxazole",
@@ -27,13 +27,13 @@
       "edges": [
         {
           "source": "Dapsone",
-          "target": "Nat2",
-          "label": "binds"
+          "target": "Sulfamoxole",
+          "label": "resembles"
         },
         {
-          "source": "Nat2",
+          "source": "Sulfamoxole",
           "target": "Sulfamethoxazole",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Sulfamethoxazole",
@@ -42,17 +42,81 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Dapsone,Sulfamoxole": [
+          "Anti-Infective Agent",
+          "Substituted Aniline"
+        ],
         "Dapsone,Sulfamethoxazole": [
-          "Organosulfur Compound",
+          "Anti-Infective Agent",
+          "Substituted Aniline"
+        ],
+        "Sulfamoxole,Sulfamethoxazole": [
+          "Oxazole",
+          "Sulfonamide Anti-Infective Agent"
+        ]
+      },
+      "id": "path_5550"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6652,
+        "final_score": 0.6652
+      },
+      "nodes": [
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfametopyrazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfamethoxazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapsone",
+          "target": "Sulfametopyrazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfametopyrazine",
+          "target": "Sulfamethoxazole",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfamethoxazole",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dapsone,Sulfametopyrazine": [
+          "Organic Cyclic Compound",
           "Anti-Infective Agent"
+        ],
+        "Dapsone,Sulfamethoxazole": [
+          "Anti-Infective Agent",
+          "Substituted Aniline"
+        ],
+        "Sulfametopyrazine,Sulfamethoxazole": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sulfonamide Anti-Infective Agent"
         ]
       },
-      "id": "path_11189"
+      "id": "path_5551"
     },
     {
       "score": {
-        "ic_mean": 0.6253,
-        "final_score": 0.6253
+        "ic_mean": 0.5461,
+        "final_score": 0.5461
       },
       "nodes": [
         {
@@ -60,248 +124,11 @@
           "type": "Compound"
         },
         {
-          "id": "Mpo",
-          "type": "Gene"
-        },
-        {
-          "id": "Aminosalicylic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Mpo",
-          "label": "binds"
-        },
-        {
-          "source": "Mpo",
-          "target": "Aminosalicylic Acid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Aminosalicylic Acid",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Aminosalicylic Acid": [
-          "Benzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_11190"
-    },
-    {
-      "score": {
-        "ic_mean": 0.604,
-        "final_score": 0.604
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Fmo3",
-          "type": "Gene"
-        },
-        {
-          "id": "Voriconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Fmo3",
-          "label": "binds"
-        },
-        {
-          "source": "Fmo3",
-          "target": "Voriconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Voriconazole",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Voriconazole": [
-          "Benzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_11191"
-    },
-    {
-      "score": {
-        "ic_mean": 0.604,
-        "final_score": 0.604
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Ifosfamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Ifosfamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ifosfamide",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Ifosfamide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_11192"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5739,
-        "final_score": 0.5739
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Antipyrine": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_11193"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5739,
-        "final_score": 0.5739
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nat2",
-          "type": "Gene"
-        },
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Nat2",
-          "label": "binds"
-        },
-        {
-          "source": "Nat2",
-          "target": "Acetaminophen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Acetaminophen",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Acetaminophen": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_11194"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5567,
-        "final_score": 0.5567
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Infectious Mononucleosis",
+          "id": "Renal Papillary Necrosis",
           "type": "Side Effect"
         },
         {
-          "id": "Aminosalicylic Acid",
+          "id": "Fenoprofen",
           "type": "Compound"
         },
         {
@@ -312,28 +139,73 @@
       "edges": [
         {
           "source": "Dapsone",
-          "target": "Infectious Mononucleosis",
+          "target": "Renal Papillary Necrosis",
           "label": "causes"
         },
         {
-          "source": "Infectious Mononucleosis",
-          "target": "Aminosalicylic Acid",
+          "source": "Renal Papillary Necrosis",
+          "target": "Fenoprofen",
           "label": "is caused by"
         },
         {
-          "source": "Aminosalicylic Acid",
+          "source": "Fenoprofen",
           "target": "Ptgs1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dapsone,Aminosalicylic Acid": [
-          "Benzenes",
-          "Anti-Infective Agent"
+        "Dapsone,Fenoprofen": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_11195"
+      "id": "path_5552"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5277,
+        "final_score": 0.5277
+      },
+      "nodes": [
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Papillary Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mefenamic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapsone",
+          "target": "Renal Papillary Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Papillary Necrosis",
+          "target": "Mefenamic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mefenamic Acid",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dapsone,Mefenamic Acid": [
+          "Benzenes"
+        ]
+      },
+      "id": "path_5553"
     }
-  ],
-  "verbalization": ""
+  ]
 }

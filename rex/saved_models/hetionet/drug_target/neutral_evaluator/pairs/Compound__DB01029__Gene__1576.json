@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.705,
-        "final_score": 0.705
+        "ic_mean": 0.6366,
+        "final_score": 0.6366
       },
       "nodes": [
         {
@@ -12,8 +12,50 @@
           "type": "Compound"
         },
         {
-          "id": "Agtr1",
+          "id": "Cyp2c8",
           "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7925"
+    },
+    {
+      "score": {
+        "ic_mean": 0.542,
+        "final_score": 0.542
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Forasartan",
+          "type": "Compound"
         },
         {
           "id": "Tasosartan",
@@ -27,13 +69,13 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Agtr1",
-          "label": "binds"
+          "target": "Forasartan",
+          "label": "resembles"
         },
         {
-          "source": "Agtr1",
+          "source": "Forasartan",
           "target": "Tasosartan",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Tasosartan",
@@ -42,17 +84,25 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Irbesartan,Forasartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
+        ],
         "Irbesartan,Tasosartan": [
-          "Biphenyls",
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenyls"
+        ],
+        "Forasartan,Tasosartan": [
+          "Benzenoid Aromatic Compound",
           "Angiotensin Ii Receptor Antagonist"
         ]
       },
-      "id": "path_15908"
+      "id": "path_7926"
     },
     {
       "score": {
-        "ic_mean": 0.705,
-        "final_score": 0.705
+        "ic_mean": 0.5257,
+        "final_score": 0.5257
       },
       "nodes": [
         {
@@ -60,11 +110,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ednra",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Sitaxentan",
+          "id": "Fenofibrate",
           "type": "Compound"
         },
         {
@@ -75,31 +125,31 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Ednra",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Ednra",
-          "target": "Sitaxentan",
+          "source": "Cyp2c8",
+          "target": "Fenofibrate",
           "label": "is bound by"
         },
         {
-          "source": "Sitaxentan",
+          "source": "Fenofibrate",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Sitaxentan": [
-          "Organic Heterocyclic Compound"
+        "Irbesartan,Fenofibrate": [
+          "Benzenoid Aromatic Compound"
         ]
       },
-      "id": "path_15909"
+      "id": "path_7927"
     },
     {
       "score": {
-        "ic_mean": 0.6749,
-        "final_score": 0.6749
+        "ic_mean": 0.4743,
+        "final_score": 0.4743
       },
       "nodes": [
         {
@@ -107,11 +157,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ednra",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Macitentan",
+          "id": "Paramethadione",
           "type": "Compound"
         },
         {
@@ -122,31 +172,31 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Ednra",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Ednra",
-          "target": "Macitentan",
+          "source": "Cyp2c8",
+          "target": "Paramethadione",
           "label": "is bound by"
         },
         {
-          "source": "Macitentan",
+          "source": "Paramethadione",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Macitentan": [
+        "Irbesartan,Paramethadione": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_15910"
+      "id": "path_7928"
     },
     {
       "score": {
-        "ic_mean": 0.6229,
-        "final_score": 0.6229
+        "ic_mean": 0.4443,
+        "final_score": 0.4443
       },
       "nodes": [
         {
@@ -154,11 +204,11 @@
           "type": "Compound"
         },
         {
-          "id": "Angiotensin 2 Receptor Antagonists",
-          "type": "Pharmacologic Class"
+          "id": "Cyp2c8",
+          "type": "Gene"
         },
         {
-          "id": "Losartan",
+          "id": "Fosphenytoin",
           "type": "Compound"
         },
         {
@@ -169,221 +219,31 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Angiotensin 2 Receptor Antagonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Angiotensin 2 Receptor Antagonists",
-          "target": "Losartan",
-          "label": "includes"
-        },
-        {
-          "source": "Losartan",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Losartan": [
-          "Biphenylyltetrazole",
-          "Angiotensin Ii Receptor Antagonist"
-        ]
-      },
-      "id": "path_15911"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5608,
-        "final_score": 0.5608
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Losartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Ugt1a3",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Ugt1a3",
-          "target": "Losartan",
+          "source": "Cyp2c8",
+          "target": "Fosphenytoin",
           "label": "is bound by"
         },
         {
-          "source": "Losartan",
+          "source": "Fosphenytoin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Losartan": [
-          "Biphenylyltetrazole",
-          "Angiotensin Ii Receptor Antagonist"
-        ]
-      },
-      "id": "path_15912"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5443,
-        "final_score": 0.5443
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Morphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Morphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Morphine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Morphine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_15913"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5308,
-        "final_score": 0.5308
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Lovastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Lovastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lovastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Lovastatin": [
-          "Carbocyclic Compound"
-        ]
-      },
-      "id": "path_15914"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5194,
-        "final_score": 0.5194
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Ezetimibe",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Ezetimibe",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ezetimibe",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Ezetimibe": [
+        "Irbesartan,Fosphenytoin": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_15915"
+      "id": "path_7929"
     },
     {
       "score": {
-        "ic_mean": 0.5007,
-        "final_score": 0.5007
+        "ic_mean": 0.4335,
+        "final_score": 0.4335
       },
       "nodes": [
         {
@@ -391,152 +251,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Atorvastatin": [
-          "Azole"
-        ]
-      },
-      "id": "path_15916"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5007,
-        "final_score": 0.5007
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Valproic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Valproic Acid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Valproic Acid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Valproic Acid": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_15917"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4973,
-        "final_score": 0.4973
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Ptgs1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgs1",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Antipyrine": [
-          "Azole"
-        ]
-      },
-      "id": "path_15918"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4481,
-        "final_score": 0.4481
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Upper Limb Oedema",
+          "id": "Skin Discomfort",
           "type": "Side Effect"
         },
         {
-          "id": "Etoricoxib",
+          "id": "Metronidazole",
           "type": "Compound"
         },
         {
@@ -547,74 +266,26 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Upper Limb Oedema",
+          "target": "Skin Discomfort",
           "label": "causes"
         },
         {
-          "source": "Upper Limb Oedema",
-          "target": "Etoricoxib",
+          "source": "Skin Discomfort",
+          "target": "Metronidazole",
           "label": "is caused by"
         },
         {
-          "source": "Etoricoxib",
+          "source": "Metronidazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Etoricoxib": [
-          "Organonitrogen Heterocyclic Compound"
+        "Irbesartan,Metronidazole": [
+          "Azole"
         ]
       },
-      "id": "path_15919"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4324,
-        "final_score": 0.4324
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Essential Hypertension",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Losartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Essential Hypertension",
-          "label": "causes"
-        },
-        {
-          "source": "Essential Hypertension",
-          "target": "Losartan",
-          "label": "is caused by"
-        },
-        {
-          "source": "Losartan",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Losartan": [
-          "Biphenylyltetrazole",
-          "Angiotensin Ii Receptor Antagonist"
-        ]
-      },
-      "id": "path_15920"
+      "id": "path_7930"
     },
     {
       "score": {
@@ -662,12 +333,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_15921"
+      "id": "path_7931"
     },
     {
       "score": {
-        "ic_mean": 0.4179,
-        "final_score": 0.4179
+        "ic_mean": 0.4245,
+        "final_score": 0.4245
       },
       "nodes": [
         {
@@ -675,11 +346,11 @@
           "type": "Compound"
         },
         {
-          "id": "Limb Paresis",
+          "id": "Stress",
           "type": "Side Effect"
         },
         {
-          "id": "Sertraline",
+          "id": "Disulfiram",
           "type": "Compound"
         },
         {
@@ -690,26 +361,26 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Limb Paresis",
+          "target": "Stress",
           "label": "causes"
         },
         {
-          "source": "Limb Paresis",
-          "target": "Sertraline",
+          "source": "Stress",
+          "target": "Disulfiram",
           "label": "is caused by"
         },
         {
-          "source": "Sertraline",
+          "source": "Disulfiram",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Sertraline": [
-          "Benzenoid Aromatic Compound"
+        "Irbesartan,Disulfiram": [
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_15922"
+      "id": "path_7932"
     },
     {
       "score": {
@@ -756,12 +427,12 @@
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_15923"
+      "id": "path_7933"
     },
     {
       "score": {
-        "ic_mean": 0.4091,
-        "final_score": 0.4091
+        "ic_mean": 0.409,
+        "final_score": 0.409
       },
       "nodes": [
         {
@@ -769,11 +440,11 @@
           "type": "Compound"
         },
         {
-          "id": "Essential Hypertension",
+          "id": "Oral Lesion",
           "type": "Side Effect"
         },
         {
-          "id": "Tramadol",
+          "id": "Etravirine",
           "type": "Compound"
         },
         {
@@ -784,31 +455,31 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Essential Hypertension",
+          "target": "Oral Lesion",
           "label": "causes"
         },
         {
-          "source": "Essential Hypertension",
-          "target": "Tramadol",
+          "source": "Oral Lesion",
+          "target": "Etravirine",
           "label": "is caused by"
         },
         {
-          "source": "Tramadol",
+          "source": "Etravirine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Tramadol": [
-          "Chemical Entity"
+        "Irbesartan,Etravirine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_15924"
+      "id": "path_7934"
     },
     {
       "score": {
-        "ic_mean": 0.4042,
-        "final_score": 0.4042
+        "ic_mean": 0.4068,
+        "final_score": 0.4068
       },
       "nodes": [
         {
@@ -816,11 +487,11 @@
           "type": "Compound"
         },
         {
-          "id": "Monoparesis",
+          "id": "Emotional Disturbance Nos",
           "type": "Side Effect"
         },
         {
-          "id": "Sertraline",
+          "id": "Propafenone",
           "type": "Compound"
         },
         {
@@ -831,31 +502,32 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Monoparesis",
+          "target": "Emotional Disturbance Nos",
           "label": "causes"
         },
         {
-          "source": "Monoparesis",
-          "target": "Sertraline",
+          "source": "Emotional Disturbance Nos",
+          "target": "Propafenone",
           "label": "is caused by"
         },
         {
-          "source": "Sertraline",
+          "source": "Propafenone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Sertraline": [
-          "Benzenoid Aromatic Compound"
+        "Irbesartan,Propafenone": [
+          "Organic Molecule",
+          "Agent Affecting Cardiovascular System"
         ]
       },
-      "id": "path_15925"
+      "id": "path_7935"
     },
     {
       "score": {
-        "ic_mean": 0.3953,
-        "final_score": 0.3953
+        "ic_mean": 0.402,
+        "final_score": 0.402
       },
       "nodes": [
         {
@@ -863,11 +535,11 @@
           "type": "Compound"
         },
         {
-          "id": "Coordination Disturbance",
+          "id": "Emotional Disturbance Nos",
           "type": "Side Effect"
         },
         {
-          "id": "Tramadol",
+          "id": "Primidone",
           "type": "Compound"
         },
         {
@@ -878,26 +550,73 @@
       "edges": [
         {
           "source": "Irbesartan",
-          "target": "Coordination Disturbance",
+          "target": "Emotional Disturbance Nos",
           "label": "causes"
         },
         {
-          "source": "Coordination Disturbance",
-          "target": "Tramadol",
+          "source": "Emotional Disturbance Nos",
+          "target": "Primidone",
           "label": "is caused by"
         },
         {
-          "source": "Tramadol",
+          "source": "Primidone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Tramadol": [
-          "Chemical Entity"
+        "Irbesartan,Primidone": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_15926"
+      "id": "path_7936"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3969,
+        "final_score": 0.3969
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Inner Ear Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clarithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Inner Ear Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Inner Ear Disorder",
+          "target": "Clarithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clarithromycin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irbesartan,Clarithromycin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_7937"
     },
     {
       "score": {
@@ -944,7 +663,101 @@
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_15927"
+      "id": "path_7938"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3905,
+        "final_score": 0.3905
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Erythema Facial",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Erythema Facial",
+          "label": "causes"
+        },
+        {
+          "source": "Erythema Facial",
+          "target": "Prednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irbesartan,Prednisolone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_7939"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3893,
+        "final_score": 0.3893
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Inner Ear Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Inner Ear Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Inner Ear Disorder",
+          "target": "Meloxicam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Meloxicam",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irbesartan,Meloxicam": [
+          "Azole"
+        ]
+      },
+      "id": "path_7940"
     },
     {
       "score": {
@@ -991,7 +804,7 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_15928"
+      "id": "path_7941"
     },
     {
       "score": {
@@ -1038,153 +851,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_15929"
+      "id": "path_7942"
     },
     {
       "score": {
-        "ic_mean": 0.368,
-        "final_score": 0.368
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Labyrinthine Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sertraline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Labyrinthine Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Labyrinthine Disorder",
-          "target": "Sertraline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sertraline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Sertraline": [
-          "Benzenoid Aromatic Compound"
-        ]
-      },
-      "id": "path_15930"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3651,
-        "final_score": 0.3651
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Labyrinthine Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Itraconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Labyrinthine Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Labyrinthine Disorder",
-          "target": "Itraconazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Itraconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Itraconazole": [
-          "Azole"
-        ]
-      },
-      "id": "path_15931"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3592,
-        "final_score": 0.3592
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Stress",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tramadol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Stress",
-          "label": "causes"
-        },
-        {
-          "source": "Stress",
-          "target": "Tramadol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tramadol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Tramadol": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_15932"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3583,
-        "final_score": 0.3583
+        "ic_mean": 0.3568,
+        "final_score": 0.3568
       },
       "nodes": [
         {
@@ -1196,7 +868,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Phenobarbital",
+          "id": "Mefloquine",
           "type": "Compound"
         },
         {
@@ -1212,163 +884,21 @@
         },
         {
           "source": "Emotional Disturbance Nos",
-          "target": "Phenobarbital",
+          "target": "Mefloquine",
           "label": "is caused by"
         },
         {
-          "source": "Phenobarbital",
+          "source": "Mefloquine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irbesartan,Phenobarbital": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_15933"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3527,
-        "final_score": 0.3527
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Emotional Disturbance Nos",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tramadol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Emotional Disturbance Nos",
-          "label": "causes"
-        },
-        {
-          "source": "Emotional Disturbance Nos",
-          "target": "Tramadol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tramadol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Tramadol": [
+        "Irbesartan,Mefloquine": [
           "Chemical Entity"
         ]
       },
-      "id": "path_15934"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3517,
-        "final_score": 0.3517
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Stress",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Bupropion",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Stress",
-          "label": "causes"
-        },
-        {
-          "source": "Stress",
-          "target": "Bupropion",
-          "label": "is caused by"
-        },
-        {
-          "source": "Bupropion",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Bupropion": [
-          "Benzenoid Aromatic Compound"
-        ]
-      },
-      "id": "path_15935"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3419,
-        "final_score": 0.3419
-      },
-      "nodes": [
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Labyrinthine Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irbesartan",
-          "target": "Labyrinthine Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Labyrinthine Disorder",
-          "target": "Clomipramine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Clomipramine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irbesartan,Clomipramine": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_15936"
+      "id": "path_7943"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01174 - Gene::1551",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.468,
+        "final_score": 0.468
+      },
+      "nodes": [
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenobarbital",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Phenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenobarbital,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anticonvulsant Agent"
+        ]
+      },
+      "id": "path_616"
+    }
+  ]
 }

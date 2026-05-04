@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB06589 - Gene::3791",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5598,
+        "final_score": 0.5299,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Fistula",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Kdr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pazopanib",
+          "target": "Fistula",
+          "label": "causes"
+        },
+        {
+          "source": "Fistula",
+          "target": "Regorafenib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Regorafenib",
+          "target": "Kdr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pazopanib,Regorafenib": [
+          "Organochalcogen Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_2831"
+    }
+  ]
+}

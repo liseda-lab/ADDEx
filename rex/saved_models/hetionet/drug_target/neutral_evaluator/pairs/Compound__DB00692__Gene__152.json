@@ -3,8 +3,50 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7713,
-        "final_score": 0.7713
+        "ic_mean": 0.7019,
+        "final_score": 0.7019
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1807"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6899,
+        "final_score": 0.6899
       },
       "nodes": [
         {
@@ -16,7 +58,7 @@
           "type": "Gene"
         },
         {
-          "id": "Naphazoline",
+          "id": "Guanabenz",
           "type": "Compound"
         },
         {
@@ -32,22 +74,64 @@
         },
         {
           "source": "Nisch",
-          "target": "Naphazoline",
+          "target": "Guanabenz",
           "label": "is bound by"
         },
         {
-          "source": "Naphazoline",
+          "source": "Guanabenz",
           "target": "Adra2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phentolamine,Naphazoline": [
-          "Organic Molecular Entity",
+        "Phentolamine,Guanabenz": [
+          "Benzenes",
           "Adrenergic Agent"
         ]
       },
-      "id": "path_3868"
+      "id": "path_1808"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6793,
+        "final_score": 0.6793
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Adrenergic Receptor Activity",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1809"
     },
     {
       "score": {
@@ -95,7 +179,7 @@
           "Alpha-Adrenergic Antagonist"
         ],
         "Phentolamine,Xylometazoline": [
-          "Hydrogen Molecular Entity",
+          "Benzenes",
           "Adrenergic Agent"
         ],
         "Tymazoline,Xylometazoline": [
@@ -103,7 +187,103 @@
           "Adrenergic Agent"
         ]
       },
-      "id": "path_3869"
+      "id": "path_1810"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6327,
+        "final_score": 0.6327
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Xylometazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Xylometazoline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Xylometazoline",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phentolamine,Xylometazoline": [
+          "Benzenes",
+          "Adrenergic Agent"
+        ]
+      },
+      "id": "path_1811"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6026,
+        "final_score": 0.6026
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Yohimbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Yohimbine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Yohimbine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phentolamine,Yohimbine": [
+          "Organic Heterocyclic Compound",
+          "Alpha-Adrenergic Antagonist"
+        ]
+      },
+      "id": "path_1812"
     },
     {
       "score": {
@@ -151,16 +331,220 @@
           "Alpha-Adrenergic Antagonist"
         ],
         "Phentolamine,Tolazoline": [
-          "Imidazoles",
-          "Alpha-Adrenergic Antagonist"
+          "Alpha-Adrenergic Antagonist",
+          "Imidazoles"
         ],
         "Tymazoline,Tolazoline": [
           "Organic Molecular Entity",
           "Alpha-Adrenergic Antagonist"
         ]
       },
-      "id": "path_3870"
+      "id": "path_1813"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5813,
+        "final_score": 0.5813
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Methotrimeprazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Methotrimeprazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methotrimeprazine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phentolamine,Methotrimeprazine": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_1814"
+    },
+    {
+      "score": {
+        "ic_mean": 0.53,
+        "final_score": 0.53
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Norepinephrine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phentolamine,Norepinephrine": [
+          "Phenols"
+        ]
+      },
+      "id": "path_1815"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4911,
+        "final_score": 0.4911
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Naphazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Tolazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Naphazoline",
+          "label": "resembles"
+        },
+        {
+          "source": "Naphazoline",
+          "target": "Tolazoline",
+          "label": "resembles"
+        },
+        {
+          "source": "Tolazoline",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phentolamine,Naphazoline": [
+          "Organic Molecular Entity",
+          "Adrenergic Agent"
+        ],
+        "Phentolamine,Tolazoline": [
+          "Alpha-Adrenergic Antagonist",
+          "Imidazoles"
+        ],
+        "Naphazoline,Tolazoline": [
+          "Organic Molecular Entity",
+          "Adrenergic Agent"
+        ]
+      },
+      "id": "path_1816"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4243,
+        "final_score": 0.4243
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Antazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Tolazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Antazoline",
+          "label": "resembles"
+        },
+        {
+          "source": "Antazoline",
+          "target": "Tolazoline",
+          "label": "resembles"
+        },
+        {
+          "source": "Tolazoline",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phentolamine,Antazoline": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Phentolamine,Tolazoline": [
+          "Alpha-Adrenergic Antagonist",
+          "Imidazoles"
+        ],
+        "Antazoline,Tolazoline": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1817"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,6 +1,109 @@
 {
   "id": "Compound::DB00852 - Gene::4128",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5299,
+        "final_score": 0.5299
+      },
+      "nodes": [
+        {
+          "id": "Pseudoephedrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Trembling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenylephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pseudoephedrine",
+          "target": "Trembling",
+          "label": "causes"
+        },
+        {
+          "source": "Trembling",
+          "target": "Phenylephrine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenylephrine",
+          "target": "Maoa",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pseudoephedrine,Phenylephrine": [
+          "Alpha-Adrenergic Agonist",
+          "Phenylethanolamines"
+        ]
+      },
+      "id": "path_3089"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4542,
+        "final_score": 0.4542
+      },
+      "nodes": [
+        {
+          "id": "Pseudoephedrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Metaraminol",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenylephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pseudoephedrine",
+          "target": "Metaraminol",
+          "label": "resembles"
+        },
+        {
+          "source": "Metaraminol",
+          "target": "Phenylephrine",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenylephrine",
+          "target": "Maoa",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pseudoephedrine,Metaraminol": [
+          "Alpha-Adrenergic Agonist",
+          "Phenylethanolamines"
+        ],
+        "Pseudoephedrine,Phenylephrine": [
+          "Alpha-Adrenergic Agonist",
+          "Phenylethanolamines"
+        ],
+        "Metaraminol,Phenylephrine": [
+          "Alpha-Adrenergic Agonist",
+          "Phenylethanolamines"
+        ]
+      },
+      "id": "path_3090"
+    }
+  ]
 }

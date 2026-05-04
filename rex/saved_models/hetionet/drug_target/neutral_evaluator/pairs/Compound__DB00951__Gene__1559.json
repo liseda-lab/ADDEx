@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6675,
-        "final_score": 0.6675
+        "ic_mean": 0.738,
+        "final_score": 0.738
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Nat2",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Sulfamethoxazole",
-          "type": "Compound"
+          "id": "Caffeine Oxidase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2c9",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Isoniazid",
-          "target": "Nat2",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Nat2",
-          "target": "Sulfamethoxazole",
-          "label": "is bound by"
+          "source": "Cyp1a2",
+          "target": "Caffeine Oxidase Activity",
+          "label": "participates"
         },
         {
-          "source": "Sulfamethoxazole",
+          "source": "Caffeine Oxidase Activity",
           "target": "Cyp2c9",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Isoniazid,Sulfamethoxazole": [
-          "Organonitrogen Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_25786"
+      "id": "path_13083"
     },
     {
       "score": {
-        "ic_mean": 0.651,
-        "final_score": 0.651
+        "ic_mean": 0.7139,
+        "final_score": 0.7139
       },
       "nodes": [
         {
@@ -60,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Nat2",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Dapsone",
-          "type": "Compound"
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2c9",
@@ -75,27 +69,21 @@
       "edges": [
         {
           "source": "Isoniazid",
-          "target": "Nat2",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Nat2",
-          "target": "Dapsone",
-          "label": "is bound by"
+          "source": "Cyp2a6",
+          "target": "Arachidonic Acid Epoxygenase Activity",
+          "label": "participates"
         },
         {
-          "source": "Dapsone",
+          "source": "Arachidonic Acid Epoxygenase Activity",
           "target": "Cyp2c9",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Isoniazid,Dapsone": [
-          "Organonitrogen Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_25787"
+      "id": "path_13084"
     },
     {
       "score": {
@@ -112,7 +100,7 @@
           "type": "Gene"
         },
         {
-          "id": "Nevirapine",
+          "id": "Troleandomycin",
           "type": "Compound"
         },
         {
@@ -128,27 +116,27 @@
         },
         {
           "source": "Cyp2a6",
-          "target": "Nevirapine",
+          "target": "Troleandomycin",
           "label": "is bound by"
         },
         {
-          "source": "Nevirapine",
+          "source": "Troleandomycin",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Nevirapine": [
-          "Organonitrogen Compound",
-          "Anti-Infective Agent"
+        "Isoniazid,Troleandomycin": [
+          "Anti-Infective Agent",
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_25788"
+      "id": "path_13085"
     },
     {
       "score": {
-        "ic_mean": 0.5996,
-        "final_score": 0.5996
+        "ic_mean": 0.5561,
+        "final_score": 0.5561
       },
       "nodes": [
         {
@@ -156,11 +144,11 @@
           "type": "Compound"
         },
         {
-          "id": "Nat2",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Acetaminophen",
+          "id": "Delavirdine",
           "type": "Compound"
         },
         {
@@ -171,79 +159,32 @@
       "edges": [
         {
           "source": "Isoniazid",
-          "target": "Nat2",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Nat2",
-          "target": "Acetaminophen",
+          "source": "Cyp1a2",
+          "target": "Delavirdine",
           "label": "is bound by"
         },
         {
-          "source": "Acetaminophen",
+          "source": "Delavirdine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Acetaminophen": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25789"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5696,
-        "final_score": 0.5696
-      },
-      "nodes": [
-        {
-          "id": "Isoniazid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Sulfadiazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Isoniazid",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Sulfadiazine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sulfadiazine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Isoniazid,Sulfadiazine": [
+        "Isoniazid,Delavirdine": [
           "Organonitrogen Compound",
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_25790"
+      "id": "path_13086"
     },
     {
       "score": {
-        "ic_mean": 0.5589,
-        "final_score": 0.5589
+        "ic_mean": 0.5288,
+        "final_score": 0.5288
       },
       "nodes": [
         {
@@ -255,7 +196,7 @@
           "type": "Gene"
         },
         {
-          "id": "Methimazole",
+          "id": "Azelastine",
           "type": "Compound"
         },
         {
@@ -271,115 +212,21 @@
         },
         {
           "source": "Cyp2a6",
-          "target": "Methimazole",
+          "target": "Azelastine",
           "label": "is bound by"
         },
         {
-          "source": "Methimazole",
+          "source": "Azelastine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Methimazole": [
+        "Isoniazid,Azelastine": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25791"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5589,
-        "final_score": 0.5589
-      },
-      "nodes": [
-        {
-          "id": "Isoniazid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Tranylcypromine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Isoniazid",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Tranylcypromine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tranylcypromine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Isoniazid,Tranylcypromine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25792"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5521,
-        "final_score": 0.5521
-      },
-      "nodes": [
-        {
-          "id": "Isoniazid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Desloratadine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Isoniazid",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Desloratadine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Desloratadine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Isoniazid,Desloratadine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25793"
+      "id": "path_13087"
     },
     {
       "score": {
@@ -426,7 +273,7 @@
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25794"
+      "id": "path_13088"
     },
     {
       "score": {
@@ -443,7 +290,7 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Flunarizine",
           "type": "Compound"
         },
         {
@@ -459,26 +306,26 @@
         },
         {
           "source": "Cyp2a6",
-          "target": "Antipyrine",
+          "target": "Flunarizine",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Flunarizine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Antipyrine": [
-          "Organonitrogen Compound"
+        "Isoniazid,Flunarizine": [
+          "Organic Molecular Entity"
         ]
       },
-      "id": "path_25795"
+      "id": "path_13089"
     },
     {
       "score": {
-        "ic_mean": 0.5288,
-        "final_score": 0.5288
+        "ic_mean": 0.5075,
+        "final_score": 0.5075
       },
       "nodes": [
         {
@@ -490,7 +337,7 @@
           "type": "Gene"
         },
         {
-          "id": "Montelukast",
+          "id": "Eletriptan",
           "type": "Compound"
         },
         {
@@ -506,26 +353,26 @@
         },
         {
           "source": "Cyp2a6",
-          "target": "Montelukast",
+          "target": "Eletriptan",
           "label": "is bound by"
         },
         {
-          "source": "Montelukast",
+          "source": "Eletriptan",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Montelukast": [
+        "Isoniazid,Eletriptan": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25796"
+      "id": "path_13090"
     },
     {
       "score": {
-        "ic_mean": 0.5182,
-        "final_score": 0.5182
+        "ic_mean": 0.5075,
+        "final_score": 0.5075
       },
       "nodes": [
         {
@@ -533,7 +380,148 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Cyclophosphamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoniazid,Cyclophosphamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_13091"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5047,
+        "final_score": 0.5047
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Aminophenazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Aminophenazone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aminophenazone",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoniazid,Aminophenazone": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_13092"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5047,
+        "final_score": 0.5047
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Gemfibrozil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Gemfibrozil",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoniazid,Gemfibrozil": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_13093"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5047,
+        "final_score": 0.5047
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
@@ -548,11 +536,11 @@
       "edges": [
         {
           "source": "Isoniazid",
-          "target": "Cyp2c8",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Cyp2c8",
+          "source": "Cyp1a2",
           "target": "Ticlopidine",
           "label": "is bound by"
         },
@@ -567,7 +555,7 @@
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25797"
+      "id": "path_13094"
     },
     {
       "score": {
@@ -584,7 +572,7 @@
           "type": "Gene"
         },
         {
-          "id": "Nilvadipine",
+          "id": "Cinnarizine",
           "type": "Compound"
         },
         {
@@ -600,26 +588,26 @@
         },
         {
           "source": "Cyp2a6",
-          "target": "Nilvadipine",
+          "target": "Cinnarizine",
           "label": "is bound by"
         },
         {
-          "source": "Nilvadipine",
+          "source": "Cinnarizine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Nilvadipine": [
+        "Isoniazid,Cinnarizine": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25798"
+      "id": "path_13095"
     },
     {
       "score": {
-        "ic_mean": 0.4882,
-        "final_score": 0.4882
+        "ic_mean": 0.491,
+        "final_score": 0.491
       },
       "nodes": [
         {
@@ -627,11 +615,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Fosphenytoin",
+          "id": "Nicotine",
           "type": "Compound"
         },
         {
@@ -642,31 +630,31 @@
       "edges": [
         {
           "source": "Isoniazid",
-          "target": "Cyp2c8",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Cyp2c8",
-          "target": "Fosphenytoin",
+          "source": "Cyp2a6",
+          "target": "Nicotine",
           "label": "is bound by"
         },
         {
-          "source": "Fosphenytoin",
+          "source": "Nicotine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Fosphenytoin": [
+        "Isoniazid,Nicotine": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25799"
+      "id": "path_13096"
     },
     {
       "score": {
-        "ic_mean": 0.4882,
-        "final_score": 0.4882
+        "ic_mean": 0.4775,
+        "final_score": 0.4775
       },
       "nodes": [
         {
@@ -674,11 +662,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Flunitrazepam",
           "type": "Compound"
         },
         {
@@ -689,31 +677,31 @@
       "edges": [
         {
           "source": "Isoniazid",
-          "target": "Cyp2c8",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Cyp2c8",
-          "target": "Antipyrine",
+          "source": "Cyp2a6",
+          "target": "Flunitrazepam",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Flunitrazepam",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Antipyrine": [
+        "Isoniazid,Flunitrazepam": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25800"
+      "id": "path_13097"
     },
     {
       "score": {
-        "ic_mean": 0.4669,
-        "final_score": 0.4669
+        "ic_mean": 0.4661,
+        "final_score": 0.4661
       },
       "nodes": [
         {
@@ -721,11 +709,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Rifapentine",
+          "id": "Miconazole",
           "type": "Compound"
         },
         {
@@ -736,32 +724,32 @@
       "edges": [
         {
           "source": "Isoniazid",
-          "target": "Cyp2c8",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Cyp2c8",
-          "target": "Rifapentine",
+          "source": "Cyp2a6",
+          "target": "Miconazole",
           "label": "is bound by"
         },
         {
-          "source": "Rifapentine",
+          "source": "Miconazole",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Rifapentine": [
+        "Isoniazid,Miconazole": [
           "Organonitrogen Compound",
-          "Antitubercular Agent"
+          "Anti-Infective Agent"
         ]
       },
-      "id": "path_25801"
+      "id": "path_13098"
     },
     {
       "score": {
-        "ic_mean": 0.4155,
-        "final_score": 0.4155
+        "ic_mean": 0.4475,
+        "final_score": 0.4475
       },
       "nodes": [
         {
@@ -769,11 +757,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a4",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Rifapentine",
+          "id": "Nifedipine",
           "type": "Compound"
         },
         {
@@ -784,28 +772,73 @@
       "edges": [
         {
           "source": "Isoniazid",
-          "target": "Cyp3a4",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Cyp3a4",
-          "target": "Rifapentine",
+          "source": "Cyp2a6",
+          "target": "Nifedipine",
           "label": "is bound by"
         },
         {
-          "source": "Rifapentine",
+          "source": "Nifedipine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Isoniazid,Rifapentine": [
-          "Organonitrogen Compound",
-          "Antitubercular Agent"
+        "Isoniazid,Nifedipine": [
+          "Organonitrogen Compound"
         ]
       },
-      "id": "path_25802"
+      "id": "path_13099"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4369,
+        "final_score": 0.4369
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Clevidipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoniazid,Clevidipine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_13100"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00705 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4392,
+        "final_score": 0.4392
+      },
+      "nodes": [
+        {
+          "id": "Delavirdine",
+          "type": "Compound"
+        },
+        {
+          "id": "Granulocytosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zalcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Delavirdine",
+          "target": "Granulocytosis",
+          "label": "causes"
+        },
+        {
+          "source": "Granulocytosis",
+          "target": "Zalcitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zalcitabine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Delavirdine,Zalcitabine": [
+          "Antiviral Agent",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_7120"
+    }
+  ]
+}

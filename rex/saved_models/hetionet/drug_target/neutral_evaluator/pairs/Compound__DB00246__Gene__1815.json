@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6111,
-        "final_score": 0.6111
+        "ic_mean": 0.5234,
+        "final_score": 0.5234
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Drd5",
-          "type": "Gene"
+          "id": "Diabetic Hyperglycaemic Coma",
+          "type": "Side Effect"
         },
         {
-          "id": "Rotigotine",
+          "id": "Paliperidone",
           "type": "Compound"
         },
         {
@@ -27,28 +27,266 @@
       "edges": [
         {
           "source": "Ziprasidone",
-          "target": "Drd5",
-          "label": "binds"
+          "target": "Diabetic Hyperglycaemic Coma",
+          "label": "causes"
         },
         {
-          "source": "Drd5",
-          "target": "Rotigotine",
-          "label": "is bound by"
+          "source": "Diabetic Hyperglycaemic Coma",
+          "target": "Paliperidone",
+          "label": "is caused by"
         },
         {
-          "source": "Rotigotine",
+          "source": "Paliperidone",
           "target": "Drd4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ziprasidone,Rotigotine": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
+        "Ziprasidone,Paliperidone": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_23752"
+      "id": "path_12012"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5234,
+        "final_score": 0.5234
+      },
+      "nodes": [
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Diabetic Coma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ziprasidone",
+          "target": "Diabetic Coma",
+          "label": "causes"
+        },
+        {
+          "source": "Diabetic Coma",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ziprasidone,Paliperidone": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12013"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5234,
+        "final_score": 0.5234
+      },
+      "nodes": [
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Prolactin Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ziprasidone",
+          "target": "Serum Prolactin Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Prolactin Increased",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ziprasidone,Paliperidone": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12014"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5044,
+        "final_score": 0.5044
+      },
+      "nodes": [
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Prolactin Level",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ziprasidone",
+          "target": "Increased Prolactin Level",
+          "label": "causes"
+        },
+        {
+          "source": "Increased Prolactin Level",
+          "target": "Asenapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Asenapine",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ziprasidone,Asenapine": [
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_12015"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4985,
+        "final_score": 0.4985
+      },
+      "nodes": [
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Prolactin Level",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ziprasidone",
+          "target": "Increased Prolactin Level",
+          "label": "causes"
+        },
+        {
+          "source": "Increased Prolactin Level",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ziprasidone,Paliperidone": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12016"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4459,
+        "final_score": 0.4459
+      },
+      "nodes": [
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Seeking Behavior",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ziprasidone",
+          "target": "Drug Seeking Behavior",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Seeking Behavior",
+          "target": "Mirtazapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mirtazapine",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ziprasidone,Mirtazapine": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12017"
     }
-  ],
-  "verbalization": ""
+  ]
 }

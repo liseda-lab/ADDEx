@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5119,
-        "final_score": 0.5119
+        "ic_mean": 0.5632,
+        "final_score": 0.5632
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hrh2",
+          "id": "Htr6",
           "type": "Gene"
         },
         {
-          "id": "Clomipramine",
+          "id": "Thiothixene",
           "type": "Compound"
         },
         {
@@ -27,75 +27,27 @@
       "edges": [
         {
           "source": "Amitriptyline",
-          "target": "Hrh2",
+          "target": "Htr6",
           "label": "binds"
         },
         {
-          "source": "Hrh2",
-          "target": "Clomipramine",
+          "source": "Htr6",
+          "target": "Thiothixene",
           "label": "is bound by"
         },
         {
-          "source": "Clomipramine",
+          "source": "Thiothixene",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amitriptyline,Clomipramine": [
-          "Organic Tricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Amitriptyline,Thiothixene": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27793"
-    },
-    {
-      "score": {
-        "ic_mean": 0.474,
-        "final_score": 0.474
-      },
-      "nodes": [
-        {
-          "id": "Amitriptyline",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Nortriptyline",
-          "type": "Compound"
-        },
-        {
-          "id": "Alb",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amitriptyline",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Nortriptyline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nortriptyline",
-          "target": "Alb",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amitriptyline,Nortriptyline": [
-          "Amine",
-          "Tricyclic Antidepressant"
-        ]
-      },
-      "id": "path_27794"
+      "id": "path_14248"
     },
     {
       "score": {
@@ -139,12 +91,65 @@
       ],
       "lowest_common_ancestors": {
         "Amitriptyline,Nortriptyline": [
-          "Amine",
+          "Organic Tricyclic Compound",
           "Tricyclic Antidepressant"
         ]
       },
-      "id": "path_27795"
+      "id": "path_14249"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3208,
+        "final_score": 0.3208
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenindamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxcarbazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Phenindamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenindamine",
+          "target": "Oxcarbazepine",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxcarbazepine",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Phenindamine": [
+          "Carbopolycyclic Compound"
+        ],
+        "Amitriptyline,Oxcarbazepine": [
+          "Organic Tricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Phenindamine,Oxcarbazepine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_14250"
     }
-  ],
-  "verbalization": ""
+  ]
 }

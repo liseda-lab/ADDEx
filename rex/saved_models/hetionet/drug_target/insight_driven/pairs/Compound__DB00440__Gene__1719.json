@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00440 - Gene::1719",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7896,
+        "final_score": 0.8531,
+        "agentic_score": 0.9167
+      },
+      "nodes": [
+        {
+          "id": "Trimethoprim",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrofolate Reductase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Dhfr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimethoprim",
+          "target": "Dihydrofolate Reductase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydrofolate Reductase Inhibitors",
+          "target": "Proguanil",
+          "label": "includes"
+        },
+        {
+          "source": "Proguanil",
+          "target": "Dhfr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trimethoprim,Proguanil": [
+          "Benzenes",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_9951"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6938,
+        "final_score": 0.7219,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Trimethoprim",
+          "type": "Compound"
+        },
+        {
+          "id": "Trimethobenzamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Trimetrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Dhfr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimethoprim",
+          "target": "Trimethobenzamide",
+          "label": "resembles"
+        },
+        {
+          "source": "Trimethobenzamide",
+          "target": "Trimetrexate",
+          "label": "resembles"
+        },
+        {
+          "source": "Trimetrexate",
+          "target": "Dhfr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trimethoprim,Trimethobenzamide": [
+          "Organooxygen Compound"
+        ],
+        "Trimethoprim,Trimetrexate": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Trimethobenzamide,Trimetrexate": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_9952"
+    }
+  ]
+}

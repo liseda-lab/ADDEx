@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5664,
-        "final_score": 0.5664
+        "ic_mean": 0.4292,
+        "final_score": 0.4292
       },
       "nodes": [
         {
@@ -12,59 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Promethazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Paroxetine",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Promethazine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Promethazine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Paroxetine,Promethazine": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_15052"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3614,
-        "final_score": 0.3614
-      },
-      "nodes": [
-        {
-          "id": "Paroxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Vascular Headache",
+          "id": "Antisocial Personality Disorder",
           "type": "Side Effect"
         },
         {
-          "id": "Fluoxetine",
+          "id": "Tolcapone",
           "type": "Compound"
         },
         {
@@ -75,28 +27,75 @@
       "edges": [
         {
           "source": "Paroxetine",
-          "target": "Vascular Headache",
+          "target": "Antisocial Personality Disorder",
           "label": "causes"
         },
         {
-          "source": "Vascular Headache",
-          "target": "Fluoxetine",
+          "source": "Antisocial Personality Disorder",
+          "target": "Tolcapone",
           "label": "is caused by"
         },
         {
-          "source": "Fluoxetine",
+          "source": "Tolcapone",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Paroxetine,Fluoxetine": [
-          "Aromatic Ether",
-          "Selective Serotonin Reuptake Inhibitor"
+        "Paroxetine,Tolcapone": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_15053"
+      "id": "path_7549"
+    },
+    {
+      "score": {
+        "ic_mean": 0.418,
+        "final_score": 0.418
+      },
+      "nodes": [
+        {
+          "id": "Paroxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostate Carcinoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tolcapone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paroxetine",
+          "target": "Prostate Carcinoma",
+          "label": "causes"
+        },
+        {
+          "source": "Prostate Carcinoma",
+          "target": "Tolcapone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tolcapone",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paroxetine,Tolcapone": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7550"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.8009,
-        "final_score": 0.8009
+        "ic_mean": 0.7643,
+        "final_score": 0.7643
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Non-nucleoside Analog",
-          "type": "Pharmacologic Class"
+          "id": "Abcb4",
+          "type": "Gene"
         },
         {
-          "id": "Rilpivirine",
-          "type": "Compound"
+          "id": "Xenobiotic-transporting Atpase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Abcb1",
@@ -27,75 +27,21 @@
       "edges": [
         {
           "source": "Etravirine",
-          "target": "Non-nucleoside Analog",
-          "label": "is included in"
-        },
-        {
-          "source": "Non-nucleoside Analog",
-          "target": "Rilpivirine",
-          "label": "includes"
-        },
-        {
-          "source": "Rilpivirine",
-          "target": "Abcb1",
+          "target": "Abcb4",
           "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Rilpivirine": [
-          "Aminopyrimidine",
-          "Non-Nucleoside Reverse Transcriptase Inhibitor"
-        ]
-      },
-      "id": "path_16569"
-    },
-    {
-      "score": {
-        "ic_mean": 0.8009,
-        "final_score": 0.8009
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
         },
         {
-          "id": "Non-nucleoside Reverse Transcriptase Inhibitors",
-          "type": "Pharmacologic Class"
+          "source": "Abcb4",
+          "target": "Xenobiotic-transporting Atpase Activity",
+          "label": "participates"
         },
         {
-          "id": "Rilpivirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Non-nucleoside Reverse Transcriptase Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Non-nucleoside Reverse Transcriptase Inhibitors",
-          "target": "Rilpivirine",
-          "label": "includes"
-        },
-        {
-          "source": "Rilpivirine",
+          "source": "Xenobiotic-transporting Atpase Activity",
           "target": "Abcb1",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Etravirine,Rilpivirine": [
-          "Aminopyrimidine",
-          "Non-Nucleoside Reverse Transcriptase Inhibitor"
-        ]
-      },
-      "id": "path_16570"
+      "id": "path_8279"
     },
     {
       "score": {
@@ -137,54 +83,7 @@
           "label": "is participated by"
         }
       ],
-      "id": "path_16571"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6638,
-        "final_score": 0.6638
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb4",
-          "type": "Gene"
-        },
-        {
-          "id": "Colchicine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Abcb4",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb4",
-          "target": "Colchicine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Colchicine",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Colchicine": [
-          "Aromatic Ether"
-        ]
-      },
-      "id": "path_16572"
+      "id": "path_8280"
     },
     {
       "score": {
@@ -231,55 +130,7 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_16573"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5697,
-        "final_score": 0.5697
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chronic Hepatitis B",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Atazanavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Chronic Hepatitis B",
-          "label": "causes"
-        },
-        {
-          "source": "Chronic Hepatitis B",
-          "target": "Atazanavir",
-          "label": "is caused by"
-        },
-        {
-          "source": "Atazanavir",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Atazanavir": [
-          "Organonitrogen Compound",
-          "Antiviral Agent"
-        ]
-      },
-      "id": "path_16574"
+      "id": "path_8281"
     },
     {
       "score": {
@@ -323,249 +174,11 @@
       ],
       "lowest_common_ancestors": {
         "Etravirine,Simeprevir": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_16575"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5105,
-        "final_score": 0.5105
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Infection Mixed",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Rilpivirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Infection Mixed",
-          "label": "causes"
-        },
-        {
-          "source": "Infection Mixed",
-          "target": "Rilpivirine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Rilpivirine",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Rilpivirine": [
-          "Aminopyrimidine",
-          "Non-Nucleoside Reverse Transcriptase Inhibitor"
-        ]
-      },
-      "id": "path_16576"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4834,
-        "final_score": 0.4834
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hepatitis C",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Naltrexone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Hepatitis C",
-          "label": "causes"
-        },
-        {
-          "source": "Hepatitis C",
-          "target": "Naltrexone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Naltrexone",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Naltrexone": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_16577"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4679,
-        "final_score": 0.4679
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hepatitis C",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Rilpivirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Hepatitis C",
-          "label": "causes"
-        },
-        {
-          "source": "Hepatitis C",
-          "target": "Rilpivirine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Rilpivirine",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Rilpivirine": [
-          "Aminopyrimidine",
-          "Non-Nucleoside Reverse Transcriptase Inhibitor"
-        ]
-      },
-      "id": "path_16578"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4679,
-        "final_score": 0.4679
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hepatitis B",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Rilpivirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Hepatitis B",
-          "label": "causes"
-        },
-        {
-          "source": "Hepatitis B",
-          "target": "Rilpivirine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Rilpivirine",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Rilpivirine": [
-          "Aminopyrimidine",
-          "Non-Nucleoside Reverse Transcriptase Inhibitor"
-        ]
-      },
-      "id": "path_16579"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4584,
-        "final_score": 0.4584
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Sluggishness",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Naltrexone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Sluggishness",
-          "label": "causes"
-        },
-        {
-          "source": "Sluggishness",
-          "target": "Naltrexone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Naltrexone",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Naltrexone": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_16580"
+      "id": "path_8282"
     },
     {
       "score": {
@@ -612,7 +225,7 @@
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_16581"
+      "id": "path_8283"
     },
     {
       "score": {
@@ -656,201 +269,10 @@
       ],
       "lowest_common_ancestors": {
         "Etravirine,Ticagrelor": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_16582"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4509,
-        "final_score": 0.4509
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Infection Mixed",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Levofloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Infection Mixed",
-          "label": "causes"
-        },
-        {
-          "source": "Infection Mixed",
-          "target": "Levofloxacin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Levofloxacin",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Levofloxacin": [
-          "Aromatic Amine",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_16583"
-    },
-    {
-      "score": {
-        "ic_mean": 0.45,
-        "final_score": 0.45
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytolytic Hepatitis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Cytolytic Hepatitis",
-          "label": "causes"
-        },
-        {
-          "source": "Cytolytic Hepatitis",
-          "target": "Rivaroxaban",
-          "label": "is caused by"
-        },
-        {
-          "source": "Rivaroxaban",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Rivaroxaban": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_16584"
-    },
-    {
-      "score": {
-        "ic_mean": 0.428,
-        "final_score": 0.428
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Dyslipidaemia",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Atazanavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Dyslipidaemia",
-          "label": "causes"
-        },
-        {
-          "source": "Dyslipidaemia",
-          "target": "Atazanavir",
-          "label": "is caused by"
-        },
-        {
-          "source": "Atazanavir",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Atazanavir": [
-          "Organonitrogen Compound",
-          "Antiviral Agent"
-        ]
-      },
-      "id": "path_16585"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4144,
-        "final_score": 0.4144
-      },
-      "nodes": [
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Haemorrhagic Stroke",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Dabigatran Etexilate",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etravirine",
-          "target": "Haemorrhagic Stroke",
-          "label": "causes"
-        },
-        {
-          "source": "Haemorrhagic Stroke",
-          "target": "Dabigatran Etexilate",
-          "label": "is caused by"
-        },
-        {
-          "source": "Dabigatran Etexilate",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etravirine,Dabigatran Etexilate": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_16586"
+      "id": "path_8284"
     }
-  ],
-  "verbalization": ""
+  ]
 }

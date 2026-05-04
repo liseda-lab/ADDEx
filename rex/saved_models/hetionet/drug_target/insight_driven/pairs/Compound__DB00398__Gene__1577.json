@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00398 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4055,
+        "final_score": 0.4055
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Mood Alteration Nos",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Mood Alteration Nos",
+          "label": "causes"
+        },
+        {
+          "source": "Mood Alteration Nos",
+          "target": "Estrone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Estrone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Estrone": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_4680"
+    }
+  ]
+}

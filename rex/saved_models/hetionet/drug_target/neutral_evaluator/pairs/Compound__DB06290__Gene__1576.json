@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7113,
-        "final_score": 0.7113
+        "ic_mean": 0.6922,
+        "final_score": 0.6922
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Ctss",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Telaprevir",
-          "type": "Compound"
+          "id": "Caffeine Oxidase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Ctss",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Ctss",
-          "target": "Telaprevir",
-          "label": "is bound by"
+          "source": "Cyp1a2",
+          "target": "Caffeine Oxidase Activity",
+          "label": "participates"
         },
         {
-          "source": "Telaprevir",
+          "source": "Caffeine Oxidase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Telaprevir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2738"
+      "id": "path_1295"
     },
     {
       "score": {
-        "ic_mean": 0.6899,
-        "final_score": 0.6899
+        "ic_mean": 0.6148,
+        "final_score": 0.6148
       },
       "nodes": [
         {
@@ -60,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Ctss",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Boceprevir",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -75,73 +69,21 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Ctss",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Ctss",
-          "target": "Boceprevir",
-          "label": "is bound by"
+          "source": "Cyp1a2",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Boceprevir",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Boceprevir": [
-          "Carboxamide"
-        ]
-      },
-      "id": "path_2739"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5785,
-        "final_score": 0.5785
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Repaglinide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Repaglinide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Repaglinide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Repaglinide": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2740"
+      "id": "path_1296"
     },
     {
       "score": {
@@ -185,16 +127,16 @@
       ],
       "lowest_common_ancestors": {
         "Simeprevir,Etravirine": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_2741"
+      "id": "path_1297"
     },
     {
       "score": {
-        "ic_mean": 0.5431,
-        "final_score": 0.5431
+        "ic_mean": 0.4971,
+        "final_score": 0.4971
       },
       "nodes": [
         {
@@ -202,11 +144,11 @@
           "type": "Compound"
         },
         {
-          "id": "Infection Mixed",
-          "type": "Side Effect"
+          "id": "Cyp1a2",
+          "type": "Gene"
         },
         {
-          "id": "Rilpivirine",
+          "id": "Propafenone",
           "type": "Compound"
         },
         {
@@ -217,79 +159,125 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Infection Mixed",
-          "label": "causes"
-        },
-        {
-          "source": "Infection Mixed",
-          "target": "Rilpivirine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Rilpivirine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Rilpivirine": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2742"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5272,
-        "final_score": 0.5272
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Dicloxacillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Slco1b1",
-          "target": "Dicloxacillin",
+          "source": "Cyp1a2",
+          "target": "Propafenone",
           "label": "is bound by"
         },
         {
-          "source": "Dicloxacillin",
+          "source": "Propafenone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Dicloxacillin": [
+        "Simeprevir,Propafenone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_1298"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4458,
+        "final_score": 0.4458
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Ranitidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Ranitidine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1299"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4458,
+        "final_score": 0.4458
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifabutin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Rifabutin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifabutin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Rifabutin": [
           "Lactam"
         ]
       },
-      "id": "path_2743"
+      "id": "path_1300"
     },
     {
       "score": {
-        "ic_mean": 0.5272,
-        "final_score": 0.5272
+        "ic_mean": 0.4458,
+        "final_score": 0.4458
       },
       "nodes": [
         {
@@ -297,11 +285,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
+          "id": "Abcb1",
           "type": "Gene"
         },
         {
-          "id": "Gemfibrozil",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -312,31 +300,31 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Slco1b1",
+          "target": "Abcb1",
           "label": "binds"
         },
         {
-          "source": "Slco1b1",
-          "target": "Gemfibrozil",
+          "source": "Abcb1",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Gemfibrozil",
+          "source": "Ranitidine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Gemfibrozil": [
-          "Organic Cyclic Compound"
+        "Simeprevir,Ranitidine": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2744"
+      "id": "path_1301"
     },
     {
       "score": {
-        "ic_mean": 0.4971,
-        "final_score": 0.4971
+        "ic_mean": 0.4458,
+        "final_score": 0.4458
       },
       "nodes": [
         {
@@ -344,11 +332,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
+          "id": "Abcb1",
           "type": "Gene"
         },
         {
-          "id": "Pantoprazole",
+          "id": "Ticagrelor",
           "type": "Compound"
         },
         {
@@ -359,31 +347,31 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Slco1b1",
+          "target": "Abcb1",
           "label": "binds"
         },
         {
-          "source": "Slco1b1",
-          "target": "Pantoprazole",
+          "source": "Abcb1",
+          "target": "Ticagrelor",
           "label": "is bound by"
         },
         {
-          "source": "Pantoprazole",
+          "source": "Ticagrelor",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Pantoprazole": [
+        "Simeprevir,Ticagrelor": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2745"
+      "id": "path_1302"
     },
     {
       "score": {
-        "ic_mean": 0.4971,
-        "final_score": 0.4971
+        "ic_mean": 0.4458,
+        "final_score": 0.4458
       },
       "nodes": [
         {
@@ -391,11 +379,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Caspofungin",
+          "id": "Griseofulvin",
           "type": "Compound"
         },
         {
@@ -406,31 +394,31 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Slco1b1",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Slco1b1",
-          "target": "Caspofungin",
+          "source": "Cyp1a2",
+          "target": "Griseofulvin",
           "label": "is bound by"
         },
         {
-          "source": "Caspofungin",
+          "source": "Griseofulvin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Caspofungin": [
-          "Carboxamide"
+        "Simeprevir,Griseofulvin": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2746"
+      "id": "path_1303"
     },
     {
       "score": {
-        "ic_mean": 0.4971,
-        "final_score": 0.4971
+        "ic_mean": 0.4458,
+        "final_score": 0.4458
       },
       "nodes": [
         {
@@ -438,11 +426,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Pioglitazone",
+          "id": "Aminophenazone",
           "type": "Compound"
         },
         {
@@ -453,31 +441,31 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Slco1b1",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Slco1b1",
-          "target": "Pioglitazone",
+          "source": "Cyp1a2",
+          "target": "Aminophenazone",
           "label": "is bound by"
         },
         {
-          "source": "Pioglitazone",
+          "source": "Aminophenazone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Pioglitazone": [
+        "Simeprevir,Aminophenazone": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2747"
+      "id": "path_1304"
     },
     {
       "score": {
-        "ic_mean": 0.4835,
-        "final_score": 0.4835
+        "ic_mean": 0.4458,
+        "final_score": 0.4458
       },
       "nodes": [
         {
@@ -485,11 +473,11 @@
           "type": "Compound"
         },
         {
-          "id": "Infection Mixed",
-          "type": "Side Effect"
+          "id": "Cyp1a2",
+          "type": "Gene"
         },
         {
-          "id": "Levofloxacin",
+          "id": "Tranylcypromine",
           "type": "Compound"
         },
         {
@@ -500,495 +488,27 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Infection Mixed",
-          "label": "causes"
-        },
-        {
-          "source": "Infection Mixed",
-          "target": "Levofloxacin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Levofloxacin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Levofloxacin": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2748"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4758,
-        "final_score": 0.4758
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Rilpivirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Slco1b1",
-          "target": "Rilpivirine",
+          "source": "Cyp1a2",
+          "target": "Tranylcypromine",
           "label": "is bound by"
         },
         {
-          "source": "Rilpivirine",
+          "source": "Tranylcypromine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Rilpivirine": [
+        "Simeprevir,Tranylcypromine": [
           "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2749"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4758,
-        "final_score": 0.4758
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Bezafibrate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Bezafibrate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bezafibrate",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Bezafibrate": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_2750"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4758,
-        "final_score": 0.4758
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ritonavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Ritonavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ritonavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Ritonavir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2751"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4758,
-        "final_score": 0.4758
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cabazitaxel",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Cabazitaxel",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cabazitaxel",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Cabazitaxel": [
-          "Organic Molecular Entity"
-        ]
-      },
-      "id": "path_2752"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4758,
-        "final_score": 0.4758
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Losartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Losartan",
-          "label": "is bound by"
-        },
-        {
-          "source": "Losartan",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Losartan": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2753"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4593,
-        "final_score": 0.4593
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Estrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Estrone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Estrone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Estrone": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_2754"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4458,
-        "final_score": 0.4458
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_2755"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4458,
-        "final_score": 0.4458
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Rosuvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rosuvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Rosuvastatin": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2756"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4458,
-        "final_score": 0.4458
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Levothyroxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Levothyroxine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Levothyroxine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Levothyroxine": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_2757"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4458,
-        "final_score": 0.4458
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Indinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Indinavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Indinavir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2758"
+      "id": "path_1305"
     },
     {
       "score": {
@@ -1035,245 +555,7 @@
           "Carboxamide"
         ]
       },
-      "id": "path_2759"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4344,
-        "final_score": 0.4344
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Pravastatin": [
-          "Enzyme Inhibitor",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_2760"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4344,
-        "final_score": 0.4344
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Saquinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Saquinavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Saquinavir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2761"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4344,
-        "final_score": 0.4344
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ezetimibe",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Ezetimibe",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ezetimibe",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Ezetimibe": [
-          "Lactam"
-        ]
-      },
-      "id": "path_2762"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4329,
-        "final_score": 0.4329
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Hcv Ns3/4a Protease Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Telaprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Hcv Ns3/4a Protease Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Hcv Ns3/4a Protease Inhibitors",
-          "target": "Telaprevir",
-          "label": "includes"
-        },
-        {
-          "source": "Telaprevir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Telaprevir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2763"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4245,
-        "final_score": 0.4245
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Digoxin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Digoxin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Digoxin": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2764"
+      "id": "path_1306"
     },
     {
       "score": {
@@ -1290,7 +572,7 @@
           "type": "Gene"
         },
         {
-          "id": "Sitagliptin",
+          "id": "Alfentanil",
           "type": "Compound"
         },
         {
@@ -1306,117 +588,21 @@
         },
         {
           "source": "Abcb1",
-          "target": "Sitagliptin",
+          "target": "Alfentanil",
           "label": "is bound by"
         },
         {
-          "source": "Sitagliptin",
+          "source": "Alfentanil",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Sitagliptin": [
-          "Protease Inhibitor",
+        "Simeprevir,Alfentanil": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2765"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4158,
-        "final_score": 0.4158
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Atorvastatin": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2766"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4158,
-        "final_score": 0.4158
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Abcb1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb1",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Diltiazem": [
-          "Lactam"
-        ]
-      },
-      "id": "path_2767"
+      "id": "path_1307"
     },
     {
       "score": {
@@ -1463,7 +649,7 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2768"
+      "id": "path_1308"
     },
     {
       "score": {
@@ -1507,16 +693,16 @@
       ],
       "lowest_common_ancestors": {
         "Simeprevir,Lopinavir": [
-          "Protease Inhibitor",
-          "Carboxamide"
+          "Carboxamide",
+          "Protease Inhibitor"
         ]
       },
-      "id": "path_2769"
+      "id": "path_1309"
     },
     {
       "score": {
-        "ic_mean": 0.3965,
-        "final_score": 0.3965
+        "ic_mean": 0.3779,
+        "final_score": 0.3779
       },
       "nodes": [
         {
@@ -1524,11 +710,11 @@
           "type": "Compound"
         },
         {
-          "id": "Alb",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Sevoflurane",
+          "id": "Fluvastatin",
           "type": "Compound"
         },
         {
@@ -1539,31 +725,32 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Alb",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Alb",
-          "target": "Sevoflurane",
+          "source": "Cyp1a2",
+          "target": "Fluvastatin",
           "label": "is bound by"
         },
         {
-          "source": "Sevoflurane",
+          "source": "Fluvastatin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Sevoflurane": [
+        "Simeprevir,Fluvastatin": [
+          "Enzyme Inhibitor",
           "Organooxygen Compound"
         ]
       },
-      "id": "path_2770"
+      "id": "path_1310"
     },
     {
       "score": {
-        "ic_mean": 0.3913,
-        "final_score": 0.3913
+        "ic_mean": 0.3644,
+        "final_score": 0.3644
       },
       "nodes": [
         {
@@ -1571,11 +758,11 @@
           "type": "Compound"
         },
         {
-          "id": "Organic Anion Transporting Polypeptide 1b1 Inhibitors",
-          "type": "Pharmacologic Class"
+          "id": "Cyp1a2",
+          "type": "Gene"
         },
         {
-          "id": "Telaprevir",
+          "id": "Doxepin",
           "type": "Compound"
         },
         {
@@ -1586,74 +773,26 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Organic Anion Transporting Polypeptide 1b1 Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Organic Anion Transporting Polypeptide 1b1 Inhibitors",
-          "target": "Telaprevir",
-          "label": "includes"
-        },
-        {
-          "source": "Telaprevir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Telaprevir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2771"
-    },
-    {
-      "score": {
-        "ic_mean": 0.383,
-        "final_score": 0.383
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Quinidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Slco1b1",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Slco1b1",
-          "target": "Quinidine",
+          "source": "Cyp1a2",
+          "target": "Doxepin",
           "label": "is bound by"
         },
         {
-          "source": "Quinidine",
+          "source": "Doxepin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Quinidine": [
-          "Organonitrogen Compound"
+        "Simeprevir,Doxepin": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2772"
+      "id": "path_1311"
     },
     {
       "score": {
@@ -1670,7 +809,7 @@
           "type": "Gene"
         },
         {
-          "id": "Ethinyl Estradiol",
+          "id": "Doxepin",
           "type": "Compound"
         },
         {
@@ -1686,26 +825,120 @@
         },
         {
           "source": "Abcb1",
-          "target": "Ethinyl Estradiol",
+          "target": "Doxepin",
           "label": "is bound by"
         },
         {
-          "source": "Ethinyl Estradiol",
+          "source": "Doxepin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Ethinyl Estradiol": [
-          "Organic Cyclic Compound"
+        "Simeprevir,Doxepin": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2773"
+      "id": "path_1312"
     },
     {
       "score": {
-        "ic_mean": 0.3524,
-        "final_score": 0.3524
+        "ic_mean": 0.3644,
+        "final_score": 0.3644
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Imipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Imipramine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Imipramine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1313"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3644,
+        "final_score": 0.3644
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Progesterone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Progesterone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1314"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3561,
+        "final_score": 0.3561
       },
       "nodes": [
         {
@@ -1717,7 +950,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Efavirenz",
+          "id": "Clarithromycin",
           "type": "Compound"
         },
         {
@@ -1733,22 +966,163 @@
         },
         {
           "source": "Cytochrome P450 3a4 Inhibitors",
-          "target": "Efavirenz",
+          "target": "Clarithromycin",
           "label": "includes"
         },
         {
-          "source": "Efavirenz",
+          "source": "Clarithromycin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Efavirenz": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+        "Simeprevir,Clarithromycin": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_2774"
+      "id": "path_1315"
+    },
+    {
+      "score": {
+        "ic_mean": 0.353,
+        "final_score": 0.353
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "Abcb1",
+          "label": "binds"
+        },
+        {
+          "source": "Abcb1",
+          "target": "Lapatinib",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lapatinib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Lapatinib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_1316"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3411,
+        "final_score": 0.3411
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 3a4 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Colchicine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "Cytochrome P450 3a4 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 3a4 Inhibitors",
+          "target": "Colchicine",
+          "label": "includes"
+        },
+        {
+          "source": "Colchicine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Colchicine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1317"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3391,
+        "final_score": 0.3391
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "P-glycoprotein Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clarithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "P-glycoprotein Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "P-glycoprotein Inhibitors",
+          "target": "Clarithromycin",
+          "label": "includes"
+        },
+        {
+          "source": "Clarithromycin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Clarithromycin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1318"
     },
     {
       "score": {
@@ -1761,11 +1135,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb1",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Erlotinib",
+          "id": "Nifedipine",
           "type": "Compound"
         },
         {
@@ -1776,32 +1150,31 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "Abcb1",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Abcb1",
-          "target": "Erlotinib",
+          "source": "Cyp1a2",
+          "target": "Nifedipine",
           "label": "is bound by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Nifedipine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Erlotinib": [
-          "Enzyme Inhibitor",
+        "Simeprevir,Nifedipine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2775"
+      "id": "path_1319"
     },
     {
       "score": {
-        "ic_mean": 0.3304,
-        "final_score": 0.3304
+        "ic_mean": 0.3268,
+        "final_score": 0.3268
       },
       "nodes": [
         {
@@ -1813,7 +1186,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Ivacaftor",
+          "id": "Atazanavir",
           "type": "Compound"
         },
         {
@@ -1829,26 +1202,27 @@
         },
         {
           "source": "Cytochrome P450 3a4 Inhibitors",
-          "target": "Ivacaftor",
+          "target": "Atazanavir",
           "label": "includes"
         },
         {
-          "source": "Ivacaftor",
+          "source": "Atazanavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Ivacaftor": [
-          "Organonitrogen Heterocyclic Compound"
+        "Simeprevir,Atazanavir": [
+          "Organonitrogen Compound",
+          "Protease Inhibitor"
         ]
       },
-      "id": "path_2776"
+      "id": "path_1320"
     },
     {
       "score": {
-        "ic_mean": 0.3134,
-        "final_score": 0.3134
+        "ic_mean": 0.324,
+        "final_score": 0.324
       },
       "nodes": [
         {
@@ -1860,7 +1234,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Ivacaftor",
+          "id": "Ranolazine",
           "type": "Compound"
         },
         {
@@ -1876,115 +1250,21 @@
         },
         {
           "source": "P-glycoprotein Inhibitors",
-          "target": "Ivacaftor",
+          "target": "Ranolazine",
           "label": "includes"
         },
         {
-          "source": "Ivacaftor",
+          "source": "Ranolazine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Ivacaftor": [
+        "Simeprevir,Ranolazine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2777"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3051,
-        "final_score": 0.3051
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "P-glycoprotein Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Itraconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "P-glycoprotein Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "P-glycoprotein Inhibitors",
-          "target": "Itraconazole",
-          "label": "includes"
-        },
-        {
-          "source": "Itraconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Itraconazole": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2778"
-    },
-    {
-      "score": {
-        "ic_mean": 0.2928,
-        "final_score": 0.2928
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 3a4 Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Aprepitant",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "Cytochrome P450 3a4 Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 3a4 Inhibitors",
-          "target": "Aprepitant",
-          "label": "includes"
-        },
-        {
-          "source": "Aprepitant",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Aprepitant": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2779"
+      "id": "path_1321"
     },
     {
       "score": {
@@ -2031,12 +1311,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2780"
+      "id": "path_1322"
     },
     {
       "score": {
-        "ic_mean": 0.2758,
-        "final_score": 0.2758
+        "ic_mean": 0.2754,
+        "final_score": 0.2754
       },
       "nodes": [
         {
@@ -2044,11 +1324,11 @@
           "type": "Compound"
         },
         {
-          "id": "P-glycoprotein Inhibitors",
+          "id": "Cytochrome P450 3a4 Inhibitors",
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Vemurafenib",
+          "id": "Ketoconazole",
           "type": "Compound"
         },
         {
@@ -2059,75 +1339,27 @@
       "edges": [
         {
           "source": "Simeprevir",
-          "target": "P-glycoprotein Inhibitors",
+          "target": "Cytochrome P450 3a4 Inhibitors",
           "label": "is included in"
         },
         {
-          "source": "P-glycoprotein Inhibitors",
-          "target": "Vemurafenib",
+          "source": "Cytochrome P450 3a4 Inhibitors",
+          "target": "Ketoconazole",
           "label": "includes"
         },
         {
-          "source": "Vemurafenib",
+          "source": "Ketoconazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Simeprevir,Vemurafenib": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+        "Simeprevir,Ketoconazole": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_2781"
-    },
-    {
-      "score": {
-        "ic_mean": 0.2739,
-        "final_score": 0.2739
-      },
-      "nodes": [
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "P-glycoprotein Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Telaprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Simeprevir",
-          "target": "P-glycoprotein Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "P-glycoprotein Inhibitors",
-          "target": "Telaprevir",
-          "label": "includes"
-        },
-        {
-          "source": "Telaprevir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Simeprevir,Telaprevir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2782"
+      "id": "path_1323"
     },
     {
       "score": {
@@ -2174,8 +1406,55 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2783"
+      "id": "path_1324"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2584,
+        "final_score": 0.2584
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "P-glycoprotein Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "P-glycoprotein Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "P-glycoprotein Inhibitors",
+          "target": "Ketoconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Ketoconazole": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_1325"
     }
-  ],
-  "verbalization": ""
+  ]
 }

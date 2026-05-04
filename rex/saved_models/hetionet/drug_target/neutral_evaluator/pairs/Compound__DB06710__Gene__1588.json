@@ -3,6 +3,102 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.681,
+        "final_score": 0.681
+      },
+      "nodes": [
+        {
+          "id": "Methyltestosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Androstanes",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methyltestosterone",
+          "target": "Androstanes",
+          "label": "is included in"
+        },
+        {
+          "source": "Androstanes",
+          "target": "Danazol",
+          "label": "includes"
+        },
+        {
+          "source": "Danazol",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methyltestosterone,Danazol": [
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_13609"
+    },
+    {
+      "score": {
+        "ic_mean": 0.681,
+        "final_score": 0.681
+      },
+      "nodes": [
+        {
+          "id": "Methyltestosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Androgen Receptor Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methyltestosterone",
+          "target": "Androgen Receptor Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Androgen Receptor Agonists",
+          "target": "Danazol",
+          "label": "includes"
+        },
+        {
+          "source": "Danazol",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methyltestosterone,Danazol": [
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_13610"
+    },
+    {
+      "score": {
         "ic_mean": 0.5986,
         "final_score": 0.5986
       },
@@ -43,11 +139,11 @@
       ],
       "lowest_common_ancestors": {
         "Methyltestosterone,Nandrolone Decanoate": [
-          "Steroid",
-          "Therapeutic Androgen"
+          "Therapeutic Androgen",
+          "Steroid"
         ]
       },
-      "id": "path_26659"
+      "id": "path_13611"
     },
     {
       "score": {
@@ -91,16 +187,16 @@
       ],
       "lowest_common_ancestors": {
         "Methyltestosterone,Nandrolone Decanoate": [
-          "Steroid",
-          "Therapeutic Androgen"
+          "Therapeutic Androgen",
+          "Steroid"
         ]
       },
-      "id": "path_26660"
+      "id": "path_13612"
     },
     {
       "score": {
-        "ic_mean": 0.4666,
-        "final_score": 0.4666
+        "ic_mean": 0.5894,
+        "final_score": 0.5894
       },
       "nodes": [
         {
@@ -108,11 +204,11 @@
           "type": "Compound"
         },
         {
-          "id": "Formestane",
-          "type": "Compound"
+          "id": "Virilism",
+          "type": "Side Effect"
         },
         {
-          "id": "Exemestane",
+          "id": "Aminoglutethimide",
           "type": "Compound"
         },
         {
@@ -123,36 +219,27 @@
       "edges": [
         {
           "source": "Methyltestosterone",
-          "target": "Formestane",
-          "label": "resembles"
+          "target": "Virilism",
+          "label": "causes"
         },
         {
-          "source": "Formestane",
-          "target": "Exemestane",
-          "label": "resembles"
+          "source": "Virilism",
+          "target": "Aminoglutethimide",
+          "label": "is caused by"
         },
         {
-          "source": "Exemestane",
+          "source": "Aminoglutethimide",
           "target": "Cyp19a1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methyltestosterone,Formestane": [
-          "Hydroxy Steroid",
+        "Methyltestosterone,Aminoglutethimide": [
+          "Organic Cyclic Compound",
           "Hormone Therapy Agent"
-        ],
-        "Methyltestosterone,Exemestane": [
-          "3-Oxo-Delta(4) Steroid",
-          "Hormone Therapy Agent"
-        ],
-        "Formestane,Exemestane": [
-          "3-Oxo-Delta(4) Steroid",
-          "Steroidal Aromatase Inhibitor"
         ]
       },
-      "id": "path_26661"
+      "id": "path_13613"
     }
-  ],
-  "verbalization": ""
+  ]
 }

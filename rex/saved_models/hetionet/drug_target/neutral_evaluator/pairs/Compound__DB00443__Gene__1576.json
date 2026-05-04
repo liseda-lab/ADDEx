@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6884,
-        "final_score": 0.6884
+        "ic_mean": 0.533,
+        "final_score": 0.533
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pgr",
-          "type": "Gene"
+          "id": "Steroid Withdrawal Syndrome",
+          "type": "Side Effect"
         },
         {
-          "id": "Allylestrenol",
+          "id": "Methylprednisolone",
           "type": "Compound"
         },
         {
@@ -27,80 +27,32 @@
       "edges": [
         {
           "source": "Betamethasone",
-          "target": "Pgr",
-          "label": "binds"
+          "target": "Steroid Withdrawal Syndrome",
+          "label": "causes"
         },
         {
-          "source": "Pgr",
-          "target": "Allylestrenol",
-          "label": "is bound by"
+          "source": "Steroid Withdrawal Syndrome",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
         },
         {
-          "source": "Allylestrenol",
+          "source": "Methylprednisolone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Betamethasone,Allylestrenol": [
-          "Steroid",
-          "Therapeutic Steroid Hormone"
-        ]
-      },
-      "id": "path_10703"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6122,
-        "final_score": 0.6122
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Pla2g1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Dexamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Pla2g1b",
-          "label": "binds"
-        },
-        {
-          "source": "Pla2g1b",
-          "target": "Dexamethasone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dexamethasone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Dexamethasone": [
-          "20-Oxo Steroid",
+        "Betamethasone,Methylprednisolone": [
+          "Primary Alpha-Hydroxy Ketone",
           "Therapeutic Glucocorticoid"
         ]
       },
-      "id": "path_10704"
+      "id": "path_5310"
     },
     {
       "score": {
-        "ic_mean": 0.6071,
-        "final_score": 0.6071
+        "ic_mean": 0.533,
+        "final_score": 0.533
       },
       "nodes": [
         {
@@ -108,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Nr3c2",
-          "type": "Gene"
+          "id": "Scleral Thinning",
+          "type": "Side Effect"
         },
         {
-          "id": "Fluticasone Propionate",
+          "id": "Methylprednisolone",
           "type": "Compound"
         },
         {
@@ -123,32 +75,32 @@
       "edges": [
         {
           "source": "Betamethasone",
-          "target": "Nr3c2",
-          "label": "binds"
+          "target": "Scleral Thinning",
+          "label": "causes"
         },
         {
-          "source": "Nr3c2",
-          "target": "Fluticasone Propionate",
-          "label": "is bound by"
+          "source": "Scleral Thinning",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
         },
         {
-          "source": "Fluticasone Propionate",
+          "source": "Methylprednisolone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Betamethasone,Fluticasone Propionate": [
-          "11Beta-Hydroxy Steroid",
+        "Betamethasone,Methylprednisolone": [
+          "Primary Alpha-Hydroxy Ketone",
           "Therapeutic Glucocorticoid"
         ]
       },
-      "id": "path_10705"
+      "id": "path_5311"
     },
     {
       "score": {
-        "ic_mean": 0.5857,
-        "final_score": 0.5857
+        "ic_mean": 0.5181,
+        "final_score": 0.5181
       },
       "nodes": [
         {
@@ -156,8 +108,296 @@
           "type": "Compound"
         },
         {
-          "id": "Nr3c2",
+          "id": "Steroid Withdrawal Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
           "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Steroid Withdrawal Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Steroid Withdrawal Syndrome",
+          "target": "Prednisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Prednisone": [
+          "Primary Alpha-Hydroxy Ketone",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5312"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5181,
+        "final_score": 0.5181
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Scleral Thinning",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Scleral Thinning",
+          "label": "causes"
+        },
+        {
+          "source": "Scleral Thinning",
+          "target": "Prednisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Prednisone": [
+          "Primary Alpha-Hydroxy Ketone",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5313"
+    },
+    {
+      "score": {
+        "ic_mean": 0.513,
+        "final_score": 0.513
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkalosis Hypokalaemic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Alkalosis Hypokalaemic",
+          "label": "causes"
+        },
+        {
+          "source": "Alkalosis Hypokalaemic",
+          "target": "Triamcinolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Triamcinolone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Triamcinolone": [
+          "Primary Alpha-Hydroxy Ketone",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5314"
+    },
+    {
+      "score": {
+        "ic_mean": 0.513,
+        "final_score": 0.513
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Fat Embolism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Fat Embolism",
+          "label": "causes"
+        },
+        {
+          "source": "Fat Embolism",
+          "target": "Triamcinolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Triamcinolone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Triamcinolone": [
+          "Primary Alpha-Hydroxy Ketone",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5315"
+    },
+    {
+      "score": {
+        "ic_mean": 0.513,
+        "final_score": 0.513
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cushingoid",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Cushingoid",
+          "label": "causes"
+        },
+        {
+          "source": "Cushingoid",
+          "target": "Triamcinolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Triamcinolone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Triamcinolone": [
+          "Primary Alpha-Hydroxy Ketone",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5316"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4921,
+        "final_score": 0.4921
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinal Tear",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Maraviroc",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Retinal Tear",
+          "label": "causes"
+        },
+        {
+          "source": "Retinal Tear",
+          "target": "Maraviroc",
+          "label": "is caused by"
+        },
+        {
+          "source": "Maraviroc",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Maraviroc": [
+          "Organic Cyclic Compound",
+          "Immunotherapeutic Agent"
+        ]
+      },
+      "id": "path_5317"
+    },
+    {
+      "score": {
+        "ic_mean": 0.491,
+        "final_score": 0.491
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkalosis Hypokalaemic",
+          "type": "Side Effect"
         },
         {
           "id": "Prednisolone",
@@ -171,13 +411,13 @@
       "edges": [
         {
           "source": "Betamethasone",
-          "target": "Nr3c2",
-          "label": "binds"
+          "target": "Alkalosis Hypokalaemic",
+          "label": "causes"
         },
         {
-          "source": "Nr3c2",
+          "source": "Alkalosis Hypokalaemic",
           "target": "Prednisolone",
-          "label": "is bound by"
+          "label": "is caused by"
         },
         {
           "source": "Prednisolone",
@@ -187,16 +427,16 @@
       ],
       "lowest_common_ancestors": {
         "Betamethasone,Prednisolone": [
-          "20-Oxo Steroid",
+          "Primary Alpha-Hydroxy Ketone",
           "Therapeutic Glucocorticoid"
         ]
       },
-      "id": "path_10706"
+      "id": "path_5318"
     },
     {
       "score": {
-        "ic_mean": 0.5857,
-        "final_score": 0.5857
+        "ic_mean": 0.491,
+        "final_score": 0.491
       },
       "nodes": [
         {
@@ -204,532 +444,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pgr",
-          "type": "Gene"
-        },
-        {
-          "id": "Norethindrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Pgr",
-          "label": "binds"
-        },
-        {
-          "source": "Pgr",
-          "target": "Norethindrone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Norethindrone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Norethindrone": [
-          "Tertiary Alcohol",
-          "Therapeutic Steroid Hormone"
-        ]
-      },
-      "id": "path_10707"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5692,
-        "final_score": 0.5692
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c2",
-          "type": "Gene"
-        },
-        {
-          "id": "Eplerenone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Nr3c2",
-          "label": "binds"
-        },
-        {
-          "source": "Nr3c2",
-          "target": "Eplerenone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Eplerenone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Eplerenone": [
-          "3-Oxo-Delta(4) Steroid"
-        ]
-      },
-      "id": "path_10708"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5692,
-        "final_score": 0.5692
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c2",
-          "type": "Gene"
-        },
-        {
-          "id": "Nimodipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Nr3c2",
-          "label": "binds"
-        },
-        {
-          "source": "Nr3c2",
-          "target": "Nimodipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nimodipine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Nimodipine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_10709"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5557,
-        "final_score": 0.5557
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp19a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Anastrozole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Cyp19a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp19a1",
-          "target": "Anastrozole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Anastrozole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Anastrozole": [
-          "Hormone Therapy Agent",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_10710"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5557,
-        "final_score": 0.5557
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c2",
-          "type": "Gene"
-        },
-        {
-          "id": "Progesterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Nr3c2",
-          "label": "binds"
-        },
-        {
-          "source": "Nr3c2",
-          "target": "Progesterone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Progesterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Progesterone": [
-          "20-Oxo Steroid"
-        ]
-      },
-      "id": "path_10711"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5557,
-        "final_score": 0.5557
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp19a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Tioconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Cyp19a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp19a1",
-          "target": "Tioconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tioconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Tioconazole": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_10712"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5557,
-        "final_score": 0.5557
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Pgr",
-          "type": "Gene"
-        },
-        {
-          "id": "Progesterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Pgr",
-          "label": "binds"
-        },
-        {
-          "source": "Pgr",
-          "target": "Progesterone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Progesterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Progesterone": [
-          "20-Oxo Steroid"
-        ]
-      },
-      "id": "path_10713"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5443,
-        "final_score": 0.5443
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c2",
-          "type": "Gene"
-        },
-        {
-          "id": "Felodipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Nr3c2",
-          "label": "binds"
-        },
-        {
-          "source": "Nr3c2",
-          "target": "Felodipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Felodipine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Felodipine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_10714"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5443,
-        "final_score": 0.5443
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c2",
-          "type": "Gene"
-        },
-        {
-          "id": "Dexamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Nr3c2",
-          "label": "binds"
-        },
-        {
-          "source": "Nr3c2",
-          "target": "Dexamethasone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dexamethasone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Dexamethasone": [
-          "20-Oxo Steroid",
-          "Therapeutic Glucocorticoid"
-        ]
-      },
-      "id": "path_10715"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5257,
-        "final_score": 0.5257
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp19a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methyltestosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Cyp19a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp19a1",
-          "target": "Methyltestosterone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methyltestosterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Methyltestosterone": [
-          "17-Hydroxy Steroid",
-          "Therapeutic Steroid Hormone"
-        ]
-      },
-      "id": "path_10716"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5044,
-        "final_score": 0.5044
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp19a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Cyp19a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp19a1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Methadone": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_10717"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5016,
-        "final_score": 0.5016
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Retinal Aneurysm",
+          "id": "Fat Embolism",
           "type": "Side Effect"
         },
         {
-          "id": "Dexamethasone",
+          "id": "Prednisolone",
           "type": "Compound"
         },
         {
@@ -740,32 +459,32 @@
       "edges": [
         {
           "source": "Betamethasone",
-          "target": "Retinal Aneurysm",
+          "target": "Fat Embolism",
           "label": "causes"
         },
         {
-          "source": "Retinal Aneurysm",
-          "target": "Dexamethasone",
+          "source": "Fat Embolism",
+          "target": "Prednisolone",
           "label": "is caused by"
         },
         {
-          "source": "Dexamethasone",
+          "source": "Prednisolone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Betamethasone,Dexamethasone": [
-          "20-Oxo Steroid",
+        "Betamethasone,Prednisolone": [
+          "Primary Alpha-Hydroxy Ketone",
           "Therapeutic Glucocorticoid"
         ]
       },
-      "id": "path_10718"
+      "id": "path_5319"
     },
     {
       "score": {
-        "ic_mean": 0.4878,
-        "final_score": 0.4878
+        "ic_mean": 0.4903,
+        "final_score": 0.4903
       },
       "nodes": [
         {
@@ -773,58 +492,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp19a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Betamethasone",
-          "target": "Cyp19a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp19a1",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Betamethasone,Nicotine": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_10719"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4589,
-        "final_score": 0.4589
-      },
-      "nodes": [
-        {
-          "id": "Betamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Anterior Chamber Cell",
+          "id": "Alkalosis Hypokalaemic",
           "type": "Side Effect"
         },
         {
-          "id": "Dexamethasone",
+          "id": "Methylprednisolone",
           "type": "Compound"
         },
         {
@@ -835,32 +507,32 @@
       "edges": [
         {
           "source": "Betamethasone",
-          "target": "Anterior Chamber Cell",
+          "target": "Alkalosis Hypokalaemic",
           "label": "causes"
         },
         {
-          "source": "Anterior Chamber Cell",
-          "target": "Dexamethasone",
+          "source": "Alkalosis Hypokalaemic",
+          "target": "Methylprednisolone",
           "label": "is caused by"
         },
         {
-          "source": "Dexamethasone",
+          "source": "Methylprednisolone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Betamethasone,Dexamethasone": [
-          "20-Oxo Steroid",
+        "Betamethasone,Methylprednisolone": [
+          "Primary Alpha-Hydroxy Ketone",
           "Therapeutic Glucocorticoid"
         ]
       },
-      "id": "path_10720"
+      "id": "path_5320"
     },
     {
       "score": {
-        "ic_mean": 0.4404,
-        "final_score": 0.4404
+        "ic_mean": 0.4903,
+        "final_score": 0.4903
       },
       "nodes": [
         {
@@ -868,11 +540,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp19a1",
-          "type": "Gene"
+          "id": "Fat Embolism",
+          "type": "Side Effect"
         },
         {
-          "id": "Exemestane",
+          "id": "Methylprednisolone",
           "type": "Compound"
         },
         {
@@ -883,28 +555,123 @@
       "edges": [
         {
           "source": "Betamethasone",
-          "target": "Cyp19a1",
-          "label": "binds"
+          "target": "Fat Embolism",
+          "label": "causes"
         },
         {
-          "source": "Cyp19a1",
-          "target": "Exemestane",
-          "label": "is bound by"
+          "source": "Fat Embolism",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
         },
         {
-          "source": "Exemestane",
+          "source": "Methylprednisolone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Betamethasone,Exemestane": [
-          "3-Oxo-Delta(1),Delta(4)-Steroid",
-          "Hormone Therapy Agent"
+        "Betamethasone,Methylprednisolone": [
+          "Primary Alpha-Hydroxy Ketone",
+          "Therapeutic Glucocorticoid"
         ]
       },
-      "id": "path_10721"
+      "id": "path_5321"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4903,
+        "final_score": 0.4903
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cushingoid",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Cushingoid",
+          "label": "causes"
+        },
+        {
+          "source": "Cushingoid",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Methylprednisolone": [
+          "Primary Alpha-Hydroxy Ketone",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5322"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4483,
+        "final_score": 0.4483
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nitrogen Balance Negative",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Nitrogen Balance Negative",
+          "label": "causes"
+        },
+        {
+          "source": "Nitrogen Balance Negative",
+          "target": "Prednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Prednisolone": [
+          "Primary Alpha-Hydroxy Ketone",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5323"
     }
-  ],
-  "verbalization": ""
+  ]
 }

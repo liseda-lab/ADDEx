@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00818 - Gene::2562",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6919,
+        "final_score": 0.5959,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Isoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Isoflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Isoflurane",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Isoflurane": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_508"
+    }
+  ]
+}

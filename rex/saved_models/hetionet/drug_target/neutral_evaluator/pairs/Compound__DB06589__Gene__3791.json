@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6753,
-        "final_score": 0.6753
+        "ic_mean": 0.6912,
+        "final_score": 0.6912
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
-          "type": "Pathway"
+          "id": "Vascular Endothelial Growth Factor-activated Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Kdr",
@@ -32,21 +32,21 @@
         },
         {
           "source": "Flt4",
-          "target": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
+          "target": "Vascular Endothelial Growth Factor-activated Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
+          "source": "Vascular Endothelial Growth Factor-activated Receptor Activity",
           "target": "Kdr",
           "label": "is participated by"
         }
       ],
-      "id": "path_7831"
+      "id": "path_3692"
     },
     {
       "score": {
-        "ic_mean": 0.6746,
-        "final_score": 0.6746
+        "ic_mean": 0.5598,
+        "final_score": 0.5598
       },
       "nodes": [
         {
@@ -54,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Flt1",
-          "type": "Gene"
+          "id": "Gastrointestinal Fistula",
+          "type": "Side Effect"
         },
         {
-          "id": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
-          "type": "Pathway"
+          "id": "Regorafenib",
+          "type": "Compound"
         },
         {
           "id": "Kdr",
@@ -69,22 +69,27 @@
       "edges": [
         {
           "source": "Pazopanib",
-          "target": "Flt1",
-          "label": "binds"
+          "target": "Gastrointestinal Fistula",
+          "label": "causes"
         },
         {
-          "source": "Flt1",
-          "target": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
-          "label": "participates"
+          "source": "Gastrointestinal Fistula",
+          "target": "Regorafenib",
+          "label": "is caused by"
         },
         {
-          "source": "Vegf Binds To Vegfr Leading To Receptor Dimerization",
+          "source": "Regorafenib",
           "target": "Kdr",
-          "label": "is participated by"
+          "label": "binds"
         }
       ],
-      "id": "path_7832"
+      "lowest_common_ancestors": {
+        "Pazopanib,Regorafenib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_3693"
     }
-  ],
-  "verbalization": ""
+  ]
 }

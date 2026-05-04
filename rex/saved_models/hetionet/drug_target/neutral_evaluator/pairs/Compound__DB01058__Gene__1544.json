@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5482,
-        "final_score": 0.5482
+        "ic_mean": 0.7306,
+        "final_score": 0.7306
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a7-cyp3a51p",
+          "id": "Cyp3a43",
           "type": "Gene"
         },
         {
-          "id": "Norfloxacin",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp1a2",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Praziquantel",
-          "target": "Cyp3a7-cyp3a51p",
+          "target": "Cyp3a43",
           "label": "binds"
         },
         {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Norfloxacin",
-          "label": "is bound by"
+          "source": "Cyp3a43",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Norfloxacin",
+          "source": "Aromatase Activity",
           "target": "Cyp1a2",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Praziquantel,Norfloxacin": [
-          "Organonitrogen Heterocyclic Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_24017"
+      "id": "path_12143"
     },
     {
       "score": {
-        "ic_mean": 0.5287,
-        "final_score": 0.5287
+        "ic_mean": 0.7306,
+        "final_score": 0.7306
       },
       "nodes": [
         {
@@ -60,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Polyserositis",
-          "type": "Side Effect"
+          "id": "Cyp3a43",
+          "type": "Gene"
         },
         {
-          "id": "Amiodarone",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp1a2",
@@ -75,31 +69,26 @@
       "edges": [
         {
           "source": "Praziquantel",
-          "target": "Polyserositis",
-          "label": "causes"
-        },
-        {
-          "source": "Polyserositis",
-          "target": "Amiodarone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Amiodarone",
-          "target": "Cyp1a2",
+          "target": "Cyp3a43",
           "label": "binds"
+        },
+        {
+          "source": "Cyp3a43",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp1a2",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Praziquantel,Amiodarone": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_24018"
+      "id": "path_12144"
     },
     {
       "score": {
-        "ic_mean": 0.486,
-        "final_score": 0.486
+        "ic_mean": 0.5047,
+        "final_score": 0.5047
       },
       "nodes": [
         {
@@ -107,11 +96,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a7",
+          "id": "Cyp2d6",
           "type": "Gene"
         },
         {
-          "id": "Telithromycin",
+          "id": "Propafenone",
           "type": "Compound"
         },
         {
@@ -122,27 +111,26 @@
       "edges": [
         {
           "source": "Praziquantel",
-          "target": "Cyp3a7",
+          "target": "Cyp2d6",
           "label": "binds"
         },
         {
-          "source": "Cyp3a7",
-          "target": "Telithromycin",
+          "source": "Cyp2d6",
+          "target": "Propafenone",
           "label": "is bound by"
         },
         {
-          "source": "Telithromycin",
+          "source": "Propafenone",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Praziquantel,Telithromycin": [
-          "Organooxygen Compound",
-          "Anti-Infective Agent"
+        "Praziquantel,Propafenone": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_24019"
+      "id": "path_12145"
     },
     {
       "score": {
@@ -190,7 +178,196 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_24020"
+      "id": "path_12146"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4533,
+        "final_score": 0.4533
+      },
+      "nodes": [
+        {
+          "id": "Praziquantel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Praziquantel",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Ranitidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Praziquantel,Ranitidine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12147"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4533,
+        "final_score": 0.4533
+      },
+      "nodes": [
+        {
+          "id": "Praziquantel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Cinacalcet",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Praziquantel",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Cinacalcet",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cinacalcet",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Praziquantel,Cinacalcet": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_12148"
+    },
+    {
+      "score": {
+        "ic_mean": 0.429,
+        "final_score": 0.429
+      },
+      "nodes": [
+        {
+          "id": "Praziquantel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Praziquantel",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Aprepitant",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aprepitant",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Praziquantel,Aprepitant": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12149"
+    },
+    {
+      "score": {
+        "ic_mean": 0.429,
+        "final_score": 0.429
+      },
+      "nodes": [
+        {
+          "id": "Praziquantel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Praziquantel",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Erythromycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Erythromycin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Praziquantel,Erythromycin": [
+          "Organic Heterocyclic Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_12150"
     },
     {
       "score": {
@@ -207,7 +384,7 @@
           "type": "Gene"
         },
         {
-          "id": "Nafcillin",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -223,71 +400,21 @@
         },
         {
           "source": "Cyp3a4",
-          "target": "Nafcillin",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Nafcillin",
+          "source": "Ranitidine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Praziquantel,Nafcillin": [
-          "Organic Heteropolycyclic Compound",
-          "Anti-Infective Agent"
+        "Praziquantel,Ranitidine": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_24021"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3968,
-        "final_score": 0.3968
-      },
-      "nodes": [
-        {
-          "id": "Praziquantel",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        },
-        {
-          "id": "Telithromycin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Praziquantel",
-          "target": "Cyp3a4",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a4",
-          "target": "Telithromycin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Telithromycin",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Praziquantel,Telithromycin": [
-          "Organooxygen Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_24022"
+      "id": "path_12151"
     }
-  ],
-  "verbalization": ""
+  ]
 }

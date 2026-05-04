@@ -1,0 +1,139 @@
+{
+  "id": "Compound::DB00675 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6528,
+        "final_score": 0.7431,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Cyp1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1b1",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11574"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6156,
+        "final_score": 0.7245,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Cyp1a1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a1",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11575"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4186,
+        "final_score": 0.4186
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Accidental Exposure To Product",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Accidental Exposure To Product",
+          "label": "causes"
+        },
+        {
+          "source": "Accidental Exposure To Product",
+          "target": "Ketoconazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Ketoconazole": [
+          "Enzyme Inhibitor",
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_11576"
+    }
+  ]
+}

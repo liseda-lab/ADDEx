@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6923,
-        "final_score": 0.6923
+        "ic_mean": 0.4825,
+        "final_score": 0.4825
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Topoisomerase Inhibitors",
-          "type": "Pharmacologic Class"
+          "id": "Neutropenic Sepsis",
+          "type": "Side Effect"
         },
         {
-          "id": "Topotecan",
+          "id": "Trabectedin",
           "type": "Compound"
         },
         {
@@ -27,271 +27,32 @@
       "edges": [
         {
           "source": "Etoposide",
-          "target": "Topoisomerase Inhibitors",
-          "label": "is included in"
+          "target": "Neutropenic Sepsis",
+          "label": "causes"
         },
         {
-          "source": "Topoisomerase Inhibitors",
-          "target": "Topotecan",
-          "label": "includes"
+          "source": "Neutropenic Sepsis",
+          "target": "Trabectedin",
+          "label": "is caused by"
         },
         {
-          "source": "Topotecan",
+          "source": "Trabectedin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Etoposide,Topotecan": [
+        "Etoposide,Trabectedin": [
           "Organic Heteropolycyclic Compound",
-          "Topoisomerase Inhibitor"
-        ]
-      },
-      "id": "path_14742"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6666,
-        "final_score": 0.6666
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Topoisomerase Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Teniposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Topoisomerase Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Topoisomerase Inhibitors",
-          "target": "Teniposide",
-          "label": "includes"
-        },
-        {
-          "source": "Teniposide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Teniposide": [
-          "Epipodophyllotoxin Compound",
-          "Furonaphthodioxole"
-        ]
-      },
-      "id": "path_14743"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6485,
-        "final_score": 0.6485
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Metyrapone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Metyrapone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Metyrapone": [
-          "Enzyme Inhibitor",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_14744"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5785,
-        "final_score": 0.5785
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc6",
-          "type": "Gene"
-        },
-        {
-          "id": "Sulfinpyrazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc6",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc6",
-          "target": "Sulfinpyrazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sulfinpyrazone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Sulfinpyrazone": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_14745"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5785,
-        "final_score": 0.5785
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc6",
-          "type": "Gene"
-        },
-        {
-          "id": "Teniposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc6",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc6",
-          "target": "Teniposide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Teniposide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Teniposide": [
-          "Epipodophyllotoxin Compound",
-          "Furonaphthodioxole"
-        ]
-      },
-      "id": "path_14746"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5707,
-        "final_score": 0.5707
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc10",
-          "type": "Gene"
-        },
-        {
-          "id": "Cytarabine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc10",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc10",
-          "target": "Cytarabine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cytarabine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Cytarabine": [
-          "Oxacycle",
           "Antineoplastic Agent"
         ]
       },
-      "id": "path_14747"
+      "id": "path_7384"
     },
     {
       "score": {
-        "ic_mean": 0.5572,
-        "final_score": 0.5572
+        "ic_mean": 0.4819,
+        "final_score": 0.4819
       },
       "nodes": [
         {
@@ -299,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Gstp1",
-          "type": "Gene"
+          "id": "Gastrointestinal Toxicity",
+          "type": "Side Effect"
         },
         {
-          "id": "Clomipramine",
+          "id": "Lomustine",
           "type": "Compound"
         },
         {
@@ -314,541 +75,27 @@
       "edges": [
         {
           "source": "Etoposide",
-          "target": "Gstp1",
-          "label": "binds"
+          "target": "Gastrointestinal Toxicity",
+          "label": "causes"
         },
         {
-          "source": "Gstp1",
-          "target": "Clomipramine",
-          "label": "is bound by"
+          "source": "Gastrointestinal Toxicity",
+          "target": "Lomustine",
+          "label": "is caused by"
         },
         {
-          "source": "Clomipramine",
+          "source": "Lomustine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Etoposide,Clomipramine": [
-          "Organic Heteropolycyclic Compound"
+        "Etoposide,Lomustine": [
+          "Antineoplastic Agent",
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_14748"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5572,
-        "final_score": 0.5572
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc10",
-          "type": "Gene"
-        },
-        {
-          "id": "Sildenafil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc10",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc10",
-          "target": "Sildenafil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sildenafil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Sildenafil": [
-          "Organic Heteropolycyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_14749"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5485,
-        "final_score": 0.5485
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc6",
-          "type": "Gene"
-        },
-        {
-          "id": "Probenecid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc6",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc6",
-          "target": "Probenecid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Probenecid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Probenecid": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_14750"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5359,
-        "final_score": 0.5359
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc10",
-          "type": "Gene"
-        },
-        {
-          "id": "Vincristine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc10",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc10",
-          "target": "Vincristine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Vincristine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Vincristine": [
-          "Organic Heterotetracyclic Compound",
-          "Antineoplastic Plant Product"
-        ]
-      },
-      "id": "path_14751"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5336,
-        "final_score": 0.5336
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc6",
-          "type": "Gene"
-        },
-        {
-          "id": "Vinblastine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc6",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc6",
-          "target": "Vinblastine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Vinblastine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Vinblastine": [
-          "Organic Heterotetracyclic Compound",
-          "Antineoplastic Plant Product"
-        ]
-      },
-      "id": "path_14752"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5272,
-        "final_score": 0.5272
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc10",
-          "type": "Gene"
-        },
-        {
-          "id": "Paclitaxel",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc10",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc10",
-          "target": "Paclitaxel",
-          "label": "is bound by"
-        },
-        {
-          "source": "Paclitaxel",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Paclitaxel": [
-          "Organic Molecular Entity"
-        ]
-      },
-      "id": "path_14753"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5158,
-        "final_score": 0.5158
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Sulfinpyrazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Sulfinpyrazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sulfinpyrazone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Sulfinpyrazone": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_14754"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5158,
-        "final_score": 0.5158
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_14755"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5123,
-        "final_score": 0.5123
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc10",
-          "type": "Gene"
-        },
-        {
-          "id": "Docetaxel",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc10",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc10",
-          "target": "Docetaxel",
-          "label": "is bound by"
-        },
-        {
-          "source": "Docetaxel",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Docetaxel": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_14756"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5043,
-        "final_score": 0.5043
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Glyburide": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_14757"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4857,
-        "final_score": 0.4857
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Nifedipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Nifedipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nifedipine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Nifedipine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_14758"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4823,
-        "final_score": 0.4823
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Ptgs1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgs1",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Antipyrine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_14759"
+      "id": "path_7385"
     },
     {
       "score": {
@@ -861,7 +108,293 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc3",
+          "id": "Ugt1a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Ugt1a1",
+          "label": "binds"
+        },
+        {
+          "source": "Ugt1a1",
+          "target": "Fluvastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Fluvastatin": [
+          "Enzyme Inhibitor",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_7386"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4652,
+        "final_score": 0.4652
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Nail Pigmentation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Darunavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Nail Pigmentation",
+          "label": "causes"
+        },
+        {
+          "source": "Nail Pigmentation",
+          "target": "Darunavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Darunavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Darunavir": [
+          "Enzyme Inhibitor",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_7387"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4545,
+        "final_score": 0.4545
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Abcc1",
+          "label": "binds"
+        },
+        {
+          "source": "Abcc1",
+          "target": "Indinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Indinavir": [
+          "Enzyme Inhibitor",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_7388"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4545,
+        "final_score": 0.4545
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Abcc1",
+          "label": "binds"
+        },
+        {
+          "source": "Abcc1",
+          "target": "Progesterone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Progesterone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_7389"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4412,
+        "final_score": 0.4412
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Albumin Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Caspofungin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Serum Albumin Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Albumin Decreased",
+          "target": "Caspofungin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Caspofungin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Caspofungin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_7390"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4228,
+        "final_score": 0.4228
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Sepsis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pomalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Neutropenic Sepsis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Sepsis",
+          "target": "Pomalidomide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pomalidomide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Pomalidomide": [
+          "Organic Heteropolycyclic Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_7391"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4167,
+        "final_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
           "type": "Gene"
         },
         {
@@ -876,11 +409,11 @@
       "edges": [
         {
           "source": "Etoposide",
-          "target": "Abcc3",
+          "target": "Abcc1",
           "label": "binds"
         },
         {
-          "source": "Abcc3",
+          "source": "Abcc1",
           "target": "Phenobarbital",
           "label": "is bound by"
         },
@@ -895,12 +428,60 @@
           "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_14760"
+      "id": "path_7392"
     },
     {
       "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
+        "ic_mean": 0.4142,
+        "final_score": 0.4142
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Recall Phenomenon",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Recall Phenomenon",
+          "label": "causes"
+        },
+        {
+          "source": "Recall Phenomenon",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Ifosfamide": [
+          "Antineoplastic Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_7393"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3918,
+        "final_score": 0.3918
       },
       "nodes": [
         {
@@ -912,7 +493,7 @@
           "type": "Gene"
         },
         {
-          "id": "Vemurafenib",
+          "id": "Vandetanib",
           "type": "Compound"
         },
         {
@@ -928,75 +509,27 @@
         },
         {
           "source": "Abcc1",
-          "target": "Vemurafenib",
+          "target": "Vandetanib",
           "label": "is bound by"
         },
         {
-          "source": "Vemurafenib",
+          "source": "Vandetanib",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Etoposide,Vemurafenib": [
+        "Etoposide,Vandetanib": [
           "Organic Heteropolycyclic Compound",
-          "Antineoplastic Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_14761"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4644,
-        "final_score": 0.4644
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Regorafenib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Ugt1a1",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a1",
-          "target": "Regorafenib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Regorafenib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Regorafenib": [
-          "Organic Heterocyclic Compound",
           "Antineoplastic Agent"
         ]
       },
-      "id": "path_14762"
+      "id": "path_7394"
     },
     {
       "score": {
-        "ic_mean": 0.4545,
-        "final_score": 0.4545
+        "ic_mean": 0.3748,
+        "final_score": 0.3748
       },
       "nodes": [
         {
@@ -1004,520 +537,8 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Sulfinpyrazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Sulfinpyrazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sulfinpyrazone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Sulfinpyrazone": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_14763"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4545,
-        "final_score": 0.4545
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_14764"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4545,
-        "final_score": 0.4545
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Rosuvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rosuvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Rosuvastatin": [
-          "Organic Heterocyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_14765"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4431,
-        "final_score": 0.4431
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Saquinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Saquinavir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Saquinavir": [
-          "Organic Heterocyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_14766"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4431,
-        "final_score": 0.4431
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Glyburide": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_14767"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4344,
-        "final_score": 0.4344
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Ugt1a1",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a1",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Erlotinib": [
-          "Organic Heteropolycyclic Compound",
-          "Antineoplastic Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_14768"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4344,
-        "final_score": 0.4344
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Ugt1a1",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Atorvastatin": [
-          "Organic Heterocyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_14769"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4293,
-        "final_score": 0.4293
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Antipyrine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_14770"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4245,
-        "final_score": 0.4245
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc2",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc2",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc2",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Ethinyl Estradiol": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_14771"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4245,
-        "final_score": 0.4245
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc2",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc2",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc2",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_14772"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4245,
-        "final_score": 0.4245
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Etoposide",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Etoposide,Atorvastatin": [
-          "Organic Heterocyclic Compound",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_14773"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4096,
-        "final_score": 0.4096
-      },
-      "nodes": [
-        {
-          "id": "Etoposide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
+          "id": "Palmar-plantar Erythrodysaesthesia Syndrome",
+          "type": "Side Effect"
         },
         {
           "id": "Docetaxel",
@@ -1531,13 +552,13 @@
       "edges": [
         {
           "source": "Etoposide",
-          "target": "Abcc1",
-          "label": "binds"
+          "target": "Palmar-plantar Erythrodysaesthesia Syndrome",
+          "label": "causes"
         },
         {
-          "source": "Abcc1",
+          "source": "Palmar-plantar Erythrodysaesthesia Syndrome",
           "target": "Docetaxel",
-          "label": "is bound by"
+          "label": "is caused by"
         },
         {
           "source": "Docetaxel",
@@ -1547,11 +568,151 @@
       ],
       "lowest_common_ancestors": {
         "Etoposide,Docetaxel": [
-          "Organooxygen Compound"
+          "Organic Molecule"
         ]
       },
-      "id": "path_14774"
+      "id": "path_7395"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3541,
+        "final_score": 0.3541
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Nail Changes",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Nail Changes",
+          "label": "causes"
+        },
+        {
+          "source": "Nail Changes",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Docetaxel": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_7396"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3541,
+        "final_score": 0.3541
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Sepsis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Neutropenic Sepsis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Sepsis",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Docetaxel": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_7397"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3541,
+        "final_score": 0.3541
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Recall Phenomenon",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Recall Phenomenon",
+          "label": "causes"
+        },
+        {
+          "source": "Recall Phenomenon",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Docetaxel": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_7398"
     }
-  ],
-  "verbalization": ""
+  ]
 }

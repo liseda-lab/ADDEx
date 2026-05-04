@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01098 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5172,
+        "final_score": 0.5172
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Swelling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Muscle Swelling",
+          "label": "causes"
+        },
+        {
+          "source": "Muscle Swelling",
+          "target": "Fluvastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosuvastatin,Fluvastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Statin (Synthetic)"
+        ]
+      },
+      "id": "path_6188"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4993,
+        "final_score": 0.4993
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Swelling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Muscle Swelling",
+          "label": "causes"
+        },
+        {
+          "source": "Muscle Swelling",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosuvastatin,Pravastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Hydroxy Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_6189"
+    }
+  ]
+}

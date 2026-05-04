@@ -1,6 +1,61 @@
 {
   "id": "Compound::DB01151 - Gene::6582",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3914,
+        "final_score": 0.3914
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Imipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Imipramine",
+          "target": "Slc22a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Antidepressant Agent"
+        ],
+        "Desipramine,Imipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
+        ],
+        "Clocapramine,Imipramine": [
+          "Organic Heterotricyclic Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_12993"
+    }
+  ]
 }

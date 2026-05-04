@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5058,
-        "final_score": 0.5058
+        "ic_mean": 0.484,
+        "final_score": 0.484
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1a",
+          "id": "Htr2a",
           "type": "Gene"
         },
         {
-          "id": "Rotigotine",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Pipotiazine",
-          "target": "Htr1a",
+          "target": "Htr2a",
           "label": "binds"
         },
         {
-          "source": "Htr1a",
-          "target": "Rotigotine",
+          "source": "Htr2a",
+          "target": "Imipramine",
           "label": "is bound by"
         },
         {
-          "source": "Rotigotine",
+          "source": "Imipramine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pipotiazine,Rotigotine": [
+        "Pipotiazine,Imipramine": [
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_23265"
+      "id": "path_11799"
     },
     {
       "score": {
-        "ic_mean": 0.3711,
-        "final_score": 0.3711
+        "ic_mean": 0.3944,
+        "final_score": 0.3944
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Dimetotiazine",
-          "type": "Compound"
+          "id": "Cyp2c19",
+          "type": "Gene"
         },
         {
-          "id": "Thiothixene",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -74,30 +74,76 @@
       "edges": [
         {
           "source": "Pipotiazine",
-          "target": "Dimetotiazine",
-          "label": "resembles"
+          "target": "Cyp2c19",
+          "label": "binds"
         },
         {
-          "source": "Dimetotiazine",
-          "target": "Thiothixene",
-          "label": "resembles"
+          "source": "Cyp2c19",
+          "target": "Imipramine",
+          "label": "is bound by"
         },
         {
-          "source": "Thiothixene",
+          "source": "Imipramine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pipotiazine,Thiothixene": [
-          "Antipsychotic Agent"
-        ],
-        "Dimetotiazine,Thiothixene": [
-          "Organic Heterocyclic Compound"
+        "Pipotiazine,Imipramine": [
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_23266"
+      "id": "path_11800"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3117,
+        "final_score": 0.3117
+      },
+      "nodes": [
+        {
+          "id": "Pipotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyamemazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pipotiazine",
+          "target": "Cyamemazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyamemazine",
+          "target": "Imipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Imipramine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pipotiazine,Imipramine": [
+          "Agent Affecting Nervous System"
+        ],
+        "Cyamemazine,Imipramine": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_11801"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,6 +1,59 @@
 {
   "id": "Compound::DB01614 - Gene::213",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.366,
+        "final_score": 0.366
+      },
+      "nodes": [
+        {
+          "id": "Acepromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Thioproperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acepromazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Thioproperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Thioproperazine",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acepromazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Acepromazine,Thioproperazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ],
+        "Dimetotiazine,Thioproperazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_7783"
+    }
+  ]
 }

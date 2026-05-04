@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB01577 - Gene::150",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6478,
+        "final_score": 0.6478
+      },
+      "nodes": [
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Appetite Suppression",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Benzphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methamphetamine",
+          "target": "Appetite Suppression",
+          "label": "is included in"
+        },
+        {
+          "source": "Appetite Suppression",
+          "target": "Benzphetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Benzphetamine",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methamphetamine,Benzphetamine": [
+          "Amphetamines",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_3662"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6478,
+        "final_score": 0.6478
+      },
+      "nodes": [
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Sympathetic Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Benzphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methamphetamine",
+          "target": "Increased Sympathetic Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Sympathetic Activity",
+          "target": "Benzphetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Benzphetamine",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methamphetamine,Benzphetamine": [
+          "Amphetamines",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_3663"
+    }
+  ]
 }

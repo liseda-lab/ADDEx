@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4705,
-        "final_score": 0.4705
+        "ic_mean": 0.4911,
+        "final_score": 0.4911
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Neuroma",
+          "id": "Excessive Daytime Sleepiness",
           "type": "Side Effect"
         },
         {
-          "id": "Ropinirole",
+          "id": "Bromocriptine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Pramipexole",
-          "target": "Neuroma",
+          "target": "Excessive Daytime Sleepiness",
           "label": "causes"
         },
         {
-          "source": "Neuroma",
-          "target": "Ropinirole",
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Bromocriptine",
           "label": "is caused by"
         },
         {
-          "source": "Ropinirole",
+          "source": "Bromocriptine",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pramipexole,Ropinirole": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Pramipexole,Bromocriptine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_9383"
+      "id": "path_4554"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4745,
+        "final_score": 0.4745
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Excessive Daytime Sleepiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rotigotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Excessive Daytime Sleepiness",
+          "label": "causes"
+        },
+        {
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Rotigotine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rotigotine",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Rotigotine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4555"
     }
-  ],
-  "verbalization": ""
+  ]
 }

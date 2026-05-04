@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6842,
-        "final_score": 0.6842
+        "ic_mean": 0.7449,
+        "final_score": 0.7449
       },
       "nodes": [
         {
@@ -16,7 +16,49 @@
           "type": "Gene"
         },
         {
-          "id": "Hydroflumethiazide",
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ca5b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Ca14",
+          "label": "binds"
+        },
+        {
+          "source": "Ca14",
+          "target": "Carbonate Dehydratase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carbonate Dehydratase Activity",
+          "target": "Ca5b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12541"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7356,
+        "final_score": 0.7356
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca14",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenamide",
           "type": "Compound"
         },
         {
@@ -32,22 +74,69 @@
         },
         {
           "source": "Ca14",
-          "target": "Hydroflumethiazide",
+          "target": "Diclofenamide",
           "label": "is bound by"
         },
         {
-          "source": "Hydroflumethiazide",
+          "source": "Diclofenamide",
           "target": "Ca5b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Furosemide,Hydroflumethiazide": [
-          "Organosulfur Compound",
-          "Diuretic"
+        "Furosemide,Diclofenamide": [
+          "Benzenes"
         ]
       },
-      "id": "path_24799"
+      "id": "path_12542"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7175,
+        "final_score": 0.7175
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis At Loop Of Henle",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Increased Diuresis At Loop Of Henle",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis At Loop Of Henle",
+          "target": "Bumetanide",
+          "label": "includes"
+        },
+        {
+          "source": "Bumetanide",
+          "target": "Ca5b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Furosemide,Bumetanide": [
+          "Loop Diuretic",
+          "Benzoic Acids"
+        ]
+      },
+      "id": "path_12543"
     },
     {
       "score": {
@@ -60,11 +149,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5a",
+          "id": "Ca7",
           "type": "Gene"
         },
         {
-          "id": "Trichlormethiazide",
+          "id": "Metolazone",
           "type": "Compound"
         },
         {
@@ -75,124 +164,27 @@
       "edges": [
         {
           "source": "Furosemide",
-          "target": "Ca5a",
+          "target": "Ca7",
           "label": "binds"
         },
         {
-          "source": "Ca5a",
-          "target": "Trichlormethiazide",
+          "source": "Ca7",
+          "target": "Metolazone",
           "label": "is bound by"
         },
         {
-          "source": "Trichlormethiazide",
+          "source": "Metolazone",
           "target": "Ca5b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Furosemide,Trichlormethiazide": [
-          "Sulfonamide",
+        "Furosemide,Metolazone": [
+          "Organic Heterocyclic Compound",
           "Diuretic"
         ]
       },
-      "id": "path_24800"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6464,
-        "final_score": 0.6464
-      },
-      "nodes": [
-        {
-          "id": "Furosemide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Furosemide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca5b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Furosemide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Diuretic"
-        ]
-      },
-      "id": "path_24801"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6329,
-        "final_score": 0.6329
-      },
-      "nodes": [
-        {
-          "id": "Furosemide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Furosemide",
-          "target": "Slc12a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a1",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca5b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Furosemide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Diuretic"
-        ]
-      },
-      "id": "path_24802"
+      "id": "path_12544"
     }
-  ],
-  "verbalization": ""
+  ]
 }

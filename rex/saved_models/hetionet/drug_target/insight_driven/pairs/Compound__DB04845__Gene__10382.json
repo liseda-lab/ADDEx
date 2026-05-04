@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB04845 - Gene::10382",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7859,
+        "final_score": 0.8513,
+        "agentic_score": 0.9167
+      },
+      "nodes": [
+        {
+          "id": "Ixabepilone",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb8",
+          "type": "Gene"
+        },
+        {
+          "id": "Eribulin",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb4a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ixabepilone",
+          "target": "Tubb8",
+          "label": "binds"
+        },
+        {
+          "source": "Tubb8",
+          "target": "Eribulin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Eribulin",
+          "target": "Tubb4a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ixabepilone,Eribulin": [
+          "Ketone",
+          "Tubulin Binding Agent"
+        ]
+      },
+      "id": "path_2735"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7329,
+        "final_score": 0.7415,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Ixabepilone",
+          "type": "Compound"
+        },
+        {
+          "id": "Microtubule Inhibition",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Eribulin",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb4a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ixabepilone",
+          "target": "Microtubule Inhibition",
+          "label": "is included in"
+        },
+        {
+          "source": "Microtubule Inhibition",
+          "target": "Eribulin",
+          "label": "includes"
+        },
+        {
+          "source": "Eribulin",
+          "target": "Tubb4a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ixabepilone,Eribulin": [
+          "Ketone",
+          "Tubulin Binding Agent"
+        ]
+      },
+      "id": "path_2736"
+    }
+  ]
+}

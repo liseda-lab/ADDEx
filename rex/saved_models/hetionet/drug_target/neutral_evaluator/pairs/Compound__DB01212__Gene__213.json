@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6856,
-        "final_score": 0.6856
+        "ic_mean": 0.534,
+        "final_score": 0.534
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a11",
-          "type": "Gene"
+          "id": "Cefapirin",
+          "type": "Compound"
         },
         {
-          "id": "Cefoperazone",
+          "id": "Cefpiramide",
           "type": "Compound"
         },
         {
@@ -27,32 +27,40 @@
       "edges": [
         {
           "source": "Ceftriaxone",
-          "target": "Slc22a11",
-          "label": "binds"
+          "target": "Cefapirin",
+          "label": "resembles"
         },
         {
-          "source": "Slc22a11",
-          "target": "Cefoperazone",
-          "label": "is bound by"
+          "source": "Cefapirin",
+          "target": "Cefpiramide",
+          "label": "resembles"
         },
         {
-          "source": "Cefoperazone",
+          "source": "Cefpiramide",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ceftriaxone,Cefoperazone": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin"
+        "Ceftriaxone,Cefapirin": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Ceftriaxone,Cefpiramide": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cefapirin,Cefpiramide": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
         ]
       },
-      "id": "path_27707"
+      "id": "path_14189"
     },
     {
       "score": {
-        "ic_mean": 0.6342,
-        "final_score": 0.6342
+        "ic_mean": 0.5029,
+        "final_score": 0.5029
       },
       "nodes": [
         {
@@ -60,11 +68,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc15a2",
-          "type": "Gene"
+          "id": "Basophilia",
+          "type": "Side Effect"
         },
         {
-          "id": "Ampicillin",
+          "id": "Gadobenate Dimeglumine",
           "type": "Compound"
         },
         {
@@ -75,172 +83,21 @@
       "edges": [
         {
           "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
+          "target": "Basophilia",
+          "label": "causes"
         },
         {
-          "source": "Slc15a2",
-          "target": "Ampicillin",
-          "label": "is bound by"
+          "source": "Basophilia",
+          "target": "Gadobenate Dimeglumine",
+          "label": "is caused by"
         },
         {
-          "source": "Ampicillin",
+          "source": "Gadobenate Dimeglumine",
           "target": "Alb",
           "label": "binds"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Ampicillin": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_27708"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6342,
-        "final_score": 0.6342
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefazolin",
-          "type": "Compound"
-        },
-        {
-          "id": "Alb",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefazolin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefazolin",
-          "target": "Alb",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefazolin": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_27709"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6042,
-        "final_score": 0.6042
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Alb",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Alb",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefalotin": [
-          "Cephalosporin Antibiotic",
-          "Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_27710"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6042,
-        "final_score": 0.6042
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Alb",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Alb",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefalotin": [
-          "Cephalosporin Antibiotic",
-          "Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_27711"
+      "id": "path_14190"
     }
-  ],
-  "verbalization": ""
+  ]
 }

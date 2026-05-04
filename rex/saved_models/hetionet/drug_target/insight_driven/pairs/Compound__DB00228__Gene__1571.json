@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00228 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6351,
+        "final_score": 0.6926,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Enflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Sevoflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Sevoflurane",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Enflurane,Sevoflurane": [
+          "Anesthetic Agent",
+          "Ether"
+        ]
+      },
+      "id": "path_3818"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6057,
+        "final_score": 0.6778,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Enflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Dexmedetomidine",
+          "label": "includes"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Enflurane,Dexmedetomidine": [
+          "Heteroorganic Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3819"
+    }
+  ]
+}

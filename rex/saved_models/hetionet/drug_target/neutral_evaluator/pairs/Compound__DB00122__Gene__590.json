@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6452,
-        "final_score": 0.6452
+        "ic_mean": 0.7276,
+        "final_score": 0.7276
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Slc44a3",
+          "id": "Chka",
           "type": "Gene"
         },
         {
-          "id": "Synthesis Of Pc",
-          "type": "Pathway"
+          "id": "Cholinesterase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Bche",
@@ -27,26 +27,68 @@
       "edges": [
         {
           "source": "Choline",
-          "target": "Slc44a3",
+          "target": "Chka",
           "label": "binds"
         },
         {
-          "source": "Slc44a3",
-          "target": "Synthesis Of Pc",
+          "source": "Chka",
+          "target": "Cholinesterase Activity",
           "label": "participates"
         },
         {
-          "source": "Synthesis Of Pc",
+          "source": "Cholinesterase Activity",
           "target": "Bche",
           "label": "is participated by"
         }
       ],
-      "id": "path_28491"
+      "id": "path_14620"
     },
     {
       "score": {
-        "ic_mean": 0.6317,
-        "final_score": 0.6317
+        "ic_mean": 0.6991,
+        "final_score": 0.6991
+      },
+      "nodes": [
+        {
+          "id": "Choline",
+          "type": "Compound"
+        },
+        {
+          "id": "Chka",
+          "type": "Gene"
+        },
+        {
+          "id": "Choline Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Bche",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Choline",
+          "target": "Chka",
+          "label": "binds"
+        },
+        {
+          "source": "Chka",
+          "target": "Choline Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Choline Binding",
+          "target": "Bche",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14621"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6493,
+        "final_score": 0.6493
       },
       "nodes": [
         {
@@ -58,8 +100,8 @@
           "type": "Gene"
         },
         {
-          "id": "Ambenonium",
-          "type": "Compound"
+          "id": "Acetylcholinesterase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Bche",
@@ -74,63 +116,16 @@
         },
         {
           "source": "Ache",
-          "target": "Ambenonium",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ambenonium",
-          "target": "Bche",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Choline,Ambenonium": [
-          "Quaternary Ammonium Ion"
-        ]
-      },
-      "id": "path_28492"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6247,
-        "final_score": 0.6247
-      },
-      "nodes": [
-        {
-          "id": "Choline",
-          "type": "Compound"
-        },
-        {
-          "id": "Pcyt1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Synthesis Of Pc",
-          "type": "Pathway"
-        },
-        {
-          "id": "Bche",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Choline",
-          "target": "Pcyt1a",
-          "label": "binds"
-        },
-        {
-          "source": "Pcyt1a",
-          "target": "Synthesis Of Pc",
+          "target": "Acetylcholinesterase Activity",
           "label": "participates"
         },
         {
-          "source": "Synthesis Of Pc",
+          "source": "Acetylcholinesterase Activity",
           "target": "Bche",
           "label": "is participated by"
         }
       ],
-      "id": "path_28493"
+      "id": "path_14622"
     },
     {
       "score": {
@@ -147,7 +142,7 @@
           "type": "Gene"
         },
         {
-          "id": "Isoflurophate",
+          "id": "Physostigmine",
           "type": "Compound"
         },
         {
@@ -163,21 +158,26 @@
         },
         {
           "source": "Ache",
-          "target": "Isoflurophate",
+          "target": "Physostigmine",
           "label": "is bound by"
         },
         {
-          "source": "Isoflurophate",
+          "source": "Physostigmine",
           "target": "Bche",
           "label": "binds"
         }
       ],
-      "id": "path_28494"
+      "lowest_common_ancestors": {
+        "Choline,Physostigmine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_14623"
     },
     {
       "score": {
-        "ic_mean": 0.5619,
-        "final_score": 0.5619
+        "ic_mean": 0.5804,
+        "final_score": 0.5804
       },
       "nodes": [
         {
@@ -185,12 +185,12 @@
           "type": "Compound"
         },
         {
-          "id": "Slc44a4",
+          "id": "Ache",
           "type": "Gene"
         },
         {
-          "id": "Synthesis Of Pc",
-          "type": "Pathway"
+          "id": "Hexafluronium",
+          "type": "Compound"
         },
         {
           "id": "Bche",
@@ -200,22 +200,26 @@
       "edges": [
         {
           "source": "Choline",
-          "target": "Slc44a4",
+          "target": "Ache",
           "label": "binds"
         },
         {
-          "source": "Slc44a4",
-          "target": "Synthesis Of Pc",
-          "label": "participates"
+          "source": "Ache",
+          "target": "Hexafluronium",
+          "label": "is bound by"
         },
         {
-          "source": "Synthesis Of Pc",
+          "source": "Hexafluronium",
           "target": "Bche",
-          "label": "is participated by"
+          "label": "binds"
         }
       ],
-      "id": "path_28495"
+      "lowest_common_ancestors": {
+        "Choline,Hexafluronium": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_14624"
     }
-  ],
-  "verbalization": ""
+  ]
 }

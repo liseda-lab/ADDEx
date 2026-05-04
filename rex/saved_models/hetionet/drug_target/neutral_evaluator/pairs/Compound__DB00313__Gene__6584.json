@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00313 - Gene::6584",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4795,
+        "final_score": 0.4795
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aminohippurate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Aminohippurate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aminohippurate",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valproic Acid,Aminohippurate": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_8603"
+    }
+  ]
 }

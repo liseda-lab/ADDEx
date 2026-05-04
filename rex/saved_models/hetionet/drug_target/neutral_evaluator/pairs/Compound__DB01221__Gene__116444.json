@@ -3,8 +3,50 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7195,
-        "final_score": 0.7195
+        "ic_mean": 0.7242,
+        "final_score": 0.7242
+      },
+      "nodes": [
+        {
+          "id": "Ketamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin2d",
+          "type": "Gene"
+        },
+        {
+          "id": "Nmda Glutamate Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Grin3b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketamine",
+          "target": "Grin2d",
+          "label": "binds"
+        },
+        {
+          "source": "Grin2d",
+          "target": "Nmda Glutamate Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Nmda Glutamate Receptor Activity",
+          "target": "Grin3b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4008"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7206,
+        "final_score": 0.7206
       },
       "nodes": [
         {
@@ -16,8 +58,8 @@
           "type": "Gene"
         },
         {
-          "id": "Amantadine",
-          "type": "Compound"
+          "id": "Nmda Glutamate Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Grin3b",
@@ -32,27 +74,21 @@
         },
         {
           "source": "Grin2c",
-          "target": "Amantadine",
-          "label": "is bound by"
+          "target": "Nmda Glutamate Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Amantadine",
+          "source": "Nmda Glutamate Receptor Activity",
           "target": "Grin3b",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ketamine,Amantadine": [
-          "Agent Affecting Nervous System",
-          "Carbocyclic Compound"
-        ]
-      },
-      "id": "path_8393"
+      "id": "path_4009"
     },
     {
       "score": {
-        "ic_mean": 0.6469,
-        "final_score": 0.6469
+        "ic_mean": 0.7206,
+        "final_score": 0.7206
       },
       "nodes": [
         {
@@ -60,12 +96,12 @@
           "type": "Compound"
         },
         {
-          "id": "Grin3a",
+          "id": "Grin2b",
           "type": "Gene"
         },
         {
-          "id": "Amantadine",
-          "type": "Compound"
+          "id": "Nmda Glutamate Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Grin3b",
@@ -75,28 +111,21 @@
       "edges": [
         {
           "source": "Ketamine",
-          "target": "Grin3a",
+          "target": "Grin2b",
           "label": "binds"
         },
         {
-          "source": "Grin3a",
-          "target": "Amantadine",
-          "label": "is bound by"
+          "source": "Grin2b",
+          "target": "Nmda Glutamate Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Amantadine",
+          "source": "Nmda Glutamate Receptor Activity",
           "target": "Grin3b",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ketamine,Amantadine": [
-          "Agent Affecting Nervous System",
-          "Carbocyclic Compound"
-        ]
-      },
-      "id": "path_8394"
+      "id": "path_4010"
     }
-  ],
-  "verbalization": ""
+  ]
 }

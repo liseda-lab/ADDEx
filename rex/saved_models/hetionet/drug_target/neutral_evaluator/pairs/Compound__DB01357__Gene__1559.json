@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5503,
-        "final_score": 0.5503
+        "ic_mean": 0.4236,
+        "final_score": 0.4236
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Estrogen Receptor Agonists",
-          "type": "Pharmacologic Class"
+          "id": "Quinestrol",
+          "type": "Compound"
         },
         {
-          "id": "Estradiol",
+          "id": "Estropipate",
           "type": "Compound"
         },
         {
@@ -27,27 +27,35 @@
       "edges": [
         {
           "source": "Mestranol",
-          "target": "Estrogen Receptor Agonists",
-          "label": "is included in"
+          "target": "Quinestrol",
+          "label": "resembles"
         },
         {
-          "source": "Estrogen Receptor Agonists",
-          "target": "Estradiol",
-          "label": "includes"
+          "source": "Quinestrol",
+          "target": "Estropipate",
+          "label": "resembles"
         },
         {
-          "source": "Estradiol",
+          "source": "Estropipate",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mestranol,Estradiol": [
-          "17Beta-Hydroxy Steroid"
+        "Mestranol,Quinestrol": [
+          "Steroidal Estrogen",
+          "17-Hydroxy Steroid"
+        ],
+        "Mestranol,Estropipate": [
+          "Steroidal Estrogen",
+          "Steroid"
+        ],
+        "Quinestrol,Estropipate": [
+          "Steroidal Estrogen",
+          "Steroid"
         ]
       },
-      "id": "path_28135"
+      "id": "path_14455"
     }
-  ],
-  "verbalization": ""
+  ]
 }

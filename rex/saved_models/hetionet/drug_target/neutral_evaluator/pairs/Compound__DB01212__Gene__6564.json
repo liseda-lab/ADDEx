@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7227,
-        "final_score": 0.7227
+        "ic_mean": 0.7929,
+        "final_score": 0.7929
       },
       "nodes": [
         {
@@ -14,6 +14,90 @@
         {
           "id": "Slc15a2",
           "type": "Gene"
+        },
+        {
+          "id": "Proton-dependent Peptide Secondary Active Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ceftriaxone",
+          "target": "Slc15a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a2",
+          "target": "Proton-dependent Peptide Secondary Active Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Proton-dependent Peptide Secondary Active Transmembrane Transporter Activity",
+          "target": "Slc15a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13101"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7929,
+        "final_score": 0.7929
+      },
+      "nodes": [
+        {
+          "id": "Ceftriaxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Peptide:proton Symporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ceftriaxone",
+          "target": "Slc15a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a2",
+          "target": "Peptide:proton Symporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Peptide:proton Symporter Activity",
+          "target": "Slc15a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13102"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7521,
+        "final_score": 0.7521
+      },
+      "nodes": [
+        {
+          "id": "Ceftriaxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cephalosporins",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Ceftibuten",
@@ -27,13 +111,13 @@
       "edges": [
         {
           "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
+          "target": "Cephalosporins",
+          "label": "is included in"
         },
         {
-          "source": "Slc15a2",
+          "source": "Cephalosporins",
           "target": "Ceftibuten",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Ceftibuten",
@@ -42,17 +126,23 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Ceftriaxone,Cephalosporins": [
+          "Cephalosporin"
+        ],
         "Ceftriaxone,Ceftibuten": [
-          "Cephalosporin Antibiotic",
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cephalosporins,Ceftibuten": [
           "Cephalosporin"
         ]
       },
-      "id": "path_25803"
+      "id": "path_13103"
     },
     {
       "score": {
-        "ic_mean": 0.7227,
-        "final_score": 0.7227
+        "ic_mean": 0.7316,
+        "final_score": 0.7316
       },
       "nodes": [
         {
@@ -64,8 +154,8 @@
           "type": "Gene"
         },
         {
-          "id": "Oxacillin",
-          "type": "Compound"
+          "id": "Oligopeptide Transporter Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Slc15a1",
@@ -80,22 +170,58 @@
         },
         {
           "source": "Slc15a2",
-          "target": "Oxacillin",
-          "label": "is bound by"
+          "target": "Oligopeptide Transporter Activity",
+          "label": "participates"
         },
         {
-          "source": "Oxacillin",
+          "source": "Oligopeptide Transporter Activity",
           "target": "Slc15a1",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Oxacillin": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
+      "id": "path_13104"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7316,
+        "final_score": 0.7316
       },
-      "id": "path_25804"
+      "nodes": [
+        {
+          "id": "Ceftriaxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Peptide Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ceftriaxone",
+          "target": "Slc15a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a2",
+          "target": "Peptide Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Peptide Transmembrane Transporter Activity",
+          "target": "Slc15a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13105"
     },
     {
       "score": {
@@ -139,393 +265,53 @@
       ],
       "lowest_common_ancestors": {
         "Ceftriaxone,Azidocillin": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_25805"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7227,
-        "final_score": 0.7227
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Ceftazidime",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Ceftazidime",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ceftazidime",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Ceftazidime": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_25806"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7227,
-        "final_score": 0.7227
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Spirapril",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Spirapril",
-          "label": "is bound by"
-        },
-        {
-          "source": "Spirapril",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Spirapril": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_25807"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7227,
-        "final_score": 0.7227
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefotaxime",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefotaxime",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefotaxime",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefotaxime": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_25808"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7227,
-        "final_score": 0.7227
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefdinir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefdinir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefdinir",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefdinir": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin"
-        ]
-      },
-      "id": "path_25809"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6714,
-        "final_score": 0.6714
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Moexipril",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Moexipril",
-          "label": "is bound by"
-        },
-        {
-          "source": "Moexipril",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Moexipril": [
-          "Carboxamide"
-        ]
-      },
-      "id": "path_25810"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6714,
-        "final_score": 0.6714
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefepime",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefepime",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefepime",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefepime": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin"
-        ]
-      },
-      "id": "path_25811"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6714,
-        "final_score": 0.6714
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Ampicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Ampicillin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ampicillin",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Ampicillin": [
-          "Carboxylic Acid Anion",
-          "Beta-Lactam Antibiotic"
-        ]
-      },
-      "id": "path_25812"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6714,
-        "final_score": 0.6714
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Valganciclovir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Valganciclovir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Valganciclovir",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Valganciclovir": [
           "Organic Heterobicyclic Compound",
-          "Anti-Infective Agent"
+          "Beta-Lactam Antibiotic"
         ]
       },
-      "id": "path_25813"
+      "id": "path_13106"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7155,
+        "final_score": 0.7155
+      },
+      "nodes": [
+        {
+          "id": "Ceftriaxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Peptide Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ceftriaxone",
+          "target": "Slc15a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a2",
+          "target": "Peptide Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Peptide Transporter Activity",
+          "target": "Slc15a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13107"
     },
     {
       "score": {
@@ -569,248 +355,10 @@
       ],
       "lowest_common_ancestors": {
         "Ceftriaxone,Aminolevulinic Acid": [
-          "Organooxygen Compound"
+          "Organic Molecule"
         ]
       },
-      "id": "path_25814"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6714,
-        "final_score": 0.6714
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Fosinopril",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Fosinopril",
-          "label": "is bound by"
-        },
-        {
-          "source": "Fosinopril",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Fosinopril": [
-          "Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_25815"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6714,
-        "final_score": 0.6714
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Benazepril",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Benazepril",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benazepril",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Benazepril": [
-          "Polyatomic Ion"
-        ]
-      },
-      "id": "path_25816"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6414,
-        "final_score": 0.6414
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefadroxil",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefadroxil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefadroxil",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefadroxil": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_25817"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6414,
-        "final_score": 0.6414
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefalotin": [
-          "Cephalosporin Antibiotic",
-          "Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_25818"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6414,
-        "final_score": 0.6414
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefalotin": [
-          "Cephalosporin Antibiotic",
-          "Carboxylic Acid Anion"
-        ]
-      },
-      "id": "path_25819"
+      "id": "path_13108"
     },
     {
       "score": {
@@ -854,16 +402,16 @@
       ],
       "lowest_common_ancestors": {
         "Ceftriaxone,Ceftizoxime": [
-          "Cephalosporin Antibiotic",
-          "Carboxylic Acid Anion"
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
         ]
       },
-      "id": "path_25820"
+      "id": "path_13109"
     },
     {
       "score": {
-        "ic_mean": 0.5561,
-        "final_score": 0.5561
+        "ic_mean": 0.5619,
+        "final_score": 0.5619
       },
       "nodes": [
         {
@@ -871,11 +419,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc15a2",
-          "type": "Gene"
+          "id": "Serum Sickness-like Reaction",
+          "type": "Side Effect"
         },
         {
-          "id": "Cyclacillin",
+          "id": "Cefaclor",
           "type": "Compound"
         },
         {
@@ -886,84 +434,27 @@
       "edges": [
         {
           "source": "Ceftriaxone",
-          "target": "Slc15a2",
-          "label": "binds"
+          "target": "Serum Sickness-like Reaction",
+          "label": "causes"
         },
         {
-          "source": "Slc15a2",
-          "target": "Cyclacillin",
-          "label": "is bound by"
+          "source": "Serum Sickness-like Reaction",
+          "target": "Cefaclor",
+          "label": "is caused by"
         },
         {
-          "source": "Cyclacillin",
+          "source": "Cefaclor",
           "target": "Slc15a1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ceftriaxone,Cyclacillin": [
-          "Organosulfur Heterocyclic Compound",
-          "Beta-Lactam Antibiotic"
+        "Ceftriaxone,Cefaclor": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
         ]
       },
-      "id": "path_25821"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5186,
-        "final_score": 0.5186
-      },
-      "nodes": [
-        {
-          "id": "Ceftriaxone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cefditoren",
-          "type": "Compound"
-        },
-        {
-          "id": "Cefadroxil",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ceftriaxone",
-          "target": "Cefditoren",
-          "label": "resembles"
-        },
-        {
-          "source": "Cefditoren",
-          "target": "Cefadroxil",
-          "label": "resembles"
-        },
-        {
-          "source": "Cefadroxil",
-          "target": "Slc15a1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ceftriaxone,Cefditoren": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin"
-        ],
-        "Ceftriaxone,Cefadroxil": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin Carboxylic Acid Anion"
-        ],
-        "Cefditoren,Cefadroxil": [
-          "Cephalosporin Antibiotic",
-          "Cephalosporin"
-        ]
-      },
-      "id": "path_25822"
+      "id": "path_13110"
     }
-  ],
-  "verbalization": ""
+  ]
 }

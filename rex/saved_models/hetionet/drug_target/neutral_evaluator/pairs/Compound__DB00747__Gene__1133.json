@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7033,
-        "final_score": 0.7033
+        "ic_mean": 0.7053,
+        "final_score": 0.7053
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
+          "id": "Chrm1",
           "type": "Gene"
         },
         {
-          "id": "Muscarinic Acetylcholine Receptors",
-          "type": "Pathway"
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Chrm5",
@@ -27,26 +27,79 @@
       "edges": [
         {
           "source": "Scopolamine",
-          "target": "Chrm4",
+          "target": "Chrm1",
           "label": "binds"
         },
         {
-          "source": "Chrm4",
-          "target": "Muscarinic Acetylcholine Receptors",
+          "source": "Chrm1",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Muscarinic Acetylcholine Receptors",
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
           "target": "Chrm5",
           "label": "is participated by"
         }
       ],
-      "id": "path_26091"
+      "id": "path_13232"
     },
     {
       "score": {
-        "ic_mean": 0.6917,
-        "final_score": 0.6917
+        "ic_mean": 0.5976,
+        "final_score": 0.5976
+      },
+      "nodes": [
+        {
+          "id": "Scopolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclandelate",
+          "type": "Compound"
+        },
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Scopolamine",
+          "target": "Cyclandelate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclandelate",
+          "target": "Methylscopolamine Bromide",
+          "label": "resembles"
+        },
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Chrm5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Scopolamine,Cyclandelate": [
+          "Carboxylic Ester"
+        ],
+        "Scopolamine,Methylscopolamine Bromide": [
+          "Carbonyl Compound"
+        ],
+        "Cyclandelate,Methylscopolamine Bromide": [
+          "Organic Hydroxy Compound"
+        ]
+      },
+      "id": "path_13233"
+    },
+    {
+      "score": {
+        "ic_mean": 0.589,
+        "final_score": 0.589
       },
       "nodes": [
         {
@@ -58,7 +111,7 @@
           "type": "Gene"
         },
         {
-          "id": "Methylscopolamine Bromide",
+          "id": "Ipratropium Bromide",
           "type": "Compound"
         },
         {
@@ -74,355 +127,22 @@
         },
         {
           "source": "Chrm1",
-          "target": "Methylscopolamine Bromide",
+          "target": "Ipratropium Bromide",
           "label": "is bound by"
         },
         {
-          "source": "Methylscopolamine Bromide",
+          "source": "Ipratropium Bromide",
           "target": "Chrm5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Scopolamine,Methylscopolamine Bromide": [
-          "Carbonyl Compound"
+        "Scopolamine,Ipratropium Bromide": [
+          "Antimuscarinic Agent",
+          "P-Block Molecular Entity"
         ]
       },
-      "id": "path_26092"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6818,
-        "final_score": 0.6818
-      },
-      "nodes": [
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Scopolamine",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Methylscopolamine Bromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Scopolamine,Methylscopolamine Bromide": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_26093"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6653,
-        "final_score": 0.6653
-      },
-      "nodes": [
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Scopolamine",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Homatropine Methylbromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Scopolamine,Homatropine Methylbromide": [
-          "Azabicycloalkane",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_26094"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6653,
-        "final_score": 0.6653
-      },
-      "nodes": [
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Atropine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Scopolamine",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Atropine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atropine",
-          "target": "Chrm5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Scopolamine,Atropine": [
-          "Ammonium Ion Derivative",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_26095"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6353,
-        "final_score": 0.6353
-      },
-      "nodes": [
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Trihexyphenidyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Scopolamine",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trihexyphenidyl",
-          "target": "Chrm5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Scopolamine,Trihexyphenidyl": [
-          "Organic Amino Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_26096"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6353,
-        "final_score": 0.6353
-      },
-      "nodes": [
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Metixene",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Scopolamine",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Metixene",
-          "label": "is bound by"
-        },
-        {
-          "source": "Metixene",
-          "target": "Chrm5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Scopolamine,Metixene": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_26097"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6104,
-        "final_score": 0.6104
-      },
-      "nodes": [
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Trihexyphenidyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Scopolamine",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trihexyphenidyl",
-          "target": "Chrm5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Scopolamine,Trihexyphenidyl": [
-          "Organic Amino Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_26098"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6005,
-        "final_score": 0.6005
-      },
-      "nodes": [
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Trihexyphenidyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Scopolamine",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trihexyphenidyl",
-          "target": "Chrm5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Scopolamine,Trihexyphenidyl": [
-          "Organic Amino Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_26099"
+      "id": "path_13234"
     },
     {
       "score": {
@@ -466,12 +186,119 @@
       ],
       "lowest_common_ancestors": {
         "Scopolamine,Trihexyphenidyl": [
-          "Organic Amino Compound",
-          "Antimuscarinic Agent"
+          "Antimuscarinic Agent",
+          "Organic Amino Compound"
         ]
       },
-      "id": "path_26100"
+      "id": "path_13235"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5719,
+        "final_score": 0.5719
+      },
+      "nodes": [
+        {
+          "id": "Scopolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclandelate",
+          "type": "Compound"
+        },
+        {
+          "id": "Homatropine Methylbromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Scopolamine",
+          "target": "Cyclandelate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclandelate",
+          "target": "Homatropine Methylbromide",
+          "label": "resembles"
+        },
+        {
+          "source": "Homatropine Methylbromide",
+          "target": "Chrm5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Scopolamine,Cyclandelate": [
+          "Carboxylic Ester"
+        ],
+        "Scopolamine,Homatropine Methylbromide": [
+          "Antimuscarinic Agent",
+          "Azabicycloalkane"
+        ],
+        "Cyclandelate,Homatropine Methylbromide": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_13236"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5366,
+        "final_score": 0.5366
+      },
+      "nodes": [
+        {
+          "id": "Scopolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclandelate",
+          "type": "Compound"
+        },
+        {
+          "id": "Ipratropium Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Scopolamine",
+          "target": "Cyclandelate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclandelate",
+          "target": "Ipratropium Bromide",
+          "label": "resembles"
+        },
+        {
+          "source": "Ipratropium Bromide",
+          "target": "Chrm5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Scopolamine,Cyclandelate": [
+          "Carboxylic Ester"
+        ],
+        "Scopolamine,Ipratropium Bromide": [
+          "Antimuscarinic Agent",
+          "P-Block Molecular Entity"
+        ],
+        "Cyclandelate,Ipratropium Bromide": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_13237"
     }
-  ],
-  "verbalization": ""
+  ]
 }

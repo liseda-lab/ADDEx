@@ -1,6 +1,245 @@
 {
   "id": "Compound::DB00270 - Gene::776",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.782,
+        "final_score": 0.782
+      },
+      "nodes": [
+        {
+          "id": "Isradipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1s",
+          "type": "Gene"
+        },
+        {
+          "id": "Nitrendipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isradipine",
+          "target": "Cacna1s",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna1s",
+          "target": "Nitrendipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nitrendipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isradipine,Nitrendipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_15331"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7783,
+        "final_score": 0.7783
+      },
+      "nodes": [
+        {
+          "id": "Isradipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1s",
+          "type": "Gene"
+        },
+        {
+          "id": "High Voltage-gated Calcium Channel Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isradipine",
+          "target": "Cacna1s",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna1s",
+          "target": "High Voltage-gated Calcium Channel Activity",
+          "label": "participates"
+        },
+        {
+          "source": "High Voltage-gated Calcium Channel Activity",
+          "target": "Cacna1d",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15332"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7306,
+        "final_score": 0.7306
+      },
+      "nodes": [
+        {
+          "id": "Isradipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna2d1",
+          "type": "Gene"
+        },
+        {
+          "id": "Nitrendipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isradipine",
+          "target": "Cacna2d1",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna2d1",
+          "target": "Nitrendipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nitrendipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isradipine,Nitrendipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_15333"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6928,
+        "final_score": 0.6928
+      },
+      "nodes": [
+        {
+          "id": "Isradipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna2d1",
+          "type": "Gene"
+        },
+        {
+          "id": "Nilvadipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isradipine",
+          "target": "Cacna2d1",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna2d1",
+          "target": "Nilvadipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nilvadipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isradipine,Nilvadipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_15334"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6801,
+        "final_score": 0.6801
+      },
+      "nodes": [
+        {
+          "id": "Isradipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isradipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Clevidipine",
+          "label": "includes"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isradipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Isradipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Clevidipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_15335"
+    }
+  ]
 }

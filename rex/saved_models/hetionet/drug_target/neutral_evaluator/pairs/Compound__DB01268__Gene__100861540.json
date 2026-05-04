@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01268 - Gene::100861540",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4468,
+        "final_score": 0.4468
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Dysfunction Thyroid",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Dysfunction Thyroid",
+          "label": "causes"
+        },
+        {
+          "source": "Dysfunction Thyroid",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Amiodarone": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8985"
+    }
+  ]
 }

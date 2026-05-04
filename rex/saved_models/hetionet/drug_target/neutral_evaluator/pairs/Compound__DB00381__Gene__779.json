@@ -3,53 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7695,
-        "final_score": 0.7695
-      },
-      "nodes": [
-        {
-          "id": "Amlodipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacnb2",
-          "type": "Gene"
-        },
-        {
-          "id": "Magnesium Sulfate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacna1s",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amlodipine",
-          "target": "Cacnb2",
-          "label": "binds"
-        },
-        {
-          "source": "Cacnb2",
-          "target": "Magnesium Sulfate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Magnesium Sulfate",
-          "target": "Cacna1s",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amlodipine,Magnesium Sulfate": [
-          "Sulfur Molecular Entity"
-        ]
-      },
-      "id": "path_21062"
-    },
-    {
-      "score": {
         "ic_mean": 0.7482,
         "final_score": 0.7482
       },
@@ -90,16 +43,16 @@
       ],
       "lowest_common_ancestors": {
         "Amlodipine,Isradipine": [
-          "Calcium Channel Blocker",
-          "Dihydropyridine"
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
         ]
       },
-      "id": "path_21063"
+      "id": "path_10654"
     },
     {
       "score": {
-        "ic_mean": 0.7317,
-        "final_score": 0.7317
+        "ic_mean": 0.748,
+        "final_score": 0.748
       },
       "nodes": [
         {
@@ -107,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacnb2",
-          "type": "Gene"
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Nisoldipine",
+          "id": "Isradipine",
           "type": "Compound"
         },
         {
@@ -122,32 +75,38 @@
       "edges": [
         {
           "source": "Amlodipine",
-          "target": "Cacnb2",
-          "label": "binds"
+          "target": "Dihydropyridines",
+          "label": "is included in"
         },
         {
-          "source": "Cacnb2",
-          "target": "Nisoldipine",
-          "label": "is bound by"
+          "source": "Dihydropyridines",
+          "target": "Isradipine",
+          "label": "includes"
         },
         {
-          "source": "Nisoldipine",
+          "source": "Isradipine",
           "target": "Cacna1s",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amlodipine,Nisoldipine": [
-          "Calcium Channel Blocker",
+        "Amlodipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Amlodipine,Isradipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Isradipine": [
           "Dihydropyridine"
         ]
       },
-      "id": "path_21064"
+      "id": "path_10655"
     },
     {
       "score": {
-        "ic_mean": 0.7317,
-        "final_score": 0.7317
+        "ic_mean": 0.7362,
+        "final_score": 0.7362
       },
       "nodes": [
         {
@@ -155,12 +114,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna2d3",
+          "id": "Cacna1b",
           "type": "Gene"
         },
         {
-          "id": "Nilvadipine",
-          "type": "Compound"
+          "id": "High Voltage-gated Calcium Channel Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cacna1s",
@@ -170,74 +129,21 @@
       "edges": [
         {
           "source": "Amlodipine",
-          "target": "Cacna2d3",
+          "target": "Cacna1b",
           "label": "binds"
         },
         {
-          "source": "Cacna2d3",
-          "target": "Nilvadipine",
-          "label": "is bound by"
+          "source": "Cacna1b",
+          "target": "High Voltage-gated Calcium Channel Activity",
+          "label": "participates"
         },
         {
-          "source": "Nilvadipine",
+          "source": "High Voltage-gated Calcium Channel Activity",
           "target": "Cacna1s",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Amlodipine,Nilvadipine": [
-          "Calcium Channel Blocker",
-          "Dihydropyridine"
-        ]
-      },
-      "id": "path_21065"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7182,
-        "final_score": 0.7182
-      },
-      "nodes": [
-        {
-          "id": "Amlodipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacna2d1",
-          "type": "Gene"
-        },
-        {
-          "id": "Magnesium Sulfate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacna1s",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Amlodipine",
-          "target": "Cacna2d1",
-          "label": "binds"
-        },
-        {
-          "source": "Cacna2d1",
-          "target": "Magnesium Sulfate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Magnesium Sulfate",
-          "target": "Cacna1s",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Amlodipine,Magnesium Sulfate": [
-          "Sulfur Molecular Entity"
-        ]
-      },
-      "id": "path_21066"
+      "id": "path_10656"
     },
     {
       "score": {
@@ -281,16 +187,16 @@
       ],
       "lowest_common_ancestors": {
         "Amlodipine,Nitrendipine": [
-          "Calcium Channel Blocker",
-          "Dihydropyridine"
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
         ]
       },
-      "id": "path_21067"
+      "id": "path_10657"
     },
     {
       "score": {
-        "ic_mean": 0.6803,
-        "final_score": 0.6803
+        "ic_mean": 0.714,
+        "final_score": 0.714
       },
       "nodes": [
         {
@@ -298,11 +204,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna2d1",
-          "type": "Gene"
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Nisoldipine",
+          "id": "Clevidipine",
           "type": "Compound"
         },
         {
@@ -313,32 +219,38 @@
       "edges": [
         {
           "source": "Amlodipine",
-          "target": "Cacna2d1",
-          "label": "binds"
+          "target": "Dihydropyridines",
+          "label": "is included in"
         },
         {
-          "source": "Cacna2d1",
-          "target": "Nisoldipine",
-          "label": "is bound by"
+          "source": "Dihydropyridines",
+          "target": "Clevidipine",
+          "label": "includes"
         },
         {
-          "source": "Nisoldipine",
+          "source": "Clevidipine",
           "target": "Cacna1s",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amlodipine,Nisoldipine": [
-          "Calcium Channel Blocker",
+        "Amlodipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Amlodipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Clevidipine": [
           "Dihydropyridine"
         ]
       },
-      "id": "path_21068"
+      "id": "path_10658"
     },
     {
       "score": {
-        "ic_mean": 0.6638,
-        "final_score": 0.6638
+        "ic_mean": 0.714,
+        "final_score": 0.714
       },
       "nodes": [
         {
@@ -346,11 +258,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna1d",
-          "type": "Gene"
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Nisoldipine",
+          "id": "Nimodipine",
           "type": "Compound"
         },
         {
@@ -361,28 +273,231 @@
       "edges": [
         {
           "source": "Amlodipine",
-          "target": "Cacna1d",
-          "label": "binds"
+          "target": "Dihydropyridines",
+          "label": "is included in"
         },
         {
-          "source": "Cacna1d",
-          "target": "Nisoldipine",
-          "label": "is bound by"
+          "source": "Dihydropyridines",
+          "target": "Nimodipine",
+          "label": "includes"
         },
         {
-          "source": "Nisoldipine",
+          "source": "Nimodipine",
           "target": "Cacna1s",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amlodipine,Nisoldipine": [
-          "Calcium Channel Blocker",
+        "Amlodipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Amlodipine,Nimodipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Nimodipine": [
           "Dihydropyridine"
         ]
       },
-      "id": "path_21069"
+      "id": "path_10659"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7016,
+        "final_score": 0.7016
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1s",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Felodipine",
+          "label": "includes"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cacna1s",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Amlodipine,Felodipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Felodipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_10660"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6893,
+        "final_score": 0.6893
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Isradipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1s",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Isradipine",
+          "label": "includes"
+        },
+        {
+          "source": "Isradipine",
+          "target": "Cacna1s",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Isradipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_10661"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6553,
+        "final_score": 0.6553
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1s",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Clevidipine",
+          "label": "includes"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cacna1s",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_10662"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6429,
+        "final_score": 0.6429
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1s",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Felodipine",
+          "label": "includes"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cacna1s",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Felodipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_10663"
     }
-  ],
-  "verbalization": ""
+  ]
 }

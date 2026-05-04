@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB06288 - Gene::3356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6205,
+        "final_score": 0.6853,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Amisulpride",
+          "type": "Compound"
+        },
+        {
+          "id": "Alizapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Remoxipride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amisulpride",
+          "target": "Alizapride",
+          "label": "resembles"
+        },
+        {
+          "source": "Alizapride",
+          "target": "Remoxipride",
+          "label": "resembles"
+        },
+        {
+          "source": "Remoxipride",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amisulpride,Alizapride": [
+          "Agent Affecting Nervous System"
+        ],
+        "Amisulpride,Remoxipride": [
+          "Dopamine Antagonist"
+        ],
+        "Alizapride,Remoxipride": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5301"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5698,
+        "final_score": 0.6599,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Amisulpride",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Dystonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amisulpride",
+          "target": "Acute Dystonia",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Dystonia",
+          "target": "Loxapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Loxapine",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amisulpride,Loxapine": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5302"
+    }
+  ]
+}

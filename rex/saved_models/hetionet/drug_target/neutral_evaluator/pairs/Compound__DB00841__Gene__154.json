@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7441,
-        "final_score": 0.7441
+        "ic_mean": 0.6253,
+        "final_score": 0.6253
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adrb1",
-          "type": "Gene"
+          "id": "Blood Pressure Systolic Increased",
+          "type": "Side Effect"
         },
         {
-          "id": "Metipranolol",
+          "id": "Orciprenaline",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Dobutamine",
-          "target": "Adrb1",
-          "label": "binds"
+          "target": "Blood Pressure Systolic Increased",
+          "label": "causes"
         },
         {
-          "source": "Adrb1",
-          "target": "Metipranolol",
-          "label": "is bound by"
+          "source": "Blood Pressure Systolic Increased",
+          "target": "Orciprenaline",
+          "label": "is caused by"
         },
         {
-          "source": "Metipranolol",
+          "source": "Orciprenaline",
           "target": "Adrb2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dobutamine,Metipranolol": [
-          "Organic Hydroxy Compound",
-          "Adrenergic Agent"
+        "Dobutamine,Orciprenaline": [
+          "Benzenediols"
         ]
       },
-      "id": "path_4668"
+      "id": "path_2106"
     },
     {
       "score": {
-        "ic_mean": 0.6928,
-        "final_score": 0.6928
+        "ic_mean": 0.5221,
+        "final_score": 0.5221
       },
       "nodes": [
         {
@@ -60,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adrb1",
-          "type": "Gene"
+          "id": "Masoprocol",
+          "type": "Compound"
         },
         {
-          "id": "Pirbuterol",
+          "id": "Fenoterol",
           "type": "Compound"
         },
         {
@@ -75,32 +74,92 @@
       "edges": [
         {
           "source": "Dobutamine",
-          "target": "Adrb1",
-          "label": "binds"
+          "target": "Masoprocol",
+          "label": "resembles"
         },
         {
-          "source": "Adrb1",
-          "target": "Pirbuterol",
-          "label": "is bound by"
+          "source": "Masoprocol",
+          "target": "Fenoterol",
+          "label": "resembles"
         },
         {
-          "source": "Pirbuterol",
+          "source": "Fenoterol",
           "target": "Adrb2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dobutamine,Pirbuterol": [
-          "Organic Cyclic Compound",
+        "Dobutamine,Masoprocol": [
+          "Catechols"
+        ],
+        "Dobutamine,Fenoterol": [
+          "Beta-Adrenergic Agonist",
+          "Benzenediols"
+        ],
+        "Masoprocol,Fenoterol": [
+          "Benzenediols"
+        ]
+      },
+      "id": "path_2107"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4819,
+        "final_score": 0.4819
+      },
+      "nodes": [
+        {
+          "id": "Dobutamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ritodrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Formoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dobutamine",
+          "target": "Ritodrine",
+          "label": "resembles"
+        },
+        {
+          "source": "Ritodrine",
+          "target": "Formoterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Formoterol",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dobutamine,Ritodrine": [
+          "Chemical Entity",
+          "Beta-Adrenergic Agonist"
+        ],
+        "Dobutamine,Formoterol": [
+          "Beta-Adrenergic Agonist"
+        ],
+        "Ritodrine,Formoterol": [
           "Beta-Adrenergic Agonist"
         ]
       },
-      "id": "path_4669"
+      "id": "path_2108"
     },
     {
       "score": {
-        "ic_mean": 0.6928,
-        "final_score": 0.6928
+        "ic_mean": 0.4722,
+        "final_score": 0.4722
       },
       "nodes": [
         {
@@ -108,14 +167,70 @@
           "type": "Compound"
         },
         {
-          "id": "Adrb1",
+          "id": "Ritodrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
           "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dobutamine",
+          "target": "Ritodrine",
+          "label": "resembles"
+        },
+        {
+          "source": "Ritodrine",
+          "target": "Fenoterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenoterol",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dobutamine,Ritodrine": [
+          "Chemical Entity",
+          "Beta-Adrenergic Agonist"
+        ],
+        "Dobutamine,Fenoterol": [
+          "Beta-Adrenergic Agonist",
+          "Benzenediols"
+        ],
+        "Ritodrine,Fenoterol": [
+          "Chemical Entity",
+          "Beta-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_2109"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4596,
+        "final_score": 0.4596
+      },
+      "nodes": [
+        {
+          "id": "Dobutamine",
+          "type": "Compound"
         },
         {
           "id": "Arbutamine",
           "type": "Compound"
         },
         {
+          "id": "Fenoterol",
+          "type": "Compound"
+        },
+        {
           "id": "Adrb2",
           "type": "Gene"
         }
@@ -123,16 +238,16 @@
       "edges": [
         {
           "source": "Dobutamine",
-          "target": "Adrb1",
-          "label": "binds"
-        },
-        {
-          "source": "Adrb1",
           "target": "Arbutamine",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Arbutamine",
+          "target": "Fenoterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenoterol",
           "target": "Adrb2",
           "label": "binds"
         }
@@ -141,58 +256,17 @@
         "Dobutamine,Arbutamine": [
           "Catecholamine",
           "Beta-Adrenergic Agonist"
+        ],
+        "Dobutamine,Fenoterol": [
+          "Beta-Adrenergic Agonist",
+          "Benzenediols"
+        ],
+        "Arbutamine,Fenoterol": [
+          "Beta-Adrenergic Agonist",
+          "Benzenediols"
         ]
       },
-      "id": "path_4670"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6928,
-        "final_score": 0.6928
-      },
-      "nodes": [
-        {
-          "id": "Dobutamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        },
-        {
-          "id": "Penbutolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dobutamine",
-          "target": "Adrb1",
-          "label": "binds"
-        },
-        {
-          "source": "Adrb1",
-          "target": "Penbutolol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Penbutolol",
-          "target": "Adrb2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dobutamine,Penbutolol": [
-          "Organic Hydroxy Compound",
-          "Adrenergic Agent"
-        ]
-      },
-      "id": "path_4671"
+      "id": "path_2110"
     }
-  ],
-  "verbalization": ""
+  ]
 }

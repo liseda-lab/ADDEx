@@ -43,16 +43,16 @@
       ],
       "lowest_common_ancestors": {
         "Warfarin,Phenprocoumon": [
-          "Anticoagulant Agent",
-          "Hydroxycoumarin"
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
         ]
       },
-      "id": "path_28950"
+      "id": "path_14935"
     },
     {
       "score": {
-        "ic_mean": 0.5502,
-        "final_score": 0.5502
+        "ic_mean": 0.485,
+        "final_score": 0.485
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Orm1",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Ivacaftor",
+          "id": "Fosphenytoin",
           "type": "Compound"
         },
         {
@@ -75,27 +75,127 @@
       "edges": [
         {
           "source": "Warfarin",
-          "target": "Orm1",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Orm1",
-          "target": "Ivacaftor",
+          "source": "Cyp2c8",
+          "target": "Fosphenytoin",
           "label": "is bound by"
         },
         {
-          "source": "Ivacaftor",
+          "source": "Fosphenytoin",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Warfarin,Ivacaftor": [
+        "Warfarin,Fosphenytoin": [
           "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_28951"
+      "id": "path_14936"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4675,
+        "final_score": 0.4675
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Fosphenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fosphenytoin",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Fosphenytoin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_14937"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2773,
+        "final_score": 0.2773
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenindione",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxcarbazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Phenindione",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenindione",
+          "target": "Oxcarbazepine",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxcarbazepine",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Phenindione": [
+          "Ketone",
+          "Anticoagulant Agent"
+        ],
+        "Warfarin,Oxcarbazepine": [
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Phenindione,Oxcarbazepine": [
+          "Ketone"
+        ]
+      },
+      "id": "path_14938"
     }
-  ],
-  "verbalization": ""
+  ]
 }

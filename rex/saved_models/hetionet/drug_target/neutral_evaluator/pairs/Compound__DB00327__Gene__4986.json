@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6121,
-        "final_score": 0.6121
+        "ic_mean": 0.5727,
+        "final_score": 0.5727
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Tumour Invasion",
+          "id": "Cheyne-stokes Respiration",
           "type": "Side Effect"
         },
         {
-          "id": "Oxycodone",
+          "id": "Morphine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Hydromorphone",
-          "target": "Tumour Invasion",
+          "target": "Cheyne-stokes Respiration",
           "label": "causes"
         },
         {
-          "source": "Tumour Invasion",
-          "target": "Oxycodone",
+          "source": "Cheyne-stokes Respiration",
+          "target": "Morphine",
           "label": "is caused by"
         },
         {
-          "source": "Oxycodone",
+          "source": "Morphine",
           "target": "Oprk1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Hydromorphone,Oxycodone": [
+        "Hydromorphone,Morphine": [
           "Organic Heteropentacyclic Compound",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_10121"
+      "id": "path_4961"
     },
     {
       "score": {
-        "ic_mean": 0.6121,
-        "final_score": 0.6121
+        "ic_mean": 0.5727,
+        "final_score": 0.5727
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Bedridden",
+          "id": "Breakthrough Pain",
           "type": "Side Effect"
         },
         {
-          "id": "Oxycodone",
+          "id": "Morphine",
           "type": "Compound"
         },
         {
@@ -75,76 +75,27 @@
       "edges": [
         {
           "source": "Hydromorphone",
-          "target": "Bedridden",
+          "target": "Breakthrough Pain",
           "label": "causes"
         },
         {
-          "source": "Bedridden",
-          "target": "Oxycodone",
+          "source": "Breakthrough Pain",
+          "target": "Morphine",
           "label": "is caused by"
         },
         {
-          "source": "Oxycodone",
+          "source": "Morphine",
           "target": "Oprk1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Hydromorphone,Oxycodone": [
+        "Hydromorphone,Morphine": [
           "Organic Heteropentacyclic Compound",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_10122"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6018,
-        "final_score": 0.6018
-      },
-      "nodes": [
-        {
-          "id": "Hydromorphone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentazocine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydromorphone",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Pentazocine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentazocine",
-          "target": "Oprk1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydromorphone,Pentazocine": [
-          "Organic Heteropolycyclic Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_10123"
+      "id": "path_4962"
     }
-  ],
-  "verbalization": ""
+  ]
 }

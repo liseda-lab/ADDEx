@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00404 - Gene::1551",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5149,
+        "final_score": 0.5149
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Substance Abuse",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Substance Abuse",
+          "label": "causes"
+        },
+        {
+          "source": "Substance Abuse",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Oxycodone": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_11760"
+    }
+  ]
 }

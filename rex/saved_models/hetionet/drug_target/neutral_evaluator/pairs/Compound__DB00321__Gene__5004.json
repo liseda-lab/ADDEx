@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6164,
-        "final_score": 0.6164
+        "ic_mean": 0.5401,
+        "final_score": 0.5401
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Kcnd2",
+          "id": "Htr6",
           "type": "Gene"
         },
         {
-          "id": "Disopyramide",
+          "id": "Doxepin",
           "type": "Compound"
         },
         {
@@ -27,27 +27,75 @@
       "edges": [
         {
           "source": "Amitriptyline",
-          "target": "Kcnd2",
+          "target": "Htr6",
           "label": "binds"
         },
         {
-          "source": "Kcnd2",
-          "target": "Disopyramide",
+          "source": "Htr6",
+          "target": "Doxepin",
           "label": "is bound by"
         },
         {
-          "source": "Disopyramide",
+          "source": "Doxepin",
           "target": "Orm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Amitriptyline,Disopyramide": [
-          "Organic Cyclic Compound"
+        "Amitriptyline,Doxepin": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
         ]
       },
-      "id": "path_3216"
+      "id": "path_1543"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4661,
+        "final_score": 0.4661
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Orm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Doxepin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Orm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Doxepin": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_1544"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00178 - Gene::1636",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6519,
+        "final_score": 0.5343,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Small Bowel Angioedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Benazepril",
+          "type": "Compound"
+        },
+        {
+          "id": "Ace",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Small Bowel Angioedema",
+          "label": "causes"
+        },
+        {
+          "source": "Small Bowel Angioedema",
+          "target": "Benazepril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Benazepril",
+          "target": "Ace",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ramipril,Benazepril": [
+          "Carboxamide",
+          "Ace Inhibitor"
+        ]
+      },
+      "id": "path_6127"
+    }
+  ]
+}

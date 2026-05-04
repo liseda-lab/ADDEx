@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00175 - Gene::10864",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4861,
+        "final_score": 0.4861
+      },
+      "nodes": [
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Pharmacokinetic Interaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pravastatin",
+          "target": "Pharmacokinetic Interaction",
+          "label": "causes"
+        },
+        {
+          "source": "Pharmacokinetic Interaction",
+          "target": "Valproic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valproic Acid",
+          "target": "Slc22a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pravastatin,Valproic Acid": [
+          "Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_3831"
+    }
+  ]
+}

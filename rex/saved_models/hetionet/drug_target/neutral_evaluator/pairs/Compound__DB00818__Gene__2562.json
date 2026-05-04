@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6368,
-        "final_score": 0.6368
+        "ic_mean": 0.6919,
+        "final_score": 0.6919
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Gabrg2",
-          "type": "Gene"
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Ethchlorvynol",
+          "id": "Isoflurane",
           "type": "Compound"
         },
         {
@@ -27,28 +27,218 @@
       "edges": [
         {
           "source": "Propofol",
-          "target": "Gabrg2",
-          "label": "binds"
+          "target": "General Anesthesia",
+          "label": "is included in"
         },
         {
-          "source": "Gabrg2",
-          "target": "Ethchlorvynol",
-          "label": "is bound by"
+          "source": "General Anesthesia",
+          "target": "Isoflurane",
+          "label": "includes"
         },
         {
-          "source": "Ethchlorvynol",
+          "source": "Isoflurane",
           "target": "Gabrb3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Propofol,Ethchlorvynol": [
-          "Sedative And Hypnotic",
-          "Organic Hydroxy Compound"
+        "Propofol,Isoflurane": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_1331"
+      "id": "path_674"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6254,
+        "final_score": 0.6254
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Clotiazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Clotiazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clotiazepam",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Clotiazepam": [
+          "Organic Molecular Entity",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_675"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6041,
+        "final_score": 0.6041
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Clorazepate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Clorazepate": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_676"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5527,
+        "final_score": 0.5527
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Isoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Isoflurane",
+          "label": "is bound by"
+        },
+        {
+          "source": "Isoflurane",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Isoflurane": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_677"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4976,
+        "final_score": 0.4976
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Upper Airway Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Upper Airway Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Upper Airway Obstruction",
+          "target": "Midazolam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Midazolam": [
+          "Organic Aromatic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_678"
     }
-  ],
-  "verbalization": ""
+  ]
 }

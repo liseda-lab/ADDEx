@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00795 - Gene::23657",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5539,
+        "final_score": 0.5539
+      },
+      "nodes": [
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetylcysteine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc7a11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfasalazine",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Acetylcysteine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Acetylcysteine",
+          "target": "Slc7a11",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sulfasalazine,Acetylcysteine": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_15185"
+    }
+  ]
 }

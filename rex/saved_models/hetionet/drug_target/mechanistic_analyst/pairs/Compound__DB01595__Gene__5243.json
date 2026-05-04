@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01595 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5209,
+        "final_score": 0.5209
+      },
+      "nodes": [
+        {
+          "id": "Nitrazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Staggering Gait",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nitrazepam",
+          "target": "Staggering Gait",
+          "label": "causes"
+        },
+        {
+          "source": "Staggering Gait",
+          "target": "Flurazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurazepam",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nitrazepam,Flurazepam": [
+          "Benzodiazepine",
+          "1,4-Benzodiazepinone"
+        ]
+      },
+      "id": "path_7785"
+    }
+  ]
+}

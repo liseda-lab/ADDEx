@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00459 - Gene::213",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4923,
+        "final_score": 0.4923
+      },
+      "nodes": [
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Uric Acid Level Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telaprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acitretin",
+          "target": "Uric Acid Level Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Uric Acid Level Increased",
+          "target": "Telaprevir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telaprevir",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acitretin,Telaprevir": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_8043"
+    }
+  ]
+}

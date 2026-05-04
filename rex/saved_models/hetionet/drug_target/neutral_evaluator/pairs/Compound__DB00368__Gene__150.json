@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7273,
-        "final_score": 0.7273
+        "ic_mean": 0.7153,
+        "final_score": 0.7153
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Increased Blood Pressure",
-          "type": "Pharmacologic Class"
+          "id": "Adra2b",
+          "type": "Gene"
         },
         {
-          "id": "Droxidopa",
-          "type": "Compound"
+          "id": "Alpha2-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra2a",
@@ -27,31 +27,26 @@
       "edges": [
         {
           "source": "Norepinephrine",
-          "target": "Increased Blood Pressure",
-          "label": "is included in"
-        },
-        {
-          "source": "Increased Blood Pressure",
-          "target": "Droxidopa",
-          "label": "includes"
-        },
-        {
-          "source": "Droxidopa",
-          "target": "Adra2a",
+          "target": "Adra2b",
           "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Alpha2-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha2-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Norepinephrine,Droxidopa": [
-          "Catechols"
-        ]
-      },
-      "id": "path_4530"
+      "id": "path_2038"
     },
     {
       "score": {
-        "ic_mean": 0.6269,
-        "final_score": 0.6269
+        "ic_mean": 0.6834,
+        "final_score": 0.6834
       },
       "nodes": [
         {
@@ -59,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Catecholamines",
-          "type": "Pharmacologic Class"
+          "id": "Adra2c",
+          "type": "Gene"
         },
         {
-          "id": "Droxidopa",
-          "type": "Compound"
+          "id": "Alpha2-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra2a",
@@ -74,37 +69,68 @@
       "edges": [
         {
           "source": "Norepinephrine",
-          "target": "Catecholamines",
-          "label": "is included in"
-        },
-        {
-          "source": "Catecholamines",
-          "target": "Droxidopa",
-          "label": "includes"
-        },
-        {
-          "source": "Droxidopa",
-          "target": "Adra2a",
+          "target": "Adra2c",
           "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha2-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha2-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Norepinephrine,Catecholamines": [
-          "Catecholamine"
-        ],
-        "Norepinephrine,Droxidopa": [
-          "Catechols"
-        ],
-        "Catecholamines,Droxidopa": [
-          "Catechols"
-        ]
-      },
-      "id": "path_4531"
+      "id": "path_2039"
     },
     {
       "score": {
-        "ic_mean": 0.5388,
-        "final_score": 0.5388
+        "ic_mean": 0.6766,
+        "final_score": 0.6766
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2040"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6586,
+        "final_score": 0.6586
       },
       "nodes": [
         {
@@ -116,7 +142,133 @@
           "type": "Gene"
         },
         {
-          "id": "Phentolamine",
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2041"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6447,
+        "final_score": 0.6447
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2042"
+    },
+    {
+      "score": {
+        "ic_mean": 0.636,
+        "final_score": 0.636
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2043"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5689,
+        "final_score": 0.5689
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Xylometazoline",
           "type": "Compound"
         },
         {
@@ -132,22 +284,21 @@
         },
         {
           "source": "Adra1d",
-          "target": "Phentolamine",
+          "target": "Xylometazoline",
           "label": "is bound by"
         },
         {
-          "source": "Phentolamine",
+          "source": "Xylometazoline",
           "target": "Adra2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norepinephrine,Phentolamine": [
-          "Phenols"
+        "Norepinephrine,Xylometazoline": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_4532"
+      "id": "path_2044"
     }
-  ],
-  "verbalization": ""
+  ]
 }

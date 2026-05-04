@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00770 - Gene::11309",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6625,
+        "final_score": 0.6625
+      },
+      "nodes": [
+        {
+          "id": "Alprostadil",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco3a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Iloprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco2b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprostadil",
+          "target": "Slco3a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco3a1",
+          "target": "Iloprost",
+          "label": "is bound by"
+        },
+        {
+          "source": "Iloprost",
+          "target": "Slco2b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprostadil,Iloprost": [
+          "Prostaglandin Analogue",
+          "Secondary Alcohol"
+        ]
+      },
+      "id": "path_4875"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6246,
+        "final_score": 0.6246
+      },
+      "nodes": [
+        {
+          "id": "Alprostadil",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgir",
+          "type": "Gene"
+        },
+        {
+          "id": "Iloprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco2b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprostadil",
+          "target": "Ptgir",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgir",
+          "target": "Iloprost",
+          "label": "is bound by"
+        },
+        {
+          "source": "Iloprost",
+          "target": "Slco2b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprostadil,Iloprost": [
+          "Prostaglandin Analogue",
+          "Secondary Alcohol"
+        ]
+      },
+      "id": "path_4876"
+    }
+  ]
 }

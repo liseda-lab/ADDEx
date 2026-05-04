@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01236 - Gene::2890",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7596,
+        "final_score": 0.6298,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gria1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Enflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Enflurane",
+          "target": "Gria1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Enflurane": [
+          "Anesthetic Agent",
+          "Ether"
+        ]
+      },
+      "id": "path_5370"
+    }
+  ]
+}

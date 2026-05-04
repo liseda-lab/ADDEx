@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4933,
-        "final_score": 0.4933
+        "ic_mean": 0.6934,
+        "final_score": 0.6934
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Abcg2",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Pantoprazole",
-          "type": "Compound"
+          "id": "Caffeine Oxidase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2c9",
@@ -27,31 +27,26 @@
       "edges": [
         {
           "source": "Vismodegib",
-          "target": "Abcg2",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Abcg2",
-          "target": "Pantoprazole",
-          "label": "is bound by"
+          "source": "Cyp2c8",
+          "target": "Caffeine Oxidase Activity",
+          "label": "participates"
         },
         {
-          "source": "Pantoprazole",
+          "source": "Caffeine Oxidase Activity",
           "target": "Cyp2c9",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Vismodegib,Pantoprazole": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_2336"
+      "id": "path_1126"
     },
     {
       "score": {
-        "ic_mean": 0.4729,
-        "final_score": 0.4729
+        "ic_mean": 0.5182,
+        "final_score": 0.5182
       },
       "nodes": [
         {
@@ -59,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hypogeusia",
-          "type": "Side Effect"
+          "id": "Cyp2c8",
+          "type": "Gene"
         },
         {
-          "id": "Valsartan",
+          "id": "Fenofibrate",
           "type": "Compound"
         },
         {
@@ -74,73 +69,168 @@
       "edges": [
         {
           "source": "Vismodegib",
-          "target": "Hypogeusia",
-          "label": "causes"
-        },
-        {
-          "source": "Hypogeusia",
-          "target": "Valsartan",
-          "label": "is caused by"
-        },
-        {
-          "source": "Valsartan",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Vismodegib,Valsartan": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2337"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4606,
-        "final_score": 0.4606
-      },
-      "nodes": [
-        {
-          "id": "Vismodegib",
-          "type": "Compound"
-        },
-        {
-          "id": "Orm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Vismodegib",
-          "target": "Orm1",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Orm1",
-          "target": "Saquinavir",
+          "source": "Cyp2c8",
+          "target": "Fenofibrate",
           "label": "is bound by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Fenofibrate",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Vismodegib,Saquinavir": [
+        "Vismodegib,Fenofibrate": [
+          "Monochlorobenzenes"
+        ]
+      },
+      "id": "path_1127"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5182,
+        "final_score": 0.5182
+      },
+      "nodes": [
+        {
+          "id": "Vismodegib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Troleandomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vismodegib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Troleandomycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Troleandomycin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vismodegib,Troleandomycin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1128"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4669,
+        "final_score": 0.4669
+      },
+      "nodes": [
+        {
+          "id": "Vismodegib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vismodegib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Ifosfamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vismodegib,Ifosfamide": [
+          "Organonitrogen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_1129"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4669,
+        "final_score": 0.4669
+      },
+      "nodes": [
+        {
+          "id": "Vismodegib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Ticlopidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vismodegib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Ticlopidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ticlopidine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vismodegib,Ticlopidine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2338"
+      "id": "path_1130"
     },
     {
       "score": {
@@ -157,7 +247,7 @@
           "type": "Gene"
         },
         {
-          "id": "Diltiazem",
+          "id": "Pioglitazone",
           "type": "Compound"
         },
         {
@@ -173,116 +263,21 @@
         },
         {
           "source": "Cyp2c8",
-          "target": "Diltiazem",
+          "target": "Pioglitazone",
           "label": "is bound by"
         },
         {
-          "source": "Diltiazem",
+          "source": "Pioglitazone",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Vismodegib,Diltiazem": [
-          "Organosulfur Compound"
+        "Vismodegib,Pioglitazone": [
+          "Pyridines"
         ]
       },
-      "id": "path_2339"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4283,
-        "final_score": 0.4283
-      },
-      "nodes": [
-        {
-          "id": "Vismodegib",
-          "type": "Compound"
-        },
-        {
-          "id": "Menopause",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Anastrozole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Vismodegib",
-          "target": "Menopause",
-          "label": "causes"
-        },
-        {
-          "source": "Menopause",
-          "target": "Anastrozole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Anastrozole",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Vismodegib,Anastrozole": [
-          "Signal Transduction Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_2340"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4254,
-        "final_score": 0.4254
-      },
-      "nodes": [
-        {
-          "id": "Vismodegib",
-          "type": "Compound"
-        },
-        {
-          "id": "Potassium Low",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Pantoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Vismodegib",
-          "target": "Potassium Low",
-          "label": "causes"
-        },
-        {
-          "source": "Potassium Low",
-          "target": "Pantoprazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Pantoprazole",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Vismodegib,Pantoprazole": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_2341"
+      "id": "path_1131"
     },
     {
       "score": {
@@ -299,7 +294,7 @@
           "type": "Gene"
         },
         {
-          "id": "Rifapentine",
+          "id": "Perphenazine",
           "type": "Compound"
         },
         {
@@ -315,22 +310,115 @@
         },
         {
           "source": "Cyp2c8",
-          "target": "Rifapentine",
+          "target": "Perphenazine",
           "label": "is bound by"
         },
         {
-          "source": "Rifapentine",
+          "source": "Perphenazine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Vismodegib,Rifapentine": [
+        "Vismodegib,Perphenazine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_2342"
+      "id": "path_1132"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3855,
+        "final_score": 0.3855
+      },
+      "nodes": [
+        {
+          "id": "Vismodegib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vismodegib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Lidocaine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vismodegib,Lidocaine": [
+          "Benzenes"
+        ]
+      },
+      "id": "path_1133"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3855,
+        "final_score": 0.3855
+      },
+      "nodes": [
+        {
+          "id": "Vismodegib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vismodegib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Rifampicin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vismodegib,Rifampicin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1134"
     }
-  ],
-  "verbalization": ""
+  ]
 }

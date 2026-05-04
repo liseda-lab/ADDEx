@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6775,
-        "final_score": 0.6775
+        "ic_mean": 0.4907,
+        "final_score": 0.4907
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ephx2",
-          "type": "Gene"
+          "id": "Drug-induced Liver Injury",
+          "type": "Side Effect"
         },
         {
-          "id": "Regorafenib",
+          "id": "Pazopanib",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Sorafenib",
-          "target": "Ephx2",
-          "label": "binds"
+          "target": "Drug-induced Liver Injury",
+          "label": "causes"
         },
         {
-          "source": "Ephx2",
-          "target": "Regorafenib",
-          "label": "is bound by"
+          "source": "Drug-induced Liver Injury",
+          "target": "Pazopanib",
+          "label": "is caused by"
         },
         {
-          "source": "Regorafenib",
+          "source": "Pazopanib",
           "target": "Pdgfrb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sorafenib,Regorafenib": [
-          "Vegfr Tyrosine Kinase Inhibitor",
-          "Phenylureas"
+        "Sorafenib,Pazopanib": [
+          "Antineoplastic Enzyme Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_17150"
+      "id": "path_8604"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4812,
+        "final_score": 0.4812
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Blood Thyroid Stimulating Hormone Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Pdgfrb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Blood Thyroid Stimulating Hormone Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Blood Thyroid Stimulating Hormone Increased",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Pdgfrb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Pazopanib": [
+          "Antineoplastic Enzyme Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8605"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,153 @@
+{
+  "id": "Compound::DB00458 - Gene::1132",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6933,
+        "final_score": 0.7633,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
+          "target": "Chrm4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9884"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6292,
+        "final_score": 0.5646,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abdominal Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Abdominal Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Abdominal Disorder",
+          "target": "Maprotiline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Maprotiline",
+          "target": "Chrm4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imipramine,Maprotiline": [
+          "Tricyclic Antidepressant",
+          "Organic Tricyclic Compound"
+        ]
+      },
+      "id": "path_9885"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3938,
+        "final_score": 0.3938
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Desipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Chrm4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imipramine,Clocapramine": [
+          "Antidepressant Agent",
+          "Organic Heterotricyclic Compound"
+        ],
+        "Imipramine,Desipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
+        ],
+        "Clocapramine,Desipramine": [
+          "Antidepressant Agent",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_9886"
+    }
+  ]
+}

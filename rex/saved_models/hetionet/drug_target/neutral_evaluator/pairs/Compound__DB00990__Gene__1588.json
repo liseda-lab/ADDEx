@@ -47,7 +47,7 @@
           "Aromatase Inhibitor"
         ]
       },
-      "id": "path_28902"
+      "id": "path_14907"
     },
     {
       "score": {
@@ -95,7 +95,7 @@
           "Aromatase Inhibitor"
         ]
       },
-      "id": "path_28903"
+      "id": "path_14908"
     },
     {
       "score": {
@@ -139,19 +139,19 @@
       ],
       "lowest_common_ancestors": {
         "Exemestane,Formestane": [
-          "3-Oxo-Delta(4) Steroid",
-          "Steroidal Aromatase Inhibitor"
+          "Steroidal Aromatase Inhibitor",
+          "3-Oxo-Delta(4) Steroid"
         ],
         "Exemestane,Testolactone": [
-          "3-Oxo-Delta(1),Delta(4)-Steroid",
-          "Steroidal Aromatase Inhibitor"
+          "Steroidal Aromatase Inhibitor",
+          "3-Oxo-Delta(1),Delta(4)-Steroid"
         ],
         "Formestane,Testolactone": [
-          "3-Oxo-Delta(4) Steroid",
-          "Steroidal Aromatase Inhibitor"
+          "Steroidal Aromatase Inhibitor",
+          "3-Oxo-Delta(4) Steroid"
         ]
       },
-      "id": "path_28904"
+      "id": "path_14909"
     },
     {
       "score": {
@@ -199,7 +199,63 @@
           "Aromatase Inhibitor"
         ]
       },
-      "id": "path_28905"
+      "id": "path_14910"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5037,
+        "final_score": 0.5037
+      },
+      "nodes": [
+        {
+          "id": "Exemestane",
+          "type": "Compound"
+        },
+        {
+          "id": "Formestane",
+          "type": "Compound"
+        },
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Exemestane",
+          "target": "Formestane",
+          "label": "resembles"
+        },
+        {
+          "source": "Formestane",
+          "target": "Danazol",
+          "label": "resembles"
+        },
+        {
+          "source": "Danazol",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Exemestane,Formestane": [
+          "Steroidal Aromatase Inhibitor",
+          "3-Oxo-Delta(4) Steroid"
+        ],
+        "Exemestane,Danazol": [
+          "Steroid",
+          "Hormone Antagonist"
+        ],
+        "Formestane,Danazol": [
+          "Hydroxy Steroid",
+          "Hormone Antagonist"
+        ]
+      },
+      "id": "path_14911"
     },
     {
       "score": {
@@ -247,8 +303,103 @@
           "Aromatase Inhibitor"
         ]
       },
-      "id": "path_28906"
+      "id": "path_14912"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4884,
+        "final_score": 0.4884
+      },
+      "nodes": [
+        {
+          "id": "Exemestane",
+          "type": "Compound"
+        },
+        {
+          "id": "Vaginal Dryness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Anastrozole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Exemestane",
+          "target": "Vaginal Dryness",
+          "label": "causes"
+        },
+        {
+          "source": "Vaginal Dryness",
+          "target": "Anastrozole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Anastrozole",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Exemestane,Anastrozole": [
+          "Organic Cyclic Compound",
+          "Aromatase Inhibitor"
+        ]
+      },
+      "id": "path_14913"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4849,
+        "final_score": 0.4849
+      },
+      "nodes": [
+        {
+          "id": "Exemestane",
+          "type": "Compound"
+        },
+        {
+          "id": "Vaginal Dryness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Letrozole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Exemestane",
+          "target": "Vaginal Dryness",
+          "label": "causes"
+        },
+        {
+          "source": "Vaginal Dryness",
+          "target": "Letrozole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Letrozole",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Exemestane,Letrozole": [
+          "Organic Cyclic Compound",
+          "Aromatase Inhibitor"
+        ]
+      },
+      "id": "path_14914"
     }
-  ],
-  "verbalization": ""
+  ]
 }

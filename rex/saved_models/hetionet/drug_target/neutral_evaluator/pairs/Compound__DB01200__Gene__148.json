@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7428,
-        "final_score": 0.7428
+        "ic_mean": 0.7556,
+        "final_score": 0.7556
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Ergolines",
-          "type": "Pharmacologic Class"
+          "id": "Adra1b",
+          "type": "Gene"
         },
         {
-          "id": "Cabergoline",
-          "type": "Compound"
+          "id": "Alpha1-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra1a",
@@ -27,32 +27,68 @@
       "edges": [
         {
           "source": "Bromocriptine",
-          "target": "Ergolines",
-          "label": "is included in"
-        },
-        {
-          "source": "Ergolines",
-          "target": "Cabergoline",
-          "label": "includes"
-        },
-        {
-          "source": "Cabergoline",
-          "target": "Adra1a",
+          "target": "Adra1b",
           "label": "binds"
+        },
+        {
+          "source": "Adra1b",
+          "target": "Alpha1-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha1-adrenergic Receptor Activity",
+          "target": "Adra1a",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Cabergoline": [
-          "Dopamine Agonist",
-          "Nitrogen Molecular Entity"
-        ]
-      },
-      "id": "path_7281"
+      "id": "path_3416"
     },
     {
       "score": {
-        "ic_mean": 0.6876,
-        "final_score": 0.6876
+        "ic_mean": 0.7169,
+        "final_score": 0.7169
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Adra1b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1b",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra1a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3417"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6062,
+        "final_score": 0.6062
       },
       "nodes": [
         {
@@ -64,7 +100,7 @@
           "type": "Gene"
         },
         {
-          "id": "Oxymetazoline",
+          "id": "Iloperidone",
           "type": "Compound"
         },
         {
@@ -80,549 +116,22 @@
         },
         {
           "source": "Htr1d",
-          "target": "Oxymetazoline",
+          "target": "Iloperidone",
           "label": "is bound by"
         },
         {
-          "source": "Oxymetazoline",
+          "source": "Iloperidone",
           "target": "Adra1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bromocriptine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Bromocriptine,Iloperidone": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_7282"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6741,
-        "final_score": 0.6741
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7283"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6682,
-        "final_score": 0.6682
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Methoxamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Methoxamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methoxamine",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Methoxamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7284"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6682,
-        "final_score": 0.6682
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapiprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Dapiprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapiprazole",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Dapiprazole": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7285"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6682,
-        "final_score": 0.6682
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7286"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6682,
-        "final_score": 0.6682
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Terazosin",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Terazosin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Terazosin",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Terazosin": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7287"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6528,
-        "final_score": 0.6528
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Methoxamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1b",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1b",
-          "target": "Methoxamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methoxamine",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Methoxamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7288"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6168,
-        "final_score": 0.6168
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Xylometazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Xylometazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Xylometazoline",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Xylometazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Molecular Entity"
-        ]
-      },
-      "id": "path_7289"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6168,
-        "final_score": 0.6168
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenylephrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Phenylephrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenylephrine",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Phenylephrine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7290"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5868,
-        "final_score": 0.5868
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Phentolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Phentolamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phentolamine",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Phentolamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7291"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5868,
-        "final_score": 0.5868
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Sertindole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sertindole",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Sertindole": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7292"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5849,
-        "final_score": 0.5849
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr7",
-          "type": "Gene"
-        },
-        {
-          "id": "Epinastine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Htr7",
-          "label": "binds"
-        },
-        {
-          "source": "Htr7",
-          "target": "Epinastine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Epinastine",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Epinastine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7293"
+      "id": "path_3418"
     },
     {
       "score": {
@@ -670,12 +179,12 @@
           "Dopamine Agonist"
         ]
       },
-      "id": "path_7294"
+      "id": "path_3419"
     },
     {
       "score": {
-        "ic_mean": 0.5279,
-        "final_score": 0.5279
+        "ic_mean": 0.5684,
+        "final_score": 0.5684
       },
       "nodes": [
         {
@@ -683,11 +192,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pericarditis Constrictive",
-          "type": "Side Effect"
+          "id": "Htr1d",
+          "type": "Gene"
         },
         {
-          "id": "Cabergoline",
+          "id": "Olanzapine",
           "type": "Compound"
         },
         {
@@ -698,27 +207,75 @@
       "edges": [
         {
           "source": "Bromocriptine",
-          "target": "Pericarditis Constrictive",
-          "label": "causes"
+          "target": "Htr1d",
+          "label": "binds"
         },
         {
-          "source": "Pericarditis Constrictive",
-          "target": "Cabergoline",
-          "label": "is caused by"
+          "source": "Htr1d",
+          "target": "Olanzapine",
+          "label": "is bound by"
         },
         {
-          "source": "Cabergoline",
+          "source": "Olanzapine",
           "target": "Adra1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bromocriptine,Cabergoline": [
-          "Dopamine Agonist",
-          "Nitrogen Molecular Entity"
+        "Bromocriptine,Olanzapine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_7295"
+      "id": "path_3420"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5587,
+        "final_score": 0.5587
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Sertindole",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Sertindole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Sertindole",
+          "target": "Adra1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromocriptine,Sertindole": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3421"
     },
     {
       "score": {
@@ -766,12 +323,12 @@
           "Dopamine Agonist"
         ]
       },
-      "id": "path_7296"
+      "id": "path_3422"
     },
     {
       "score": {
-        "ic_mean": 0.5141,
-        "final_score": 0.5141
+        "ic_mean": 0.4739,
+        "final_score": 0.4739
       },
       "nodes": [
         {
@@ -779,58 +336,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Norepinephrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bromocriptine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Norepinephrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Norepinephrine",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bromocriptine,Norepinephrine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_7297"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5102,
-        "final_score": 0.5102
-      },
-      "nodes": [
-        {
-          "id": "Bromocriptine",
-          "type": "Compound"
-        },
-        {
-          "id": "Excessive Daytime Sleepiness",
+          "id": "Malignant Syndrome Nos",
           "type": "Side Effect"
         },
         {
-          "id": "Cabergoline",
+          "id": "Nefazodone",
           "type": "Compound"
         },
         {
@@ -841,32 +351,32 @@
       "edges": [
         {
           "source": "Bromocriptine",
-          "target": "Excessive Daytime Sleepiness",
+          "target": "Malignant Syndrome Nos",
           "label": "causes"
         },
         {
-          "source": "Excessive Daytime Sleepiness",
-          "target": "Cabergoline",
+          "source": "Malignant Syndrome Nos",
+          "target": "Nefazodone",
           "label": "is caused by"
         },
         {
-          "source": "Cabergoline",
+          "source": "Nefazodone",
           "target": "Adra1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bromocriptine,Cabergoline": [
-          "Dopamine Agonist",
-          "Nitrogen Molecular Entity"
+        "Bromocriptine,Nefazodone": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_7298"
+      "id": "path_3423"
     },
     {
       "score": {
-        "ic_mean": 0.4965,
-        "final_score": 0.4965
+        "ic_mean": 0.459,
+        "final_score": 0.459
       },
       "nodes": [
         {
@@ -874,11 +384,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pleural Fibrosis",
+          "id": "Impulse-control Disorder",
           "type": "Side Effect"
         },
         {
-          "id": "Cabergoline",
+          "id": "Iloperidone",
           "type": "Compound"
         },
         {
@@ -889,28 +399,27 @@
       "edges": [
         {
           "source": "Bromocriptine",
-          "target": "Pleural Fibrosis",
+          "target": "Impulse-control Disorder",
           "label": "causes"
         },
         {
-          "source": "Pleural Fibrosis",
-          "target": "Cabergoline",
+          "source": "Impulse-control Disorder",
+          "target": "Iloperidone",
           "label": "is caused by"
         },
         {
-          "source": "Cabergoline",
+          "source": "Iloperidone",
           "target": "Adra1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bromocriptine,Cabergoline": [
-          "Dopamine Agonist",
-          "Nitrogen Molecular Entity"
+        "Bromocriptine,Iloperidone": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_7299"
+      "id": "path_3424"
     }
-  ],
-  "verbalization": ""
+  ]
 }

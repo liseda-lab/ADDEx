@@ -3,6 +3,96 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.7532,
+        "final_score": 0.7532
+      },
+      "nodes": [
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        },
+        {
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorthalidone",
+          "target": "Ca5a",
+          "label": "binds"
+        },
+        {
+          "source": "Ca5a",
+          "target": "Carbonate Dehydratase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carbonate Dehydratase Activity",
+          "target": "Ca7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4606"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7383,
+        "final_score": 0.7383
+      },
+      "nodes": [
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Metolazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorthalidone",
+          "target": "Increased Diuresis",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis",
+          "target": "Metolazone",
+          "label": "includes"
+        },
+        {
+          "source": "Metolazone",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorthalidone,Metolazone": [
+          "Organic Heterobicyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_4607"
+    },
+    {
+      "score": {
         "ic_mean": 0.7283,
         "final_score": 0.7283
       },
@@ -43,11 +133,11 @@
       ],
       "lowest_common_ancestors": {
         "Chlorthalidone,Metolazone": [
-          "Sulfonamide",
+          "Organic Heterobicyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_9463"
+      "id": "path_4608"
     },
     {
       "score": {
@@ -60,59 +150,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca7",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorthalidone",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca7",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorthalidone,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_9464"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6769,
-        "final_score": 0.6769
-      },
-      "nodes": [
-        {
-          "id": "Chlorthalidone",
-          "type": "Compound"
-        },
-        {
           "id": "Ca5a",
           "type": "Gene"
         },
         {
-          "id": "Trichlormethiazide",
+          "id": "Brinzolamide",
           "type": "Compound"
         },
         {
@@ -128,27 +170,26 @@
         },
         {
           "source": "Ca5a",
-          "target": "Trichlormethiazide",
+          "target": "Brinzolamide",
           "label": "is bound by"
         },
         {
-          "source": "Trichlormethiazide",
+          "source": "Brinzolamide",
           "target": "Ca7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorthalidone,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
+        "Chlorthalidone,Brinzolamide": [
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_9465"
+      "id": "path_4609"
     },
     {
       "score": {
-        "ic_mean": 0.6604,
-        "final_score": 0.6604
+        "ic_mean": 0.7126,
+        "final_score": 0.7126
       },
       "nodes": [
         {
@@ -156,11 +197,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca9",
-          "type": "Gene"
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Trichlormethiazide",
+          "id": "Hydroflumethiazide",
           "type": "Compound"
         },
         {
@@ -171,27 +212,122 @@
       "edges": [
         {
           "source": "Chlorthalidone",
-          "target": "Ca9",
-          "label": "binds"
+          "target": "Increased Diuresis",
+          "label": "is included in"
         },
         {
-          "source": "Ca9",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
+          "source": "Increased Diuresis",
+          "target": "Hydroflumethiazide",
+          "label": "includes"
         },
         {
-          "source": "Trichlormethiazide",
+          "source": "Hydroflumethiazide",
           "target": "Ca7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorthalidone,Trichlormethiazide": [
-          "Sulfonamide",
+        "Chlorthalidone,Hydroflumethiazide": [
+          "Organonitrogen Heterocyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_9466"
+      "id": "path_4610"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6868,
+        "final_score": 0.6868
+      },
+      "nodes": [
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca12",
+          "type": "Gene"
+        },
+        {
+          "id": "Mafenide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorthalidone",
+          "target": "Ca12",
+          "label": "binds"
+        },
+        {
+          "source": "Ca12",
+          "target": "Mafenide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mafenide",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorthalidone,Mafenide": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_4611"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6682,
+        "final_score": 0.6682
+      },
+      "nodes": [
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        },
+        {
+          "id": "Metolazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorthalidone",
+          "target": "Ca4",
+          "label": "binds"
+        },
+        {
+          "source": "Ca4",
+          "target": "Metolazone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Metolazone",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorthalidone,Metolazone": [
+          "Organic Heterobicyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_4612"
     },
     {
       "score": {
@@ -235,11 +371,59 @@
       ],
       "lowest_common_ancestors": {
         "Chlorthalidone,Metolazone": [
-          "Sulfonamide",
+          "Organic Heterobicyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_9467"
+      "id": "path_4613"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6469,
+        "final_score": 0.6469
+      },
+      "nodes": [
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Hydroflumethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorthalidone",
+          "target": "Slc12a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc12a1",
+          "target": "Hydroflumethiazide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Hydroflumethiazide",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorthalidone,Hydroflumethiazide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_4614"
     },
     {
       "score": {
@@ -283,11 +467,11 @@
       ],
       "lowest_common_ancestors": {
         "Chlorthalidone,Trichlormethiazide": [
-          "Sulfonamide",
+          "Organonitrogen Heterocyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_9468"
+      "id": "path_4615"
     },
     {
       "score": {
@@ -300,11 +484,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5b",
+          "id": "Ca12",
           "type": "Gene"
         },
         {
-          "id": "Trichlormethiazide",
+          "id": "Hydroflumethiazide",
           "type": "Compound"
         },
         {
@@ -315,28 +499,171 @@
       "edges": [
         {
           "source": "Chlorthalidone",
-          "target": "Ca5b",
+          "target": "Ca12",
           "label": "binds"
         },
         {
-          "source": "Ca5b",
-          "target": "Trichlormethiazide",
+          "source": "Ca12",
+          "target": "Hydroflumethiazide",
           "label": "is bound by"
         },
         {
-          "source": "Trichlormethiazide",
+          "source": "Hydroflumethiazide",
           "target": "Ca7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorthalidone,Trichlormethiazide": [
-          "Sulfonamide",
+        "Chlorthalidone,Hydroflumethiazide": [
+          "Organonitrogen Heterocyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_9469"
+      "id": "path_4616"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6168,
+        "final_score": 0.6168
+      },
+      "nodes": [
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        },
+        {
+          "id": "Hydroflumethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorthalidone",
+          "target": "Ca4",
+          "label": "binds"
+        },
+        {
+          "source": "Ca4",
+          "target": "Hydroflumethiazide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Hydroflumethiazide",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorthalidone,Hydroflumethiazide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_4617"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5777,
+        "final_score": 0.5777
+      },
+      "nodes": [
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Angiitis Necrotising",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydroflumethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorthalidone",
+          "target": "Angiitis Necrotising",
+          "label": "causes"
+        },
+        {
+          "source": "Angiitis Necrotising",
+          "target": "Hydroflumethiazide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydroflumethiazide",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorthalidone,Hydroflumethiazide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_4618"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5704,
+        "final_score": 0.5704
+      },
+      "nodes": [
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthopsia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydroflumethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorthalidone",
+          "target": "Xanthopsia",
+          "label": "causes"
+        },
+        {
+          "source": "Xanthopsia",
+          "target": "Hydroflumethiazide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydroflumethiazide",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorthalidone,Hydroflumethiazide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_4619"
     }
-  ],
-  "verbalization": ""
+  ]
 }

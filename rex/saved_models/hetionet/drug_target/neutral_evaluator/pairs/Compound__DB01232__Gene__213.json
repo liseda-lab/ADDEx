@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5251,
-        "final_score": 0.5251
+        "ic_mean": 0.5131,
+        "final_score": 0.5131
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Orm1",
-          "type": "Gene"
+          "id": "Cytochrome P450 3a Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Alfentanil",
+          "id": "Ivacaftor",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Saquinavir",
-          "target": "Orm1",
-          "label": "binds"
+          "target": "Cytochrome P450 3a Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Orm1",
-          "target": "Alfentanil",
-          "label": "is bound by"
+          "source": "Cytochrome P450 3a Inhibitors",
+          "target": "Ivacaftor",
+          "label": "includes"
         },
         {
-          "source": "Alfentanil",
+          "source": "Ivacaftor",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Saquinavir,Alfentanil": [
-          "Organonitrogen Heterocyclic Compound"
+        "Saquinavir,Ivacaftor": [
+          "Quinolines"
         ]
       },
-      "id": "path_12456"
+      "id": "path_6290"
     },
     {
       "score": {
-        "ic_mean": 0.5065,
-        "final_score": 0.5065
+        "ic_mean": 0.4842,
+        "final_score": 0.4842
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Acute Renal Insufficiency",
+          "type": "Side Effect"
         },
         {
-          "id": "Simeprevir",
+          "id": "Telaprevir",
           "type": "Compound"
         },
         {
@@ -74,28 +74,27 @@
       "edges": [
         {
           "source": "Saquinavir",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Acute Renal Insufficiency",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Simeprevir",
-          "label": "is bound by"
+          "source": "Acute Renal Insufficiency",
+          "target": "Telaprevir",
+          "label": "is caused by"
         },
         {
-          "source": "Simeprevir",
+          "source": "Telaprevir",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Saquinavir,Simeprevir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+        "Saquinavir,Telaprevir": [
+          "Organonitrogen Heterocyclic Compound",
+          "Protease Inhibitor"
         ]
       },
-      "id": "path_12457"
+      "id": "path_6291"
     }
-  ],
-  "verbalization": ""
+  ]
 }

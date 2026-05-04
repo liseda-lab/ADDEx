@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5821,
-        "final_score": 0.5821
+        "ic_mean": 0.5477,
+        "final_score": 0.5477
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc18a2",
-          "type": "Gene"
+          "id": "Precordial Pain",
+          "type": "Side Effect"
         },
         {
-          "id": "Lisdexamfetamine",
+          "id": "Phentermine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,237 @@
       "edges": [
         {
           "source": "Ephedrine",
-          "target": "Slc18a2",
-          "label": "binds"
+          "target": "Precordial Pain",
+          "label": "causes"
         },
         {
-          "source": "Slc18a2",
-          "target": "Lisdexamfetamine",
-          "label": "is bound by"
+          "source": "Precordial Pain",
+          "target": "Phentermine",
+          "label": "is caused by"
         },
         {
-          "source": "Lisdexamfetamine",
+          "source": "Phentermine",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ephedrine,Lisdexamfetamine": [
+        "Ephedrine,Phentermine": [
           "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+          "Organic Amino Compound"
         ]
       },
-      "id": "path_7456"
+      "id": "path_3509"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5347,
+        "final_score": 0.5347
+      },
+      "nodes": [
+        {
+          "id": "Ephedrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Precordial Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diethylpropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ephedrine",
+          "target": "Precordial Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Precordial Pain",
+          "target": "Diethylpropion",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diethylpropion",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ephedrine,Diethylpropion": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_3510"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4765,
+        "final_score": 0.4765
+      },
+      "nodes": [
+        {
+          "id": "Ephedrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclandelate",
+          "type": "Compound"
+        },
+        {
+          "id": "Methylphenidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ephedrine",
+          "target": "Cyclandelate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclandelate",
+          "target": "Methylphenidate",
+          "label": "resembles"
+        },
+        {
+          "source": "Methylphenidate",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ephedrine,Cyclandelate": [
+          "Alcohol"
+        ],
+        "Ephedrine,Methylphenidate": [
+          "Agent Affecting Nervous System",
+          "Nitrogen Molecular Entity"
+        ],
+        "Cyclandelate,Methylphenidate": [
+          "P-Block Molecular Entity"
+        ]
+      },
+      "id": "path_3511"
+    },
+    {
+      "score": {
+        "ic_mean": 0.345,
+        "final_score": 0.345
+      },
+      "nodes": [
+        {
+          "id": "Ephedrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenol",
+          "type": "Compound"
+        },
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ephedrine",
+          "target": "Phenol",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenol",
+          "target": "Dextroamphetamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dextroamphetamine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ephedrine,Phenol": [
+          "Organic Hydroxy Compound"
+        ],
+        "Ephedrine,Dextroamphetamine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ],
+        "Phenol,Dextroamphetamine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_3512"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3299,
+        "final_score": 0.3299
+      },
+      "nodes": [
+        {
+          "id": "Ephedrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenol",
+          "type": "Compound"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ephedrine",
+          "target": "Phenol",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenol",
+          "target": "Methamphetamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ephedrine,Phenol": [
+          "Organic Hydroxy Compound"
+        ],
+        "Ephedrine,Methamphetamine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ],
+        "Phenol,Methamphetamine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_3513"
     }
-  ],
-  "verbalization": ""
+  ]
 }

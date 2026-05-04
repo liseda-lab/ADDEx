@@ -1,6 +1,148 @@
 {
   "id": "Compound::DB00829 - Gene::213",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5722,
+        "final_score": 0.5722
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Isoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Gabrb1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrb1",
+          "target": "Isoflurane",
+          "label": "is bound by"
+        },
+        {
+          "source": "Isoflurane",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Isoflurane": [
+          "Agent Affecting Nervous System",
+          "Organohalogen Compound"
+        ]
+      },
+      "id": "path_3932"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5509,
+        "final_score": 0.5509
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabre",
+          "type": "Gene"
+        },
+        {
+          "id": "Isoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Gabre",
+          "label": "binds"
+        },
+        {
+          "source": "Gabre",
+          "target": "Isoflurane",
+          "label": "is bound by"
+        },
+        {
+          "source": "Isoflurane",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Isoflurane": [
+          "Agent Affecting Nervous System",
+          "Organohalogen Compound"
+        ]
+      },
+      "id": "path_3933"
+    },
+    {
+      "score": {
+        "ic_mean": 0.523,
+        "final_score": 0.523
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Burning Rectal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telaprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Burning Rectal",
+          "label": "causes"
+        },
+        {
+          "source": "Burning Rectal",
+          "target": "Telaprevir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telaprevir",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Telaprevir": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_3934"
+    }
+  ]
 }

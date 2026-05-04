@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5021,
-        "final_score": 0.5021
+        "ic_mean": 0.4808,
+        "final_score": 0.4808
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Gene"
         },
         {
-          "id": "Telithromycin",
+          "id": "Lercanidipine",
           "type": "Compound"
         },
         {
@@ -32,22 +32,69 @@
         },
         {
           "source": "Cyp3a7",
-          "target": "Telithromycin",
+          "target": "Lercanidipine",
           "label": "is bound by"
         },
         {
-          "source": "Telithromycin",
+          "source": "Lercanidipine",
           "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cilostazol,Telithromycin": [
-          "Organooxygen Compound"
+        "Cilostazol,Lercanidipine": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_28700"
+      "id": "path_14781"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4808,
+        "final_score": 0.4808
+      },
+      "nodes": [
+        {
+          "id": "Cilostazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cilostazol",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Finasteride",
+          "label": "is bound by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cilostazol,Finasteride": [
+          "Enzyme Inhibitor",
+          "Lactam"
+        ]
+      },
+      "id": "path_14782"
     }
-  ],
-  "verbalization": ""
+  ]
 }

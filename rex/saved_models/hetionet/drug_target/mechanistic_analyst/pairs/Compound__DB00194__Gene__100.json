@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00194 - Gene::100",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6376,
+        "final_score": 0.6938,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Vidarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Skipped Beats",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Adenosine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ada",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vidarabine",
+          "target": "Skipped Beats",
+          "label": "causes"
+        },
+        {
+          "source": "Skipped Beats",
+          "target": "Adenosine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Adenosine",
+          "target": "Ada",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vidarabine,Adenosine": [
+          "Purine Nucleoside"
+        ],
+        "Vidarabine,Ada": [
+          "Nitrogen Molecular Entity"
+        ],
+        "Adenosine,Ada": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_11546"
+    }
+  ]
+}

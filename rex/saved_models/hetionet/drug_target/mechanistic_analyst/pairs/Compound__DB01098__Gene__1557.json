@@ -1,0 +1,142 @@
+{
+  "id": "Compound::DB01098 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5235,
+        "final_score": 0.5235
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp2c19",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11756"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4811,
+        "final_score": 0.4811
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Microscopic Hematuria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methsuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Microscopic Hematuria",
+          "label": "causes"
+        },
+        {
+          "source": "Microscopic Hematuria",
+          "target": "Methsuximide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methsuximide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosuvastatin,Methsuximide": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_11757"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4759,
+        "final_score": 0.4759
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Immune-mediated Necrotising Myopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lovastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Immune-mediated Necrotising Myopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Immune-mediated Necrotising Myopathy",
+          "target": "Lovastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lovastatin",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosuvastatin,Lovastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Statin"
+        ]
+      },
+      "id": "path_11758"
+    }
+  ]
+}

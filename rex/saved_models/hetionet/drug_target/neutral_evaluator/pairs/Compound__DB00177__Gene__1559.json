@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6925,
-        "final_score": 0.6925
-      },
-      "nodes": [
-        {
-          "id": "Valsartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Angiotensin 2 Receptor Antagonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Eprosartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Valsartan",
-          "target": "Angiotensin 2 Receptor Antagonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Angiotensin 2 Receptor Antagonists",
-          "target": "Eprosartan",
-          "label": "includes"
-        },
-        {
-          "source": "Eprosartan",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Valsartan,Eprosartan": [
-          "Carboxylic Acid",
-          "Angiotensin Ii Receptor Antagonist"
-        ]
-      },
-      "id": "path_19912"
-    },
-    {
-      "score": {
         "ic_mean": 0.6669,
         "final_score": 0.6669
       },
@@ -91,16 +43,16 @@
       ],
       "lowest_common_ancestors": {
         "Valsartan,Irbesartan": [
-          "Biphenylyltetrazole",
-          "Angiotensin Ii Receptor Antagonist"
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
         ]
       },
-      "id": "path_19913"
+      "id": "path_10070"
     },
     {
       "score": {
-        "ic_mean": 0.5565,
-        "final_score": 0.5565
+        "ic_mean": 0.5604,
+        "final_score": 0.5604
       },
       "nodes": [
         {
@@ -108,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Agtr1",
+          "id": "Slco1b1",
           "type": "Gene"
         },
         {
-          "id": "Candesartan",
+          "id": "Gemfibrozil",
           "type": "Compound"
         },
         {
@@ -123,32 +75,78 @@
       "edges": [
         {
           "source": "Valsartan",
-          "target": "Agtr1",
+          "target": "Slco1b1",
           "label": "binds"
         },
         {
-          "source": "Agtr1",
-          "target": "Candesartan",
+          "source": "Slco1b1",
+          "target": "Gemfibrozil",
           "label": "is bound by"
         },
         {
-          "source": "Candesartan",
+          "source": "Gemfibrozil",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Valsartan,Candesartan": [
-          "Monocarboxylic Acid",
-          "Angiotensin Ii Receptor Antagonist"
+        "Valsartan,Gemfibrozil": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_19914"
+      "id": "path_10071"
     },
     {
       "score": {
-        "ic_mean": 0.4278,
-        "final_score": 0.4278
+        "ic_mean": 0.4791,
+        "final_score": 0.4791
+      },
+      "nodes": [
+        {
+          "id": "Valsartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valsartan",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Rifampicin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valsartan,Rifampicin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10072"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4513,
+        "final_score": 0.4513
       },
       "nodes": [
         {
@@ -160,7 +158,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Paroxetine",
+          "id": "Omeprazole",
           "type": "Compound"
         },
         {
@@ -176,22 +174,21 @@
         },
         {
           "source": "Microcytic Anaemia",
-          "target": "Paroxetine",
+          "target": "Omeprazole",
           "label": "is caused by"
         },
         {
-          "source": "Paroxetine",
+          "source": "Omeprazole",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Valsartan,Paroxetine": [
+        "Valsartan,Omeprazole": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_19915"
+      "id": "path_10073"
     }
-  ],
-  "verbalization": ""
+  ]
 }

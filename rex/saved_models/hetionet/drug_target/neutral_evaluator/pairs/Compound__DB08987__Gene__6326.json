@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB08987 - Gene::6326",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7324,
+        "final_score": 0.7324
+      },
+      "nodes": [
+        {
+          "id": "Etidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Scn4a",
+          "type": "Gene"
+        },
+        {
+          "id": "Benzocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Scn2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etidocaine",
+          "target": "Scn4a",
+          "label": "binds"
+        },
+        {
+          "source": "Scn4a",
+          "target": "Benzocaine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Benzocaine",
+          "target": "Scn2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etidocaine,Benzocaine": [
+          "Organonitrogen Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_6990"
+    }
+  ]
 }

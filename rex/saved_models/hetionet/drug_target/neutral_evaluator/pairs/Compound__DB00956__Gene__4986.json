@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7302,
-        "final_score": 0.7302
+        "ic_mean": 0.7776,
+        "final_score": 0.7776
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
-          "type": "Gene"
+          "id": "Opioid Agonists",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Heroin",
+          "id": "Tapentadol",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Hydrocodone",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Opioid Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Oprd1",
-          "target": "Heroin",
-          "label": "is bound by"
+          "source": "Opioid Agonists",
+          "target": "Tapentadol",
+          "label": "includes"
         },
         {
-          "source": "Heroin",
+          "source": "Tapentadol",
           "target": "Oprk1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Hydrocodone,Heroin": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
+        "Hydrocodone,Tapentadol": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_19382"
+      "id": "path_9795"
     },
     {
       "score": {
-        "ic_mean": 0.7302,
-        "final_score": 0.7302
+        "ic_mean": 0.6788,
+        "final_score": 0.6788
       },
       "nodes": [
         {
@@ -61,54 +61,6 @@
         },
         {
           "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Nalbuphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrocodone",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Nalbuphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nalbuphine",
-          "target": "Oprk1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrocodone,Nalbuphine": [
-          "Organic Heteropentacyclic Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_19383"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6876,
-        "final_score": 0.6876
-      },
-      "nodes": [
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprm1",
           "type": "Gene"
         },
         {
@@ -123,11 +75,11 @@
       "edges": [
         {
           "source": "Hydrocodone",
-          "target": "Oprm1",
+          "target": "Oprd1",
           "label": "binds"
         },
         {
-          "source": "Oprm1",
+          "source": "Oprd1",
           "target": "Butorphanol",
           "label": "is bound by"
         },
@@ -139,11 +91,11 @@
       ],
       "lowest_common_ancestors": {
         "Hydrocodone,Butorphanol": [
-          "Opioid",
-          "Organonitrogen Compound"
+          "Organonitrogen Compound",
+          "Opioid"
         ]
       },
-      "id": "path_19384"
+      "id": "path_9796"
     },
     {
       "score": {
@@ -187,155 +139,11 @@
       ],
       "lowest_common_ancestors": {
         "Hydrocodone,Alvimopan": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_19385"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6788,
-        "final_score": 0.6788
-      },
-      "nodes": [
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Butorphanol",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrocodone",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Butorphanol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Butorphanol",
-          "target": "Oprk1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrocodone,Butorphanol": [
-          "Opioid",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_19386"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6788,
-        "final_score": 0.6788
-      },
-      "nodes": [
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Sufentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrocodone",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Sufentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sufentanil",
-          "target": "Oprk1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrocodone,Sufentanil": [
-          "Opioid Receptor Agonist",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19387"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6788,
-        "final_score": 0.6788
-      },
-      "nodes": [
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Levorphanol",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrocodone",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Levorphanol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Levorphanol",
-          "target": "Oprk1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrocodone,Levorphanol": [
           "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_19388"
+      "id": "path_9797"
     },
     {
       "score": {
@@ -380,58 +188,10 @@
       "lowest_common_ancestors": {
         "Hydrocodone,Oxymorphone": [
           "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_19389"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6362,
-        "final_score": 0.6362
-      },
-      "nodes": [
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentazocine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Hydrocodone",
-          "target": "Oprm1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprm1",
-          "target": "Pentazocine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentazocine",
-          "target": "Oprk1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Hydrocodone,Pentazocine": [
-          "Organic Heteropolycyclic Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_19390"
+      "id": "path_9798"
     },
     {
       "score": {
@@ -476,10 +236,10 @@
       "lowest_common_ancestors": {
         "Hydrocodone,Pentazocine": [
           "Organic Heteropolycyclic Compound",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_19391"
+      "id": "path_9799"
     },
     {
       "score": {
@@ -524,11 +284,114 @@
       "lowest_common_ancestors": {
         "Hydrocodone,Oxymorphone": [
           "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_19392"
+      "id": "path_9800"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6049,
+        "final_score": 0.6049
+      },
+      "nodes": [
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ureteral Spasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrocodone",
+          "target": "Ureteral Spasm",
+          "label": "causes"
+        },
+        {
+          "source": "Ureteral Spasm",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hydrocodone,Codeine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_9801"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5447,
+        "final_score": 0.5447
+      },
+      "nodes": [
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Heroin",
+          "type": "Compound"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrocodone",
+          "target": "Heroin",
+          "label": "resembles"
+        },
+        {
+          "source": "Heroin",
+          "target": "Codeine",
+          "label": "resembles"
+        },
+        {
+          "source": "Codeine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hydrocodone,Heroin": [
+          "Organonitrogen Compound",
+          "Opioid"
+        ],
+        "Hydrocodone,Codeine": [
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
+        ],
+        "Heroin,Codeine": [
+          "Opiate",
+          "Morphinane Alkaloid"
+        ]
+      },
+      "id": "path_9802"
     }
-  ],
-  "verbalization": ""
+  ]
 }

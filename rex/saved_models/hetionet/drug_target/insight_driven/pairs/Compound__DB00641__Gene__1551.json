@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00641 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4356,
+        "final_score": 0.4356
+      },
+      "nodes": [
+        {
+          "id": "Simvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ophthalmoplegia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ritonavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simvastatin",
+          "target": "Ophthalmoplegia",
+          "label": "causes"
+        },
+        {
+          "source": "Ophthalmoplegia",
+          "target": "Ritonavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ritonavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simvastatin,Ritonavir": [
+          "Carboxylic Ester",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_1601"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3962,
+        "final_score": 0.3962
+      },
+      "nodes": [
+        {
+          "id": "Simvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypersensitive Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simvastatin",
+          "target": "Hypersensitive Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Hypersensitive Syndrome",
+          "target": "Phenytoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simvastatin,Phenytoin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1602"
+    }
+  ]
+}

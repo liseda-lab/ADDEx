@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB01174 - Gene::1139",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7306,
+        "final_score": 0.7306
+      },
+      "nodes": [
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gria2",
+          "type": "Gene"
+        },
+        {
+          "id": "Butabarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenobarbital",
+          "target": "Gria2",
+          "label": "binds"
+        },
+        {
+          "source": "Gria2",
+          "target": "Butabarbital",
+          "label": "is bound by"
+        },
+        {
+          "source": "Butabarbital",
+          "target": "Chrna7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenobarbital,Butabarbital": [
+          "Barbiturate",
+          "Barbiturates"
+        ]
+      },
+      "id": "path_11412"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7006,
+        "final_score": 0.7006
+      },
+      "nodes": [
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrfam7a",
+          "type": "Gene"
+        },
+        {
+          "id": "Butalbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenobarbital",
+          "target": "Chrfam7a",
+          "label": "binds"
+        },
+        {
+          "source": "Chrfam7a",
+          "target": "Butalbital",
+          "label": "is bound by"
+        },
+        {
+          "source": "Butalbital",
+          "target": "Chrna7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenobarbital,Butalbital": [
+          "Barbiturate",
+          "Barbiturates"
+        ]
+      },
+      "id": "path_11413"
+    }
+  ]
 }

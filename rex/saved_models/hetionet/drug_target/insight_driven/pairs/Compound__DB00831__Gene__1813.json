@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00831 - Gene::1813",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6912,
+        "final_score": 0.7623,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Promethazine",
+          "label": "includes"
+        },
+        {
+          "source": "Promethazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Trifluoperazine,Promethazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ],
+        "Phenothiazines,Promethazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_4744"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5825,
+        "final_score": 0.5412,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pill Rolling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Pill Rolling",
+          "label": "causes"
+        },
+        {
+          "source": "Pill Rolling",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prochlorperazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Prochlorperazine": [
+          "N-Methylpiperazine",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_4745"
+    }
+  ]
+}

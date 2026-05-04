@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5772,
-        "final_score": 0.5772
+        "ic_mean": 0.5471,
+        "final_score": 0.5471
       },
       "nodes": [
         {
@@ -12,8 +12,8 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
-          "type": "Gene"
+          "id": "Levallorphan",
+          "type": "Compound"
         },
         {
           "id": "Pentazocine",
@@ -27,13 +27,13 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Levallorphan",
+          "label": "resembles"
         },
         {
-          "source": "Oprd1",
+          "source": "Levallorphan",
           "target": "Pentazocine",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Pentazocine",
@@ -42,13 +42,76 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Dextromethorphan,Levallorphan": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
         "Dextromethorphan,Pentazocine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
+        ],
+        "Levallorphan,Pentazocine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_7302"
+      "id": "path_3429"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4876,
+        "final_score": 0.4876
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Dezocine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pentazocine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sigmar1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Dezocine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dezocine",
+          "target": "Pentazocine",
+          "label": "resembles"
+        },
+        {
+          "source": "Pentazocine",
+          "target": "Sigmar1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Dezocine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Pentazocine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Dezocine,Pentazocine": [
+          "Organic Cyclic Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_3430"
     }
-  ],
-  "verbalization": ""
+  ]
 }

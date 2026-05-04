@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB04953 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.576,
+        "final_score": 0.576
+      },
+      "nodes": [
+        {
+          "id": "Ezogabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nat2",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ezogabine",
+          "target": "Nat2",
+          "label": "binds"
+        },
+        {
+          "source": "Nat2",
+          "target": "Acetaminophen",
+          "label": "is bound by"
+        },
+        {
+          "source": "Acetaminophen",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ezogabine,Acetaminophen": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_14598"
+    }
+  ]
 }

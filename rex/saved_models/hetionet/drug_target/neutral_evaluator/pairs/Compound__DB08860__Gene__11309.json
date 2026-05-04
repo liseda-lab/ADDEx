@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB08860 - Gene::11309",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5333,
+        "final_score": 0.5333
+      },
+      "nodes": [
+        {
+          "id": "Pitavastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Myoglobinuria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco2b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pitavastatin",
+          "target": "Myoglobinuria",
+          "label": "causes"
+        },
+        {
+          "source": "Myoglobinuria",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Slco2b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pitavastatin,Pravastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Hydroxy Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_6549"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5333,
+        "final_score": 0.5333
+      },
+      "nodes": [
+        {
+          "id": "Pitavastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Myoglobin Urine Present",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco2b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pitavastatin",
+          "target": "Myoglobin Urine Present",
+          "label": "causes"
+        },
+        {
+          "source": "Myoglobin Urine Present",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Slco2b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pitavastatin,Pravastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Hydroxy Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_6550"
+    }
+  ]
 }

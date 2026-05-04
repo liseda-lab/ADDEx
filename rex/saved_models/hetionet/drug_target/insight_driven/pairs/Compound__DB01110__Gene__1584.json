@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB01110 - Gene::1584",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.514,
+        "final_score": 0.514
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Fluconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Fluconazole",
+          "target": "Cyp11b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Azoles": [
+          "Azole"
+        ],
+        "Miconazole,Fluconazole": [
+          "Antifungal Agent",
+          "Oxygen Molecular Entity"
+        ],
+        "Azoles,Fluconazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_1538"
+    }
+  ]
+}

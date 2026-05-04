@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB01059 - Gene::9356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5187,
+        "final_score": 0.5187
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Rosoxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Nalidixic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Rosoxacin",
+          "label": "resembles"
+        },
+        {
+          "source": "Rosoxacin",
+          "target": "Nalidixic Acid",
+          "label": "resembles"
+        },
+        {
+          "source": "Nalidixic Acid",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Rosoxacin": [
+          "Quinolone Antibiotic",
+          "Quinolinemonocarboxylic Acid"
+        ],
+        "Norfloxacin,Nalidixic Acid": [
+          "Quinolone Antibiotic",
+          "Carboxylic Acid"
+        ],
+        "Rosoxacin,Nalidixic Acid": [
+          "Quinolone Antibiotic",
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_6882"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4601,
+        "final_score": 0.4601
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Guillain-barre Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Stavudine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Guillain-barre Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Guillain-barre Syndrome",
+          "target": "Stavudine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Stavudine",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Stavudine": [
+          "Organooxygen Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_6883"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00178 - Gene::6564",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4761,
+        "final_score": 0.4761
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma Aggravated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oseltamivir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Asthma Aggravated",
+          "label": "causes"
+        },
+        {
+          "source": "Asthma Aggravated",
+          "target": "Oseltamivir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oseltamivir",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ramipril,Oseltamivir": [
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_4755"
+    }
+  ]
+}

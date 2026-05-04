@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6969,
-        "final_score": 0.6969
+        "ic_mean": 0.5769,
+        "final_score": 0.5769
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrnb4",
-          "type": "Gene"
+          "id": "Levallorphan",
+          "type": "Compound"
         },
         {
-          "id": "Levomethadyl Acetate",
+          "id": "Dezocine",
           "type": "Compound"
         },
         {
@@ -27,80 +27,40 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Chrnb4",
-          "label": "binds"
+          "target": "Levallorphan",
+          "label": "resembles"
         },
         {
-          "source": "Chrnb4",
-          "target": "Levomethadyl Acetate",
-          "label": "is bound by"
+          "source": "Levallorphan",
+          "target": "Dezocine",
+          "label": "resembles"
         },
         {
-          "source": "Levomethadyl Acetate",
+          "source": "Dezocine",
           "target": "Oprm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextromethorphan,Levomethadyl Acetate": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_15570"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6368,
-        "final_score": 0.6368
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprm1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Hydrocodone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydrocodone",
-          "target": "Oprm1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Hydrocodone": [
-          "Organic Heteropolycyclic Compound",
+        "Dextromethorphan,Levallorphan": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Dezocine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Levallorphan,Dezocine": [
+          "Organonitrogen Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_15571"
+      "id": "path_7774"
     },
     {
       "score": {
-        "ic_mean": 0.6368,
-        "final_score": 0.6368
+        "ic_mean": 0.5553,
+        "final_score": 0.5553
       },
       "nodes": [
         {
@@ -108,8 +68,64 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
+          "id": "Levallorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Pentazocine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
           "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Levallorphan",
+          "label": "resembles"
+        },
+        {
+          "source": "Levallorphan",
+          "target": "Pentazocine",
+          "label": "resembles"
+        },
+        {
+          "source": "Pentazocine",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Levallorphan": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Pentazocine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Levallorphan,Pentazocine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7775"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5513,
+        "final_score": 0.5513
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Levallorphan",
+          "type": "Compound"
         },
         {
           "id": "Butorphanol",
@@ -123,13 +139,13 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Levallorphan",
+          "label": "resembles"
         },
         {
-          "source": "Oprd1",
+          "source": "Levallorphan",
           "target": "Butorphanol",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Butorphanol",
@@ -138,17 +154,25 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Dextromethorphan,Levallorphan": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
         "Dextromethorphan,Butorphanol": [
           "Morphinane Alkaloid",
           "Analgesic Agent"
+        ],
+        "Levallorphan,Butorphanol": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_15572"
+      "id": "path_7776"
     },
     {
       "score": {
-        "ic_mean": 0.6068,
-        "final_score": 0.6068
+        "ic_mean": 0.5513,
+        "final_score": 0.5513
       },
       "nodes": [
         {
@@ -156,11 +180,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
-          "type": "Gene"
+          "id": "Levallorphan",
+          "type": "Compound"
         },
         {
-          "id": "Oxymorphone",
+          "id": "Levorphanol",
           "type": "Compound"
         },
         {
@@ -171,32 +195,40 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Levallorphan",
+          "label": "resembles"
         },
         {
-          "source": "Oprd1",
-          "target": "Oxymorphone",
-          "label": "is bound by"
+          "source": "Levallorphan",
+          "target": "Levorphanol",
+          "label": "resembles"
         },
         {
-          "source": "Oxymorphone",
+          "source": "Levorphanol",
           "target": "Oprm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextromethorphan,Oxymorphone": [
-          "Agent Affecting Nervous System",
-          "Morphinane Alkaloid"
+        "Dextromethorphan,Levallorphan": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Levorphanol": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
+        "Levallorphan,Levorphanol": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_15573"
+      "id": "path_7777"
     },
     {
       "score": {
-        "ic_mean": 0.5854,
-        "final_score": 0.5854
+        "ic_mean": 0.5472,
+        "final_score": 0.5472
       },
       "nodes": [
         {
@@ -204,8 +236,64 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
+          "id": "Dezocine",
+          "type": "Compound"
+        },
+        {
+          "id": "Levallorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
           "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Dezocine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dezocine",
+          "target": "Levallorphan",
+          "label": "resembles"
+        },
+        {
+          "source": "Levallorphan",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Dezocine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Levallorphan": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
+        "Dezocine,Levallorphan": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7778"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4958,
+        "final_score": 0.4958
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Dezocine",
+          "type": "Compound"
         },
         {
           "id": "Pentazocine",
@@ -219,13 +307,13 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Dezocine",
+          "label": "resembles"
         },
         {
-          "source": "Oprd1",
+          "source": "Dezocine",
           "target": "Pentazocine",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Pentazocine",
@@ -234,17 +322,25 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Dextromethorphan,Dezocine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ],
         "Dextromethorphan,Pentazocine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
+        ],
+        "Dezocine,Pentazocine": [
+          "Organic Cyclic Compound",
+          "Opioid"
         ]
       },
-      "id": "path_15574"
+      "id": "path_7779"
     },
     {
       "score": {
-        "ic_mean": 0.5776,
-        "final_score": 0.5776
+        "ic_mean": 0.4918,
+        "final_score": 0.4918
       },
       "nodes": [
         {
@@ -252,11 +348,11 @@
           "type": "Compound"
         },
         {
-          "id": "Sigmar1",
-          "type": "Gene"
+          "id": "Dezocine",
+          "type": "Compound"
         },
         {
-          "id": "Pentazocine",
+          "id": "Butorphanol",
           "type": "Compound"
         },
         {
@@ -267,28 +363,139 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Sigmar1",
-          "label": "binds"
+          "target": "Dezocine",
+          "label": "resembles"
         },
         {
-          "source": "Sigmar1",
-          "target": "Pentazocine",
-          "label": "is bound by"
+          "source": "Dezocine",
+          "target": "Butorphanol",
+          "label": "resembles"
         },
         {
-          "source": "Pentazocine",
+          "source": "Butorphanol",
           "target": "Oprm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextromethorphan,Pentazocine": [
-          "Organic Heteropolycyclic Compound",
+        "Dextromethorphan,Dezocine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Butorphanol": [
+          "Morphinane Alkaloid",
+          "Analgesic Agent"
+        ],
+        "Dezocine,Butorphanol": [
+          "Organonitrogen Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_7780"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4918,
+        "final_score": 0.4918
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Dezocine",
+          "type": "Compound"
+        },
+        {
+          "id": "Levorphanol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Dezocine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dezocine",
+          "target": "Levorphanol",
+          "label": "resembles"
+        },
+        {
+          "source": "Levorphanol",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Dezocine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Levorphanol": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
+        "Dezocine,Levorphanol": [
+          "Organonitrogen Compound",
+          "Opioid"
+        ]
+      },
+      "id": "path_7781"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4828,
+        "final_score": 0.4828
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Ethylmorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Ethylmorphine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ethylmorphine",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Ethylmorphine": [
+          "Morphinane Alkaloid",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_15575"
+      "id": "path_7782"
     }
-  ],
-  "verbalization": ""
+  ]
 }

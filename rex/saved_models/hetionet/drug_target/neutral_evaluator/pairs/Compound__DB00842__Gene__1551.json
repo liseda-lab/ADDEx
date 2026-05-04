@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7156,
-        "final_score": 0.7156
+        "ic_mean": 0.5964,
+        "final_score": 0.5964
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
+          "id": "Gabre",
           "type": "Gene"
         },
         {
-          "id": "Ethosuximide",
+          "id": "Triazolam",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Oxazepam",
-          "target": "Cyp3a43",
+          "target": "Gabre",
           "label": "binds"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Ethosuximide",
+          "source": "Gabre",
+          "target": "Triazolam",
           "label": "is bound by"
         },
         {
-          "source": "Ethosuximide",
+          "source": "Triazolam",
           "target": "Cyp3a7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Oxazepam,Ethosuximide": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+        "Oxazepam,Triazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
         ]
       },
-      "id": "path_23751"
+      "id": "path_12010"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5964,
+        "final_score": 0.5964
+      },
+      "nodes": [
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        },
+        {
+          "id": "Triazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxazepam",
+          "target": "Gabrq",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrq",
+          "target": "Triazolam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Triazolam",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxazepam,Triazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_12011"
     }
-  ],
-  "verbalization": ""
+  ]
 }

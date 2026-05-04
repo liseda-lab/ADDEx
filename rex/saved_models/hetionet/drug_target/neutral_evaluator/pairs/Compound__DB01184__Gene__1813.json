@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5446,
-        "final_score": 0.5446
+        "ic_mean": 0.53,
+        "final_score": 0.53
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Drd3",
-          "type": "Gene"
+          "id": "Dystonic Reaction",
+          "type": "Side Effect"
         },
         {
-          "id": "Rotigotine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -27,27 +27,75 @@
       "edges": [
         {
           "source": "Domperidone",
-          "target": "Drd3",
-          "label": "binds"
+          "target": "Dystonic Reaction",
+          "label": "causes"
         },
         {
-          "source": "Drd3",
-          "target": "Rotigotine",
-          "label": "is bound by"
+          "source": "Dystonic Reaction",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Rotigotine",
+          "source": "Prochlorperazine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Domperidone,Rotigotine": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Domperidone,Prochlorperazine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_8958"
+      "id": "path_4348"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5169,
+        "final_score": 0.5169
+      },
+      "nodes": [
+        {
+          "id": "Domperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Dystonic Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Metoclopramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Domperidone",
+          "target": "Dystonic Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Dystonic Reaction",
+          "target": "Metoclopramide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Metoclopramide",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Domperidone,Metoclopramide": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4349"
     },
     {
       "score": {
@@ -95,8 +143,7 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_8959"
+      "id": "path_4350"
     }
-  ],
-  "verbalization": ""
+  ]
 }

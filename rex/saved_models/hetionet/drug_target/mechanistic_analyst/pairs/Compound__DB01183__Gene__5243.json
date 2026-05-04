@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01183 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.534,
+        "final_score": 0.534
+      },
+      "nodes": [
+        {
+          "id": "Naloxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Dependence On Opiates",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Alfentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naloxone",
+          "target": "Dependence On Opiates",
+          "label": "causes"
+        },
+        {
+          "source": "Dependence On Opiates",
+          "target": "Alfentanil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Alfentanil",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naloxone,Alfentanil": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2478"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6788,
-        "final_score": 0.6788
+        "ic_mean": 0.5417,
+        "final_score": 0.5417
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt2b7",
-          "type": "Gene"
+          "id": "Pseudoporphyria",
+          "type": "Side Effect"
         },
         {
-          "id": "Suprofen",
+          "id": "Nabumetone",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Naproxen",
-          "target": "Ugt2b7",
-          "label": "binds"
+          "target": "Pseudoporphyria",
+          "label": "causes"
         },
         {
-          "source": "Ugt2b7",
-          "target": "Suprofen",
-          "label": "is bound by"
+          "source": "Pseudoporphyria",
+          "target": "Nabumetone",
+          "label": "is caused by"
         },
         {
-          "source": "Suprofen",
+          "source": "Nabumetone",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Naproxen,Suprofen": [
-          "Monocarboxylic Acid",
-          "Nonsteroidal Antiinflammatory Drug"
+        "Naproxen,Nabumetone": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Methoxynaphthalene"
         ]
       },
-      "id": "path_12214"
+      "id": "path_6156"
     },
     {
       "score": {
-        "ic_mean": 0.5761,
-        "final_score": 0.5761
+        "ic_mean": 0.5402,
+        "final_score": 0.5402
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt2b7",
-          "type": "Gene"
+          "id": "Pseudoporphyria",
+          "type": "Side Effect"
         },
         {
-          "id": "Flurbiprofen",
+          "id": "Oxaprozin",
           "type": "Compound"
         },
         {
@@ -75,32 +75,32 @@
       "edges": [
         {
           "source": "Naproxen",
-          "target": "Ugt2b7",
-          "label": "binds"
+          "target": "Pseudoporphyria",
+          "label": "causes"
         },
         {
-          "source": "Ugt2b7",
-          "target": "Flurbiprofen",
-          "label": "is bound by"
+          "source": "Pseudoporphyria",
+          "target": "Oxaprozin",
+          "label": "is caused by"
         },
         {
-          "source": "Flurbiprofen",
+          "source": "Oxaprozin",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Naproxen,Flurbiprofen": [
+        "Naproxen,Oxaprozin": [
           "Monocarboxylic Acid",
           "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_12215"
+      "id": "path_6157"
     },
     {
       "score": {
-        "ic_mean": 0.5613,
-        "final_score": 0.5613
+        "ic_mean": 0.524,
+        "final_score": 0.524
       },
       "nodes": [
         {
@@ -108,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ptgs1",
-          "type": "Gene"
+          "id": "Nephritic Syndrome",
+          "type": "Side Effect"
         },
         {
-          "id": "Balsalazide",
+          "id": "Nabumetone",
           "type": "Compound"
         },
         {
@@ -123,27 +123,27 @@
       "edges": [
         {
           "source": "Naproxen",
-          "target": "Ptgs1",
-          "label": "binds"
+          "target": "Nephritic Syndrome",
+          "label": "causes"
         },
         {
-          "source": "Ptgs1",
-          "target": "Balsalazide",
-          "label": "is bound by"
+          "source": "Nephritic Syndrome",
+          "target": "Nabumetone",
+          "label": "is caused by"
         },
         {
-          "source": "Balsalazide",
+          "source": "Nabumetone",
           "target": "Ptgs2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Naproxen,Balsalazide": [
-          "Carboxylic Acid Anion",
-          "Nonsteroidal Antiinflammatory Drug"
+        "Naproxen,Nabumetone": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Methoxynaphthalene"
         ]
       },
-      "id": "path_12216"
+      "id": "path_6158"
     },
     {
       "score": {
@@ -187,11 +187,59 @@
       ],
       "lowest_common_ancestors": {
         "Naproxen,Ketorolac": [
-          "Cyclooxygenase Inhibitor",
-          "Monocarboxylic Acid Anion"
+          "Monocarboxylic Acid",
+          "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_12217"
+      "id": "path_6159"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5167,
+        "final_score": 0.5167
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuritis Retrobulbar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Neuritis Retrobulbar",
+          "label": "causes"
+        },
+        {
+          "source": "Neuritis Retrobulbar",
+          "target": "Flurbiprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurbiprofen",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Flurbiprofen": [
+          "Monocarboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_6160"
     },
     {
       "score": {
@@ -239,7 +287,7 @@
           "Nonsteroidal Antiinflammatory Drug"
         ]
       },
-      "id": "path_12218"
+      "id": "path_6161"
     },
     {
       "score": {
@@ -283,108 +331,105 @@
       ],
       "lowest_common_ancestors": {
         "Naproxen,Fenoprofen": [
-          "Cyclooxygenase Inhibitor",
-          "Monocarboxylic Acid Anion"
-        ]
-      },
-      "id": "path_12219"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4913,
-        "final_score": 0.4913
-      },
-      "nodes": [
-        {
-          "id": "Naproxen",
-          "type": "Compound"
-        },
-        {
-          "id": "Renal Papillary Necrosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Mefenamic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Naproxen",
-          "target": "Renal Papillary Necrosis",
-          "label": "causes"
-        },
-        {
-          "source": "Renal Papillary Necrosis",
-          "target": "Mefenamic Acid",
-          "label": "is caused by"
-        },
-        {
-          "source": "Mefenamic Acid",
-          "target": "Ptgs2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Naproxen,Mefenamic Acid": [
-          "Carboxylic Acid",
-          "Nonsteroidal Antiinflammatory Drug"
-        ]
-      },
-      "id": "path_12220"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4861,
-        "final_score": 0.4861
-      },
-      "nodes": [
-        {
-          "id": "Naproxen",
-          "type": "Compound"
-        },
-        {
-          "id": "Renal Papillary Necrosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Etodolac",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Naproxen",
-          "target": "Renal Papillary Necrosis",
-          "label": "causes"
-        },
-        {
-          "source": "Renal Papillary Necrosis",
-          "target": "Etodolac",
-          "label": "is caused by"
-        },
-        {
-          "source": "Etodolac",
-          "target": "Ptgs2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Naproxen,Etodolac": [
           "Monocarboxylic Acid",
-          "Nonsteroidal Antiinflammatory Drug"
+          "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_12221"
+      "id": "path_6162"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5014,
+        "final_score": 0.5014
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Papillary Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Renal Papillary Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Papillary Necrosis",
+          "target": "Dapsone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dapsone",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Dapsone": [
+          "Benzenoid Aromatic Compound"
+        ]
+      },
+      "id": "path_6163"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4938,
+        "final_score": 0.4938
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Inflammatory Bowel Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Risedronate",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Inflammatory Bowel Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Inflammatory Bowel Disease",
+          "target": "Risedronate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Risedronate",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Risedronate": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6164"
     }
-  ],
-  "verbalization": ""
+  ]
 }

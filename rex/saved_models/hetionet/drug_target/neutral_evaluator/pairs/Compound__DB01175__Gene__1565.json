@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4784,
-        "final_score": 0.4784
+        "ic_mean": 0.4746,
+        "final_score": 0.4746
       },
       "nodes": [
         {
@@ -12,7 +12,145 @@
           "type": "Compound"
         },
         {
-          "id": "Foot Fracture",
+          "id": "Melancholia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Donepezil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Escitalopram",
+          "target": "Melancholia",
+          "label": "causes"
+        },
+        {
+          "source": "Melancholia",
+          "target": "Donepezil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Donepezil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_697"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4492,
+        "final_score": 0.4492
+      },
+      "nodes": [
+        {
+          "id": "Escitalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "Early Satiety",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Escitalopram",
+          "target": "Early Satiety",
+          "label": "causes"
+        },
+        {
+          "source": "Early Satiety",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Escitalopram,Oxycodone": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_698"
+    },
+    {
+      "score": {
+        "ic_mean": 0.438,
+        "final_score": 0.438
+      },
+      "nodes": [
+        {
+          "id": "Escitalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "Blunted Affect",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Escitalopram",
+          "target": "Blunted Affect",
+          "label": "causes"
+        },
+        {
+          "source": "Blunted Affect",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Escitalopram,Paliperidone": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_699"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4358,
+        "final_score": 0.4358
+      },
+      "nodes": [
+        {
+          "id": "Escitalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "Joint Injury",
           "type": "Side Effect"
         },
         {
@@ -27,11 +165,11 @@
       "edges": [
         {
           "source": "Escitalopram",
-          "target": "Foot Fracture",
+          "target": "Joint Injury",
           "label": "causes"
         },
         {
-          "source": "Foot Fracture",
+          "source": "Joint Injury",
           "target": "Hydrocodone",
           "label": "is caused by"
         },
@@ -47,12 +185,12 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_1392"
+      "id": "path_700"
     },
     {
       "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
+        "ic_mean": 0.4207,
+        "final_score": 0.4207
       },
       "nodes": [
         {
@@ -60,11 +198,11 @@
           "type": "Compound"
         },
         {
-          "id": "Muscle Rupture",
+          "id": "Gastric Polyps",
           "type": "Side Effect"
         },
         {
-          "id": "Citalopram",
+          "id": "Omeprazole",
           "type": "Compound"
         },
         {
@@ -75,32 +213,31 @@
       "edges": [
         {
           "source": "Escitalopram",
-          "target": "Muscle Rupture",
+          "target": "Gastric Polyps",
           "label": "causes"
         },
         {
-          "source": "Muscle Rupture",
-          "target": "Citalopram",
+          "source": "Gastric Polyps",
+          "target": "Omeprazole",
           "label": "is caused by"
         },
         {
-          "source": "Citalopram",
+          "source": "Omeprazole",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
+        "Escitalopram,Omeprazole": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_1393"
+      "id": "path_701"
     },
     {
       "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
+        "ic_mean": 0.3605,
+        "final_score": 0.3605
       },
       "nodes": [
         {
@@ -108,11 +245,11 @@
           "type": "Compound"
         },
         {
-          "id": "Tooth Injury",
+          "id": "Allergy Aggravated",
           "type": "Side Effect"
         },
         {
-          "id": "Citalopram",
+          "id": "Verapamil",
           "type": "Compound"
         },
         {
@@ -123,1324 +260,26 @@
       "edges": [
         {
           "source": "Escitalopram",
-          "target": "Tooth Injury",
+          "target": "Allergy Aggravated",
           "label": "causes"
         },
         {
-          "source": "Tooth Injury",
-          "target": "Citalopram",
+          "source": "Allergy Aggravated",
+          "target": "Verapamil",
           "label": "is caused by"
         },
         {
-          "source": "Citalopram",
+          "source": "Verapamil",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
+        "Escitalopram,Verapamil": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_1394"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Sensation Of Blood Flow",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Sensation Of Blood Flow",
-          "label": "causes"
-        },
-        {
-          "source": "Sensation Of Blood Flow",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1395"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Carbohydrate Craving",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Carbohydrate Craving",
-          "label": "causes"
-        },
-        {
-          "source": "Carbohydrate Craving",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1396"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Latent Tetany",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Latent Tetany",
-          "label": "causes"
-        },
-        {
-          "source": "Latent Tetany",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1397"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Tracheal Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Tracheal Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Tracheal Disorder",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1398"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Genitourinary Chlamydia Infection",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Genitourinary Chlamydia Infection",
-          "label": "causes"
-        },
-        {
-          "source": "Genitourinary Chlamydia Infection",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1399"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Sports Injury",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Sports Injury",
-          "label": "causes"
-        },
-        {
-          "source": "Sports Injury",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1400"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "House Dust Allergy",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "House Dust Allergy",
-          "label": "causes"
-        },
-        {
-          "source": "House Dust Allergy",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1401"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Nervous Tremulousness",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Nervous Tremulousness",
-          "label": "causes"
-        },
-        {
-          "source": "Nervous Tremulousness",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1402"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Restlessness Aggravated",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Restlessness Aggravated",
-          "label": "causes"
-        },
-        {
-          "source": "Restlessness Aggravated",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1403"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Stress At Work",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Stress At Work",
-          "label": "causes"
-        },
-        {
-          "source": "Stress At Work",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1404"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Otosalpingitis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Otosalpingitis",
-          "label": "causes"
-        },
-        {
-          "source": "Otosalpingitis",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1405"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4511,
-        "final_score": 0.4511
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Sacroiliitis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Sacroiliitis",
-          "label": "causes"
-        },
-        {
-          "source": "Sacroiliitis",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1406"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4445,
-        "final_score": 0.4445
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Periodontal Destruction",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Cevimeline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Periodontal Destruction",
-          "label": "causes"
-        },
-        {
-          "source": "Periodontal Destruction",
-          "target": "Cevimeline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Cevimeline",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Cevimeline": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_1407"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4132,
-        "final_score": 0.4132
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Ligament Injury",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tramadol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Ligament Injury",
-          "label": "causes"
-        },
-        {
-          "source": "Ligament Injury",
-          "target": "Tramadol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tramadol",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Tramadol": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_1408"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4084,
-        "final_score": 0.4084
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Facial Bones Fracture",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Facial Bones Fracture",
-          "label": "causes"
-        },
-        {
-          "source": "Facial Bones Fracture",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1409"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4084,
-        "final_score": 0.4084
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Gilbert's Syndrome",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Gilbert's Syndrome",
-          "label": "causes"
-        },
-        {
-          "source": "Gilbert's Syndrome",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1410"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4084,
-        "final_score": 0.4084
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Genital Infection",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Genital Infection",
-          "label": "causes"
-        },
-        {
-          "source": "Genital Infection",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1411"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4084,
-        "final_score": 0.4084
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Carbuncle",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Carbuncle",
-          "label": "causes"
-        },
-        {
-          "source": "Carbuncle",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1412"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4084,
-        "final_score": 0.4084
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Hand Dermatitis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Hand Dermatitis",
-          "label": "causes"
-        },
-        {
-          "source": "Hand Dermatitis",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1413"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4084,
-        "final_score": 0.4084
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Periodontal Destruction",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Periodontal Destruction",
-          "label": "causes"
-        },
-        {
-          "source": "Periodontal Destruction",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1414"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4084,
-        "final_score": 0.4084
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Scoliosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Scoliosis",
-          "label": "causes"
-        },
-        {
-          "source": "Scoliosis",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1415"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4084,
-        "final_score": 0.4084
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Ischial Neuralgia",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Ischial Neuralgia",
-          "label": "causes"
-        },
-        {
-          "source": "Ischial Neuralgia",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1416"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3835,
-        "final_score": 0.3835
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Femoral Neck Fracture",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Femoral Neck Fracture",
-          "label": "causes"
-        },
-        {
-          "source": "Femoral Neck Fracture",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1417"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3835,
-        "final_score": 0.3835
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Ligament Injury",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Ligament Injury",
-          "label": "causes"
-        },
-        {
-          "source": "Ligament Injury",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1418"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3835,
-        "final_score": 0.3835
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Head Discomfort",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Head Discomfort",
-          "label": "causes"
-        },
-        {
-          "source": "Head Discomfort",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1419"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3835,
-        "final_score": 0.3835
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Foot Fracture",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Foot Fracture",
-          "label": "causes"
-        },
-        {
-          "source": "Foot Fracture",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1420"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3658,
-        "final_score": 0.3658
-      },
-      "nodes": [
-        {
-          "id": "Escitalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Drug Level Decreased",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Escitalopram",
-          "target": "Drug Level Decreased",
-          "label": "causes"
-        },
-        {
-          "source": "Drug Level Decreased",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Escitalopram,Citalopram": [
-          "1-[3-(Dimethylamino)Propyl]-1-(4-Fluorophenyl)-1,3-Dihydro-2-Benzofuran-5-Carbonitrile",
-          "Selective Serotonin Reuptake Inhibitor"
-        ]
-      },
-      "id": "path_1421"
+      "id": "path_702"
     }
-  ],
-  "verbalization": ""
+  ]
 }

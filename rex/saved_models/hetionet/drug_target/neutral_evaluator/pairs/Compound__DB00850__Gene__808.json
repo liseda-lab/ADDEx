@@ -3,6 +3,60 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.7339,
+        "final_score": 0.7339
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Promethazine",
+          "label": "includes"
+        },
+        {
+          "source": "Promethazine",
+          "target": "Calm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Perphenazine,Promethazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ],
+        "Phenothiazines,Promethazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_3723"
+    },
+    {
+      "score": {
         "ic_mean": 0.6316,
         "final_score": 0.6316
       },
@@ -43,11 +97,11 @@
       ],
       "lowest_common_ancestors": {
         "Perphenazine,Fluphenazine": [
-          "N-Alkylpiperazine",
+          "Phenothiazines",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_7860"
+      "id": "path_3724"
     },
     {
       "score": {
@@ -91,12 +145,115 @@
       ],
       "lowest_common_ancestors": {
         "Perphenazine,Fluphenazine": [
-          "N-Alkylpiperazine",
+          "Phenothiazines",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_7861"
+      "id": "path_3725"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5463,
+        "final_score": 0.5463
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Neurogenic Bladder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Neurogenic Bladder",
+          "label": "causes"
+        },
+        {
+          "source": "Neurogenic Bladder",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Calm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Fluphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_3726"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4473,
+        "final_score": 0.4473
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Fluphenazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Calm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Perphenazine,Fluphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Clocapramine,Fluphenazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3727"
     }
-  ],
-  "verbalization": ""
+  ]
 }

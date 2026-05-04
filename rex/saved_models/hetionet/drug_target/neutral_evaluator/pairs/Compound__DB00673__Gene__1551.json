@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4427,
-        "final_score": 0.4427
+        "ic_mean": 0.4459,
+        "final_score": 0.4459
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Duodenal Ulcer Perforation",
-          "type": "Side Effect"
+          "id": "Cytochrome P450 2c9 Inducers",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Voriconazole",
+          "id": "Phenytoin",
           "type": "Compound"
         },
         {
@@ -27,27 +27,74 @@
       "edges": [
         {
           "source": "Aprepitant",
-          "target": "Duodenal Ulcer Perforation",
-          "label": "causes"
+          "target": "Cytochrome P450 2c9 Inducers",
+          "label": "is included in"
         },
         {
-          "source": "Duodenal Ulcer Perforation",
-          "target": "Voriconazole",
-          "label": "is caused by"
+          "source": "Cytochrome P450 2c9 Inducers",
+          "target": "Phenytoin",
+          "label": "includes"
         },
         {
-          "source": "Voriconazole",
+          "source": "Phenytoin",
           "target": "Cyp3a7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Aprepitant,Voriconazole": [
-          "Benzenes"
+        "Aprepitant,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_1093"
+      "id": "path_530"
+    },
+    {
+      "score": {
+        "ic_mean": 0.407,
+        "final_score": 0.407
+      },
+      "nodes": [
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "White Blood Cells Urine Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aprepitant",
+          "target": "White Blood Cells Urine Positive",
+          "label": "causes"
+        },
+        {
+          "source": "White Blood Cells Urine Positive",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aprepitant,Indinavir": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_531"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7175,
-        "final_score": 0.7175
+        "ic_mean": 0.5529,
+        "final_score": 0.5529
       },
       "nodes": [
         {
@@ -12,65 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Mesoridazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Prochlorperazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
-        },
-        {
-          "source": "Phenothiazines",
-          "target": "Mesoridazine",
-          "label": "includes"
-        },
-        {
-          "source": "Mesoridazine",
-          "target": "Hrh1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Prochlorperazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
-        "Prochlorperazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ],
-        "Phenothiazines,Mesoridazine": [
-          "Phenothiazines"
-        ]
-      },
-      "id": "path_6591"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6191,
-        "final_score": 0.6191
-      },
-      "nodes": [
-        {
-          "id": "Prochlorperazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Autonomic Dysfunction",
+          "id": "Pill Rolling",
           "type": "Side Effect"
         },
         {
-          "id": "Alimemazine",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -81,32 +27,32 @@
       "edges": [
         {
           "source": "Prochlorperazine",
-          "target": "Autonomic Dysfunction",
+          "target": "Pill Rolling",
           "label": "causes"
         },
         {
-          "source": "Autonomic Dysfunction",
-          "target": "Alimemazine",
+          "source": "Pill Rolling",
+          "target": "Chlorpromazine",
           "label": "is caused by"
         },
         {
-          "source": "Alimemazine",
+          "source": "Chlorpromazine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Prochlorperazine,Alimemazine": [
-          "Agent Affecting Nervous System",
-          "Phenothiazines"
+        "Prochlorperazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_6592"
+      "id": "path_3021"
     },
     {
       "score": {
-        "ic_mean": 0.409,
-        "final_score": 0.409
+        "ic_mean": 0.5529,
+        "final_score": 0.5529
       },
       "nodes": [
         {
@@ -114,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Dimetotiazine",
-          "type": "Compound"
+          "id": "Colon Atonic",
+          "type": "Side Effect"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -129,34 +75,27 @@
       "edges": [
         {
           "source": "Prochlorperazine",
-          "target": "Dimetotiazine",
-          "label": "resembles"
+          "target": "Colon Atonic",
+          "label": "causes"
         },
         {
-          "source": "Dimetotiazine",
-          "target": "Mesoridazine",
-          "label": "resembles"
+          "source": "Colon Atonic",
+          "target": "Chlorpromazine",
+          "label": "is caused by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Chlorpromazine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Prochlorperazine,Dimetotiazine": [
-          "Phenothiazines"
-        ],
-        "Prochlorperazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ],
-        "Dimetotiazine,Mesoridazine": [
-          "Phenothiazines"
+        "Prochlorperazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_6593"
+      "id": "path_3022"
     }
-  ],
-  "verbalization": ""
+  ]
 }

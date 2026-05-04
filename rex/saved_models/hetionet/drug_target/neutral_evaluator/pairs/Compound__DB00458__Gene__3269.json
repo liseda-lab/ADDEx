@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6404,
-        "final_score": 0.6404
+        "ic_mean": 0.733,
+        "final_score": 0.733
       },
       "nodes": [
         {
@@ -16,7 +16,49 @@
           "type": "Gene"
         },
         {
-          "id": "Cyproheptadine",
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptor Activity",
+          "target": "Hrh1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13724"
+    },
+    {
+      "score": {
+        "ic_mean": 0.589,
+        "final_score": 0.589
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Mianserin",
           "type": "Compound"
         },
         {
@@ -32,26 +74,27 @@
         },
         {
           "source": "Htr6",
-          "target": "Cyproheptadine",
+          "target": "Mianserin",
           "label": "is bound by"
         },
         {
-          "source": "Cyproheptadine",
+          "source": "Mianserin",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Imipramine,Cyproheptadine": [
-          "Organonitrogen Heterocyclic Compound"
+        "Imipramine,Mianserin": [
+          "Dibenzoazepine",
+          "Antidepressant Agent"
         ]
       },
-      "id": "path_26893"
+      "id": "path_13725"
     },
     {
       "score": {
-        "ic_mean": 0.6168,
-        "final_score": 0.6168
+        "ic_mean": 0.559,
+        "final_score": 0.559
       },
       "nodes": [
         {
@@ -59,11 +102,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abdominal Disorder",
-          "type": "Side Effect"
+          "id": "Htr6",
+          "type": "Gene"
         },
         {
-          "id": "Maprotiline",
+          "id": "Fluphenazine",
           "type": "Compound"
         },
         {
@@ -74,32 +117,32 @@
       "edges": [
         {
           "source": "Imipramine",
-          "target": "Abdominal Disorder",
-          "label": "causes"
+          "target": "Htr6",
+          "label": "binds"
         },
         {
-          "source": "Abdominal Disorder",
-          "target": "Maprotiline",
-          "label": "is caused by"
+          "source": "Htr6",
+          "target": "Fluphenazine",
+          "label": "is bound by"
         },
         {
-          "source": "Maprotiline",
+          "source": "Fluphenazine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Imipramine,Maprotiline": [
-          "Organic Tricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Imipramine,Fluphenazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_26894"
+      "id": "path_13726"
     },
     {
       "score": {
-        "ic_mean": 0.5461,
-        "final_score": 0.5461
+        "ic_mean": 0.3813,
+        "final_score": 0.3813
       },
       "nodes": [
         {
@@ -107,11 +150,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
-          "type": "Gene"
+          "id": "Clocapramine",
+          "type": "Compound"
         },
         {
-          "id": "Diphenhydramine",
+          "id": "Desipramine",
           "type": "Compound"
         },
         {
@@ -122,28 +165,35 @@
       "edges": [
         {
           "source": "Imipramine",
-          "target": "Cyp2c18",
-          "label": "binds"
+          "target": "Clocapramine",
+          "label": "resembles"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Diphenhydramine",
-          "label": "is bound by"
+          "source": "Clocapramine",
+          "target": "Desipramine",
+          "label": "resembles"
         },
         {
-          "source": "Diphenhydramine",
+          "source": "Desipramine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Imipramine,Diphenhydramine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Imipramine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Antidepressant Agent"
+        ],
+        "Imipramine,Desipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
+        ],
+        "Clocapramine,Desipramine": [
+          "Organic Heterotricyclic Compound",
+          "Antidepressant Agent"
         ]
       },
-      "id": "path_26895"
+      "id": "path_13727"
     }
-  ],
-  "verbalization": ""
+  ]
 }

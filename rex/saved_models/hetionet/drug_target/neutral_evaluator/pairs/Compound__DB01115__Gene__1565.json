@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6324,
-        "final_score": 0.6324
+        "ic_mean": 0.6125,
+        "final_score": 0.6125
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna1s",
+          "id": "Cyp2a6",
           "type": "Gene"
         },
         {
-          "id": "Diltiazem",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2d6",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Cacna1s",
+          "target": "Cyp2a6",
           "label": "binds"
         },
         {
-          "source": "Cacna1s",
-          "target": "Diltiazem",
-          "label": "is bound by"
+          "source": "Cyp2a6",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
         },
         {
-          "source": "Diltiazem",
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "target": "Cyp2d6",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Nifedipine,Diltiazem": [
-          "Calcium Channel Blocker",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_29172"
+      "id": "path_15020"
     },
     {
       "score": {
-        "ic_mean": 0.5697,
-        "final_score": 0.5697
+        "ic_mean": 0.5862,
+        "final_score": 0.5862
       },
       "nodes": [
         {
@@ -60,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacnb2",
-          "type": "Gene"
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Amlodipine",
+          "id": "Clevidipine",
           "type": "Compound"
         },
         {
@@ -75,80 +69,38 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Cacnb2",
-          "label": "binds"
+          "target": "Dihydropyridines",
+          "label": "is included in"
         },
         {
-          "source": "Cacnb2",
-          "target": "Amlodipine",
-          "label": "is bound by"
+          "source": "Dihydropyridines",
+          "target": "Clevidipine",
+          "label": "includes"
         },
         {
-          "source": "Amlodipine",
+          "source": "Clevidipine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Amlodipine": [
-          "Calcium Channel Blocker",
+        "Nifedipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nifedipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Clevidipine": [
           "Dihydropyridine"
         ]
       },
-      "id": "path_29173"
+      "id": "path_15021"
     },
     {
       "score": {
-        "ic_mean": 0.5511,
-        "final_score": 0.5511
-      },
-      "nodes": [
-        {
-          "id": "Nifedipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacna1c",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nifedipine",
-          "target": "Cacna1c",
-          "label": "binds"
-        },
-        {
-          "source": "Cacna1c",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nifedipine,Diltiazem": [
-          "Calcium Channel Blocker",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_29174"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5465,
-        "final_score": 0.5465
+        "ic_mean": 0.5275,
+        "final_score": 0.5275
       },
       "nodes": [
         {
@@ -160,7 +112,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Diltiazem",
+          "id": "Clevidipine",
           "type": "Compound"
         },
         {
@@ -176,166 +128,22 @@
         },
         {
           "source": "Calcium Channel Antagonists",
-          "target": "Diltiazem",
+          "target": "Clevidipine",
           "label": "includes"
         },
         {
-          "source": "Diltiazem",
+          "source": "Clevidipine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Diltiazem": [
-          "Calcium Channel Blocker",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_29175"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5183,
-        "final_score": 0.5183
-      },
-      "nodes": [
-        {
-          "id": "Nifedipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacna2d1",
-          "type": "Gene"
-        },
-        {
-          "id": "Felodipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nifedipine",
-          "target": "Cacna2d1",
-          "label": "binds"
-        },
-        {
-          "source": "Cacna2d1",
-          "target": "Felodipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Felodipine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nifedipine,Felodipine": [
-          "Calcium Channel Blocker",
-          "Dihydropyridine"
-        ]
-      },
-      "id": "path_29176"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5183,
-        "final_score": 0.5183
-      },
-      "nodes": [
-        {
-          "id": "Nifedipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacna2d1",
-          "type": "Gene"
-        },
-        {
-          "id": "Amlodipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nifedipine",
-          "target": "Cacna2d1",
-          "label": "binds"
-        },
-        {
-          "source": "Cacna2d1",
-          "target": "Amlodipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Amlodipine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nifedipine,Amlodipine": [
-          "Calcium Channel Blocker",
-          "Dihydropyridine"
-        ]
-      },
-      "id": "path_29177"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5183,
-        "final_score": 0.5183
-      },
-      "nodes": [
-        {
-          "id": "Nifedipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacna2d1",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicardipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Nifedipine",
-          "target": "Cacna2d1",
-          "label": "binds"
-        },
-        {
-          "source": "Cacna2d1",
-          "target": "Nicardipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicardipine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Nifedipine,Nicardipine": [
-          "C-Nitro Compound",
+        "Nifedipine,Clevidipine": [
+          "Dihydropyridine",
           "Calcium Channel Blocker"
         ]
       },
-      "id": "path_29178"
+      "id": "path_15022"
     },
     {
       "score": {
@@ -383,12 +191,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_29179"
+      "id": "path_15023"
     },
     {
       "score": {
-        "ic_mean": 0.4774,
-        "final_score": 0.4774
+        "ic_mean": 0.4725,
+        "final_score": 0.4725
       },
       "nodes": [
         {
@@ -396,11 +204,11 @@
           "type": "Compound"
         },
         {
-          "id": "Acute Pulmonary Oedema",
-          "type": "Side Effect"
+          "id": "Cyp2a6",
+          "type": "Gene"
         },
         {
-          "id": "Nebivolol",
+          "id": "Methimazole",
           "type": "Compound"
         },
         {
@@ -411,31 +219,31 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Acute Pulmonary Oedema",
-          "label": "causes"
+          "target": "Cyp2a6",
+          "label": "binds"
         },
         {
-          "source": "Acute Pulmonary Oedema",
-          "target": "Nebivolol",
-          "label": "is caused by"
+          "source": "Cyp2a6",
+          "target": "Methimazole",
+          "label": "is bound by"
         },
         {
-          "source": "Nebivolol",
+          "source": "Methimazole",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Nebivolol": [
-          "Chemical Entity"
+        "Nifedipine,Methimazole": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_29180"
+      "id": "path_15024"
     },
     {
       "score": {
-        "ic_mean": 0.4764,
-        "final_score": 0.4764
+        "ic_mean": 0.462,
+        "final_score": 0.462
       },
       "nodes": [
         {
@@ -443,11 +251,11 @@
           "type": "Compound"
         },
         {
-          "id": "Erythromelalgia",
+          "id": "Angina Pectoris Aggravated",
           "type": "Side Effect"
         },
         {
-          "id": "Lisuride",
+          "id": "Tiotropium",
           "type": "Compound"
         },
         {
@@ -458,31 +266,31 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Erythromelalgia",
+          "target": "Angina Pectoris Aggravated",
           "label": "causes"
         },
         {
-          "source": "Erythromelalgia",
-          "target": "Lisuride",
+          "source": "Angina Pectoris Aggravated",
+          "target": "Tiotropium",
           "label": "is caused by"
         },
         {
-          "source": "Lisuride",
+          "source": "Tiotropium",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Lisuride": [
-          "Organooxygen Compound"
+        "Nifedipine,Tiotropium": [
+          "Organic Molecular Entity"
         ]
       },
-      "id": "path_29181"
+      "id": "path_15025"
     },
     {
       "score": {
-        "ic_mean": 0.4467,
-        "final_score": 0.4467
+        "ic_mean": 0.4424,
+        "final_score": 0.4424
       },
       "nodes": [
         {
@@ -490,11 +298,11 @@
           "type": "Compound"
         },
         {
-          "id": "Bezoar",
-          "type": "Side Effect"
+          "id": "Cyp2a6",
+          "type": "Gene"
         },
         {
-          "id": "Hydromorphone",
+          "id": "Arformoterol",
           "type": "Compound"
         },
         {
@@ -505,31 +313,31 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Bezoar",
-          "label": "causes"
+          "target": "Cyp2a6",
+          "label": "binds"
         },
         {
-          "source": "Bezoar",
-          "target": "Hydromorphone",
-          "label": "is caused by"
+          "source": "Cyp2a6",
+          "target": "Arformoterol",
+          "label": "is bound by"
         },
         {
-          "source": "Hydromorphone",
+          "source": "Arformoterol",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Hydromorphone": [
-          "Organic Heterocyclic Compound"
+        "Nifedipine,Arformoterol": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_29182"
+      "id": "path_15026"
     },
     {
       "score": {
-        "ic_mean": 0.4196,
-        "final_score": 0.4196
+        "ic_mean": 0.4413,
+        "final_score": 0.4413
       },
       "nodes": [
         {
@@ -537,11 +345,11 @@
           "type": "Compound"
         },
         {
-          "id": "Gastrointestinal Obstruction",
+          "id": "Photosensitivity Allergic Reaction",
           "type": "Side Effect"
         },
         {
-          "id": "Methylphenidate",
+          "id": "Terbinafine",
           "type": "Compound"
         },
         {
@@ -552,31 +360,31 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Gastrointestinal Obstruction",
+          "target": "Photosensitivity Allergic Reaction",
           "label": "causes"
         },
         {
-          "source": "Gastrointestinal Obstruction",
-          "target": "Methylphenidate",
+          "source": "Photosensitivity Allergic Reaction",
+          "target": "Terbinafine",
           "label": "is caused by"
         },
         {
-          "source": "Methylphenidate",
+          "source": "Terbinafine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Methylphenidate": [
-          "Nitrogen Molecular Entity"
+        "Nifedipine,Terbinafine": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_29183"
+      "id": "path_15027"
     },
     {
       "score": {
-        "ic_mean": 0.413,
-        "final_score": 0.413
+        "ic_mean": 0.4181,
+        "final_score": 0.4181
       },
       "nodes": [
         {
@@ -584,11 +392,11 @@
           "type": "Compound"
         },
         {
-          "id": "Bezoar",
+          "id": "Shakiness",
           "type": "Side Effect"
         },
         {
-          "id": "Lansoprazole",
+          "id": "Almotriptan",
           "type": "Compound"
         },
         {
@@ -599,26 +407,26 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Bezoar",
+          "target": "Shakiness",
           "label": "causes"
         },
         {
-          "source": "Bezoar",
-          "target": "Lansoprazole",
+          "source": "Shakiness",
+          "target": "Almotriptan",
           "label": "is caused by"
         },
         {
-          "source": "Lansoprazole",
+          "source": "Almotriptan",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Lansoprazole": [
-          "Pyridines"
+        "Nifedipine,Almotriptan": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_29184"
+      "id": "path_15028"
     },
     {
       "score": {
@@ -665,12 +473,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_29185"
+      "id": "path_15029"
     },
     {
       "score": {
-        "ic_mean": 0.3936,
-        "final_score": 0.3936
+        "ic_mean": 0.3859,
+        "final_score": 0.3859
       },
       "nodes": [
         {
@@ -678,11 +486,11 @@
           "type": "Compound"
         },
         {
-          "id": "Photosensitivity Allergic Reaction",
+          "id": "Gastrointestinal Obstruction",
           "type": "Side Effect"
         },
         {
-          "id": "Ropinirole",
+          "id": "Paliperidone",
           "type": "Compound"
         },
         {
@@ -693,31 +501,31 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Photosensitivity Allergic Reaction",
+          "target": "Gastrointestinal Obstruction",
           "label": "causes"
         },
         {
-          "source": "Photosensitivity Allergic Reaction",
-          "target": "Ropinirole",
+          "source": "Gastrointestinal Obstruction",
+          "target": "Paliperidone",
           "label": "is caused by"
         },
         {
-          "source": "Ropinirole",
+          "source": "Paliperidone",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Ropinirole": [
+        "Nifedipine,Paliperidone": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_29186"
+      "id": "path_15030"
     },
     {
       "score": {
-        "ic_mean": 0.3876,
-        "final_score": 0.3876
+        "ic_mean": 0.3576,
+        "final_score": 0.3576
       },
       "nodes": [
         {
@@ -725,11 +533,11 @@
           "type": "Compound"
         },
         {
-          "id": "Gingival Disorder",
-          "type": "Side Effect"
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
         },
         {
-          "id": "Zalcitabine",
+          "id": "Cimetidine",
           "type": "Compound"
         },
         {
@@ -740,27 +548,26 @@
       "edges": [
         {
           "source": "Nifedipine",
-          "target": "Gingival Disorder",
-          "label": "causes"
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
         },
         {
-          "source": "Gingival Disorder",
-          "target": "Zalcitabine",
-          "label": "is caused by"
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Cimetidine",
+          "label": "is bound by"
         },
         {
-          "source": "Zalcitabine",
+          "source": "Cimetidine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nifedipine,Zalcitabine": [
+        "Nifedipine,Cimetidine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_29187"
+      "id": "path_15031"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6536,
-        "final_score": 0.6536
+        "ic_mean": 0.6042,
+        "final_score": 0.6042
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna1g",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Ethosuximide",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Cacna1g",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Cacna1g",
-          "target": "Ethosuximide",
-          "label": "is bound by"
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Ethosuximide",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Pimozide,Ethosuximide": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30107"
+      "id": "path_15561"
     },
     {
       "score": {
-        "ic_mean": 0.6122,
-        "final_score": 0.6122
+        "ic_mean": 0.6042,
+        "final_score": 0.6042
       },
       "nodes": [
         {
@@ -60,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Dihydroergotamine",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -75,32 +69,26 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Dihydroergotamine",
-          "label": "is bound by"
+          "source": "Cyp3a7",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
         },
         {
-          "source": "Dihydroergotamine",
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Pimozide,Dihydroergotamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30108"
+      "id": "path_15562"
     },
     {
       "score": {
-        "ic_mean": 0.5722,
-        "final_score": 0.5722
+        "ic_mean": 0.5012,
+        "final_score": 0.5012
       },
       "nodes": [
         {
@@ -108,11 +96,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna1g",
-          "type": "Gene"
+          "id": "Motor Restlessness",
+          "type": "Side Effect"
         },
         {
-          "id": "Trimethadione",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -123,80 +111,32 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Cacna1g",
-          "label": "binds"
+          "target": "Motor Restlessness",
+          "label": "causes"
         },
         {
-          "source": "Cacna1g",
-          "target": "Trimethadione",
-          "label": "is bound by"
+          "source": "Motor Restlessness",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Trimethadione",
+          "source": "Prochlorperazine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Trimethadione": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30109"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5422,
-        "final_score": 0.5422
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Hydrocodone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydrocodone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Hydrocodone": [
+        "Pimozide,Prochlorperazine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30110"
+      "id": "path_15563"
     },
     {
       "score": {
-        "ic_mean": 0.5308,
-        "final_score": 0.5308
+        "ic_mean": 0.5,
+        "final_score": 0.5
       },
       "nodes": [
         {
@@ -204,11 +144,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Electrocardiogram U-wave Abnormality",
+          "type": "Side Effect"
         },
         {
-          "id": "Sertindole",
+          "id": "Alimemazine",
           "type": "Compound"
         },
         {
@@ -219,368 +159,32 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Electrocardiogram U-wave Abnormality",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Sertindole",
-          "label": "is bound by"
+          "source": "Electrocardiogram U-wave Abnormality",
+          "target": "Alimemazine",
+          "label": "is caused by"
         },
         {
-          "source": "Sertindole",
+          "source": "Alimemazine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Sertindole": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
-        ]
-      },
-      "id": "path_30111"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5308,
-        "final_score": 0.5308
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Iloperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Iloperidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Iloperidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Iloperidone": [
-          "Organic Heterobicyclic Compound",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_30112"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5209,
-        "final_score": 0.5209
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Alfentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oprm1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprm1",
-          "target": "Alfentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alfentanil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Alfentanil": [
-          "Agent Affecting Nervous System",
-          "Piperidines"
-        ]
-      },
-      "id": "path_30113"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5209,
-        "final_score": 0.5209
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oprm1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprm1",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Ketobemidone": [
-          "Agent Affecting Nervous System",
-          "Piperidines"
-        ]
-      },
-      "id": "path_30114"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5122,
-        "final_score": 0.5122
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymorphone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Oxymorphone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymorphone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Oxymorphone": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30115"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5122,
-        "final_score": 0.5122
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Ketobemidone": [
-          "Agent Affecting Nervous System",
-          "Piperidines"
-        ]
-      },
-      "id": "path_30116"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5095,
-        "final_score": 0.5095
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Atomoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Atomoxetine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atomoxetine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Atomoxetine": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_30117"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5095,
-        "final_score": 0.5095
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Mianserin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Mianserin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mianserin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Mianserin": [
+        "Pimozide,Alimemazine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30118"
+      "id": "path_15564"
     },
     {
       "score": {
-        "ic_mean": 0.5095,
-        "final_score": 0.5095
+        "ic_mean": 0.5,
+        "final_score": 0.5
       },
       "nodes": [
         {
@@ -588,11 +192,11 @@
           "type": "Compound"
         },
         {
-          "id": "Kcnh2",
-          "type": "Gene"
+          "id": "Electrocardiogram U Wave Present",
+          "type": "Side Effect"
         },
         {
-          "id": "Cisapride",
+          "id": "Alimemazine",
           "type": "Compound"
         },
         {
@@ -603,224 +207,32 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Kcnh2",
-          "label": "binds"
+          "target": "Electrocardiogram U Wave Present",
+          "label": "causes"
         },
         {
-          "source": "Kcnh2",
-          "target": "Cisapride",
-          "label": "is bound by"
+          "source": "Electrocardiogram U Wave Present",
+          "target": "Alimemazine",
+          "label": "is caused by"
         },
         {
-          "source": "Cisapride",
+          "source": "Alimemazine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Cisapride": [
-          "Agent Affecting Nervous System",
-          "Piperidines"
-        ]
-      },
-      "id": "path_30119"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4996,
-        "final_score": 0.4996
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oprm1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprm1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Methadone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_30120"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4929,
-        "final_score": 0.4929
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Olanzapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Olanzapine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Olanzapine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Olanzapine": [
-          "Organic Heteropolycyclic Compound",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_30121"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4909,
-        "final_score": 0.4909
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Methadone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_30122"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4794,
-        "final_score": 0.4794
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Clomipramine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Clomipramine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Clomipramine": [
+        "Pimozide,Alimemazine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30123"
+      "id": "path_15565"
     },
     {
       "score": {
-        "ic_mean": 0.4794,
-        "final_score": 0.4794
+        "ic_mean": 0.4803,
+        "final_score": 0.4803
       },
       "nodes": [
         {
@@ -828,11 +240,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Vermiculation",
+          "type": "Side Effect"
         },
         {
-          "id": "Imipramine",
+          "id": "Pyridostigmine",
           "type": "Compound"
         },
         {
@@ -843,75 +255,26 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Vermiculation",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Imipramine",
-          "label": "is bound by"
+          "source": "Vermiculation",
+          "target": "Pyridostigmine",
+          "label": "is caused by"
         },
         {
-          "source": "Imipramine",
+          "source": "Pyridostigmine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Imipramine": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
+        "Pimozide,Pyridostigmine": [
+          "Organic Molecular Entity"
         ]
       },
-      "id": "path_30124"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4794,
-        "final_score": 0.4794
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Doxepin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Doxepin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Doxepin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Doxepin": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_30125"
+      "id": "path_15566"
     },
     {
       "score": {
@@ -955,160 +318,16 @@
       ],
       "lowest_common_ancestors": {
         "Pimozide,Dolasetron": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
-        ]
-      },
-      "id": "path_30126"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4743,
-        "final_score": 0.4743
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pethidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Pethidine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pethidine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Pethidine": [
-          "Agent Affecting Nervous System",
-          "Piperidines"
-        ]
-      },
-      "id": "path_30127"
-    },
-    {
-      "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Nortriptyline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Nortriptyline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nortriptyline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Nortriptyline": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_30128"
-    },
-    {
-      "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Ziprasidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Ziprasidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ziprasidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Ziprasidone": [
           "Organic Heterobicyclic Compound",
-          "Antipsychotic Agent"
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30129"
+      "id": "path_15567"
     },
     {
       "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
+        "ic_mean": 0.4308,
+        "final_score": 0.4308
       },
       "nodes": [
         {
@@ -1116,11 +335,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Chlorpromazine",
+          "id": "Astemizole",
           "type": "Compound"
         },
         {
@@ -1131,32 +350,31 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Chlorpromazine",
+          "source": "Cyp3a7",
+          "target": "Astemizole",
           "label": "is bound by"
         },
         {
-          "source": "Chlorpromazine",
+          "source": "Astemizole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Chlorpromazine": [
-          "Organic Heteropolycyclic Compound",
-          "Antipsychotic Agent"
+        "Pimozide,Astemizole": [
+          "Benzimidazoles"
         ]
       },
-      "id": "path_30130"
+      "id": "path_15568"
     },
     {
       "score": {
-        "ic_mean": 0.468,
-        "final_score": 0.468
+        "ic_mean": 0.4308,
+        "final_score": 0.4308
       },
       "nodes": [
         {
@@ -1164,11 +382,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Asenapine",
+          "id": "Propranolol",
           "type": "Compound"
         },
         {
@@ -1179,31 +397,32 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Asenapine",
+          "source": "Cyp3a7",
+          "target": "Propranolol",
           "label": "is bound by"
         },
         {
-          "source": "Asenapine",
+          "source": "Propranolol",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Asenapine": [
-          "Antipsychotic Agent"
+        "Pimozide,Propranolol": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30131"
+      "id": "path_15569"
     },
     {
       "score": {
-        "ic_mean": 0.4581,
-        "final_score": 0.4581
+        "ic_mean": 0.4276,
+        "final_score": 0.4276
       },
       "nodes": [
         {
@@ -1211,11 +430,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Vermiculation",
+          "type": "Side Effect"
         },
         {
-          "id": "Quetiapine",
+          "id": "Haloperidol",
           "type": "Compound"
         },
         {
@@ -1226,74 +445,27 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Vermiculation",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Quetiapine",
-          "label": "is bound by"
+          "source": "Vermiculation",
+          "target": "Haloperidol",
+          "label": "is caused by"
         },
         {
-          "source": "Quetiapine",
+          "source": "Haloperidol",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Quetiapine": [
-          "Organic Heteropolycyclic Compound",
-          "Antipsychotic Agent"
+        "Pimozide,Haloperidol": [
+          "Piperidines",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30132"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4281,
-        "final_score": 0.4281
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Kcnh2",
-          "type": "Gene"
-        },
-        {
-          "id": "Quinine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Kcnh2",
-          "label": "binds"
-        },
-        {
-          "source": "Kcnh2",
-          "target": "Quinine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Quinine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Quinine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30133"
+      "id": "path_15570"
     },
     {
       "score": {
@@ -1335,198 +507,7 @@
           "label": "binds"
         }
       ],
-      "id": "path_30134"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4144,
-        "final_score": 0.4144
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oculogyration",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Paliperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oculogyration",
-          "label": "causes"
-        },
-        {
-          "source": "Oculogyration",
-          "target": "Paliperidone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Paliperidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Paliperidone": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
-        ]
-      },
-      "id": "path_30135"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4119,
-        "final_score": 0.4119
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oculogyration",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Risperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oculogyration",
-          "label": "causes"
-        },
-        {
-          "source": "Oculogyration",
-          "target": "Risperidone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Risperidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Risperidone": [
-          "Organic Heterobicyclic Compound",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_30136"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4116,
-        "final_score": 0.4116
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Alfentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Alfentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alfentanil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Alfentanil": [
-          "Agent Affecting Nervous System",
-          "Piperidines"
-        ]
-      },
-      "id": "path_30137"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4116,
-        "final_score": 0.4116
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Diltiazem": [
-          "Organic Heterobicyclic Compound"
-        ]
-      },
-      "id": "path_30138"
+      "id": "path_15571"
     },
     {
       "score": {
@@ -1573,12 +554,12 @@
           "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_30139"
+      "id": "path_15572"
     },
     {
       "score": {
-        "ic_mean": 0.4068,
-        "final_score": 0.4068
+        "ic_mean": 0.4074,
+        "final_score": 0.4074
       },
       "nodes": [
         {
@@ -1586,11 +567,11 @@
           "type": "Compound"
         },
         {
-          "id": "Kcnh2",
-          "type": "Gene"
+          "id": "Electrocardiogram U Wave Present",
+          "type": "Side Effect"
         },
         {
-          "id": "Orphenadrine",
+          "id": "Indapamide",
           "type": "Compound"
         },
         {
@@ -1601,127 +582,79 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Kcnh2",
+          "target": "Electrocardiogram U Wave Present",
+          "label": "causes"
+        },
+        {
+          "source": "Electrocardiogram U Wave Present",
+          "target": "Indapamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indapamide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pimozide,Indapamide": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_15573"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3929,
+        "final_score": 0.3929
+      },
+      "nodes": [
+        {
+          "id": "Pimozide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Triazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pimozide",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Kcnh2",
-          "target": "Orphenadrine",
+          "source": "Cyp3a7",
+          "target": "Triazolam",
           "label": "is bound by"
         },
         {
-          "source": "Orphenadrine",
+          "source": "Triazolam",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Orphenadrine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30140"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4037,
-        "final_score": 0.4037
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Oculogyration",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Voriconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Oculogyration",
-          "label": "causes"
-        },
-        {
-          "source": "Oculogyration",
-          "target": "Voriconazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Voriconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Voriconazole": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30141"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4021,
-        "final_score": 0.4021
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Spots Before Eyes",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Valproic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Spots Before Eyes",
-          "label": "causes"
-        },
-        {
-          "source": "Spots Before Eyes",
-          "target": "Valproic Acid",
-          "label": "is caused by"
-        },
-        {
-          "source": "Valproic Acid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Valproic Acid": [
-          "Heteroorganic Entity",
+        "Pimozide,Triazolam": [
+          "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30142"
+      "id": "path_15574"
     },
     {
       "score": {
-        "ic_mean": 0.3993,
-        "final_score": 0.3993
+        "ic_mean": 0.3794,
+        "final_score": 0.3794
       },
       "nodes": [
         {
@@ -1729,11 +662,11 @@
           "type": "Compound"
         },
         {
-          "id": "Electrocardiogram U-wave Abnormality",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Quinine",
+          "id": "Indinavir",
           "type": "Compound"
         },
         {
@@ -1744,78 +677,31 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Electrocardiogram U-wave Abnormality",
-          "label": "causes"
-        },
-        {
-          "source": "Electrocardiogram U-wave Abnormality",
-          "target": "Quinine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Quinine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pimozide,Quinine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30143"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3903,
-        "final_score": 0.3903
-      },
-      "nodes": [
-        {
-          "id": "Pimozide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Rifapentine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pimozide",
-          "target": "Cyp3a7-cyp3a51p",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Rifapentine",
+          "source": "Cyp3a7",
+          "target": "Indinavir",
           "label": "is bound by"
         },
         {
-          "source": "Rifapentine",
+          "source": "Indinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Rifapentine": [
-          "Organic Heteropolycyclic Compound"
+        "Pimozide,Indinavir": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_30144"
+      "id": "path_15575"
     },
     {
       "score": {
-        "ic_mean": 0.3897,
-        "final_score": 0.3897
+        "ic_mean": 0.3794,
+        "final_score": 0.3794
       },
       "nodes": [
         {
@@ -1823,11 +709,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oculogyration",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Quetiapine",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -1838,32 +724,32 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Oculogyration",
-          "label": "causes"
+          "target": "Cyp3a7",
+          "label": "binds"
         },
         {
-          "source": "Oculogyration",
-          "target": "Quetiapine",
-          "label": "is caused by"
+          "source": "Cyp3a7",
+          "target": "Imipramine",
+          "label": "is bound by"
         },
         {
-          "source": "Quetiapine",
+          "source": "Imipramine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Quetiapine": [
+        "Pimozide,Imipramine": [
           "Organic Heteropolycyclic Compound",
-          "Antipsychotic Agent"
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30145"
+      "id": "path_15576"
     },
     {
       "score": {
-        "ic_mean": 0.3882,
-        "final_score": 0.3882
+        "ic_mean": 0.3581,
+        "final_score": 0.3581
       },
       "nodes": [
         {
@@ -1871,11 +757,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm2",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Quinine",
+          "id": "Phenytoin",
           "type": "Compound"
         },
         {
@@ -1886,31 +772,32 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Chrm2",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Chrm2",
-          "target": "Quinine",
+          "source": "Cyp3a7",
+          "target": "Phenytoin",
           "label": "is bound by"
         },
         {
-          "source": "Quinine",
+          "source": "Phenytoin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Quinine": [
-          "Organonitrogen Compound"
+        "Pimozide,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30146"
+      "id": "path_15577"
     },
     {
       "score": {
-        "ic_mean": 0.3669,
-        "final_score": 0.3669
+        "ic_mean": 0.3581,
+        "final_score": 0.3581
       },
       "nodes": [
         {
@@ -1918,11 +805,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm2",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Orphenadrine",
+          "id": "Ketoconazole",
           "type": "Compound"
         },
         {
@@ -1933,28 +820,26 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Chrm2",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Chrm2",
-          "target": "Orphenadrine",
+          "source": "Cyp3a7",
+          "target": "Ketoconazole",
           "label": "is bound by"
         },
         {
-          "source": "Orphenadrine",
+          "source": "Ketoconazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Orphenadrine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Pimozide,Ketoconazole": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_30147"
+      "id": "path_15578"
     }
-  ],
-  "verbalization": ""
+  ]
 }

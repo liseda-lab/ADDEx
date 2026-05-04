@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00814 - Gene::5743",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6079,
+        "final_score": 0.5539,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nabumetone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meloxicam",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Nabumetone",
+          "label": "includes"
+        },
+        {
+          "source": "Nabumetone",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meloxicam,Nabumetone": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_8496"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4689,
+        "final_score": 0.4689
+      },
+      "nodes": [
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthmatic Attack",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meloxicam",
+          "target": "Asthmatic Attack",
+          "label": "causes"
+        },
+        {
+          "source": "Asthmatic Attack",
+          "target": "Ketoprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ketoprofen",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meloxicam,Ketoprofen": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_8497"
+    }
+  ]
+}

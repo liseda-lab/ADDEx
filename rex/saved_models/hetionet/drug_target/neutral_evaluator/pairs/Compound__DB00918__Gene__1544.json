@@ -47,7 +47,7 @@
           "Serotonin Agonist"
         ]
       },
-      "id": "path_10744"
+      "id": "path_5340"
     },
     {
       "score": {
@@ -95,7 +95,7 @@
           "Serotonin Agonist"
         ]
       },
-      "id": "path_10745"
+      "id": "path_5341"
     },
     {
       "score": {
@@ -143,55 +143,7 @@
           "Indoles"
         ]
       },
-      "id": "path_10746"
-    },
-    {
-      "score": {
-        "ic_mean": 0.8266,
-        "final_score": 0.8266
-      },
-      "nodes": [
-        {
-          "id": "Almotriptan",
-          "type": "Compound"
-        },
-        {
-          "id": "Serotonin 1d Receptor Agonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Zolmitriptan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Almotriptan",
-          "target": "Serotonin 1d Receptor Agonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Serotonin 1d Receptor Agonists",
-          "target": "Zolmitriptan",
-          "label": "includes"
-        },
-        {
-          "source": "Zolmitriptan",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Almotriptan,Zolmitriptan": [
-          "Serotonin Agonist",
-          "Indoles"
-        ]
-      },
-      "id": "path_10747"
+      "id": "path_5342"
     },
     {
       "score": {
@@ -239,7 +191,55 @@
           "Indoles"
         ]
       },
-      "id": "path_10748"
+      "id": "path_5343"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8266,
+        "final_score": 0.8266
+      },
+      "nodes": [
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Serotonin 1d Receptor Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Zolmitriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Almotriptan",
+          "target": "Serotonin 1d Receptor Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Serotonin 1d Receptor Agonists",
+          "target": "Zolmitriptan",
+          "label": "includes"
+        },
+        {
+          "source": "Zolmitriptan",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Almotriptan,Zolmitriptan": [
+          "Serotonin Agonist",
+          "Indoles"
+        ]
+      },
+      "id": "path_5344"
     },
     {
       "score": {
@@ -287,12 +287,12 @@
           "Indoles"
         ]
       },
-      "id": "path_10749"
+      "id": "path_5345"
     },
     {
       "score": {
-        "ic_mean": 0.5912,
-        "final_score": 0.5912
+        "ic_mean": 0.7333,
+        "final_score": 0.7333
       },
       "nodes": [
         {
@@ -300,11 +300,53 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1b",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Zolmitriptan",
+          "id": "Caffeine Oxidase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Almotriptan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Caffeine Oxidase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Caffeine Oxidase Activity",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5346"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4932,
+        "final_score": 0.4932
+      },
+      "nodes": [
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Ticlopidine",
           "type": "Compound"
         },
         {
@@ -315,28 +357,311 @@
       "edges": [
         {
           "source": "Almotriptan",
-          "target": "Htr1b",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Htr1b",
-          "target": "Zolmitriptan",
+          "source": "Cyp2c8",
+          "target": "Ticlopidine",
           "label": "is bound by"
         },
         {
-          "source": "Zolmitriptan",
+          "source": "Ticlopidine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Almotriptan,Zolmitriptan": [
+        "Almotriptan,Ticlopidine": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_5347"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4932,
+        "final_score": 0.4932
+      },
+      "nodes": [
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Cisapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Almotriptan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Cisapride",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cisapride",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Almotriptan,Cisapride": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5348"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4683,
+        "final_score": 0.4683
+      },
+      "nodes": [
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Almotriptan",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Ranitidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Almotriptan,Ranitidine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5349"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4658,
+        "final_score": 0.4658
+      },
+      "nodes": [
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Arteriospasm Coronary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rizatriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Almotriptan",
+          "target": "Arteriospasm Coronary",
+          "label": "causes"
+        },
+        {
+          "source": "Arteriospasm Coronary",
+          "target": "Rizatriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rizatriptan",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Almotriptan,Rizatriptan": [
           "Serotonin Agonist",
           "Indoles"
         ]
       },
-      "id": "path_10750"
+      "id": "path_5350"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4586,
+        "final_score": 0.4586
+      },
+      "nodes": [
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Thirst",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Delavirdine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Almotriptan",
+          "target": "Increased Thirst",
+          "label": "causes"
+        },
+        {
+          "source": "Increased Thirst",
+          "target": "Delavirdine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Delavirdine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Almotriptan,Delavirdine": [
+          "Indoles"
+        ]
+      },
+      "id": "path_5351"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4419,
+        "final_score": 0.4419
+      },
+      "nodes": [
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Almotriptan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Perphenazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Almotriptan,Perphenazine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5352"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3681,
+        "final_score": 0.3681
+      },
+      "nodes": [
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Shakiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Almotriptan",
+          "target": "Shakiness",
+          "label": "causes"
+        },
+        {
+          "source": "Shakiness",
+          "target": "Nifedipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Almotriptan,Nifedipine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5353"
     }
-  ],
-  "verbalization": ""
+  ]
 }

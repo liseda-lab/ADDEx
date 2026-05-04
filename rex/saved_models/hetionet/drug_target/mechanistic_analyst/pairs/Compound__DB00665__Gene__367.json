@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00665 - Gene::367",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6544,
+        "final_score": 0.7439,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Nilutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Androgen Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Enzalutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ar",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilutamide",
+          "target": "Androgen Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Androgen Receptor Antagonists",
+          "target": "Enzalutamide",
+          "label": "includes"
+        },
+        {
+          "source": "Enzalutamide",
+          "target": "Ar",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nilutamide,Enzalutamide": [
+          "Imidazolidinone",
+          "Androgen Receptor Inhibitor"
+        ]
+      },
+      "id": "path_1008"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6001,
+        "final_score": 0.5084,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Nilutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Atrophy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxandrolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ar",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilutamide",
+          "target": "Testicular Atrophy",
+          "label": "causes"
+        },
+        {
+          "source": "Testicular Atrophy",
+          "target": "Oxandrolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxandrolone",
+          "target": "Ar",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nilutamide,Oxandrolone": [
+          "Hormone Therapy Agent",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1009"
+    }
+  ]
+}

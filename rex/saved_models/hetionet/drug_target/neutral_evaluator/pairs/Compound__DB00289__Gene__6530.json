@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7069,
-        "final_score": 0.7069
+        "ic_mean": 0.6316,
+        "final_score": 0.6316
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Npy1r",
-          "type": "Gene"
+          "id": "Norepinephrine Uptake Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Venlafaxine",
+          "id": "Milnacipran",
           "type": "Compound"
         },
         {
@@ -27,123 +27,27 @@
       "edges": [
         {
           "source": "Atomoxetine",
-          "target": "Npy1r",
-          "label": "binds"
+          "target": "Norepinephrine Uptake Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Npy1r",
-          "target": "Venlafaxine",
-          "label": "is bound by"
+          "source": "Norepinephrine Uptake Inhibitors",
+          "target": "Milnacipran",
+          "label": "includes"
         },
         {
-          "source": "Venlafaxine",
+          "source": "Milnacipran",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atomoxetine,Venlafaxine": [
-          "Organic Amino Compound",
-          "Antidepressant Agent"
+        "Atomoxetine,Milnacipran": [
+          "Organonitrogen Compound",
+          "Adrenergic Agent"
         ]
       },
-      "id": "path_18174"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6856,
-        "final_score": 0.6856
-      },
-      "nodes": [
-        {
-          "id": "Atomoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Npy1r",
-          "type": "Gene"
-        },
-        {
-          "id": "Duloxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atomoxetine",
-          "target": "Npy1r",
-          "label": "binds"
-        },
-        {
-          "source": "Npy1r",
-          "target": "Duloxetine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Duloxetine",
-          "target": "Slc6a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atomoxetine,Duloxetine": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_18175"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5928,
-        "final_score": 0.5928
-      },
-      "nodes": [
-        {
-          "id": "Atomoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Duloxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atomoxetine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Duloxetine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Duloxetine",
-          "target": "Slc6a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atomoxetine,Duloxetine": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_18176"
+      "id": "path_9145"
     },
     {
       "score": {
@@ -160,7 +64,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Duloxetine",
+          "id": "Levomilnacipran",
           "type": "Compound"
         },
         {
@@ -176,22 +80,70 @@
         },
         {
           "source": "Norepinephrine Uptake Inhibitors",
-          "target": "Duloxetine",
+          "target": "Levomilnacipran",
           "label": "includes"
         },
         {
-          "source": "Duloxetine",
+          "source": "Levomilnacipran",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atomoxetine,Duloxetine": [
+        "Atomoxetine,Levomilnacipran": [
+          "Organonitrogen Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_9146"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5627,
+        "final_score": 0.5627
+      },
+      "nodes": [
+        {
+          "id": "Atomoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atomoxetine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Doxepin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atomoxetine,Doxepin": [
           "Organic Cyclic Compound",
           "Antidepressant Agent"
         ]
       },
-      "id": "path_18177"
+      "id": "path_9147"
     },
     {
       "score": {
@@ -235,16 +187,16 @@
       ],
       "lowest_common_ancestors": {
         "Atomoxetine,Desvenlafaxine": [
-          "Organic Amino Compound",
+          "Organic Aromatic Compound",
           "Antidepressant Agent"
         ]
       },
-      "id": "path_18178"
+      "id": "path_9148"
     },
     {
       "score": {
-        "ic_mean": 0.4834,
-        "final_score": 0.4834
+        "ic_mean": 0.5318,
+        "final_score": 0.5318
       },
       "nodes": [
         {
@@ -252,11 +204,11 @@
           "type": "Compound"
         },
         {
-          "id": "Erection Prolonged",
+          "id": "Urine Flow Decreased",
           "type": "Side Effect"
         },
         {
-          "id": "Venlafaxine",
+          "id": "Milnacipran",
           "type": "Compound"
         },
         {
@@ -267,32 +219,32 @@
       "edges": [
         {
           "source": "Atomoxetine",
-          "target": "Erection Prolonged",
+          "target": "Urine Flow Decreased",
           "label": "causes"
         },
         {
-          "source": "Erection Prolonged",
-          "target": "Venlafaxine",
+          "source": "Urine Flow Decreased",
+          "target": "Milnacipran",
           "label": "is caused by"
         },
         {
-          "source": "Venlafaxine",
+          "source": "Milnacipran",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atomoxetine,Venlafaxine": [
-          "Organic Amino Compound",
-          "Antidepressant Agent"
+        "Atomoxetine,Milnacipran": [
+          "Organonitrogen Compound",
+          "Adrenergic Agent"
         ]
       },
-      "id": "path_18179"
+      "id": "path_9149"
     },
     {
       "score": {
-        "ic_mean": 0.4828,
-        "final_score": 0.4828
+        "ic_mean": 0.5249,
+        "final_score": 0.5249
       },
       "nodes": [
         {
@@ -300,11 +252,11 @@
           "type": "Compound"
         },
         {
-          "id": "Therapeutic Response Unexpected",
-          "type": "Side Effect"
+          "id": "Htr6",
+          "type": "Gene"
         },
         {
-          "id": "Sibutramine",
+          "id": "Amitriptyline",
           "type": "Compound"
         },
         {
@@ -315,28 +267,27 @@
       "edges": [
         {
           "source": "Atomoxetine",
-          "target": "Therapeutic Response Unexpected",
-          "label": "causes"
+          "target": "Htr6",
+          "label": "binds"
         },
         {
-          "source": "Therapeutic Response Unexpected",
-          "target": "Sibutramine",
-          "label": "is caused by"
+          "source": "Htr6",
+          "target": "Amitriptyline",
+          "label": "is bound by"
         },
         {
-          "source": "Sibutramine",
+          "source": "Amitriptyline",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atomoxetine,Sibutramine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Atomoxetine,Amitriptyline": [
+          "Carbocyclic Compound",
+          "Antidepressant Agent"
         ]
       },
-      "id": "path_18180"
+      "id": "path_9150"
     }
-  ],
-  "verbalization": ""
+  ]
 }

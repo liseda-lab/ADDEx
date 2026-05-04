@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00675 - Gene::9429",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4843,
+        "final_score": 0.4843
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nettle Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Nettle Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Nettle Rash",
+          "target": "Gefitinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gefitinib",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Gefitinib": [
+          "Tertiary Amino Compound",
+          "Targeted Therapy Agent"
+        ]
+      },
+      "id": "path_212"
+    }
+  ]
+}

@@ -1,6 +1,136 @@
 {
   "id": "Compound::DB00917 - Gene::53919",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6977,
+        "final_score": 0.6977
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco4a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Thyroid Hormone Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slco1c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Slco4a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco4a1",
+          "target": "Thyroid Hormone Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Thyroid Hormone Transmembrane Transporter Activity",
+          "target": "Slco1c1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10203"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6342,
+        "final_score": 0.6342
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc51b",
+          "type": "Gene"
+        },
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Slc51b",
+          "label": "binds"
+        },
+        {
+          "source": "Slc51b",
+          "target": "Conjugated Estrogens",
+          "label": "is bound by"
+        },
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Slco1c1",
+          "label": "binds"
+        }
+      ],
+      "id": "path_10204"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6264,
+        "final_score": 0.6264
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco4a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Dextrothyroxine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Slco4a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco4a1",
+          "target": "Dextrothyroxine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dextrothyroxine",
+          "target": "Slco1c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Dextrothyroxine": [
+          "Organic Hydroxy Compound"
+        ]
+      },
+      "id": "path_10205"
+    }
+  ]
 }

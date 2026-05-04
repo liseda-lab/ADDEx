@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB04953 - Gene::54657",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5975,
+        "final_score": 0.5975
+      },
+      "nodes": [
+        {
+          "id": "Ezogabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Withdrawal Seizures",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lamotrigine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ezogabine",
+          "target": "Withdrawal Seizures",
+          "label": "causes"
+        },
+        {
+          "source": "Withdrawal Seizures",
+          "target": "Lamotrigine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lamotrigine",
+          "target": "Ugt1a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ezogabine,Lamotrigine": [
+          "Aromatic Amine",
+          "Anticonvulsant Agent"
+        ]
+      },
+      "id": "path_10951"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5975,
+        "final_score": 0.5975
+      },
+      "nodes": [
+        {
+          "id": "Ezogabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Withdrawal Convulsions",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lamotrigine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ezogabine",
+          "target": "Drug Withdrawal Convulsions",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Withdrawal Convulsions",
+          "target": "Lamotrigine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lamotrigine",
+          "target": "Ugt1a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ezogabine,Lamotrigine": [
+          "Aromatic Amine",
+          "Anticonvulsant Agent"
+        ]
+      },
+      "id": "path_10952"
+    }
+  ]
 }

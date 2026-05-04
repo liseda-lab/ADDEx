@@ -3,6 +3,96 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.678,
+        "final_score": 0.678
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra1a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7230"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5956,
+        "final_score": 0.5956
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Levonordefrin",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Levonordefrin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Levonordefrin",
+          "target": "Adra1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Levonordefrin": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7231"
+    },
+    {
+      "score": {
         "ic_mean": 0.5656,
         "final_score": 0.5656
       },
@@ -12,11 +102,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr7",
+          "id": "Adra2c",
           "type": "Gene"
         },
         {
-          "id": "Thioridazine",
+          "id": "Dipivefrin",
           "type": "Compound"
         },
         {
@@ -27,315 +117,80 @@
       "edges": [
         {
           "source": "Mirtazapine",
-          "target": "Htr7",
+          "target": "Adra2c",
           "label": "binds"
         },
         {
-          "source": "Htr7",
-          "target": "Thioridazine",
+          "source": "Adra2c",
+          "target": "Dipivefrin",
           "label": "is bound by"
         },
         {
-          "source": "Thioridazine",
+          "source": "Dipivefrin",
           "target": "Adra1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mirtazapine,Thioridazine": [
+        "Mirtazapine,Dipivefrin": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_7232"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3536,
+        "final_score": 0.3536
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Clozapine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clozapine",
+          "target": "Adra1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Azatadine": [
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Mirtazapine,Clozapine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
+        ],
+        "Azatadine,Clozapine": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_14427"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5442,
-        "final_score": 0.5442
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr7",
-          "type": "Gene"
-        },
-        {
-          "id": "Epinastine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Htr7",
-          "label": "binds"
-        },
-        {
-          "source": "Htr7",
-          "target": "Epinastine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Epinastine",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Epinastine": [
-          "Benzazepine"
-        ]
-      },
-      "id": "path_14428"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5142,
-        "final_score": 0.5142
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pseudoephedrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Adrb1",
-          "label": "binds"
-        },
-        {
-          "source": "Adrb1",
-          "target": "Pseudoephedrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pseudoephedrine",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Pseudoephedrine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_14429"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4833,
-        "final_score": 0.4833
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Acute Abdomen",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Pergolide",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Acute Abdomen",
-          "label": "causes"
-        },
-        {
-          "source": "Acute Abdomen",
-          "target": "Pergolide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Pergolide",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Pergolide": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotetracyclic Compound"
-        ]
-      },
-      "id": "path_14430"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4463,
-        "final_score": 0.4463
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Orthostatic Hypertension",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Aripiprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Orthostatic Hypertension",
-          "label": "causes"
-        },
-        {
-          "source": "Orthostatic Hypertension",
-          "target": "Aripiprazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Aripiprazole",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Aripiprazole": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_14431"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3978,
-        "final_score": 0.3978
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Self-injurious Ideation",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Self-injurious Ideation",
-          "label": "causes"
-        },
-        {
-          "source": "Self-injurious Ideation",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Citalopram": [
-          "Organic Heteropolycyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_14432"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3978,
-        "final_score": 0.3978
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drug Seeking Behavior",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Drug Seeking Behavior",
-          "label": "causes"
-        },
-        {
-          "source": "Drug Seeking Behavior",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Adra1a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Citalopram": [
-          "Organic Heteropolycyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_14433"
+      "id": "path_7233"
     }
-  ],
-  "verbalization": ""
+  ]
 }

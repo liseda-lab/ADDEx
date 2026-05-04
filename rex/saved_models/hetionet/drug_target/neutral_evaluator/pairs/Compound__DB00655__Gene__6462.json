@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6459,
-        "final_score": 0.6459
+        "ic_mean": 0.5649,
+        "final_score": 0.5649
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Superficial Phlebothrombosis",
+          "id": "Endometrial Hyperplasia",
           "type": "Side Effect"
         },
         {
-          "id": "Estropipate",
+          "id": "Estriol",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Estrone",
-          "target": "Superficial Phlebothrombosis",
+          "target": "Endometrial Hyperplasia",
           "label": "causes"
         },
         {
-          "source": "Superficial Phlebothrombosis",
-          "target": "Estropipate",
+          "source": "Endometrial Hyperplasia",
+          "target": "Estriol",
           "label": "is caused by"
         },
         {
-          "source": "Estropipate",
+          "source": "Estriol",
           "target": "Shbg",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estrone,Estropipate": [
-          "Steroid"
+        "Estrone,Estriol": [
+          "3-Hydroxy Steroid"
         ]
       },
-      "id": "path_12346"
+      "id": "path_6232"
     },
     {
       "score": {
-        "ic_mean": 0.6459,
-        "final_score": 0.6459
+        "ic_mean": 0.5174,
+        "final_score": 0.5174
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abnormal Withdrawal Bleeding",
-          "type": "Side Effect"
+          "id": "Dezocine",
+          "type": "Compound"
         },
         {
-          "id": "Estropipate",
+          "id": "Equilin",
           "type": "Compound"
         },
         {
@@ -74,31 +74,40 @@
       "edges": [
         {
           "source": "Estrone",
-          "target": "Abnormal Withdrawal Bleeding",
-          "label": "causes"
+          "target": "Dezocine",
+          "label": "resembles"
         },
         {
-          "source": "Abnormal Withdrawal Bleeding",
-          "target": "Estropipate",
-          "label": "is caused by"
+          "source": "Dezocine",
+          "target": "Equilin",
+          "label": "resembles"
         },
         {
-          "source": "Estropipate",
+          "source": "Equilin",
           "target": "Shbg",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estrone,Estropipate": [
-          "Steroid"
+        "Estrone,Dezocine": [
+          "Organic Chemical",
+          "Phenols"
+        ],
+        "Estrone,Equilin": [
+          "3-Hydroxy Steroid",
+          "Estrogen"
+        ],
+        "Dezocine,Equilin": [
+          "Organic Chemical",
+          "Organic Hydroxy Compound"
         ]
       },
-      "id": "path_12347"
+      "id": "path_6233"
     },
     {
       "score": {
-        "ic_mean": 0.6282,
-        "final_score": 0.6282
+        "ic_mean": 0.4876,
+        "final_score": 0.4876
       },
       "nodes": [
         {
@@ -106,11 +115,11 @@
           "type": "Compound"
         },
         {
-          "id": "Retinal Vascular Thrombosis",
-          "type": "Side Effect"
+          "id": "Mestranol",
+          "type": "Compound"
         },
         {
-          "id": "Estropipate",
+          "id": "Estriol",
           "type": "Compound"
         },
         {
@@ -121,121 +130,33 @@
       "edges": [
         {
           "source": "Estrone",
-          "target": "Retinal Vascular Thrombosis",
-          "label": "causes"
+          "target": "Mestranol",
+          "label": "resembles"
         },
         {
-          "source": "Retinal Vascular Thrombosis",
-          "target": "Estropipate",
-          "label": "is caused by"
+          "source": "Mestranol",
+          "target": "Estriol",
+          "label": "resembles"
         },
         {
-          "source": "Estropipate",
+          "source": "Estriol",
           "target": "Shbg",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estrone,Estropipate": [
-          "Steroid"
+        "Estrone,Mestranol": [
+          "Hydroxy Steroid"
+        ],
+        "Estrone,Estriol": [
+          "3-Hydroxy Steroid"
+        ],
+        "Mestranol,Estriol": [
+          "Steroidal Estrogen",
+          "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_12348"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6282,
-        "final_score": 0.6282
-      },
-      "nodes": [
-        {
-          "id": "Estrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Ectropion Of Cervix",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Estropipate",
-          "type": "Compound"
-        },
-        {
-          "id": "Shbg",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Estrone",
-          "target": "Ectropion Of Cervix",
-          "label": "causes"
-        },
-        {
-          "source": "Ectropion Of Cervix",
-          "target": "Estropipate",
-          "label": "is caused by"
-        },
-        {
-          "source": "Estropipate",
-          "target": "Shbg",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Estrone,Estropipate": [
-          "Steroid"
-        ]
-      },
-      "id": "path_12349"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6032,
-        "final_score": 0.6032
-      },
-      "nodes": [
-        {
-          "id": "Estrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Dermatitis Hemorrhagic",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Estropipate",
-          "type": "Compound"
-        },
-        {
-          "id": "Shbg",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Estrone",
-          "target": "Dermatitis Hemorrhagic",
-          "label": "causes"
-        },
-        {
-          "source": "Dermatitis Hemorrhagic",
-          "target": "Estropipate",
-          "label": "is caused by"
-        },
-        {
-          "source": "Estropipate",
-          "target": "Shbg",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Estrone,Estropipate": [
-          "Steroid"
-        ]
-      },
-      "id": "path_12350"
+      "id": "path_6234"
     }
-  ],
-  "verbalization": ""
+  ]
 }

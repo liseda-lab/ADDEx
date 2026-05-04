@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01346 - Gene::2891",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7081,
+        "final_score": 0.7081
+      },
+      "nodes": [
+        {
+          "id": "Quinidine Barbiturate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Aprobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gria2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinidine Barbiturate",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Aprobarbital",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aprobarbital",
+          "target": "Gria2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinidine Barbiturate,Aprobarbital": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_14697"
+    }
+  ]
 }

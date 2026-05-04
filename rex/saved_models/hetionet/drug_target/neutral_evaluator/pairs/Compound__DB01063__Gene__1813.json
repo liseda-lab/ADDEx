@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7593,
-        "final_score": 0.7593
+        "ic_mean": 0.4458,
+        "final_score": 0.4458
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Drd1",
-          "type": "Gene"
+          "id": "Moricizine",
+          "type": "Compound"
         },
         {
-          "id": "Dopamine Receptors",
-          "type": "Pathway"
+          "id": "Minaprine",
+          "type": "Compound"
         },
         {
           "id": "Drd2",
@@ -27,21 +27,89 @@
       "edges": [
         {
           "source": "Acetophenazine",
-          "target": "Drd1",
-          "label": "binds"
+          "target": "Moricizine",
+          "label": "resembles"
         },
         {
-          "source": "Drd1",
-          "target": "Dopamine Receptors",
-          "label": "participates"
+          "source": "Moricizine",
+          "target": "Minaprine",
+          "label": "resembles"
         },
         {
-          "source": "Dopamine Receptors",
+          "source": "Minaprine",
           "target": "Drd2",
-          "label": "is participated by"
+          "label": "binds"
         }
       ],
-      "id": "path_29094"
+      "lowest_common_ancestors": {
+        "Acetophenazine,Moricizine": [
+          "Phenothiazines"
+        ],
+        "Acetophenazine,Minaprine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Moricizine,Minaprine": [
+          "Morpholines"
+        ]
+      },
+      "id": "path_14994"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4228,
+        "final_score": 0.4228
+      },
+      "nodes": [
+        {
+          "id": "Acetophenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetophenazine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Prochlorperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Prochlorperazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetophenazine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Acetophenazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ],
+        "Clocapramine,Prochlorperazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_14995"
     },
     {
       "score": {
@@ -85,20 +153,75 @@
       ],
       "lowest_common_ancestors": {
         "Acetophenazine,Clocapramine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
         ],
         "Acetophenazine,Thioproperazine": [
-          "N-Alkylpiperazine",
+          "Phenothiazines",
           "Antipsychotic Agent"
         ],
         "Clocapramine,Thioproperazine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_29095"
+      "id": "path_14996"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3818,
+        "final_score": 0.3818
+      },
+      "nodes": [
+        {
+          "id": "Acetophenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aceprometazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Acepromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetophenazine",
+          "target": "Aceprometazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Aceprometazine",
+          "target": "Acepromazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Acepromazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetophenazine,Aceprometazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Acetophenazine,Acepromazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ],
+        "Aceprometazine,Acepromazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_14997"
     }
-  ],
-  "verbalization": ""
+  ]
 }

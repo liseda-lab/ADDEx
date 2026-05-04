@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00119 - Gene::117247",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6153,
+        "final_score": 0.6153
+      },
+      "nodes": [
+        {
+          "id": "Pyruvic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Agxt2",
+          "type": "Gene"
+        },
+        {
+          "id": "Glycine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc16a10",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pyruvic Acid",
+          "target": "Agxt2",
+          "label": "binds"
+        },
+        {
+          "source": "Agxt2",
+          "target": "Glycine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Glycine",
+          "target": "Slc16a10",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pyruvic Acid,Glycine": [
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_13207"
+    }
+  ]
 }

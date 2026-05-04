@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00313 - Gene::54576",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5335,
+        "final_score": 0.5335
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Neonatal Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Neonatal Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Neonatal Disorder",
+          "target": "Propofol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propofol",
+          "target": "Ugt1a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valproic Acid,Propofol": [
+          "Hydroxides",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7529"
+    }
+  ]
 }

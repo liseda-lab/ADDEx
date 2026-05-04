@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4764,
-        "final_score": 0.4764
+        "ic_mean": 0.4323,
+        "final_score": 0.4323
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Coronary Heart Disease",
+          "id": "Leukoencephalopathy",
           "type": "Side Effect"
         },
         {
-          "id": "Gliclazide",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -27,27 +27,75 @@
       "edges": [
         {
           "source": "Cisplatin",
-          "target": "Coronary Heart Disease",
+          "target": "Leukoencephalopathy",
           "label": "causes"
         },
         {
-          "source": "Coronary Heart Disease",
-          "target": "Gliclazide",
+          "source": "Leukoencephalopathy",
+          "target": "Ifosfamide",
           "label": "is caused by"
         },
         {
-          "source": "Gliclazide",
+          "source": "Ifosfamide",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cisplatin,Gliclazide": [
-          "Heteroatomic Molecular Entity"
+        "Cisplatin,Ifosfamide": [
+          "Heteroatomic Molecular Entity",
+          "Antineoplastic Alkylating Agent"
         ]
       },
-      "id": "path_4298"
+      "id": "path_1957"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4178,
+        "final_score": 0.4178
+      },
+      "nodes": [
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Spinal Cord Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisplatin",
+          "target": "Spinal Cord Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Spinal Cord Disorder",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cisplatin,Cyclophosphamide": [
+          "Heteroatomic Molecular Entity",
+          "Antineoplastic Alkylating Agent"
+        ]
+      },
+      "id": "path_1958"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00295 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4955,
+        "final_score": 0.4955
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemorrhagic Urticaria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Haemorrhagic Urticaria",
+          "label": "causes"
+        },
+        {
+          "source": "Haemorrhagic Urticaria",
+          "target": "Methadone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methadone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Methadone": [
+          "Chemical Entity",
+          "Opioid Receptor Agonist"
+        ]
+      },
+      "id": "path_11674"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4489,
+        "final_score": 0.4489
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pain Worsened",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Pain Worsened",
+          "label": "causes"
+        },
+        {
+          "source": "Pain Worsened",
+          "target": "Lidocaine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Lidocaine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_11675"
+    }
+  ]
+}

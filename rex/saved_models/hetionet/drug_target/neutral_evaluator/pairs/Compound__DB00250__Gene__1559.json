@@ -12,11 +12,67 @@
           "type": "Compound"
         },
         {
+          "id": "Sulfamoxole",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfadimethoxine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapsone",
+          "target": "Sulfamoxole",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfamoxole",
+          "target": "Sulfadimethoxine",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfadimethoxine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dapsone,Sulfamoxole": [
+          "Anti-Infective Agent",
+          "Substituted Aniline"
+        ],
+        "Dapsone,Sulfadimethoxine": [
+          "Anti-Infective Agent",
+          "Substituted Aniline"
+        ],
+        "Sulfamoxole,Sulfadimethoxine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sulfonamide Anti-Infective Agent"
+        ]
+      },
+      "id": "path_6024"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7932,
+        "final_score": 0.7932
+      },
+      "nodes": [
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
           "id": "Sulfacytine",
           "type": "Compound"
         },
         {
-          "id": "Sulfamethizole",
+          "id": "Sulfadimethoxine",
           "type": "Compound"
         },
         {
@@ -32,30 +88,30 @@
         },
         {
           "source": "Sulfacytine",
-          "target": "Sulfamethizole",
+          "target": "Sulfadimethoxine",
           "label": "resembles"
         },
         {
-          "source": "Sulfamethizole",
+          "source": "Sulfadimethoxine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
         "Dapsone,Sulfacytine": [
-          "Organosulfur Compound",
+          "Benzenes",
           "Anti-Infective Agent"
         ],
-        "Dapsone,Sulfamethizole": [
-          "Organosulfur Compound",
-          "Anti-Infective Agent"
+        "Dapsone,Sulfadimethoxine": [
+          "Anti-Infective Agent",
+          "Substituted Aniline"
         ],
-        "Sulfacytine,Sulfamethizole": [
-          "Sulfonamide Anti-Infective Agent",
-          "Sulfonamide"
+        "Sulfacytine,Sulfadimethoxine": [
+          "Benzenes",
+          "Sulfonamide Anti-Infective Agent"
         ]
       },
-      "id": "path_12018"
+      "id": "path_6025"
     },
     {
       "score": {
@@ -72,7 +128,7 @@
           "type": "Compound"
         },
         {
-          "id": "Sulfadiazine",
+          "id": "Sulfaphenazole",
           "type": "Compound"
         },
         {
@@ -88,35 +144,35 @@
         },
         {
           "source": "Sulfacytine",
-          "target": "Sulfadiazine",
+          "target": "Sulfaphenazole",
           "label": "resembles"
         },
         {
-          "source": "Sulfadiazine",
+          "source": "Sulfaphenazole",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
         "Dapsone,Sulfacytine": [
-          "Organosulfur Compound",
+          "Benzenes",
           "Anti-Infective Agent"
         ],
-        "Dapsone,Sulfadiazine": [
-          "Organosulfur Compound",
-          "Anti-Infective Agent"
+        "Dapsone,Sulfaphenazole": [
+          "Anti-Infective Agent",
+          "Substituted Aniline"
         ],
-        "Sulfacytine,Sulfadiazine": [
-          "Sulfonamide Anti-Infective Agent",
-          "Sulfonamide"
+        "Sulfacytine,Sulfaphenazole": [
+          "Benzenes",
+          "Sulfonamide Anti-Infective Agent"
         ]
       },
-      "id": "path_12019"
+      "id": "path_6026"
     },
     {
       "score": {
-        "ic_mean": 0.7106,
-        "final_score": 0.7106
+        "ic_mean": 0.7195,
+        "final_score": 0.7195
       },
       "nodes": [
         {
@@ -124,11 +180,11 @@
           "type": "Compound"
         },
         {
-          "id": "Nat2",
-          "type": "Gene"
+          "id": "Sulfametopyrazine",
+          "type": "Compound"
         },
         {
-          "id": "Isoniazid",
+          "id": "Sulfamethizole",
           "type": "Compound"
         },
         {
@@ -139,32 +195,40 @@
       "edges": [
         {
           "source": "Dapsone",
-          "target": "Nat2",
-          "label": "binds"
+          "target": "Sulfametopyrazine",
+          "label": "resembles"
         },
         {
-          "source": "Nat2",
-          "target": "Isoniazid",
-          "label": "is bound by"
+          "source": "Sulfametopyrazine",
+          "target": "Sulfamethizole",
+          "label": "resembles"
         },
         {
-          "source": "Isoniazid",
+          "source": "Sulfamethizole",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dapsone,Isoniazid": [
-          "Organonitrogen Compound",
+        "Dapsone,Sulfametopyrazine": [
+          "Organic Cyclic Compound",
           "Anti-Infective Agent"
+        ],
+        "Dapsone,Sulfamethizole": [
+          "Organic Cyclic Compound",
+          "Anti-Infective Agent"
+        ],
+        "Sulfametopyrazine,Sulfamethizole": [
+          "Organic Heteromonocyclic Compound",
+          "Sulfonamide Anti-Infective Agent"
         ]
       },
-      "id": "path_12020"
+      "id": "path_6027"
     },
     {
       "score": {
-        "ic_mean": 0.6214,
-        "final_score": 0.6214
+        "ic_mean": 0.705,
+        "final_score": 0.705
       },
       "nodes": [
         {
@@ -172,55 +236,8 @@
           "type": "Compound"
         },
         {
-          "id": "Mpo",
-          "type": "Gene"
-        },
-        {
-          "id": "Ticlopidine",
+          "id": "Sulfamoxole",
           "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Mpo",
-          "label": "binds"
-        },
-        {
-          "source": "Mpo",
-          "target": "Ticlopidine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ticlopidine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Ticlopidine": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_12021"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6079,
-        "final_score": 0.6079
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nat2",
-          "type": "Gene"
         },
         {
           "id": "Sulfamethoxazole",
@@ -234,13 +251,13 @@
       "edges": [
         {
           "source": "Dapsone",
-          "target": "Nat2",
-          "label": "binds"
+          "target": "Sulfamoxole",
+          "label": "resembles"
         },
         {
-          "source": "Nat2",
+          "source": "Sulfamoxole",
           "target": "Sulfamethoxazole",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Sulfamethoxazole",
@@ -249,17 +266,81 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Dapsone,Sulfamoxole": [
+          "Anti-Infective Agent",
+          "Substituted Aniline"
+        ],
         "Dapsone,Sulfamethoxazole": [
-          "Organosulfur Compound",
+          "Anti-Infective Agent",
+          "Substituted Aniline"
+        ],
+        "Sulfamoxole,Sulfamethoxazole": [
+          "Oxazole",
+          "Sulfonamide Anti-Infective Agent"
+        ]
+      },
+      "id": "path_6028"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6313,
+        "final_score": 0.6313
+      },
+      "nodes": [
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfametopyrazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfamethoxazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapsone",
+          "target": "Sulfametopyrazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfametopyrazine",
+          "target": "Sulfamethoxazole",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfamethoxazole",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dapsone,Sulfametopyrazine": [
+          "Organic Cyclic Compound",
           "Anti-Infective Agent"
+        ],
+        "Dapsone,Sulfamethoxazole": [
+          "Anti-Infective Agent",
+          "Substituted Aniline"
+        ],
+        "Sulfametopyrazine,Sulfamethoxazole": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sulfonamide Anti-Infective Agent"
         ]
       },
-      "id": "path_12022"
+      "id": "path_6029"
     },
     {
       "score": {
-        "ic_mean": 0.57,
-        "final_score": 0.57
+        "ic_mean": 0.4937,
+        "final_score": 0.4937
       },
       "nodes": [
         {
@@ -267,11 +348,11 @@
           "type": "Compound"
         },
         {
-          "id": "Fmo3",
-          "type": "Gene"
+          "id": "Renal Papillary Necrosis",
+          "type": "Side Effect"
         },
         {
-          "id": "Voriconazole",
+          "id": "Mefenamic Acid",
           "type": "Compound"
         },
         {
@@ -282,126 +363,31 @@
       "edges": [
         {
           "source": "Dapsone",
-          "target": "Fmo3",
-          "label": "binds"
+          "target": "Renal Papillary Necrosis",
+          "label": "causes"
         },
         {
-          "source": "Fmo3",
-          "target": "Voriconazole",
-          "label": "is bound by"
+          "source": "Renal Papillary Necrosis",
+          "target": "Mefenamic Acid",
+          "label": "is caused by"
         },
         {
-          "source": "Voriconazole",
+          "source": "Mefenamic Acid",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dapsone,Voriconazole": [
-          "Benzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_12023"
-    },
-    {
-      "score": {
-        "ic_mean": 0.57,
-        "final_score": 0.57
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Ifosfamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Ifosfamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ifosfamide",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Ifosfamide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_12024"
-    },
-    {
-      "score": {
-        "ic_mean": 0.57,
-        "final_score": 0.57
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Warfarin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Warfarin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Warfarin",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Warfarin": [
+        "Dapsone,Mefenamic Acid": [
           "Benzenes"
         ]
       },
-      "id": "path_12025"
+      "id": "path_6030"
     },
     {
       "score": {
-        "ic_mean": 0.57,
-        "final_score": 0.57
+        "ic_mean": 0.4885,
+        "final_score": 0.4885
       },
       "nodes": [
         {
@@ -409,11 +395,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
-          "type": "Gene"
+          "id": "Renal Papillary Necrosis",
+          "type": "Side Effect"
         },
         {
-          "id": "Aminophenazone",
+          "id": "Etodolac",
           "type": "Compound"
         },
         {
@@ -424,261 +410,26 @@
       "edges": [
         {
           "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
+          "target": "Renal Papillary Necrosis",
+          "label": "causes"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Aminophenazone",
-          "label": "is bound by"
+          "source": "Renal Papillary Necrosis",
+          "target": "Etodolac",
+          "label": "is caused by"
         },
         {
-          "source": "Aminophenazone",
+          "source": "Etodolac",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dapsone,Aminophenazone": [
-          "Organic Amino Compound"
+        "Dapsone,Etodolac": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_12026"
-    },
-    {
-      "score": {
-        "ic_mean": 0.54,
-        "final_score": 0.54
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Antipyrine": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_12027"
-    },
-    {
-      "score": {
-        "ic_mean": 0.54,
-        "final_score": 0.54
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nat2",
-          "type": "Gene"
-        },
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Nat2",
-          "label": "binds"
-        },
-        {
-          "source": "Nat2",
-          "target": "Acetaminophen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Acetaminophen",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Acetaminophen": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_12028"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5187,
-        "final_score": 0.5187
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Methadone": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_12029"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5187,
-        "final_score": 0.5187
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Cyclophosphamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Cyclophosphamide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_12030"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5022,
-        "final_score": 0.5022
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Diphenhydramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Diphenhydramine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diphenhydramine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Diphenhydramine": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_12031"
+      "id": "path_6031"
     },
     {
       "score": {
@@ -725,12 +476,12 @@
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_12032"
+      "id": "path_6032"
     },
     {
       "score": {
-        "ic_mean": 0.4683,
-        "final_score": 0.4683
+        "ic_mean": 0.3959,
+        "final_score": 0.3959
       },
       "nodes": [
         {
@@ -738,11 +489,11 @@
           "type": "Compound"
         },
         {
-          "id": "Renal Papillary Necrosis",
-          "type": "Side Effect"
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
         },
         {
-          "id": "Naproxen",
+          "id": "Rifampicin",
           "type": "Compound"
         },
         {
@@ -753,121 +504,27 @@
       "edges": [
         {
           "source": "Dapsone",
-          "target": "Renal Papillary Necrosis",
-          "label": "causes"
-        },
-        {
-          "source": "Renal Papillary Necrosis",
-          "target": "Naproxen",
-          "label": "is caused by"
-        },
-        {
-          "source": "Naproxen",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Naproxen": [
-          "Benzenoid Aromatic Compound"
-        ]
-      },
-      "id": "path_12033"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4674,
-        "final_score": 0.4674
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
+          "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Phenytoin",
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Rifampicin",
           "label": "is bound by"
         },
         {
-          "source": "Phenytoin",
+          "source": "Rifampicin",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dapsone,Phenytoin": [
-          "Organic Cyclic Compound"
+        "Dapsone,Rifampicin": [
+          "Organic Cyclic Compound",
+          "Anti-Infective Agent"
         ]
       },
-      "id": "path_12034"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4438,
-        "final_score": 0.4438
-      },
-      "nodes": [
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Tretinoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Tretinoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tretinoin",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dapsone,Tretinoin": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_12035"
+      "id": "path_6033"
     }
-  ],
-  "verbalization": ""
+  ]
 }

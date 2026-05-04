@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5547,
-        "final_score": 0.5547
-      },
-      "nodes": [
-        {
-          "id": "Bepridil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cacna1h",
-          "type": "Gene"
-        },
-        {
-          "id": "Flunarizine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bepridil",
-          "target": "Cacna1h",
-          "label": "binds"
-        },
-        {
-          "source": "Cacna1h",
-          "target": "Flunarizine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Flunarizine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bepridil,Flunarizine": [
-          "Calcium Channel Blocker",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_11716"
-    },
-    {
-      "score": {
         "ic_mean": 0.5417,
         "final_score": 0.5417
       },
@@ -64,7 +16,7 @@
           "type": "Gene"
         },
         {
-          "id": "Cinnarizine",
+          "id": "Clevidipine",
           "type": "Compound"
         },
         {
@@ -80,26 +32,27 @@
         },
         {
           "source": "Cacna1d",
-          "target": "Cinnarizine",
+          "target": "Clevidipine",
           "label": "is bound by"
         },
         {
-          "source": "Cinnarizine",
+          "source": "Clevidipine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bepridil,Cinnarizine": [
-          "Tertiary Amino Compound"
+        "Bepridil,Clevidipine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Calcium Channel Blocker"
         ]
       },
-      "id": "path_11717"
+      "id": "path_5859"
     },
     {
       "score": {
-        "ic_mean": 0.5168,
-        "final_score": 0.5168
+        "ic_mean": 0.4404,
+        "final_score": 0.4404
       },
       "nodes": [
         {
@@ -107,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna1h",
-          "type": "Gene"
+          "id": "Acute Myocardial Infarction",
+          "type": "Side Effect"
         },
         {
-          "id": "Cinnarizine",
+          "id": "Almotriptan",
           "type": "Compound"
         },
         {
@@ -122,27 +75,79 @@
       "edges": [
         {
           "source": "Bepridil",
-          "target": "Cacna1h",
-          "label": "binds"
+          "target": "Acute Myocardial Infarction",
+          "label": "causes"
         },
         {
-          "source": "Cacna1h",
-          "target": "Cinnarizine",
-          "label": "is bound by"
+          "source": "Acute Myocardial Infarction",
+          "target": "Almotriptan",
+          "label": "is caused by"
         },
         {
-          "source": "Cinnarizine",
+          "source": "Almotriptan",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bepridil,Cinnarizine": [
-          "Tertiary Amino Compound"
+        "Bepridil,Almotriptan": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_11718"
+      "id": "path_5860"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3222,
+        "final_score": 0.3222
+      },
+      "nodes": [
+        {
+          "id": "Bepridil",
+          "type": "Compound"
+        },
+        {
+          "id": "Alverine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tripelennamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bepridil",
+          "target": "Alverine",
+          "label": "resembles"
+        },
+        {
+          "source": "Alverine",
+          "target": "Tripelennamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Tripelennamine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bepridil,Alverine": [
+          "Tertiary Amine"
+        ],
+        "Bepridil,Tripelennamine": [
+          "Organic Cyclic Compound"
+        ],
+        "Alverine,Tripelennamine": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_5861"
     }
-  ],
-  "verbalization": ""
+  ]
 }

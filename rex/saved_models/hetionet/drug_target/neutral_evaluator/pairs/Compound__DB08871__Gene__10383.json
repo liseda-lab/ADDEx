@@ -3,8 +3,55 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7496,
-        "final_score": 0.7496
+        "ic_mean": 0.6848,
+        "final_score": 0.6848
+      },
+      "nodes": [
+        {
+          "id": "Eribulin",
+          "type": "Compound"
+        },
+        {
+          "id": "Microtubule Inhibition",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Eribulin",
+          "target": "Microtubule Inhibition",
+          "label": "is included in"
+        },
+        {
+          "source": "Microtubule Inhibition",
+          "target": "Docetaxel",
+          "label": "includes"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Tubb4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Eribulin,Docetaxel": [
+          "Ketone"
+        ]
+      },
+      "id": "path_11638"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6746,
+        "final_score": 0.6746
       },
       "nodes": [
         {
@@ -16,7 +63,7 @@
           "type": "Gene"
         },
         {
-          "id": "Vinorelbine",
+          "id": "Docetaxel",
           "type": "Compound"
         },
         {
@@ -32,23 +79,21 @@
         },
         {
           "source": "Tubb8",
-          "target": "Vinorelbine",
+          "target": "Docetaxel",
           "label": "is bound by"
         },
         {
-          "source": "Vinorelbine",
+          "source": "Docetaxel",
           "target": "Tubb4b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Eribulin,Vinorelbine": [
-          "Organic Heteropolycyclic Compound",
-          "Vinca-Domain Binding Agent"
+        "Eribulin,Docetaxel": [
+          "Ketone"
         ]
       },
-      "id": "path_22924"
+      "id": "path_11639"
     }
-  ],
-  "verbalization": ""
+  ]
 }

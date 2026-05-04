@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4127,
-        "final_score": 0.4127
+        "ic_mean": 0.5062,
+        "final_score": 0.5062
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Fam53c",
-          "type": "Gene"
+          "id": "Lymphocyte Count Decreased",
+          "type": "Side Effect"
         },
         {
-          "id": "Digitoxin",
+          "id": "Sofosbuvir",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Temsirolimus",
-          "target": "Fam53c",
-          "label": "downregulates"
+          "target": "Lymphocyte Count Decreased",
+          "label": "causes"
         },
         {
-          "source": "Fam53c",
-          "target": "Digitoxin",
-          "label": "is upregulated by"
+          "source": "Lymphocyte Count Decreased",
+          "target": "Sofosbuvir",
+          "label": "is caused by"
         },
         {
-          "source": "Digitoxin",
+          "source": "Sofosbuvir",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Temsirolimus,Digitoxin": [
-          "Lactone"
+        "Temsirolimus,Sofosbuvir": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_16312"
+      "id": "path_8125"
     },
     {
       "score": {
-        "ic_mean": 0.3862,
-        "final_score": 0.3862
+        "ic_mean": 0.4512,
+        "final_score": 0.4512
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a4",
-          "type": "Gene"
+          "id": "Exfoliative Rash",
+          "type": "Side Effect"
         },
         {
-          "id": "Alfentanil",
+          "id": "Telaprevir",
           "type": "Compound"
         },
         {
@@ -74,31 +74,31 @@
       "edges": [
         {
           "source": "Temsirolimus",
-          "target": "Cyp3a4",
-          "label": "binds"
+          "target": "Exfoliative Rash",
+          "label": "causes"
         },
         {
-          "source": "Cyp3a4",
-          "target": "Alfentanil",
-          "label": "is bound by"
+          "source": "Exfoliative Rash",
+          "target": "Telaprevir",
+          "label": "is caused by"
         },
         {
-          "source": "Alfentanil",
+          "source": "Telaprevir",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Temsirolimus,Alfentanil": [
+        "Temsirolimus,Telaprevir": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_16313"
+      "id": "path_8126"
     },
     {
       "score": {
-        "ic_mean": 0.3862,
-        "final_score": 0.3862
+        "ic_mean": 0.4464,
+        "final_score": 0.4464
       },
       "nodes": [
         {
@@ -106,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a4",
-          "type": "Gene"
+          "id": "Mouth Haemorrhage",
+          "type": "Side Effect"
         },
         {
-          "id": "Diltiazem",
+          "id": "Ticagrelor",
           "type": "Compound"
         },
         {
@@ -121,27 +121,167 @@
       "edges": [
         {
           "source": "Temsirolimus",
-          "target": "Cyp3a4",
-          "label": "binds"
+          "target": "Mouth Haemorrhage",
+          "label": "causes"
         },
         {
-          "source": "Cyp3a4",
-          "target": "Diltiazem",
-          "label": "is bound by"
+          "source": "Mouth Haemorrhage",
+          "target": "Ticagrelor",
+          "label": "is caused by"
         },
         {
-          "source": "Diltiazem",
+          "source": "Ticagrelor",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Temsirolimus,Diltiazem": [
-          "Lactam"
+        "Temsirolimus,Ticagrelor": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_16314"
+      "id": "path_8127"
+    },
+    {
+      "score": {
+        "ic_mean": 0.435,
+        "final_score": 0.435
+      },
+      "nodes": [
+        {
+          "id": "Temsirolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Pneumocystis Jirovecii Pneumonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pomalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temsirolimus",
+          "target": "Pneumocystis Jirovecii Pneumonia",
+          "label": "causes"
+        },
+        {
+          "source": "Pneumocystis Jirovecii Pneumonia",
+          "target": "Pomalidomide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pomalidomide",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temsirolimus,Pomalidomide": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8128"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3807,
+        "final_score": 0.3807
+      },
+      "nodes": [
+        {
+          "id": "Temsirolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Glucose Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temsirolimus",
+          "target": "Glucose Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Glucose Increased",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temsirolimus,Indinavir": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8129"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3662,
+        "final_score": 0.3662
+      },
+      "nodes": [
+        {
+          "id": "Temsirolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Exfoliative Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temsirolimus",
+          "target": "Exfoliative Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Exfoliative Rash",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temsirolimus,Docetaxel": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_8130"
     }
-  ],
-  "verbalization": ""
+  ]
 }

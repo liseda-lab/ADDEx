@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5463,
-        "final_score": 0.5463
+        "ic_mean": 0.5257,
+        "final_score": 0.5257
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adenitis",
-          "type": "Side Effect"
+          "id": "Slc6a2",
+          "type": "Gene"
         },
         {
-          "id": "Protriptyline",
+          "id": "Phentermine",
           "type": "Compound"
         },
         {
@@ -27,75 +27,27 @@
       "edges": [
         {
           "source": "Maprotiline",
-          "target": "Adenitis",
-          "label": "causes"
-        },
-        {
-          "source": "Adenitis",
-          "target": "Protriptyline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Protriptyline",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Maprotiline,Protriptyline": [
-          "Carbotricyclic Compound",
-          "Tricyclic Antidepressant"
-        ]
-      },
-      "id": "path_5674"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5432,
-        "final_score": 0.5432
-      },
-      "nodes": [
-        {
-          "id": "Maprotiline",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Promethazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Maprotiline",
-          "target": "Chrm4",
+          "target": "Slc6a2",
           "label": "binds"
         },
         {
-          "source": "Chrm4",
-          "target": "Promethazine",
+          "source": "Slc6a2",
+          "target": "Phentermine",
           "label": "is bound by"
         },
         {
-          "source": "Promethazine",
+          "source": "Phentermine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Maprotiline,Promethazine": [
-          "Agent Affecting Nervous System",
-          "Organic Tricyclic Compound"
+        "Maprotiline,Phentermine": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_5675"
+      "id": "path_2579"
     },
     {
       "score": {
@@ -139,16 +91,352 @@
       ],
       "lowest_common_ancestors": {
         "Maprotiline,Methotrimeprazine": [
-          "Agent Affecting Nervous System",
-          "Organic Tricyclic Compound"
+          "Organic Tricyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_5676"
+      "id": "path_2580"
     },
     {
       "score": {
-        "ic_mean": 0.324,
-        "final_score": 0.324
+        "ic_mean": 0.5162,
+        "final_score": 0.5162
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Trimipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Trimipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_2581"
+    },
+    {
+      "score": {
+        "ic_mean": 0.502,
+        "final_score": 0.502
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Desipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Desipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_2582"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4744,
+        "final_score": 0.4744
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Dexmedetomidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Dexmedetomidine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_2583"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4619,
+        "final_score": 0.4619
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Chrm4",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm4",
+          "target": "Desipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Desipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_2584"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4579,
+        "final_score": 0.4579
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Pethidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pethidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Pethidine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_2585"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4486,
+        "final_score": 0.4486
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphadenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Lymphadenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Lymphadenitis",
+          "target": "Trimipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Trimipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_2586"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4329,
+        "final_score": 0.4329
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Trimipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Trimipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_2587"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3509,
+        "final_score": 0.3509
       },
       "nodes": [
         {
@@ -160,7 +448,7 @@
           "type": "Compound"
         },
         {
-          "id": "Protriptyline",
+          "id": "Cinacalcet",
           "type": "Compound"
         },
         {
@@ -176,11 +464,11 @@
         },
         {
           "source": "Demexiptiline",
-          "target": "Protriptyline",
+          "target": "Cinacalcet",
           "label": "resembles"
         },
         {
-          "source": "Protriptyline",
+          "source": "Cinacalcet",
           "target": "Cyp2d6",
           "label": "binds"
         }
@@ -190,17 +478,126 @@
           "Benzenoid Aromatic Compound",
           "Tricyclic Antidepressant"
         ],
-        "Maprotiline,Protriptyline": [
-          "Carbotricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Maprotiline,Cinacalcet": [
+          "Benzenoid Aromatic Compound"
         ],
-        "Demexiptiline,Protriptyline": [
-          "Carbocyclic Compound",
-          "Tricyclic Antidepressant"
+        "Demexiptiline,Cinacalcet": [
+          "Benzenoid Aromatic Compound"
         ]
       },
-      "id": "path_5677"
+      "id": "path_2588"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2884,
+        "final_score": 0.2884
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Demexiptiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Atomoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Demexiptiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Demexiptiline",
+          "target": "Atomoxetine",
+          "label": "resembles"
+        },
+        {
+          "source": "Atomoxetine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Demexiptiline": [
+          "Benzenoid Aromatic Compound",
+          "Tricyclic Antidepressant"
+        ],
+        "Maprotiline,Atomoxetine": [
+          "Benzenoid Aromatic Compound",
+          "Antidepressant Agent"
+        ],
+        "Demexiptiline,Atomoxetine": [
+          "Benzenoid Aromatic Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_2589"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2737,
+        "final_score": 0.2737
+      },
+      "nodes": [
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Demexiptiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Maprotiline",
+          "target": "Demexiptiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Demexiptiline",
+          "target": "Desipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Maprotiline,Demexiptiline": [
+          "Benzenoid Aromatic Compound",
+          "Tricyclic Antidepressant"
+        ],
+        "Maprotiline,Desipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ],
+        "Demexiptiline,Desipramine": [
+          "Tricyclic Antidepressant",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_2590"
     }
-  ],
-  "verbalization": ""
+  ]
 }

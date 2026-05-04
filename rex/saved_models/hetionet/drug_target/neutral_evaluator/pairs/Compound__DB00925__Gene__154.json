@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB00925 - Gene::154",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5604,
+        "final_score": 0.5604
+      },
+      "nodes": [
+        {
+          "id": "Phenoxybenzamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Dipivefrin",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenoxybenzamine",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Dipivefrin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dipivefrin",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenoxybenzamine,Dipivefrin": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_15928"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4877,
+        "final_score": 0.4877
+      },
+      "nodes": [
+        {
+          "id": "Phenoxybenzamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenoxybenzamine",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Norepinephrine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenoxybenzamine,Norepinephrine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_15929"
+    }
+  ]
 }

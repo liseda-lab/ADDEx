@@ -46,54 +46,7 @@
           "Pyrimidines"
         ]
       },
-      "id": "path_13547"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5869,
-        "final_score": 0.5869
-      },
-      "nodes": [
-        {
-          "id": "Trifluridine",
-          "type": "Compound"
-        },
-        {
-          "id": "Superficial Punctate Keratopathy",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Aciclovir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Trifluridine",
-          "target": "Superficial Punctate Keratopathy",
-          "label": "causes"
-        },
-        {
-          "source": "Superficial Punctate Keratopathy",
-          "target": "Aciclovir",
-          "label": "is caused by"
-        },
-        {
-          "source": "Aciclovir",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Trifluridine,Aciclovir": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_13548"
+      "id": "path_6845"
     },
     {
       "score": {
@@ -140,7 +93,7 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_13549"
+      "id": "path_6846"
     },
     {
       "score": {
@@ -184,8 +137,8 @@
       ],
       "lowest_common_ancestors": {
         "Trifluridine,Idoxuridine": [
-          "Pyrimidine 2'-Deoxyribonucleoside",
-          "Antineoplastic Agent"
+          "Antineoplastic Agent",
+          "Pyrimidine 2'-Deoxyribonucleoside"
         ],
         "Trifluridine,Stavudine": [
           "Organic Heteromonocyclic Compound"
@@ -194,8 +147,197 @@
           "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_13550"
+      "id": "path_6847"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4635,
+        "final_score": 0.4635
+      },
+      "nodes": [
+        {
+          "id": "Trifluridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Idoxuridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Zidovudine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluridine",
+          "target": "Idoxuridine",
+          "label": "resembles"
+        },
+        {
+          "source": "Idoxuridine",
+          "target": "Zidovudine",
+          "label": "resembles"
+        },
+        {
+          "source": "Zidovudine",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluridine,Idoxuridine": [
+          "Antineoplastic Agent",
+          "Pyrimidine 2'-Deoxyribonucleoside"
+        ],
+        "Trifluridine,Zidovudine": [
+          "Pyrimidine Deoxyribonucleoside"
+        ],
+        "Idoxuridine,Zidovudine": [
+          "Pyrimidine Deoxyribonucleoside"
+        ]
+      },
+      "id": "path_6848"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4498,
+        "final_score": 0.4498
+      },
+      "nodes": [
+        {
+          "id": "Trifluridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleoside Analog",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluridine",
+          "target": "Nucleoside Analog",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleoside Analog",
+          "target": "Valaciclovir",
+          "label": "includes"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_6849"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4147,
+        "final_score": 0.4147
+      },
+      "nodes": [
+        {
+          "id": "Trifluridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleoside Analog",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Stavudine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluridine",
+          "target": "Nucleoside Analog",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleoside Analog",
+          "target": "Stavudine",
+          "label": "includes"
+        },
+        {
+          "source": "Stavudine",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluridine,Stavudine": [
+          "Organic Heteromonocyclic Compound"
+        ]
+      },
+      "id": "path_6850"
+    },
+    {
+      "score": {
+        "ic_mean": 0.389,
+        "final_score": 0.389
+      },
+      "nodes": [
+        {
+          "id": "Trifluridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleoside Analog",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Didanosine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluridine",
+          "target": "Nucleoside Analog",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleoside Analog",
+          "target": "Didanosine",
+          "label": "includes"
+        },
+        {
+          "source": "Didanosine",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluridine,Didanosine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6851"
     }
-  ],
-  "verbalization": ""
+  ]
 }

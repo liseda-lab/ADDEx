@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01142 - Gene::150",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5719,
+        "final_score": 0.536,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Appetite Exaggerated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Appetite Exaggerated",
+          "label": "causes"
+        },
+        {
+          "source": "Appetite Exaggerated",
+          "target": "Amoxapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amoxapine",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxepin,Amoxapine": [
+          "Tricyclic Antidepressant",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_1436"
+    }
+  ]
+}

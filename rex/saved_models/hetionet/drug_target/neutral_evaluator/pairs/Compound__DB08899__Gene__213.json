@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB08899 - Gene::213",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.47,
+        "final_score": 0.47
+      },
+      "nodes": [
+        {
+          "id": "Enzalutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Enzalutamide",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Fosphenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fosphenytoin",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Enzalutamide,Fosphenytoin": [
+          "Imidazolidinone"
+        ]
+      },
+      "id": "path_2537"
+    }
+  ]
 }

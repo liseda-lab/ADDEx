@@ -3,6 +3,90 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.7652,
+        "final_score": 0.7652
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
+          "target": "Chrm2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9768"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7367,
+        "final_score": 0.7367
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Chrm2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9769"
+    },
+    {
+      "score": {
         "ic_mean": 0.6976,
         "final_score": 0.6976
       },
@@ -46,14 +130,14 @@
           "Phenothiazines"
         ],
         "Chlorpromazine,Mesoridazine": [
-          "Tertiary Amino Compound",
+          "Phenothiazines",
           "Antipsychotic Agent"
         ],
         "Phenothiazines,Mesoridazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_19360"
+      "id": "path_9770"
     },
     {
       "score": {
@@ -100,19 +184,19 @@
           "Phenothiazines"
         ],
         "Chlorpromazine,Prochlorperazine": [
-          "Phenothiazine",
-          "Tertiary Amino Compound"
+          "Phenothiazines",
+          "Phenothiazine"
         ],
         "Phenothiazines,Prochlorperazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_19361"
+      "id": "path_9771"
     },
     {
       "score": {
-        "ic_mean": 0.6826,
-        "final_score": 0.6826
+        "ic_mean": 0.5793,
+        "final_score": 0.5793
       },
       "nodes": [
         {
@@ -120,11 +204,11 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
+          "id": "Pill Rolling",
+          "type": "Side Effect"
         },
         {
-          "id": "Promethazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -135,38 +219,32 @@
       "edges": [
         {
           "source": "Chlorpromazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
+          "target": "Pill Rolling",
+          "label": "causes"
         },
         {
-          "source": "Phenothiazines",
-          "target": "Promethazine",
-          "label": "includes"
+          "source": "Pill Rolling",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Promethazine",
+          "source": "Prochlorperazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpromazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
-        "Chlorpromazine,Promethazine": [
-          "Phenothiazine",
-          "Tertiary Amine"
-        ],
-        "Phenothiazines,Promethazine": [
-          "Phenothiazines"
+        "Chlorpromazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_19362"
+      "id": "path_9772"
     },
     {
       "score": {
-        "ic_mean": 0.6462,
-        "final_score": 0.6462
+        "ic_mean": 0.5793,
+        "final_score": 0.5793
       },
       "nodes": [
         {
@@ -174,11 +252,11 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
+          "id": "Colon Atonic",
+          "type": "Side Effect"
         },
         {
-          "id": "Trifluoperazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -189,38 +267,32 @@
       "edges": [
         {
           "source": "Chlorpromazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
+          "target": "Colon Atonic",
+          "label": "causes"
         },
         {
-          "source": "Phenothiazines",
-          "target": "Trifluoperazine",
-          "label": "includes"
+          "source": "Colon Atonic",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Trifluoperazine",
+          "source": "Prochlorperazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpromazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
-        "Chlorpromazine,Trifluoperazine": [
-          "Phenothiazine",
-          "Tertiary Amino Compound"
-        ],
-        "Phenothiazines,Trifluoperazine": [
-          "Phenothiazines"
+        "Chlorpromazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_19363"
+      "id": "path_9773"
     },
     {
       "score": {
-        "ic_mean": 0.6261,
-        "final_score": 0.6261
+        "ic_mean": 0.5793,
+        "final_score": 0.5793
       },
       "nodes": [
         {
@@ -228,11 +300,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hrh4",
-          "type": "Gene"
+          "id": "Gait Shuffling",
+          "type": "Side Effect"
         },
         {
-          "id": "Promethazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -243,32 +315,32 @@
       "edges": [
         {
           "source": "Chlorpromazine",
-          "target": "Hrh4",
-          "label": "binds"
+          "target": "Gait Shuffling",
+          "label": "causes"
         },
         {
-          "source": "Hrh4",
-          "target": "Promethazine",
-          "label": "is bound by"
+          "source": "Gait Shuffling",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Promethazine",
+          "source": "Prochlorperazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpromazine,Promethazine": [
-          "Phenothiazine",
-          "Tertiary Amine"
+        "Chlorpromazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_19364"
+      "id": "path_9774"
     },
     {
       "score": {
-        "ic_mean": 0.6147,
-        "final_score": 0.6147
+        "ic_mean": 0.5543,
+        "final_score": 0.5543
       },
       "nodes": [
         {
@@ -276,11 +348,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Parkinsonian Rest Tremor",
+          "type": "Side Effect"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -291,32 +363,176 @@
       "edges": [
         {
           "source": "Chlorpromazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Parkinsonian Rest Tremor",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
-          "label": "is bound by"
+          "source": "Parkinsonian Rest Tremor",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Prochlorperazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpromazine,Mesoridazine": [
-          "Tertiary Amino Compound",
+        "Chlorpromazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_9775"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5543,
+        "final_score": 0.5543
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pregnancy Test False Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Pregnancy Test False Positive",
+          "label": "causes"
+        },
+        {
+          "source": "Pregnancy Test False Positive",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prochlorperazine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_9776"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5543,
+        "final_score": 0.5543
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Masked Facies",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Masked Facies",
+          "label": "causes"
+        },
+        {
+          "source": "Masked Facies",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prochlorperazine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_9777"
+    },
+    {
+      "score": {
+        "ic_mean": 0.553,
+        "final_score": 0.553
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gait Shuffling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Gait Shuffling",
+          "label": "causes"
+        },
+        {
+          "source": "Gait Shuffling",
+          "target": "Loxapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Loxapine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Loxapine": [
+          "Organic Heterotricyclic Compound",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_19365"
+      "id": "path_9778"
     },
     {
       "score": {
-        "ic_mean": 0.6147,
-        "final_score": 0.6147
+        "ic_mean": 0.5366,
+        "final_score": 0.5366
       },
       "nodes": [
         {
@@ -324,11 +540,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
         },
         {
-          "id": "Cyproheptadine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -339,122 +555,27 @@
       "edges": [
         {
           "source": "Chlorpromazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Cyproheptadine",
-          "label": "is bound by"
+          "source": "Pseudoparkinsonism",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Cyproheptadine",
+          "source": "Prochlorperazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpromazine,Cyproheptadine": [
-          "Tertiary Amine"
+        "Chlorpromazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_19366"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5748,
-        "final_score": 0.5748
-      },
-      "nodes": [
-        {
-          "id": "Chlorpromazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd5",
-          "type": "Gene"
-        },
-        {
-          "id": "Methotrimeprazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorpromazine",
-          "target": "Drd5",
-          "label": "binds"
-        },
-        {
-          "source": "Drd5",
-          "target": "Methotrimeprazine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methotrimeprazine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorpromazine,Methotrimeprazine": [
-          "Phenothiazine",
-          "Tertiary Amine"
-        ]
-      },
-      "id": "path_19367"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5333,
-        "final_score": 0.5333
-      },
-      "nodes": [
-        {
-          "id": "Chlorpromazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Trihexyphenidyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorpromazine",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trihexyphenidyl",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorpromazine,Trihexyphenidyl": [
-          "Agent Affecting Nervous System",
-          "Amine"
-        ]
-      },
-      "id": "path_19368"
+      "id": "path_9779"
     },
     {
       "score": {
@@ -467,11 +588,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm3",
+          "id": "Bche",
           "type": "Gene"
         },
         {
-          "id": "Trihexyphenidyl",
+          "id": "Doxacurium Chloride",
           "type": "Compound"
         },
         {
@@ -482,32 +603,31 @@
       "edges": [
         {
           "source": "Chlorpromazine",
-          "target": "Chrm3",
+          "target": "Bche",
           "label": "binds"
         },
         {
-          "source": "Chrm3",
-          "target": "Trihexyphenidyl",
+          "source": "Bche",
+          "target": "Doxacurium Chloride",
           "label": "is bound by"
         },
         {
-          "source": "Trihexyphenidyl",
+          "source": "Doxacurium Chloride",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpromazine,Trihexyphenidyl": [
-          "Agent Affecting Nervous System",
-          "Amine"
+        "Chlorpromazine,Doxacurium Chloride": [
+          "Halide"
         ]
       },
-      "id": "path_19369"
+      "id": "path_9780"
     },
     {
       "score": {
-        "ic_mean": 0.512,
-        "final_score": 0.512
+        "ic_mean": 0.5117,
+        "final_score": 0.5117
       },
       "nodes": [
         {
@@ -515,11 +635,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Petit Mal Epilepsy",
+          "type": "Side Effect"
         },
         {
-          "id": "Trifluoperazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -530,28 +650,75 @@
       "edges": [
         {
           "source": "Chlorpromazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Petit Mal Epilepsy",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Trifluoperazine",
-          "label": "is bound by"
+          "source": "Petit Mal Epilepsy",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Trifluoperazine",
+          "source": "Prochlorperazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorpromazine,Trifluoperazine": [
-          "Phenothiazine",
-          "Tertiary Amino Compound"
+        "Chlorpromazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_19370"
+      "id": "path_9781"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4313,
+        "final_score": 0.4313
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Orofacial Dyskinesia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Orofacial Dyskinesia",
+          "label": "causes"
+        },
+        {
+          "source": "Orofacial Dyskinesia",
+          "target": "Doxepin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Doxepin": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9782"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6236,
-        "final_score": 0.6236
+        "ic_mean": 0.7255,
+        "final_score": 0.7255
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Drd5",
+          "id": "Hrh4",
           "type": "Gene"
         },
         {
-          "id": "Rotigotine",
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Olanzapine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10649"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6884,
+        "final_score": 0.6884
+      },
+      "nodes": [
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr5a",
+          "type": "Gene"
+        },
+        {
+          "id": "Loxapine",
           "type": "Compound"
         },
         {
@@ -27,28 +69,75 @@
       "edges": [
         {
           "source": "Olanzapine",
-          "target": "Drd5",
+          "target": "Htr5a",
           "label": "binds"
         },
         {
-          "source": "Drd5",
-          "target": "Rotigotine",
+          "source": "Htr5a",
+          "target": "Loxapine",
           "label": "is bound by"
         },
         {
-          "source": "Rotigotine",
+          "source": "Loxapine",
           "target": "Drd4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Olanzapine,Rotigotine": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
+        "Olanzapine,Loxapine": [
+          "Organic Heteropolycyclic Compound",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_21060"
+      "id": "path_10650"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6371,
+        "final_score": 0.6371
+      },
+      "nodes": [
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Olanzapine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Bromocriptine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Olanzapine,Bromocriptine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10651"
     }
-  ],
-  "verbalization": ""
+  ]
 }

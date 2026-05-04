@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5339,
-        "final_score": 0.5339
+        "ic_mean": 0.564,
+        "final_score": 0.564
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -32,27 +32,73 @@
         },
         {
           "source": "Cyp2c18",
-          "target": "Antipyrine",
+          "target": "Ifosfamide",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Ifosfamide",
           "target": "Cyp2b6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Valproic Acid,Antipyrine": [
-          "Carbonyl Compound",
-          "Agent Affecting Nervous System"
+        "Valproic Acid,Ifosfamide": [
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_17490"
+      "id": "path_8793"
     },
     {
       "score": {
-        "ic_mean": 0.4722,
-        "final_score": 0.4722
+        "ic_mean": 0.4971,
+        "final_score": 0.4971
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Enzyme Induction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Enzyme Induction",
+          "label": "causes"
+        },
+        {
+          "source": "Enzyme Induction",
+          "target": "Efavirenz",
+          "label": "is caused by"
+        },
+        {
+          "source": "Efavirenz",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valproic Acid,Efavirenz": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_8794"
+    },
+    {
+      "score": {
+        "ic_mean": 0.436,
+        "final_score": 0.436
       },
       "nodes": [
         {
@@ -64,7 +110,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Efavirenz",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -80,117 +126,21 @@
         },
         {
           "source": "Fanconi Syndrome",
-          "target": "Efavirenz",
+          "target": "Ifosfamide",
           "label": "is caused by"
         },
         {
-          "source": "Efavirenz",
+          "source": "Ifosfamide",
           "target": "Cyp2b6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Valproic Acid,Efavirenz": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_17491"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4665,
-        "final_score": 0.4665
-      },
-      "nodes": [
-        {
-          "id": "Valproic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Discoid Lupus Erythematosus",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Voriconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Valproic Acid",
-          "target": "Discoid Lupus Erythematosus",
-          "label": "causes"
-        },
-        {
-          "source": "Discoid Lupus Erythematosus",
-          "target": "Voriconazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Voriconazole",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Valproic Acid,Voriconazole": [
-          "Hydroxides"
-        ]
-      },
-      "id": "path_17492"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4397,
-        "final_score": 0.4397
-      },
-      "nodes": [
-        {
-          "id": "Valproic Acid",
-          "type": "Compound"
-        },
-        {
-          "id": "Porphyria Acute",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Carbamazepine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Valproic Acid",
-          "target": "Porphyria Acute",
-          "label": "causes"
-        },
-        {
-          "source": "Porphyria Acute",
-          "target": "Carbamazepine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Carbamazepine",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Valproic Acid,Carbamazepine": [
-          "Anticonvulsant Agent",
+        "Valproic Acid,Ifosfamide": [
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_17493"
+      "id": "path_8795"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00215 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4746,
+        "final_score": 0.4746
+      },
+      "nodes": [
+        {
+          "id": "Citalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "Melancholia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Donepezil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Citalopram",
+          "target": "Melancholia",
+          "label": "causes"
+        },
+        {
+          "source": "Melancholia",
+          "target": "Donepezil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Donepezil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_8278"
+    },
+    {
+      "score": {
+        "ic_mean": 0.438,
+        "final_score": 0.438
+      },
+      "nodes": [
+        {
+          "id": "Citalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "Facial Spasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Citalopram",
+          "target": "Facial Spasm",
+          "label": "causes"
+        },
+        {
+          "source": "Facial Spasm",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Citalopram,Paliperidone": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_8279"
+    }
+  ]
+}

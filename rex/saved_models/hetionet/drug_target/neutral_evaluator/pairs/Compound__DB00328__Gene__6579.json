@@ -1,6 +1,148 @@
 {
   "id": "Compound::DB00328 - Gene::6579",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4774,
+        "final_score": 0.4774
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephritic Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Nephritic Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Nephritic Syndrome",
+          "target": "Naproxen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Naproxen",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Naproxen": [
+          "Aromatic Ether",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_6912"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4735,
+        "final_score": 0.4735
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aminohippurate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Aminohippurate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aminohippurate",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Aminohippurate": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_6913"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4617,
+        "final_score": 0.4617
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Necrotising Fasciitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Necrotising Fasciitis",
+          "label": "causes"
+        },
+        {
+          "source": "Necrotising Fasciitis",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Ibuprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_6914"
+    }
+  ]
 }

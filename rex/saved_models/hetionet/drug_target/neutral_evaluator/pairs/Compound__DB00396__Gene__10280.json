@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00396 - Gene::10280",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.525,
+        "final_score": 0.525
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cleft Lip",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Sigmar1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Cleft Lip",
+          "label": "causes"
+        },
+        {
+          "source": "Cleft Lip",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Sigmar1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Clomifene": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_15730"
+    }
+  ]
 }

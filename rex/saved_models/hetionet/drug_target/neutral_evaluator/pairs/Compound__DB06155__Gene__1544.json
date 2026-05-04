@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4788,
-        "final_score": 0.4788
+        "ic_mean": 0.5746,
+        "final_score": 0.5746
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Depressive Disorder",
-          "type": "Side Effect"
+          "id": "Cnr1",
+          "type": "Gene"
         },
         {
-          "id": "Alosetron",
+          "id": "Acetaminophen",
           "type": "Compound"
         },
         {
@@ -27,27 +27,74 @@
       "edges": [
         {
           "source": "Rimonabant",
-          "target": "Depressive Disorder",
-          "label": "causes"
+          "target": "Cnr1",
+          "label": "binds"
         },
         {
-          "source": "Depressive Disorder",
-          "target": "Alosetron",
-          "label": "is caused by"
+          "source": "Cnr1",
+          "target": "Acetaminophen",
+          "label": "is bound by"
         },
         {
-          "source": "Alosetron",
+          "source": "Acetaminophen",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rimonabant,Alosetron": [
-          "Agent Affecting Nervous System",
-          "Diazole"
+        "Rimonabant,Acetaminophen": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_16594"
+      "id": "path_8290"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5197,
+        "final_score": 0.5197
+      },
+      "nodes": [
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rimonabant",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Propafenone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rimonabant,Propafenone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_8291"
     },
     {
       "score": {
@@ -94,60 +141,12 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_16595"
+      "id": "path_8292"
     },
     {
       "score": {
-        "ic_mean": 0.4634,
-        "final_score": 0.4634
-      },
-      "nodes": [
-        {
-          "id": "Rimonabant",
-          "type": "Compound"
-        },
-        {
-          "id": "Dysthymic Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Alosetron",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rimonabant",
-          "target": "Dysthymic Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Dysthymic Disorder",
-          "target": "Alosetron",
-          "label": "is caused by"
-        },
-        {
-          "source": "Alosetron",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rimonabant,Alosetron": [
-          "Agent Affecting Nervous System",
-          "Diazole"
-        ]
-      },
-      "id": "path_16596"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4442,
-        "final_score": 0.4442
+        "ic_mean": 0.4699,
+        "final_score": 0.4699
       },
       "nodes": [
         {
@@ -159,7 +158,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Anastrozole",
+          "id": "Estropipate",
           "type": "Compound"
         },
         {
@@ -175,21 +174,209 @@
         },
         {
           "source": "Mood Alteration Nos",
-          "target": "Anastrozole",
+          "target": "Estropipate",
           "label": "is caused by"
         },
         {
-          "source": "Anastrozole",
+          "source": "Estropipate",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rimonabant,Anastrozole": [
-          "Azole"
+        "Rimonabant,Estropipate": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_16597"
+      "id": "path_8293"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4683,
+        "final_score": 0.4683
+      },
+      "nodes": [
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rimonabant",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Ranitidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rimonabant,Ranitidine": [
+          "Organic Heteromonocyclic Compound"
+        ]
+      },
+      "id": "path_8294"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4683,
+        "final_score": 0.4683
+      },
+      "nodes": [
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Cinacalcet",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rimonabant",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Cinacalcet",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cinacalcet",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rimonabant,Cinacalcet": [
+          "Benzenes"
+        ]
+      },
+      "id": "path_8295"
+    },
+    {
+      "score": {
+        "ic_mean": 0.463,
+        "final_score": 0.463
+      },
+      "nodes": [
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Dysthymic Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rilpivirine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rimonabant",
+          "target": "Dysthymic Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Dysthymic Disorder",
+          "target": "Rilpivirine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rilpivirine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rimonabant,Rilpivirine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8296"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4483,
+        "final_score": 0.4483
+      },
+      "nodes": [
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Emotional Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rimonabant",
+          "target": "Emotional Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Emotional Disorder",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rimonabant,Propafenone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_8297"
     },
     {
       "score": {
@@ -206,7 +393,7 @@
           "type": "Gene"
         },
         {
-          "id": "Nafcillin",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -222,26 +409,26 @@
         },
         {
           "source": "Cyp3a4",
-          "target": "Nafcillin",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Nafcillin",
+          "source": "Ranitidine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rimonabant,Nafcillin": [
-          "Organonitrogen Heterocyclic Compound"
+        "Rimonabant,Ranitidine": [
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_16598"
+      "id": "path_8298"
     },
     {
       "score": {
-        "ic_mean": 0.4119,
-        "final_score": 0.4119
+        "ic_mean": 0.4385,
+        "final_score": 0.4385
       },
       "nodes": [
         {
@@ -249,11 +436,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a4",
-          "type": "Gene"
+          "id": "Depressive Symptom",
+          "type": "Side Effect"
         },
         {
-          "id": "Telithromycin",
+          "id": "Delavirdine",
           "type": "Compound"
         },
         {
@@ -264,27 +451,168 @@
       "edges": [
         {
           "source": "Rimonabant",
-          "target": "Cyp3a4",
-          "label": "binds"
+          "target": "Depressive Symptom",
+          "label": "causes"
         },
         {
-          "source": "Cyp3a4",
-          "target": "Telithromycin",
-          "label": "is bound by"
+          "source": "Depressive Symptom",
+          "target": "Delavirdine",
+          "label": "is caused by"
         },
         {
-          "source": "Telithromycin",
+          "source": "Delavirdine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rimonabant,Telithromycin": [
+        "Rimonabant,Delavirdine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8299"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4004,
+        "final_score": 0.4004
+      },
+      "nodes": [
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rimonabant",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Clevidipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rimonabant,Clevidipine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8300"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4004,
+        "final_score": 0.4004
+      },
+      "nodes": [
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rimonabant",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Fluvastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rimonabant,Fluvastatin": [
           "Organooxygen Compound"
         ]
       },
-      "id": "path_16599"
+      "id": "path_8301"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3821,
+        "final_score": 0.3821
+      },
+      "nodes": [
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Joint Sprain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rimonabant",
+          "target": "Joint Sprain",
+          "label": "causes"
+        },
+        {
+          "source": "Joint Sprain",
+          "target": "Doxepin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rimonabant,Doxepin": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8302"
     }
-  ],
-  "verbalization": ""
+  ]
 }

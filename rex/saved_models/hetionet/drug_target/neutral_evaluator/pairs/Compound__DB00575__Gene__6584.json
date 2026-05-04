@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00575 - Gene::6584",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5441,
+        "final_score": 0.5441
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Coombs Test Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cefixime",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Coombs Test Positive",
+          "label": "causes"
+        },
+        {
+          "source": "Coombs Test Positive",
+          "target": "Cefixime",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cefixime",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Cefixime": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_3770"
+    }
+  ]
 }

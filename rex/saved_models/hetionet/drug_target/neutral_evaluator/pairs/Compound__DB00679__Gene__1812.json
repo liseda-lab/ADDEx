@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7299,
-        "final_score": 0.7299
+        "ic_mean": 0.6319,
+        "final_score": 0.6319
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Pregnancy Test False Positive",
+          "type": "Side Effect"
         },
         {
-          "id": "Zuclopenthixol",
+          "id": "Propericiazine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Thioridazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Pregnancy Test False Positive",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Zuclopenthixol",
-          "label": "is bound by"
+          "source": "Pregnancy Test False Positive",
+          "target": "Propericiazine",
+          "label": "is caused by"
         },
         {
-          "source": "Zuclopenthixol",
+          "source": "Propericiazine",
           "target": "Drd1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Thioridazine,Zuclopenthixol": [
-          "Organic Heterotricyclic Compound",
-          "Antipsychotic Agent"
+        "Thioridazine,Propericiazine": [
+          "Phenothiazines"
         ]
       },
-      "id": "path_5540"
+      "id": "path_2523"
     },
     {
       "score": {
-        "ic_mean": 0.6485,
-        "final_score": 0.6485
+        "ic_mean": 0.5798,
+        "final_score": 0.5798
       },
       "nodes": [
         {
@@ -60,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Electrocardiogram U-wave Abnormality",
+          "type": "Side Effect"
         },
         {
-          "id": "Thiothixene",
+          "id": "Propericiazine",
           "type": "Compound"
         },
         {
@@ -75,28 +74,129 @@
       "edges": [
         {
           "source": "Thioridazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Electrocardiogram U-wave Abnormality",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Thiothixene",
-          "label": "is bound by"
+          "source": "Electrocardiogram U-wave Abnormality",
+          "target": "Propericiazine",
+          "label": "is caused by"
         },
         {
-          "source": "Thiothixene",
+          "source": "Propericiazine",
           "target": "Drd1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Thioridazine,Thiothixene": [
-          "Organonitrogen Heterocyclic Compound",
+        "Thioridazine,Propericiazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_2524"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5798,
+        "final_score": 0.5798
+      },
+      "nodes": [
+        {
+          "id": "Thioridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Electrocardiogram U Wave Present",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propericiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thioridazine",
+          "target": "Electrocardiogram U Wave Present",
+          "label": "causes"
+        },
+        {
+          "source": "Electrocardiogram U Wave Present",
+          "target": "Propericiazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propericiazine",
+          "target": "Drd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thioridazine,Propericiazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_2525"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4069,
+        "final_score": 0.4069
+      },
+      "nodes": [
+        {
+          "id": "Thioridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aceprometazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Triflupromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thioridazine",
+          "target": "Aceprometazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Aceprometazine",
+          "target": "Triflupromazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Triflupromazine",
+          "target": "Drd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thioridazine,Aceprometazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Thioridazine,Triflupromazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Aceprometazine,Triflupromazine": [
+          "Phenothiazines",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_5541"
+      "id": "path_2526"
     }
-  ],
-  "verbalization": ""
+  ]
 }

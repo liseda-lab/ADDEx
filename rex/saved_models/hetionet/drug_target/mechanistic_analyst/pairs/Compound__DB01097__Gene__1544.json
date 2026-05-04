@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB01097 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7373,
+        "final_score": 0.6186,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Leflunomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Leflunomide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5125"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4227,
+        "final_score": 0.4227
+      },
+      "nodes": [
+        {
+          "id": "Leflunomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Synovitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Leflunomide",
+          "target": "Synovitis",
+          "label": "causes"
+        },
+        {
+          "source": "Synovitis",
+          "target": "Gemfibrozil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gemfibrozil",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Leflunomide,Gemfibrozil": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_5126"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4216,
+        "final_score": 0.4216
+      },
+      "nodes": [
+        {
+          "id": "Leflunomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Overdose",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aminophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Leflunomide",
+          "target": "Overdose",
+          "label": "causes"
+        },
+        {
+          "source": "Overdose",
+          "target": "Aminophylline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aminophylline",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Leflunomide,Aminophylline": [
+          "Chemical Entity",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_5127"
+    }
+  ]
+}

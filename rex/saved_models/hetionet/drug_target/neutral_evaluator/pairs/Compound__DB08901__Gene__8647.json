@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB08901 - Gene::8647",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5228,
+        "final_score": 0.5228
+      },
+      "nodes": [
+        {
+          "id": "Ponatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Vascular Occlusion",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ponatinib",
+          "target": "Vascular Occlusion",
+          "label": "causes"
+        },
+        {
+          "source": "Vascular Occlusion",
+          "target": "Ethinyl Estradiol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Abcb11",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ponatinib,Ethinyl Estradiol": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_11293"
+    }
+  ]
 }

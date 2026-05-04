@@ -46,19 +46,67 @@
           "Phenothiazines"
         ],
         "Fluphenazine,Mesoridazine": [
-          "Tertiary Amino Compound",
+          "Phenothiazines",
           "Antipsychotic Agent"
         ],
         "Phenothiazines,Mesoridazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_6747"
+      "id": "path_3091"
     },
     {
       "score": {
-        "ic_mean": 0.6291,
-        "final_score": 0.6291
+        "ic_mean": 0.604,
+        "final_score": 0.604
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Paralysis Of Bladder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Paralysis Of Bladder",
+          "label": "causes"
+        },
+        {
+          "source": "Paralysis Of Bladder",
+          "target": "Perphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluphenazine,Perphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_3092"
+    },
+    {
+      "score": {
+        "ic_mean": 0.599,
+        "final_score": 0.599
       },
       "nodes": [
         {
@@ -70,7 +118,7 @@
           "type": "Gene"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Thiothixene",
           "type": "Compound"
         },
         {
@@ -86,27 +134,27 @@
         },
         {
           "source": "Htr6",
-          "target": "Mesoridazine",
+          "target": "Thiothixene",
           "label": "is bound by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Thiothixene",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluphenazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
+        "Fluphenazine,Thiothixene": [
+          "Antipsychotic Agent",
+          "N-Alkylpiperazine"
         ]
       },
-      "id": "path_6748"
+      "id": "path_3093"
     },
     {
       "score": {
-        "ic_mean": 0.4911,
-        "final_score": 0.4911
+        "ic_mean": 0.599,
+        "final_score": 0.599
       },
       "nodes": [
         {
@@ -114,11 +162,11 @@
           "type": "Compound"
         },
         {
-          "id": "Mitral Valve Incompetence",
-          "type": "Side Effect"
+          "id": "Htr6",
+          "type": "Gene"
         },
         {
-          "id": "Ropinirole",
+          "id": "Methysergide",
           "type": "Compound"
         },
         {
@@ -129,32 +177,176 @@
       "edges": [
         {
           "source": "Fluphenazine",
-          "target": "Mitral Valve Incompetence",
-          "label": "causes"
+          "target": "Htr6",
+          "label": "binds"
         },
         {
-          "source": "Mitral Valve Incompetence",
-          "target": "Ropinirole",
-          "label": "is caused by"
+          "source": "Htr6",
+          "target": "Methysergide",
+          "label": "is bound by"
         },
         {
-          "source": "Ropinirole",
+          "source": "Methysergide",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluphenazine,Ropinirole": [
-          "Tertiary Amino Compound",
+        "Fluphenazine,Methysergide": [
+          "Organonitrogen Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_6749"
+      "id": "path_3094"
     },
     {
       "score": {
-        "ic_mean": 0.4838,
-        "final_score": 0.4838
+        "ic_mean": 0.5777,
+        "final_score": 0.5777
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Mianserin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluphenazine,Mianserin": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3095"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5457,
+        "final_score": 0.5457
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Thiothixene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Thiothixene",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluphenazine,Thiothixene": [
+          "Antipsychotic Agent",
+          "N-Alkylpiperazine"
+        ]
+      },
+      "id": "path_3096"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5363,
+        "final_score": 0.5363
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bizarre Dreams",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Bizarre Dreams",
+          "label": "causes"
+        },
+        {
+          "source": "Bizarre Dreams",
+          "target": "Perphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluphenazine,Perphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_3097"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5186,
+        "final_score": 0.5186
       },
       "nodes": [
         {
@@ -166,7 +358,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Pramipexole",
+          "id": "Perphenazine",
           "type": "Compound"
         },
         {
@@ -182,23 +374,22 @@
         },
         {
           "source": "Neurogenic Bladder",
-          "target": "Pramipexole",
+          "target": "Perphenazine",
           "label": "is caused by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Perphenazine",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluphenazine,Pramipexole": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Fluphenazine,Perphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_6750"
+      "id": "path_3098"
     }
-  ],
-  "verbalization": ""
+  ]
 }

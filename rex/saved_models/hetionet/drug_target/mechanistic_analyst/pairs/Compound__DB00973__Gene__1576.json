@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB00973 - Gene::1576",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.668,
+        "final_score": 0.709,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Ezetimibe",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b15",
+          "type": "Gene"
+        },
+        {
+          "id": "Tamoxifen Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ezetimibe",
+          "target": "Ugt2b15",
+          "label": "binds"
+        },
+        {
+          "source": "Ugt2b15",
+          "target": "Tamoxifen Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Tamoxifen Metabolism",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1451"
+    },
+    {
+      "score": {
+        "ic_mean": 0.459,
+        "final_score": 0.459
+      },
+      "nodes": [
+        {
+          "id": "Ezetimibe",
+          "type": "Compound"
+        },
+        {
+          "id": "Immune-mediated Necrotising Myopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ezetimibe",
+          "target": "Immune-mediated Necrotising Myopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Immune-mediated Necrotising Myopathy",
+          "target": "Rosuvastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rosuvastatin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ezetimibe,Rosuvastatin": [
+          "Antilipidemic Agent",
+          "Primary Amide"
+        ]
+      },
+      "id": "path_1452"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4197,
+        "final_score": 0.4197
+      },
+      "nodes": [
+        {
+          "id": "Ezetimibe",
+          "type": "Compound"
+        },
+        {
+          "id": "Pain In Arm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Salmeterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ezetimibe",
+          "target": "Pain In Arm",
+          "label": "causes"
+        },
+        {
+          "source": "Pain In Arm",
+          "target": "Salmeterol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Salmeterol",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ezetimibe,Salmeterol": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_1453"
+    }
+  ]
+}

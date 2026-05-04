@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5861,
-        "final_score": 0.5861
+        "ic_mean": 0.7666,
+        "final_score": 0.7666
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2b6",
+          "id": "Cyp2c19",
           "type": "Gene"
         },
         {
-          "id": "Efavirenz",
-          "type": "Compound"
+          "id": "Limonene Monooxygenase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2c9",
@@ -27,26 +27,63 @@
       "edges": [
         {
           "source": "Ospemifene",
-          "target": "Cyp2b6",
+          "target": "Cyp2c19",
           "label": "binds"
         },
         {
-          "source": "Cyp2b6",
-          "target": "Efavirenz",
-          "label": "is bound by"
+          "source": "Cyp2c19",
+          "target": "Limonene Monooxygenase Activity",
+          "label": "participates"
         },
         {
-          "source": "Efavirenz",
+          "source": "Limonene Monooxygenase Activity",
           "target": "Cyp2c9",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Ospemifene,Efavirenz": [
-          "Organochlorine Compound"
-        ]
+      "id": "path_2334"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7666,
+        "final_score": 0.7666
       },
-      "id": "path_5181"
+      "nodes": [
+        {
+          "id": "Ospemifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "(r)-limonene 6-monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ospemifene",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "(r)-limonene 6-monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "(r)-limonene 6-monooxygenase Activity",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2335"
     },
     {
       "score": {
@@ -63,7 +100,7 @@
           "type": "Gene"
         },
         {
-          "id": "Efavirenz",
+          "id": "Trabectedin",
           "type": "Compound"
         },
         {
@@ -79,26 +116,27 @@
         },
         {
           "source": "Cyp2c19",
-          "target": "Efavirenz",
+          "target": "Trabectedin",
           "label": "is bound by"
         },
         {
-          "source": "Efavirenz",
+          "source": "Trabectedin",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ospemifene,Efavirenz": [
-          "Organochlorine Compound"
+        "Ospemifene,Trabectedin": [
+          "Antineoplastic Agent",
+          "Organic Hydroxy Compound"
         ]
       },
-      "id": "path_5182"
+      "id": "path_2336"
     },
     {
       "score": {
-        "ic_mean": 0.5182,
-        "final_score": 0.5182
+        "ic_mean": 0.5521,
+        "final_score": 0.5521
       },
       "nodes": [
         {
@@ -106,11 +144,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a4",
+          "id": "Cyp2c19",
           "type": "Gene"
         },
         {
-          "id": "Guanfacine",
+          "id": "Delavirdine",
           "type": "Compound"
         },
         {
@@ -121,31 +159,31 @@
       "edges": [
         {
           "source": "Ospemifene",
-          "target": "Cyp3a4",
+          "target": "Cyp2c19",
           "label": "binds"
         },
         {
-          "source": "Cyp3a4",
-          "target": "Guanfacine",
+          "source": "Cyp2c19",
+          "target": "Delavirdine",
           "label": "is bound by"
         },
         {
-          "source": "Guanfacine",
+          "source": "Delavirdine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ospemifene,Guanfacine": [
-          "Organooxygen Compound"
+        "Ospemifene,Delavirdine": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_5183"
+      "id": "path_2337"
     },
     {
       "score": {
-        "ic_mean": 0.4951,
-        "final_score": 0.4951
+        "ic_mean": 0.4707,
+        "final_score": 0.4707
       },
       "nodes": [
         {
@@ -153,11 +191,11 @@
           "type": "Compound"
         },
         {
-          "id": "Haemorrhagic Stroke",
-          "type": "Side Effect"
+          "id": "Cyp2c19",
+          "type": "Gene"
         },
         {
-          "id": "Etravirine",
+          "id": "Trimethadione",
           "type": "Compound"
         },
         {
@@ -168,27 +206,26 @@
       "edges": [
         {
           "source": "Ospemifene",
-          "target": "Haemorrhagic Stroke",
-          "label": "causes"
+          "target": "Cyp2c19",
+          "label": "binds"
         },
         {
-          "source": "Haemorrhagic Stroke",
-          "target": "Etravirine",
-          "label": "is caused by"
+          "source": "Cyp2c19",
+          "target": "Trimethadione",
+          "label": "is bound by"
         },
         {
-          "source": "Etravirine",
+          "source": "Trimethadione",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ospemifene,Etravirine": [
-          "Aromatic Ether"
+        "Ospemifene,Trimethadione": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_5184"
+      "id": "path_2338"
     }
-  ],
-  "verbalization": ""
+  ]
 }

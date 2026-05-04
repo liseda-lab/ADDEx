@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01050 - Gene::213",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4874,
+        "final_score": 0.4874
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Glomerular Filtration Rate Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Canagliflozin",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Glomerular Filtration Rate Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Glomerular Filtration Rate Decreased",
+          "target": "Canagliflozin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Canagliflozin",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Canagliflozin": [
+          "Organooxygen Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_7595"
+    }
+  ]
+}

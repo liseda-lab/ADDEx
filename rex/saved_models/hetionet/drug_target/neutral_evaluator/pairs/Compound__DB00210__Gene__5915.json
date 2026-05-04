@@ -3,6 +3,60 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.8483,
+        "final_score": 0.8483
+      },
+      "nodes": [
+        {
+          "id": "Adapalene",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinoids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Rarb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Adapalene",
+          "target": "Retinoids",
+          "label": "is included in"
+        },
+        {
+          "source": "Retinoids",
+          "target": "Tazarotene",
+          "label": "includes"
+        },
+        {
+          "source": "Tazarotene",
+          "target": "Rarb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Adapalene,Retinoids": [
+          "Organic Molecular Entity"
+        ],
+        "Adapalene,Tazarotene": [
+          "Retinoic Acid Agent",
+          "Carbonyl Compound"
+        ],
+        "Retinoids,Tazarotene": [
+          "Retinoid"
+        ]
+      },
+      "id": "path_13665"
+    },
+    {
+      "score": {
         "ic_mean": 0.8333,
         "final_score": 0.8333
       },
@@ -53,12 +107,12 @@
           "Retinoid"
         ]
       },
-      "id": "path_26773"
+      "id": "path_13666"
     },
     {
       "score": {
-        "ic_mean": 0.8333,
-        "final_score": 0.8333
+        "ic_mean": 0.7949,
+        "final_score": 0.7949
       },
       "nodes": [
         {
@@ -66,12 +120,12 @@
           "type": "Compound"
         },
         {
-          "id": "Retinoids",
-          "type": "Pharmacologic Class"
+          "id": "Rxrg",
+          "type": "Gene"
         },
         {
-          "id": "Alitretinoin",
-          "type": "Compound"
+          "id": "Retinoic Acid Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Rarb",
@@ -81,33 +135,63 @@
       "edges": [
         {
           "source": "Adapalene",
-          "target": "Retinoids",
-          "label": "is included in"
-        },
-        {
-          "source": "Retinoids",
-          "target": "Alitretinoin",
-          "label": "includes"
-        },
-        {
-          "source": "Alitretinoin",
-          "target": "Rarb",
+          "target": "Rxrg",
           "label": "binds"
+        },
+        {
+          "source": "Rxrg",
+          "target": "Retinoic Acid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Retinoic Acid Receptor Activity",
+          "target": "Rarb",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Adapalene,Retinoids": [
-          "Organic Molecular Entity"
-        ],
-        "Adapalene,Alitretinoin": [
-          "Monocarboxylic Acid",
-          "Retinoic Acid Agent"
-        ],
-        "Retinoids,Alitretinoin": [
-          "Retinoid"
-        ]
+      "id": "path_13667"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7793,
+        "final_score": 0.7793
       },
-      "id": "path_26774"
+      "nodes": [
+        {
+          "id": "Adapalene",
+          "type": "Compound"
+        },
+        {
+          "id": "Rarg",
+          "type": "Gene"
+        },
+        {
+          "id": "Retinoic Acid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Rarb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Adapalene",
+          "target": "Rarg",
+          "label": "binds"
+        },
+        {
+          "source": "Rarg",
+          "target": "Retinoic Acid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Retinoic Acid Receptor Activity",
+          "target": "Rarb",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13668"
     },
     {
       "score": {
@@ -151,12 +235,11 @@
       ],
       "lowest_common_ancestors": {
         "Adapalene,Tazarotene": [
-          "Carbonyl Compound",
-          "Retinoic Acid Agent"
+          "Retinoic Acid Agent",
+          "Carbonyl Compound"
         ]
       },
-      "id": "path_26775"
+      "id": "path_13669"
     }
-  ],
-  "verbalization": ""
+  ]
 }

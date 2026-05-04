@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6102,
-        "final_score": 0.6102
+        "ic_mean": 0.6625,
+        "final_score": 0.6625
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Thiazolidinediones",
-          "type": "Pharmacologic Class"
+          "id": "Cyp2a6",
+          "type": "Gene"
         },
         {
-          "id": "Pioglitazone",
-          "type": "Compound"
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2c9",
@@ -27,33 +27,21 @@
       "edges": [
         {
           "source": "Rosiglitazone",
-          "target": "Thiazolidinediones",
-          "label": "is included in"
-        },
-        {
-          "source": "Thiazolidinediones",
-          "target": "Pioglitazone",
-          "label": "includes"
-        },
-        {
-          "source": "Pioglitazone",
-          "target": "Cyp2c9",
+          "target": "Cyp2a6",
           "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Arachidonic Acid Epoxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Epoxygenase Activity",
+          "target": "Cyp2c9",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Rosiglitazone,Thiazolidinediones": [
-          "Thiazolidinediones"
-        ],
-        "Rosiglitazone,Pioglitazone": [
-          "Thiazolidinediones",
-          "Thiazolidinedione Antidiabetic Agent"
-        ],
-        "Thiazolidinediones,Pioglitazone": [
-          "Thiazolidinediones"
-        ]
-      },
-      "id": "path_7689"
+      "id": "path_3615"
     },
     {
       "score": {
@@ -97,11 +85,11 @@
       ],
       "lowest_common_ancestors": {
         "Rosiglitazone,Pioglitazone": [
-          "Thiazolidinediones",
-          "Thiazolidinedione Antidiabetic Agent"
+          "Thiazolidinedione Antidiabetic Agent",
+          "Thiazolidinediones"
         ]
       },
-      "id": "path_7690"
+      "id": "path_3616"
     },
     {
       "score": {
@@ -145,16 +133,16 @@
       ],
       "lowest_common_ancestors": {
         "Rosiglitazone,Pioglitazone": [
-          "Thiazolidinediones",
-          "Thiazolidinedione Antidiabetic Agent"
+          "Thiazolidinedione Antidiabetic Agent",
+          "Thiazolidinediones"
         ]
       },
-      "id": "path_7691"
+      "id": "path_3617"
     },
     {
       "score": {
-        "ic_mean": 0.5475,
-        "final_score": 0.5475
+        "ic_mean": 0.6102,
+        "final_score": 0.6102
       },
       "nodes": [
         {
@@ -162,8 +150,8 @@
           "type": "Compound"
         },
         {
-          "id": "Volume Blood Increased",
-          "type": "Side Effect"
+          "id": "Thiazolidinediones",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Pioglitazone",
@@ -177,13 +165,13 @@
       "edges": [
         {
           "source": "Rosiglitazone",
-          "target": "Volume Blood Increased",
-          "label": "causes"
+          "target": "Thiazolidinediones",
+          "label": "is included in"
         },
         {
-          "source": "Volume Blood Increased",
+          "source": "Thiazolidinediones",
           "target": "Pioglitazone",
-          "label": "is caused by"
+          "label": "includes"
         },
         {
           "source": "Pioglitazone",
@@ -192,12 +180,65 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Rosiglitazone,Thiazolidinediones": [
+          "Thiazolidinediones"
+        ],
         "Rosiglitazone,Pioglitazone": [
-          "Thiazolidinediones",
-          "Thiazolidinedione Antidiabetic Agent"
+          "Thiazolidinedione Antidiabetic Agent",
+          "Thiazolidinediones"
+        ],
+        "Thiazolidinediones,Pioglitazone": [
+          "Thiazolidinediones"
         ]
       },
-      "id": "path_7692"
+      "id": "path_3618"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5589,
+        "final_score": 0.5589
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Troleandomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Troleandomycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Troleandomycin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Troleandomycin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3619"
     },
     {
       "score": {
@@ -241,11 +282,59 @@
       ],
       "lowest_common_ancestors": {
         "Rosiglitazone,Pioglitazone": [
-          "Thiazolidinediones",
-          "Thiazolidinedione Antidiabetic Agent"
+          "Thiazolidinedione Antidiabetic Agent",
+          "Thiazolidinediones"
         ]
       },
-      "id": "path_7693"
+      "id": "path_3620"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5475,
+        "final_score": 0.5475
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Volume Blood Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Volume Blood Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Volume Blood Increased",
+          "target": "Pioglitazone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pioglitazone",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Pioglitazone": [
+          "Thiazolidinedione Antidiabetic Agent",
+          "Thiazolidinediones"
+        ]
+      },
+      "id": "path_3621"
     },
     {
       "score": {
@@ -262,7 +351,7 @@
           "type": "Gene"
         },
         {
-          "id": "Valsartan",
+          "id": "Gemfibrozil",
           "type": "Compound"
         },
         {
@@ -278,21 +367,22 @@
         },
         {
           "source": "Slco1b1",
-          "target": "Valsartan",
+          "target": "Gemfibrozil",
           "label": "is bound by"
         },
         {
-          "source": "Valsartan",
+          "source": "Gemfibrozil",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rosiglitazone,Valsartan": [
-          "Organonitrogen Heterocyclic Compound"
+        "Rosiglitazone,Gemfibrozil": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Digestive System Or Metabolism"
         ]
       },
-      "id": "path_7694"
+      "id": "path_3622"
     },
     {
       "score": {
@@ -336,11 +426,59 @@
       ],
       "lowest_common_ancestors": {
         "Rosiglitazone,Pioglitazone": [
-          "Thiazolidinediones",
-          "Thiazolidinedione Antidiabetic Agent"
+          "Thiazolidinedione Antidiabetic Agent",
+          "Thiazolidinediones"
         ]
       },
-      "id": "path_7695"
+      "id": "path_3623"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5047,
+        "final_score": 0.5047
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Pioglitazone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pioglitazone",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Pioglitazone": [
+          "Thiazolidinedione Antidiabetic Agent",
+          "Thiazolidinediones"
+        ]
+      },
+      "id": "path_3624"
     },
     {
       "score": {
@@ -384,15 +522,15 @@
       ],
       "lowest_common_ancestors": {
         "Rosiglitazone,Arformoterol": [
-          "Organic Amino Compound"
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_7696"
+      "id": "path_3625"
     },
     {
       "score": {
-        "ic_mean": 0.4685,
-        "final_score": 0.4685
+        "ic_mean": 0.4775,
+        "final_score": 0.4775
       },
       "nodes": [
         {
@@ -400,11 +538,11 @@
           "type": "Compound"
         },
         {
-          "id": "Sprain",
-          "type": "Side Effect"
+          "id": "Cyp2a6",
+          "type": "Gene"
         },
         {
-          "id": "Fluvoxamine",
+          "id": "Azelastine",
           "type": "Compound"
         },
         {
@@ -415,27 +553,403 @@
       "edges": [
         {
           "source": "Rosiglitazone",
-          "target": "Sprain",
-          "label": "causes"
+          "target": "Cyp2a6",
+          "label": "binds"
         },
         {
-          "source": "Sprain",
-          "target": "Fluvoxamine",
-          "label": "is caused by"
+          "source": "Cyp2a6",
+          "target": "Azelastine",
+          "label": "is bound by"
         },
         {
-          "source": "Fluvoxamine",
+          "source": "Azelastine",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rosiglitazone,Fluvoxamine": [
+        "Rosiglitazone,Azelastine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3626"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4719,
+        "final_score": 0.4719
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "High Cholesterol",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "High Cholesterol",
+          "label": "causes"
+        },
+        {
+          "source": "High Cholesterol",
+          "target": "Efavirenz",
+          "label": "is caused by"
+        },
+        {
+          "source": "Efavirenz",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Efavirenz": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3627"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4595,
+        "final_score": 0.4595
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "High Cholesterol",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Anastrozole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "High Cholesterol",
+          "label": "causes"
+        },
+        {
+          "source": "High Cholesterol",
+          "target": "Anastrozole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Anastrozole",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Anastrozole": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_3628"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4562,
+        "final_score": 0.4562
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Eletriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Eletriptan",
+          "label": "is bound by"
+        },
+        {
+          "source": "Eletriptan",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Eletriptan": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3629"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4534,
+        "final_score": 0.4534
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Rifampicin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Rifampicin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3630"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4397,
+        "final_score": 0.4397
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Cinnarizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Cinnarizine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cinnarizine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Cinnarizine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3631"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4293,
+        "final_score": 0.4293
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "High Cholesterol",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Acetylsalicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "High Cholesterol",
+          "label": "causes"
+        },
+        {
+          "source": "High Cholesterol",
+          "target": "Acetylsalicylic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Acetylsalicylic Acid",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Acetylsalicylic Acid": [
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_7697"
+      "id": "path_3632"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4261,
+        "final_score": 0.4261
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Flunitrazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Flunitrazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Flunitrazepam",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Flunitrazepam": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3633"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4147,
+        "final_score": 0.4147
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Miconazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Miconazole",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Miconazole": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3634"
     }
-  ],
-  "verbalization": ""
+  ]
 }

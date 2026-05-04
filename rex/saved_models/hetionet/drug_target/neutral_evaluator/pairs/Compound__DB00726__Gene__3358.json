@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5597,
-        "final_score": 0.5597
+        "ic_mean": 0.6584,
+        "final_score": 0.6584
       },
       "nodes": [
         {
@@ -16,7 +16,181 @@
           "type": "Gene"
         },
         {
-          "id": "Atomoxetine",
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimipramine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10127"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6567,
+        "final_score": 0.6567
+      },
+      "nodes": [
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimipramine",
+          "target": "Htr3a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr3a",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10128"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6444,
+        "final_score": 0.6444
+      },
+      "nodes": [
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Amine Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimipramine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Amine Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Amine Binding",
+          "target": "Htr2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10129"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5975,
+        "final_score": 0.5975
+      },
+      "nodes": [
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimipramine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Lisuride",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trimipramine,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10130"
+    },
+    {
+      "score": {
+        "ic_mean": 0.581,
+        "final_score": 0.581
+      },
+      "nodes": [
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -32,23 +206,70 @@
         },
         {
           "source": "Htr1d",
-          "target": "Atomoxetine",
+          "target": "Lisuride",
           "label": "is bound by"
         },
         {
-          "source": "Atomoxetine",
+          "source": "Lisuride",
           "target": "Htr2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trimipramine,Atomoxetine": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
+        "Trimipramine,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_20050"
+      "id": "path_10131"
+    },
+    {
+      "score": {
+        "ic_mean": 0.581,
+        "final_score": 0.581
+      },
+      "nodes": [
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimipramine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Iloperidone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Iloperidone",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trimipramine,Iloperidone": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10132"
     }
-  ],
-  "verbalization": ""
+  ]
 }

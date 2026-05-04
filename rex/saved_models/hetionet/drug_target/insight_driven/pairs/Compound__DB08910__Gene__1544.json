@@ -1,0 +1,138 @@
+{
+  "id": "Compound::DB08910 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6626,
+        "final_score": 0.748,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Pomalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pomalidomide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9658"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5927,
+        "final_score": 0.713,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Pomalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pomalidomide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9659"
+    },
+    {
+      "score": {
+        "ic_mean": 0.428,
+        "final_score": 0.428
+      },
+      "nodes": [
+        {
+          "id": "Pomalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutrophil Count Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rifabutin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pomalidomide",
+          "target": "Neutrophil Count Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Neutrophil Count Decreased",
+          "target": "Rifabutin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rifabutin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pomalidomide,Rifabutin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_9660"
+    }
+  ]
+}

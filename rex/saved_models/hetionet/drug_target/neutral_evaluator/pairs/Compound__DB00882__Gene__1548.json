@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00882 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4896,
+        "final_score": 0.4896
+      },
+      "nodes": [
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cleft Lip",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clomifene",
+          "target": "Cleft Lip",
+          "label": "causes"
+        },
+        {
+          "source": "Cleft Lip",
+          "target": "Progesterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clomifene,Progesterone": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_5756"
+    }
+  ]
 }

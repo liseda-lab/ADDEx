@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6134,
-        "final_score": 0.6134
+        "ic_mean": 0.7207,
+        "final_score": 0.7207
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cold Hands & Feet",
-          "type": "Side Effect"
+          "id": "Adrb2",
+          "type": "Gene"
         },
         {
-          "id": "Timolol",
-          "type": "Compound"
+          "id": "Beta-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adrb1",
@@ -27,75 +27,21 @@
       "edges": [
         {
           "source": "Metoprolol",
-          "target": "Cold Hands & Feet",
-          "label": "causes"
-        },
-        {
-          "source": "Cold Hands & Feet",
-          "target": "Timolol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Timolol",
-          "target": "Adrb1",
+          "target": "Adrb2",
           "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metoprolol,Timolol": [
-          "Organic Cyclic Compound",
-          "Beta-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17981"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6104,
-        "final_score": 0.6104
-      },
-      "nodes": [
-        {
-          "id": "Metoprolol",
-          "type": "Compound"
         },
         {
-          "id": "Raynaud's Phenomenon",
-          "type": "Side Effect"
+          "source": "Adrb2",
+          "target": "Beta-adrenergic Receptor Activity",
+          "label": "participates"
         },
         {
-          "id": "Bisoprolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metoprolol",
-          "target": "Raynaud's Phenomenon",
-          "label": "causes"
-        },
-        {
-          "source": "Raynaud's Phenomenon",
-          "target": "Bisoprolol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Bisoprolol",
+          "source": "Beta-adrenergic Receptor Activity",
           "target": "Adrb1",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Metoprolol,Bisoprolol": [
-          "Secondary Alcohol",
-          "Beta-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17982"
+      "id": "path_9058"
     },
     {
       "score": {
@@ -143,12 +89,12 @@
           "Beta-Adrenergic Antagonist"
         ]
       },
-      "id": "path_17983"
+      "id": "path_9059"
     },
     {
       "score": {
-        "ic_mean": 0.5885,
-        "final_score": 0.5885
+        "ic_mean": 0.4757,
+        "final_score": 0.4757
       },
       "nodes": [
         {
@@ -156,11 +102,11 @@
           "type": "Compound"
         },
         {
-          "id": "Arterial Insufficiency",
-          "type": "Side Effect"
+          "id": "Practolol",
+          "type": "Compound"
         },
         {
-          "id": "Timolol",
+          "id": "Alprenolol",
           "type": "Compound"
         },
         {
@@ -171,316 +117,35 @@
       "edges": [
         {
           "source": "Metoprolol",
-          "target": "Arterial Insufficiency",
-          "label": "causes"
+          "target": "Practolol",
+          "label": "resembles"
         },
         {
-          "source": "Arterial Insufficiency",
-          "target": "Timolol",
-          "label": "is caused by"
+          "source": "Practolol",
+          "target": "Alprenolol",
+          "label": "resembles"
         },
         {
-          "source": "Timolol",
+          "source": "Alprenolol",
           "target": "Adrb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Metoprolol,Timolol": [
-          "Organic Cyclic Compound",
-          "Beta-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17984"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5873,
-        "final_score": 0.5873
-      },
-      "nodes": [
-        {
-          "id": "Metoprolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Raynaud's Disease",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Propranolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metoprolol",
-          "target": "Raynaud's Disease",
-          "label": "causes"
-        },
-        {
-          "source": "Raynaud's Disease",
-          "target": "Propranolol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Propranolol",
-          "target": "Adrb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metoprolol,Propranolol": [
+        "Metoprolol,Practolol": [
           "Propanolamine",
           "Beta-Adrenergic Antagonist"
+        ],
+        "Metoprolol,Alprenolol": [
+          "Beta-Adrenergic Antagonist",
+          "Secondary Alcohol"
+        ],
+        "Practolol,Alprenolol": [
+          "Beta-Adrenergic Antagonist",
+          "Secondary Alcohol"
         ]
       },
-      "id": "path_17985"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5866,
-        "final_score": 0.5866
-      },
-      "nodes": [
-        {
-          "id": "Metoprolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Short-term Memory Loss",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Penbutolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metoprolol",
-          "target": "Short-term Memory Loss",
-          "label": "causes"
-        },
-        {
-          "source": "Short-term Memory Loss",
-          "target": "Penbutolol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Penbutolol",
-          "target": "Adrb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metoprolol,Penbutolol": [
-          "Amino Alcohol",
-          "Beta-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17986"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5616,
-        "final_score": 0.5616
-      },
-      "nodes": [
-        {
-          "id": "Metoprolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Peyronie's Disease",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Penbutolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metoprolol",
-          "target": "Peyronie's Disease",
-          "label": "causes"
-        },
-        {
-          "source": "Peyronie's Disease",
-          "target": "Penbutolol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Penbutolol",
-          "target": "Adrb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metoprolol,Penbutolol": [
-          "Amino Alcohol",
-          "Beta-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17987"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5488,
-        "final_score": 0.5488
-      },
-      "nodes": [
-        {
-          "id": "Metoprolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Raynaud's Disease",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Nadolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metoprolol",
-          "target": "Raynaud's Disease",
-          "label": "causes"
-        },
-        {
-          "source": "Raynaud's Disease",
-          "target": "Nadolol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Nadolol",
-          "target": "Adrb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metoprolol,Nadolol": [
-          "Chemical Entity",
-          "Beta-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17988"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5488,
-        "final_score": 0.5488
-      },
-      "nodes": [
-        {
-          "id": "Metoprolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Raynaud's Phenomenon",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Nadolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metoprolol",
-          "target": "Raynaud's Phenomenon",
-          "label": "causes"
-        },
-        {
-          "source": "Raynaud's Phenomenon",
-          "target": "Nadolol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Nadolol",
-          "target": "Adrb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metoprolol,Nadolol": [
-          "Chemical Entity",
-          "Beta-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17989"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5138,
-        "final_score": 0.5138
-      },
-      "nodes": [
-        {
-          "id": "Metoprolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Claudication",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Acebutolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metoprolol",
-          "target": "Claudication",
-          "label": "causes"
-        },
-        {
-          "source": "Claudication",
-          "target": "Acebutolol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Acebutolol",
-          "target": "Adrb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metoprolol,Acebutolol": [
-          "Propanolamine",
-          "Beta-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17990"
+      "id": "path_9060"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00672 - Gene::9356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7141,
+        "final_score": 0.6487,
+        "agentic_score": 0.5833
+      },
+      "nodes": [
+        {
+          "id": "Chlorpropamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfonylurea Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tolbutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpropamide",
+          "target": "Sulfonylurea Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Sulfonylurea Compounds",
+          "target": "Tolbutamide",
+          "label": "includes"
+        },
+        {
+          "source": "Tolbutamide",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpropamide,Tolbutamide": [
+          "N-Sulfonylurea",
+          "Sulfonylurea Antidiabetic Agent"
+        ]
+      },
+      "id": "path_14"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5604,
+        "final_score": 0.5604
+      },
+      "nodes": [
+        {
+          "id": "Chlorpropamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Porphyria Hepatic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tolbutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpropamide",
+          "target": "Porphyria Hepatic",
+          "label": "causes"
+        },
+        {
+          "source": "Porphyria Hepatic",
+          "target": "Tolbutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tolbutamide",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpropamide,Tolbutamide": [
+          "N-Sulfonylurea",
+          "Sulfonylurea Antidiabetic Agent"
+        ]
+      },
+      "id": "path_15"
+    }
+  ]
+}

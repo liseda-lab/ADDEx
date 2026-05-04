@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6443,
-        "final_score": 0.6443
+        "ic_mean": 0.4735,
+        "final_score": 0.4735
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr3a",
-          "type": "Gene"
+          "id": "Burning Rectal",
+          "type": "Side Effect"
         },
         {
-          "id": "Alosetron",
+          "id": "Diazepam",
           "type": "Compound"
         },
         {
@@ -27,76 +27,27 @@
       "edges": [
         {
           "source": "Ondansetron",
-          "target": "Htr3a",
-          "label": "binds"
+          "target": "Burning Rectal",
+          "label": "causes"
         },
         {
-          "source": "Htr3a",
-          "target": "Alosetron",
-          "label": "is bound by"
+          "source": "Burning Rectal",
+          "target": "Diazepam",
+          "label": "is caused by"
         },
         {
-          "source": "Alosetron",
+          "source": "Diazepam",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ondansetron,Alosetron": [
-          "5-Ht3 Receptor Antagonist",
-          "Organic Heterotricyclic Compound"
+        "Ondansetron,Diazepam": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_16461"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6076,
-        "final_score": 0.6076
-      },
-      "nodes": [
-        {
-          "id": "Ondansetron",
-          "type": "Compound"
-        },
-        {
-          "id": "Serotonin 3 Receptor Antagonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Alosetron",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2e1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ondansetron",
-          "target": "Serotonin 3 Receptor Antagonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Serotonin 3 Receptor Antagonists",
-          "target": "Alosetron",
-          "label": "includes"
-        },
-        {
-          "source": "Alosetron",
-          "target": "Cyp2e1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ondansetron,Alosetron": [
-          "5-Ht3 Receptor Antagonist",
-          "Organic Heterotricyclic Compound"
-        ]
-      },
-      "id": "path_16462"
+      "id": "path_8229"
     }
-  ],
-  "verbalization": ""
+  ]
 }

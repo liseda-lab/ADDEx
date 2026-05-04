@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01009 - Gene::6579",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5679,
+        "final_score": 0.5679
+      },
+      "nodes": [
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoprofen",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Bumetanide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Bumetanide",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoprofen,Bumetanide": [
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_4243"
+    }
+  ]
 }

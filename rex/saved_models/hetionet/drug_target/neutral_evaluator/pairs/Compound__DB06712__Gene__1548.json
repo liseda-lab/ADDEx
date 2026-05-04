@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB06712 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5543,
+        "final_score": 0.5543
+      },
+      "nodes": [
+        {
+          "id": "Nilvadipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna2d1",
+          "type": "Gene"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilvadipine",
+          "target": "Cacna2d1",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna2d1",
+          "target": "Nifedipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nilvadipine,Nifedipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_3191"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5377,
+        "final_score": 0.5377
+      },
+      "nodes": [
+        {
+          "id": "Nilvadipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilvadipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna1d",
+          "target": "Nifedipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nilvadipine,Nifedipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_3192"
+    }
+  ]
 }

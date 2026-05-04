@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6446,
-        "final_score": 0.6446
+        "ic_mean": 0.6455,
+        "final_score": 0.6455
       },
       "nodes": [
         {
@@ -12,11 +12,95 @@
           "type": "Compound"
         },
         {
-          "id": "Hrh4",
+          "id": "Htr6",
           "type": "Gene"
         },
         {
-          "id": "Promethazine",
+          "id": "Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Receptor Activity",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7736"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6455,
+        "final_score": 0.6455
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "G-protein Coupled Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Serotonin Receptor Activity",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7737"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6032,
+        "final_score": 0.6032
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Methysergide",
           "type": "Compound"
         },
         {
@@ -27,219 +111,27 @@
       "edges": [
         {
           "source": "Doxepin",
-          "target": "Hrh4",
+          "target": "Htr6",
           "label": "binds"
         },
         {
-          "source": "Hrh4",
-          "target": "Promethazine",
+          "source": "Htr6",
+          "target": "Methysergide",
           "label": "is bound by"
         },
         {
-          "source": "Promethazine",
+          "source": "Methysergide",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxepin,Promethazine": [
-          "Tertiary Amino Compound",
+        "Doxepin,Methysergide": [
+          "Organonitrogen Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_15465"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6387,
-        "final_score": 0.6387
-      },
-      "nodes": [
-        {
-          "id": "Doxepin",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxepin",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxepin,Oxymetazoline": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_15466"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6233,
-        "final_score": 0.6233
-      },
-      "nodes": [
-        {
-          "id": "Doxepin",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh4",
-          "type": "Gene"
-        },
-        {
-          "id": "Mianserin",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxepin",
-          "target": "Hrh4",
-          "label": "binds"
-        },
-        {
-          "source": "Hrh4",
-          "target": "Mianserin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mianserin",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxepin,Mianserin": [
-          "Organic Heterotricyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_15467"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6068,
-        "final_score": 0.6068
-      },
-      "nodes": [
-        {
-          "id": "Doxepin",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh4",
-          "type": "Gene"
-        },
-        {
-          "id": "Olanzapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxepin",
-          "target": "Hrh4",
-          "label": "binds"
-        },
-        {
-          "source": "Hrh4",
-          "target": "Olanzapine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Olanzapine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxepin,Olanzapine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_15468"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5873,
-        "final_score": 0.5873
-      },
-      "nodes": [
-        {
-          "id": "Doxepin",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxepin",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxepin,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_15469"
+      "id": "path_7738"
     },
     {
       "score": {
@@ -252,11 +144,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hrh2",
+          "id": "Htr6",
           "type": "Gene"
         },
         {
-          "id": "Epinastine",
+          "id": "Atomoxetine",
           "type": "Compound"
         },
         {
@@ -267,122 +159,27 @@
       "edges": [
         {
           "source": "Doxepin",
-          "target": "Hrh2",
+          "target": "Htr6",
           "label": "binds"
         },
         {
-          "source": "Hrh2",
-          "target": "Epinastine",
+          "source": "Htr6",
+          "target": "Atomoxetine",
           "label": "is bound by"
         },
         {
-          "source": "Epinastine",
+          "source": "Atomoxetine",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxepin,Epinastine": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_15470"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5819,
-        "final_score": 0.5819
-      },
-      "nodes": [
-        {
-          "id": "Doxepin",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh2",
-          "type": "Gene"
-        },
-        {
-          "id": "Mianserin",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxepin",
-          "target": "Hrh2",
-          "label": "binds"
-        },
-        {
-          "source": "Hrh2",
-          "target": "Mianserin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mianserin",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxepin,Mianserin": [
-          "Organic Heterotricyclic Compound",
+        "Doxepin,Atomoxetine": [
+          "Organic Cyclic Compound",
           "Antidepressant Agent"
         ]
       },
-      "id": "path_15471"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5797,
-        "final_score": 0.5797
-      },
-      "nodes": [
-        {
-          "id": "Doxepin",
-          "type": "Compound"
-        },
-        {
-          "id": "Appetite Exaggerated",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Amoxapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxepin",
-          "target": "Appetite Exaggerated",
-          "label": "causes"
-        },
-        {
-          "source": "Appetite Exaggerated",
-          "target": "Amoxapine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Amoxapine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxepin,Amoxapine": [
-          "Organic Heterotricyclic Compound",
-          "Tricyclic Antidepressant"
-        ]
-      },
-      "id": "path_15472"
+      "id": "path_7739"
     },
     {
       "score": {
@@ -395,11 +192,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hrh2",
+          "id": "Htr6",
           "type": "Gene"
         },
         {
-          "id": "Clomipramine",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -410,32 +207,32 @@
       "edges": [
         {
           "source": "Doxepin",
-          "target": "Hrh2",
+          "target": "Htr6",
           "label": "binds"
         },
         {
-          "source": "Hrh2",
-          "target": "Clomipramine",
+          "source": "Htr6",
+          "target": "Imipramine",
           "label": "is bound by"
         },
         {
-          "source": "Clomipramine",
+          "source": "Imipramine",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxepin,Clomipramine": [
+        "Doxepin,Imipramine": [
           "Organic Heterotricyclic Compound",
           "Tricyclic Antidepressant"
         ]
       },
-      "id": "path_15473"
+      "id": "path_7740"
     },
     {
       "score": {
-        "ic_mean": 0.4945,
-        "final_score": 0.4945
+        "ic_mean": 0.5404,
+        "final_score": 0.5404
       },
       "nodes": [
         {
@@ -443,11 +240,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1d",
+          "id": "Htr6",
           "type": "Gene"
         },
         {
-          "id": "Nortriptyline",
+          "id": "Asenapine",
           "type": "Compound"
         },
         {
@@ -458,28 +255,74 @@
       "edges": [
         {
           "source": "Doxepin",
-          "target": "Adra1d",
+          "target": "Htr6",
           "label": "binds"
         },
         {
-          "source": "Adra1d",
-          "target": "Nortriptyline",
+          "source": "Htr6",
+          "target": "Asenapine",
           "label": "is bound by"
         },
         {
-          "source": "Nortriptyline",
+          "source": "Asenapine",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxepin,Nortriptyline": [
-          "Organic Amino Compound",
+        "Doxepin,Asenapine": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7741"
+    },
+    {
+      "score": {
+        "ic_mean": 0.514,
+        "final_score": 0.514
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Amitriptyline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Amitriptyline",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxepin,Amitriptyline": [
+          "Organic Tricyclic Compound",
           "Tricyclic Antidepressant"
         ]
       },
-      "id": "path_15474"
+      "id": "path_7742"
     }
-  ],
-  "verbalization": ""
+  ]
 }

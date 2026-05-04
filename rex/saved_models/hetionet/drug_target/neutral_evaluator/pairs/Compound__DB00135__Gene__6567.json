@@ -1,6 +1,60 @@
 {
   "id": "Compound::DB00135 - Gene::6567",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5747,
+        "final_score": 0.5747
+      },
+      "nodes": [
+        {
+          "id": "L-tyrosine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxitriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "L-tryptophan",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc16a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-tyrosine",
+          "target": "Oxitriptan",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxitriptan",
+          "target": "L-tryptophan",
+          "label": "resembles"
+        },
+        {
+          "source": "L-tryptophan",
+          "target": "Slc16a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "L-tyrosine,Oxitriptan": [
+          "Amino Acid, Peptide, Or Protein",
+          "L-Alpha-Amino Acid"
+        ],
+        "L-tyrosine,L-tryptophan": [
+          "Aromatic Amino Acid",
+          "Dietary Amino Acid"
+        ],
+        "Oxitriptan,L-tryptophan": [
+          "L-Alpha-Amino Acid"
+        ]
+      },
+      "id": "path_12768"
+    }
+  ]
 }

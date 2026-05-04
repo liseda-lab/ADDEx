@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00951 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7201,
+        "final_score": 0.6101,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8509"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4592,
+        "final_score": 0.4592
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Symptom",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Hepatitis Symptom",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Symptom",
+          "target": "Verapamil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Verapamil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoniazid,Verapamil": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_8510"
+    }
+  ]
+}

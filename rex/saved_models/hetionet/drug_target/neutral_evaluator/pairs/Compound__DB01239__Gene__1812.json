@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7449,
-        "final_score": 0.7449
+        "ic_mean": 0.6981,
+        "final_score": 0.6981
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Chrm5",
           "type": "Gene"
         },
         {
-          "id": "Zuclopenthixol",
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorprothixene",
+          "target": "Chrm5",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm5",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6593"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6635,
+        "final_score": 0.6635
+      },
+      "nodes": [
+        {
+          "id": "Chlorprothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        },
+        {
+          "id": "Propiomazine",
           "type": "Compound"
         },
         {
@@ -27,28 +69,27 @@
       "edges": [
         {
           "source": "Chlorprothixene",
-          "target": "Htr6",
+          "target": "Chrm5",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Zuclopenthixol",
+          "source": "Chrm5",
+          "target": "Propiomazine",
           "label": "is bound by"
         },
         {
-          "source": "Zuclopenthixol",
+          "source": "Propiomazine",
           "target": "Drd1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorprothixene,Zuclopenthixol": [
-          "Thioxanthenes",
+        "Chlorprothixene,Propiomazine": [
+          "Organic Heterotricyclic Compound",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_12998"
+      "id": "path_6594"
     }
-  ],
-  "verbalization": ""
+  ]
 }

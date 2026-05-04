@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00773 - Gene::1571",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5523,
+        "final_score": 0.5523
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gstt1",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxaliplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Gstt1",
+          "label": "binds"
+        },
+        {
+          "source": "Gstt1",
+          "target": "Oxaliplatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Oxaliplatin",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Oxaliplatin": [
+          "Polyatomic Entity",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_6718"
+    }
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5576,
-        "final_score": 0.5576
+        "ic_mean": 0.5783,
+        "final_score": 0.5783
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
-          "type": "Gene"
+          "id": "Adenitis",
+          "type": "Side Effect"
         },
         {
-          "id": "Vilazodone",
+          "id": "Trimipramine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,320 @@
       "edges": [
         {
           "source": "Desipramine",
-          "target": "Cyp2c18",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Trimipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Trimipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
+        ]
+      },
+      "id": "path_3032"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5382,
+        "final_score": 0.5382
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Doxepin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Doxepin": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_3033"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5382,
+        "final_score": 0.5382
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Doxepin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Doxepin": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_3034"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5198,
+        "final_score": 0.5198
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        },
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Chrm4",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Vilazodone",
+          "source": "Chrm4",
+          "target": "Olanzapine",
           "label": "is bound by"
         },
         {
-          "source": "Vilazodone",
+          "source": "Olanzapine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Desipramine,Vilazodone": [
-          "Organic Amino Compound",
-          "Antidepressant Agent"
+        "Desipramine,Olanzapine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_6618"
+      "id": "path_3035"
     },
     {
       "score": {
-        "ic_mean": 0.4603,
-        "final_score": 0.4603
+        "ic_mean": 0.5169,
+        "final_score": 0.5169
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Cisapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Cisapride",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cisapride",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Cisapride": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3036"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4948,
+        "final_score": 0.4948
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Orm1",
+          "type": "Gene"
+        },
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Orm1",
+          "label": "binds"
+        },
+        {
+          "source": "Orm1",
+          "target": "Olanzapine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Olanzapine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Olanzapine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3037"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4813,
+        "final_score": 0.4813
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Orm1",
+          "type": "Gene"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Orm1",
+          "label": "binds"
+        },
+        {
+          "source": "Orm1",
+          "target": "Doxepin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Doxepin": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_3038"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4181,
+        "final_score": 0.4181
       },
       "nodes": [
         {
@@ -64,7 +352,7 @@
           "type": "Compound"
         },
         {
-          "id": "Acetophenazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -80,11 +368,11 @@
         },
         {
           "source": "Clocapramine",
-          "target": "Acetophenazine",
+          "target": "Prochlorperazine",
           "label": "resembles"
         },
         {
-          "source": "Acetophenazine",
+          "source": "Prochlorperazine",
           "target": "Drd2",
           "label": "binds"
         }
@@ -94,73 +382,16 @@
           "Organic Heterotricyclic Compound",
           "Antidepressant Agent"
         ],
-        "Desipramine,Acetophenazine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ],
-        "Clocapramine,Acetophenazine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
-        ]
-      },
-      "id": "path_6619"
-    },
-    {
-      "score": {
-        "ic_mean": 0.409,
-        "final_score": 0.409
-      },
-      "nodes": [
-        {
-          "id": "Desipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Clocapramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Thioproperazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Desipramine",
-          "target": "Clocapramine",
-          "label": "resembles"
-        },
-        {
-          "source": "Clocapramine",
-          "target": "Thioproperazine",
-          "label": "resembles"
-        },
-        {
-          "source": "Thioproperazine",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Desipramine,Clocapramine": [
+        "Desipramine,Prochlorperazine": [
           "Organic Heterotricyclic Compound",
-          "Antidepressant Agent"
+          "Agent Affecting Nervous System"
         ],
-        "Desipramine,Thioproperazine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ],
-        "Clocapramine,Thioproperazine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+        "Clocapramine,Prochlorperazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_6620"
+      "id": "path_3039"
     }
-  ],
-  "verbalization": ""
+  ]
 }

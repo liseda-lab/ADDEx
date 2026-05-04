@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01268 - Gene::2260",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5647,
+        "final_score": 0.5647
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Fistula",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Fgfr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Fistula",
+          "label": "causes"
+        },
+        {
+          "source": "Fistula",
+          "target": "Regorafenib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Regorafenib",
+          "target": "Fgfr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Regorafenib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_6203"
+    }
+  ]
 }

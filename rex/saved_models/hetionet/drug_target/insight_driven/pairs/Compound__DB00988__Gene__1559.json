@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00988 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.624,
+        "final_score": 0.7287,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Epinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Epinephrine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dopamine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Dopamine,Epinephrine": [
+          "Catecholamine",
+          "Catecholamine"
+        ],
+        "Catecholamines,Epinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_5712"
+    }
+  ]
+}

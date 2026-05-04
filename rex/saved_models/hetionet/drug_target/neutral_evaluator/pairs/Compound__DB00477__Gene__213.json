@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00477 - Gene::213",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.55,
+        "final_score": 0.55
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pregnancy Test False Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Pregnancy Test False Positive",
+          "label": "causes"
+        },
+        {
+          "source": "Pregnancy Test False Positive",
+          "target": "Thiothixene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Thiothixene",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Thiothixene": [
+          "Organic Heterocyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_4346"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5323,
+        "final_score": 0.5323
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Thiothixene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Thiothixene",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Thiothixene": [
+          "Organic Heterocyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_4347"
+    }
+  ]
 }

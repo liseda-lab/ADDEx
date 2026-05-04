@@ -3,102 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6201,
-        "final_score": 0.6201
-      },
-      "nodes": [
-        {
-          "id": "Ibuprofen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt2b4",
-          "type": "Gene"
-        },
-        {
-          "id": "Flurbiprofen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ibuprofen",
-          "target": "Ugt2b4",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt2b4",
-          "target": "Flurbiprofen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Flurbiprofen",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ibuprofen,Flurbiprofen": [
-          "Monocarboxylic Acid",
-          "Cyclooxygenase Inhibitor"
-        ]
-      },
-      "id": "path_3824"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5573,
-        "final_score": 0.5573
-      },
-      "nodes": [
-        {
-          "id": "Ibuprofen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Flurbiprofen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ibuprofen",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Flurbiprofen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Flurbiprofen",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ibuprofen,Flurbiprofen": [
-          "Monocarboxylic Acid",
-          "Cyclooxygenase Inhibitor"
-        ]
-      },
-      "id": "path_3825"
-    },
-    {
-      "score": {
         "ic_mean": 0.55,
         "final_score": 0.55
       },
@@ -139,16 +43,16 @@
       ],
       "lowest_common_ancestors": {
         "Ibuprofen,Diflunisal": [
-          "Cyclooxygenase Inhibitor",
-          "Carboxylic Acid"
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_3826"
+      "id": "path_1783"
     },
     {
       "score": {
-        "ic_mean": 0.5327,
-        "final_score": 0.5327
+        "ic_mean": 0.55,
+        "final_score": 0.55
       },
       "nodes": [
         {
@@ -156,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a9",
-          "type": "Gene"
+          "id": "Cellulitis Gangrenous",
+          "type": "Side Effect"
         },
         {
-          "id": "Lumiracoxib",
+          "id": "Diflunisal",
           "type": "Compound"
         },
         {
@@ -171,27 +75,75 @@
       "edges": [
         {
           "source": "Ibuprofen",
-          "target": "Ugt1a9",
-          "label": "binds"
+          "target": "Cellulitis Gangrenous",
+          "label": "causes"
         },
         {
-          "source": "Ugt1a9",
-          "target": "Lumiracoxib",
-          "label": "is bound by"
+          "source": "Cellulitis Gangrenous",
+          "target": "Diflunisal",
+          "label": "is caused by"
         },
         {
-          "source": "Lumiracoxib",
+          "source": "Diflunisal",
           "target": "Ptgs1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ibuprofen,Lumiracoxib": [
+        "Ibuprofen,Diflunisal": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_1784"
+    },
+    {
+      "score": {
+        "ic_mean": 0.499,
+        "final_score": 0.499
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Papillary Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Renal Papillary Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Papillary Necrosis",
+          "target": "Fenoprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenoprofen",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Fenoprofen": [
           "Monocarboxylic Acid",
           "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_3827"
+      "id": "path_1785"
     },
     {
       "score": {
@@ -235,11 +187,155 @@
       ],
       "lowest_common_ancestors": {
         "Ibuprofen,Sulindac": [
-          "Enzyme Inhibitor",
-          "Monocarboxylic Acid"
+          "Monocarboxylic Acid",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_3828"
+      "id": "path_1786"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4838,
+        "final_score": 0.4838
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cellulitis Gangrenous",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sulindac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Cellulitis Gangrenous",
+          "label": "causes"
+        },
+        {
+          "source": "Cellulitis Gangrenous",
+          "target": "Sulindac",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sulindac",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Sulindac": [
+          "Monocarboxylic Acid",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_1787"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4708,
+        "final_score": 0.4708
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Piroxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Piroxicam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Piroxicam",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Piroxicam": [
+          "Organic Molecule",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_1788"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4708,
+        "final_score": 0.4708
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Carprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Carprofen",
+          "label": "is bound by"
+        },
+        {
+          "source": "Carprofen",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Carprofen": [
+          "Organic Molecule",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_1789"
     },
     {
       "score": {
@@ -283,60 +379,11 @@
       ],
       "lowest_common_ancestors": {
         "Ibuprofen,Acetylsalicylic Acid": [
-          "Cyclooxygenase Inhibitor",
-          "Carboxylic Acid"
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_3829"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4551,
-        "final_score": 0.4551
-      },
-      "nodes": [
-        {
-          "id": "Ibuprofen",
-          "type": "Compound"
-        },
-        {
-          "id": "Renal Papillary Necrosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Naproxen",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ibuprofen",
-          "target": "Renal Papillary Necrosis",
-          "label": "causes"
-        },
-        {
-          "source": "Renal Papillary Necrosis",
-          "target": "Naproxen",
-          "label": "is caused by"
-        },
-        {
-          "source": "Naproxen",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ibuprofen,Naproxen": [
-          "Cyclooxygenase Inhibitor",
-          "Monocarboxylic Acid Anion"
-        ]
-      },
-      "id": "path_3830"
+      "id": "path_1790"
     }
-  ],
-  "verbalization": ""
+  ]
 }

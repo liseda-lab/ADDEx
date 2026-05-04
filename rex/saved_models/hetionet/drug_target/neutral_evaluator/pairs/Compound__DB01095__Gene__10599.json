@@ -3,55 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6378,
-        "final_score": 0.6378
-      },
-      "nodes": [
-        {
-          "id": "Fluvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Eltrombopag",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluvastatin",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Eltrombopag",
-          "label": "is bound by"
-        },
-        {
-          "source": "Eltrombopag",
-          "target": "Slco1b1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluvastatin,Eltrombopag": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_814"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6378,
-        "final_score": 0.6378
+        "ic_mean": 0.6078,
+        "final_score": 0.6078
       },
       "nodes": [
         {
@@ -63,7 +16,7 @@
           "type": "Gene"
         },
         {
-          "id": "Valsartan",
+          "id": "Pioglitazone",
           "type": "Compound"
         },
         {
@@ -79,26 +32,27 @@
         },
         {
           "source": "Slco1b3",
-          "target": "Valsartan",
+          "target": "Pioglitazone",
           "label": "is bound by"
         },
         {
-          "source": "Valsartan",
+          "source": "Pioglitazone",
           "target": "Slco1b1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluvastatin,Valsartan": [
+        "Fluvastatin,Pioglitazone": [
+          "Agent Affecting Digestive System Or Metabolism",
           "Organooxygen Compound"
         ]
       },
-      "id": "path_815"
+      "id": "path_407"
     },
     {
       "score": {
-        "ic_mean": 0.6044,
-        "final_score": 0.6044
+        "ic_mean": 0.5294,
+        "final_score": 0.5294
       },
       "nodes": [
         {
@@ -106,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc15a1",
-          "type": "Gene"
+          "id": "Peripheral Nerve Palsy",
+          "type": "Side Effect"
         },
         {
-          "id": "Dicloxacillin",
+          "id": "Lovastatin",
           "type": "Compound"
         },
         {
@@ -121,31 +75,32 @@
       "edges": [
         {
           "source": "Fluvastatin",
-          "target": "Slc15a1",
-          "label": "binds"
+          "target": "Peripheral Nerve Palsy",
+          "label": "causes"
         },
         {
-          "source": "Slc15a1",
-          "target": "Dicloxacillin",
-          "label": "is bound by"
+          "source": "Peripheral Nerve Palsy",
+          "target": "Lovastatin",
+          "label": "is caused by"
         },
         {
-          "source": "Dicloxacillin",
+          "source": "Lovastatin",
           "target": "Slco1b1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluvastatin,Dicloxacillin": [
-          "Organooxygen Compound"
+        "Fluvastatin,Lovastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Statin"
         ]
       },
-      "id": "path_816"
+      "id": "path_408"
     },
     {
       "score": {
-        "ic_mean": 0.5865,
-        "final_score": 0.5865
+        "ic_mean": 0.4979,
+        "final_score": 0.4979
       },
       "nodes": [
         {
@@ -153,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b3",
-          "type": "Gene"
+          "id": "Hepatitis Chronic Active",
+          "type": "Side Effect"
         },
         {
-          "id": "Rilpivirine",
+          "id": "Lovastatin",
           "type": "Compound"
         },
         {
@@ -168,28 +123,123 @@
       "edges": [
         {
           "source": "Fluvastatin",
-          "target": "Slco1b3",
-          "label": "binds"
+          "target": "Hepatitis Chronic Active",
+          "label": "causes"
         },
         {
-          "source": "Slco1b3",
-          "target": "Rilpivirine",
-          "label": "is bound by"
+          "source": "Hepatitis Chronic Active",
+          "target": "Lovastatin",
+          "label": "is caused by"
         },
         {
-          "source": "Rilpivirine",
+          "source": "Lovastatin",
           "target": "Slco1b1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluvastatin,Rilpivirine": [
-          "Heteroorganic Entity",
-          "Enzyme Inhibitor"
+        "Fluvastatin,Lovastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Statin"
         ]
       },
-      "id": "path_817"
+      "id": "path_409"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4725,
+        "final_score": 0.4725
+      },
+      "nodes": [
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatocellular Carcinoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvastatin",
+          "target": "Hepatocellular Carcinoma",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatocellular Carcinoma",
+          "target": "Gemfibrozil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gemfibrozil",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluvastatin,Gemfibrozil": [
+          "Organooxygen Compound",
+          "Antilipidemic Agent"
+        ]
+      },
+      "id": "path_410"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4489,
+        "final_score": 0.4489
+      },
+      "nodes": [
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Chronic Active",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Saquinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvastatin",
+          "target": "Hepatitis Chronic Active",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Chronic Active",
+          "target": "Saquinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Saquinavir",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluvastatin,Saquinavir": [
+          "Enzyme Inhibitor",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_411"
     }
-  ],
-  "verbalization": ""
+  ]
 }

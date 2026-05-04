@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5627,
-        "final_score": 0.5627
+        "ic_mean": 0.5059,
+        "final_score": 0.5059
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Pregnancy Test False Positive",
+          "type": "Side Effect"
         },
         {
-          "id": "Atomoxetine",
+          "id": "Perphenazine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Thioridazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Pregnancy Test False Positive",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Atomoxetine",
-          "label": "is bound by"
+          "source": "Pregnancy Test False Positive",
+          "target": "Perphenazine",
+          "label": "is caused by"
         },
         {
-          "source": "Atomoxetine",
+          "source": "Perphenazine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Thioridazine,Atomoxetine": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Thioridazine,Perphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_30041"
+      "id": "path_15511"
     },
     {
       "score": {
-        "ic_mean": 0.5327,
-        "final_score": 0.5327
+        "ic_mean": 0.5059,
+        "final_score": 0.5059
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Motor Restlessness",
+          "type": "Side Effect"
         },
         {
-          "id": "Clomipramine",
+          "id": "Perphenazine",
           "type": "Compound"
         },
         {
@@ -75,32 +75,32 @@
       "edges": [
         {
           "source": "Thioridazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Motor Restlessness",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Clomipramine",
-          "label": "is bound by"
+          "source": "Motor Restlessness",
+          "target": "Perphenazine",
+          "label": "is caused by"
         },
         {
-          "source": "Clomipramine",
+          "source": "Perphenazine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Thioridazine,Clomipramine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+        "Thioridazine,Perphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_30042"
+      "id": "path_15512"
     },
     {
       "score": {
-        "ic_mean": 0.485,
-        "final_score": 0.485
+        "ic_mean": 0.4795,
+        "final_score": 0.4795
       },
       "nodes": [
         {
@@ -108,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr7",
-          "type": "Gene"
+          "id": "Motor Restlessness",
+          "type": "Side Effect"
         },
         {
-          "id": "Dopamine",
+          "id": "Pimozide",
           "type": "Compound"
         },
         {
@@ -123,27 +123,266 @@
       "edges": [
         {
           "source": "Thioridazine",
-          "target": "Htr7",
-          "label": "binds"
+          "target": "Motor Restlessness",
+          "label": "causes"
         },
         {
-          "source": "Htr7",
-          "target": "Dopamine",
-          "label": "is bound by"
+          "source": "Motor Restlessness",
+          "target": "Pimozide",
+          "label": "is caused by"
         },
         {
-          "source": "Dopamine",
+          "source": "Pimozide",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Thioridazine,Dopamine": [
-          "Organic Cyclic Compound"
+        "Thioridazine,Pimozide": [
+          "Organic Heteropolycyclic Compound",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_30043"
+      "id": "path_15513"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4744,
+        "final_score": 0.4744
+      },
+      "nodes": [
+        {
+          "id": "Thioridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Obstipation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thioridazine",
+          "target": "Obstipation",
+          "label": "causes"
+        },
+        {
+          "source": "Obstipation",
+          "target": "Perphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thioridazine,Perphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_15514"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4502,
+        "final_score": 0.4502
+      },
+      "nodes": [
+        {
+          "id": "Thioridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Multifocal Ventricular Tachycardia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thioridazine",
+          "target": "Multifocal Ventricular Tachycardia",
+          "label": "causes"
+        },
+        {
+          "source": "Multifocal Ventricular Tachycardia",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thioridazine,Amiodarone": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_15515"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4462,
+        "final_score": 0.4462
+      },
+      "nodes": [
+        {
+          "id": "Thioridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Obstipation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thioridazine",
+          "target": "Obstipation",
+          "label": "causes"
+        },
+        {
+          "source": "Obstipation",
+          "target": "Aprepitant",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aprepitant",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thioridazine,Aprepitant": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_15516"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4274,
+        "final_score": 0.4274
+      },
+      "nodes": [
+        {
+          "id": "Thioridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Electrocardiogram U-wave Abnormality",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pimozide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thioridazine",
+          "target": "Electrocardiogram U-wave Abnormality",
+          "label": "causes"
+        },
+        {
+          "source": "Electrocardiogram U-wave Abnormality",
+          "target": "Pimozide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pimozide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thioridazine,Pimozide": [
+          "Organic Heteropolycyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_15517"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4274,
+        "final_score": 0.4274
+      },
+      "nodes": [
+        {
+          "id": "Thioridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Electrocardiogram U Wave Present",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pimozide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thioridazine",
+          "target": "Electrocardiogram U Wave Present",
+          "label": "causes"
+        },
+        {
+          "source": "Electrocardiogram U Wave Present",
+          "target": "Pimozide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pimozide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thioridazine,Pimozide": [
+          "Organic Heteropolycyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_15518"
     }
-  ],
-  "verbalization": ""
+  ]
 }

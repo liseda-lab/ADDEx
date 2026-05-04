@@ -43,12 +43,58 @@
       ],
       "lowest_common_ancestors": {
         "Paliperidone,Rotigotine": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_19658"
+      "id": "path_9949"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5017,
+        "final_score": 0.5017
+      },
+      "nodes": [
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Prolactin Level",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paliperidone",
+          "target": "Increased Prolactin Level",
+          "label": "causes"
+        },
+        {
+          "source": "Increased Prolactin Level",
+          "target": "Asenapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Asenapine",
+          "target": "Drd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paliperidone,Asenapine": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9950"
     }
-  ],
-  "verbalization": ""
+  ]
 }

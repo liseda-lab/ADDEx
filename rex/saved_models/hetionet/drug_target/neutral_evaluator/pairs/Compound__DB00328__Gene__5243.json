@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5529,
-        "final_score": 0.5529
+        "ic_mean": 0.4866,
+        "final_score": 0.4866
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc11",
-          "type": "Gene"
+          "id": "Gouty Arthritis",
+          "type": "Side Effect"
         },
         {
-          "id": "Conjugated Estrogens",
+          "id": "Ticagrelor",
           "type": "Compound"
         },
         {
@@ -27,69 +27,265 @@
       "edges": [
         {
           "source": "Indomethacin",
-          "target": "Abcc11",
-          "label": "binds"
+          "target": "Gouty Arthritis",
+          "label": "causes"
         },
         {
-          "source": "Abcc11",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
+          "source": "Gouty Arthritis",
+          "target": "Ticagrelor",
+          "label": "is caused by"
         },
         {
-          "source": "Conjugated Estrogens",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "id": "path_5806"
-    },
-    {
-      "score": {
-        "ic_mean": 0.515,
-        "final_score": 0.515
-      },
-      "nodes": [
-        {
-          "id": "Indomethacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc10a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Liothyronine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indomethacin",
-          "target": "Slc10a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slc10a1",
-          "target": "Liothyronine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Liothyronine",
+          "source": "Ticagrelor",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Indomethacin,Liothyronine": [
-          "Carboxylic Acid"
+        "Indomethacin,Ticagrelor": [
+          "Hydroxides"
         ]
       },
-      "id": "path_5807"
+      "id": "path_2676"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4832,
+        "final_score": 0.4832
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Gouty Arthritis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telaprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Gouty Arthritis",
+          "label": "causes"
+        },
+        {
+          "source": "Gouty Arthritis",
+          "target": "Telaprevir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telaprevir",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Telaprevir": [
+          "Enzyme Inhibitor",
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_2677"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4605,
+        "final_score": 0.4605
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Secondary Anemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Secondary Anemia",
+          "label": "causes"
+        },
+        {
+          "source": "Secondary Anemia",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Cisplatin": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_2678"
+    },
+    {
+      "score": {
+        "ic_mean": 0.421,
+        "final_score": 0.421
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Necrotising Fasciitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Necrotising Fasciitis",
+          "label": "causes"
+        },
+        {
+          "source": "Necrotising Fasciitis",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Ibuprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_2679"
+    },
+    {
+      "score": {
+        "ic_mean": 0.421,
+        "final_score": 0.421
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cellulitis Gangrenous",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Cellulitis Gangrenous",
+          "label": "causes"
+        },
+        {
+          "source": "Cellulitis Gangrenous",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Ibuprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_2680"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3783,
+        "final_score": 0.3783
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Necrotizing Enterocolitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Necrotizing Enterocolitis",
+          "label": "causes"
+        },
+        {
+          "source": "Necrotizing Enterocolitis",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Ibuprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_2681"
     }
-  ],
-  "verbalization": ""
+  ]
 }

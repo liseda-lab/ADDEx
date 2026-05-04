@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.549,
-        "final_score": 0.549
+        "ic_mean": 0.5293,
+        "final_score": 0.5293
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Quinolones",
-          "type": "Pharmacologic Class"
+          "id": "Vulvovaginal Swelling",
+          "type": "Side Effect"
         },
         {
-          "id": "Ciprofloxacin",
+          "id": "Clindamycin",
           "type": "Compound"
         },
         {
@@ -27,181 +27,27 @@
       "edges": [
         {
           "source": "Norfloxacin",
-          "target": "Quinolones",
-          "label": "is included in"
+          "target": "Vulvovaginal Swelling",
+          "label": "causes"
         },
         {
-          "source": "Quinolones",
-          "target": "Ciprofloxacin",
-          "label": "includes"
+          "source": "Vulvovaginal Swelling",
+          "target": "Clindamycin",
+          "label": "is caused by"
         },
         {
-          "source": "Ciprofloxacin",
+          "source": "Clindamycin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norfloxacin,Quinolones": [
-          "Quinolone"
-        ],
-        "Norfloxacin,Ciprofloxacin": [
-          "N-Arylpiperazine",
-          "Quinolone Antibiotic"
-        ],
-        "Quinolones,Ciprofloxacin": [
-          "Quinolone"
+        "Norfloxacin,Clindamycin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antibiotic"
         ]
       },
-      "id": "path_19531"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5407,
-        "final_score": 0.5407
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Quinolones",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Levofloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Quinolones",
-          "label": "is included in"
-        },
-        {
-          "source": "Quinolones",
-          "target": "Levofloxacin",
-          "label": "includes"
-        },
-        {
-          "source": "Levofloxacin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Quinolones": [
-          "Quinolone"
-        ],
-        "Norfloxacin,Levofloxacin": [
-          "N-Arylpiperazine",
-          "Quinolone Antibiotic"
-        ],
-        "Quinolones,Levofloxacin": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19532"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5406,
-        "final_score": 0.5406
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Methimazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Methimazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methimazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Methimazole": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19533"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5406,
-        "final_score": 0.5406
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Cisapride",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Cisapride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cisapride",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Cisapride": [
-          "Aromatic Amine"
-        ]
-      },
-      "id": "path_19534"
+      "id": "path_9872"
     },
     {
       "score": {
@@ -245,159 +91,16 @@
       ],
       "lowest_common_ancestors": {
         "Norfloxacin,Clindamycin": [
-          "Antibiotic",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19535"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5293,
-        "final_score": 0.5293
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Vulvovaginal Swelling",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Clindamycin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Vulvovaginal Swelling",
-          "label": "causes"
-        },
-        {
-          "source": "Vulvovaginal Swelling",
-          "target": "Clindamycin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Clindamycin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Clindamycin": [
-          "Antibiotic",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19536"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5106,
-        "final_score": 0.5106
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Antipyrine": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19537"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5,
-        "final_score": 0.5
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Tetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Slc22a6",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a6",
-          "target": "Tetracycline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tetracycline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Tetracycline": [
-          "Hydroxides",
+          "Organonitrogen Heterocyclic Compound",
           "Antibiotic"
         ]
       },
-      "id": "path_19538"
+      "id": "path_9873"
     },
     {
       "score": {
-        "ic_mean": 0.5,
-        "final_score": 0.5
+        "ic_mean": 0.5208,
+        "final_score": 0.5208
       },
       "nodes": [
         {
@@ -405,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a6",
+          "id": "Slc22a5",
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Cephalexin",
           "type": "Compound"
         },
         {
@@ -420,404 +123,27 @@
       "edges": [
         {
           "source": "Norfloxacin",
-          "target": "Slc22a6",
+          "target": "Slc22a5",
           "label": "binds"
         },
         {
-          "source": "Slc22a6",
-          "target": "Antipyrine",
+          "source": "Slc22a5",
+          "target": "Cephalexin",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Cephalexin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norfloxacin,Antipyrine": [
-          "Organonitrogen Heterocyclic Compound"
+        "Norfloxacin,Cephalexin": [
+          "Antibiotic",
+          "Organonitrogen Heterocyclic Antibiotic"
         ]
       },
-      "id": "path_19539"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4893,
-        "final_score": 0.4893
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapagliflozin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Dapagliflozin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapagliflozin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Dapagliflozin": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_19540"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4893,
-        "final_score": 0.4893
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Pentobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Pentobarbital": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19541"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4886,
-        "final_score": 0.4886
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Alfentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Alfentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alfentanil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Alfentanil": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19542"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4886,
-        "final_score": 0.4886
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Diltiazem": [
-          "Tertiary Amino Compound"
-        ]
-      },
-      "id": "path_19543"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4728,
-        "final_score": 0.4728
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Nilvadipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Nilvadipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nilvadipine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Nilvadipine": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19544"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4673,
-        "final_score": 0.4673
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Rifapentine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Rifapentine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rifapentine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Rifapentine": [
-          "Tertiary Amino Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_19545"
-    },
-    {
-      "score": {
-        "ic_mean": 0.462,
-        "final_score": 0.462
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Urinary Protein Increased",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Levonorgestrel",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Urinary Protein Increased",
-          "label": "causes"
-        },
-        {
-          "source": "Urinary Protein Increased",
-          "target": "Levonorgestrel",
-          "label": "is caused by"
-        },
-        {
-          "source": "Levonorgestrel",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Levonorgestrel": [
-          "Hydroxides"
-        ]
-      },
-      "id": "path_19546"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4576,
-        "final_score": 0.4576
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Gingival Swelling",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Miconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Gingival Swelling",
-          "label": "causes"
-        },
-        {
-          "source": "Gingival Swelling",
-          "target": "Miconazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Miconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Miconazole": [
-          "Organonitrogen Heterocyclic Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_19547"
+      "id": "path_9874"
     },
     {
       "score": {
@@ -861,11 +187,11 @@
       ],
       "lowest_common_ancestors": {
         "Norfloxacin,Caspofungin": [
-          "Organic Amino Compound",
-          "Anti-Infective Agent"
+          "Anti-Infective Agent",
+          "Organic Amino Compound"
         ]
       },
-      "id": "path_19548"
+      "id": "path_9875"
     },
     {
       "score": {
@@ -912,12 +238,12 @@
           "Carbonyl Compound"
         ]
       },
-      "id": "path_19549"
+      "id": "path_9876"
     },
     {
       "score": {
-        "ic_mean": 0.4487,
-        "final_score": 0.4487
+        "ic_mean": 0.4316,
+        "final_score": 0.4316
       },
       "nodes": [
         {
@@ -925,148 +251,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Slc22a6",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a6",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_19550"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4478,
-        "final_score": 0.4478
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Methoxyflurane",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Methoxyflurane",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methoxyflurane",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Methoxyflurane": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_19551"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4372,
-        "final_score": 0.4372
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Quinine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Quinine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Quinine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Quinine": [
-          "Organonitrogen Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_19552"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4288,
-        "final_score": 0.4288
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Convulsions Generalised",
+          "id": "Glucose-6-phosphate Dehydrogenase Deficiency",
           "type": "Side Effect"
         },
         {
-          "id": "Aminophylline",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -1077,169 +266,26 @@
       "edges": [
         {
           "source": "Norfloxacin",
-          "target": "Convulsions Generalised",
+          "target": "Glucose-6-phosphate Dehydrogenase Deficiency",
           "label": "causes"
         },
         {
-          "source": "Convulsions Generalised",
-          "target": "Aminophylline",
+          "source": "Glucose-6-phosphate Dehydrogenase Deficiency",
+          "target": "Clopidogrel",
           "label": "is caused by"
         },
         {
-          "source": "Aminophylline",
+          "source": "Clopidogrel",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norfloxacin,Aminophylline": [
-          "Chemical Entity"
+        "Norfloxacin,Clopidogrel": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_19553"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4252,
-        "final_score": 0.4252
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Candiduria",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ciprofloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Candiduria",
-          "label": "causes"
-        },
-        {
-          "source": "Candiduria",
-          "target": "Ciprofloxacin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ciprofloxacin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Ciprofloxacin": [
-          "N-Arylpiperazine",
-          "Quinolone Antibiotic"
-        ]
-      },
-      "id": "path_19554"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4249,
-        "final_score": 0.4249
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Gingival Swelling",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Testosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Gingival Swelling",
-          "label": "causes"
-        },
-        {
-          "source": "Gingival Swelling",
-          "target": "Testosterone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Testosterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Testosterone": [
-          "Hydroxides"
-        ]
-      },
-      "id": "path_19555"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4217,
-        "final_score": 0.4217
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Candiduria",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Levofloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Candiduria",
-          "label": "causes"
-        },
-        {
-          "source": "Candiduria",
-          "target": "Levofloxacin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Levofloxacin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Levofloxacin": [
-          "N-Arylpiperazine",
-          "Quinolone Antibiotic"
-        ]
-      },
-      "id": "path_19556"
+      "id": "path_9877"
     },
     {
       "score": {
@@ -1286,294 +332,12 @@
           "Organohalogen Compound"
         ]
       },
-      "id": "path_19557"
+      "id": "path_9878"
     },
     {
       "score": {
-        "ic_mean": 0.4097,
-        "final_score": 0.4097
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Convulsions Generalised",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Theophylline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Convulsions Generalised",
-          "label": "causes"
-        },
-        {
-          "source": "Convulsions Generalised",
-          "target": "Theophylline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Theophylline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Theophylline": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19558"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3745,
-        "final_score": 0.3745
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Serum Urea Increased",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Indapamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Serum Urea Increased",
-          "label": "causes"
-        },
-        {
-          "source": "Serum Urea Increased",
-          "target": "Indapamide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Indapamide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Indapamide": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19559"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3704,
-        "final_score": 0.3704
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Convulsions Generalised",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Carvedilol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Convulsions Generalised",
-          "label": "causes"
-        },
-        {
-          "source": "Convulsions Generalised",
-          "target": "Carvedilol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Carvedilol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Carvedilol": [
-          "Hydroxides"
-        ]
-      },
-      "id": "path_19560"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3703,
-        "final_score": 0.3703
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Anxiety Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Enalapril",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Anxiety Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Anxiety Disorder",
-          "target": "Enalapril",
-          "label": "is caused by"
-        },
-        {
-          "source": "Enalapril",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Enalapril": [
-          "Carboxylic Acid"
-        ]
-      },
-      "id": "path_19561"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3587,
-        "final_score": 0.3587
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Anxiety Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sertraline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Anxiety Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Anxiety Disorder",
-          "target": "Sertraline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sertraline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Sertraline": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_19562"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3536,
-        "final_score": 0.3536
-      },
-      "nodes": [
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Anxiety Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Aprepitant",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norfloxacin",
-          "target": "Anxiety Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Anxiety Disorder",
-          "target": "Aprepitant",
-          "label": "is caused by"
-        },
-        {
-          "source": "Aprepitant",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norfloxacin,Aprepitant": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_19563"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3245,
-        "final_score": 0.3245
+        "ic_mean": 0.4143,
+        "final_score": 0.4143
       },
       "nodes": [
         {
@@ -1585,7 +349,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Saquinavir",
+          "id": "Bisoprolol",
           "type": "Compound"
         },
         {
@@ -1601,23 +365,538 @@
         },
         {
           "source": "Renal Colic",
-          "target": "Saquinavir",
+          "target": "Bisoprolol",
           "label": "is caused by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Bisoprolol",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norfloxacin,Saquinavir": [
-          "Quinolines",
+        "Norfloxacin,Bisoprolol": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_9879"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4139,
+        "final_score": 0.4139
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Colic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Renal Colic",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Colic",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Clopidogrel": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_9880"
+    },
+    {
+      "score": {
+        "ic_mean": 0.396,
+        "final_score": 0.396
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Anal Pruritus",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cephalexin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Anal Pruritus",
+          "label": "causes"
+        },
+        {
+          "source": "Anal Pruritus",
+          "target": "Cephalexin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cephalexin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Cephalexin": [
+          "Antibiotic",
+          "Organonitrogen Heterocyclic Antibiotic"
+        ]
+      },
+      "id": "path_9881"
+    },
+    {
+      "score": {
+        "ic_mean": 0.383,
+        "final_score": 0.383
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Anal Pruritus",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Esomeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Anal Pruritus",
+          "label": "causes"
+        },
+        {
+          "source": "Anal Pruritus",
+          "target": "Esomeprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Esomeprazole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Esomeprazole": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_9882"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3829,
+        "final_score": 0.3829
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Guillain-barre Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Guillain-barre Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Guillain-barre Syndrome",
+          "target": "Danazol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Danazol",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Danazol": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_9883"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3717,
+        "final_score": 0.3717
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Glucose-6-phosphate Dehydrogenase Deficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mefloquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Glucose-6-phosphate Dehydrogenase Deficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Glucose-6-phosphate Dehydrogenase Deficiency",
+          "target": "Mefloquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mefloquine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Mefloquine": [
+          "Chemical Entity",
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_19564"
+      "id": "path_9884"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3647,
+        "final_score": 0.3647
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Anxiety Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Anxiety Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Anxiety Disorder",
+          "target": "Felodipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Felodipine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_9885"
+    },
+    {
+      "score": {
+        "ic_mean": 0.354,
+        "final_score": 0.354
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Anxiety Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mefloquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Anxiety Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Anxiety Disorder",
+          "target": "Mefloquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mefloquine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Mefloquine": [
+          "Chemical Entity",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_9886"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3458,
+        "final_score": 0.3458
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Anxiety Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Anxiety Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Anxiety Disorder",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Indinavir": [
+          "Piperazines",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_9887"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3458,
+        "final_score": 0.3458
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Colic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Renal Colic",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Colic",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Indinavir": [
+          "Piperazines",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_9888"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3298,
+        "final_score": 0.3298
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dysphasia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Donepezil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Dysphasia",
+          "label": "causes"
+        },
+        {
+          "source": "Dysphasia",
+          "target": "Donepezil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Donepezil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "id": "path_9889"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3141,
+        "final_score": 0.3141
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Colic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vandetanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Renal Colic",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Colic",
+          "target": "Vandetanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vandetanib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Vandetanib": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_9890"
     }
-  ],
-  "verbalization": ""
+  ]
 }

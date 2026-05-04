@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6396,
-        "final_score": 0.6396
+        "ic_mean": 0.5118,
+        "final_score": 0.5118
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna1i",
-          "type": "Gene"
+          "id": "Almitrine",
+          "type": "Compound"
         },
         {
-          "id": "Cinnarizine",
+          "id": "Fluspirilene",
           "type": "Compound"
         },
         {
@@ -27,32 +27,34 @@
       "edges": [
         {
           "source": "Flunarizine",
-          "target": "Cacna1i",
-          "label": "binds"
+          "target": "Almitrine",
+          "label": "resembles"
         },
         {
-          "source": "Cacna1i",
-          "target": "Cinnarizine",
-          "label": "is bound by"
+          "source": "Almitrine",
+          "target": "Fluspirilene",
+          "label": "resembles"
         },
         {
-          "source": "Cinnarizine",
+          "source": "Fluspirilene",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Flunarizine,Cinnarizine": [
-          "Diarylmethane",
-          "Histamine-1 Receptor Antagonist"
+        "Flunarizine,Almitrine": [
+          "Organic Aromatic Compound"
+        ],
+        "Almitrine,Fluspirilene": [
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_24015"
+      "id": "path_12140"
     },
     {
       "score": {
-        "ic_mean": 0.5982,
-        "final_score": 0.5982
+        "ic_mean": 0.3205,
+        "final_score": 0.3205
       },
       "nodes": [
         {
@@ -60,11 +62,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cacna1h",
-          "type": "Gene"
+          "id": "Hydroxyzine",
+          "type": "Compound"
         },
         {
-          "id": "Cinnarizine",
+          "id": "Ifenprodil",
           "type": "Compound"
         },
         {
@@ -75,28 +77,74 @@
       "edges": [
         {
           "source": "Flunarizine",
-          "target": "Cacna1h",
-          "label": "binds"
+          "target": "Hydroxyzine",
+          "label": "resembles"
         },
         {
-          "source": "Cacna1h",
-          "target": "Cinnarizine",
-          "label": "is bound by"
+          "source": "Hydroxyzine",
+          "target": "Ifenprodil",
+          "label": "resembles"
         },
         {
-          "source": "Cinnarizine",
+          "source": "Ifenprodil",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Flunarizine,Cinnarizine": [
-          "Diarylmethane",
+        "Flunarizine,Hydroxyzine": [
+          "Organic Aromatic Compound",
           "Histamine-1 Receptor Antagonist"
         ]
       },
-      "id": "path_24016"
+      "id": "path_12141"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3132,
+        "final_score": 0.3132
+      },
+      "nodes": [
+        {
+          "id": "Flunarizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chlorcyclizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ifenprodil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flunarizine",
+          "target": "Chlorcyclizine",
+          "label": "resembles"
+        },
+        {
+          "source": "Chlorcyclizine",
+          "target": "Ifenprodil",
+          "label": "resembles"
+        },
+        {
+          "source": "Ifenprodil",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flunarizine,Chlorcyclizine": [
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_12142"
     }
-  ],
-  "verbalization": ""
+  ]
 }

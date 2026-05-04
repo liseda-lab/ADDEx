@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6304,
-        "final_score": 0.6304
+        "ic_mean": 0.3694,
+        "final_score": 0.3694
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm5",
-          "type": "Gene"
+          "id": "Phenprocoumon",
+          "type": "Compound"
         },
         {
-          "id": "Brompheniramine",
+          "id": "Dicoumarol",
           "type": "Compound"
         },
         {
@@ -27,31 +27,38 @@
       "edges": [
         {
           "source": "Tolterodine",
-          "target": "Chrm5",
-          "label": "binds"
+          "target": "Phenprocoumon",
+          "label": "resembles"
         },
         {
-          "source": "Chrm5",
-          "target": "Brompheniramine",
-          "label": "is bound by"
+          "source": "Phenprocoumon",
+          "target": "Dicoumarol",
+          "label": "resembles"
         },
         {
-          "source": "Brompheniramine",
+          "source": "Dicoumarol",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Tolterodine,Brompheniramine": [
-          "Organonitrogen Compound"
+        "Tolterodine,Phenprocoumon": [
+          "Heteroorganic Entity"
+        ],
+        "Tolterodine,Dicoumarol": [
+          "Heteroorganic Entity"
+        ],
+        "Phenprocoumon,Dicoumarol": [
+          "Hydroxycoumarin",
+          "Anticoagulant Agent"
         ]
       },
-      "id": "path_838"
+      "id": "path_424"
     },
     {
       "score": {
-        "ic_mean": 0.604,
-        "final_score": 0.604
+        "ic_mean": 0.2649,
+        "final_score": 0.2649
       },
       "nodes": [
         {
@@ -59,11 +66,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
-          "type": "Gene"
+          "id": "Phenprocoumon",
+          "type": "Compound"
         },
         {
-          "id": "Brompheniramine",
+          "id": "Ketoprofen",
           "type": "Compound"
         },
         {
@@ -74,267 +81,33 @@
       "edges": [
         {
           "source": "Tolterodine",
-          "target": "Chrm4",
-          "label": "binds"
+          "target": "Phenprocoumon",
+          "label": "resembles"
         },
         {
-          "source": "Chrm4",
-          "target": "Brompheniramine",
-          "label": "is bound by"
+          "source": "Phenprocoumon",
+          "target": "Ketoprofen",
+          "label": "resembles"
         },
         {
-          "source": "Brompheniramine",
+          "source": "Ketoprofen",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Tolterodine,Brompheniramine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_839"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6004,
-        "final_score": 0.6004
-      },
-      "nodes": [
-        {
-          "id": "Tolterodine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Promethazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Tolterodine",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Promethazine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Promethazine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Tolterodine,Promethazine": [
+        "Tolterodine,Phenprocoumon": [
+          "Heteroorganic Entity"
+        ],
+        "Tolterodine,Ketoprofen": [
           "Agent Affecting Nervous System",
-          "Tertiary Amine"
+          "Heteroorganic Entity"
+        ],
+        "Phenprocoumon,Ketoprofen": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_840"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5739,
-        "final_score": 0.5739
-      },
-      "nodes": [
-        {
-          "id": "Tolterodine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Promethazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Tolterodine",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Promethazine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Promethazine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Tolterodine,Promethazine": [
-          "Agent Affecting Nervous System",
-          "Tertiary Amine"
-        ]
-      },
-      "id": "path_841"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5376,
-        "final_score": 0.5376
-      },
-      "nodes": [
-        {
-          "id": "Tolterodine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Nortriptyline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Tolterodine",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Nortriptyline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nortriptyline",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Tolterodine,Nortriptyline": [
-          "Agent Affecting Nervous System",
-          "Amine"
-        ]
-      },
-      "id": "path_842"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5112,
-        "final_score": 0.5112
-      },
-      "nodes": [
-        {
-          "id": "Tolterodine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Nortriptyline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Tolterodine",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Nortriptyline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nortriptyline",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Tolterodine,Nortriptyline": [
-          "Agent Affecting Nervous System",
-          "Amine"
-        ]
-      },
-      "id": "path_843"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4977,
-        "final_score": 0.4977
-      },
-      "nodes": [
-        {
-          "id": "Tolterodine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Tolterodine",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Cocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cocaine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Tolterodine,Cocaine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_844"
+      "id": "path_425"
     }
-  ],
-  "verbalization": ""
+  ]
 }

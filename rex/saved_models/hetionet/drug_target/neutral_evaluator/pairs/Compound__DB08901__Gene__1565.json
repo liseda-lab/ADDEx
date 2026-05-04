@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.445,
-        "final_score": 0.445
+        "ic_mean": 0.4864,
+        "final_score": 0.4864
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Flt3",
-          "type": "Gene"
+          "id": "Retinal Vein Occlusion",
+          "type": "Side Effect"
         },
         {
-          "id": "Erlotinib",
+          "id": "Midodrine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Ponatinib",
-          "target": "Flt3",
-          "label": "binds"
+          "target": "Retinal Vein Occlusion",
+          "label": "causes"
         },
         {
-          "source": "Flt3",
-          "target": "Erlotinib",
-          "label": "is bound by"
+          "source": "Retinal Vein Occlusion",
+          "target": "Midodrine",
+          "label": "is caused by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Midodrine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ponatinib,Erlotinib": [
-          "Organic Amino Compound",
-          "Antineoplastic Enzyme Inhibitor"
+        "Ponatinib,Midodrine": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_3468"
+      "id": "path_1620"
     },
     {
       "score": {
-        "ic_mean": 0.4403,
-        "final_score": 0.4403
+        "ic_mean": 0.455,
+        "final_score": 0.455
       },
       "nodes": [
         {
@@ -60,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb11",
-          "type": "Gene"
+          "id": "Left Ventricular Dysfunction",
+          "type": "Side Effect"
         },
         {
-          "id": "Pravastatin",
+          "id": "Diltiazem",
           "type": "Compound"
         },
         {
@@ -75,32 +74,31 @@
       "edges": [
         {
           "source": "Ponatinib",
-          "target": "Abcb11",
-          "label": "binds"
+          "target": "Left Ventricular Dysfunction",
+          "label": "causes"
         },
         {
-          "source": "Abcb11",
-          "target": "Pravastatin",
-          "label": "is bound by"
+          "source": "Left Ventricular Dysfunction",
+          "target": "Diltiazem",
+          "label": "is caused by"
         },
         {
-          "source": "Pravastatin",
+          "source": "Diltiazem",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ponatinib,Pravastatin": [
-          "Enzyme Inhibitor",
-          "Organic Ion"
+        "Ponatinib,Diltiazem": [
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_3469"
+      "id": "path_1621"
     },
     {
       "score": {
-        "ic_mean": 0.4004,
-        "final_score": 0.4004
+        "ic_mean": 0.4358,
+        "final_score": 0.4358
       },
       "nodes": [
         {
@@ -108,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb11",
-          "type": "Gene"
+          "id": "Glucose Increased",
+          "type": "Side Effect"
         },
         {
-          "id": "Doxorubicin",
+          "id": "Propafenone",
           "type": "Compound"
         },
         {
@@ -123,28 +121,120 @@
       "edges": [
         {
           "source": "Ponatinib",
-          "target": "Abcb11",
-          "label": "binds"
+          "target": "Glucose Increased",
+          "label": "causes"
         },
         {
-          "source": "Abcb11",
-          "target": "Doxorubicin",
-          "label": "is bound by"
+          "source": "Glucose Increased",
+          "target": "Propafenone",
+          "label": "is caused by"
         },
         {
-          "source": "Doxorubicin",
+          "source": "Propafenone",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ponatinib,Doxorubicin": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organic Cation"
+        "Ponatinib,Propafenone": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_3470"
+      "id": "path_1622"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4243,
+        "final_score": 0.4243
+      },
+      "nodes": [
+        {
+          "id": "Ponatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Non-cardiac Chest Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ponatinib",
+          "target": "Non-cardiac Chest Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Non-cardiac Chest Pain",
+          "target": "Hydrocodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocodone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ponatinib,Hydrocodone": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_1623"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4127,
+        "final_score": 0.4127
+      },
+      "nodes": [
+        {
+          "id": "Ponatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Sodium High",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ponatinib",
+          "target": "Sodium High",
+          "label": "causes"
+        },
+        {
+          "source": "Sodium High",
+          "target": "Caffeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ponatinib,Caffeine": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_1624"
     }
-  ],
-  "verbalization": ""
+  ]
 }

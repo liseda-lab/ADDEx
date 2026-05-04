@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01229 - Gene::89845",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4751,
+        "final_score": 0.4751
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Radiation Pneumonitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc10",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Radiation Pneumonitis",
+          "label": "causes"
+        },
+        {
+          "source": "Radiation Pneumonitis",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Abcc10",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Docetaxel": [
+          "Tetracyclic Diterpenoid"
+        ]
+      },
+      "id": "path_1837"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5739,
-        "final_score": 0.5739
+        "ic_mean": 0.5124,
+        "final_score": 0.5124
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b3",
-          "type": "Gene"
+          "id": "Keratoacanthoma",
+          "type": "Side Effect"
         },
         {
-          "id": "Pioglitazone",
+          "id": "Regorafenib",
           "type": "Compound"
         },
         {
@@ -27,31 +27,32 @@
       "edges": [
         {
           "source": "Dabrafenib",
-          "target": "Slco1b3",
-          "label": "binds"
+          "target": "Keratoacanthoma",
+          "label": "causes"
         },
         {
-          "source": "Slco1b3",
-          "target": "Pioglitazone",
-          "label": "is bound by"
+          "source": "Keratoacanthoma",
+          "target": "Regorafenib",
+          "label": "is caused by"
         },
         {
-          "source": "Pioglitazone",
+          "source": "Regorafenib",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dabrafenib,Pioglitazone": [
-          "Organosulfur Heterocyclic Compound"
+        "Dabrafenib,Regorafenib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Targeted Therapy Agent"
         ]
       },
-      "id": "path_24658"
+      "id": "path_12466"
     },
     {
       "score": {
-        "ic_mean": 0.5225,
-        "final_score": 0.5225
+        "ic_mean": 0.4378,
+        "final_score": 0.4378
       },
       "nodes": [
         {
@@ -59,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b3",
-          "type": "Gene"
+          "id": "Ejection Fraction Decreased",
+          "type": "Side Effect"
         },
         {
-          "id": "Levothyroxine",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -74,31 +75,32 @@
       "edges": [
         {
           "source": "Dabrafenib",
-          "target": "Slco1b3",
-          "label": "binds"
+          "target": "Ejection Fraction Decreased",
+          "label": "causes"
         },
         {
-          "source": "Slco1b3",
-          "target": "Levothyroxine",
-          "label": "is bound by"
+          "source": "Ejection Fraction Decreased",
+          "target": "Ifosfamide",
+          "label": "is caused by"
         },
         {
-          "source": "Levothyroxine",
+          "source": "Ifosfamide",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dabrafenib,Levothyroxine": [
-          "Organic Amino Compound"
+        "Dabrafenib,Ifosfamide": [
+          "Antineoplastic Agent",
+          "Organohalogen Compound"
         ]
       },
-      "id": "path_24659"
+      "id": "path_12467"
     },
     {
       "score": {
-        "ic_mean": 0.5111,
-        "final_score": 0.5111
+        "ic_mean": 0.3804,
+        "final_score": 0.3804
       },
       "nodes": [
         {
@@ -106,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b3",
-          "type": "Gene"
+          "id": "Disease Progression",
+          "type": "Side Effect"
         },
         {
-          "id": "Pravastatin",
+          "id": "Morphine",
           "type": "Compound"
         },
         {
@@ -121,170 +123,26 @@
       "edges": [
         {
           "source": "Dabrafenib",
-          "target": "Slco1b3",
-          "label": "binds"
+          "target": "Disease Progression",
+          "label": "causes"
         },
         {
-          "source": "Slco1b3",
-          "target": "Pravastatin",
-          "label": "is bound by"
+          "source": "Disease Progression",
+          "target": "Morphine",
+          "label": "is caused by"
         },
         {
-          "source": "Pravastatin",
+          "source": "Morphine",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dabrafenib,Pravastatin": [
-          "Enzyme Inhibitor",
-          "Organic Cyclic Compound"
+        "Dabrafenib,Morphine": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_24660"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4661,
-        "final_score": 0.4661
-      },
-      "nodes": [
-        {
-          "id": "Dabrafenib",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dabrafenib",
-          "target": "Slc22a6",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dabrafenib,Antipyrine": [
-          "Azole"
-        ]
-      },
-      "id": "path_24661"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4583,
-        "final_score": 0.4583
-      },
-      "nodes": [
-        {
-          "id": "Dabrafenib",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a8",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketoprofen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dabrafenib",
-          "target": "Slc22a8",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a8",
-          "target": "Ketoprofen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketoprofen",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dabrafenib,Ketoprofen": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_24662"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4333,
-        "final_score": 0.4333
-      },
-      "nodes": [
-        {
-          "id": "Dabrafenib",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a8",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dabrafenib",
-          "target": "Slc22a8",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a8",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dabrafenib,Pravastatin": [
-          "Enzyme Inhibitor",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_24663"
+      "id": "path_12468"
     }
-  ],
-  "verbalization": ""
+  ]
 }

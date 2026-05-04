@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5839,
-        "final_score": 0.5839
+        "ic_mean": 0.6423,
+        "final_score": 0.6423
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Cyp2c19",
           "type": "Gene"
         },
         {
-          "id": "Aminophenazone",
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Antipyrine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Arachidonic Acid Epoxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Epoxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13741"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4955,
+        "final_score": 0.4955
+      },
+      "nodes": [
+        {
+          "id": "Antipyrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Terbinafine",
           "type": "Compound"
         },
         {
@@ -27,32 +69,31 @@
       "edges": [
         {
           "source": "Antipyrine",
-          "target": "Cyp2c18",
+          "target": "Ptgs1",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Aminophenazone",
+          "source": "Ptgs1",
+          "target": "Terbinafine",
           "label": "is bound by"
         },
         {
-          "source": "Aminophenazone",
+          "source": "Terbinafine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Antipyrine,Aminophenazone": [
-          "Pyrazolone",
-          "Nonsteroidal Antiinflammatory Drug"
+        "Antipyrine,Terbinafine": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_26916"
+      "id": "path_13742"
     },
     {
       "score": {
-        "ic_mean": 0.5539,
-        "final_score": 0.5539
+        "ic_mean": 0.459,
+        "final_score": 0.459
       },
       "nodes": [
         {
@@ -60,11 +101,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Vilazodone",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -75,32 +116,31 @@
       "edges": [
         {
           "source": "Antipyrine",
-          "target": "Cyp2c18",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Vilazodone",
+          "source": "Cyp1a2",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Vilazodone",
+          "source": "Ranitidine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Antipyrine,Vilazodone": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+        "Antipyrine,Ranitidine": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_26917"
+      "id": "path_13743"
     },
     {
       "score": {
-        "ic_mean": 0.5326,
-        "final_score": 0.5326
+        "ic_mean": 0.459,
+        "final_score": 0.459
       },
       "nodes": [
         {
@@ -108,11 +148,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Cyp1a2",
           "type": "Gene"
         },
         {
-          "id": "Methadone",
+          "id": "Cinacalcet",
           "type": "Compound"
         },
         {
@@ -123,32 +163,31 @@
       "edges": [
         {
           "source": "Antipyrine",
-          "target": "Cyp2c18",
+          "target": "Cyp1a2",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Methadone",
+          "source": "Cyp1a2",
+          "target": "Cinacalcet",
           "label": "is bound by"
         },
         {
-          "source": "Methadone",
+          "source": "Cinacalcet",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Antipyrine,Methadone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
+        "Antipyrine,Cinacalcet": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_26918"
+      "id": "path_13744"
     },
     {
       "score": {
-        "ic_mean": 0.5326,
-        "final_score": 0.5326
+        "ic_mean": 0.4577,
+        "final_score": 0.4577
       },
       "nodes": [
         {
@@ -156,101 +195,7 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Cyclophosphamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Antipyrine,Cyclophosphamide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_26919"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5326,
-        "final_score": 0.5326
-      },
-      "nodes": [
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Omeprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Omeprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Omeprazole",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Antipyrine,Omeprazole": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_26920"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5161,
-        "final_score": 0.5161
-      },
-      "nodes": [
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
+          "id": "Ptgs1",
           "type": "Gene"
         },
         {
@@ -265,11 +210,11 @@
       "edges": [
         {
           "source": "Antipyrine",
-          "target": "Cyp2c18",
+          "target": "Ptgs1",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
+          "source": "Ptgs1",
           "target": "Diphenhydramine",
           "label": "is bound by"
         },
@@ -281,16 +226,16 @@
       ],
       "lowest_common_ancestors": {
         "Antipyrine,Diphenhydramine": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_26921"
+      "id": "path_13745"
     },
     {
       "score": {
-        "ic_mean": 0.5132,
-        "final_score": 0.5132
+        "ic_mean": 0.455,
+        "final_score": 0.455
       },
       "nodes": [
         {
@@ -298,11 +243,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
+          "id": "Cyp2c19",
           "type": "Gene"
         },
         {
-          "id": "Methimazole",
+          "id": "Brompheniramine",
           "type": "Compound"
         },
         {
@@ -313,126 +258,31 @@
       "edges": [
         {
           "source": "Antipyrine",
-          "target": "Cyp2a6",
+          "target": "Cyp2c19",
           "label": "binds"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Methimazole",
+          "source": "Cyp2c19",
+          "target": "Brompheniramine",
           "label": "is bound by"
         },
         {
-          "source": "Methimazole",
+          "source": "Brompheniramine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Antipyrine,Methimazole": [
-          "Diazole"
-        ]
-      },
-      "id": "path_26922"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5026,
-        "final_score": 0.5026
-      },
-      "nodes": [
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Lidocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Lidocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lidocaine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Antipyrine,Lidocaine": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_26923"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4911,
-        "final_score": 0.4911
-      },
-      "nodes": [
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Lansoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Lansoprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lansoprazole",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Antipyrine,Lansoprazole": [
+        "Antipyrine,Brompheniramine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_26924"
+      "id": "path_13746"
     },
     {
       "score": {
-        "ic_mean": 0.4831,
-        "final_score": 0.4831
+        "ic_mean": 0.425,
+        "final_score": 0.425
       },
       "nodes": [
         {
@@ -440,11 +290,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
+          "id": "Cyp2c19",
           "type": "Gene"
         },
         {
-          "id": "Arformoterol",
+          "id": "Pioglitazone",
           "type": "Compound"
         },
         {
@@ -455,75 +305,215 @@
       "edges": [
         {
           "source": "Antipyrine",
-          "target": "Cyp2a6",
+          "target": "Cyp2c19",
           "label": "binds"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Arformoterol",
+          "source": "Cyp2c19",
+          "target": "Pioglitazone",
           "label": "is bound by"
         },
         {
-          "source": "Arformoterol",
+          "source": "Pioglitazone",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Antipyrine,Arformoterol": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_26925"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4425,
-        "final_score": 0.4425
-      },
-      "nodes": [
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Antipyrine,Diltiazem": [
+        "Antipyrine,Pioglitazone": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_26926"
+      "id": "path_13747"
+    },
+    {
+      "score": {
+        "ic_mean": 0.425,
+        "final_score": 0.425
+      },
+      "nodes": [
+        {
+          "id": "Antipyrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Terbinafine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Antipyrine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Terbinafine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Terbinafine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Antipyrine,Terbinafine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_13748"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4037,
+        "final_score": 0.4037
+      },
+      "nodes": [
+        {
+          "id": "Antipyrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Zafirlukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Antipyrine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Zafirlukast",
+          "label": "is bound by"
+        },
+        {
+          "source": "Zafirlukast",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Antipyrine,Zafirlukast": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13749"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3911,
+        "final_score": 0.3911
+      },
+      "nodes": [
+        {
+          "id": "Antipyrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Antipyrine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Clevidipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Antipyrine,Clevidipine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13750"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3436,
+        "final_score": 0.3436
+      },
+      "nodes": [
+        {
+          "id": "Antipyrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Antipyrine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Desipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Antipyrine,Desipramine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_13751"
     }
-  ],
-  "verbalization": ""
+  ]
 }

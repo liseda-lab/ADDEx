@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6026,
-        "final_score": 0.6026
+        "ic_mean": 0.6728,
+        "final_score": 0.6728
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1d",
+          "id": "Adra1a",
           "type": "Gene"
         },
         {
-          "id": "Phentolamine",
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenoxybenzamine",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8472"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5904,
+        "final_score": 0.5904
+      },
+      "nodes": [
+        {
+          "id": "Phenoxybenzamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Levonordefrin",
           "type": "Compound"
         },
         {
@@ -27,27 +69,27 @@
       "edges": [
         {
           "source": "Phenoxybenzamine",
-          "target": "Adra1d",
+          "target": "Adra1a",
           "label": "binds"
         },
         {
-          "source": "Adra1d",
-          "target": "Phentolamine",
+          "source": "Adra1a",
+          "target": "Levonordefrin",
           "label": "is bound by"
         },
         {
-          "source": "Phentolamine",
+          "source": "Levonordefrin",
           "target": "Adra2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phenoxybenzamine,Phentolamine": [
-          "Aromatic Amine",
-          "Alpha-Adrenergic Antagonist"
+        "Phenoxybenzamine,Levonordefrin": [
+          "Organic Aromatic Compound",
+          "Adrenergic Agent"
         ]
       },
-      "id": "path_16907"
+      "id": "path_8473"
     },
     {
       "score": {
@@ -64,7 +106,7 @@
           "type": "Gene"
         },
         {
-          "id": "Tolazoline",
+          "id": "Dipivefrin",
           "type": "Compound"
         },
         {
@@ -80,23 +122,68 @@
         },
         {
           "source": "Adra1a",
-          "target": "Tolazoline",
+          "target": "Dipivefrin",
           "label": "is bound by"
         },
         {
-          "source": "Tolazoline",
+          "source": "Dipivefrin",
           "target": "Adra2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phenoxybenzamine,Tolazoline": [
-          "Organic Aromatic Compound",
-          "Alpha-Adrenergic Antagonist"
+        "Phenoxybenzamine,Dipivefrin": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_16908"
+      "id": "path_8474"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4877,
+        "final_score": 0.4877
+      },
+      "nodes": [
+        {
+          "id": "Phenoxybenzamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenoxybenzamine",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Norepinephrine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenoxybenzamine,Norepinephrine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_8475"
     }
-  ],
-  "verbalization": ""
+  ]
 }

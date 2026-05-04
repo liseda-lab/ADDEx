@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01234 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5036,
+        "final_score": 0.5036
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Unspecified Disorder Of Intestine",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Unspecified Disorder Of Intestine",
+          "label": "causes"
+        },
+        {
+          "source": "Unspecified Disorder Of Intestine",
+          "target": "Fenofibrate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenofibrate",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Fenofibrate": [
+          "Ketone"
+        ]
+      },
+      "id": "path_19"
+    }
+  ]
+}

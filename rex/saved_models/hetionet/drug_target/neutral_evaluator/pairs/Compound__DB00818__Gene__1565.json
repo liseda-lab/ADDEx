@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6931,
-        "final_score": 0.6931
+        "ic_mean": 0.6785,
+        "final_score": 0.6785
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a8",
+          "id": "Cyp2c18",
           "type": "Gene"
         },
         {
-          "id": "Tamoxifen Metabolism",
-          "type": "Pathway"
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2d6",
@@ -27,217 +27,26 @@
       "edges": [
         {
           "source": "Propofol",
-          "target": "Ugt1a8",
+          "target": "Cyp2c18",
           "label": "binds"
         },
         {
-          "source": "Ugt1a8",
-          "target": "Tamoxifen Metabolism",
+          "source": "Cyp2c18",
+          "target": "Arachidonic Acid Epoxygenase Activity",
           "label": "participates"
         },
         {
-          "source": "Tamoxifen Metabolism",
+          "source": "Arachidonic Acid Epoxygenase Activity",
           "target": "Cyp2d6",
           "label": "is participated by"
         }
       ],
-      "id": "path_4568"
+      "id": "path_2060"
     },
     {
       "score": {
-        "ic_mean": 0.599,
-        "final_score": 0.599
-      },
-      "nodes": [
-        {
-          "id": "Propofol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Propofol",
-          "target": "Ugt1a6",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a6",
-          "target": "Acetaminophen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Acetaminophen",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Propofol,Acetaminophen": [
-          "Agent Affecting Nervous System",
-          "Phenols"
-        ]
-      },
-      "id": "path_4569"
-    },
-    {
-      "score": {
-        "ic_mean": 0.599,
-        "final_score": 0.599
-      },
-      "nodes": [
-        {
-          "id": "Propofol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a8",
-          "type": "Gene"
-        },
-        {
-          "id": "Morphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Propofol",
-          "target": "Ugt1a8",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a8",
-          "target": "Morphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Morphine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Propofol,Morphine": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_4570"
-    },
-    {
-      "score": {
-        "ic_mean": 0.544,
-        "final_score": 0.544
-      },
-      "nodes": [
-        {
-          "id": "Propofol",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn4a",
-          "type": "Gene"
-        },
-        {
-          "id": "Bupivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Propofol",
-          "target": "Scn4a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn4a",
-          "target": "Bupivacaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bupivacaine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Propofol,Bupivacaine": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_4571"
-    },
-    {
-      "score": {
-        "ic_mean": 0.544,
-        "final_score": 0.544
-      },
-      "nodes": [
-        {
-          "id": "Propofol",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn4a",
-          "type": "Gene"
-        },
-        {
-          "id": "Mexiletine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Propofol",
-          "target": "Scn4a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn4a",
-          "target": "Mexiletine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mexiletine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Propofol,Mexiletine": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_4572"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5176,
-        "final_score": 0.5176
+        "ic_mean": 0.6523,
+        "final_score": 0.6523
       },
       "nodes": [
         {
@@ -249,8 +58,8 @@
           "type": "Gene"
         },
         {
-          "id": "Vilazodone",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2d6",
@@ -265,27 +74,21 @@
         },
         {
           "source": "Cyp2c18",
-          "target": "Vilazodone",
-          "label": "is bound by"
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Vilazodone",
+          "source": "Aromatase Activity",
           "target": "Cyp2d6",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Propofol,Vilazodone": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_4573"
+      "id": "path_2061"
     },
     {
       "score": {
-        "ic_mean": 0.5176,
-        "final_score": 0.5176
+        "ic_mean": 0.6523,
+        "final_score": 0.6523
       },
       "nodes": [
         {
@@ -297,8 +100,8 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2d6",
@@ -313,70 +116,16 @@
         },
         {
           "source": "Cyp2c18",
-          "target": "Antipyrine",
-          "label": "is bound by"
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
         },
         {
-          "source": "Antipyrine",
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "target": "Cyp2d6",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Propofol,Antipyrine": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_4574"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4963,
-        "final_score": 0.4963
-      },
-      "nodes": [
-        {
-          "id": "Propofol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Propofol",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Propofol,Methadone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_4575"
+      "id": "path_2062"
     },
     {
       "score": {
@@ -393,7 +142,7 @@
           "type": "Gene"
         },
         {
-          "id": "Diphenhydramine",
+          "id": "Buprenorphine",
           "type": "Compound"
         },
         {
@@ -409,27 +158,27 @@
         },
         {
           "source": "Cyp2c18",
-          "target": "Diphenhydramine",
+          "target": "Buprenorphine",
           "label": "is bound by"
         },
         {
-          "source": "Diphenhydramine",
+          "source": "Buprenorphine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Propofol,Diphenhydramine": [
-          "Agent Affecting Nervous System",
-          "Organic Molecular Entity"
+        "Propofol,Buprenorphine": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_4576"
+      "id": "path_2063"
     },
     {
       "score": {
-        "ic_mean": 0.4768,
-        "final_score": 0.4768
+        "ic_mean": 0.4451,
+        "final_score": 0.4451
       },
       "nodes": [
         {
@@ -437,58 +186,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapagliflozin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Propofol",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Dapagliflozin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapagliflozin",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Propofol,Dapagliflozin": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_4577"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4219,
-        "final_score": 0.4219
-      },
-      "nodes": [
-        {
-          "id": "Propofol",
-          "type": "Compound"
-        },
-        {
-          "id": "Burning In Throat",
+          "id": "Pain During Injection",
           "type": "Side Effect"
         },
         {
-          "id": "Selegiline",
+          "id": "Paliperidone",
           "type": "Compound"
         },
         {
@@ -499,27 +201,216 @@
       "edges": [
         {
           "source": "Propofol",
-          "target": "Burning In Throat",
+          "target": "Pain During Injection",
           "label": "causes"
         },
         {
-          "source": "Burning In Throat",
-          "target": "Selegiline",
+          "source": "Pain During Injection",
+          "target": "Paliperidone",
           "label": "is caused by"
         },
         {
-          "source": "Selegiline",
+          "source": "Paliperidone",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Propofol,Selegiline": [
-          "Organic Molecule"
+        "Propofol,Paliperidone": [
+          "Organic Hydroxy Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_4578"
+      "id": "path_2064"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4253,
+        "final_score": 0.4253
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Nodal Arrhythmia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Nodal Arrhythmia",
+          "label": "causes"
+        },
+        {
+          "source": "Nodal Arrhythmia",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Propafenone": [
+          "Organic Hydroxy Compound"
+        ]
+      },
+      "id": "path_2065"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4131,
+        "final_score": 0.4131
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Respiratory Acidosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Respiratory Acidosis",
+          "label": "causes"
+        },
+        {
+          "source": "Respiratory Acidosis",
+          "target": "Dexmedetomidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Dexmedetomidine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_2066"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4006,
+        "final_score": 0.4006
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Effect Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Drug Effect Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Effect Increased",
+          "target": "Sildenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sildenafil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Sildenafil": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_2067"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3717,
+        "final_score": 0.3717
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Right Ventricular Failure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Right Ventricular Failure",
+          "label": "causes"
+        },
+        {
+          "source": "Right Ventricular Failure",
+          "target": "Sildenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sildenafil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Sildenafil": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_2068"
     }
-  ],
-  "verbalization": ""
+  ]
 }

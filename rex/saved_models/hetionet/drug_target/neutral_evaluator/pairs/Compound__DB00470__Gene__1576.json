@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7563,
-        "final_score": 0.7563
+        "ic_mean": 0.6923,
+        "final_score": 0.6923
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cnr2",
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
-          "id": "Rimonabant",
-          "type": "Compound"
+          "id": "Caffeine Oxidase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,27 +27,21 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cnr2",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cnr2",
-          "target": "Rimonabant",
-          "label": "is bound by"
+          "source": "Cyp2c9",
+          "target": "Caffeine Oxidase Activity",
+          "label": "participates"
         },
         {
-          "source": "Rimonabant",
+          "source": "Caffeine Oxidase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Rimonabant": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_12085"
+      "id": "path_6077"
     },
     {
       "score": {
@@ -95,12 +89,12 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12086"
+      "id": "path_6078"
     },
     {
       "score": {
-        "ic_mean": 0.5663,
-        "final_score": 0.5663
+        "ic_mean": 0.6223,
+        "final_score": 0.6223
       },
       "nodes": [
         {
@@ -108,11 +102,53 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
-          "id": "Norfloxacin",
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6079"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5108,
+        "final_score": 0.5108
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Trabectedin",
           "type": "Compound"
         },
         {
@@ -123,31 +159,31 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp2a6",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Norfloxacin",
+          "source": "Cyp2c9",
+          "target": "Trabectedin",
           "label": "is bound by"
         },
         {
-          "source": "Norfloxacin",
+          "source": "Trabectedin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dronabinol,Norfloxacin": [
-          "Organic Heterocyclic Compound"
+        "Dronabinol,Trabectedin": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_12087"
+      "id": "path_6080"
     },
     {
       "score": {
-        "ic_mean": 0.5663,
-        "final_score": 0.5663
+        "ic_mean": 0.5108,
+        "final_score": 0.5108
       },
       "nodes": [
         {
@@ -155,11 +191,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
-          "id": "Azithromycin",
+          "id": "Fenofibrate",
           "type": "Compound"
         },
         {
@@ -170,31 +206,78 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp2a6",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Azithromycin",
+          "source": "Cyp2c9",
+          "target": "Fenofibrate",
           "label": "is bound by"
         },
         {
-          "source": "Azithromycin",
+          "source": "Fenofibrate",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dronabinol,Azithromycin": [
+        "Dronabinol,Fenofibrate": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6081"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5108,
+        "final_score": 0.5108
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Troleandomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Troleandomycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Troleandomycin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Troleandomycin": [
           "Oxacycle"
         ]
       },
-      "id": "path_12088"
+      "id": "path_6082"
     },
     {
       "score": {
-        "ic_mean": 0.5663,
-        "final_score": 0.5663
+        "ic_mean": 0.5108,
+        "final_score": 0.5108
       },
       "nodes": [
         {
@@ -202,11 +285,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
-          "id": "Nevirapine",
+          "id": "Lopinavir",
           "type": "Compound"
         },
         {
@@ -217,925 +300,26 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp2a6",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Nevirapine",
+          "source": "Cyp2c9",
+          "target": "Lopinavir",
           "label": "is bound by"
         },
         {
-          "source": "Nevirapine",
+          "source": "Lopinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dronabinol,Nevirapine": [
-          "Organic Heterotricyclic Compound"
+        "Dronabinol,Lopinavir": [
+          "Organooxygen Compound"
         ]
       },
-      "id": "path_12089"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5663,
-        "final_score": 0.5663
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Isoniazid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Isoniazid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Isoniazid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Isoniazid": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_12090"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5557,
-        "final_score": 0.5557
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cnr1",
-          "type": "Gene"
-        },
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cnr1",
-          "label": "binds"
-        },
-        {
-          "source": "Cnr1",
-          "target": "Acetaminophen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Acetaminophen",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Acetaminophen": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12091"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5273,
-        "final_score": 0.5273
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ifosfamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Ptgs1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgs1",
-          "target": "Ifosfamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ifosfamide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Ifosfamide": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_12092"
-    },
-    {
-      "score": {
-        "ic_mean": 0.515,
-        "final_score": 0.515
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Methimazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Methimazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methimazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Methimazole": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_12093"
-    },
-    {
-      "score": {
-        "ic_mean": 0.515,
-        "final_score": 0.515
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Ifosfamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Ifosfamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ifosfamide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Ifosfamide": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_12094"
-    },
-    {
-      "score": {
-        "ic_mean": 0.515,
-        "final_score": 0.515
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Tranylcypromine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Tranylcypromine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tranylcypromine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Tranylcypromine": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12095"
-    },
-    {
-      "score": {
-        "ic_mean": 0.515,
-        "final_score": 0.515
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Cisapride",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Cisapride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cisapride",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Cisapride": [
-          "Organic Heterocyclic Compound",
-          "Antiemetic Agent"
-        ]
-      },
-      "id": "path_12096"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5007,
-        "final_score": 0.5007
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcg2",
-          "type": "Gene"
-        },
-        {
-          "id": "Pantoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Abcg2",
-          "label": "binds"
-        },
-        {
-          "source": "Abcg2",
-          "target": "Pantoprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pantoprazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Pantoprazole": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_12097"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4973,
-        "final_score": 0.4973
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Ptgs1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgs1",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Antipyrine": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_12098"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4973,
-        "final_score": 0.4973
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Ptgs1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgs1",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Ketobemidone": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_12099"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4849,
-        "final_score": 0.4849
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Antipyrine": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_12100"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4849,
-        "final_score": 0.4849
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Methoxsalen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Methoxsalen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methoxsalen",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Methoxsalen": [
-          "Organic Heterotricyclic Compound"
-        ]
-      },
-      "id": "path_12101"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4849,
-        "final_score": 0.4849
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Chlorzoxazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Chlorzoxazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Chlorzoxazone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Chlorzoxazone": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_12102"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4849,
-        "final_score": 0.4849
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Montelukast",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Montelukast",
-          "label": "is bound by"
-        },
-        {
-          "source": "Montelukast",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Montelukast": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_12103"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4849,
-        "final_score": 0.4849
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Selegiline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Selegiline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Selegiline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Selegiline": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_12104"
-    },
-    {
-      "score": {
-        "ic_mean": 0.476,
-        "final_score": 0.476
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        },
-        {
-          "id": "Zafirlukast",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Ptgs1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgs1",
-          "target": "Zafirlukast",
-          "label": "is bound by"
-        },
-        {
-          "source": "Zafirlukast",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Zafirlukast": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_12105"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4636,
-        "final_score": 0.4636
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapagliflozin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Dapagliflozin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapagliflozin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Dapagliflozin": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12106"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4636,
-        "final_score": 0.4636
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Prednisolone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Prednisolone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Prednisolone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Prednisolone": [
-          "Organic Polycyclic Compound"
-        ]
-      },
-      "id": "path_12107"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4636,
-        "final_score": 0.4636
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Pentobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Pentobarbital": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_12108"
+      "id": "path_6083"
     },
     {
       "score": {
@@ -1148,11 +332,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ptgs1",
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
-          "id": "Dapsone",
+          "id": "Acenocoumarol",
           "type": "Compound"
         },
         {
@@ -1163,357 +347,31 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Ptgs1",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Ptgs1",
-          "target": "Dapsone",
+          "source": "Cyp2c9",
+          "target": "Acenocoumarol",
           "label": "is bound by"
         },
         {
-          "source": "Dapsone",
+          "source": "Acenocoumarol",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dronabinol,Dapsone": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12109"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4494,
-        "final_score": 0.4494
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcg2",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Abcg2",
-          "label": "binds"
-        },
-        {
-          "source": "Abcg2",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_12110"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4471,
-        "final_score": 0.4471
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Nilvadipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Nilvadipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nilvadipine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Nilvadipine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_12111"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4471,
-        "final_score": 0.4471
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Nicotine": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_12112"
-    },
-    {
-      "score": {
-        "ic_mean": 0.438,
-        "final_score": 0.438
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcg2",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Abcg2",
-          "label": "binds"
-        },
-        {
-          "source": "Abcg2",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Glyburide": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12113"
-    },
-    {
-      "score": {
-        "ic_mean": 0.438,
-        "final_score": 0.438
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcg2",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Abcg2",
-          "label": "binds"
-        },
-        {
-          "source": "Abcg2",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Pravastatin": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12114"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4345,
-        "final_score": 0.4345
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        },
-        {
-          "id": "Nortriptyline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Ptgs1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgs1",
-          "target": "Nortriptyline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nortriptyline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Nortriptyline": [
-          "Agent Affecting Nervous System",
-          "Organic Tricyclic Compound"
-        ]
-      },
-      "id": "path_12115"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4336,
-        "final_score": 0.4336
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Amiodarone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Amiodarone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Amiodarone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Amiodarone": [
+        "Dronabinol,Acenocoumarol": [
           "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_12116"
+      "id": "path_6084"
     },
     {
       "score": {
-        "ic_mean": 0.4336,
-        "final_score": 0.4336
+        "ic_mean": 0.4595,
+        "final_score": 0.4595
       },
       "nodes": [
         {
@@ -1521,11 +379,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
-          "id": "Lidocaine",
+          "id": "Aminophenazone",
           "type": "Compound"
         },
         {
@@ -1536,80 +394,32 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp2a6",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Lidocaine",
+          "source": "Cyp2c9",
+          "target": "Aminophenazone",
           "label": "is bound by"
         },
         {
-          "source": "Lidocaine",
+          "source": "Aminophenazone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dronabinol,Lidocaine": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12117"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4268,
-        "final_score": 0.4268
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Antipyrine": [
+        "Dronabinol,Aminophenazone": [
           "Organic Heterocyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12118"
+      "id": "path_6085"
     },
     {
       "score": {
-        "ic_mean": 0.4268,
-        "final_score": 0.4268
+        "ic_mean": 0.4595,
+        "final_score": 0.4595
       },
       "nodes": [
         {
@@ -1617,7 +427,337 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c19",
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Anastrozole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Anastrozole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Anastrozole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Anastrozole": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6086"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4595,
+        "final_score": 0.4595
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Ifosfamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Ifosfamide": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_6087"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4595,
+        "final_score": 0.4595
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Ticlopidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Ticlopidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ticlopidine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Ticlopidine": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_6088"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4303,
+        "final_score": 0.4303
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Speech Impairment Nos",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Speech Impairment Nos",
+          "label": "causes"
+        },
+        {
+          "source": "Speech Impairment Nos",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Propafenone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_6089"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4294,
+        "final_score": 0.4294
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Colchicine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Colchicine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Colchicine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Colchicine": [
+          "Organic Tricyclic Compound"
+        ]
+      },
+      "id": "path_6090"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4294,
+        "final_score": 0.4294
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Meloxicam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Meloxicam",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Meloxicam": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6091"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4294,
+        "final_score": 0.4294
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Azelastine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Azelastine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Azelastine": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_6092"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4294,
+        "final_score": 0.4294
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
@@ -1632,11 +772,11 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp2c19",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cyp2c19",
+          "source": "Cyp2c9",
           "target": "Diltiazem",
           "label": "is bound by"
         },
@@ -1651,12 +791,12 @@
           "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_12119"
+      "id": "path_6093"
     },
     {
       "score": {
-        "ic_mean": 0.4222,
-        "final_score": 0.4222
+        "ic_mean": 0.4294,
+        "final_score": 0.4294
       },
       "nodes": [
         {
@@ -1664,11 +804,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
-          "id": "Methoxyflurane",
+          "id": "Pioglitazone",
           "type": "Compound"
         },
         {
@@ -1679,32 +819,31 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp2a6",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Methoxyflurane",
+          "source": "Cyp2c9",
+          "target": "Pioglitazone",
           "label": "is bound by"
         },
         {
-          "source": "Methoxyflurane",
+          "source": "Pioglitazone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dronabinol,Methoxyflurane": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
+        "Dronabinol,Pioglitazone": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_12120"
+      "id": "path_6094"
     },
     {
       "score": {
-        "ic_mean": 0.4222,
-        "final_score": 0.4222
+        "ic_mean": 0.4291,
+        "final_score": 0.4291
       },
       "nodes": [
         {
@@ -1712,11 +851,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
-          "type": "Gene"
+          "id": "Speech Impairment Nos",
+          "type": "Side Effect"
         },
         {
-          "id": "Sevoflurane",
+          "id": "Mexiletine",
           "type": "Compound"
         },
         {
@@ -1727,74 +866,26 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
+          "target": "Speech Impairment Nos",
+          "label": "causes"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Sevoflurane",
-          "label": "is bound by"
+          "source": "Speech Impairment Nos",
+          "target": "Mexiletine",
+          "label": "is caused by"
         },
         {
-          "source": "Sevoflurane",
+          "source": "Mexiletine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dronabinol,Sevoflurane": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
+        "Dronabinol,Mexiletine": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_12121"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4194,
-        "final_score": 0.4194
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcg2",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Abcg2",
-          "label": "binds"
-        },
-        {
-          "source": "Abcg2",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Erlotinib": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_12122"
+      "id": "path_6095"
     },
     {
       "score": {
@@ -1838,64 +929,16 @@
       ],
       "lowest_common_ancestors": {
         "Dronabinol,Oxybutynin": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_12123"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4055,
-        "final_score": 0.4055
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        },
-        {
-          "id": "Temazepam",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2c19",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c19",
-          "target": "Temazepam",
-          "label": "is bound by"
-        },
-        {
-          "source": "Temazepam",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Temazepam": [
-          "Organic Heteropolycyclic Compound",
+          "Organic Molecule",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12124"
+      "id": "path_6096"
     },
     {
       "score": {
-        "ic_mean": 0.4035,
-        "final_score": 0.4035
+        "ic_mean": 0.4081,
+        "final_score": 0.4081
       },
       "nodes": [
         {
@@ -1903,11 +946,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp1a1",
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
-          "id": "Erlotinib",
+          "id": "Histamine Phosphate",
           "type": "Compound"
         },
         {
@@ -1918,31 +961,31 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp1a1",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cyp1a1",
-          "target": "Erlotinib",
+          "source": "Cyp2c9",
+          "target": "Histamine Phosphate",
           "label": "is bound by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Histamine Phosphate",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dronabinol,Erlotinib": [
-          "Organic Heteropolycyclic Compound"
+        "Dronabinol,Histamine Phosphate": [
+          "P-Block Molecular Entity"
         ]
       },
-      "id": "path_12125"
+      "id": "path_6097"
     },
     {
       "score": {
-        "ic_mean": 0.4035,
-        "final_score": 0.4035
+        "ic_mean": 0.4081,
+        "final_score": 0.4081
       },
       "nodes": [
         {
@@ -1950,7 +993,286 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Sulfamethoxazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Sulfamethoxazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Sulfamethoxazole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Sulfamethoxazole": [
+          "Oxacycle"
+        ]
+      },
+      "id": "path_6098"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3916,
+        "final_score": 0.3916
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Donepezil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Donepezil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Donepezil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "id": "path_6099"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3916,
+        "final_score": 0.3916
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Fluvastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Fluvastatin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_6100"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3781,
+        "final_score": 0.3781
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Lidocaine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Lidocaine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6101"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3667,
+        "final_score": 0.3667
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Felodipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Felodipine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6102"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3667,
+        "final_score": 0.3667
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Nortriptyline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nortriptyline",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Nortriptyline": [
+          "Organic Tricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6103"
+    },
+    {
+      "score": {
+        "ic_mean": 0.348,
+        "final_score": 0.348
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
           "type": "Gene"
         },
         {
@@ -1965,11 +1287,11 @@
       "edges": [
         {
           "source": "Dronabinol",
-          "target": "Cyp2a6",
+          "target": "Cyp2c9",
           "label": "binds"
         },
         {
-          "source": "Cyp2a6",
+          "source": "Cyp2c9",
           "target": "Nifedipine",
           "label": "is bound by"
         },
@@ -1984,152 +1306,7 @@
           "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_12126"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4011,
-        "final_score": 0.4011
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        },
-        {
-          "id": "Carvedilol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Ptgs1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgs1",
-          "target": "Carvedilol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Carvedilol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Carvedilol": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
-        ]
-      },
-      "id": "path_12127"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3957,
-        "final_score": 0.3957
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Phenobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Phenobarbital": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_12128"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3498,
-        "final_score": 0.3498
-      },
-      "nodes": [
-        {
-          "id": "Dronabinol",
-          "type": "Compound"
-        },
-        {
-          "id": "Drug Ineffective",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dronabinol",
-          "target": "Drug Ineffective",
-          "label": "causes"
-        },
-        {
-          "source": "Drug Ineffective",
-          "target": "Diclofenac",
-          "label": "is caused by"
-        },
-        {
-          "source": "Diclofenac",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dronabinol,Diclofenac": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12129"
+      "id": "path_6104"
     }
-  ],
-  "verbalization": ""
+  ]
 }

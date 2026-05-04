@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7103,
-        "final_score": 0.7103
+        "ic_mean": 0.6639,
+        "final_score": 0.6639
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -32,11 +32,11 @@
         },
         {
           "source": "Phenothiazines",
-          "target": "Mesoridazine",
+          "target": "Chlorpromazine",
           "label": "includes"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Chlorpromazine",
           "target": "Htr2a",
           "label": "binds"
         }
@@ -45,20 +45,20 @@
         "Promethazine,Phenothiazines": [
           "Phenothiazines"
         ],
-        "Promethazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
+        "Promethazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ],
-        "Phenothiazines,Mesoridazine": [
+        "Phenothiazines,Chlorpromazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_741"
+      "id": "path_361"
     },
     {
       "score": {
-        "ic_mean": 0.6697,
-        "final_score": 0.6697
+        "ic_mean": 0.6075,
+        "final_score": 0.6075
       },
       "nodes": [
         {
@@ -66,11 +66,11 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
+          "id": "Hrh4",
+          "type": "Gene"
         },
         {
-          "id": "Fluphenazine",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -81,88 +81,27 @@
       "edges": [
         {
           "source": "Promethazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
+          "target": "Hrh4",
+          "label": "binds"
         },
         {
-          "source": "Phenothiazines",
-          "target": "Fluphenazine",
-          "label": "includes"
+          "source": "Hrh4",
+          "target": "Chlorpromazine",
+          "label": "is bound by"
         },
         {
-          "source": "Fluphenazine",
+          "source": "Chlorpromazine",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Promethazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
-        "Promethazine,Fluphenazine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ],
-        "Phenothiazines,Fluphenazine": [
-          "Phenothiazines"
+        "Promethazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_742"
-    },
-    {
-      "score": {
-        "ic_mean": 0.659,
-        "final_score": 0.659
-      },
-      "nodes": [
-        {
-          "id": "Promethazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Trifluoperazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Promethazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
-        },
-        {
-          "source": "Phenothiazines",
-          "target": "Trifluoperazine",
-          "label": "includes"
-        },
-        {
-          "source": "Trifluoperazine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Promethazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
-        "Promethazine,Trifluoperazine": [
-          "Phenothiazine",
-          "Tertiary Amino Compound"
-        ],
-        "Phenothiazines,Trifluoperazine": [
-          "Phenothiazines"
-        ]
-      },
-      "id": "path_743"
+      "id": "path_362"
     }
-  ],
-  "verbalization": ""
+  ]
 }

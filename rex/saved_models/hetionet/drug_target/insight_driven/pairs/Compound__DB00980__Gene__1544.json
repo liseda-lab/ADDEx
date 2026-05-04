@@ -1,0 +1,139 @@
+{
+  "id": "Compound::DB00980 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6883,
+        "final_score": 0.6775,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Ramelteon",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramelteon",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7350"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6835,
+        "final_score": 0.6751,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Ramelteon",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Lidocaine Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramelteon",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Lidocaine Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Lidocaine Metabolism",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7351"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5681,
+        "final_score": 0.4507,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Ramelteon",
+          "type": "Compound"
+        },
+        {
+          "id": "Insomnia Exacerbated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramelteon",
+          "target": "Insomnia Exacerbated",
+          "label": "causes"
+        },
+        {
+          "source": "Insomnia Exacerbated",
+          "target": "Zolpidem",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zolpidem",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ramelteon,Zolpidem": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7352"
+    }
+  ]
+}

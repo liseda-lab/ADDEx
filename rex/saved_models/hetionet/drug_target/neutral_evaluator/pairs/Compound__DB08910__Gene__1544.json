@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6168,
-        "final_score": 0.6168
+        "ic_mean": 0.4541,
+        "final_score": 0.4541
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Crbn",
+          "id": "Abcb1",
           "type": "Gene"
         },
         {
-          "id": "Thalidomide",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,125 @@
       "edges": [
         {
           "source": "Pomalidomide",
-          "target": "Crbn",
+          "target": "Abcb1",
           "label": "binds"
         },
         {
-          "source": "Crbn",
-          "target": "Thalidomide",
+          "source": "Abcb1",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Thalidomide",
+          "source": "Ranitidine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pomalidomide,Thalidomide": [
-          "Indole Compound",
-          "Isoindoles"
+        "Pomalidomide,Ranitidine": [
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_25772"
+      "id": "path_13060"
     },
     {
       "score": {
-        "ic_mean": 0.4676,
-        "final_score": 0.4676
+        "ic_mean": 0.428,
+        "final_score": 0.428
+      },
+      "nodes": [
+        {
+          "id": "Pomalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutrophil Count Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rifabutin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pomalidomide",
+          "target": "Neutrophil Count Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Neutrophil Count Decreased",
+          "target": "Rifabutin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rifabutin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pomalidomide,Rifabutin": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_13061"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4201,
+        "final_score": 0.4201
+      },
+      "nodes": [
+        {
+          "id": "Pomalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Sepsis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pomalidomide",
+          "target": "Neutropenic Sepsis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Sepsis",
+          "target": "Aprepitant",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aprepitant",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pomalidomide,Aprepitant": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13062"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4162,
+        "final_score": 0.4162
       },
       "nodes": [
         {
@@ -64,7 +157,7 @@
           "type": "Gene"
         },
         {
-          "id": "Norfloxacin",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -80,26 +173,26 @@
         },
         {
           "source": "Cyp3a4",
-          "target": "Norfloxacin",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Norfloxacin",
+          "source": "Ranitidine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pomalidomide,Norfloxacin": [
-          "Aromatic Amine"
+        "Pomalidomide,Ranitidine": [
+          "Organic Heteromonocyclic Compound"
         ]
       },
-      "id": "path_25773"
+      "id": "path_13063"
     },
     {
       "score": {
-        "ic_mean": 0.4154,
-        "final_score": 0.4154
+        "ic_mean": 0.377,
+        "final_score": 0.377
       },
       "nodes": [
         {
@@ -107,11 +200,11 @@
           "type": "Compound"
         },
         {
-          "id": "Thromboembolic Event",
+          "id": "Bronchopneumonia",
           "type": "Side Effect"
         },
         {
-          "id": "Anastrozole",
+          "id": "Conjugated Estrogens",
           "type": "Compound"
         },
         {
@@ -122,32 +215,26 @@
       "edges": [
         {
           "source": "Pomalidomide",
-          "target": "Thromboembolic Event",
+          "target": "Bronchopneumonia",
           "label": "causes"
         },
         {
-          "source": "Thromboembolic Event",
-          "target": "Anastrozole",
+          "source": "Bronchopneumonia",
+          "target": "Conjugated Estrogens",
           "label": "is caused by"
         },
         {
-          "source": "Anastrozole",
+          "source": "Conjugated Estrogens",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
-      "lowest_common_ancestors": {
-        "Pomalidomide,Anastrozole": [
-          "Organonitrogen Heterocyclic Compound",
-          "Antineoplastic Agent"
-        ]
-      },
-      "id": "path_25774"
+      "id": "path_13064"
     },
     {
       "score": {
-        "ic_mean": 0.4105,
-        "final_score": 0.4105
+        "ic_mean": 0.3507,
+        "final_score": 0.3507
       },
       "nodes": [
         {
@@ -155,11 +242,11 @@
           "type": "Compound"
         },
         {
-          "id": "Teratogenicity",
+          "id": "Neutrophil Count Decreased",
           "type": "Side Effect"
         },
         {
-          "id": "Imiquimod",
+          "id": "Doxepin",
           "type": "Compound"
         },
         {
@@ -170,28 +257,26 @@
       "edges": [
         {
           "source": "Pomalidomide",
-          "target": "Teratogenicity",
+          "target": "Neutrophil Count Decreased",
           "label": "causes"
         },
         {
-          "source": "Teratogenicity",
-          "target": "Imiquimod",
+          "source": "Neutrophil Count Decreased",
+          "target": "Doxepin",
           "label": "is caused by"
         },
         {
-          "source": "Imiquimod",
+          "source": "Doxepin",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pomalidomide,Imiquimod": [
-          "Organic Heteropolycyclic Compound",
-          "Antineoplastic Immunomodulating Agent"
+        "Pomalidomide,Doxepin": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_25775"
+      "id": "path_13065"
     }
-  ],
-  "verbalization": ""
+  ]
 }

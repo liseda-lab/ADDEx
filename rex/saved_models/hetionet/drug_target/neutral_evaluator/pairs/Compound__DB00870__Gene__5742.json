@@ -16,7 +16,7 @@
           "type": "Gene"
         },
         {
-          "id": "Flurbiprofen",
+          "id": "Naproxen",
           "type": "Compound"
         },
         {
@@ -32,27 +32,27 @@
         },
         {
           "source": "Ugt2b7",
-          "target": "Flurbiprofen",
+          "target": "Naproxen",
           "label": "is bound by"
         },
         {
-          "source": "Flurbiprofen",
+          "source": "Naproxen",
           "target": "Ptgs1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Suprofen,Flurbiprofen": [
+        "Suprofen,Naproxen": [
           "Monocarboxylic Acid",
           "Nonsteroidal Antiinflammatory Drug"
         ]
       },
-      "id": "path_17861"
+      "id": "path_8981"
     },
     {
       "score": {
-        "ic_mean": 0.513,
-        "final_score": 0.513
+        "ic_mean": 0.4989,
+        "final_score": 0.4989
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Bleeding Tendency",
+          "id": "Conjunctival Oedema",
           "type": "Side Effect"
         },
         {
-          "id": "Flurbiprofen",
+          "id": "Nepafenac",
           "type": "Compound"
         },
         {
@@ -75,28 +75,139 @@
       "edges": [
         {
           "source": "Suprofen",
-          "target": "Bleeding Tendency",
+          "target": "Conjunctival Oedema",
           "label": "causes"
         },
         {
-          "source": "Bleeding Tendency",
-          "target": "Flurbiprofen",
+          "source": "Conjunctival Oedema",
+          "target": "Nepafenac",
           "label": "is caused by"
         },
         {
-          "source": "Flurbiprofen",
+          "source": "Nepafenac",
           "target": "Ptgs1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Suprofen,Flurbiprofen": [
-          "Monocarboxylic Acid",
+        "Suprofen,Nepafenac": [
+          "Organooxygen Compound",
           "Nonsteroidal Antiinflammatory Drug"
         ]
       },
-      "id": "path_17862"
+      "id": "path_8982"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4804,
+        "final_score": 0.4804
+      },
+      "nodes": [
+        {
+          "id": "Suprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Bromfenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Suprofen",
+          "target": "Bromfenac",
+          "label": "resembles"
+        },
+        {
+          "source": "Bromfenac",
+          "target": "Balsalazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Balsalazide",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Suprofen,Bromfenac": [
+          "Carboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Suprofen,Balsalazide": [
+          "Carboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Bromfenac,Balsalazide": [
+          "Carboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_8983"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4435,
+        "final_score": 0.4435
+      },
+      "nodes": [
+        {
+          "id": "Suprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Bromfenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Nepafenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Suprofen",
+          "target": "Bromfenac",
+          "label": "resembles"
+        },
+        {
+          "source": "Bromfenac",
+          "target": "Nepafenac",
+          "label": "resembles"
+        },
+        {
+          "source": "Nepafenac",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Suprofen,Bromfenac": [
+          "Carboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Suprofen,Nepafenac": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Bromfenac,Nepafenac": [
+          "Organonitrogen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_8984"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6856,
-        "final_score": 0.6856
+        "ic_mean": 0.6148,
+        "final_score": 0.6148
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Aoc3",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Hydralazine",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,31 +27,26 @@
       "edges": [
         {
           "source": "Phenelzine",
-          "target": "Aoc3",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Aoc3",
-          "target": "Hydralazine",
-          "label": "is bound by"
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Hydralazine",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Hydralazine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25584"
+      "id": "path_13001"
     },
     {
       "score": {
-        "ic_mean": 0.6643,
-        "final_score": 0.6643
+        "ic_mean": 0.6148,
+        "final_score": 0.6148
       },
       "nodes": [
         {
@@ -59,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Ethosuximide",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -74,32 +69,26 @@
       "edges": [
         {
           "source": "Phenelzine",
-          "target": "Cyp3a43",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Ethosuximide",
-          "label": "is bound by"
+          "source": "Cyp3a7",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
         },
         {
-          "source": "Ethosuximide",
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Ethosuximide": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25585"
+      "id": "path_13002"
     },
     {
       "score": {
-        "ic_mean": 0.6643,
-        "final_score": 0.6643
+        "ic_mean": 0.3901,
+        "final_score": 0.3901
       },
       "nodes": [
         {
@@ -107,11 +96,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Troleandomycin",
+          "id": "Indinavir",
           "type": "Compound"
         },
         {
@@ -122,31 +111,175 @@
       "edges": [
         {
           "source": "Phenelzine",
-          "target": "Cyp3a43",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Troleandomycin",
+          "source": "Cyp3a7",
+          "target": "Indinavir",
           "label": "is bound by"
         },
         {
-          "source": "Troleandomycin",
+          "source": "Indinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phenelzine,Troleandomycin": [
+        "Phenelzine,Indinavir": [
+          "Enzyme Inhibitor",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_13003"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3901,
+        "final_score": 0.3901
+      },
+      "nodes": [
+        {
+          "id": "Phenelzine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenelzine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Imipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Imipramine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenelzine,Imipramine": [
+          "Organonitrogen Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_13004"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3844,
+        "final_score": 0.3844
+      },
+      "nodes": [
+        {
+          "id": "Phenelzine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Nelfinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenelzine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Nelfinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nelfinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenelzine,Nelfinavir": [
+          "Enzyme Inhibitor",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_13005"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3709,
+        "final_score": 0.3709
+      },
+      "nodes": [
+        {
+          "id": "Phenelzine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenelzine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Progesterone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenelzine,Progesterone": [
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_25586"
+      "id": "path_13006"
     },
     {
       "score": {
-        "ic_mean": 0.6209,
-        "final_score": 0.6209
+        "ic_mean": 0.3679,
+        "final_score": 0.3679
       },
       "nodes": [
         {
@@ -154,95 +287,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxidation By Cytochrome P450",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Oxidation By Cytochrome P450",
-          "label": "participates"
-        },
-        {
-          "source": "Oxidation By Cytochrome P450",
-          "target": "Cyp3a4",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_25587"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6084,
-        "final_score": 0.6084
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
+          "id": "Amfecloral",
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Phase 1 - Functionalization Of Compounds",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Phase 1 - Functionalization Of Compounds",
-          "label": "participates"
-        },
-        {
-          "source": "Phase 1 - Functionalization Of Compounds",
-          "target": "Cyp3a4",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_25588"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5829,
-        "final_score": 0.5829
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Praziquantel",
+          "id": "Benzyl Alcohol",
           "type": "Compound"
         },
         {
@@ -253,31 +302,37 @@
       "edges": [
         {
           "source": "Phenelzine",
-          "target": "Cyp3a43",
-          "label": "binds"
+          "target": "Amfecloral",
+          "label": "resembles"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Praziquantel",
-          "label": "is bound by"
+          "source": "Amfecloral",
+          "target": "Benzyl Alcohol",
+          "label": "resembles"
         },
         {
-          "source": "Praziquantel",
+          "source": "Benzyl Alcohol",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phenelzine,Praziquantel": [
-          "Organonitrogen Compound"
+        "Phenelzine,Amfecloral": [
+          "Amine"
+        ],
+        "Phenelzine,Benzyl Alcohol": [
+          "Organic Molecular Entity"
+        ],
+        "Amfecloral,Benzyl Alcohol": [
+          "Organic Molecular Entity"
         ]
       },
-      "id": "path_25589"
+      "id": "path_13007"
     },
     {
       "score": {
-        "ic_mean": 0.5829,
-        "final_score": 0.5829
+        "ic_mean": 0.3496,
+        "final_score": 0.3496
       },
       "nodes": [
         {
@@ -285,8 +340,56 @@
           "type": "Compound"
         },
         {
-          "id": "Maob",
+          "id": "Cyp3a7-cyp3a51p",
           "type": "Gene"
+        },
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenelzine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Ketoconazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenelzine,Ketoconazole": [
+          "Enzyme Inhibitor",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_13008"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3489,
+        "final_score": 0.3489
+      },
+      "nodes": [
+        {
+          "id": "Phenelzine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenol",
+          "type": "Compound"
         },
         {
           "id": "Tranylcypromine",
@@ -300,13 +403,13 @@
       "edges": [
         {
           "source": "Phenelzine",
-          "target": "Maob",
-          "label": "binds"
+          "target": "Phenol",
+          "label": "resembles"
         },
         {
-          "source": "Maob",
+          "source": "Phenol",
           "target": "Tranylcypromine",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Tranylcypromine",
@@ -315,17 +418,23 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Phenelzine,Phenol": [
+          "Organic Molecular Entity"
+        ],
         "Phenelzine,Tranylcypromine": [
-          "Monoamine Oxidase Inhibitor",
-          "Primary Amine"
+          "Primary Amine",
+          "Monoamine Oxidase Inhibitor"
+        ],
+        "Phenol,Tranylcypromine": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_25590"
+      "id": "path_13009"
     },
     {
       "score": {
-        "ic_mean": 0.5616,
-        "final_score": 0.5616
+        "ic_mean": 0.3408,
+        "final_score": 0.3408
       },
       "nodes": [
         {
@@ -333,11 +442,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
+          "id": "Cyp3a7-cyp3a51p",
           "type": "Gene"
         },
         {
-          "id": "Rifapentine",
+          "id": "Nifedipine",
           "type": "Compound"
         },
         {
@@ -348,505 +457,26 @@
       "edges": [
         {
           "source": "Phenelzine",
-          "target": "Cyp3a43",
+          "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Rifapentine",
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Nifedipine",
           "label": "is bound by"
         },
         {
-          "source": "Rifapentine",
+          "source": "Nifedipine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phenelzine,Rifapentine": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_25591"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5616,
-        "final_score": 0.5616
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Zalcitabine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Zalcitabine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Zalcitabine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Zalcitabine": [
+        "Phenelzine,Nifedipine": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25592"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5529,
-        "final_score": 0.5529
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Maob",
-          "type": "Gene"
-        },
-        {
-          "id": "Sertraline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Maob",
-          "label": "binds"
-        },
-        {
-          "source": "Maob",
-          "target": "Sertraline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sertraline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Sertraline": [
-          "Organic Amino Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_25593"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5529,
-        "final_score": 0.5529
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Maob",
-          "type": "Gene"
-        },
-        {
-          "id": "Selegiline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Maob",
-          "label": "binds"
-        },
-        {
-          "source": "Maob",
-          "target": "Selegiline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Selegiline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Selegiline": [
-          "Monoamine Oxidase Inhibitor",
-          "Amine"
-        ]
-      },
-      "id": "path_25594"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5451,
-        "final_score": 0.5451
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Testosterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Testosterone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Testosterone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Testosterone": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_25595"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5451,
-        "final_score": 0.5451
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxazepam",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Oxazepam",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxazepam",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Oxazepam": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_25596"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5315,
-        "final_score": 0.5315
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Rifampicin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Rifampicin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rifampicin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Rifampicin": [
-          "Enzyme Inhibitor",
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_25597"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5201,
-        "final_score": 0.5201
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a43",
-          "type": "Gene"
-        },
-        {
-          "id": "Dexamethasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Cyp3a43",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a43",
-          "target": "Dexamethasone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dexamethasone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Dexamethasone": [
-          "Heteroorganic Entity",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_25598"
-    },
-    {
-      "score": {
-        "ic_mean": 0.515,
-        "final_score": 0.515
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Maob",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Maob",
-          "label": "binds"
-        },
-        {
-          "source": "Maob",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Nicotine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_25599"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4928,
-        "final_score": 0.4928
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Delirium Toxic",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Selegiline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Delirium Toxic",
-          "label": "causes"
-        },
-        {
-          "source": "Delirium Toxic",
-          "target": "Selegiline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Selegiline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Selegiline": [
-          "Monoamine Oxidase Inhibitor",
-          "Amine"
-        ]
-      },
-      "id": "path_25600"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4766,
-        "final_score": 0.4766
-      },
-      "nodes": [
-        {
-          "id": "Phenelzine",
-          "type": "Compound"
-        },
-        {
-          "id": "Repetitive Speech",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Topiramate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Phenelzine",
-          "target": "Repetitive Speech",
-          "label": "causes"
-        },
-        {
-          "source": "Repetitive Speech",
-          "target": "Topiramate",
-          "label": "is caused by"
-        },
-        {
-          "source": "Topiramate",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Phenelzine,Topiramate": [
-          "Heteroorganic Entity",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_25601"
+      "id": "path_13010"
     }
-  ],
-  "verbalization": ""
+  ]
 }

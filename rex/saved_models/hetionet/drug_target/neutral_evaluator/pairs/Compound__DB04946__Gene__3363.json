@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB04946 - Gene::3363",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6221,
+        "final_score": 0.6221
+      },
+      "nodes": [
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Methysergide",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Iloperidone",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Methysergide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methysergide",
+          "target": "Htr7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Iloperidone,Methysergide": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10619"
+    }
+  ]
 }

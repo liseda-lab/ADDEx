@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB00740 - Gene::1543",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4851,
+        "final_score": 0.4851
+      },
+      "nodes": [
+        {
+          "id": "Riluzole",
+          "type": "Compound"
+        },
+        {
+          "id": "Exomphalos",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Riluzole",
+          "target": "Exomphalos",
+          "label": "causes"
+        },
+        {
+          "source": "Exomphalos",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Riluzole,Clomifene": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_4806"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4425,
+        "final_score": 0.4425
+      },
+      "nodes": [
+        {
+          "id": "Riluzole",
+          "type": "Compound"
+        },
+        {
+          "id": "Congenital Central Nervous System Anomaly",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Riluzole",
+          "target": "Congenital Central Nervous System Anomaly",
+          "label": "causes"
+        },
+        {
+          "source": "Congenital Central Nervous System Anomaly",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Riluzole,Clomifene": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_4807"
+    }
+  ]
 }

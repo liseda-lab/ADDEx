@@ -1,0 +1,146 @@
+{
+  "id": "Compound::DB01017 - Gene::9376",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7586,
+        "final_score": 0.7959,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Minocycline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Organic Anion Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minocycline",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Organic Anion Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Organic Anion Transport",
+          "target": "Slc22a8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9642"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7369,
+        "final_score": 0.7851,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Minocycline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Organic Anion Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minocycline",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Organic Anion Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Organic Anion Transport",
+          "target": "Slc22a8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9643"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8294,
+        "final_score": 0.748,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Minocycline",
+          "type": "Compound"
+        },
+        {
+          "id": "Tetracyclines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Doxycycline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minocycline",
+          "target": "Tetracyclines",
+          "label": "is included in"
+        },
+        {
+          "source": "Tetracyclines",
+          "target": "Doxycycline",
+          "label": "includes"
+        },
+        {
+          "source": "Doxycycline",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minocycline,Tetracyclines": [
+          "Tetracyclines"
+        ],
+        "Minocycline,Doxycycline": [
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
+        ],
+        "Tetracyclines,Doxycycline": [
+          "Tetracyclines"
+        ]
+      },
+      "id": "path_9644"
+    }
+  ]
+}

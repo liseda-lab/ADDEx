@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6721,
-        "final_score": 0.6721
+        "ic_mean": 0.6743,
+        "final_score": 0.6743
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Metipranolol",
-          "type": "Compound"
+          "id": "Beta-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adrb2",
@@ -32,26 +32,21 @@
         },
         {
           "source": "Adrb1",
-          "target": "Metipranolol",
-          "label": "is bound by"
+          "target": "Beta-adrenergic Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Metipranolol",
+          "source": "Beta-adrenergic Receptor Activity",
           "target": "Adrb2",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Asenapine,Metipranolol": [
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_17857"
+      "id": "path_8976"
     },
     {
       "score": {
-        "ic_mean": 0.6207,
-        "final_score": 0.6207
+        "ic_mean": 0.6713,
+        "final_score": 0.6713
       },
       "nodes": [
         {
@@ -59,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Adrb1",
+          "id": "Adra2b",
           "type": "Gene"
         },
         {
-          "id": "Pirbuterol",
-          "type": "Compound"
+          "id": "Epinephrine Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adrb2",
@@ -74,73 +69,21 @@
       "edges": [
         {
           "source": "Asenapine",
-          "target": "Adrb1",
+          "target": "Adra2b",
           "label": "binds"
         },
         {
-          "source": "Adrb1",
-          "target": "Pirbuterol",
-          "label": "is bound by"
+          "source": "Adra2b",
+          "target": "Epinephrine Binding",
+          "label": "participates"
         },
         {
-          "source": "Pirbuterol",
+          "source": "Epinephrine Binding",
           "target": "Adrb2",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Asenapine,Pirbuterol": [
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_17858"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6207,
-        "final_score": 0.6207
-      },
-      "nodes": [
-        {
-          "id": "Asenapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        },
-        {
-          "id": "Penbutolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Asenapine",
-          "target": "Adrb1",
-          "label": "binds"
-        },
-        {
-          "source": "Adrb1",
-          "target": "Penbutolol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Penbutolol",
-          "target": "Adrb2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Asenapine,Penbutolol": [
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_17859"
+      "id": "path_8977"
     },
     {
       "score": {
@@ -153,11 +96,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1b",
+          "id": "Adra2b",
           "type": "Gene"
         },
         {
-          "id": "Penbutolol",
+          "id": "Dipivefrin",
           "type": "Compound"
         },
         {
@@ -168,27 +111,115 @@
       "edges": [
         {
           "source": "Asenapine",
-          "target": "Htr1b",
+          "target": "Adra2b",
           "label": "binds"
         },
         {
-          "source": "Htr1b",
-          "target": "Penbutolol",
+          "source": "Adra2b",
+          "target": "Dipivefrin",
           "label": "is bound by"
         },
         {
-          "source": "Penbutolol",
+          "source": "Dipivefrin",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_8978"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5694,
+        "final_score": 0.5694
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Alprenolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Adrb1",
+          "label": "binds"
+        },
+        {
+          "source": "Adrb1",
+          "target": "Alprenolol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Alprenolol",
           "target": "Adrb2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Asenapine,Penbutolol": [
+        "Asenapine,Alprenolol": [
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_17860"
+      "id": "path_8979"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5426,
+        "final_score": 0.5426
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Schizophrenia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxprenolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Schizophrenia",
+          "label": "causes"
+        },
+        {
+          "source": "Schizophrenia",
+          "target": "Oxprenolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxprenolol",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asenapine,Oxprenolol": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8980"
     }
-  ],
-  "verbalization": ""
+  ]
 }

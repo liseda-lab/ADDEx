@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5663,
-        "final_score": 0.5663
+        "ic_mean": 0.7223,
+        "final_score": 0.7223
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1d",
+          "id": "Adra2b",
           "type": "Gene"
         },
         {
-          "id": "Phentolamine",
+          "id": "Alpha2-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Alpha2-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha2-adrenergic Receptor Activity",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14592"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6872,
+        "final_score": 0.6872
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Norepinephrine",
           "type": "Compound"
         },
         {
@@ -27,27 +69,210 @@
       "edges": [
         {
           "source": "Epinephrine",
-          "target": "Adra1d",
-          "label": "binds"
+          "target": "Catecholamines",
+          "label": "is included in"
         },
         {
-          "source": "Adra1d",
-          "target": "Phentolamine",
-          "label": "is bound by"
+          "source": "Catecholamines",
+          "target": "Norepinephrine",
+          "label": "includes"
         },
         {
-          "source": "Phentolamine",
+          "source": "Norepinephrine",
           "target": "Adra2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Epinephrine,Phentolamine": [
-          "Phenols"
+        "Epinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Epinephrine,Norepinephrine": [
+          "Catecholamine"
+        ],
+        "Catecholamines,Norepinephrine": [
+          "Catecholamine"
         ]
       },
-      "id": "path_28417"
+      "id": "path_14593"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6836,
+        "final_score": 0.6836
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14594"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6836,
+        "final_score": 0.6836
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Epinephrine Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Epinephrine Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Epinephrine Binding",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14595"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6023,
+        "final_score": 0.6023
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Dipivefrin",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Dipivefrin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dipivefrin",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Dipivefrin": [
+          "Organic Hydroxy Compound"
+        ]
+      },
+      "id": "path_14596"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5296,
+        "final_score": 0.5296
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Norepinephrine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Norepinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_14597"
     }
-  ],
-  "verbalization": ""
+  ]
 }

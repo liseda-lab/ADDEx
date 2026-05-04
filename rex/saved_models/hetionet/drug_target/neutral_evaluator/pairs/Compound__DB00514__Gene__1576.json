@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6285,
-        "final_score": 0.6285
+        "ic_mean": 0.5984,
+        "final_score": 0.5984
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Chrna4",
+          "id": "Cyp2b6",
           "type": "Gene"
         },
         {
-          "id": "Galantamine",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,31 +27,26 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Chrna4",
+          "target": "Cyp2b6",
           "label": "binds"
         },
         {
-          "source": "Chrna4",
-          "target": "Galantamine",
-          "label": "is bound by"
+          "source": "Cyp2b6",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
         },
         {
-          "source": "Galantamine",
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Galantamine": [
-          "Organic Heterotetracyclic Compound"
-        ]
-      },
-      "id": "path_7414"
+      "id": "path_3494"
     },
     {
       "score": {
-        "ic_mean": 0.6072,
-        "final_score": 0.6072
+        "ic_mean": 0.5093,
+        "final_score": 0.5093
       },
       "nodes": [
         {
@@ -59,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrnb4",
+          "id": "Chrfam7a",
           "type": "Gene"
         },
         {
-          "id": "Levomethadyl Acetate",
+          "id": "Phenobarbital",
           "type": "Compound"
         },
         {
@@ -74,32 +69,229 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Chrnb4",
+          "target": "Chrfam7a",
           "label": "binds"
         },
         {
-          "source": "Chrnb4",
-          "target": "Levomethadyl Acetate",
+          "source": "Chrfam7a",
+          "target": "Phenobarbital",
           "label": "is bound by"
         },
         {
-          "source": "Levomethadyl Acetate",
+          "source": "Phenobarbital",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextromethorphan,Levomethadyl Acetate": [
-          "Agent Affecting Nervous System",
+        "Dextromethorphan,Phenobarbital": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3495"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4645,
+        "final_score": 0.4645
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Levallorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Naloxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Levallorphan",
+          "label": "resembles"
+        },
+        {
+          "source": "Levallorphan",
+          "target": "Naloxone",
+          "label": "resembles"
+        },
+        {
+          "source": "Naloxone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Levallorphan": [
+          "Morphinane Alkaloid",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Naloxone": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Levallorphan,Naloxone": [
+          "Morphinane Alkaloid",
+          "Opiate Antagonist"
+        ]
+      },
+      "id": "path_3496"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4445,
+        "final_score": 0.4445
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Permethrin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Permethrin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Permethrin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Permethrin": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_3497"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4445,
+        "final_score": 0.4445
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Ifosfamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Ifosfamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_3498"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3766,
+        "final_score": 0.3766
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Fluvastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Fluvastatin": [
           "Organooxygen Compound"
         ]
       },
-      "id": "path_7415"
+      "id": "path_3499"
     },
     {
       "score": {
-        "ic_mean": 0.6072,
-        "final_score": 0.6072
+        "ic_mean": 0.3693,
+        "final_score": 0.3693
       },
       "nodes": [
         {
@@ -107,11 +299,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrna4",
-          "type": "Gene"
+          "id": "Mestranol",
+          "type": "Compound"
         },
         {
-          "id": "Thiopental",
+          "id": "Norethindrone",
           "type": "Compound"
         },
         {
@@ -122,32 +314,38 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Chrna4",
-          "label": "binds"
+          "target": "Mestranol",
+          "label": "resembles"
         },
         {
-          "source": "Chrna4",
-          "target": "Thiopental",
-          "label": "is bound by"
+          "source": "Mestranol",
+          "target": "Norethindrone",
+          "label": "resembles"
         },
         {
-          "source": "Thiopental",
+          "source": "Norethindrone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextromethorphan,Thiopental": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+        "Dextromethorphan,Mestranol": [
+          "Aromatic Ether"
+        ],
+        "Dextromethorphan,Norethindrone": [
+          "Organic Cyclic Compound"
+        ],
+        "Mestranol,Norethindrone": [
+          "Therapeutic Steroid Hormone",
+          "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_7416"
+      "id": "path_3500"
     },
     {
       "score": {
-        "ic_mean": 0.6072,
-        "final_score": 0.6072
+        "ic_mean": 0.3631,
+        "final_score": 0.3631
       },
       "nodes": [
         {
@@ -155,11 +353,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrna4",
+          "id": "Cyp2b6",
           "type": "Gene"
         },
         {
-          "id": "Pentobarbital",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -170,605 +368,32 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Chrna4",
+          "target": "Cyp2b6",
           "label": "binds"
         },
         {
-          "source": "Chrna4",
-          "target": "Pentobarbital",
+          "source": "Cyp2b6",
+          "target": "Imipramine",
           "label": "is bound by"
         },
         {
-          "source": "Pentobarbital",
+          "source": "Imipramine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextromethorphan,Pentobarbital": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7417"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5985,
-        "final_score": 0.5985
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrfam7a",
-          "type": "Gene"
-        },
-        {
-          "id": "Galantamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrfam7a",
-          "label": "binds"
-        },
-        {
-          "source": "Chrfam7a",
-          "target": "Galantamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Galantamine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Galantamine": [
-          "Organic Heterotetracyclic Compound"
-        ]
-      },
-      "id": "path_7418"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5907,
-        "final_score": 0.5907
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna4",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrna4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna4",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Nicotine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7419"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5772,
-        "final_score": 0.5772
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrfam7a",
-          "type": "Gene"
-        },
-        {
-          "id": "Thiopental",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrfam7a",
-          "label": "binds"
-        },
-        {
-          "source": "Chrfam7a",
-          "target": "Thiopental",
-          "label": "is bound by"
-        },
-        {
-          "source": "Thiopental",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Thiopental": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7420"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5772,
-        "final_score": 0.5772
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrnb4",
-          "type": "Gene"
-        },
-        {
-          "id": "Galantamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrnb4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrnb4",
-          "target": "Galantamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Galantamine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Galantamine": [
-          "Organic Heterotetracyclic Compound"
-        ]
-      },
-      "id": "path_7421"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5772,
-        "final_score": 0.5772
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrfam7a",
-          "type": "Gene"
-        },
-        {
-          "id": "Pentobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrfam7a",
-          "label": "binds"
-        },
-        {
-          "source": "Chrfam7a",
-          "target": "Pentobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pentobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Pentobarbital": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7422"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5772,
-        "final_score": 0.5772
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna4",
-          "type": "Gene"
-        },
-        {
-          "id": "Hexobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrna4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna4",
-          "target": "Hexobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hexobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Hexobarbital": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7423"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5607,
-        "final_score": 0.5607
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrfam7a",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrfam7a",
-          "label": "binds"
-        },
-        {
-          "source": "Chrfam7a",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Nicotine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7424"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5607,
-        "final_score": 0.5607
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrnb2",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrnb2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrnb2",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Nicotine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7425"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5607,
-        "final_score": 0.5607
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna3",
-          "type": "Gene"
-        },
-        {
-          "id": "Galantamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrna3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna3",
-          "target": "Galantamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Galantamine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Galantamine": [
-          "Organic Heterotetracyclic Compound"
-        ]
-      },
-      "id": "path_7426"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5607,
-        "final_score": 0.5607
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrfam7a",
-          "type": "Gene"
-        },
-        {
-          "id": "Primidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrfam7a",
-          "label": "binds"
-        },
-        {
-          "source": "Chrfam7a",
-          "target": "Primidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Primidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Primidone": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7427"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5559,
-        "final_score": 0.5559
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna7",
-          "type": "Gene"
-        },
-        {
-          "id": "Thiopental",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrna7",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna7",
-          "target": "Thiopental",
-          "label": "is bound by"
-        },
-        {
-          "source": "Thiopental",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Thiopental": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7428"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5471,
-        "final_score": 0.5471
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Hydrocodone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydrocodone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Hydrocodone": [
+        "Dextromethorphan,Imipramine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_7429"
+      "id": "path_3501"
     },
     {
       "score": {
-        "ic_mean": 0.5471,
-        "final_score": 0.5471
+        "ic_mean": 0.3548,
+        "final_score": 0.3548
       },
       "nodes": [
         {
@@ -776,11 +401,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrna2",
-          "type": "Gene"
+          "id": "Dezocine",
+          "type": "Compound"
         },
         {
-          "id": "Galantamine",
+          "id": "Estrone",
           "type": "Compound"
         },
         {
@@ -791,651 +416,34 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Chrna2",
-          "label": "binds"
+          "target": "Dezocine",
+          "label": "resembles"
         },
         {
-          "source": "Chrna2",
-          "target": "Galantamine",
-          "label": "is bound by"
+          "source": "Dezocine",
+          "target": "Estrone",
+          "label": "resembles"
         },
         {
-          "source": "Galantamine",
+          "source": "Estrone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextromethorphan,Galantamine": [
-          "Organic Heterotetracyclic Compound"
-        ]
-      },
-      "id": "path_7430"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5471,
-        "final_score": 0.5471
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrfam7a",
-          "type": "Gene"
-        },
-        {
-          "id": "Hexobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrfam7a",
-          "label": "binds"
-        },
-        {
-          "source": "Chrfam7a",
-          "target": "Hexobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hexobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Hexobarbital": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7431"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5393,
-        "final_score": 0.5393
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrnb4",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrnb4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrnb4",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Nicotine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7432"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5393,
-        "final_score": 0.5393
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna3",
-          "type": "Gene"
-        },
-        {
-          "id": "Bupropion",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrna3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna3",
-          "target": "Bupropion",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bupropion",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Bupropion": [
-          "Agent Affecting Nervous System",
+        "Dextromethorphan,Dezocine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Estrone": [
           "Organic Aromatic Compound"
+        ],
+        "Dezocine,Estrone": [
+          "Organic Chemical",
+          "Phenols"
         ]
       },
-      "id": "path_7433"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5393,
-        "final_score": 0.5393
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna4",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrna4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna4",
-          "target": "Phenobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Phenobarbital": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7434"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5228,
-        "final_score": 0.5228
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna3",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrna3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna3",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Nicotine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7435"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5171,
-        "final_score": 0.5171
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymorphone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Oxymorphone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymorphone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Oxymorphone": [
-          "Agent Affecting Nervous System",
-          "Morphinane Alkaloid"
-        ]
-      },
-      "id": "path_7436"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5171,
-        "final_score": 0.5171
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Ketobemidone": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7437"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5093,
-        "final_score": 0.5093
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna2",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrna2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna2",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Nicotine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7438"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5093,
-        "final_score": 0.5093
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrfam7a",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Chrfam7a",
-          "label": "binds"
-        },
-        {
-          "source": "Chrfam7a",
-          "target": "Phenobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Phenobarbital": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_7439"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5093,
-        "final_score": 0.5093
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Sigmar1",
-          "type": "Gene"
-        },
-        {
-          "id": "Sertraline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Sigmar1",
-          "label": "binds"
-        },
-        {
-          "source": "Sigmar1",
-          "target": "Sertraline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sertraline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Sertraline": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_7440"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5045,
-        "final_score": 0.5045
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Grin3a",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Grin3a",
-          "label": "binds"
-        },
-        {
-          "source": "Grin3a",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Methadone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_7441"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4958,
-        "final_score": 0.4958
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Methadone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_7442"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4532,
-        "final_score": 0.4532
-      },
-      "nodes": [
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Grin3a",
-          "type": "Gene"
-        },
-        {
-          "id": "Orphenadrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dextromethorphan",
-          "target": "Grin3a",
-          "label": "binds"
-        },
-        {
-          "source": "Grin3a",
-          "target": "Orphenadrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Orphenadrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dextromethorphan,Orphenadrine": [
-          "Agent Affecting Nervous System",
-          "Ether"
-        ]
-      },
-      "id": "path_7443"
+      "id": "path_3502"
     }
-  ],
-  "verbalization": ""
+  ]
 }

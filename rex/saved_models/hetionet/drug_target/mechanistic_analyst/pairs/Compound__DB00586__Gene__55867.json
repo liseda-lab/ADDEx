@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00586 - Gene::55867",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4649,
+        "final_score": 0.4649
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Purpuric Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Purpuric Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Purpuric Rash",
+          "target": "Ketoprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ketoprofen",
+          "target": "Slc22a11",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Ketoprofen": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_412"
+    }
+  ]
+}

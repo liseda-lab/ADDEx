@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.8053,
-        "final_score": 0.8053
+        "ic_mean": 0.5927,
+        "final_score": 0.5927
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp27b1",
-          "type": "Gene"
+          "id": "Calcinosis",
+          "type": "Side Effect"
         },
         {
-          "id": "Calcidiol",
+          "id": "Calcitriol",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Ergocalciferol",
-          "target": "Cyp27b1",
-          "label": "binds"
+          "target": "Calcinosis",
+          "label": "causes"
         },
         {
-          "source": "Cyp27b1",
-          "target": "Calcidiol",
-          "label": "is bound by"
+          "source": "Calcinosis",
+          "target": "Calcitriol",
+          "label": "is caused by"
         },
         {
-          "source": "Calcidiol",
+          "source": "Calcitriol",
           "target": "Cyp24a1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ergocalciferol,Calcidiol": [
+        "Ergocalciferol,Calcitriol": [
           "Vitamin D"
         ]
       },
-      "id": "path_4742"
+      "id": "path_2123"
     },
     {
       "score": {
-        "ic_mean": 0.7539,
-        "final_score": 0.7539
+        "ic_mean": 0.5832,
+        "final_score": 0.5832
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Vdr",
-          "type": "Gene"
+          "id": "Hypercalciuria",
+          "type": "Side Effect"
         },
         {
-          "id": "Calcidiol",
+          "id": "Calcitriol",
           "type": "Compound"
         },
         {
@@ -74,31 +74,31 @@
       "edges": [
         {
           "source": "Ergocalciferol",
-          "target": "Vdr",
-          "label": "binds"
+          "target": "Hypercalciuria",
+          "label": "causes"
         },
         {
-          "source": "Vdr",
-          "target": "Calcidiol",
-          "label": "is bound by"
+          "source": "Hypercalciuria",
+          "target": "Calcitriol",
+          "label": "is caused by"
         },
         {
-          "source": "Calcidiol",
+          "source": "Calcitriol",
           "target": "Cyp24a1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ergocalciferol,Calcidiol": [
+        "Ergocalciferol,Calcitriol": [
           "Vitamin D"
         ]
       },
-      "id": "path_4743"
+      "id": "path_2124"
     },
     {
       "score": {
-        "ic_mean": 0.7536,
-        "final_score": 0.7536
+        "ic_mean": 0.5456,
+        "final_score": 0.5456
       },
       "nodes": [
         {
@@ -106,12 +106,12 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2r1",
-          "type": "Gene"
+          "id": "Dihydrotachysterol",
+          "type": "Compound"
         },
         {
-          "id": "Vitamins",
-          "type": "Pathway"
+          "id": "Paricalcitol",
+          "type": "Compound"
         },
         {
           "id": "Cyp24a1",
@@ -121,68 +121,33 @@
       "edges": [
         {
           "source": "Ergocalciferol",
-          "target": "Cyp2r1",
-          "label": "binds"
+          "target": "Dihydrotachysterol",
+          "label": "resembles"
         },
         {
-          "source": "Cyp2r1",
-          "target": "Vitamins",
-          "label": "participates"
+          "source": "Dihydrotachysterol",
+          "target": "Paricalcitol",
+          "label": "resembles"
         },
         {
-          "source": "Vitamins",
+          "source": "Paricalcitol",
           "target": "Cyp24a1",
-          "label": "is participated by"
+          "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ergocalciferol,Vitamins": [
-          "Vitamin"
+        "Ergocalciferol,Dihydrotachysterol": [
+          "Vitamin D"
+        ],
+        "Ergocalciferol,Paricalcitol": [
+          "Hydroxy Seco-Steroid"
+        ],
+        "Dihydrotachysterol,Paricalcitol": [
+          "Hydroxy Seco-Steroid",
+          "Vitamin D Analog"
         ]
       },
-      "id": "path_4744"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7434,
-        "final_score": 0.7434
-      },
-      "nodes": [
-        {
-          "id": "Ergocalciferol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2r1",
-          "type": "Gene"
-        },
-        {
-          "id": "Vitamin D (calciferol) Metabolism",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp24a1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ergocalciferol",
-          "target": "Cyp2r1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2r1",
-          "target": "Vitamin D (calciferol) Metabolism",
-          "label": "participates"
-        },
-        {
-          "source": "Vitamin D (calciferol) Metabolism",
-          "target": "Cyp24a1",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_4745"
+      "id": "path_2125"
     },
     {
       "score": {
@@ -199,7 +164,7 @@
           "type": "Compound"
         },
         {
-          "id": "Calcidiol",
+          "id": "Calcipotriol",
           "type": "Compound"
         },
         {
@@ -215,11 +180,11 @@
         },
         {
           "source": "Dihydrotachysterol",
-          "target": "Calcidiol",
+          "target": "Calcipotriol",
           "label": "resembles"
         },
         {
-          "source": "Calcidiol",
+          "source": "Calcipotriol",
           "target": "Cyp24a1",
           "label": "binds"
         }
@@ -228,16 +193,68 @@
         "Ergocalciferol,Dihydrotachysterol": [
           "Vitamin D"
         ],
-        "Ergocalciferol,Calcidiol": [
+        "Ergocalciferol,Calcipotriol": [
+          "Hydroxy Seco-Steroid"
+        ],
+        "Dihydrotachysterol,Calcipotriol": [
+          "Hydroxy Seco-Steroid"
+        ]
+      },
+      "id": "path_2126"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5049,
+        "final_score": 0.5049
+      },
+      "nodes": [
+        {
+          "id": "Ergocalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrotachysterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcitriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp24a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergocalciferol",
+          "target": "Dihydrotachysterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Dihydrotachysterol",
+          "target": "Calcitriol",
+          "label": "resembles"
+        },
+        {
+          "source": "Calcitriol",
+          "target": "Cyp24a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ergocalciferol,Dihydrotachysterol": [
           "Vitamin D"
         ],
-        "Dihydrotachysterol,Calcidiol": [
+        "Ergocalciferol,Calcitriol": [
+          "Vitamin D"
+        ],
+        "Dihydrotachysterol,Calcitriol": [
           "Vitamin D Analog",
           "Vitamin D"
         ]
       },
-      "id": "path_4746"
+      "id": "path_2127"
     }
-  ],
-  "verbalization": ""
+  ]
 }

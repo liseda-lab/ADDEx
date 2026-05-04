@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6459,
-        "final_score": 0.6459
+        "ic_mean": 0.6834,
+        "final_score": 0.6834
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Adrenergic Alpha2-agonists",
-          "type": "Pharmacologic Class"
+          "id": "Adra2c",
+          "type": "Gene"
         },
         {
-          "id": "Guanabenz",
-          "type": "Compound"
+          "id": "Alpha2-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra2a",
@@ -27,27 +27,21 @@
       "edges": [
         {
           "source": "Clonidine",
-          "target": "Adrenergic Alpha2-agonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Adrenergic Alpha2-agonists",
-          "target": "Guanabenz",
-          "label": "includes"
-        },
-        {
-          "source": "Guanabenz",
-          "target": "Adra2a",
+          "target": "Adra2c",
           "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha2-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha2-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Clonidine,Guanabenz": [
-          "Alpha-Adrenergic Agonist",
-          "Dichlorobenzene"
-        ]
-      },
-      "id": "path_2158"
+      "id": "path_1064"
     },
     {
       "score": {
@@ -91,11 +85,101 @@
       ],
       "lowest_common_ancestors": {
         "Clonidine,Tizanidine": [
-          "Alpha-Adrenergic Agonist",
-          "Organic Aromatic Compound"
+          "Organic Aromatic Compound",
+          "Alpha-Adrenergic Agonist"
         ]
       },
-      "id": "path_2159"
+      "id": "path_1065"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6459,
+        "final_score": 0.6459
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenergic Alpha2-agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Guanabenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Adrenergic Alpha2-agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Adrenergic Alpha2-agonists",
+          "target": "Guanabenz",
+          "label": "includes"
+        },
+        {
+          "source": "Guanabenz",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Guanabenz": [
+          "Dichlorobenzene",
+          "Alpha-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_1066"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6447,
+        "final_score": 0.6447
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1067"
     },
     {
       "score": {
@@ -139,16 +223,16 @@
       ],
       "lowest_common_ancestors": {
         "Clonidine,Apraclonidine": [
-          "Alpha-Adrenergic Agonist",
-          "Dichlorobenzene"
+          "Dichlorobenzene",
+          "Alpha-Adrenergic Agonist"
         ]
       },
-      "id": "path_2160"
+      "id": "path_1068"
     },
     {
       "score": {
-        "ic_mean": 0.5921,
-        "final_score": 0.5921
+        "ic_mean": 0.5052,
+        "final_score": 0.5052
       },
       "nodes": [
         {
@@ -156,11 +240,11 @@
           "type": "Compound"
         },
         {
-          "id": "Blanching",
+          "id": "Coombs Test Positive",
           "type": "Side Effect"
         },
         {
-          "id": "Brimonidine",
+          "id": "Methyldopa",
           "type": "Compound"
         },
         {
@@ -171,32 +255,32 @@
       "edges": [
         {
           "source": "Clonidine",
-          "target": "Blanching",
+          "target": "Coombs Test Positive",
           "label": "causes"
         },
         {
-          "source": "Blanching",
-          "target": "Brimonidine",
+          "source": "Coombs Test Positive",
+          "target": "Methyldopa",
           "label": "is caused by"
         },
         {
-          "source": "Brimonidine",
+          "source": "Methyldopa",
           "target": "Adra2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clonidine,Brimonidine": [
-          "Alpha-Adrenergic Agonist",
-          "Organic Aromatic Compound"
+        "Clonidine,Methyldopa": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_2161"
+      "id": "path_1069"
     },
     {
       "score": {
-        "ic_mean": 0.585,
-        "final_score": 0.585
+        "ic_mean": 0.4729,
+        "final_score": 0.4729
       },
       "nodes": [
         {
@@ -204,11 +288,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adrenergic Alpha2-agonists",
-          "type": "Pharmacologic Class"
+          "id": "Slc6a2",
+          "type": "Gene"
         },
         {
-          "id": "Dexmedetomidine",
+          "id": "Benzphetamine",
           "type": "Compound"
         },
         {
@@ -219,76 +303,27 @@
       "edges": [
         {
           "source": "Clonidine",
-          "target": "Adrenergic Alpha2-agonists",
-          "label": "is included in"
-        },
-        {
-          "source": "Adrenergic Alpha2-agonists",
-          "target": "Dexmedetomidine",
-          "label": "includes"
-        },
-        {
-          "source": "Dexmedetomidine",
-          "target": "Adra2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clonidine,Dexmedetomidine": [
-          "Alpha-Adrenergic Agonist",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_2162"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5388,
-        "final_score": 0.5388
-      },
-      "nodes": [
-        {
-          "id": "Clonidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Phentolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clonidine",
-          "target": "Adra1d",
+          "target": "Slc6a2",
           "label": "binds"
         },
         {
-          "source": "Adra1d",
-          "target": "Phentolamine",
+          "source": "Slc6a2",
+          "target": "Benzphetamine",
           "label": "is bound by"
         },
         {
-          "source": "Phentolamine",
+          "source": "Benzphetamine",
           "target": "Adra2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clonidine,Phentolamine": [
-          "Benzenes",
-          "Adrenergic Agent"
+        "Clonidine,Benzphetamine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_2163"
+      "id": "path_1070"
     }
-  ],
-  "verbalization": ""
+  ]
 }

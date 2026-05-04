@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01142 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4825,
+        "final_score": 0.4825
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Desipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxepin,Desipramine": [
+          "Organic Amino Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_6792"
+    }
+  ]
+}

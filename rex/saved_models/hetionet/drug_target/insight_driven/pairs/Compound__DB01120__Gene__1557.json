@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01120 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4808,
+        "final_score": 0.4808
+      },
+      "nodes": [
+        {
+          "id": "Gliclazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Elevated Liver Enzyme Levels",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gliclazide",
+          "target": "Elevated Liver Enzyme Levels",
+          "label": "causes"
+        },
+        {
+          "source": "Elevated Liver Enzyme Levels",
+          "target": "Proguanil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Proguanil",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gliclazide,Proguanil": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_2812"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4587,
-        "final_score": 0.4587
+        "ic_mean": 0.5311,
+        "final_score": 0.5311
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm1",
+          "id": "Ache",
           "type": "Gene"
         },
         {
-          "id": "Benzatropine",
+          "id": "Donepezil",
           "type": "Compound"
         },
         {
@@ -27,28 +27,324 @@
       "edges": [
         {
           "source": "Minaprine",
-          "target": "Chrm1",
+          "target": "Ache",
           "label": "binds"
         },
         {
-          "source": "Chrm1",
-          "target": "Benzatropine",
+          "source": "Ache",
+          "target": "Donepezil",
           "label": "is bound by"
         },
         {
-          "source": "Benzatropine",
+          "source": "Donepezil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_12439"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5282,
+        "final_score": 0.5282
+      },
+      "nodes": [
+        {
+          "id": "Minaprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Methotrimeprazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minaprine",
+          "target": "Htr2c",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2c",
+          "target": "Methotrimeprazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methotrimeprazine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Minaprine,Benzatropine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Minaprine,Methotrimeprazine": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_24595"
+      "id": "path_12440"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5282,
+        "final_score": 0.5282
+      },
+      "nodes": [
+        {
+          "id": "Minaprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minaprine",
+          "target": "Htr2c",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2c",
+          "target": "Nefazodone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nefazodone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minaprine,Nefazodone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_12441"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4875,
+        "final_score": 0.4875
+      },
+      "nodes": [
+        {
+          "id": "Minaprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ache",
+          "type": "Gene"
+        },
+        {
+          "id": "Procainamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minaprine",
+          "target": "Ache",
+          "label": "binds"
+        },
+        {
+          "source": "Ache",
+          "target": "Procainamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Procainamide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minaprine,Procainamide": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_12442"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4433,
+        "final_score": 0.4433
+      },
+      "nodes": [
+        {
+          "id": "Minaprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Moricizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Moclobemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minaprine",
+          "target": "Moricizine",
+          "label": "resembles"
+        },
+        {
+          "source": "Moricizine",
+          "target": "Moclobemide",
+          "label": "resembles"
+        },
+        {
+          "source": "Moclobemide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minaprine,Moricizine": [
+          "Morpholines"
+        ],
+        "Minaprine,Moclobemide": [
+          "Morpholines"
+        ],
+        "Moricizine,Moclobemide": [
+          "Morpholines"
+        ]
+      },
+      "id": "path_12443"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4121,
+        "final_score": 0.4121
+      },
+      "nodes": [
+        {
+          "id": "Minaprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Moricizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minaprine",
+          "target": "Moricizine",
+          "label": "resembles"
+        },
+        {
+          "source": "Moricizine",
+          "target": "Mesoridazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Mesoridazine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minaprine,Moricizine": [
+          "Morpholines"
+        ],
+        "Minaprine,Mesoridazine": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Moricizine,Mesoridazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_12444"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3971,
+        "final_score": 0.3971
+      },
+      "nodes": [
+        {
+          "id": "Minaprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Moricizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mequitazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minaprine",
+          "target": "Moricizine",
+          "label": "resembles"
+        },
+        {
+          "source": "Moricizine",
+          "target": "Mequitazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Mequitazine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minaprine,Moricizine": [
+          "Morpholines"
+        ],
+        "Minaprine,Mequitazine": [
+          "Organic Heterocyclic Compound"
+        ],
+        "Moricizine,Mequitazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_12445"
     }
-  ],
-  "verbalization": ""
+  ]
 }

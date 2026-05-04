@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB08877 - Gene::3717",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7262,
+        "final_score": 0.7262
+      },
+      "nodes": [
+        {
+          "id": "Ruxolitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Tyk2",
+          "type": "Gene"
+        },
+        {
+          "id": "Growth Hormone Receptor Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Jak2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ruxolitinib",
+          "target": "Tyk2",
+          "label": "binds"
+        },
+        {
+          "source": "Tyk2",
+          "target": "Growth Hormone Receptor Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Growth Hormone Receptor Binding",
+          "target": "Jak2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10142"
+    }
+  ]
 }

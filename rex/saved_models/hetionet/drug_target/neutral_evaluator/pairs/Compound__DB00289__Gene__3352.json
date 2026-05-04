@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6279,
-        "final_score": 0.6279
+        "ic_mean": 0.6786,
+        "final_score": 0.6786
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Sumatriptan",
-          "type": "Compound"
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Htr1d",
@@ -32,23 +32,112 @@
         },
         {
           "source": "Htr1b",
-          "target": "Sumatriptan",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr1d",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8586"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6378,
+        "final_score": 0.6378
+      },
+      "nodes": [
+        {
+          "id": "Atomoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Methysergide",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atomoxetine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Methysergide",
           "label": "is bound by"
         },
         {
-          "source": "Sumatriptan",
+          "source": "Methysergide",
           "target": "Htr1d",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atomoxetine,Sumatriptan": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
+        "Atomoxetine,Methysergide": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_17109"
+      "id": "path_8587"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6165,
+        "final_score": 0.6165
+      },
+      "nodes": [
+        {
+          "id": "Atomoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atomoxetine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Mianserin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Htr1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atomoxetine,Mianserin": [
+          "Organic Cyclic Compound",
+          "Adrenergic Agent"
+        ]
+      },
+      "id": "path_8588"
     }
-  ],
-  "verbalization": ""
+  ]
 }

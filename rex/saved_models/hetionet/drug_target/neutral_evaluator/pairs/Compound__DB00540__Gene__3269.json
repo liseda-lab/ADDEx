@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6347,
-        "final_score": 0.6347
+        "ic_mean": 0.467,
+        "final_score": 0.467
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Azatadine",
+          "type": "Compound"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Alcaftadine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,39 @@
       "edges": [
         {
           "source": "Nortriptyline",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Azatadine",
+          "label": "resembles"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
-          "label": "is bound by"
+          "source": "Azatadine",
+          "target": "Alcaftadine",
+          "label": "resembles"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Alcaftadine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nortriptyline,Mesoridazine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Nortriptyline,Azatadine": [
+          "Organic Tricyclic Compound"
+        ],
+        "Nortriptyline,Alcaftadine": [
+          "Organic Tricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Azatadine,Alcaftadine": [
+          "Organic Heterotricyclic Compound",
+          "Histamine-1 Receptor Antagonist"
         ]
       },
-      "id": "path_1270"
+      "id": "path_617"
     },
     {
       "score": {
-        "ic_mean": 0.6347,
-        "final_score": 0.6347
+        "ic_mean": 0.4263,
+        "final_score": 0.4263
       },
       "nodes": [
         {
@@ -60,11 +67,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Azatadine",
+          "type": "Compound"
         },
         {
-          "id": "Cyproheptadine",
+          "id": "Loratadine",
           "type": "Compound"
         },
         {
@@ -75,27 +82,141 @@
       "edges": [
         {
           "source": "Nortriptyline",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Azatadine",
+          "label": "resembles"
         },
         {
-          "source": "Htr6",
-          "target": "Cyproheptadine",
-          "label": "is bound by"
+          "source": "Azatadine",
+          "target": "Loratadine",
+          "label": "resembles"
         },
         {
-          "source": "Cyproheptadine",
+          "source": "Loratadine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nortriptyline,Cyproheptadine": [
-          "Organic Cyclic Compound"
+        "Nortriptyline,Azatadine": [
+          "Organic Tricyclic Compound"
+        ],
+        "Nortriptyline,Loratadine": [
+          "Organic Tricyclic Compound"
+        ],
+        "Azatadine,Loratadine": [
+          "Histamine-1 Receptor Antagonist",
+          "Benzocycloheptapyridine"
         ]
       },
-      "id": "path_1271"
+      "id": "path_618"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3466,
+        "final_score": 0.3466
+      },
+      "nodes": [
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nortriptyline",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Mianserin",
+          "label": "resembles"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nortriptyline,Azatadine": [
+          "Organic Tricyclic Compound"
+        ],
+        "Nortriptyline,Mianserin": [
+          "Organic Tricyclic Compound",
+          "Antidepressant Agent"
+        ],
+        "Azatadine,Mianserin": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_619"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3119,
+        "final_score": 0.3119
+      },
+      "nodes": [
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nortriptyline",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Desipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nortriptyline,Azatadine": [
+          "Organic Tricyclic Compound"
+        ],
+        "Nortriptyline,Desipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ],
+        "Azatadine,Desipramine": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_620"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4431,
-        "final_score": 0.4431
+        "ic_mean": 0.4667,
+        "final_score": 0.4667
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Graft Loss",
+          "id": "Uraemic Syndrome",
           "type": "Side Effect"
         },
         {
-          "id": "Tacrolimus",
+          "id": "Quinine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Graft Loss",
+          "target": "Uraemic Syndrome",
           "label": "causes"
         },
         {
-          "source": "Graft Loss",
-          "target": "Tacrolimus",
+          "source": "Uraemic Syndrome",
+          "target": "Quinine",
           "label": "is caused by"
         },
         {
-          "source": "Tacrolimus",
+          "source": "Quinine",
           "target": "Cyp3a7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Tacrolimus": [
-          "Calcineurin Inhibitor",
-          "Carboxamide"
+        "Cyclosporine,Quinine": [
+          "Organonitrogen Compound"
         ]
       },
-      "id": "path_25147"
+      "id": "path_12746"
     },
     {
       "score": {
-        "ic_mean": 0.4276,
-        "final_score": 0.4276
+        "ic_mean": 0.4659,
+        "final_score": 0.4659
       },
       "nodes": [
         {
@@ -60,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Hyperamylasaemia",
+          "type": "Side Effect"
         },
         {
-          "id": "Saquinavir",
+          "id": "Ritonavir",
           "type": "Compound"
         },
         {
@@ -75,27 +74,120 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Hyperamylasaemia",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Saquinavir",
-          "label": "is bound by"
+          "source": "Hyperamylasaemia",
+          "target": "Ritonavir",
+          "label": "is caused by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Ritonavir",
           "target": "Cyp3a7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Saquinavir": [
+        "Cyclosporine,Ritonavir": [
+          "Carboxamide"
+        ]
+      },
+      "id": "path_12747"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3881,
+        "final_score": 0.3881
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hodgkin's Disease Lymphocyte Depletion Type Stage Unspecified",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Hodgkin's Disease Lymphocyte Depletion Type Stage Unspecified",
+          "label": "causes"
+        },
+        {
+          "source": "Hodgkin's Disease Lymphocyte Depletion Type Stage Unspecified",
+          "target": "Phenytoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Phenytoin": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_25148"
+      "id": "path_12748"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3881,
+        "final_score": 0.3881
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hodgkin's Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Hodgkin's Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Hodgkin's Disease",
+          "target": "Phenytoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Phenytoin": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_12749"
     }
-  ],
-  "verbalization": ""
+  ]
 }

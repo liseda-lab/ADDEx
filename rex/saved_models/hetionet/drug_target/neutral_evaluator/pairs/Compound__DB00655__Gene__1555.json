@@ -3,100 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6236,
-        "final_score": 0.6236
-      },
-      "nodes": [
-        {
-          "id": "Estrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp4a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Clofibrate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Estrone",
-          "target": "Cyp4a11",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp4a11",
-          "target": "Clofibrate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Clofibrate",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Estrone,Clofibrate": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_937"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5557,
-        "final_score": 0.5557
-      },
-      "nodes": [
-        {
-          "id": "Estrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Shbg",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2b6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Estrone",
-          "target": "Shbg",
-          "label": "binds"
-        },
-        {
-          "source": "Shbg",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Cyp2b6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Estrone,Ethinyl Estradiol": [
-          "3-Hydroxy Steroid"
-        ]
-      },
-      "id": "path_938"
-    },
-    {
-      "score": {
         "ic_mean": 0.4944,
         "final_score": 0.4944
       },
@@ -140,8 +46,61 @@
           "3-Hydroxy Steroid"
         ]
       },
-      "id": "path_939"
+      "id": "path_459"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4456,
+        "final_score": 0.4456
+      },
+      "nodes": [
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Formestane",
+          "type": "Compound"
+        },
+        {
+          "id": "Methyltestosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estrone",
+          "target": "Formestane",
+          "label": "resembles"
+        },
+        {
+          "source": "Formestane",
+          "target": "Methyltestosterone",
+          "label": "resembles"
+        },
+        {
+          "source": "Methyltestosterone",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estrone,Formestane": [
+          "Hydroxy Steroid"
+        ],
+        "Estrone,Methyltestosterone": [
+          "Hydroxy Steroid"
+        ],
+        "Formestane,Methyltestosterone": [
+          "Hydroxy Steroid",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_460"
     }
-  ],
-  "verbalization": ""
+  ]
 }

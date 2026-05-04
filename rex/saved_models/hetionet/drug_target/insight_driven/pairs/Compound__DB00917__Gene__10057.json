@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00917 - Gene::10057",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7281,
+        "final_score": 0.7807,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostaglandins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Alprostadil",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Prostaglandins",
+          "label": "is included in"
+        },
+        {
+          "source": "Prostaglandins",
+          "target": "Alprostadil",
+          "label": "includes"
+        },
+        {
+          "source": "Alprostadil",
+          "target": "Abcc5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Prostaglandins": [
+          "Prostaglandin"
+        ],
+        "Dinoprostone,Alprostadil": [
+          "Prostaglandin E",
+          "Prostaglandins E"
+        ],
+        "Prostaglandins,Alprostadil": [
+          "Prostaglandin"
+        ]
+      },
+      "id": "path_6162"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6628,
-        "final_score": 0.6628
+        "ic_mean": 0.6298,
+        "final_score": 0.6298
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Htr3a",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Dolasetron",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Methadone",
-          "target": "Htr3a",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Htr3a",
-          "target": "Dolasetron",
-          "label": "is bound by"
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Dolasetron",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Methadone,Dolasetron": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27537"
+      "id": "path_14103"
     },
     {
       "score": {
-        "ic_mean": 0.6192,
-        "final_score": 0.6192
+        "ic_mean": 0.5109,
+        "final_score": 0.5109
       },
       "nodes": [
         {
@@ -60,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrna10",
-          "type": "Gene"
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Galantamine",
+          "id": "Alfentanil",
           "type": "Compound"
         },
         {
@@ -75,175 +69,32 @@
       "edges": [
         {
           "source": "Methadone",
-          "target": "Chrna10",
-          "label": "binds"
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Chrna10",
-          "target": "Galantamine",
-          "label": "is bound by"
+          "source": "Full Opioid Agonists",
+          "target": "Alfentanil",
+          "label": "includes"
         },
         {
-          "source": "Galantamine",
+          "source": "Alfentanil",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methadone,Galantamine": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27538"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6114,
-        "final_score": 0.6114
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr3a",
-          "type": "Gene"
-        },
-        {
-          "id": "Cisapride",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Htr3a",
-          "label": "binds"
-        },
-        {
-          "source": "Htr3a",
-          "target": "Cisapride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cisapride",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Cisapride": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27539"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5814,
-        "final_score": 0.5814
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna10",
-          "type": "Gene"
-        },
-        {
-          "id": "Nicotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Chrna10",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna10",
-          "target": "Nicotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nicotine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Nicotine": [
-          "Alkaloid",
-          "Racemate"
-        ]
-      },
-      "id": "path_27540"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5679,
-        "final_score": 0.5679
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydrocodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Hydrocodone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydrocodone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Hydrocodone": [
+        "Methadone,Alfentanil": [
           "Chemical Entity",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_27541"
+      "id": "path_14104"
     },
     {
       "score": {
-        "ic_mean": 0.5601,
-        "final_score": 0.5601
+        "ic_mean": 0.5109,
+        "final_score": 0.5109
       },
       "nodes": [
         {
@@ -251,151 +102,8 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Ifosfamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Ifosfamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ifosfamide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Ifosfamide": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27542"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5601,
-        "final_score": 0.5601
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Aminophenazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Aminophenazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Aminophenazone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Aminophenazone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27543"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5466,
-        "final_score": 0.5466
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Grin3a",
-          "type": "Gene"
-        },
-        {
-          "id": "Tramadol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Grin3a",
-          "label": "binds"
-        },
-        {
-          "source": "Grin3a",
-          "target": "Tramadol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tramadol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Tramadol": [
-          "Agent Affecting Nervous System",
-          "Racemate"
-        ]
-      },
-      "id": "path_27544"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5378,
-        "final_score": 0.5378
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Oxymorphone",
@@ -409,13 +117,13 @@
       "edges": [
         {
           "source": "Methadone",
-          "target": "Oprd1",
-          "label": "binds"
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
         },
         {
-          "source": "Oprd1",
+          "source": "Full Opioid Agonists",
           "target": "Oxymorphone",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Oxymorphone",
@@ -426,440 +134,10 @@
       "lowest_common_ancestors": {
         "Methadone,Oxymorphone": [
           "Chemical Entity",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_27545"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5378,
-        "final_score": 0.5378
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Ketobemidone": [
-          "Chemical Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_27546"
-    },
-    {
-      "score": {
-        "ic_mean": 0.53,
-        "final_score": 0.53
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Antipyrine": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27547"
-    },
-    {
-      "score": {
-        "ic_mean": 0.53,
-        "final_score": 0.53
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Vilazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Vilazodone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Vilazodone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Vilazodone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27548"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5087,
-        "final_score": 0.5087
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Cyclophosphamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Cyclophosphamide": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27549"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4922,
-        "final_score": 0.4922
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Dapsone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapsone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Dapsone": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27550"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4838,
-        "final_score": 0.4838
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Grin3a",
-          "type": "Gene"
-        },
-        {
-          "id": "Dextromethorphan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Grin3a",
-          "label": "binds"
-        },
-        {
-          "source": "Grin3a",
-          "target": "Dextromethorphan",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dextromethorphan",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Dextromethorphan": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27551"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4828,
-        "final_score": 0.4828
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cutis Anserina",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Oxycodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cutis Anserina",
-          "label": "causes"
-        },
-        {
-          "source": "Cutis Anserina",
-          "target": "Oxycodone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Oxycodone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Oxycodone": [
-          "Chemical Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_27552"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4787,
-        "final_score": 0.4787
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Lidocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Lidocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lidocaine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Lidocaine": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27553"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4739,
-        "final_score": 0.4739
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Grin3a",
-          "type": "Gene"
-        },
-        {
-          "id": "Orphenadrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Grin3a",
-          "label": "binds"
-        },
-        {
-          "source": "Grin3a",
-          "target": "Orphenadrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Orphenadrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Orphenadrine": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27554"
+      "id": "path_14105"
     },
     {
       "score": {
@@ -904,58 +182,10 @@
       "lowest_common_ancestors": {
         "Methadone,Morphine": [
           "Chemical Entity",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_27555"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4574,
-        "final_score": 0.4574
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Phenytoin": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27556"
+      "id": "path_14106"
     },
     {
       "score": {
@@ -1000,63 +230,15 @@
       "lowest_common_ancestors": {
         "Methadone,Hydromorphone": [
           "Chemical Entity",
-          "Opioid Receptor Agonist"
+          "Opioid"
         ]
       },
-      "id": "path_27557"
+      "id": "path_14107"
     },
     {
       "score": {
-        "ic_mean": 0.4487,
-        "final_score": 0.4487
-      },
-      "nodes": [
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Desipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Methadone",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Desipramine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Desipramine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Methadone,Desipramine": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27558"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4467,
-        "final_score": 0.4467
+        "ic_mean": 0.4434,
+        "final_score": 0.4434
       },
       "nodes": [
         {
@@ -1068,7 +250,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Tramadol",
+          "id": "Morphine",
           "type": "Compound"
         },
         {
@@ -1084,27 +266,27 @@
         },
         {
           "source": "Cutis Anserina",
-          "target": "Tramadol",
+          "target": "Morphine",
           "label": "is caused by"
         },
         {
-          "source": "Tramadol",
+          "source": "Morphine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methadone,Tramadol": [
-          "Agent Affecting Nervous System",
-          "Racemate"
+        "Methadone,Morphine": [
+          "Chemical Entity",
+          "Opioid"
         ]
       },
-      "id": "path_27559"
+      "id": "path_14108"
     },
     {
       "score": {
-        "ic_mean": 0.4465,
-        "final_score": 0.4465
+        "ic_mean": 0.4326,
+        "final_score": 0.4326
       },
       "nodes": [
         {
@@ -1112,11 +294,11 @@
           "type": "Compound"
         },
         {
-          "id": "Serum Testosterone Decreased",
+          "id": "Head Injury",
           "type": "Side Effect"
         },
         {
-          "id": "Paliperidone",
+          "id": "Oxymorphone",
           "type": "Compound"
         },
         {
@@ -1127,32 +309,32 @@
       "edges": [
         {
           "source": "Methadone",
-          "target": "Serum Testosterone Decreased",
+          "target": "Head Injury",
           "label": "causes"
         },
         {
-          "source": "Serum Testosterone Decreased",
-          "target": "Paliperidone",
+          "source": "Head Injury",
+          "target": "Oxymorphone",
           "label": "is caused by"
         },
         {
-          "source": "Paliperidone",
+          "source": "Oxymorphone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methadone,Paliperidone": [
-          "Agent Affecting Nervous System",
-          "Racemate"
+        "Methadone,Oxymorphone": [
+          "Chemical Entity",
+          "Opioid"
         ]
       },
-      "id": "path_27560"
+      "id": "path_14109"
     },
     {
       "score": {
-        "ic_mean": 0.4408,
-        "final_score": 0.4408
+        "ic_mean": 0.4051,
+        "final_score": 0.4051
       },
       "nodes": [
         {
@@ -1160,11 +342,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Phenobarbital",
+          "id": "Indinavir",
           "type": "Compound"
         },
         {
@@ -1175,32 +357,31 @@
       "edges": [
         {
           "source": "Methadone",
-          "target": "Cyp2c18",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Phenobarbital",
+          "source": "Cyp3a7",
+          "target": "Indinavir",
           "label": "is bound by"
         },
         {
-          "source": "Phenobarbital",
+          "source": "Indinavir",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methadone,Phenobarbital": [
-          "Agent Affecting Nervous System",
+        "Methadone,Indinavir": [
           "Chemical Entity"
         ]
       },
-      "id": "path_27561"
+      "id": "path_14110"
     },
     {
       "score": {
-        "ic_mean": 0.4364,
-        "final_score": 0.4364
+        "ic_mean": 0.4051,
+        "final_score": 0.4051
       },
       "nodes": [
         {
@@ -1208,11 +389,11 @@
           "type": "Compound"
         },
         {
-          "id": "Serum Testosterone Decreased",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Testosterone",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -1223,28 +404,27 @@
       "edges": [
         {
           "source": "Methadone",
-          "target": "Serum Testosterone Decreased",
-          "label": "causes"
+          "target": "Cyp3a7",
+          "label": "binds"
         },
         {
-          "source": "Serum Testosterone Decreased",
-          "target": "Testosterone",
-          "label": "is caused by"
+          "source": "Cyp3a7",
+          "target": "Imipramine",
+          "label": "is bound by"
         },
         {
-          "source": "Testosterone",
+          "source": "Imipramine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methadone,Testosterone": [
+        "Methadone,Imipramine": [
           "Chemical Entity",
-          "Organic Chemical"
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27562"
+      "id": "path_14111"
     }
-  ],
-  "verbalization": ""
+  ]
 }

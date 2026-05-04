@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB00978 - Gene::7153",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5899,
+        "final_score": 0.545,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Lomefloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Candiduria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sparfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Top2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lomefloxacin",
+          "target": "Candiduria",
+          "label": "causes"
+        },
+        {
+          "source": "Candiduria",
+          "target": "Sparfloxacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sparfloxacin",
+          "target": "Top2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lomefloxacin,Sparfloxacin": [
+          "Quinolone Antibiotic",
+          "Quinolinemonocarboxylic Acid"
+        ]
+      },
+      "id": "path_2473"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5243,
+        "final_score": 0.5243
+      },
+      "nodes": [
+        {
+          "id": "Lomefloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Besifloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Enoxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Top2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lomefloxacin",
+          "target": "Besifloxacin",
+          "label": "resembles"
+        },
+        {
+          "source": "Besifloxacin",
+          "target": "Enoxacin",
+          "label": "resembles"
+        },
+        {
+          "source": "Enoxacin",
+          "target": "Top2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lomefloxacin,Besifloxacin": [
+          "Quinolines",
+          "Quinolone Antibiotic"
+        ],
+        "Lomefloxacin,Enoxacin": [
+          "Quinolone Antibiotic",
+          "Carboxylic Acid"
+        ],
+        "Besifloxacin,Enoxacin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Quinolone Antibiotic"
+        ]
+      },
+      "id": "path_2474"
+    }
+  ]
+}

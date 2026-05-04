@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00296 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5084,
+        "final_score": 0.5084
+      },
+      "nodes": [
+        {
+          "id": "Ropivacaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cauda Equina Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Enzalutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ropivacaine",
+          "target": "Cauda Equina Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Cauda Equina Syndrome",
+          "target": "Enzalutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Enzalutamide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ropivacaine,Enzalutamide": [
+          "Monocarboxylic Acid Amide"
+        ]
+      },
+      "id": "path_3099"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4697,
+        "final_score": 0.4697
+      },
+      "nodes": [
+        {
+          "id": "Ropivacaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Excitation Cerebral",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ropivacaine",
+          "target": "Excitation Cerebral",
+          "label": "causes"
+        },
+        {
+          "source": "Excitation Cerebral",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ropivacaine,Codeine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_3100"
+    }
+  ]
+}

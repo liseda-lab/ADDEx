@@ -46,19 +46,19 @@
           "Tetracyclines"
         ],
         "Doxycycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
         ],
         "Tetracyclines,Oxytetracycline": [
           "Tetracyclines"
         ]
       },
-      "id": "path_24361"
+      "id": "path_12336"
     },
     {
       "score": {
-        "ic_mean": 0.8333,
-        "final_score": 0.8333
+        "ic_mean": 0.701,
+        "final_score": 0.701
       },
       "nodes": [
         {
@@ -66,11 +66,11 @@
           "type": "Compound"
         },
         {
-          "id": "Tetracyclines",
-          "type": "Pharmacologic Class"
+          "id": "Methacycline",
+          "type": "Compound"
         },
         {
-          "id": "Tetracycline",
+          "id": "Oxytetracycline",
           "type": "Compound"
         },
         {
@@ -81,129 +81,35 @@
       "edges": [
         {
           "source": "Doxycycline",
-          "target": "Tetracyclines",
-          "label": "is included in"
+          "target": "Methacycline",
+          "label": "resembles"
         },
         {
-          "source": "Tetracyclines",
-          "target": "Tetracycline",
-          "label": "includes"
+          "source": "Methacycline",
+          "target": "Oxytetracycline",
+          "label": "resembles"
         },
         {
-          "source": "Tetracycline",
+          "source": "Oxytetracycline",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxycycline,Tetracyclines": [
+        "Doxycycline,Methacycline": [
+          "Tetracycline Antibiotic",
           "Tetracyclines"
         ],
-        "Doxycycline,Tetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Tetracyclines,Tetracycline": [
+        "Doxycycline,Oxytetracycline": [
+          "Tetracycline Antibiotic",
           "Tetracyclines"
+        ],
+        "Methacycline,Oxytetracycline": [
+          "Tetracycline Antibiotic",
+          "Organic Molecule"
         ]
       },
-      "id": "path_24362"
-    },
-    {
-      "score": {
-        "ic_mean": 0.8144,
-        "final_score": 0.8144
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Tetracyclines",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Minocycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Tetracyclines",
-          "label": "is included in"
-        },
-        {
-          "source": "Tetracyclines",
-          "target": "Minocycline",
-          "label": "includes"
-        },
-        {
-          "source": "Minocycline",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Tetracyclines": [
-          "Tetracyclines"
-        ],
-        "Doxycycline,Minocycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Tetracyclines,Minocycline": [
-          "Tetracyclines"
-        ]
-      },
-      "id": "path_24363"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7586,
-        "final_score": 0.7586
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Organic Anion Transport",
-          "type": "Pathway"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Organic Anion Transport",
-          "label": "participates"
-        },
-        {
-          "source": "Organic Anion Transport",
-          "target": "Slc22a6",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_24364"
+      "id": "path_12337"
     },
     {
       "score": {
@@ -247,131 +153,19 @@
       ],
       "lowest_common_ancestors": {
         "Doxycycline,Tigecycline": [
-          "Tetracyclines",
-          "Antibiotic"
+          "Antibiotic",
+          "Tetracyclines"
         ],
         "Doxycycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
         ],
         "Tigecycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Antibiotic"
+          "Antibiotic",
+          "Organic Molecule"
         ]
       },
-      "id": "path_24365"
-    },
-    {
-      "score": {
-        "ic_mean": 0.701,
-        "final_score": 0.701
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Demeclocycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Oxytetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Demeclocycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Demeclocycline",
-          "target": "Oxytetracycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Oxytetracycline",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Demeclocycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Doxycycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Demeclocycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ]
-      },
-      "id": "path_24366"
-    },
-    {
-      "score": {
-        "ic_mean": 0.701,
-        "final_score": 0.701
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Lymecycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Oxytetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Lymecycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Lymecycline",
-          "target": "Oxytetracycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Oxytetracycline",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Lymecycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Doxycycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Lymecycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ]
-      },
-      "id": "path_24367"
+      "id": "path_12338"
     },
     {
       "score": {
@@ -415,136 +209,24 @@
       ],
       "lowest_common_ancestors": {
         "Doxycycline,Clomocycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
         ],
         "Doxycycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
         ],
         "Clomocycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+          "Tetracycline Antibiotic",
+          "Organic Molecule"
         ]
       },
-      "id": "path_24368"
+      "id": "path_12339"
     },
     {
       "score": {
-        "ic_mean": 0.686,
-        "final_score": 0.686
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Tigecycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Tetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Tigecycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Tigecycline",
-          "target": "Tetracycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Tetracycline",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Tigecycline": [
-          "Tetracyclines",
-          "Antibiotic"
-        ],
-        "Doxycycline,Tetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Tigecycline,Tetracycline": [
-          "Antibiotic",
-          "Tertiary Alpha-Hydroxy Ketone"
-        ]
-      },
-      "id": "path_24369"
-    },
-    {
-      "score": {
-        "ic_mean": 0.686,
-        "final_score": 0.686
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Demeclocycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Tetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Demeclocycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Demeclocycline",
-          "target": "Tetracycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Tetracycline",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Demeclocycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Doxycycline,Tetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Demeclocycline,Tetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ]
-      },
-      "id": "path_24370"
-    },
-    {
-      "score": {
-        "ic_mean": 0.686,
-        "final_score": 0.686
+        "ic_mean": 0.701,
+        "final_score": 0.701
       },
       "nodes": [
         {
@@ -556,7 +238,7 @@
           "type": "Compound"
         },
         {
-          "id": "Tetracycline",
+          "id": "Oxytetracycline",
           "type": "Compound"
         },
         {
@@ -572,35 +254,35 @@
         },
         {
           "source": "Lymecycline",
-          "target": "Tetracycline",
+          "target": "Oxytetracycline",
           "label": "resembles"
         },
         {
-          "source": "Tetracycline",
+          "source": "Oxytetracycline",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
         "Doxycycline,Lymecycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
         ],
-        "Doxycycline,Tetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+        "Doxycycline,Oxytetracycline": [
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
         ],
-        "Lymecycline,Tetracycline": [
-          "Tertiary Alpha-Hydroxy Ketone",
-          "Tetracycline Antibiotic"
+        "Lymecycline,Oxytetracycline": [
+          "Tetracycline Antibiotic",
+          "Organic Molecule"
         ]
       },
-      "id": "path_24371"
+      "id": "path_12340"
     },
     {
       "score": {
-        "ic_mean": 0.686,
-        "final_score": 0.686
+        "ic_mean": 0.701,
+        "final_score": 0.701
       },
       "nodes": [
         {
@@ -608,160 +290,8 @@
           "type": "Compound"
         },
         {
-          "id": "Clomocycline",
+          "id": "Demeclocycline",
           "type": "Compound"
-        },
-        {
-          "id": "Tetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Clomocycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Clomocycline",
-          "target": "Tetracycline",
-          "label": "resembles"
-        },
-        {
-          "source": "Tetracycline",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Clomocycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Doxycycline,Tetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ],
-        "Clomocycline,Tetracycline": [
-          "Tertiary Alpha-Hydroxy Ketone",
-          "Tetracycline Antibiotic"
-        ]
-      },
-      "id": "path_24372"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6516,
-        "final_score": 0.6516
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefoperazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefoperazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefoperazone",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Cefoperazone": [
-          "Antibiotic",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_24373"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6516,
-        "final_score": 0.6516
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefotaxime",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefotaxime",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefotaxime",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Cefotaxime": [
-          "Antibiotic",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_24374"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6003,
-        "final_score": 0.6003
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
         },
         {
           "id": "Oxytetracycline",
@@ -775,13 +305,13 @@
       "edges": [
         {
           "source": "Doxycycline",
-          "target": "Slc22a11",
-          "label": "binds"
+          "target": "Demeclocycline",
+          "label": "resembles"
         },
         {
-          "source": "Slc22a11",
+          "source": "Demeclocycline",
           "target": "Oxytetracycline",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Oxytetracycline",
@@ -790,17 +320,25 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Doxycycline,Demeclocycline": [
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
+        ],
         "Doxycycline,Oxytetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
+        ],
+        "Demeclocycline,Oxytetracycline": [
+          "Tetracycline Antibiotic",
+          "Tetracyclines"
         ]
       },
-      "id": "path_24375"
+      "id": "path_12341"
     },
     {
       "score": {
-        "ic_mean": 0.6003,
-        "final_score": 0.6003
+        "ic_mean": 0.5412,
+        "final_score": 0.5412
       },
       "nodes": [
         {
@@ -808,11 +346,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a11",
+          "id": "Slc22a8",
           "type": "Gene"
         },
         {
-          "id": "Novobiocin",
+          "id": "Cilastatin",
           "type": "Compound"
         },
         {
@@ -823,32 +361,31 @@
       "edges": [
         {
           "source": "Doxycycline",
-          "target": "Slc22a11",
+          "target": "Slc22a8",
           "label": "binds"
         },
         {
-          "source": "Slc22a11",
-          "target": "Novobiocin",
+          "source": "Slc22a8",
+          "target": "Cilastatin",
           "label": "is bound by"
         },
         {
-          "source": "Novobiocin",
+          "source": "Cilastatin",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxycycline,Novobiocin": [
-          "Antibiotic",
+        "Doxycycline,Cilastatin": [
           "Organooxygen Compound"
         ]
       },
-      "id": "path_24376"
+      "id": "path_12342"
     },
     {
       "score": {
-        "ic_mean": 0.6003,
-        "final_score": 0.6003
+        "ic_mean": 0.5412,
+        "final_score": 0.5412
       },
       "nodes": [
         {
@@ -856,7 +393,7 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a11",
+          "id": "Slc22a8",
           "type": "Gene"
         },
         {
@@ -871,11 +408,11 @@
       "edges": [
         {
           "source": "Doxycycline",
-          "target": "Slc22a11",
+          "target": "Slc22a8",
           "label": "binds"
         },
         {
-          "source": "Slc22a11",
+          "source": "Slc22a8",
           "target": "Aspartame",
           "label": "is bound by"
         },
@@ -890,12 +427,12 @@
           "Organooxygen Compound"
         ]
       },
-      "id": "path_24377"
+      "id": "path_12343"
     },
     {
       "score": {
-        "ic_mean": 0.6003,
-        "final_score": 0.6003
+        "ic_mean": 0.5111,
+        "final_score": 0.5111
       },
       "nodes": [
         {
@@ -903,11 +440,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a11",
+          "id": "Slc22a8",
           "type": "Gene"
         },
         {
-          "id": "Cefazolin",
+          "id": "Piroxicam",
           "type": "Compound"
         },
         {
@@ -918,32 +455,31 @@
       "edges": [
         {
           "source": "Doxycycline",
-          "target": "Slc22a11",
+          "target": "Slc22a8",
           "label": "binds"
         },
         {
-          "source": "Slc22a11",
-          "target": "Cefazolin",
+          "source": "Slc22a8",
+          "target": "Piroxicam",
           "label": "is bound by"
         },
         {
-          "source": "Cefazolin",
+          "source": "Piroxicam",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxycycline,Cefazolin": [
-          "Antibiotic",
+        "Doxycycline,Piroxicam": [
           "Organooxygen Compound"
         ]
       },
-      "id": "path_24378"
+      "id": "path_12344"
     },
     {
       "score": {
-        "ic_mean": 0.6003,
-        "final_score": 0.6003
+        "ic_mean": 0.5111,
+        "final_score": 0.5111
       },
       "nodes": [
         {
@@ -951,11 +487,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a11",
+          "id": "Slc22a8",
           "type": "Gene"
         },
         {
-          "id": "Ceftriaxone",
+          "id": "Phenylbutazone",
           "type": "Compound"
         },
         {
@@ -966,219 +502,26 @@
       "edges": [
         {
           "source": "Doxycycline",
-          "target": "Slc22a11",
+          "target": "Slc22a8",
           "label": "binds"
         },
         {
-          "source": "Slc22a11",
-          "target": "Ceftriaxone",
+          "source": "Slc22a8",
+          "target": "Phenylbutazone",
           "label": "is bound by"
         },
         {
-          "source": "Ceftriaxone",
+          "source": "Phenylbutazone",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxycycline,Ceftriaxone": [
-          "Antibiotic",
-          "Organooxygen Compound"
+        "Doxycycline,Phenylbutazone": [
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_24379"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5703,
-        "final_score": 0.5703
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefamandole",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefamandole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefamandole",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Cefamandole": [
-          "Antibiotic",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_24380"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5703,
-        "final_score": 0.5703
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Tetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Tetracycline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tetracycline",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Tetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ]
-      },
-      "id": "path_24381"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5703,
-        "final_score": 0.5703
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Cefalotin",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Cefalotin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cefalotin",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Cefalotin": [
-          "Antibiotic",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_24382"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5324,
-        "final_score": 0.5324
-      },
-      "nodes": [
-        {
-          "id": "Doxycycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a11",
-          "type": "Gene"
-        },
-        {
-          "id": "Minocycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Doxycycline",
-          "target": "Slc22a11",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a11",
-          "target": "Minocycline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Minocycline",
-          "target": "Slc22a6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Doxycycline,Minocycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
-        ]
-      },
-      "id": "path_24383"
+      "id": "path_12345"
     },
     {
       "score": {
@@ -1226,7 +569,7 @@
           "Organooxygen Compound"
         ]
       },
-      "id": "path_24384"
+      "id": "path_12346"
     },
     {
       "score": {
@@ -1243,7 +586,7 @@
           "type": "Gene"
         },
         {
-          "id": "Tetracycline",
+          "id": "Cefadroxil",
           "type": "Compound"
         },
         {
@@ -1259,23 +602,22 @@
         },
         {
           "source": "Slc22a8",
-          "target": "Tetracycline",
+          "target": "Cefadroxil",
           "label": "is bound by"
         },
         {
-          "source": "Tetracycline",
+          "source": "Cefadroxil",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Doxycycline,Tetracycline": [
-          "Tetracyclines",
-          "Tetracycline Antibiotic"
+        "Doxycycline,Cefadroxil": [
+          "Antibiotic",
+          "Organooxygen Compound"
         ]
       },
-      "id": "path_24385"
+      "id": "path_12347"
     }
-  ],
-  "verbalization": ""
+  ]
 }

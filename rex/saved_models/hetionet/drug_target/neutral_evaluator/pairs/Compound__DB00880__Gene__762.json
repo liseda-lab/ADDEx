@@ -46,14 +46,68 @@
           "Thiazide"
         ],
         "Chlorothiazide,Bendroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ],
         "Thiazides,Bendroflumethiazide": [
           "Thiazide"
         ]
       },
-      "id": "path_24402"
+      "id": "path_12364"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8929,
+        "final_score": 0.8929
+      },
+      "nodes": [
+        {
+          "id": "Chlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Thiazides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Hydrochlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorothiazide",
+          "target": "Thiazides",
+          "label": "is included in"
+        },
+        {
+          "source": "Thiazides",
+          "target": "Hydrochlorothiazide",
+          "label": "includes"
+        },
+        {
+          "source": "Hydrochlorothiazide",
+          "target": "Ca4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorothiazide,Thiazides": [
+          "Thiazide"
+        ],
+        "Chlorothiazide,Hydrochlorothiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ],
+        "Thiazides,Hydrochlorothiazide": [
+          "Thiazide"
+        ]
+      },
+      "id": "path_12365"
     },
     {
       "score": {
@@ -100,19 +154,19 @@
           "Thiazide"
         ],
         "Chlorothiazide,Methyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ],
         "Thiazides,Methyclothiazide": [
           "Thiazide"
         ]
       },
-      "id": "path_24403"
+      "id": "path_12366"
     },
     {
       "score": {
-        "ic_mean": 0.8159,
-        "final_score": 0.8159
+        "ic_mean": 0.8673,
+        "final_score": 0.8673
       },
       "nodes": [
         {
@@ -120,11 +174,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc12a3",
-          "type": "Gene"
+          "id": "Thiazides",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Cyclothiazide",
+          "id": "Hydroflumethiazide",
           "type": "Compound"
         },
         {
@@ -135,32 +189,38 @@
       "edges": [
         {
           "source": "Chlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
+          "target": "Thiazides",
+          "label": "is included in"
         },
         {
-          "source": "Slc12a3",
-          "target": "Cyclothiazide",
-          "label": "is bound by"
+          "source": "Thiazides",
+          "target": "Hydroflumethiazide",
+          "label": "includes"
         },
         {
-          "source": "Cyclothiazide",
+          "source": "Hydroflumethiazide",
           "target": "Ca4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorothiazide,Cyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+        "Chlorothiazide,Thiazides": [
+          "Thiazide"
+        ],
+        "Chlorothiazide,Hydroflumethiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ],
+        "Thiazides,Hydroflumethiazide": [
+          "Thiazide"
         ]
       },
-      "id": "path_24404"
+      "id": "path_12367"
     },
     {
       "score": {
-        "ic_mean": 0.8159,
-        "final_score": 0.8159
+        "ic_mean": 0.7426,
+        "final_score": 0.7426
       },
       "nodes": [
         {
@@ -168,8 +228,50 @@
           "type": "Compound"
         },
         {
-          "id": "Slc12a3",
+          "id": "Ca1",
           "type": "Gene"
+        },
+        {
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorothiazide",
+          "target": "Ca1",
+          "label": "binds"
+        },
+        {
+          "source": "Ca1",
+          "target": "Carbonate Dehydratase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carbonate Dehydratase Activity",
+          "target": "Ca4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12368"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7339,
+        "final_score": 0.7339
+      },
+      "nodes": [
+        {
+          "id": "Chlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Bendroflumethiazide",
@@ -183,13 +285,13 @@
       "edges": [
         {
           "source": "Chlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
+          "target": "Increased Diuresis",
+          "label": "is included in"
         },
         {
-          "source": "Slc12a3",
+          "source": "Increased Diuresis",
           "target": "Bendroflumethiazide",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Bendroflumethiazide",
@@ -199,16 +301,16 @@
       ],
       "lowest_common_ancestors": {
         "Chlorothiazide,Bendroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ]
       },
-      "id": "path_24405"
+      "id": "path_12369"
     },
     {
       "score": {
-        "ic_mean": 0.8159,
-        "final_score": 0.8159
+        "ic_mean": 0.7339,
+        "final_score": 0.7339
       },
       "nodes": [
         {
@@ -216,56 +318,8 @@
           "type": "Compound"
         },
         {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzthiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Benzthiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benzthiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Benzthiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24406"
-    },
-    {
-      "score": {
-        "ic_mean": 0.8159,
-        "final_score": 0.8159
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Metolazone",
@@ -279,13 +333,13 @@
       "edges": [
         {
           "source": "Chlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
+          "target": "Increased Diuresis",
+          "label": "is included in"
         },
         {
-          "source": "Slc12a3",
+          "source": "Increased Diuresis",
           "target": "Metolazone",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Metolazone",
@@ -295,16 +349,16 @@
       ],
       "lowest_common_ancestors": {
         "Chlorothiazide,Metolazone": [
-          "Organosulfur Compound",
+          "Organonitrogen Heterocyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_24407"
+      "id": "path_12370"
     },
     {
       "score": {
-        "ic_mean": 0.8159,
-        "final_score": 0.8159
+        "ic_mean": 0.7189,
+        "final_score": 0.7189
       },
       "nodes": [
         {
@@ -312,56 +366,8 @@
           "type": "Compound"
         },
         {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydrochlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Hydrochlorothiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydrochlorothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Hydrochlorothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24408"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7859,
-        "final_score": 0.7859
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Methyclothiazide",
@@ -375,13 +381,13 @@
       "edges": [
         {
           "source": "Chlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
+          "target": "Increased Diuresis",
+          "label": "is included in"
         },
         {
-          "source": "Slc12a3",
+          "source": "Increased Diuresis",
           "target": "Methyclothiazide",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Methyclothiazide",
@@ -391,203 +397,11 @@
       ],
       "lowest_common_ancestors": {
         "Chlorothiazide,Methyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ]
       },
-      "id": "path_24409"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7646,
-        "final_score": 0.7646
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Trichlormethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24410"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7646,
-        "final_score": 0.7646
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc12a3",
-          "target": "Hydroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydroflumethiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Hydroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24411"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7132,
-        "final_score": 0.7132
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Ca1",
-          "label": "binds"
-        },
-        {
-          "source": "Ca1",
-          "target": "Cyclothiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Cyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24412"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7132,
-        "final_score": 0.7132
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca1",
-          "type": "Gene"
-        },
-        {
-          "id": "Bendroflumethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Ca1",
-          "label": "binds"
-        },
-        {
-          "source": "Ca1",
-          "target": "Bendroflumethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bendroflumethiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Bendroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24413"
+      "id": "path_12371"
     },
     {
       "score": {
@@ -631,16 +445,16 @@
       ],
       "lowest_common_ancestors": {
         "Chlorothiazide,Benzthiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ]
       },
-      "id": "path_24414"
+      "id": "path_12372"
     },
     {
       "score": {
-        "ic_mean": 0.6832,
-        "final_score": 0.6832
+        "ic_mean": 0.7132,
+        "final_score": 0.7132
       },
       "nodes": [
         {
@@ -649,102 +463,6 @@
         },
         {
           "id": "Ca1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methyclothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Ca1",
-          "label": "binds"
-        },
-        {
-          "source": "Ca1",
-          "target": "Methyclothiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methyclothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Methyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24415"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6832,
-        "final_score": 0.6832
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Ca2",
-          "label": "binds"
-        },
-        {
-          "source": "Ca2",
-          "target": "Cyclothiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclothiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Cyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24416"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6832,
-        "final_score": 0.6832
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca2",
           "type": "Gene"
         },
         {
@@ -759,11 +477,11 @@
       "edges": [
         {
           "source": "Chlorothiazide",
-          "target": "Ca2",
+          "target": "Ca1",
           "label": "binds"
         },
         {
-          "source": "Ca2",
+          "source": "Ca1",
           "target": "Bendroflumethiazide",
           "label": "is bound by"
         },
@@ -775,64 +493,16 @@
       ],
       "lowest_common_ancestors": {
         "Chlorothiazide,Bendroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ]
       },
-      "id": "path_24417"
+      "id": "path_12373"
     },
     {
       "score": {
-        "ic_mean": 0.6832,
-        "final_score": 0.6832
-      },
-      "nodes": [
-        {
-          "id": "Chlorothiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca2",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzthiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Chlorothiazide",
-          "target": "Ca2",
-          "label": "binds"
-        },
-        {
-          "source": "Ca2",
-          "target": "Benzthiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benzthiazide",
-          "target": "Ca4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Chlorothiazide,Benzthiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_24418"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6619,
-        "final_score": 0.6619
+        "ic_mean": 0.7132,
+        "final_score": 0.7132
       },
       "nodes": [
         {
@@ -844,7 +514,7 @@
           "type": "Gene"
         },
         {
-          "id": "Trichlormethiazide",
+          "id": "Lacosamide",
           "type": "Compound"
         },
         {
@@ -860,27 +530,26 @@
         },
         {
           "source": "Ca1",
-          "target": "Trichlormethiazide",
+          "target": "Lacosamide",
           "label": "is bound by"
         },
         {
-          "source": "Trichlormethiazide",
+          "source": "Lacosamide",
           "target": "Ca4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Chlorothiazide,Trichlormethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+        "Chlorothiazide,Lacosamide": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_24419"
+      "id": "path_12374"
     },
     {
       "score": {
-        "ic_mean": 0.6619,
-        "final_score": 0.6619
+        "ic_mean": 0.7082,
+        "final_score": 0.7082
       },
       "nodes": [
         {
@@ -888,8 +557,8 @@
           "type": "Compound"
         },
         {
-          "id": "Ca1",
-          "type": "Gene"
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
         },
         {
           "id": "Hydroflumethiazide",
@@ -903,13 +572,13 @@
       "edges": [
         {
           "source": "Chlorothiazide",
-          "target": "Ca1",
-          "label": "binds"
+          "target": "Increased Diuresis",
+          "label": "is included in"
         },
         {
-          "source": "Ca1",
+          "source": "Increased Diuresis",
           "target": "Hydroflumethiazide",
-          "label": "is bound by"
+          "label": "includes"
         },
         {
           "source": "Hydroflumethiazide",
@@ -919,16 +588,16 @@
       ],
       "lowest_common_ancestors": {
         "Chlorothiazide,Hydroflumethiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ]
       },
-      "id": "path_24420"
+      "id": "path_12375"
     },
     {
       "score": {
-        "ic_mean": 0.6532,
-        "final_score": 0.6532
+        "ic_mean": 0.6832,
+        "final_score": 0.6832
       },
       "nodes": [
         {
@@ -936,7 +605,7 @@
           "type": "Compound"
         },
         {
-          "id": "Ca2",
+          "id": "Ca1",
           "type": "Gene"
         },
         {
@@ -951,11 +620,11 @@
       "edges": [
         {
           "source": "Chlorothiazide",
-          "target": "Ca2",
+          "target": "Ca1",
           "label": "binds"
         },
         {
-          "source": "Ca2",
+          "source": "Ca1",
           "target": "Methyclothiazide",
           "label": "is bound by"
         },
@@ -967,12 +636,219 @@
       ],
       "lowest_common_ancestors": {
         "Chlorothiazide,Methyclothiazide": [
-          "Benzothiadiazine",
-          "Thiazide Diuretic"
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
         ]
       },
-      "id": "path_24421"
+      "id": "path_12376"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5766,
+        "final_score": 0.5766
+      },
+      "nodes": [
+        {
+          "id": "Chlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzthiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorothiazide",
+          "target": "Cyclothiazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclothiazide",
+          "target": "Benzthiazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Benzthiazide",
+          "target": "Ca4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorothiazide,Cyclothiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ],
+        "Chlorothiazide,Benzthiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ],
+        "Cyclothiazide,Benzthiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ]
+      },
+      "id": "path_12377"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5766,
+        "final_score": 0.5766
+      },
+      "nodes": [
+        {
+          "id": "Chlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Polythiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzthiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorothiazide",
+          "target": "Polythiazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Polythiazide",
+          "target": "Benzthiazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Benzthiazide",
+          "target": "Ca4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorothiazide,Polythiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ],
+        "Chlorothiazide,Benzthiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ],
+        "Polythiazide,Benzthiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ]
+      },
+      "id": "path_12378"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5706,
+        "final_score": 0.5706
+      },
+      "nodes": [
+        {
+          "id": "Chlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Angiitis Necrotising",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methyclothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorothiazide",
+          "target": "Angiitis Necrotising",
+          "label": "causes"
+        },
+        {
+          "source": "Angiitis Necrotising",
+          "target": "Methyclothiazide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methyclothiazide",
+          "target": "Ca4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorothiazide,Methyclothiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ]
+      },
+      "id": "path_12379"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5633,
+        "final_score": 0.5633
+      },
+      "nodes": [
+        {
+          "id": "Chlorothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthopsia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methyclothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorothiazide",
+          "target": "Xanthopsia",
+          "label": "causes"
+        },
+        {
+          "source": "Xanthopsia",
+          "target": "Methyclothiazide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methyclothiazide",
+          "target": "Ca4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorothiazide,Methyclothiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ]
+      },
+      "id": "path_12380"
     }
-  ],
-  "verbalization": ""
+  ]
 }

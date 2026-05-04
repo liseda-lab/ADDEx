@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7395,
-        "final_score": 0.7395
+        "ic_mean": 0.7461,
+        "final_score": 0.7461
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Gabrg2",
+          "id": "Gabra1",
           "type": "Gene"
         },
         {
-          "id": "Glutethimide",
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meprobamate",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrb3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8627"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6969,
+        "final_score": 0.6969
+      },
+      "nodes": [
+        {
+          "id": "Meprobamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Methohexital",
           "type": "Compound"
         },
         {
@@ -27,32 +69,32 @@
       "edges": [
         {
           "source": "Meprobamate",
-          "target": "Gabrg2",
+          "target": "Gabra1",
           "label": "binds"
         },
         {
-          "source": "Gabrg2",
-          "target": "Glutethimide",
+          "source": "Gabra1",
+          "target": "Methohexital",
           "label": "is bound by"
         },
         {
-          "source": "Glutethimide",
+          "source": "Methohexital",
           "target": "Gabrb3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Meprobamate,Glutethimide": [
-          "Sedative And Hypnotic",
-          "Organic Molecular Entity"
+        "Meprobamate,Methohexital": [
+          "Organic Molecular Entity",
+          "Sedative And Hypnotic"
         ]
       },
-      "id": "path_17261"
+      "id": "path_8628"
     },
     {
       "score": {
-        "ic_mean": 0.6881,
-        "final_score": 0.6881
+        "ic_mean": 0.6969,
+        "final_score": 0.6969
       },
       "nodes": [
         {
@@ -60,7 +102,7 @@
           "type": "Compound"
         },
         {
-          "id": "Gabrg2",
+          "id": "Gabra1",
           "type": "Gene"
         },
         {
@@ -75,11 +117,11 @@
       "edges": [
         {
           "source": "Meprobamate",
-          "target": "Gabrg2",
+          "target": "Gabra1",
           "label": "binds"
         },
         {
-          "source": "Gabrg2",
+          "source": "Gabra1",
           "target": "Ethchlorvynol",
           "label": "is bound by"
         },
@@ -91,16 +133,16 @@
       ],
       "lowest_common_ancestors": {
         "Meprobamate,Ethchlorvynol": [
-          "Sedative And Hypnotic",
-          "Organic Molecular Entity"
+          "Organic Molecular Entity",
+          "Sedative And Hypnotic"
         ]
       },
-      "id": "path_17262"
+      "id": "path_8629"
     },
     {
       "score": {
-        "ic_mean": 0.6881,
-        "final_score": 0.6881
+        "ic_mean": 0.6668,
+        "final_score": 0.6668
       },
       "nodes": [
         {
@@ -108,11 +150,11 @@
           "type": "Compound"
         },
         {
-          "id": "Gabrg2",
+          "id": "Gabra1",
           "type": "Gene"
         },
         {
-          "id": "Methyprylon",
+          "id": "Clotiazepam",
           "type": "Compound"
         },
         {
@@ -123,28 +165,266 @@
       "edges": [
         {
           "source": "Meprobamate",
-          "target": "Gabrg2",
+          "target": "Gabra1",
           "label": "binds"
         },
         {
-          "source": "Gabrg2",
-          "target": "Methyprylon",
+          "source": "Gabra1",
+          "target": "Clotiazepam",
           "label": "is bound by"
         },
         {
-          "source": "Methyprylon",
+          "source": "Clotiazepam",
           "target": "Gabrb3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Meprobamate,Methyprylon": [
-          "Sedative And Hypnotic",
+        "Meprobamate,Clotiazepam": [
+          "Organic Molecular Entity",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_8630"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6668,
+        "final_score": 0.6668
+      },
+      "nodes": [
+        {
+          "id": "Meprobamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Fludiazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meprobamate",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Fludiazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fludiazepam",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meprobamate,Fludiazepam": [
+          "Organic Molecular Entity",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_8631"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6455,
+        "final_score": 0.6455
+      },
+      "nodes": [
+        {
+          "id": "Meprobamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Talbutal",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meprobamate",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Talbutal",
+          "label": "is bound by"
+        },
+        {
+          "source": "Talbutal",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meprobamate,Talbutal": [
+          "Organic Molecular Entity",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_8632"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6455,
+        "final_score": 0.6455
+      },
+      "nodes": [
+        {
+          "id": "Meprobamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meprobamate",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Clorazepate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meprobamate,Clorazepate": [
           "Organic Molecular Entity"
         ]
       },
-      "id": "path_17263"
+      "id": "path_8633"
+    },
+    {
+      "score": {
+        "ic_mean": 0.629,
+        "final_score": 0.629
+      },
+      "nodes": [
+        {
+          "id": "Meprobamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meprobamate",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Flurazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Flurazepam",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meprobamate,Flurazepam": [
+          "Organic Molecular Entity",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_8634"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5942,
+        "final_score": 0.5942
+      },
+      "nodes": [
+        {
+          "id": "Meprobamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Isoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meprobamate",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Isoflurane",
+          "label": "is bound by"
+        },
+        {
+          "source": "Isoflurane",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meprobamate,Isoflurane": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8635"
     }
-  ],
-  "verbalization": ""
+  ]
 }

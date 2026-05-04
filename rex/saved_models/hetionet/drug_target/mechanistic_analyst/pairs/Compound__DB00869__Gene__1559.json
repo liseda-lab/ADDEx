@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00869 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4256,
+        "final_score": 0.4256
+      },
+      "nodes": [
+        {
+          "id": "Dorzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sinoatrial Block",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diltiazem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dorzolamide",
+          "target": "Sinoatrial Block",
+          "label": "causes"
+        },
+        {
+          "source": "Sinoatrial Block",
+          "target": "Diltiazem",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diltiazem",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dorzolamide,Diltiazem": [
+          "Primary Amide"
+        ]
+      },
+      "id": "path_10340"
+    }
+  ]
+}

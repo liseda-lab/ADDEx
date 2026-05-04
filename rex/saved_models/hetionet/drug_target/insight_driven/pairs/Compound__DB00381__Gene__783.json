@@ -1,0 +1,152 @@
+{
+  "id": "Compound::DB00381 - Gene::783",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7168,
+        "final_score": 0.7751,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1b",
+          "type": "Gene"
+        },
+        {
+          "id": "High Voltage-gated Calcium Channel Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cacnb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Cacna1b",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna1b",
+          "target": "High Voltage-gated Calcium Channel Activity",
+          "label": "participates"
+        },
+        {
+          "source": "High Voltage-gated Calcium Channel Activity",
+          "target": "Cacnb2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4693"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6336,
+        "final_score": 0.7334,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacnb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Nifedipine",
+          "label": "includes"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cacnb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Nifedipine": [
+          "Methyl Ester",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_4694"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6923,
+        "final_score": 0.6795,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacnb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amlodipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Nifedipine",
+          "label": "includes"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cacnb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amlodipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Amlodipine,Nifedipine": [
+          "Methyl Ester",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Nifedipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_4695"
+    }
+  ]
+}

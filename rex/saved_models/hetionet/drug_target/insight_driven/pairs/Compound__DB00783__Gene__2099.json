@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00783 - Gene::2099",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5003,
+        "final_score": 0.5003
+      },
+      "nodes": [
+        {
+          "id": "Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Mass",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etonogestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Esr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estradiol",
+          "target": "Breast Mass",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Mass",
+          "target": "Etonogestrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etonogestrel",
+          "target": "Esr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estradiol,Etonogestrel": [
+          "17Beta-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_2115"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5702,
+        "final_score": 0.4518,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Contact Lens Intolerance",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Desogestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Esr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estradiol",
+          "target": "Contact Lens Intolerance",
+          "label": "causes"
+        },
+        {
+          "source": "Contact Lens Intolerance",
+          "target": "Desogestrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Desogestrel",
+          "target": "Esr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estradiol,Desogestrel": [
+          "17Beta-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_2116"
+    }
+  ]
+}

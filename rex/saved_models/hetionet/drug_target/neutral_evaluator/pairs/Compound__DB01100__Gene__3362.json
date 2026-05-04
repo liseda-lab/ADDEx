@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01100 - Gene::3362",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.582,
+        "final_score": 0.582
+      },
+      "nodes": [
+        {
+          "id": "Pimozide",
+          "type": "Compound"
+        },
+        {
+          "id": "Vermiculation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pimozide",
+          "target": "Vermiculation",
+          "label": "causes"
+        },
+        {
+          "source": "Vermiculation",
+          "target": "Thiothixene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Thiothixene",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pimozide,Thiothixene": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_11860"
+    }
+  ]
 }

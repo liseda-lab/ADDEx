@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00472 - Gene::213",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5041,
+        "final_score": 0.5041
+      },
+      "nodes": [
+        {
+          "id": "Fluoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Enlarged Clitoris",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methyltestosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxetine",
+          "target": "Enlarged Clitoris",
+          "label": "causes"
+        },
+        {
+          "source": "Enlarged Clitoris",
+          "target": "Methyltestosterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methyltestosterone",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluoxetine,Methyltestosterone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_11415"
+    }
+  ]
 }

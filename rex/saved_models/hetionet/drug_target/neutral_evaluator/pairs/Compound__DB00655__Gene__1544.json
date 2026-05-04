@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5873,
-        "final_score": 0.5873
+        "ic_mean": 0.5577,
+        "final_score": 0.5577
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp4a11",
-          "type": "Gene"
+          "id": "Abnormal Withdrawal Bleeding",
+          "type": "Side Effect"
         },
         {
-          "id": "Pentamidine",
+          "id": "Estropipate",
           "type": "Compound"
         },
         {
@@ -27,26 +27,26 @@
       "edges": [
         {
           "source": "Estrone",
-          "target": "Cyp4a11",
-          "label": "binds"
+          "target": "Abnormal Withdrawal Bleeding",
+          "label": "causes"
         },
         {
-          "source": "Cyp4a11",
-          "target": "Pentamidine",
-          "label": "is bound by"
+          "source": "Abnormal Withdrawal Bleeding",
+          "target": "Estropipate",
+          "label": "is caused by"
         },
         {
-          "source": "Pentamidine",
+          "source": "Estropipate",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estrone,Pentamidine": [
-          "Organic Aromatic Compound"
+        "Estrone,Estropipate": [
+          "Steroid"
         ]
       },
-      "id": "path_17347"
+      "id": "path_8689"
     },
     {
       "score": {
@@ -93,54 +93,7 @@
           "Steroid"
         ]
       },
-      "id": "path_17348"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5577,
-        "final_score": 0.5577
-      },
-      "nodes": [
-        {
-          "id": "Estrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abnormal Withdrawal Bleeding",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Estropipate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Estrone",
-          "target": "Abnormal Withdrawal Bleeding",
-          "label": "causes"
-        },
-        {
-          "source": "Abnormal Withdrawal Bleeding",
-          "target": "Estropipate",
-          "label": "is caused by"
-        },
-        {
-          "source": "Estropipate",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Estrone,Estropipate": [
-          "Steroid"
-        ]
-      },
-      "id": "path_17349"
+      "id": "path_8690"
     },
     {
       "score": {
@@ -187,7 +140,7 @@
           "Steroid"
         ]
       },
-      "id": "path_17350"
+      "id": "path_8691"
     },
     {
       "score": {
@@ -234,12 +187,12 @@
           "Steroid"
         ]
       },
-      "id": "path_17351"
+      "id": "path_8692"
     },
     {
       "score": {
-        "ic_mean": 0.5158,
-        "final_score": 0.5158
+        "ic_mean": 0.5151,
+        "final_score": 0.5151
       },
       "nodes": [
         {
@@ -247,11 +200,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco2b1",
-          "type": "Gene"
+          "id": "Haemangioma",
+          "type": "Side Effect"
         },
         {
-          "id": "Conjugated Estrogens",
+          "id": "Estropipate",
           "type": "Compound"
         },
         {
@@ -262,21 +215,26 @@
       "edges": [
         {
           "source": "Estrone",
-          "target": "Slco2b1",
-          "label": "binds"
+          "target": "Haemangioma",
+          "label": "causes"
         },
         {
-          "source": "Slco2b1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
+          "source": "Haemangioma",
+          "target": "Estropipate",
+          "label": "is caused by"
         },
         {
-          "source": "Conjugated Estrogens",
+          "source": "Estropipate",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
-      "id": "path_17352"
+      "lowest_common_ancestors": {
+        "Estrone,Estropipate": [
+          "Steroid"
+        ]
+      },
+      "id": "path_8693"
     },
     {
       "score": {
@@ -323,12 +281,12 @@
           "Steroid"
         ]
       },
-      "id": "path_17353"
+      "id": "path_8694"
     },
     {
       "score": {
-        "ic_mean": 0.4971,
-        "final_score": 0.4971
+        "ic_mean": 0.4846,
+        "final_score": 0.4846
       },
       "nodes": [
         {
@@ -336,11 +294,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Formestane",
+          "type": "Compound"
         },
         {
-          "id": "Simeprevir",
+          "id": "Estropipate",
           "type": "Compound"
         },
         {
@@ -351,115 +309,33 @@
       "edges": [
         {
           "source": "Estrone",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Formestane",
+          "label": "resembles"
         },
         {
-          "source": "Slco1b1",
-          "target": "Simeprevir",
-          "label": "is bound by"
+          "source": "Formestane",
+          "target": "Estropipate",
+          "label": "resembles"
         },
         {
-          "source": "Simeprevir",
+          "source": "Estropipate",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estrone,Simeprevir": [
-          "Organic Cyclic Compound"
+        "Estrone,Formestane": [
+          "Hydroxy Steroid"
+        ],
+        "Estrone,Estropipate": [
+          "Steroid"
+        ],
+        "Formestane,Estropipate": [
+          "Steroid",
+          "Hormone Therapy Agent"
         ]
       },
-      "id": "path_17354"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4971,
-        "final_score": 0.4971
-      },
-      "nodes": [
-        {
-          "id": "Estrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pantoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Estrone",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Pantoprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pantoprazole",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Estrone,Pantoprazole": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_17355"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4809,
-        "final_score": 0.4809
-      },
-      "nodes": [
-        {
-          "id": "Estrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Superficial Phlebothrombosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Estrone",
-          "target": "Superficial Phlebothrombosis",
-          "label": "causes"
-        },
-        {
-          "source": "Superficial Phlebothrombosis",
-          "target": "Conjugated Estrogens",
-          "label": "is caused by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "id": "path_17356"
+      "id": "path_8695"
     },
     {
       "score": {
@@ -501,7 +377,49 @@
           "label": "binds"
         }
       ],
-      "id": "path_17357"
+      "id": "path_8696"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4809,
+        "final_score": 0.4809
+      },
+      "nodes": [
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Superficial Phlebothrombosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estrone",
+          "target": "Superficial Phlebothrombosis",
+          "label": "causes"
+        },
+        {
+          "source": "Superficial Phlebothrombosis",
+          "target": "Conjugated Estrogens",
+          "label": "is caused by"
+        },
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_8697"
     },
     {
       "score": {
@@ -543,7 +461,91 @@
           "label": "binds"
         }
       ],
-      "id": "path_17358"
+      "id": "path_8698"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4632,
+        "final_score": 0.4632
+      },
+      "nodes": [
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ectropion Of Cervix",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estrone",
+          "target": "Ectropion Of Cervix",
+          "label": "causes"
+        },
+        {
+          "source": "Ectropion Of Cervix",
+          "target": "Conjugated Estrogens",
+          "label": "is caused by"
+        },
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_8699"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4382,
+        "final_score": 0.4382
+      },
+      "nodes": [
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemangioma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estrone",
+          "target": "Haemangioma",
+          "label": "causes"
+        },
+        {
+          "source": "Haemangioma",
+          "target": "Conjugated Estrogens",
+          "label": "is caused by"
+        },
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_8700"
     },
     {
       "score": {
@@ -585,12 +587,12 @@
           "label": "binds"
         }
       ],
-      "id": "path_17359"
+      "id": "path_8701"
     },
     {
       "score": {
-        "ic_mean": 0.4374,
-        "final_score": 0.4374
+        "ic_mean": 0.4378,
+        "final_score": 0.4378
       },
       "nodes": [
         {
@@ -598,11 +600,11 @@
           "type": "Compound"
         },
         {
-          "id": "Superficial Phlebothrombosis",
+          "id": "Haemangioma",
           "type": "Side Effect"
         },
         {
-          "id": "Estradiol",
+          "id": "Clomifene",
           "type": "Compound"
         },
         {
@@ -613,28 +615,74 @@
       "edges": [
         {
           "source": "Estrone",
-          "target": "Superficial Phlebothrombosis",
+          "target": "Haemangioma",
           "label": "causes"
         },
         {
-          "source": "Superficial Phlebothrombosis",
-          "target": "Estradiol",
+          "source": "Haemangioma",
+          "target": "Clomifene",
           "label": "is caused by"
         },
         {
-          "source": "Estradiol",
+          "source": "Clomifene",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Estrone,Estradiol": [
-          "Phenolic Steroid",
-          "Estrogen"
+        "Estrone,Clomifene": [
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_17360"
+      "id": "path_8702"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4298,
+        "final_score": 0.4298
+      },
+      "nodes": [
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemangioma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estrone",
+          "target": "Haemangioma",
+          "label": "causes"
+        },
+        {
+          "source": "Haemangioma",
+          "target": "Progesterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estrone,Progesterone": [
+          "Oxo Steroid",
+          "Steroid Hormone"
+        ]
+      },
+      "id": "path_8703"
     }
-  ],
-  "verbalization": ""
+  ]
 }

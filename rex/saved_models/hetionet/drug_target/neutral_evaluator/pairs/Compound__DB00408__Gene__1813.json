@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6473,
-        "final_score": 0.6473
+        "ic_mean": 0.6722,
+        "final_score": 0.6722
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Drd5",
+          "id": "Chrm5",
           "type": "Gene"
         },
         {
-          "id": "Apomorphine",
-          "type": "Compound"
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Drd2",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Drd5",
+          "target": "Chrm5",
           "label": "binds"
         },
         {
-          "source": "Drd5",
-          "target": "Apomorphine",
-          "label": "is bound by"
+          "source": "Chrm5",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Apomorphine",
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
           "target": "Drd2",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Loxapine,Apomorphine": [
-          "Heteroorganic Entity",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_8755"
+      "id": "path_4225"
     },
     {
       "score": {
-        "ic_mean": 0.6358,
-        "final_score": 0.6358
+        "ic_mean": 0.6608,
+        "final_score": 0.6608
       },
       "nodes": [
         {
@@ -60,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Htr5a",
           "type": "Gene"
         },
         {
-          "id": "Cyproheptadine",
+          "id": "Olanzapine",
           "type": "Compound"
         },
         {
@@ -75,31 +69,32 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Htr6",
+          "target": "Htr5a",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Cyproheptadine",
+          "source": "Htr5a",
+          "target": "Olanzapine",
           "label": "is bound by"
         },
         {
-          "source": "Cyproheptadine",
+          "source": "Olanzapine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Cyproheptadine": [
-          "Organic Heterocyclic Compound"
+        "Loxapine,Olanzapine": [
+          "Organic Heteropolycyclic Compound",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_8756"
+      "id": "path_4226"
     },
     {
       "score": {
-        "ic_mean": 0.6358,
-        "final_score": 0.6358
+        "ic_mean": 0.6058,
+        "final_score": 0.6058
       },
       "nodes": [
         {
@@ -107,11 +102,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Chrm5",
           "type": "Gene"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Propiomazine",
           "type": "Compound"
         },
         {
@@ -122,32 +117,32 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Htr6",
+          "target": "Chrm5",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
+          "source": "Chrm5",
+          "target": "Propiomazine",
           "label": "is bound by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Propiomazine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Mesoridazine": [
+        "Loxapine,Propiomazine": [
           "Organic Heterotricyclic Compound",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_8757"
+      "id": "path_4227"
     },
     {
       "score": {
-        "ic_mean": 0.6253,
-        "final_score": 0.6253
+        "ic_mean": 0.6058,
+        "final_score": 0.6058
       },
       "nodes": [
         {
@@ -155,11 +150,11 @@
           "type": "Compound"
         },
         {
-          "id": "Acute Dystonia",
-          "type": "Side Effect"
+          "id": "Htr6",
+          "type": "Gene"
         },
         {
-          "id": "Amisulpride",
+          "id": "Thiothixene",
           "type": "Compound"
         },
         {
@@ -170,128 +165,80 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Acute Dystonia",
-          "label": "causes"
+          "target": "Htr6",
+          "label": "binds"
         },
         {
-          "source": "Acute Dystonia",
-          "target": "Amisulpride",
-          "label": "is caused by"
+          "source": "Htr6",
+          "target": "Thiothixene",
+          "label": "is bound by"
         },
         {
-          "source": "Amisulpride",
+          "source": "Thiothixene",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Amisulpride": [
+        "Loxapine,Thiothixene": [
           "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_8758"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6172,
-        "final_score": 0.6172
-      },
-      "nodes": [
-        {
-          "id": "Loxapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd5",
-          "type": "Gene"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Loxapine",
-          "target": "Drd5",
-          "label": "binds"
-        },
-        {
-          "source": "Drd5",
-          "target": "Pramipexole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Loxapine,Pramipexole": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_8759"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6094,
-        "final_score": 0.6094
-      },
-      "nodes": [
-        {
-          "id": "Loxapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr7",
-          "type": "Gene"
-        },
-        {
-          "id": "Molindone",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Loxapine",
-          "target": "Htr7",
-          "label": "binds"
-        },
-        {
-          "source": "Htr7",
-          "target": "Molindone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Molindone",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Loxapine,Molindone": [
-          "Organic Heteropolycyclic Compound",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_8760"
+      "id": "path_4228"
     },
     {
       "score": {
-        "ic_mean": 0.6094,
-        "final_score": 0.6094
+        "ic_mean": 0.5895,
+        "final_score": 0.5895
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gait Shuffling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Gait Shuffling",
+          "label": "causes"
+        },
+        {
+          "source": "Gait Shuffling",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prochlorperazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loxapine,Prochlorperazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4229"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5794,
+        "final_score": 0.5794
       },
       "nodes": [
         {
@@ -303,7 +250,7 @@
           "type": "Gene"
         },
         {
-          "id": "Apomorphine",
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -319,27 +266,27 @@
         },
         {
           "source": "Htr1d",
-          "target": "Apomorphine",
+          "target": "Lisuride",
           "label": "is bound by"
         },
         {
-          "source": "Apomorphine",
+          "source": "Lisuride",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Apomorphine": [
-          "Heteroorganic Entity",
-          "Agent Affecting Nervous System"
+        "Loxapine,Lisuride": [
+          "Agent Affecting Nervous System",
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_8761"
+      "id": "path_4230"
     },
     {
       "score": {
-        "ic_mean": 0.5959,
-        "final_score": 0.5959
+        "ic_mean": 0.5492,
+        "final_score": 0.5492
       },
       "nodes": [
         {
@@ -347,11 +294,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1b",
-          "type": "Gene"
+          "id": "Gait Shuffling",
+          "type": "Side Effect"
         },
         {
-          "id": "Apomorphine",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -362,28 +309,75 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Htr1b",
-          "label": "binds"
+          "target": "Gait Shuffling",
+          "label": "causes"
         },
         {
-          "source": "Htr1b",
-          "target": "Apomorphine",
-          "label": "is bound by"
+          "source": "Gait Shuffling",
+          "target": "Chlorpromazine",
+          "label": "is caused by"
         },
         {
-          "source": "Apomorphine",
+          "source": "Chlorpromazine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Apomorphine": [
-          "Heteroorganic Entity",
+        "Loxapine,Chlorpromazine": [
+          "Organic Heterotricyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_4231"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5166,
+        "final_score": 0.5166
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Trimipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loxapine,Trimipramine": [
+          "Organic Heterotricyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_8762"
+      "id": "path_4232"
     }
-  ],
-  "verbalization": ""
+  ]
 }

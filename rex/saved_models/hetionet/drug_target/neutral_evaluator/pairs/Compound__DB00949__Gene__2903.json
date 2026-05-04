@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00949 - Gene::2903",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5644,
+        "final_score": 0.5644
+      },
+      "nodes": [
+        {
+          "id": "Felbamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Livedo Reticularis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amantadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felbamate",
+          "target": "Livedo Reticularis",
+          "label": "causes"
+        },
+        {
+          "source": "Livedo Reticularis",
+          "target": "Amantadine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amantadine",
+          "target": "Grin2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Felbamate,Amantadine": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9871"
+    }
+  ]
 }

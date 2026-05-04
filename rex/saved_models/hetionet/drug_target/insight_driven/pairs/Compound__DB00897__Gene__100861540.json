@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00897 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6013,
+        "final_score": 0.7173,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Triazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triazolam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Midazolam",
+          "label": "includes"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Triazolam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Triazolam,Midazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Midazolam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_2734"
+    }
+  ]
+}

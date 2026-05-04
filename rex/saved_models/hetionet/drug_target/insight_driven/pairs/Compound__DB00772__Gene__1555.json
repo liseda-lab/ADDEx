@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00772 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4566,
+        "final_score": 0.4566
+      },
+      "nodes": [
+        {
+          "id": "Malathion",
+          "type": "Compound"
+        },
+        {
+          "id": "Sensitisation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Malathion",
+          "target": "Sensitisation",
+          "label": "causes"
+        },
+        {
+          "source": "Sensitisation",
+          "target": "Erythromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Erythromycin",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Malathion,Erythromycin": [
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_561"
+    }
+  ]
+}

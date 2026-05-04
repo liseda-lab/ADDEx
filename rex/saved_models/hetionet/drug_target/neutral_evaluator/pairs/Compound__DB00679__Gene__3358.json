@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6688,
-        "final_score": 0.6688
+        "ic_mean": 0.553,
+        "final_score": 0.553
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Obstipation",
+          "type": "Side Effect"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Lisuride",
           "type": "Compound"
         },
         {
@@ -27,124 +27,81 @@
       "edges": [
         {
           "source": "Thioridazine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Obstipation",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
-          "label": "is bound by"
+          "source": "Obstipation",
+          "target": "Lisuride",
+          "label": "is caused by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Lisuride",
           "target": "Htr2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Thioridazine,Mesoridazine": [
-          "Phenothiazines",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_12915"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6388,
-        "final_score": 0.6388
-      },
-      "nodes": [
-        {
-          "id": "Thioridazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Thiothixene",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2c",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Thioridazine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Thiothixene",
-          "label": "is bound by"
-        },
-        {
-          "source": "Thiothixene",
-          "target": "Htr2c",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Thioridazine,Thiothixene": [
-          "Organonitrogen Heterocyclic Compound",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_12916"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6175,
-        "final_score": 0.6175
-      },
-      "nodes": [
-        {
-          "id": "Thioridazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Duloxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2c",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Thioridazine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Duloxetine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Duloxetine",
-          "target": "Htr2c",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Thioridazine,Duloxetine": [
-          "Organic Heterocyclic Compound",
+        "Thioridazine,Lisuride": [
+          "Organonitrogen Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12917"
+      "id": "path_6547"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5066,
+        "final_score": 0.5066
+      },
+      "nodes": [
+        {
+          "id": "Thioridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Isothipendyl",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyamemazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thioridazine",
+          "target": "Isothipendyl",
+          "label": "resembles"
+        },
+        {
+          "source": "Isothipendyl",
+          "target": "Cyamemazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyamemazine",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thioridazine,Isothipendyl": [
+          "Organic Cyclic Compound"
+        ],
+        "Thioridazine,Cyamemazine": [
+          "Phenothiazines"
+        ],
+        "Isothipendyl,Cyamemazine": [
+          "Histamine-1 Receptor Antagonist",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6548"
     }
-  ],
-  "verbalization": ""
+  ]
 }

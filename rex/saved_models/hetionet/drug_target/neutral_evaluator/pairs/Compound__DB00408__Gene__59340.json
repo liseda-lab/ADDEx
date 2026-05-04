@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB00408 - Gene::59340",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7427,
+        "final_score": 0.7427
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Chrm5",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm5",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
+          "target": "Hrh4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2340"
+    }
+  ]
 }

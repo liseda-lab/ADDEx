@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7752,
-        "final_score": 0.7752
+        "ic_mean": 0.7271,
+        "final_score": 0.7271
       },
       "nodes": [
         {
@@ -12,11 +12,95 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1f",
+          "id": "Adra1a",
           "type": "Gene"
         },
         {
-          "id": "Yohimbine",
+          "id": "Alpha1-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sertindole",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Alpha1-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha1-adrenergic Receptor Activity",
+          "target": "Adra1b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15897"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6884,
+        "final_score": 0.6884
+      },
+      "nodes": [
+        {
+          "id": "Sertindole",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sertindole",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra1b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15898"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6243,
+        "final_score": 0.6243
+      },
+      "nodes": [
+        {
+          "id": "Sertindole",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxymetazoline",
           "type": "Compound"
         },
         {
@@ -27,32 +111,32 @@
       "edges": [
         {
           "source": "Sertindole",
-          "target": "Htr1f",
+          "target": "Adra1a",
           "label": "binds"
         },
         {
-          "source": "Htr1f",
-          "target": "Yohimbine",
+          "source": "Adra1a",
+          "target": "Oxymetazoline",
           "label": "is bound by"
         },
         {
-          "source": "Yohimbine",
+          "source": "Oxymetazoline",
           "target": "Adra1b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sertindole,Yohimbine": [
-          "Organic Heteropolycyclic Compound",
+        "Sertindole,Oxymetazoline": [
+          "Organonitrogen Heterocyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30911"
+      "id": "path_15899"
     },
     {
       "score": {
-        "ic_mean": 0.7374,
-        "final_score": 0.7374
+        "ic_mean": 0.6243,
+        "final_score": 0.6243
       },
       "nodes": [
         {
@@ -60,343 +144,7 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1e",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1e",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1e",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30912"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7374,
-        "final_score": 0.7374
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1f",
-          "type": "Gene"
-        },
-        {
-          "id": "Ergotamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1f",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1f",
-          "target": "Ergotamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ergotamine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Ergotamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30913"
-    },
-    {
-      "score": {
-        "ic_mean": 0.686,
-        "final_score": 0.686
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1d",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1d",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30914"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6725,
-        "final_score": 0.6725
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30915"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6666,
-        "final_score": 0.6666
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Methoxamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Methoxamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methoxamine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Methoxamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30916"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6666,
-        "final_score": 0.6666
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapiprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Dapiprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapiprazole",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Dapiprazole": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30917"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6666,
-        "final_score": 0.6666
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30918"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6666,
-        "final_score": 0.6666
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
+          "id": "Adra1a",
           "type": "Gene"
         },
         {
@@ -411,11 +159,11 @@
       "edges": [
         {
           "source": "Sertindole",
-          "target": "Adra1d",
+          "target": "Adra1a",
           "label": "binds"
         },
         {
-          "source": "Adra1d",
+          "source": "Adra1a",
           "target": "Terazosin",
           "label": "is bound by"
         },
@@ -427,16 +175,16 @@
       ],
       "lowest_common_ancestors": {
         "Sertindole,Terazosin": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30919"
+      "id": "path_15900"
     },
     {
       "score": {
-        "ic_mean": 0.6347,
-        "final_score": 0.6347
+        "ic_mean": 0.5872,
+        "final_score": 0.5872
       },
       "nodes": [
         {
@@ -444,487 +192,7 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Xylometazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1d",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1d",
-          "target": "Xylometazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Xylometazoline",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Xylometazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_30920"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6347,
-        "final_score": 0.6347
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1d",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1d",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30921"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6243,
-        "final_score": 0.6243
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Methoxamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1a",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1a",
-          "target": "Methoxamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methoxamine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Methoxamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30922"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6243,
-        "final_score": 0.6243
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1a",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1a",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Oxymetazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30923"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6212,
-        "final_score": 0.6212
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Xylometazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Xylometazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Xylometazoline",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Xylometazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_30924"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6212,
-        "final_score": 0.6212
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30925"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6182,
-        "final_score": 0.6182
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1e",
-          "type": "Gene"
-        },
-        {
-          "id": "Ergotamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Htr1e",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1e",
-          "target": "Ergotamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ergotamine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Ergotamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30926"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6153,
-        "final_score": 0.6153
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Xylometazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Xylometazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Xylometazoline",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Xylometazoline": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_30927"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6153,
-        "final_score": 0.6153
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenylephrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Phenylephrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenylephrine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Phenylephrine": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_30928"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6153,
-        "final_score": 0.6153
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30929"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6153,
-        "final_score": 0.6153
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
+          "id": "Htr1a",
           "type": "Gene"
         },
         {
@@ -939,11 +207,11 @@
       "edges": [
         {
           "source": "Sertindole",
-          "target": "Adra1d",
+          "target": "Htr1a",
           "label": "binds"
         },
         {
-          "source": "Adra1d",
+          "source": "Htr1a",
           "target": "Pergolide",
           "label": "is bound by"
         },
@@ -959,12 +227,12 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30930"
+      "id": "path_15901"
     },
     {
       "score": {
-        "ic_mean": 0.6047,
-        "final_score": 0.6047
+        "ic_mean": 0.5872,
+        "final_score": 0.5872
       },
       "nodes": [
         {
@@ -972,11 +240,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1d",
+          "id": "Htr1a",
           "type": "Gene"
         },
         {
-          "id": "Lisuride",
+          "id": "Bromocriptine",
           "type": "Compound"
         },
         {
@@ -987,32 +255,32 @@
       "edges": [
         {
           "source": "Sertindole",
-          "target": "Htr1d",
+          "target": "Htr1a",
           "label": "binds"
         },
         {
-          "source": "Htr1d",
-          "target": "Lisuride",
+          "source": "Htr1a",
+          "target": "Bromocriptine",
           "label": "is bound by"
         },
         {
-          "source": "Lisuride",
+          "source": "Bromocriptine",
           "target": "Adra1b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sertindole,Lisuride": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Sertindole,Bromocriptine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30931"
+      "id": "path_15902"
     },
     {
       "score": {
-        "ic_mean": 0.5912,
-        "final_score": 0.5912
+        "ic_mean": 0.573,
+        "final_score": 0.573
       },
       "nodes": [
         {
@@ -1020,11 +288,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1b",
+          "id": "Adra1a",
           "type": "Gene"
         },
         {
-          "id": "Lisuride",
+          "id": "Phenylephrine",
           "type": "Compound"
         },
         {
@@ -1035,32 +303,32 @@
       "edges": [
         {
           "source": "Sertindole",
-          "target": "Htr1b",
+          "target": "Adra1a",
           "label": "binds"
         },
         {
-          "source": "Htr1b",
-          "target": "Lisuride",
+          "source": "Adra1a",
+          "target": "Phenylephrine",
           "label": "is bound by"
         },
         {
-          "source": "Lisuride",
+          "source": "Phenylephrine",
           "target": "Adra1b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sertindole,Lisuride": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Sertindole,Phenylephrine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30932"
+      "id": "path_15903"
     },
     {
       "score": {
-        "ic_mean": 0.5912,
-        "final_score": 0.5912
+        "ic_mean": 0.573,
+        "final_score": 0.573
       },
       "nodes": [
         {
@@ -1068,11 +336,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1b",
+          "id": "Adra1a",
           "type": "Gene"
         },
         {
-          "id": "Risperidone",
+          "id": "Xylometazoline",
           "type": "Compound"
         },
         {
@@ -1083,124 +351,27 @@
       "edges": [
         {
           "source": "Sertindole",
-          "target": "Htr1b",
+          "target": "Adra1a",
           "label": "binds"
         },
         {
-          "source": "Htr1b",
-          "target": "Risperidone",
+          "source": "Adra1a",
+          "target": "Xylometazoline",
           "label": "is bound by"
         },
         {
-          "source": "Risperidone",
+          "source": "Xylometazoline",
           "target": "Adra1b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sertindole,Risperidone": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
+        "Sertindole,Xylometazoline": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30933"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5852,
-        "final_score": 0.5852
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Phentolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Phentolamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phentolamine",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Phentolamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_30934"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5852,
-        "final_score": 0.5852
-      },
-      "nodes": [
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Lisuride",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sertindole",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Lisuride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lisuride",
-          "target": "Adra1b",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sertindole,Lisuride": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_30935"
+      "id": "path_15904"
     }
-  ],
-  "verbalization": ""
+  ]
 }

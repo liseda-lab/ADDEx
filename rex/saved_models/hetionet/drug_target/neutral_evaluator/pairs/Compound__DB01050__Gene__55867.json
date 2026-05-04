@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4835,
-        "final_score": 0.4835
+        "ic_mean": 0.5339,
+        "final_score": 0.5339
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Necrotising Fasciitis",
-          "type": "Side Effect"
+          "id": "Slc22a6",
+          "type": "Gene"
         },
         {
-          "id": "Indomethacin",
+          "id": "Oxytetracycline",
           "type": "Compound"
         },
         {
@@ -27,28 +27,73 @@
       "edges": [
         {
           "source": "Ibuprofen",
-          "target": "Necrotising Fasciitis",
-          "label": "causes"
+          "target": "Slc22a6",
+          "label": "binds"
         },
         {
-          "source": "Necrotising Fasciitis",
-          "target": "Indomethacin",
-          "label": "is caused by"
+          "source": "Slc22a6",
+          "target": "Oxytetracycline",
+          "label": "is bound by"
         },
         {
-          "source": "Indomethacin",
+          "source": "Oxytetracycline",
           "target": "Slc22a11",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ibuprofen,Indomethacin": [
-          "Cyclooxygenase Inhibitor",
-          "Carboxylic Acid"
+        "Ibuprofen,Oxytetracycline": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_7520"
+      "id": "path_3546"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5039,
+        "final_score": 0.5039
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Cefamandole",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Cefamandole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cefamandole",
+          "target": "Slc22a11",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Cefamandole": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_3547"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -44,15 +44,15 @@
       "lowest_common_ancestors": {
         "Metyrapone,Aminoglutethimide": [
           "Enzyme Inhibitor",
-          "Organooxygen Compound"
+          "Organic Molecule"
         ]
       },
-      "id": "path_1100"
+      "id": "path_535"
     },
     {
       "score": {
-        "ic_mean": 0.6078,
-        "final_score": 0.6078
+        "ic_mean": 0.6795,
+        "final_score": 0.6795
       },
       "nodes": [
         {
@@ -60,12 +60,12 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc3",
+          "id": "Cyp11b1",
           "type": "Gene"
         },
         {
-          "id": "Etoposide",
-          "type": "Compound"
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -75,27 +75,63 @@
       "edges": [
         {
           "source": "Metyrapone",
-          "target": "Abcc3",
+          "target": "Cyp11b1",
           "label": "binds"
         },
         {
-          "source": "Abcc3",
-          "target": "Etoposide",
-          "label": "is bound by"
+          "source": "Cyp11b1",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
         },
         {
-          "source": "Etoposide",
+          "source": "Steroid Hydroxylase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Etoposide": [
-          "Enzyme Inhibitor",
-          "Organooxygen Compound"
-        ]
+      "id": "path_536"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6524,
+        "final_score": 0.6524
       },
-      "id": "path_1101"
+      "nodes": [
+        {
+          "id": "Metyrapone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Nad(p)h As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metyrapone",
+          "target": "Cyp11b1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp11b1",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Nad(p)h As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Nad(p)h As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_537"
     },
     {
       "score": {
@@ -139,340 +175,10 @@
       ],
       "lowest_common_ancestors": {
         "Metyrapone,Fluconazole": [
-          "Heteroorganic Entity"
+          "Organic Molecule"
         ]
       },
-      "id": "path_1102"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5979,
-        "final_score": 0.5979
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b2",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydrocortisone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b2",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b2",
-          "target": "Hydrocortisone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydrocortisone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Hydrocortisone": [
-          "Ketone"
-        ]
-      },
-      "id": "path_1103"
-    },
-    {
-      "score": {
-        "ic_mean": 0.592,
-        "final_score": 0.592
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Norfloxacin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Norfloxacin": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_1104"
-    },
-    {
-      "score": {
-        "ic_mean": 0.592,
-        "final_score": 0.592
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Azithromycin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Azithromycin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Azithromycin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Azithromycin": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_1105"
-    },
-    {
-      "score": {
-        "ic_mean": 0.592,
-        "final_score": 0.592
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Nevirapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Nevirapine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nevirapine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Nevirapine": [
-          "Heteroorganic Entity",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_1106"
-    },
-    {
-      "score": {
-        "ic_mean": 0.592,
-        "final_score": 0.592
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Isoniazid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Isoniazid",
-          "label": "is bound by"
-        },
-        {
-          "source": "Isoniazid",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Isoniazid": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_1107"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5814,
-        "final_score": 0.5814
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b2",
-          "type": "Gene"
-        },
-        {
-          "id": "Eplerenone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b2",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b2",
-          "target": "Eplerenone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Eplerenone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Eplerenone": [
-          "Ketone"
-        ]
-      },
-      "id": "path_1108"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5766,
-        "final_score": 0.5766
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydrocortisone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Hydrocortisone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydrocortisone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Hydrocortisone": [
-          "Ketone"
-        ]
-      },
-      "id": "path_1109"
+      "id": "path_538"
     },
     {
       "score": {
@@ -526,426 +232,7 @@
           "Fibrate Antilipidemic Agent"
         ]
       },
-      "id": "path_1110"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5565,
-        "final_score": 0.5565
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_1111"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5565,
-        "final_score": 0.5565
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Sulfinpyrazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Sulfinpyrazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sulfinpyrazone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Sulfinpyrazone": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_1112"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5466,
-        "final_score": 0.5466
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b2",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b2",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b2",
-          "target": "Ketoconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Ketoconazole": [
-          "Enzyme Inhibitor",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_1113"
-    },
-    {
-      "score": {
-        "ic_mean": 0.545,
-        "final_score": 0.545
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Glyburide": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_1114"
-    },
-    {
-      "score": {
-        "ic_mean": 0.545,
-        "final_score": 0.545
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Ezetimibe",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Ezetimibe",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ezetimibe",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Ezetimibe": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_1115"
-    },
-    {
-      "score": {
-        "ic_mean": 0.545,
-        "final_score": 0.545
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Clotrimazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Clotrimazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Clotrimazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Clotrimazole": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_1116"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5406,
-        "final_score": 0.5406
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Methimazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Methimazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methimazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Methimazole": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_1117"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5406,
-        "final_score": 0.5406
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Ifosfamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Ifosfamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ifosfamide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Ifosfamide": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_1118"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5406,
-        "final_score": 0.5406
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Cisapride",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Cisapride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cisapride",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Cisapride": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_1119"
+      "id": "path_539"
     },
     {
       "score": {
@@ -992,242 +279,7 @@
           "Carbonyl Compound"
         ]
       },
-      "id": "path_1120"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5351,
-        "final_score": 0.5351
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Clotrimazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Clotrimazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Clotrimazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Clotrimazole": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_1121"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5351,
-        "final_score": 0.5351
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cimetidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Cimetidine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cimetidine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Cimetidine": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_1122"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5351,
-        "final_score": 0.5351
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Miconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Miconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Miconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Miconazole": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_1123"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5351,
-        "final_score": 0.5351
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Vincristine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Vincristine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Vincristine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Vincristine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_1124"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5264,
-        "final_score": 0.5264
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Nifedipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Nifedipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nifedipine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Nifedipine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_1125"
+      "id": "path_540"
     },
     {
       "score": {
@@ -1271,58 +323,10 @@
       ],
       "lowest_common_ancestors": {
         "Metyrapone,Phenytoin": [
-          "Heteroorganic Entity"
+          "Organic Molecule"
         ]
       },
-      "id": "path_1126"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5253,
-        "final_score": 0.5253
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Ketoconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Ketoconazole": [
-          "Enzyme Inhibitor",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_1127"
+      "id": "path_541"
     },
     {
       "score": {
@@ -1376,243 +380,7 @@
           "Fibrate Antilipidemic Agent"
         ]
       },
-      "id": "path_1128"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5186,
-        "final_score": 0.5186
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Phenobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenobarbital",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Phenobarbital": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_1129"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5106,
-        "final_score": 0.5106
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Methoxsalen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Methoxsalen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methoxsalen",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Methoxsalen": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_1130"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5106,
-        "final_score": 0.5106
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Antipyrine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_1131"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5106,
-        "final_score": 0.5106
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Chlorzoxazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Chlorzoxazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Chlorzoxazone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Chlorzoxazone": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_1132"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5106,
-        "final_score": 0.5106
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Selegiline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Selegiline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Selegiline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Selegiline": [
-          "Heteroorganic Entity",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_1133"
+      "id": "path_542"
     },
     {
       "score": {
@@ -1659,12 +427,12 @@
           "Ketone"
         ]
       },
-      "id": "path_1134"
+      "id": "path_543"
     },
     {
       "score": {
-        "ic_mean": 0.4893,
-        "final_score": 0.4893
+        "ic_mean": 0.4911,
+        "final_score": 0.4911
       },
       "nodes": [
         {
@@ -1672,11 +440,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
-          "type": "Gene"
+          "id": "Adrenal Insufficiency",
+          "type": "Side Effect"
         },
         {
-          "id": "Dapagliflozin",
+          "id": "Aminoglutethimide",
           "type": "Compound"
         },
         {
@@ -1687,32 +455,126 @@
       "edges": [
         {
           "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
+          "target": "Adrenal Insufficiency",
+          "label": "causes"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Dapagliflozin",
-          "label": "is bound by"
+          "source": "Adrenal Insufficiency",
+          "target": "Aminoglutethimide",
+          "label": "is caused by"
         },
         {
-          "source": "Dapagliflozin",
+          "source": "Aminoglutethimide",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Metyrapone,Dapagliflozin": [
+        "Metyrapone,Aminoglutethimide": [
           "Enzyme Inhibitor",
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_544"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4446,
+        "final_score": 0.4446
+      },
+      "nodes": [
+        {
+          "id": "Metyrapone",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenal Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Budesonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metyrapone",
+          "target": "Adrenal Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Adrenal Insufficiency",
+          "target": "Budesonide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Budesonide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metyrapone,Budesonide": [
+          "Ketone"
+        ]
+      },
+      "id": "path_545"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4234,
+        "final_score": 0.4234
+      },
+      "nodes": [
+        {
+          "id": "Metyrapone",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenal Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Busulfan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metyrapone",
+          "target": "Adrenal Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Adrenal Insufficiency",
+          "target": "Busulfan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Busulfan",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metyrapone,Busulfan": [
           "Organooxygen Compound"
         ]
       },
-      "id": "path_1135"
+      "id": "path_546"
     },
     {
       "score": {
-        "ic_mean": 0.4893,
-        "final_score": 0.4893
+        "ic_mean": 0.4185,
+        "final_score": 0.4185
       },
       "nodes": [
         {
@@ -1720,11 +582,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
-          "type": "Gene"
+          "id": "Adrenal Insufficiency",
+          "type": "Side Effect"
         },
         {
-          "id": "Pentobarbital",
+          "id": "Prednisone",
           "type": "Compound"
         },
         {
@@ -1735,31 +597,31 @@
       "edges": [
         {
           "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
+          "target": "Adrenal Insufficiency",
+          "label": "causes"
         },
         {
-          "source": "Cyp2a6",
-          "target": "Pentobarbital",
-          "label": "is bound by"
+          "source": "Adrenal Insufficiency",
+          "target": "Prednisone",
+          "label": "is caused by"
         },
         {
-          "source": "Pentobarbital",
+          "source": "Prednisone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Metyrapone,Pentobarbital": [
-          "Heteroorganic Entity"
+        "Metyrapone,Prednisone": [
+          "Ketone"
         ]
       },
-      "id": "path_1136"
+      "id": "path_547"
     },
     {
       "score": {
-        "ic_mean": 0.4845,
-        "final_score": 0.4845
+        "ic_mean": 0.4183,
+        "final_score": 0.4183
       },
       "nodes": [
         {
@@ -1767,11 +629,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2e1",
-          "type": "Gene"
+          "id": "White Blood Cell Count Decreased",
+          "type": "Side Effect"
         },
         {
-          "id": "Antipyrine",
+          "id": "Rifabutin",
           "type": "Compound"
         },
         {
@@ -1782,128 +644,26 @@
       "edges": [
         {
           "source": "Metyrapone",
-          "target": "Cyp2e1",
-          "label": "binds"
+          "target": "White Blood Cell Count Decreased",
+          "label": "causes"
         },
         {
-          "source": "Cyp2e1",
-          "target": "Antipyrine",
-          "label": "is bound by"
+          "source": "White Blood Cell Count Decreased",
+          "target": "Rifabutin",
+          "label": "is caused by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Rifabutin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Metyrapone,Antipyrine": [
-          "Carbonyl Compound"
+        "Metyrapone,Rifabutin": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_1137"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4754,
-        "final_score": 0.4754
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Etofibrate",
-          "type": "Compound"
-        },
-        {
-          "id": "Bezafibrate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Etofibrate",
-          "label": "resembles"
-        },
-        {
-          "source": "Etofibrate",
-          "target": "Bezafibrate",
-          "label": "resembles"
-        },
-        {
-          "source": "Bezafibrate",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Etofibrate": [
-          "Carbonyl Compound"
-        ],
-        "Metyrapone,Bezafibrate": [
-          "Carbonyl Compound"
-        ],
-        "Etofibrate,Bezafibrate": [
-          "Fibrate Antilipidemic Agent",
-          "Monocarboxylic Acid"
-        ]
-      },
-      "id": "path_1138"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4728,
-        "final_score": 0.4728
-      },
-      "nodes": [
-        {
-          "id": "Metyrapone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Nilvadipine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Metyrapone",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Nilvadipine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nilvadipine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Metyrapone,Nilvadipine": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_1139"
+      "id": "path_548"
     }
-  ],
-  "verbalization": ""
+  ]
 }

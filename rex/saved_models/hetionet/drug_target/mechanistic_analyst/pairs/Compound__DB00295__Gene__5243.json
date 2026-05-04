@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00295 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5299,
+        "final_score": 0.5299
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Alfentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Alfentanil",
+          "label": "includes"
+        },
+        {
+          "source": "Alfentanil",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Alfentanil": [
+          "Opioid",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_11784"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4955,
+        "final_score": 0.4955
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemorrhagic Urticaria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Haemorrhagic Urticaria",
+          "label": "causes"
+        },
+        {
+          "source": "Haemorrhagic Urticaria",
+          "target": "Methadone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methadone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Methadone": [
+          "Opioid",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_11785"
+    }
+  ]
+}

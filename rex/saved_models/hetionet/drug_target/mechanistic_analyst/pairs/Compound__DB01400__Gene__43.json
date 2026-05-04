@@ -1,0 +1,139 @@
+{
+  "id": "Compound::DB01400 - Gene::43",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7012,
+        "final_score": 0.8506,
+        "agentic_score": 1
+      },
+      "nodes": [
+        {
+          "id": "Neostigmine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bche",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetylcholinesterase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ache",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Neostigmine",
+          "target": "Bche",
+          "label": "binds"
+        },
+        {
+          "source": "Bche",
+          "target": "Acetylcholinesterase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Acetylcholinesterase Activity",
+          "target": "Ache",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10004"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6786,
+        "final_score": 0.8393,
+        "agentic_score": 1
+      },
+      "nodes": [
+        {
+          "id": "Neostigmine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bche",
+          "type": "Gene"
+        },
+        {
+          "id": "Cholinesterase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ache",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Neostigmine",
+          "target": "Bche",
+          "label": "binds"
+        },
+        {
+          "source": "Bche",
+          "target": "Cholinesterase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Cholinesterase Activity",
+          "target": "Ache",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10005"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5717,
+        "final_score": 0.5717
+      },
+      "nodes": [
+        {
+          "id": "Neostigmine",
+          "type": "Compound"
+        },
+        {
+          "id": "Vermiculation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pyridostigmine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ache",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Neostigmine",
+          "target": "Vermiculation",
+          "label": "causes"
+        },
+        {
+          "source": "Vermiculation",
+          "target": "Pyridostigmine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pyridostigmine",
+          "target": "Ache",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Neostigmine,Pyridostigmine": [
+          "Acetylcholinesterase Inhibitor",
+          "Organic Cation"
+        ]
+      },
+      "id": "path_10006"
+    }
+  ]
+}

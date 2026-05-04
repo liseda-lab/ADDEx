@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB06770 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5833,
+        "final_score": 0.7083,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Benzyl Alcohol",
+          "type": "Compound"
+        },
+        {
+          "id": "Pyoderma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clobetasol Propionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzyl Alcohol",
+          "target": "Pyoderma",
+          "label": "causes"
+        },
+        {
+          "source": "Pyoderma",
+          "target": "Clobetasol Propionate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clobetasol Propionate",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzyl Alcohol,Clobetasol Propionate": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_9828"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6883,
+        "final_score": 0.5941,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Benzyl Alcohol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzyl Alcohol",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9829"
+    }
+  ]
+}

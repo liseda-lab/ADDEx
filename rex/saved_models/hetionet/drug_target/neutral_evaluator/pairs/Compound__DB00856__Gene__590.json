@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00856 - Gene::590",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5269,
+        "final_score": 0.5269
+      },
+      "nodes": [
+        {
+          "id": "Chlorphenesin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Mefloquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bche",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorphenesin",
+          "target": "Cyp19a1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp19a1",
+          "target": "Mefloquine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mefloquine",
+          "target": "Bche",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorphenesin,Mefloquine": [
+          "Chemical Entity",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_1249"
+    }
+  ]
 }

@@ -3,6 +3,53 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.5076,
+        "final_score": 0.5076
+      },
+      "nodes": [
+        {
+          "id": "Tenofovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephrosis Lower Nephron",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenylpropanolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tenofovir",
+          "target": "Nephrosis Lower Nephron",
+          "label": "causes"
+        },
+        {
+          "source": "Nephrosis Lower Nephron",
+          "target": "Phenylpropanolamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenylpropanolamine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tenofovir,Phenylpropanolamine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_13930"
+    },
+    {
+      "score": {
         "ic_mean": 0.5004,
         "final_score": 0.5004
       },
@@ -46,8 +93,7 @@
           "Carbohydrate Derivative"
         ]
       },
-      "id": "path_27258"
+      "id": "path_13931"
     }
-  ],
-  "verbalization": ""
+  ]
 }

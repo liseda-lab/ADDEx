@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7689,
-        "final_score": 0.7689
+        "ic_mean": 0.8153,
+        "final_score": 0.8153
       },
       "nodes": [
         {
@@ -12,7 +12,151 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5a",
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Polythiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indapamide",
+          "target": "Increased Diuresis",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis",
+          "target": "Polythiazide",
+          "label": "includes"
+        },
+        {
+          "source": "Polythiazide",
+          "target": "Slc12a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indapamide,Polythiazide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_9437"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7896,
+        "final_score": 0.7896
+      },
+      "nodes": [
+        {
+          "id": "Indapamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Metolazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indapamide",
+          "target": "Increased Diuresis",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis",
+          "target": "Metolazone",
+          "label": "includes"
+        },
+        {
+          "source": "Metolazone",
+          "target": "Slc12a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indapamide,Metolazone": [
+          "Organic Heterobicyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_9438"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7896,
+        "final_score": 0.7896
+      },
+      "nodes": [
+        {
+          "id": "Indapamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Bendroflumethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indapamide",
+          "target": "Increased Diuresis",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis",
+          "target": "Bendroflumethiazide",
+          "label": "includes"
+        },
+        {
+          "source": "Bendroflumethiazide",
+          "target": "Slc12a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indapamide,Bendroflumethiazide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_9439"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7089,
+        "final_score": 0.7089
+      },
+      "nodes": [
+        {
+          "id": "Indapamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
           "type": "Gene"
         },
         {
@@ -27,11 +171,11 @@
       "edges": [
         {
           "source": "Indapamide",
-          "target": "Ca5a",
+          "target": "Ca4",
           "label": "binds"
         },
         {
-          "source": "Ca5a",
+          "source": "Ca4",
           "target": "Metolazone",
           "label": "is bound by"
         },
@@ -43,16 +187,16 @@
       ],
       "lowest_common_ancestors": {
         "Indapamide,Metolazone": [
-          "Sulfonamide",
+          "Organic Heterobicyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_18732"
+      "id": "path_9440"
     },
     {
       "score": {
-        "ic_mean": 0.7524,
-        "final_score": 0.7524
+        "ic_mean": 0.7089,
+        "final_score": 0.7089
       },
       "nodes": [
         {
@@ -60,8 +204,56 @@
           "type": "Compound"
         },
         {
-          "id": "Ca9",
+          "id": "Ca4",
           "type": "Gene"
+        },
+        {
+          "id": "Bendroflumethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indapamide",
+          "target": "Ca4",
+          "label": "binds"
+        },
+        {
+          "source": "Ca4",
+          "target": "Bendroflumethiazide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Bendroflumethiazide",
+          "target": "Slc12a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indapamide,Bendroflumethiazide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_9441"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5595,
+        "final_score": 0.5595
+      },
+      "nodes": [
+        {
+          "id": "Indapamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypochloraemia",
+          "type": "Side Effect"
         },
         {
           "id": "Metolazone",
@@ -75,13 +267,13 @@
       "edges": [
         {
           "source": "Indapamide",
-          "target": "Ca9",
-          "label": "binds"
+          "target": "Hypochloraemia",
+          "label": "causes"
         },
         {
-          "source": "Ca9",
+          "source": "Hypochloraemia",
           "target": "Metolazone",
-          "label": "is bound by"
+          "label": "is caused by"
         },
         {
           "source": "Metolazone",
@@ -91,156 +283,11 @@
       ],
       "lowest_common_ancestors": {
         "Indapamide,Metolazone": [
-          "Sulfonamide",
+          "Organic Heterobicyclic Compound",
           "Thiazide Diuretic"
         ]
       },
-      "id": "path_18733"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7524,
-        "final_score": 0.7524
-      },
-      "nodes": [
-        {
-          "id": "Indapamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzthiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indapamide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Benzthiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benzthiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indapamide,Benzthiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_18734"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7275,
-        "final_score": 0.7275
-      },
-      "nodes": [
-        {
-          "id": "Indapamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5b",
-          "type": "Gene"
-        },
-        {
-          "id": "Metolazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indapamide",
-          "target": "Ca5b",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5b",
-          "target": "Metolazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Metolazone",
-          "target": "Slc12a3",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indapamide,Metolazone": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_18735"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7176,
-        "final_score": 0.7176
-      },
-      "nodes": [
-        {
-          "id": "Indapamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5a",
-          "type": "Gene"
-        },
-        {
-          "id": "Trichlormethiazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc12a3",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indapamide",
-          "target": "Ca5a",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5a",
-          "target": "Trichlormethiazide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trichlormethiazide",
-          "target": "Slc12a3",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indapamide,Trichlormethiazide": [
-          "Sulfonamide",
-          "Thiazide Diuretic"
-        ]
-      },
-      "id": "path_18736"
+      "id": "path_9442"
     }
-  ],
-  "verbalization": ""
+  ]
 }

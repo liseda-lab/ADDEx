@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.8143,
-        "final_score": 0.8143
+        "ic_mean": 0.7607,
+        "final_score": 0.7607
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Reversible Hydration Of Carbon Dioxide",
-          "type": "Pathway"
+          "id": "Lacosamide",
+          "type": "Compound"
         },
         {
           "id": "Ca6",
@@ -32,21 +32,68 @@
         },
         {
           "source": "Ca3",
-          "target": "Reversible Hydration Of Carbon Dioxide",
+          "target": "Lacosamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lacosamide",
+          "target": "Ca6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetazolamide,Lacosamide": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_11172"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7406,
+        "final_score": 0.7406
+      },
+      "nodes": [
+        {
+          "id": "Acetazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca3",
+          "type": "Gene"
+        },
+        {
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ca6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetazolamide",
+          "target": "Ca3",
+          "label": "binds"
+        },
+        {
+          "source": "Ca3",
+          "target": "Carbonate Dehydratase Activity",
           "label": "participates"
         },
         {
-          "source": "Reversible Hydration Of Carbon Dioxide",
+          "source": "Carbonate Dehydratase Activity",
           "target": "Ca6",
           "label": "is participated by"
         }
       ],
-      "id": "path_22037"
+      "id": "path_11173"
     },
     {
       "score": {
-        "ic_mean": 0.7992,
-        "final_score": 0.7992
+        "ic_mean": 0.668,
+        "final_score": 0.668
       },
       "nodes": [
         {
@@ -54,12 +101,12 @@
           "type": "Compound"
         },
         {
-          "id": "Ca14",
+          "id": "Ca2",
           "type": "Gene"
         },
         {
-          "id": "Reversible Hydration Of Carbon Dioxide",
-          "type": "Pathway"
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Ca6",
@@ -69,26 +116,26 @@
       "edges": [
         {
           "source": "Acetazolamide",
-          "target": "Ca14",
+          "target": "Ca2",
           "label": "binds"
         },
         {
-          "source": "Ca14",
-          "target": "Reversible Hydration Of Carbon Dioxide",
+          "source": "Ca2",
+          "target": "Carbonate Dehydratase Activity",
           "label": "participates"
         },
         {
-          "source": "Reversible Hydration Of Carbon Dioxide",
+          "source": "Carbonate Dehydratase Activity",
           "target": "Ca6",
           "label": "is participated by"
         }
       ],
-      "id": "path_22038"
+      "id": "path_11174"
     },
     {
       "score": {
-        "ic_mean": 0.7886,
-        "final_score": 0.7886
+        "ic_mean": 0.6379,
+        "final_score": 0.6379
       },
       "nodes": [
         {
@@ -96,53 +143,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5a",
-          "type": "Gene"
+          "id": "Sulfonamides",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Reversible Hydration Of Carbon Dioxide",
-          "type": "Pathway"
-        },
-        {
-          "id": "Ca6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetazolamide",
-          "target": "Ca5a",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5a",
-          "target": "Reversible Hydration Of Carbon Dioxide",
-          "label": "participates"
-        },
-        {
-          "source": "Reversible Hydration Of Carbon Dioxide",
-          "target": "Ca6",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_22039"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7306,
-        "final_score": 0.7306
-      },
-      "nodes": [
-        {
-          "id": "Acetazolamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca14",
-          "type": "Gene"
-        },
-        {
-          "id": "Brinzolamide",
+          "id": "Diclofenamide",
           "type": "Compound"
         },
         {
@@ -153,175 +158,37 @@
       "edges": [
         {
           "source": "Acetazolamide",
-          "target": "Ca14",
-          "label": "binds"
+          "target": "Sulfonamides",
+          "label": "is included in"
         },
         {
-          "source": "Ca14",
-          "target": "Brinzolamide",
-          "label": "is bound by"
+          "source": "Sulfonamides",
+          "target": "Diclofenamide",
+          "label": "includes"
         },
         {
-          "source": "Brinzolamide",
+          "source": "Diclofenamide",
           "target": "Ca6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetazolamide,Brinzolamide": [
-          "Sulfonamide",
-          "Carbonic Anhydrase Inhibitor"
-        ]
-      },
-      "id": "path_22040"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7093,
-        "final_score": 0.7093
-      },
-      "nodes": [
-        {
-          "id": "Acetazolamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca5a",
-          "type": "Gene"
-        },
-        {
-          "id": "Brinzolamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetazolamide",
-          "target": "Ca5a",
-          "label": "binds"
-        },
-        {
-          "source": "Ca5a",
-          "target": "Brinzolamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Brinzolamide",
-          "target": "Ca6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetazolamide,Brinzolamide": [
-          "Sulfonamide",
-          "Carbonic Anhydrase Inhibitor"
-        ]
-      },
-      "id": "path_22041"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6928,
-        "final_score": 0.6928
-      },
-      "nodes": [
-        {
-          "id": "Acetazolamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Brinzolamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetazolamide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Brinzolamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Brinzolamide",
-          "target": "Ca6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetazolamide,Brinzolamide": [
-          "Sulfonamide",
-          "Carbonic Anhydrase Inhibitor"
-        ]
-      },
-      "id": "path_22042"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6928,
-        "final_score": 0.6928
-      },
-      "nodes": [
-        {
-          "id": "Acetazolamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca9",
-          "type": "Gene"
-        },
-        {
-          "id": "Mafenide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetazolamide",
-          "target": "Ca9",
-          "label": "binds"
-        },
-        {
-          "source": "Ca9",
-          "target": "Mafenide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mafenide",
-          "target": "Ca6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetazolamide,Mafenide": [
+        "Acetazolamide,Sulfonamides": [
+          "Sulfonamide"
+        ],
+        "Acetazolamide,Diclofenamide": [
           "Organic Cyclic Compound"
+        ],
+        "Sulfonamides,Diclofenamide": [
+          "Sulfonamide"
         ]
       },
-      "id": "path_22043"
+      "id": "path_11175"
     },
     {
       "score": {
-        "ic_mean": 0.6679,
-        "final_score": 0.6679
+        "ic_mean": 0.6282,
+        "final_score": 0.6282
       },
       "nodes": [
         {
@@ -329,11 +196,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5b",
-          "type": "Gene"
+          "id": "Myopia Transient",
+          "type": "Side Effect"
         },
         {
-          "id": "Brinzolamide",
+          "id": "Methazolamide",
           "type": "Compound"
         },
         {
@@ -344,32 +211,32 @@
       "edges": [
         {
           "source": "Acetazolamide",
-          "target": "Ca5b",
-          "label": "binds"
+          "target": "Myopia Transient",
+          "label": "causes"
         },
         {
-          "source": "Ca5b",
-          "target": "Brinzolamide",
-          "label": "is bound by"
+          "source": "Myopia Transient",
+          "target": "Methazolamide",
+          "label": "is caused by"
         },
         {
-          "source": "Brinzolamide",
+          "source": "Methazolamide",
           "target": "Ca6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetazolamide,Brinzolamide": [
-          "Sulfonamide",
+        "Acetazolamide,Methazolamide": [
+          "Thiadiazoles",
           "Carbonic Anhydrase Inhibitor"
         ]
       },
-      "id": "path_22044"
+      "id": "path_11176"
     },
     {
       "score": {
-        "ic_mean": 0.6679,
-        "final_score": 0.6679
+        "ic_mean": 0.6055,
+        "final_score": 0.6055
       },
       "nodes": [
         {
@@ -377,11 +244,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca12",
-          "type": "Gene"
+          "id": "Myopia Transient",
+          "type": "Side Effect"
         },
         {
-          "id": "Brinzolamide",
+          "id": "Dorzolamide",
           "type": "Compound"
         },
         {
@@ -392,32 +259,32 @@
       "edges": [
         {
           "source": "Acetazolamide",
-          "target": "Ca12",
-          "label": "binds"
+          "target": "Myopia Transient",
+          "label": "causes"
         },
         {
-          "source": "Ca12",
-          "target": "Brinzolamide",
-          "label": "is bound by"
+          "source": "Myopia Transient",
+          "target": "Dorzolamide",
+          "label": "is caused by"
         },
         {
-          "source": "Brinzolamide",
+          "source": "Dorzolamide",
           "target": "Ca6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetazolamide,Brinzolamide": [
-          "Sulfonamide",
+        "Acetazolamide,Dorzolamide": [
+          "Organic Heterocyclic Compound",
           "Carbonic Anhydrase Inhibitor"
         ]
       },
-      "id": "path_22045"
+      "id": "path_11177"
     },
     {
       "score": {
-        "ic_mean": 0.658,
-        "final_score": 0.658
+        "ic_mean": 0.5979,
+        "final_score": 0.5979
       },
       "nodes": [
         {
@@ -425,11 +292,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca1",
+          "id": "Ca2",
           "type": "Gene"
         },
         {
-          "id": "Brinzolamide",
+          "id": "Dorzolamide",
           "type": "Compound"
         },
         {
@@ -440,32 +307,32 @@
       "edges": [
         {
           "source": "Acetazolamide",
-          "target": "Ca1",
+          "target": "Ca2",
           "label": "binds"
         },
         {
-          "source": "Ca1",
-          "target": "Brinzolamide",
+          "source": "Ca2",
+          "target": "Dorzolamide",
           "label": "is bound by"
         },
         {
-          "source": "Brinzolamide",
+          "source": "Dorzolamide",
           "target": "Ca6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetazolamide,Brinzolamide": [
-          "Sulfonamide",
+        "Acetazolamide,Dorzolamide": [
+          "Organic Heterocyclic Compound",
           "Carbonic Anhydrase Inhibitor"
         ]
       },
-      "id": "path_22046"
+      "id": "path_11178"
     },
     {
       "score": {
-        "ic_mean": 0.658,
-        "final_score": 0.658
+        "ic_mean": 0.5087,
+        "final_score": 0.5087
       },
       "nodes": [
         {
@@ -473,11 +340,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca7",
+          "id": "Slc22a6",
           "type": "Gene"
         },
         {
-          "id": "Brinzolamide",
+          "id": "Methazolamide",
           "type": "Compound"
         },
         {
@@ -488,76 +355,27 @@
       "edges": [
         {
           "source": "Acetazolamide",
-          "target": "Ca7",
+          "target": "Slc22a6",
           "label": "binds"
         },
         {
-          "source": "Ca7",
-          "target": "Brinzolamide",
+          "source": "Slc22a6",
+          "target": "Methazolamide",
           "label": "is bound by"
         },
         {
-          "source": "Brinzolamide",
+          "source": "Methazolamide",
           "target": "Ca6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Acetazolamide,Brinzolamide": [
-          "Sulfonamide",
+        "Acetazolamide,Methazolamide": [
+          "Thiadiazoles",
           "Carbonic Anhydrase Inhibitor"
         ]
       },
-      "id": "path_22047"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6493,
-        "final_score": 0.6493
-      },
-      "nodes": [
-        {
-          "id": "Acetazolamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca4",
-          "type": "Gene"
-        },
-        {
-          "id": "Brinzolamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Ca6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Acetazolamide",
-          "target": "Ca4",
-          "label": "binds"
-        },
-        {
-          "source": "Ca4",
-          "target": "Brinzolamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Brinzolamide",
-          "target": "Ca6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Acetazolamide,Brinzolamide": [
-          "Sulfonamide",
-          "Carbonic Anhydrase Inhibitor"
-        ]
-      },
-      "id": "path_22048"
+      "id": "path_11179"
     }
-  ],
-  "verbalization": ""
+  ]
 }

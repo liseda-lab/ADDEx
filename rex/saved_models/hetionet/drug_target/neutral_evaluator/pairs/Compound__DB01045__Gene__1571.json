@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6972,
-        "final_score": 0.6972
+        "ic_mean": 0.6969,
+        "final_score": 0.6969
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Ethosuximide",
-          "type": "Compound"
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp2e1",
@@ -32,26 +32,21 @@
         },
         {
           "source": "Cyp3a43",
-          "target": "Ethosuximide",
-          "label": "is bound by"
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
         },
         {
-          "source": "Ethosuximide",
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
           "target": "Cyp2e1",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Rifampicin,Ethosuximide": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_10679"
+      "id": "path_5297"
     },
     {
       "score": {
-        "ic_mean": 0.5645,
-        "final_score": 0.5645
+        "ic_mean": 0.4173,
+        "final_score": 0.4173
       },
       "nodes": [
         {
@@ -59,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
+          "id": "Cyp3a7-cyp3a51p",
           "type": "Gene"
         },
         {
-          "id": "Phenelzine",
+          "id": "Dapsone",
           "type": "Compound"
         },
         {
@@ -74,28 +69,121 @@
       "edges": [
         {
           "source": "Rifampicin",
-          "target": "Cyp3a43",
+          "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Phenelzine",
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Dapsone",
           "label": "is bound by"
         },
         {
-          "source": "Phenelzine",
+          "source": "Dapsone",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rifampicin,Phenelzine": [
-          "Enzyme Inhibitor",
-          "Organic Amino Compound"
+        "Rifampicin,Dapsone": [
+          "Organic Cyclic Compound",
+          "Anti-Infective Agent"
         ]
       },
-      "id": "path_10680"
+      "id": "path_5298"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4116,
+        "final_score": 0.4116
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Cimetidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Cimetidine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5299"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3924,
+        "final_score": 0.3924
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Cimetidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Cimetidine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5300"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,102 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7179,
-        "final_score": 0.7179
-      },
-      "nodes": [
-        {
-          "id": "Clopidogrel",
-          "type": "Compound"
-        },
-        {
-          "id": "P2y12 Receptor Antagonists",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Prasugrel",
-          "type": "Compound"
-        },
-        {
-          "id": "P2ry12",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clopidogrel",
-          "target": "P2y12 Receptor Antagonists",
-          "label": "is included in"
-        },
-        {
-          "source": "P2y12 Receptor Antagonists",
-          "target": "Prasugrel",
-          "label": "includes"
-        },
-        {
-          "source": "Prasugrel",
-          "target": "P2ry12",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clopidogrel,Prasugrel": [
-          "Thienopyridine Antiplatelet Agent",
-          "Thienopyridine"
-        ]
-      },
-      "id": "path_13399"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6828,
-        "final_score": 0.6828
-      },
-      "nodes": [
-        {
-          "id": "Clopidogrel",
-          "type": "Compound"
-        },
-        {
-          "id": "Decreased Platelet Aggregation",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Ticlopidine",
-          "type": "Compound"
-        },
-        {
-          "id": "P2ry12",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clopidogrel",
-          "target": "Decreased Platelet Aggregation",
-          "label": "is included in"
-        },
-        {
-          "source": "Decreased Platelet Aggregation",
-          "target": "Ticlopidine",
-          "label": "includes"
-        },
-        {
-          "source": "Ticlopidine",
-          "target": "P2ry12",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clopidogrel,Ticlopidine": [
-          "Thienopyridine Antiplatelet Agent",
-          "Thienopyridine"
-        ]
-      },
-      "id": "path_13400"
-    },
-    {
-      "score": {
         "ic_mean": 0.6666,
         "final_score": 0.6666
       },
@@ -140,15 +44,15 @@
       "lowest_common_ancestors": {
         "Clopidogrel,Ticagrelor": [
           "P2Y12 Inhibitor",
-          "Organosulfur Compound"
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_13401"
+      "id": "path_6789"
     },
     {
       "score": {
-        "ic_mean": 0.6176,
-        "final_score": 0.6176
+        "ic_mean": 0.608,
+        "final_score": 0.608
       },
       "nodes": [
         {
@@ -156,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Decreased Platelet Aggregation",
-          "type": "Pharmacologic Class"
+          "id": "Puncture Site Haemorrhage",
+          "type": "Side Effect"
         },
         {
-          "id": "Prasugrel",
+          "id": "Ticagrelor",
           "type": "Compound"
         },
         {
@@ -171,27 +75,74 @@
       "edges": [
         {
           "source": "Clopidogrel",
-          "target": "Decreased Platelet Aggregation",
-          "label": "is included in"
+          "target": "Puncture Site Haemorrhage",
+          "label": "causes"
         },
         {
-          "source": "Decreased Platelet Aggregation",
-          "target": "Prasugrel",
-          "label": "includes"
+          "source": "Puncture Site Haemorrhage",
+          "target": "Ticagrelor",
+          "label": "is caused by"
         },
         {
-          "source": "Prasugrel",
+          "source": "Ticagrelor",
           "target": "P2ry12",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clopidogrel,Prasugrel": [
-          "Thienopyridine Antiplatelet Agent",
-          "Thienopyridine"
+        "Clopidogrel,Ticagrelor": [
+          "P2Y12 Inhibitor",
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_13402"
+      "id": "path_6790"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5929,
+        "final_score": 0.5929
+      },
+      "nodes": [
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemothorax",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Epoprostenol",
+          "type": "Compound"
+        },
+        {
+          "id": "P2ry12",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clopidogrel",
+          "target": "Haemothorax",
+          "label": "causes"
+        },
+        {
+          "source": "Haemothorax",
+          "target": "Epoprostenol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Epoprostenol",
+          "target": "P2ry12",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clopidogrel,Epoprostenol": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_6791"
     },
     {
       "score": {
@@ -236,10 +187,58 @@
       "lowest_common_ancestors": {
         "Clopidogrel,Ticagrelor": [
           "P2Y12 Inhibitor",
-          "Organosulfur Compound"
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_13403"
+      "id": "path_6792"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5903,
+        "final_score": 0.5903
+      },
+      "nodes": [
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ticagrelor",
+          "type": "Compound"
+        },
+        {
+          "id": "P2ry12",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clopidogrel",
+          "target": "Skin Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Haemorrhage",
+          "target": "Ticagrelor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ticagrelor",
+          "target": "P2ry12",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clopidogrel,Ticagrelor": [
+          "P2Y12 Inhibitor",
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_6793"
     },
     {
       "score": {
@@ -284,59 +283,10 @@
       "lowest_common_ancestors": {
         "Clopidogrel,Ticagrelor": [
           "P2Y12 Inhibitor",
-          "Organosulfur Compound"
+          "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_13404"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5403,
-        "final_score": 0.5403
-      },
-      "nodes": [
-        {
-          "id": "Clopidogrel",
-          "type": "Compound"
-        },
-        {
-          "id": "Haemorrhagic Stroke",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ticagrelor",
-          "type": "Compound"
-        },
-        {
-          "id": "P2ry12",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clopidogrel",
-          "target": "Haemorrhagic Stroke",
-          "label": "causes"
-        },
-        {
-          "source": "Haemorrhagic Stroke",
-          "target": "Ticagrelor",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ticagrelor",
-          "target": "P2ry12",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clopidogrel,Ticagrelor": [
-          "P2Y12 Inhibitor",
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_13405"
+      "id": "path_6794"
     }
-  ],
-  "verbalization": ""
+  ]
 }

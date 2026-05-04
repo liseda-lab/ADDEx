@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4524,
-        "final_score": 0.4524
+        "ic_mean": 0.5329,
+        "final_score": 0.5329
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Burning In Throat",
-          "type": "Side Effect"
+          "id": "Cyp2a6",
+          "type": "Gene"
         },
         {
-          "id": "Selegiline",
+          "id": "Methimazole",
           "type": "Compound"
         },
         {
@@ -27,27 +27,73 @@
       "edges": [
         {
           "source": "Azelastine",
-          "target": "Burning In Throat",
-          "label": "causes"
+          "target": "Cyp2a6",
+          "label": "binds"
         },
         {
-          "source": "Burning In Throat",
-          "target": "Selegiline",
-          "label": "is caused by"
+          "source": "Cyp2a6",
+          "target": "Methimazole",
+          "label": "is bound by"
         },
         {
-          "source": "Selegiline",
+          "source": "Methimazole",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Azelastine,Selegiline": [
-          "Tertiary Amino Compound"
+        "Azelastine,Methimazole": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_27964"
+      "id": "path_14336"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5028,
+        "final_score": 0.5028
+      },
+      "nodes": [
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Pilocarpine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azelastine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Pilocarpine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pilocarpine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azelastine,Pilocarpine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_14337"
     }
-  ],
-  "verbalization": ""
+  ]
 }

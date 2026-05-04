@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00624 - Gene::9429",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.506,
+        "final_score": 0.506
+      },
+      "nodes": [
+        {
+          "id": "Testosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Buccal Inflammation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pantoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Testosterone",
+          "target": "Buccal Inflammation",
+          "label": "causes"
+        },
+        {
+          "source": "Buccal Inflammation",
+          "target": "Pantoprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pantoprazole",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Testosterone,Pantoprazole": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6958"
+    }
+  ]
 }

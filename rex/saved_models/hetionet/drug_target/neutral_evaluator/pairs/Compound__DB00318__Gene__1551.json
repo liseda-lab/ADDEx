@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6125,
-        "final_score": 0.6125
-      },
-      "nodes": [
-        {
-          "id": "Codeine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxycodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Codeine",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Oxycodone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxycodone",
-          "target": "Cyp3a7",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Codeine,Oxycodone": [
-          "Ammonium Ion Derivative",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_12900"
-    },
-    {
-      "score": {
         "ic_mean": 0.5607,
         "final_score": 0.5607
       },
@@ -91,11 +43,11 @@
       ],
       "lowest_common_ancestors": {
         "Codeine,Oxycodone": [
-          "Ammonium Ion Derivative",
-          "Opioid Receptor Agonist"
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
         ]
       },
-      "id": "path_12901"
+      "id": "path_6535"
     },
     {
       "score": {
@@ -139,12 +91,58 @@
       ],
       "lowest_common_ancestors": {
         "Codeine,Oxycodone": [
-          "Ammonium Ion Derivative",
-          "Opioid Receptor Agonist"
+          "Organic Heteropentacyclic Compound",
+          "Opioid"
         ]
       },
-      "id": "path_12902"
+      "id": "path_6536"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4966,
+        "final_score": 0.4966
+      },
+      "nodes": [
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Gestodene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Codeine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Gestodene",
+          "label": "is bound by"
+        },
+        {
+          "source": "Gestodene",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Codeine,Gestodene": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6537"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB01191 - Gene::1548",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6664,
+        "final_score": 0.7082,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Dexfenfluramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexfenfluramine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2a6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1497"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4211,
+        "final_score": 0.4211
+      },
+      "nodes": [
+        {
+          "id": "Dexfenfluramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenproporex",
+          "type": "Compound"
+        },
+        {
+          "id": "Amphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexfenfluramine",
+          "target": "Fenproporex",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenproporex",
+          "target": "Amphetamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Amphetamine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexfenfluramine,Fenproporex": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ],
+        "Dexfenfluramine,Amphetamine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ],
+        "Fenproporex,Amphetamine": [
+          "Amphetamines",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_1498"
+    }
+  ]
+}

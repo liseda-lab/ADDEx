@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6346,
-        "final_score": 0.6346
+        "ic_mean": 0.4418,
+        "final_score": 0.4418
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrnb4",
+          "id": "Cyp2b6",
           "type": "Gene"
         },
         {
-          "id": "Levomethadyl Acetate",
+          "id": "Enzalutamide",
           "type": "Compound"
         },
         {
@@ -27,28 +27,81 @@
       "edges": [
         {
           "source": "Dextromethorphan",
-          "target": "Chrnb4",
+          "target": "Cyp2b6",
           "label": "binds"
         },
         {
-          "source": "Chrnb4",
-          "target": "Levomethadyl Acetate",
+          "source": "Cyp2b6",
+          "target": "Enzalutamide",
           "label": "is bound by"
         },
         {
-          "source": "Levomethadyl Acetate",
+          "source": "Enzalutamide",
           "target": "Cyp3a5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dextromethorphan,Levomethadyl Acetate": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
+        "Dextromethorphan,Enzalutamide": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_14438"
+      "id": "path_7238"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3822,
+        "final_score": 0.3822
+      },
+      "nodes": [
+        {
+          "id": "Dextromethorphan",
+          "type": "Compound"
+        },
+        {
+          "id": "Dezocine",
+          "type": "Compound"
+        },
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextromethorphan",
+          "target": "Dezocine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dezocine",
+          "target": "Estrone",
+          "label": "resembles"
+        },
+        {
+          "source": "Estrone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextromethorphan,Dezocine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Dextromethorphan,Estrone": [
+          "Organic Aromatic Compound"
+        ],
+        "Dezocine,Estrone": [
+          "Organic Chemical",
+          "Phenols"
+        ]
+      },
+      "id": "path_7239"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,145 @@
+{
+  "id": "Compound::DB01226 - Gene::1135",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6609,
+        "final_score": 0.7888,
+        "agentic_score": 0.9167
+      },
+      "nodes": [
+        {
+          "id": "Mivacurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrna2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mivacurium",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Acetylcholine Receptor Activity",
+          "target": "Chrna2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3612"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5761,
+        "final_score": 0.7047,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Mivacurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Tubocurarine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mivacurium",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Tubocurarine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Tubocurarine",
+          "target": "Chrna2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mivacurium,Tubocurarine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_3613"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6905,
+        "final_score": 0.5953,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Mivacurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuromuscular Block Prolonged",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mivacurium",
+          "target": "Neuromuscular Block Prolonged",
+          "label": "causes"
+        },
+        {
+          "source": "Neuromuscular Block Prolonged",
+          "target": "Vecuronium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vecuronium",
+          "target": "Chrna2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mivacurium,Vecuronium": [
+          "Nicotinic Antagonist",
+          "Polycyclic Compound"
+        ]
+      },
+      "id": "path_3614"
+    }
+  ]
+}

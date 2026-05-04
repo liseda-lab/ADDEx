@@ -3,56 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7112,
-        "final_score": 0.7112
-      },
-      "nodes": [
-        {
-          "id": "Trifluoperazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Caly",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Trifluoperazine",
-          "target": "Caly",
-          "label": "binds"
-        },
-        {
-          "source": "Caly",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Trifluoperazine,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_12378"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7062,
-        "final_score": 0.7062
+        "ic_mean": 0.6912,
+        "final_score": 0.6912
       },
       "nodes": [
         {
@@ -64,7 +16,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Promethazine",
           "type": "Compound"
         },
         {
@@ -80,11 +32,11 @@
         },
         {
           "source": "Phenothiazines",
-          "target": "Mesoridazine",
+          "target": "Promethazine",
           "label": "includes"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Promethazine",
           "target": "Drd2",
           "label": "binds"
         }
@@ -93,20 +45,20 @@
         "Trifluoperazine,Phenothiazines": [
           "Phenothiazines"
         ],
-        "Trifluoperazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
+        "Trifluoperazine,Promethazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ],
-        "Phenothiazines,Mesoridazine": [
+        "Phenothiazines,Promethazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_12379"
+      "id": "path_6248"
     },
     {
       "score": {
-        "ic_mean": 0.6184,
-        "final_score": 0.6184
+        "ic_mean": 0.592,
+        "final_score": 0.592
       },
       "nodes": [
         {
@@ -114,11 +66,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Sigmar1",
           "type": "Gene"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Remoxipride",
           "type": "Compound"
         },
         {
@@ -129,32 +81,31 @@
       "edges": [
         {
           "source": "Trifluoperazine",
-          "target": "Htr6",
+          "target": "Sigmar1",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
+          "source": "Sigmar1",
+          "target": "Remoxipride",
           "label": "is bound by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Remoxipride",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trifluoperazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
+        "Trifluoperazine,Remoxipride": [
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_12380"
+      "id": "path_6249"
     },
     {
       "score": {
-        "ic_mean": 0.4603,
-        "final_score": 0.4603
+        "ic_mean": 0.5825,
+        "final_score": 0.5825
       },
       "nodes": [
         {
@@ -162,11 +113,11 @@
           "type": "Compound"
         },
         {
-          "id": "Clocapramine",
-          "type": "Compound"
+          "id": "Pill Rolling",
+          "type": "Side Effect"
         },
         {
-          "id": "Acetophenazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -177,40 +128,32 @@
       "edges": [
         {
           "source": "Trifluoperazine",
-          "target": "Clocapramine",
-          "label": "resembles"
+          "target": "Pill Rolling",
+          "label": "causes"
         },
         {
-          "source": "Clocapramine",
-          "target": "Acetophenazine",
-          "label": "resembles"
+          "source": "Pill Rolling",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Acetophenazine",
+          "source": "Prochlorperazine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trifluoperazine,Clocapramine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
-        ],
-        "Trifluoperazine,Acetophenazine": [
-          "N-Alkylpiperazine",
-          "Antipsychotic Agent"
-        ],
-        "Clocapramine,Acetophenazine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+        "Trifluoperazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_12381"
+      "id": "path_6250"
     },
     {
       "score": {
-        "ic_mean": 0.409,
-        "final_score": 0.409
+        "ic_mean": 0.5825,
+        "final_score": 0.5825
       },
       "nodes": [
         {
@@ -218,11 +161,11 @@
           "type": "Compound"
         },
         {
-          "id": "Clocapramine",
-          "type": "Compound"
+          "id": "Colon Atonic",
+          "type": "Side Effect"
         },
         {
-          "id": "Thioproperazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -233,36 +176,315 @@
       "edges": [
         {
           "source": "Trifluoperazine",
-          "target": "Clocapramine",
-          "label": "resembles"
+          "target": "Colon Atonic",
+          "label": "causes"
         },
         {
-          "source": "Clocapramine",
-          "target": "Thioproperazine",
-          "label": "resembles"
+          "source": "Colon Atonic",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Thioproperazine",
+          "source": "Prochlorperazine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trifluoperazine,Clocapramine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
-        ],
-        "Trifluoperazine,Thioproperazine": [
-          "N-Methylpiperazine",
-          "Antipsychotic Agent"
-        ],
-        "Clocapramine,Thioproperazine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+        "Trifluoperazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_12382"
+      "id": "path_6251"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5825,
+        "final_score": 0.5825
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gait Shuffling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Gait Shuffling",
+          "label": "causes"
+        },
+        {
+          "source": "Gait Shuffling",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prochlorperazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_6252"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5615,
+        "final_score": 0.5615
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pregnancy Test False Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Pregnancy Test False Positive",
+          "label": "causes"
+        },
+        {
+          "source": "Pregnancy Test False Positive",
+          "target": "Thiothixene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Thiothixene",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Thiothixene": [
+          "Antipsychotic Agent",
+          "N-Methylpiperazine"
+        ]
+      },
+      "id": "path_6253"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5437,
+        "final_score": 0.5437
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Thiothixene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Thiothixene",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Thiothixene": [
+          "Antipsychotic Agent",
+          "N-Methylpiperazine"
+        ]
+      },
+      "id": "path_6254"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5422,
+        "final_score": 0.5422
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pill Rolling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Pill Rolling",
+          "label": "causes"
+        },
+        {
+          "source": "Pill Rolling",
+          "target": "Chlorpromazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chlorpromazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_6255"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5422,
+        "final_score": 0.5422
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Colon Atonic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Colon Atonic",
+          "label": "causes"
+        },
+        {
+          "source": "Colon Atonic",
+          "target": "Chlorpromazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chlorpromazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_6256"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5268,
+        "final_score": 0.5268
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Obstipation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Obstipation",
+          "label": "causes"
+        },
+        {
+          "source": "Obstipation",
+          "target": "Lisuride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6257"
     }
-  ],
-  "verbalization": ""
+  ]
 }

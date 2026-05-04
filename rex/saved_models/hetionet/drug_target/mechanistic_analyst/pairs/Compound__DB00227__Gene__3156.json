@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00227 - Gene::3156",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.574,
+        "final_score": 0.574
+      },
+      "nodes": [
+        {
+          "id": "Lovastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nerve Palsy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hmgcr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lovastatin",
+          "target": "Peripheral Nerve Palsy",
+          "label": "causes"
+        },
+        {
+          "source": "Peripheral Nerve Palsy",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Hmgcr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lovastatin,Pravastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Statin"
+        ]
+      },
+      "id": "path_4434"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6703,
-        "final_score": 0.6703
+        "ic_mean": 0.7654,
+        "final_score": 0.7654
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Tymazoline",
-          "type": "Compound"
+          "id": "Adra2c",
+          "type": "Gene"
         },
         {
-          "id": "Phentolamine",
-          "type": "Compound"
+          "id": "Alpha2-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra2b",
@@ -27,40 +27,26 @@
       "edges": [
         {
           "source": "Xylometazoline",
-          "target": "Tymazoline",
-          "label": "resembles"
-        },
-        {
-          "source": "Tymazoline",
-          "target": "Phentolamine",
-          "label": "resembles"
-        },
-        {
-          "source": "Phentolamine",
-          "target": "Adra2b",
+          "target": "Adra2c",
           "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha2-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha2-adrenergic Receptor Activity",
+          "target": "Adra2b",
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Xylometazoline,Tymazoline": [
-          "Organic Molecular Entity",
-          "Adrenergic Agent"
-        ],
-        "Xylometazoline,Phentolamine": [
-          "Hydrogen Molecular Entity",
-          "Adrenergic Agent"
-        ],
-        "Tymazoline,Phentolamine": [
-          "Organic Molecular Entity",
-          "Alpha-Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_13494"
+      "id": "path_6828"
     },
     {
       "score": {
-        "ic_mean": 0.6259,
-        "final_score": 0.6259
+        "ic_mean": 0.7406,
+        "final_score": 0.7406
       },
       "nodes": [
         {
@@ -72,8 +58,8 @@
           "type": "Gene"
         },
         {
-          "id": "Phentolamine",
-          "type": "Compound"
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Adra2b",
@@ -88,27 +74,21 @@
         },
         {
           "source": "Adra1d",
-          "target": "Phentolamine",
-          "label": "is bound by"
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Phentolamine",
+          "source": "Alpha-adrenergic Receptor Activity",
           "target": "Adra2b",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Xylometazoline,Phentolamine": [
-          "Hydrogen Molecular Entity",
-          "Adrenergic Agent"
-        ]
-      },
-      "id": "path_13495"
+      "id": "path_6829"
     },
     {
       "score": {
-        "ic_mean": 0.6252,
-        "final_score": 0.6252
+        "ic_mean": 0.7309,
+        "final_score": 0.7309
       },
       "nodes": [
         {
@@ -116,11 +96,179 @@
           "type": "Compound"
         },
         {
-          "id": "Tymazoline",
+          "id": "Adra2a",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha2-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Xylometazoline",
+          "target": "Adra2a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2a",
+          "target": "Alpha2-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha2-adrenergic Receptor Activity",
+          "target": "Adra2b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6830"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7267,
+        "final_score": 0.7267
+      },
+      "nodes": [
+        {
+          "id": "Xylometazoline",
           "type": "Compound"
         },
         {
-          "id": "Tolazoline",
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Xylometazoline",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6831"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7249,
+        "final_score": 0.7249
+      },
+      "nodes": [
+        {
+          "id": "Xylometazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Xylometazoline",
+          "target": "Adra1b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1b",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6832"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7114,
+        "final_score": 0.7114
+      },
+      "nodes": [
+        {
+          "id": "Xylometazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Xylometazoline",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6833"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6454,
+        "final_score": 0.6454
+      },
+      "nodes": [
+        {
+          "id": "Xylometazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Dipivefrin",
           "type": "Compound"
         },
         {
@@ -131,36 +279,26 @@
       "edges": [
         {
           "source": "Xylometazoline",
-          "target": "Tymazoline",
-          "label": "resembles"
+          "target": "Adra2c",
+          "label": "binds"
         },
         {
-          "source": "Tymazoline",
-          "target": "Tolazoline",
-          "label": "resembles"
+          "source": "Adra2c",
+          "target": "Dipivefrin",
+          "label": "is bound by"
         },
         {
-          "source": "Tolazoline",
+          "source": "Dipivefrin",
           "target": "Adra2b",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Xylometazoline,Tymazoline": [
-          "Organic Molecular Entity",
-          "Adrenergic Agent"
-        ],
-        "Xylometazoline,Tolazoline": [
-          "Organic Aromatic Compound",
-          "Adrenergic Agent"
-        ],
-        "Tymazoline,Tolazoline": [
-          "Organic Molecular Entity",
-          "Alpha-Adrenergic Antagonist"
+        "Xylometazoline,Dipivefrin": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_13496"
+      "id": "path_6834"
     }
-  ],
-  "verbalization": ""
+  ]
 }

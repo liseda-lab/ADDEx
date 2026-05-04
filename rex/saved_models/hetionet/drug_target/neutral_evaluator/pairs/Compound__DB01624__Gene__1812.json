@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7306,
-        "final_score": 0.7306
+        "ic_mean": 0.7723,
+        "final_score": 0.7723
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Apomorphine",
-          "type": "Compound"
+          "id": "Dopamine Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Drd1",
@@ -32,22 +32,58 @@
         },
         {
           "source": "Drd5",
-          "target": "Apomorphine",
-          "label": "is bound by"
+          "target": "Dopamine Neurotransmitter Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Apomorphine",
+          "source": "Dopamine Neurotransmitter Receptor Activity",
           "target": "Drd1",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Zuclopenthixol,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
+      "id": "path_8991"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7723,
+        "final_score": 0.7723
       },
-      "id": "path_17892"
+      "nodes": [
+        {
+          "id": "Zuclopenthixol",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd5",
+          "type": "Gene"
+        },
+        {
+          "id": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gs",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zuclopenthixol",
+          "target": "Drd5",
+          "label": "binds"
+        },
+        {
+          "source": "Drd5",
+          "target": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gs",
+          "label": "participates"
+        },
+        {
+          "source": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gs",
+          "target": "Drd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8992"
     },
     {
       "score": {
@@ -64,7 +100,7 @@
           "type": "Gene"
         },
         {
-          "id": "Pramipexole",
+          "id": "Cabergoline",
           "type": "Compound"
         },
         {
@@ -80,22 +116,22 @@
         },
         {
           "source": "Drd5",
-          "target": "Pramipexole",
+          "target": "Cabergoline",
           "label": "is bound by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Cabergoline",
           "target": "Drd1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Zuclopenthixol,Pramipexole": [
+        "Zuclopenthixol,Cabergoline": [
           "Agent Affecting Nervous System",
-          "Organosulfur Heterocyclic Compound"
+          "Nitrogen Molecular Entity"
         ]
       },
-      "id": "path_17893"
+      "id": "path_8993"
     },
     {
       "score": {
@@ -142,8 +178,54 @@
           "Organic Heterotricyclic Compound"
         ]
       },
-      "id": "path_17894"
+      "id": "path_8994"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5943,
+        "final_score": 0.5943
+      },
+      "nodes": [
+        {
+          "id": "Zuclopenthixol",
+          "type": "Compound"
+        },
+        {
+          "id": "Sudden Death, Cause Unknown",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propericiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zuclopenthixol",
+          "target": "Sudden Death, Cause Unknown",
+          "label": "causes"
+        },
+        {
+          "source": "Sudden Death, Cause Unknown",
+          "target": "Propericiazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propericiazine",
+          "target": "Drd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zuclopenthixol,Propericiazine": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_8995"
     }
-  ],
-  "verbalization": ""
+  ]
 }

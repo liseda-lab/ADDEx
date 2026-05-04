@@ -1,0 +1,150 @@
+{
+  "id": "Compound::DB00433 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6029,
+        "final_score": 0.7181,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prochlorperazine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8496"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6618,
+        "final_score": 0.6642,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prochlorperazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Mesoridazine",
+          "label": "includes"
+        },
+        {
+          "source": "Mesoridazine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prochlorperazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Prochlorperazine,Mesoridazine": [
+          "Agent Affecting Nervous System",
+          "Tertiary Amino Compound"
+        ],
+        "Phenothiazines,Mesoridazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_8497"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4707,
+        "final_score": 0.4707
+      },
+      "nodes": [
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abnormal Pigmentation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydroxychloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prochlorperazine",
+          "target": "Abnormal Pigmentation",
+          "label": "causes"
+        },
+        {
+          "source": "Abnormal Pigmentation",
+          "target": "Hydroxychloroquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydroxychloroquine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prochlorperazine,Hydroxychloroquine": [
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_8498"
+    }
+  ]
+}

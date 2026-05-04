@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6967,
-        "final_score": 0.6967
+        "ic_mean": 0.6111,
+        "final_score": 0.6111
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Nr3c2",
-          "type": "Gene"
+          "id": "Trilostane",
+          "type": "Compound"
         },
         {
-          "id": "Drospirenone",
+          "id": "Stanozolol",
           "type": "Compound"
         },
         {
@@ -27,31 +27,39 @@
       "edges": [
         {
           "source": "Progesterone",
-          "target": "Nr3c2",
-          "label": "binds"
+          "target": "Trilostane",
+          "label": "resembles"
         },
         {
-          "source": "Nr3c2",
-          "target": "Drospirenone",
-          "label": "is bound by"
+          "source": "Trilostane",
+          "target": "Stanozolol",
+          "label": "resembles"
         },
         {
-          "source": "Drospirenone",
+          "source": "Stanozolol",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Progesterone,Drospirenone": [
-          "3-Oxo-Delta(4) Steroid"
+        "Progesterone,Trilostane": [
+          "Steroid"
+        ],
+        "Progesterone,Stanozolol": [
+          "Steroid Compound",
+          "Steroid Hormone"
+        ],
+        "Trilostane,Stanozolol": [
+          "Hormone Therapy Agent",
+          "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_254"
+      "id": "path_129"
     },
     {
       "score": {
-        "ic_mean": 0.6153,
-        "final_score": 0.6153
+        "ic_mean": 0.5958,
+        "final_score": 0.5958
       },
       "nodes": [
         {
@@ -59,11 +67,11 @@
           "type": "Compound"
         },
         {
-          "id": "Nr3c2",
-          "type": "Gene"
+          "id": "Formestane",
+          "type": "Compound"
         },
         {
-          "id": "Spironolactone",
+          "id": "Oxandrolone",
           "type": "Compound"
         },
         {
@@ -74,27 +82,34 @@
       "edges": [
         {
           "source": "Progesterone",
-          "target": "Nr3c2",
-          "label": "binds"
+          "target": "Formestane",
+          "label": "resembles"
         },
         {
-          "source": "Nr3c2",
-          "target": "Spironolactone",
-          "label": "is bound by"
+          "source": "Formestane",
+          "target": "Oxandrolone",
+          "label": "resembles"
         },
         {
-          "source": "Spironolactone",
+          "source": "Oxandrolone",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Progesterone,Spironolactone": [
+        "Progesterone,Formestane": [
           "3-Oxo-Delta(4) Steroid"
+        ],
+        "Progesterone,Oxandrolone": [
+          "Steroid Compound",
+          "3-Oxo Steroid"
+        ],
+        "Formestane,Oxandrolone": [
+          "Hydroxy Steroid",
+          "Hormone Therapy Agent"
         ]
       },
-      "id": "path_255"
+      "id": "path_130"
     }
-  ],
-  "verbalization": ""
+  ]
 }

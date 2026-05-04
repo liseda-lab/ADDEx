@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5272,
-        "final_score": 0.5272
+        "ic_mean": 0.5739,
+        "final_score": 0.5739
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Necrotising Fasciitis",
-          "type": "Side Effect"
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Sulindac",
+          "id": "Fenoprofen",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Diflunisal",
-          "target": "Necrotising Fasciitis",
-          "label": "causes"
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
         },
         {
-          "source": "Necrotising Fasciitis",
-          "target": "Sulindac",
-          "label": "is caused by"
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Fenoprofen",
+          "label": "includes"
         },
         {
-          "source": "Sulindac",
+          "source": "Fenoprofen",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diflunisal,Sulindac": [
-          "Enzyme Inhibitor",
-          "Carboxylic Acid"
+        "Diflunisal,Fenoprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_16102"
+      "id": "path_8023"
+    },
+    {
+      "score": {
+        "ic_mean": 0.538,
+        "final_score": 0.538
+      },
+      "nodes": [
+        {
+          "id": "Diflunisal",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Fenoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diflunisal",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Fenoprofen",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fenoprofen",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diflunisal,Fenoprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_8024"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB00832 - Gene::8913",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8394,
+        "final_score": 0.8363,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Phensuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1i",
+          "type": "Gene"
+        },
+        {
+          "id": "Low Voltage-gated Calcium Channel Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cacna1g",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phensuximide",
+          "target": "Cacna1i",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna1i",
+          "target": "Low Voltage-gated Calcium Channel Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Low Voltage-gated Calcium Channel Activity",
+          "target": "Cacna1g",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9848"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4973,
+        "final_score": 0.4973
+      },
+      "nodes": [
+        {
+          "id": "Phensuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Glutethimide",
+          "type": "Compound"
+        },
+        {
+          "id": "Methsuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1g",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phensuximide",
+          "target": "Glutethimide",
+          "label": "resembles"
+        },
+        {
+          "source": "Glutethimide",
+          "target": "Methsuximide",
+          "label": "resembles"
+        },
+        {
+          "source": "Methsuximide",
+          "target": "Cacna1g",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phensuximide,Glutethimide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Phensuximide,Methsuximide": [
+          "Organic Molecular Entity",
+          "Anticonvulsant Agent"
+        ],
+        "Glutethimide,Methsuximide": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9849"
+    }
+  ]
+}

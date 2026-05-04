@@ -3,6 +3,48 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.686,
+        "final_score": 0.686
+      },
+      "nodes": [
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14803"
+    },
+    {
+      "score": {
         "ic_mean": 0.5857,
         "final_score": 0.5857
       },
@@ -43,246 +85,11 @@
       ],
       "lowest_common_ancestors": {
         "Cyclophosphamide,Ifosfamide": [
-          "Nitrogen Mustard Compound",
-          "Organochlorine Compound"
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
         ]
       },
-      "id": "path_28744"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5857,
-        "final_score": 0.5857
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Aminophenazone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Aminophenazone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Aminophenazone",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Aminophenazone": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_28745"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5557,
-        "final_score": 0.5557
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Antipyrine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_28746"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5354,
-        "final_score": 0.5354
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Bacterial Disease Carrier",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sulfadiazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Bacterial Disease Carrier",
-          "label": "causes"
-        },
-        {
-          "source": "Bacterial Disease Carrier",
-          "target": "Sulfadiazine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sulfadiazine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Sulfadiazine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_28747"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5344,
-        "final_score": 0.5344
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Methadone": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_28748"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5179,
-        "final_score": 0.5179
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapsone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Dapsone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapsone",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Dapsone": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_28749"
+      "id": "path_14804"
     },
     {
       "score": {
@@ -329,12 +136,12 @@
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_28750"
+      "id": "path_14805"
     },
     {
       "score": {
-        "ic_mean": 0.4849,
-        "final_score": 0.4849
+        "ic_mean": 0.4705,
+        "final_score": 0.4705
       },
       "nodes": [
         {
@@ -342,152 +149,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Antipyrine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_28751"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4831,
-        "final_score": 0.4831
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Phenytoin": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_28752"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4665,
-        "final_score": 0.4665
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Phenobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenobarbital",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Phenobarbital": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_28753"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4624,
-        "final_score": 0.4624
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Decompensation Cardiac",
+          "id": "Myeloproliferative Disorder",
           "type": "Side Effect"
         },
         {
-          "id": "Clopidogrel",
+          "id": "Ritonavir",
           "type": "Compound"
         },
         {
@@ -498,73 +164,26 @@
       "edges": [
         {
           "source": "Cyclophosphamide",
-          "target": "Decompensation Cardiac",
+          "target": "Myeloproliferative Disorder",
           "label": "causes"
         },
         {
-          "source": "Decompensation Cardiac",
-          "target": "Clopidogrel",
+          "source": "Myeloproliferative Disorder",
+          "target": "Ritonavir",
           "label": "is caused by"
         },
         {
-          "source": "Clopidogrel",
+          "source": "Ritonavir",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclophosphamide,Clopidogrel": [
-          "Organochlorine Compound"
+        "Cyclophosphamide,Ritonavir": [
+          "Organonitrogen Compound"
         ]
       },
-      "id": "path_28754"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4595,
-        "final_score": 0.4595
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Tretinoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Tretinoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tretinoin",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Tretinoin": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_28755"
+      "id": "path_14806"
     },
     {
       "score": {
@@ -608,16 +227,16 @@
       ],
       "lowest_common_ancestors": {
         "Cyclophosphamide,Ifosfamide": [
-          "Nitrogen Mustard Compound",
-          "Organochlorine Compound"
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
         ]
       },
-      "id": "path_28756"
+      "id": "path_14807"
     },
     {
       "score": {
-        "ic_mean": 0.4294,
-        "final_score": 0.4294
+        "ic_mean": 0.4357,
+        "final_score": 0.4357
       },
       "nodes": [
         {
@@ -625,197 +244,7 @@
           "type": "Compound"
         },
         {
-          "id": "Cardiomyopathy Secondary Nos",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tretinoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cardiomyopathy Secondary Nos",
-          "label": "causes"
-        },
-        {
-          "source": "Cardiomyopathy Secondary Nos",
-          "target": "Tretinoin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tretinoin",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Tretinoin": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_28757"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4173,
-        "final_score": 0.4173
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Bladder Spasm",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Colchicine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Bladder Spasm",
-          "label": "causes"
-        },
-        {
-          "source": "Bladder Spasm",
-          "target": "Colchicine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Colchicine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Colchicine": [
-          "Organonitrogen Compound",
-          "Cytotoxic Chemotherapeutic Agent"
-        ]
-      },
-      "id": "path_28758"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4125,
-        "final_score": 0.4125
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Sarcoma",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Tamoxifen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Sarcoma",
-          "label": "causes"
-        },
-        {
-          "source": "Sarcoma",
-          "target": "Tamoxifen",
-          "label": "is caused by"
-        },
-        {
-          "source": "Tamoxifen",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Tamoxifen": [
-          "Organonitrogen Compound",
-          "Antineoplastic Agent"
-        ]
-      },
-      "id": "path_28759"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4062,
-        "final_score": 0.4062
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Heart Malformation",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Medroxyprogesterone Acetate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclophosphamide",
-          "target": "Heart Malformation",
-          "label": "causes"
-        },
-        {
-          "source": "Heart Malformation",
-          "target": "Medroxyprogesterone Acetate",
-          "label": "is caused by"
-        },
-        {
-          "source": "Medroxyprogesterone Acetate",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclophosphamide,Medroxyprogesterone Acetate": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_28760"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3871,
-        "final_score": 0.3871
-      },
-      "nodes": [
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Venoocclusive Liver Disease",
+          "id": "Microsomia",
           "type": "Side Effect"
         },
         {
@@ -830,11 +259,11 @@
       "edges": [
         {
           "source": "Cyclophosphamide",
-          "target": "Venoocclusive Liver Disease",
+          "target": "Microsomia",
           "label": "causes"
         },
         {
-          "source": "Venoocclusive Liver Disease",
+          "source": "Microsomia",
           "target": "Ifosfamide",
           "label": "is caused by"
         },
@@ -846,16 +275,16 @@
       ],
       "lowest_common_ancestors": {
         "Cyclophosphamide,Ifosfamide": [
-          "Nitrogen Mustard Compound",
-          "Organochlorine Compound"
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
         ]
       },
-      "id": "path_28761"
+      "id": "path_14808"
     },
     {
       "score": {
-        "ic_mean": 0.373,
-        "final_score": 0.373
+        "ic_mean": 0.4357,
+        "final_score": 0.4357
       },
       "nodes": [
         {
@@ -863,11 +292,11 @@
           "type": "Compound"
         },
         {
-          "id": "Spinal Cord Disorder",
+          "id": "Ovarian Failure",
           "type": "Side Effect"
         },
         {
-          "id": "Tretinoin",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -878,27 +307,216 @@
       "edges": [
         {
           "source": "Cyclophosphamide",
-          "target": "Spinal Cord Disorder",
+          "target": "Ovarian Failure",
           "label": "causes"
         },
         {
-          "source": "Spinal Cord Disorder",
-          "target": "Tretinoin",
+          "source": "Ovarian Failure",
+          "target": "Ifosfamide",
           "label": "is caused by"
         },
         {
-          "source": "Tretinoin",
+          "source": "Ifosfamide",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclophosphamide,Tretinoin": [
-          "Heteroorganic Entity"
+        "Cyclophosphamide,Ifosfamide": [
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
         ]
       },
-      "id": "path_28762"
+      "id": "path_14809"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4349,
+        "final_score": 0.4349
+      },
+      "nodes": [
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Organising Pneumonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclophosphamide",
+          "target": "Organising Pneumonia",
+          "label": "causes"
+        },
+        {
+          "source": "Organising Pneumonia",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclophosphamide,Amiodarone": [
+          "Organohalogen Compound"
+        ]
+      },
+      "id": "path_14810"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4067,
+        "final_score": 0.4067
+      },
+      "nodes": [
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Fibrosis Interstitial",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclophosphamide",
+          "target": "Lung Fibrosis Interstitial",
+          "label": "causes"
+        },
+        {
+          "source": "Lung Fibrosis Interstitial",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclophosphamide,Ifosfamide": [
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
+        ]
+      },
+      "id": "path_14811"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4035,
+        "final_score": 0.4035
+      },
+      "nodes": [
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Obliterative Bronchiolitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclophosphamide",
+          "target": "Obliterative Bronchiolitis",
+          "label": "causes"
+        },
+        {
+          "source": "Obliterative Bronchiolitis",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclophosphamide,Amiodarone": [
+          "Organohalogen Compound"
+        ]
+      },
+      "id": "path_14812"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4001,
+        "final_score": 0.4001
+      },
+      "nodes": [
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Cimetidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclophosphamide,Cimetidine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_14813"
     }
-  ],
-  "verbalization": ""
+  ]
 }

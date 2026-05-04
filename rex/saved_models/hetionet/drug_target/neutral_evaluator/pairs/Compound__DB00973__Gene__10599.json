@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00973 - Gene::10599",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5336,
+        "final_score": 0.5336
+      },
+      "nodes": [
+        {
+          "id": "Ezetimibe",
+          "type": "Compound"
+        },
+        {
+          "id": "Dermatomyositis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Penicillamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ezetimibe",
+          "target": "Dermatomyositis",
+          "label": "causes"
+        },
+        {
+          "source": "Dermatomyositis",
+          "target": "Penicillamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Penicillamine",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ezetimibe,Penicillamine": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_2141"
+    }
+  ]
 }

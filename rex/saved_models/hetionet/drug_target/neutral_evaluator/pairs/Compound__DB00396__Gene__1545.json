@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00396 - Gene::1545",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5385,
+        "final_score": 0.5385
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Failure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Procarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Ovarian Failure",
+          "label": "causes"
+        },
+        {
+          "source": "Ovarian Failure",
+          "target": "Procarbazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Procarbazine",
+          "target": "Cyp1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Procarbazine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_5037"
+    }
+  ]
 }

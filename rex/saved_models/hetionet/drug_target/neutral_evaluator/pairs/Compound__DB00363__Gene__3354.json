@@ -1,6 +1,143 @@
 {
   "id": "Compound::DB00363 - Gene::3354",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6834,
+        "final_score": 0.6834
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr1e",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Htr3a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr3a",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr1e",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12650"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6288,
+        "final_score": 0.6288
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr7",
+          "type": "Gene"
+        },
+        {
+          "id": "Methysergide",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1e",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Htr7",
+          "label": "binds"
+        },
+        {
+          "source": "Htr7",
+          "target": "Methysergide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methysergide",
+          "target": "Htr1e",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Methysergide": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12651"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6075,
+        "final_score": 0.6075
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr7",
+          "type": "Gene"
+        },
+        {
+          "id": "Eletriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1e",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Htr7",
+          "label": "binds"
+        },
+        {
+          "source": "Htr7",
+          "target": "Eletriptan",
+          "label": "is bound by"
+        },
+        {
+          "source": "Eletriptan",
+          "target": "Htr1e",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Eletriptan": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12652"
+    }
+  ]
 }

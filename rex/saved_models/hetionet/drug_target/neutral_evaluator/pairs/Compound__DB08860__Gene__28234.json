@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6029,
-        "final_score": 0.6029
+        "ic_mean": 0.5651,
+        "final_score": 0.5651
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Myoglobinuria",
+          "type": "Side Effect"
         },
         {
-          "id": "Valsartan",
+          "id": "Rosuvastatin",
           "type": "Compound"
         },
         {
@@ -27,27 +27,75 @@
       "edges": [
         {
           "source": "Pitavastatin",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Myoglobinuria",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Valsartan",
-          "label": "is bound by"
+          "source": "Myoglobinuria",
+          "target": "Rosuvastatin",
+          "label": "is caused by"
         },
         {
-          "source": "Valsartan",
+          "source": "Rosuvastatin",
           "target": "Slco1b3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pitavastatin,Valsartan": [
-          "Monocarboxylic Acid"
+        "Pitavastatin,Rosuvastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_20574"
+      "id": "path_10402"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5651,
+        "final_score": 0.5651
+      },
+      "nodes": [
+        {
+          "id": "Pitavastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Myoglobin Urine Present",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pitavastatin",
+          "target": "Myoglobin Urine Present",
+          "label": "causes"
+        },
+        {
+          "source": "Myoglobin Urine Present",
+          "target": "Rosuvastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rosuvastatin",
+          "target": "Slco1b3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pitavastatin,Rosuvastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10403"
     }
-  ],
-  "verbalization": ""
+  ]
 }

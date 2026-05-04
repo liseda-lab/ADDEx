@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6817,
-        "final_score": 0.6817
+        "ic_mean": 0.4849,
+        "final_score": 0.4849
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pgr",
-          "type": "Gene"
+          "id": "Retinal Vascular Thrombosis",
+          "type": "Side Effect"
         },
         {
-          "id": "Megestrol Acetate",
+          "id": "Estrone",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Norethindrone",
-          "target": "Pgr",
-          "label": "binds"
+          "target": "Retinal Vascular Thrombosis",
+          "label": "causes"
         },
         {
-          "source": "Pgr",
-          "target": "Megestrol Acetate",
-          "label": "is bound by"
+          "source": "Retinal Vascular Thrombosis",
+          "target": "Estrone",
+          "label": "is caused by"
         },
         {
-          "source": "Megestrol Acetate",
+          "source": "Estrone",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norethindrone,Megestrol Acetate": [
-          "3-Oxo-Delta(4) Steroid",
-          "Progestin"
+        "Norethindrone,Estrone": [
+          "3-Hydroxy Steroid"
         ]
       },
-      "id": "path_28714"
+      "id": "path_14784"
     },
     {
       "score": {
-        "ic_mean": 0.6303,
-        "final_score": 0.6303
+        "ic_mean": 0.46,
+        "final_score": 0.46
       },
       "nodes": [
         {
@@ -60,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Shbg",
-          "type": "Gene"
+          "id": "Dermatitis Hemorrhagic",
+          "type": "Side Effect"
         },
         {
-          "id": "Estriol",
+          "id": "Estrone",
           "type": "Compound"
         },
         {
@@ -75,32 +74,125 @@
       "edges": [
         {
           "source": "Norethindrone",
-          "target": "Shbg",
-          "label": "binds"
+          "target": "Dermatitis Hemorrhagic",
+          "label": "causes"
         },
         {
-          "source": "Shbg",
-          "target": "Estriol",
-          "label": "is bound by"
+          "source": "Dermatitis Hemorrhagic",
+          "target": "Estrone",
+          "label": "is caused by"
         },
         {
-          "source": "Estriol",
+          "source": "Estrone",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norethindrone,Estriol": [
-          "17Beta-Hydroxy Steroid",
+        "Norethindrone,Estrone": [
+          "3-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_14785"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4501,
+        "final_score": 0.4501
+      },
+      "nodes": [
+        {
+          "id": "Norethindrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Carbohydrate Tolerance Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norethindrone",
+          "target": "Carbohydrate Tolerance Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Carbohydrate Tolerance Decreased",
+          "target": "Hydrocortisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norethindrone,Hydrocortisone": [
+          "Tertiary Alcohol"
+        ]
+      },
+      "id": "path_14786"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4436,
+        "final_score": 0.4436
+      },
+      "nodes": [
+        {
+          "id": "Norethindrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinal Vascular Thrombosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norethindrone",
+          "target": "Retinal Vascular Thrombosis",
+          "label": "causes"
+        },
+        {
+          "source": "Retinal Vascular Thrombosis",
+          "target": "Conjugated Estrogens",
+          "label": "is caused by"
+        },
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norethindrone,Conjugated Estrogens": [
           "Therapeutic Steroid Hormone"
         ]
       },
-      "id": "path_28715"
+      "id": "path_14787"
     },
     {
       "score": {
-        "ic_mean": 0.6303,
-        "final_score": 0.6303
+        "ic_mean": 0.4299,
+        "final_score": 0.4299
       },
       "nodes": [
         {
@@ -108,11 +200,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pgr",
-          "type": "Gene"
+          "id": "Withdrawal Bleed",
+          "type": "Side Effect"
         },
         {
-          "id": "Mifepristone",
+          "id": "Conjugated Estrogens",
           "type": "Compound"
         },
         {
@@ -123,80 +215,31 @@
       "edges": [
         {
           "source": "Norethindrone",
-          "target": "Pgr",
-          "label": "binds"
+          "target": "Withdrawal Bleed",
+          "label": "causes"
         },
         {
-          "source": "Pgr",
-          "target": "Mifepristone",
-          "label": "is bound by"
+          "source": "Withdrawal Bleed",
+          "target": "Conjugated Estrogens",
+          "label": "is caused by"
         },
         {
-          "source": "Mifepristone",
+          "source": "Conjugated Estrogens",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norethindrone,Mifepristone": [
-          "3-Oxo-Delta(4) Steroid",
-          "Hormone Therapy Agent"
-        ]
-      },
-      "id": "path_28716"
-    },
-    {
-      "score": {
-        "ic_mean": 0.549,
-        "final_score": 0.549
-      },
-      "nodes": [
-        {
-          "id": "Norethindrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Shbg",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norethindrone",
-          "target": "Shbg",
-          "label": "binds"
-        },
-        {
-          "source": "Shbg",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norethindrone,Ethinyl Estradiol": [
-          "17-Hydroxy Steroid",
+        "Norethindrone,Conjugated Estrogens": [
           "Therapeutic Steroid Hormone"
         ]
       },
-      "id": "path_28717"
+      "id": "path_14788"
     },
     {
       "score": {
-        "ic_mean": 0.549,
-        "final_score": 0.549
+        "ic_mean": 0.4215,
+        "final_score": 0.4215
       },
       "nodes": [
         {
@@ -204,11 +247,11 @@
           "type": "Compound"
         },
         {
-          "id": "Shbg",
-          "type": "Gene"
+          "id": "Withdrawal Bleed",
+          "type": "Side Effect"
         },
         {
-          "id": "Spironolactone",
+          "id": "Progesterone",
           "type": "Compound"
         },
         {
@@ -219,31 +262,31 @@
       "edges": [
         {
           "source": "Norethindrone",
-          "target": "Shbg",
-          "label": "binds"
+          "target": "Withdrawal Bleed",
+          "label": "causes"
         },
         {
-          "source": "Shbg",
-          "target": "Spironolactone",
-          "label": "is bound by"
+          "source": "Withdrawal Bleed",
+          "target": "Progesterone",
+          "label": "is caused by"
         },
         {
-          "source": "Spironolactone",
+          "source": "Progesterone",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norethindrone,Spironolactone": [
+        "Norethindrone,Progesterone": [
           "3-Oxo-Delta(4) Steroid"
         ]
       },
-      "id": "path_28718"
+      "id": "path_14789"
     },
     {
       "score": {
-        "ic_mean": 0.549,
-        "final_score": 0.549
+        "ic_mean": 0.4215,
+        "final_score": 0.4215
       },
       "nodes": [
         {
@@ -251,11 +294,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pgr",
-          "type": "Gene"
+          "id": "Uterine Cervical Erosion",
+          "type": "Side Effect"
         },
         {
-          "id": "Spironolactone",
+          "id": "Progesterone",
           "type": "Compound"
         },
         {
@@ -266,31 +309,31 @@
       "edges": [
         {
           "source": "Norethindrone",
-          "target": "Pgr",
-          "label": "binds"
+          "target": "Uterine Cervical Erosion",
+          "label": "causes"
         },
         {
-          "source": "Pgr",
-          "target": "Spironolactone",
-          "label": "is bound by"
+          "source": "Uterine Cervical Erosion",
+          "target": "Progesterone",
+          "label": "is caused by"
         },
         {
-          "source": "Spironolactone",
+          "source": "Progesterone",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norethindrone,Spironolactone": [
+        "Norethindrone,Progesterone": [
           "3-Oxo-Delta(4) Steroid"
         ]
       },
-      "id": "path_28719"
+      "id": "path_14790"
     },
     {
       "score": {
-        "ic_mean": 0.4754,
-        "final_score": 0.4754
+        "ic_mean": 0.4103,
+        "final_score": 0.4103
       },
       "nodes": [
         {
@@ -298,11 +341,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a7",
-          "type": "Gene"
+          "id": "Cerebral Thrombosis",
+          "type": "Side Effect"
         },
         {
-          "id": "Alfentanil",
+          "id": "Progesterone",
           "type": "Compound"
         },
         {
@@ -313,31 +356,31 @@
       "edges": [
         {
           "source": "Norethindrone",
-          "target": "Cyp3a7",
-          "label": "binds"
+          "target": "Cerebral Thrombosis",
+          "label": "causes"
         },
         {
-          "source": "Cyp3a7",
-          "target": "Alfentanil",
-          "label": "is bound by"
+          "source": "Cerebral Thrombosis",
+          "target": "Progesterone",
+          "label": "is caused by"
         },
         {
-          "source": "Alfentanil",
+          "source": "Progesterone",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norethindrone,Alfentanil": [
-          "Organic Cyclic Compound"
+        "Norethindrone,Progesterone": [
+          "3-Oxo-Delta(4) Steroid"
         ]
       },
-      "id": "path_28720"
+      "id": "path_14791"
     },
     {
       "score": {
-        "ic_mean": 0.4562,
-        "final_score": 0.4562
+        "ic_mean": 0.4103,
+        "final_score": 0.4103
       },
       "nodes": [
         {
@@ -345,11 +388,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
+          "id": "Dermatitis Hemorrhagic",
+          "type": "Side Effect"
         },
         {
-          "id": "Alfentanil",
+          "id": "Progesterone",
           "type": "Compound"
         },
         {
@@ -360,74 +403,26 @@
       "edges": [
         {
           "source": "Norethindrone",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
+          "target": "Dermatitis Hemorrhagic",
+          "label": "causes"
         },
         {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Alfentanil",
-          "label": "is bound by"
+          "source": "Dermatitis Hemorrhagic",
+          "target": "Progesterone",
+          "label": "is caused by"
         },
         {
-          "source": "Alfentanil",
+          "source": "Progesterone",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norethindrone,Alfentanil": [
-          "Organic Cyclic Compound"
+        "Norethindrone,Progesterone": [
+          "3-Oxo-Delta(4) Steroid"
         ]
       },
-      "id": "path_28721"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4562,
-        "final_score": 0.4562
-      },
-      "nodes": [
-        {
-          "id": "Norethindrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norethindrone",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norethindrone,Diltiazem": [
-          "Carbonyl Compound"
-        ]
-      },
-      "id": "path_28722"
+      "id": "path_14792"
     }
-  ],
-  "verbalization": ""
+  ]
 }

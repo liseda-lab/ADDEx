@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00956 - Gene::4986",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7257,
+        "final_score": 0.7795,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrocodone",
+          "target": "Oprd1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprd1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprk1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7398"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7776,
+        "final_score": 0.6388,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tapentadol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrocodone",
+          "target": "Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Opioid Agonists",
+          "target": "Tapentadol",
+          "label": "includes"
+        },
+        {
+          "source": "Tapentadol",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hydrocodone,Tapentadol": [
+          "Agent Affecting Nervous System",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_7399"
+    }
+  ]
+}

@@ -3,55 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6881,
-        "final_score": 0.6881
-      },
-      "nodes": [
-        {
-          "id": "Biperiden",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrna2",
-          "type": "Gene"
-        },
-        {
-          "id": "Carbachol",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Biperiden",
-          "target": "Chrna2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrna2",
-          "target": "Carbachol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Carbachol",
-          "target": "Chrm1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Biperiden,Carbachol": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_9811"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6668,
-        "final_score": 0.6668
+        "ic_mean": 0.7403,
+        "final_score": 0.7403
       },
       "nodes": [
         {
@@ -63,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Anisotropine Methylbromide",
-          "type": "Compound"
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Chrm1",
@@ -79,27 +32,75 @@
         },
         {
           "source": "Chrm2",
-          "target": "Anisotropine Methylbromide",
-          "label": "is bound by"
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Anisotropine Methylbromide",
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
+          "target": "Chrm1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4785"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6228,
+        "final_score": 0.6228
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxyphencyclimine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxyphenonium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Oxyphencyclimine",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxyphencyclimine",
+          "target": "Oxyphenonium",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxyphenonium",
           "target": "Chrm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Biperiden,Anisotropine Methylbromide": [
-          "Organonitrogen Compound",
+        "Biperiden,Oxyphencyclimine": [
+          "Hydroxides",
+          "Antimuscarinic Agent"
+        ],
+        "Biperiden,Oxyphenonium": [
+          "Antimuscarinic Agent"
+        ],
+        "Oxyphencyclimine,Oxyphenonium": [
           "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9812"
+      "id": "path_4786"
     },
     {
       "score": {
-        "ic_mean": 0.6668,
-        "final_score": 0.6668
+        "ic_mean": 0.6228,
+        "final_score": 0.6228
       },
       "nodes": [
         {
@@ -107,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm2",
-          "type": "Gene"
+          "id": "Procyclidine",
+          "type": "Compound"
         },
         {
-          "id": "Methylscopolamine Bromide",
+          "id": "Oxyphenonium",
           "type": "Compound"
         },
         {
@@ -122,74 +123,33 @@
       "edges": [
         {
           "source": "Biperiden",
-          "target": "Chrm2",
-          "label": "binds"
+          "target": "Procyclidine",
+          "label": "resembles"
         },
         {
-          "source": "Chrm2",
-          "target": "Methylscopolamine Bromide",
-          "label": "is bound by"
+          "source": "Procyclidine",
+          "target": "Oxyphenonium",
+          "label": "resembles"
         },
         {
-          "source": "Methylscopolamine Bromide",
+          "source": "Oxyphenonium",
           "target": "Chrm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Biperiden,Methylscopolamine Bromide": [
-          "Organic Hydroxy Compound"
-        ]
-      },
-      "id": "path_9813"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6668,
-        "final_score": 0.6668
-      },
-      "nodes": [
-        {
-          "id": "Biperiden",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        },
-        {
-          "id": "Dicyclomine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Biperiden",
-          "target": "Chrm2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm2",
-          "target": "Dicyclomine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dicyclomine",
-          "target": "Chrm1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Biperiden,Dicyclomine": [
-          "Tertiary Amino Compound",
+        "Biperiden,Procyclidine": [
+          "Antimuscarinic Agent",
+          "Tertiary Alcohol"
+        ],
+        "Biperiden,Oxyphenonium": [
+          "Antimuscarinic Agent"
+        ],
+        "Procyclidine,Oxyphenonium": [
           "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9814"
+      "id": "path_4787"
     },
     {
       "score": {
@@ -206,7 +166,7 @@
           "type": "Gene"
         },
         {
-          "id": "Oxyphencyclimine",
+          "id": "Solifenacin",
           "type": "Compound"
         },
         {
@@ -222,22 +182,118 @@
         },
         {
           "source": "Chrm2",
-          "target": "Oxyphencyclimine",
+          "target": "Solifenacin",
           "label": "is bound by"
         },
         {
-          "source": "Oxyphencyclimine",
+          "source": "Solifenacin",
           "target": "Chrm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Biperiden,Oxyphencyclimine": [
-          "Hydroxides",
+        "Biperiden,Solifenacin": [
+          "Organonitrogen Heterocyclic Compound",
           "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9815"
+      "id": "path_4788"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6155,
+        "final_score": 0.6155
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Propantheline",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Propantheline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Propantheline",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Propantheline": [
+          "Antimuscarinic Agent",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4789"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6155,
+        "final_score": 0.6155
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Tropicamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Tropicamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Tropicamide",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Tropicamide": [
+          "Organonitrogen Compound",
+          "Antimuscarinic Agent"
+        ]
+      },
+      "id": "path_4790"
     },
     {
       "score": {
@@ -285,12 +341,12 @@
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_9816"
+      "id": "path_4791"
     },
     {
       "score": {
-        "ic_mean": 0.6155,
-        "final_score": 0.6155
+        "ic_mean": 0.6075,
+        "final_score": 0.6075
       },
       "nodes": [
         {
@@ -298,11 +354,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm2",
-          "type": "Gene"
+          "id": "Oxyphencyclimine",
+          "type": "Compound"
         },
         {
-          "id": "Hyoscyamine",
+          "id": "Glycopyrrolate",
           "type": "Compound"
         },
         {
@@ -313,75 +369,91 @@
       "edges": [
         {
           "source": "Biperiden",
-          "target": "Chrm2",
-          "label": "binds"
+          "target": "Oxyphencyclimine",
+          "label": "resembles"
         },
         {
-          "source": "Chrm2",
-          "target": "Hyoscyamine",
-          "label": "is bound by"
+          "source": "Oxyphencyclimine",
+          "target": "Glycopyrrolate",
+          "label": "resembles"
         },
         {
-          "source": "Hyoscyamine",
+          "source": "Glycopyrrolate",
           "target": "Chrm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Biperiden,Hyoscyamine": [
-          "Antimuscarinic Agent",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_9817"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6155,
-        "final_score": 0.6155
-      },
-      "nodes": [
-        {
-          "id": "Biperiden",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        },
-        {
-          "id": "Propantheline",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Biperiden",
-          "target": "Chrm2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm2",
-          "target": "Propantheline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Propantheline",
-          "target": "Chrm1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Biperiden,Propantheline": [
-          "Organic Heterocyclic Compound",
+        "Biperiden,Oxyphencyclimine": [
+          "Hydroxides",
           "Antimuscarinic Agent"
+        ],
+        "Biperiden,Glycopyrrolate": [
+          "Antimuscarinic Agent",
+          "Organic Cyclic Compound"
+        ],
+        "Oxyphencyclimine,Glycopyrrolate": [
+          "Antimuscarinic Agent",
+          "Organic Molecule"
         ]
       },
-      "id": "path_9818"
+      "id": "path_4792"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6075,
+        "final_score": 0.6075
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Procyclidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Glycopyrrolate",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Procyclidine",
+          "label": "resembles"
+        },
+        {
+          "source": "Procyclidine",
+          "target": "Glycopyrrolate",
+          "label": "resembles"
+        },
+        {
+          "source": "Glycopyrrolate",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Procyclidine": [
+          "Antimuscarinic Agent",
+          "Tertiary Alcohol"
+        ],
+        "Biperiden,Glycopyrrolate": [
+          "Antimuscarinic Agent",
+          "Organic Cyclic Compound"
+        ],
+        "Procyclidine,Glycopyrrolate": [
+          "Antimuscarinic Agent",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_4793"
     },
     {
       "score": {
@@ -426,7 +498,7 @@
       "lowest_common_ancestors": {
         "Biperiden,Cycrimine": [
           "Tertiary Alcohol",
-          "Antimuscarinic Agent"
+          "Antiparkinsonian Agent"
         ],
         "Biperiden,Oxyphenonium": [
           "Antimuscarinic Agent"
@@ -435,27 +507,27 @@
           "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9819"
+      "id": "path_4794"
     },
     {
       "score": {
-        "ic_mean": 0.5854,
-        "final_score": 0.5854
+        "ic_mean": 0.5991,
+        "final_score": 0.5991
       },
       "nodes": [
         {
           "id": "Biperiden",
           "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
         },
         {
           "id": "Trihexyphenidyl",
           "type": "Compound"
         },
         {
+          "id": "Oxyphenonium",
+          "type": "Compound"
+        },
+        {
           "id": "Chrm1",
           "type": "Gene"
         }
@@ -463,32 +535,38 @@
       "edges": [
         {
           "source": "Biperiden",
-          "target": "Chrm2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm2",
           "target": "Trihexyphenidyl",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Trihexyphenidyl",
+          "target": "Oxyphenonium",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxyphenonium",
           "target": "Chrm1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
         "Biperiden,Trihexyphenidyl": [
-          "Organic Amino Compound",
+          "Antiparkinsonian Agent",
+          "Organic Amino Compound"
+        ],
+        "Biperiden,Oxyphenonium": [
+          "Antimuscarinic Agent"
+        ],
+        "Trihexyphenidyl,Oxyphenonium": [
           "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9820"
+      "id": "path_4795"
     },
     {
       "score": {
-        "ic_mean": 0.5854,
-        "final_score": 0.5854
+        "ic_mean": 0.5956,
+        "final_score": 0.5956
       },
       "nodes": [
         {
@@ -496,55 +574,7 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm2",
-          "type": "Gene"
-        },
-        {
-          "id": "Procyclidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Biperiden",
-          "target": "Chrm2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm2",
-          "target": "Procyclidine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Procyclidine",
-          "target": "Chrm1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Biperiden,Procyclidine": [
-          "Tertiary Alcohol",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9821"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4551,
-        "final_score": 0.4551
-      },
-      "nodes": [
-        {
-          "id": "Biperiden",
-          "type": "Compound"
-        },
-        {
-          "id": "Cloperastine",
+          "id": "Oxyphencyclimine",
           "type": "Compound"
         },
         {
@@ -559,11 +589,11 @@
       "edges": [
         {
           "source": "Biperiden",
-          "target": "Cloperastine",
+          "target": "Oxyphencyclimine",
           "label": "resembles"
         },
         {
-          "source": "Cloperastine",
+          "source": "Oxyphencyclimine",
           "target": "Cycrimine",
           "label": "resembles"
         },
@@ -574,13 +604,481 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Biperiden,Oxyphencyclimine": [
+          "Hydroxides",
+          "Antimuscarinic Agent"
+        ],
         "Biperiden,Cycrimine": [
           "Tertiary Alcohol",
+          "Antiparkinsonian Agent"
+        ],
+        "Oxyphencyclimine,Cycrimine": [
+          "Hydroxides",
           "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9822"
+      "id": "path_4796"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5854,
+        "final_score": 0.5854
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Trospium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Trospium",
+          "label": "is bound by"
+        },
+        {
+          "source": "Trospium",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Trospium": [
+          "Antimuscarinic Agent",
+          "Tertiary Alcohol"
+        ]
+      },
+      "id": "path_4797"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5854,
+        "final_score": 0.5854
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Carbachol",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Carbachol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Carbachol",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Carbachol": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_4798"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5854,
+        "final_score": 0.5854
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Succinylcholine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Succinylcholine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Succinylcholine",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Succinylcholine": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_4799"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5854,
+        "final_score": 0.5854
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Metixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Metixene",
+          "label": "is bound by"
+        },
+        {
+          "source": "Metixene",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Metixene": [
+          "Piperidines"
+        ]
+      },
+      "id": "path_4800"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5854,
+        "final_score": 0.5854
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Propiomazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Propiomazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Propiomazine",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Propiomazine": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4801"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5838,
+        "final_score": 0.5838
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Cycrimine",
+          "type": "Compound"
+        },
+        {
+          "id": "Glycopyrrolate",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Cycrimine",
+          "label": "resembles"
+        },
+        {
+          "source": "Cycrimine",
+          "target": "Glycopyrrolate",
+          "label": "resembles"
+        },
+        {
+          "source": "Glycopyrrolate",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Cycrimine": [
+          "Tertiary Alcohol",
+          "Antiparkinsonian Agent"
+        ],
+        "Biperiden,Glycopyrrolate": [
+          "Antimuscarinic Agent",
+          "Organic Cyclic Compound"
+        ],
+        "Cycrimine,Glycopyrrolate": [
+          "Antimuscarinic Agent",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_4802"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4391,
+        "final_score": 0.4391
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Diphenidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Clidinium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Diphenidol",
+          "label": "resembles"
+        },
+        {
+          "source": "Diphenidol",
+          "target": "Clidinium",
+          "label": "resembles"
+        },
+        {
+          "source": "Clidinium",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Diphenidol": [
+          "Tertiary Alcohol",
+          "Agent Affecting Nervous System"
+        ],
+        "Biperiden,Clidinium": [
+          "Antimuscarinic Agent",
+          "Organic Molecule"
+        ],
+        "Diphenidol,Clidinium": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4803"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4391,
+        "final_score": 0.4391
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Diphenidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Darifenacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Diphenidol",
+          "label": "resembles"
+        },
+        {
+          "source": "Diphenidol",
+          "target": "Darifenacin",
+          "label": "resembles"
+        },
+        {
+          "source": "Darifenacin",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Diphenidol": [
+          "Tertiary Alcohol",
+          "Agent Affecting Nervous System"
+        ],
+        "Biperiden,Darifenacin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antimuscarinic Agent"
+        ],
+        "Diphenidol,Darifenacin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4804"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4296,
+        "final_score": 0.4296
+      },
+      "nodes": [
+        {
+          "id": "Biperiden",
+          "type": "Compound"
+        },
+        {
+          "id": "Diphenidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Trospium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Biperiden",
+          "target": "Diphenidol",
+          "label": "resembles"
+        },
+        {
+          "source": "Diphenidol",
+          "target": "Trospium",
+          "label": "resembles"
+        },
+        {
+          "source": "Trospium",
+          "target": "Chrm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Biperiden,Diphenidol": [
+          "Tertiary Alcohol",
+          "Agent Affecting Nervous System"
+        ],
+        "Biperiden,Trospium": [
+          "Antimuscarinic Agent",
+          "Tertiary Alcohol"
+        ],
+        "Diphenidol,Trospium": [
+          "Tertiary Alcohol",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4805"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5888,
-        "final_score": 0.5888
+        "ic_mean": 0.467,
+        "final_score": 0.467
       },
       "nodes": [
         {
@@ -12,8 +12,102 @@
           "type": "Compound"
         },
         {
-          "id": "Hipk4",
+          "id": "Cancer Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxymorphone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
           "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Cancer Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Cancer Pain",
+          "target": "Oxymorphone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxymorphone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Oxymorphone": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_7997"
+    },
+    {
+      "score": {
+        "ic_mean": 0.458,
+        "final_score": 0.458
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Sinoatrial Node Dysfunction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diltiazem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Sinoatrial Node Dysfunction",
+          "label": "causes"
+        },
+        {
+          "source": "Sinoatrial Node Dysfunction",
+          "target": "Diltiazem",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diltiazem",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Diltiazem": [
+          "Aromatic Ether"
+        ]
+      },
+      "id": "path_7998"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4005,
+        "final_score": 0.4005
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Fissures",
+          "type": "Side Effect"
         },
         {
           "id": "Erlotinib",
@@ -27,13 +121,13 @@
       "edges": [
         {
           "source": "Gefitinib",
-          "target": "Hipk4",
-          "label": "binds"
+          "target": "Skin Fissures",
+          "label": "causes"
         },
         {
-          "source": "Hipk4",
+          "source": "Skin Fissures",
           "target": "Erlotinib",
-          "label": "is bound by"
+          "label": "is caused by"
         },
         {
           "source": "Erlotinib",
@@ -43,16 +137,16 @@
       ],
       "lowest_common_ancestors": {
         "Gefitinib,Erlotinib": [
-          "Epidermal Growth Factor Receptor Tyrosine Kinase Inhibitor",
-          "Secondary Amino Compound"
+          "Aromatic Ether",
+          "Epidermal Growth Factor Receptor Tyrosine Kinase Inhibitor"
         ]
       },
-      "id": "path_16026"
+      "id": "path_7999"
     },
     {
       "score": {
-        "ic_mean": 0.5675,
-        "final_score": 0.5675
+        "ic_mean": 0.3933,
+        "final_score": 0.3933
       },
       "nodes": [
         {
@@ -60,11 +154,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hipk4",
+          "id": "Orm1",
           "type": "Gene"
         },
         {
-          "id": "Imatinib",
+          "id": "Desipramine",
           "type": "Compound"
         },
         {
@@ -75,220 +169,26 @@
       "edges": [
         {
           "source": "Gefitinib",
-          "target": "Hipk4",
+          "target": "Orm1",
           "label": "binds"
         },
         {
-          "source": "Hipk4",
-          "target": "Imatinib",
+          "source": "Orm1",
+          "target": "Desipramine",
           "label": "is bound by"
         },
         {
-          "source": "Imatinib",
+          "source": "Desipramine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Gefitinib,Imatinib": [
-          "Tertiary Amino Compound",
-          "Antineoplastic Enzyme Inhibitor"
+        "Gefitinib,Desipramine": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_16027"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5374,
-        "final_score": 0.5374
-      },
-      "nodes": [
-        {
-          "id": "Gefitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Epha6",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Gefitinib",
-          "target": "Epha6",
-          "label": "binds"
-        },
-        {
-          "source": "Epha6",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Gefitinib,Erlotinib": [
-          "Epidermal Growth Factor Receptor Tyrosine Kinase Inhibitor",
-          "Secondary Amino Compound"
-        ]
-      },
-      "id": "path_16028"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5374,
-        "final_score": 0.5374
-      },
-      "nodes": [
-        {
-          "id": "Gefitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Map3k19",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Gefitinib",
-          "target": "Map3k19",
-          "label": "binds"
-        },
-        {
-          "source": "Map3k19",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Gefitinib,Erlotinib": [
-          "Epidermal Growth Factor Receptor Tyrosine Kinase Inhibitor",
-          "Secondary Amino Compound"
-        ]
-      },
-      "id": "path_16029"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5074,
-        "final_score": 0.5074
-      },
-      "nodes": [
-        {
-          "id": "Gefitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Mknk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Gefitinib",
-          "target": "Mknk1",
-          "label": "binds"
-        },
-        {
-          "source": "Mknk1",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Gefitinib,Erlotinib": [
-          "Epidermal Growth Factor Receptor Tyrosine Kinase Inhibitor",
-          "Secondary Amino Compound"
-        ]
-      },
-      "id": "path_16030"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4861,
-        "final_score": 0.4861
-      },
-      "nodes": [
-        {
-          "id": "Gefitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Stk10",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Gefitinib",
-          "target": "Stk10",
-          "label": "binds"
-        },
-        {
-          "source": "Stk10",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Gefitinib,Erlotinib": [
-          "Epidermal Growth Factor Receptor Tyrosine Kinase Inhibitor",
-          "Secondary Amino Compound"
-        ]
-      },
-      "id": "path_16031"
+      "id": "path_8000"
     }
-  ],
-  "verbalization": ""
+  ]
 }

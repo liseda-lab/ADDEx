@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5431,
-        "final_score": 0.5431
+        "ic_mean": 0.4639,
+        "final_score": 0.4639
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
-          "type": "Gene"
+          "id": "Allergic Skin Reaction",
+          "type": "Side Effect"
         },
         {
-          "id": "Ifosfamide",
+          "id": "Moclobemide",
           "type": "Compound"
         },
         {
@@ -27,31 +27,32 @@
       "edges": [
         {
           "source": "Diclofenac",
-          "target": "Cyp2c18",
-          "label": "binds"
+          "target": "Allergic Skin Reaction",
+          "label": "causes"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Ifosfamide",
-          "label": "is bound by"
+          "source": "Allergic Skin Reaction",
+          "target": "Moclobemide",
+          "label": "is caused by"
         },
         {
-          "source": "Ifosfamide",
+          "source": "Moclobemide",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diclofenac,Ifosfamide": [
-          "Organochlorine Compound"
+        "Diclofenac,Moclobemide": [
+          "Enzyme Inhibitor",
+          "Chlorobenzenes"
         ]
       },
-      "id": "path_9035"
+      "id": "path_4389"
     },
     {
       "score": {
-        "ic_mean": 0.5394,
-        "final_score": 0.5394
+        "ic_mean": 0.421,
+        "final_score": 0.421
       },
       "nodes": [
         {
@@ -59,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn4a",
-          "type": "Gene"
+          "id": "Intestinal Ulcer",
+          "type": "Side Effect"
         },
         {
-          "id": "Bupivacaine",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -74,32 +75,31 @@
       "edges": [
         {
           "source": "Diclofenac",
-          "target": "Scn4a",
-          "label": "binds"
+          "target": "Intestinal Ulcer",
+          "label": "causes"
         },
         {
-          "source": "Scn4a",
-          "target": "Bupivacaine",
-          "label": "is bound by"
+          "source": "Intestinal Ulcer",
+          "target": "Clopidogrel",
+          "label": "is caused by"
         },
         {
-          "source": "Bupivacaine",
+          "source": "Clopidogrel",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diclofenac,Bupivacaine": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
+        "Diclofenac,Clopidogrel": [
+          "Carbonyl Compound"
         ]
       },
-      "id": "path_9036"
+      "id": "path_4390"
     },
     {
       "score": {
-        "ic_mean": 0.513,
-        "final_score": 0.513
+        "ic_mean": 0.419,
+        "final_score": 0.419
       },
       "nodes": [
         {
@@ -107,11 +107,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
-          "type": "Gene"
+          "id": "Application Site Dryness",
+          "type": "Side Effect"
         },
         {
-          "id": "Antipyrine",
+          "id": "Dapsone",
           "type": "Compound"
         },
         {
@@ -122,32 +122,79 @@
       "edges": [
         {
           "source": "Diclofenac",
-          "target": "Cyp2c18",
-          "label": "binds"
+          "target": "Application Site Dryness",
+          "label": "causes"
         },
         {
-          "source": "Cyp2c18",
-          "target": "Antipyrine",
-          "label": "is bound by"
+          "source": "Application Site Dryness",
+          "target": "Dapsone",
+          "label": "is caused by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Dapsone",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diclofenac,Antipyrine": [
+        "Diclofenac,Dapsone": [
+          "Aromatic Amine"
+        ]
+      },
+      "id": "path_4391"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4077,
+        "final_score": 0.4077
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatorenal Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Felbamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Hepatorenal Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatorenal Syndrome",
+          "target": "Felbamate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Felbamate",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Felbamate": [
           "Carbonyl Compound",
-          "Nonsteroidal Antiinflammatory Drug"
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_9037"
+      "id": "path_4392"
     },
     {
       "score": {
-        "ic_mean": 0.4917,
-        "final_score": 0.4917
+        "ic_mean": 0.3595,
+        "final_score": 0.3595
       },
       "nodes": [
         {
@@ -155,251 +202,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Methadone": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_9038"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4782,
-        "final_score": 0.4782
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1c1",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Slco1c1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1c1",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Phenytoin": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_9039"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4752,
-        "final_score": 0.4752
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Diphenhydramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Diphenhydramine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diphenhydramine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Diphenhydramine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_9040"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4668,
-        "final_score": 0.4668
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn4a",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Scn4a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn4a",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Phenytoin": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_9041"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4404,
-        "final_score": 0.4404
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Phenytoin": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_9042"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4381,
-        "final_score": 0.4381
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Secondary Anemia",
+          "id": "Hepatorenal Syndrome",
           "type": "Side Effect"
         },
         {
-          "id": "Indomethacin",
+          "id": "Ibuprofen",
           "type": "Compound"
         },
         {
@@ -410,216 +217,27 @@
       "edges": [
         {
           "source": "Diclofenac",
-          "target": "Secondary Anemia",
+          "target": "Hepatorenal Syndrome",
           "label": "causes"
         },
         {
-          "source": "Secondary Anemia",
-          "target": "Indomethacin",
+          "source": "Hepatorenal Syndrome",
+          "target": "Ibuprofen",
           "label": "is caused by"
         },
         {
-          "source": "Indomethacin",
+          "source": "Ibuprofen",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Diclofenac,Indomethacin": [
-          "Cyclooxygenase Inhibitor",
-          "Carboxylic Acid"
+        "Diclofenac,Ibuprofen": [
+          "Monocarboxylic Acid",
+          "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_9043"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4327,
-        "final_score": 0.4327
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Oesophageal Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Esomeprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Oesophageal Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Oesophageal Disorder",
-          "target": "Esomeprazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Esomeprazole",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Esomeprazole": [
-          "Organic Anion"
-        ]
-      },
-      "id": "path_9044"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3976,
-        "final_score": 0.3976
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Hemorrhagic Colitis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Amoxicillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Hemorrhagic Colitis",
-          "label": "causes"
-        },
-        {
-          "source": "Hemorrhagic Colitis",
-          "target": "Amoxicillin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Amoxicillin",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Amoxicillin": [
-          "Monocarboxylic Acid Anion"
-        ]
-      },
-      "id": "path_9045"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3888,
-        "final_score": 0.3888
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Hemorrhagic Colitis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Hemorrhagic Colitis",
-          "label": "causes"
-        },
-        {
-          "source": "Hemorrhagic Colitis",
-          "target": "Cyclophosphamide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Cyclophosphamide": [
-          "Organochlorine Compound"
-        ]
-      },
-      "id": "path_9046"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3793,
-        "final_score": 0.3793
-      },
-      "nodes": [
-        {
-          "id": "Diclofenac",
-          "type": "Compound"
-        },
-        {
-          "id": "Enterocolitis Haemorrhagic",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Diclofenac",
-          "target": "Enterocolitis Haemorrhagic",
-          "label": "causes"
-        },
-        {
-          "source": "Enterocolitis Haemorrhagic",
-          "target": "Cyclophosphamide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Diclofenac,Cyclophosphamide": [
-          "Organochlorine Compound"
-        ]
-      },
-      "id": "path_9047"
+      "id": "path_4393"
     }
-  ],
-  "verbalization": ""
+  ]
 }

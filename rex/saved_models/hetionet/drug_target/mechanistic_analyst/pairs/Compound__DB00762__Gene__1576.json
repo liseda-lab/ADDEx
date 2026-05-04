@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00762 - Gene::1576",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5298,
+        "final_score": 0.5298
+      },
+      "nodes": [
+        {
+          "id": "Irinotecan",
+          "type": "Compound"
+        },
+        {
+          "id": "Genetic Polymorphism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irinotecan",
+          "target": "Genetic Polymorphism",
+          "label": "causes"
+        },
+        {
+          "source": "Genetic Polymorphism",
+          "target": "Azithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azithromycin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irinotecan,Azithromycin": [
+          "Lactone"
+        ]
+      },
+      "id": "path_3765"
+    }
+  ]
+}

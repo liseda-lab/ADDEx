@@ -1,6 +1,143 @@
 {
   "id": "Compound::DB00543 - Gene::3359",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6769,
+        "final_score": 0.6769
+      },
+      "nodes": [
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1b",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxapine",
+          "target": "Htr1b",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1b",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr3a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5757"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6245,
+        "final_score": 0.6245
+      },
+      "nodes": [
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxapine",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Trimipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Htr3a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxapine,Trimipramine": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_5758"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6245,
+        "final_score": 0.6245
+      },
+      "nodes": [
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxapine",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Trimipramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Htr3a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxapine,Trimipramine": [
+          "Organic Heterotricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_5759"
+    }
+  ]
 }

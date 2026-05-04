@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4761,
-        "final_score": 0.4761
+        "ic_mean": 0.4685,
+        "final_score": 0.4685
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Neurologic Reaction",
+          "id": "Dysplasia",
           "type": "Side Effect"
         },
         {
-          "id": "Bupivacaine",
+          "id": "Omeprazole",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Lomustine",
-          "target": "Neurologic Reaction",
+          "target": "Dysplasia",
           "label": "causes"
         },
         {
-          "source": "Neurologic Reaction",
-          "target": "Bupivacaine",
+          "source": "Dysplasia",
+          "target": "Omeprazole",
           "label": "is caused by"
         },
         {
-          "source": "Bupivacaine",
+          "source": "Omeprazole",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Lomustine,Bupivacaine": [
-          "Chemical Entity"
+        "Lomustine,Omeprazole": [
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_29359"
+      "id": "path_15124"
     },
     {
       "score": {
-        "ic_mean": 0.4318,
-        "final_score": 0.4318
+        "ic_mean": 0.4619,
+        "final_score": 0.4619
       },
       "nodes": [
         {
@@ -63,7 +63,7 @@
           "type": "Gene"
         },
         {
-          "id": "Telithromycin",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -79,21 +79,69 @@
         },
         {
           "source": "Cyp3a4",
-          "target": "Telithromycin",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Telithromycin",
+          "source": "Ranitidine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Lomustine,Telithromycin": [
+        "Lomustine,Ranitidine": [
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_29360"
+      "id": "path_15125"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4412,
+        "final_score": 0.4412
+      },
+      "nodes": [
+        {
+          "id": "Lomustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gastrointestinal Toxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vinorelbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lomustine",
+          "target": "Gastrointestinal Toxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Gastrointestinal Toxicity",
+          "target": "Vinorelbine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vinorelbine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lomustine,Vinorelbine": [
+          "Heteroorganic Entity",
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_15126"
     },
     {
       "score": {
@@ -140,8 +188,54 @@
           "Organochlorine Compound"
         ]
       },
-      "id": "path_29361"
+      "id": "path_15127"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4224,
+        "final_score": 0.4224
+      },
+      "nodes": [
+        {
+          "id": "Lomustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephrotoxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lomustine",
+          "target": "Nephrotoxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Nephrotoxicity",
+          "target": "Ranitidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lomustine,Ranitidine": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_15128"
     }
-  ],
-  "verbalization": ""
+  ]
 }

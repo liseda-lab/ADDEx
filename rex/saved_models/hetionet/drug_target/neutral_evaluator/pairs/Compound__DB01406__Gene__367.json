@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7489,
-        "final_score": 0.7489
+        "ic_mean": 0.6244,
+        "final_score": 0.6244
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Androgen Receptor Agonists",
-          "type": "Pharmacologic Class"
+          "id": "Trilostane",
+          "type": "Compound"
         },
         {
-          "id": "Fluoxymesterone",
+          "id": "Stanozolol",
           "type": "Compound"
         },
         {
@@ -27,32 +27,40 @@
       "edges": [
         {
           "source": "Danazol",
-          "target": "Androgen Receptor Agonists",
-          "label": "is included in"
+          "target": "Trilostane",
+          "label": "resembles"
         },
         {
-          "source": "Androgen Receptor Agonists",
-          "target": "Fluoxymesterone",
-          "label": "includes"
+          "source": "Trilostane",
+          "target": "Stanozolol",
+          "label": "resembles"
         },
         {
-          "source": "Fluoxymesterone",
+          "source": "Stanozolol",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Danazol,Fluoxymesterone": [
-          "Anabolic Steroid",
+        "Danazol,Trilostane": [
+          "17Beta-Hydroxy Steroid",
+          "Hormone Antagonist"
+        ],
+        "Danazol,Stanozolol": [
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
+        ],
+        "Trilostane,Stanozolol": [
+          "Hormone Therapy Agent",
           "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_24090"
+      "id": "path_12179"
     },
     {
       "score": {
-        "ic_mean": 0.7339,
-        "final_score": 0.7339
+        "ic_mean": 0.6099,
+        "final_score": 0.6099
       },
       "nodes": [
         {
@@ -60,11 +68,11 @@
           "type": "Compound"
         },
         {
-          "id": "Androgen Receptor Agonists",
-          "type": "Pharmacologic Class"
+          "id": "Peliosis Hepatis",
+          "type": "Side Effect"
         },
         {
-          "id": "Methyltestosterone",
+          "id": "Oxandrolone",
           "type": "Compound"
         },
         {
@@ -75,32 +83,32 @@
       "edges": [
         {
           "source": "Danazol",
-          "target": "Androgen Receptor Agonists",
-          "label": "is included in"
+          "target": "Peliosis Hepatis",
+          "label": "causes"
         },
         {
-          "source": "Androgen Receptor Agonists",
-          "target": "Methyltestosterone",
-          "label": "includes"
+          "source": "Peliosis Hepatis",
+          "target": "Oxandrolone",
+          "label": "is caused by"
         },
         {
-          "source": "Methyltestosterone",
+          "source": "Oxandrolone",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Danazol,Methyltestosterone": [
-          "17Beta-Hydroxy Steroid",
-          "Therapeutic Androgen"
+        "Danazol,Oxandrolone": [
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_24091"
+      "id": "path_12180"
     },
     {
       "score": {
-        "ic_mean": 0.6734,
-        "final_score": 0.6734
+        "ic_mean": 0.6091,
+        "final_score": 0.6091
       },
       "nodes": [
         {
@@ -108,11 +116,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp19a1",
-          "type": "Gene"
+          "id": "Formestane",
+          "type": "Compound"
         },
         {
-          "id": "Nandrolone Phenpropionate",
+          "id": "Oxandrolone",
           "type": "Compound"
         },
         {
@@ -123,32 +131,40 @@
       "edges": [
         {
           "source": "Danazol",
-          "target": "Cyp19a1",
-          "label": "binds"
+          "target": "Formestane",
+          "label": "resembles"
         },
         {
-          "source": "Cyp19a1",
-          "target": "Nandrolone Phenpropionate",
-          "label": "is bound by"
+          "source": "Formestane",
+          "target": "Oxandrolone",
+          "label": "resembles"
         },
         {
-          "source": "Nandrolone Phenpropionate",
+          "source": "Oxandrolone",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Danazol,Nandrolone Phenpropionate": [
-          "Organic Molecule",
-          "Therapeutic Androgen"
+        "Danazol,Formestane": [
+          "Hydroxy Steroid",
+          "Hormone Antagonist"
+        ],
+        "Danazol,Oxandrolone": [
+          "Therapeutic Androgen",
+          "17Beta-Hydroxy Steroid"
+        ],
+        "Formestane,Oxandrolone": [
+          "Hydroxy Steroid",
+          "Hormone Therapy Agent"
         ]
       },
-      "id": "path_24092"
+      "id": "path_12181"
     },
     {
       "score": {
-        "ic_mean": 0.6734,
-        "final_score": 0.6734
+        "ic_mean": 0.5629,
+        "final_score": 0.5629
       },
       "nodes": [
         {
@@ -156,11 +172,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp19a1",
-          "type": "Gene"
+          "id": "Peliosis Hepatis",
+          "type": "Side Effect"
         },
         {
-          "id": "Nandrolone Decanoate",
+          "id": "Testosterone Propionate",
           "type": "Compound"
         },
         {
@@ -171,28 +187,123 @@
       "edges": [
         {
           "source": "Danazol",
-          "target": "Cyp19a1",
-          "label": "binds"
+          "target": "Peliosis Hepatis",
+          "label": "causes"
         },
         {
-          "source": "Cyp19a1",
-          "target": "Nandrolone Decanoate",
-          "label": "is bound by"
+          "source": "Peliosis Hepatis",
+          "target": "Testosterone Propionate",
+          "label": "is caused by"
         },
         {
-          "source": "Nandrolone Decanoate",
+          "source": "Testosterone Propionate",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Danazol,Nandrolone Decanoate": [
-          "Steroid",
-          "Therapeutic Androgen"
+        "Danazol,Testosterone Propionate": [
+          "Therapeutic Androgen",
+          "Steroid"
         ]
       },
-      "id": "path_24093"
+      "id": "path_12182"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5452,
+        "final_score": 0.5452
+      },
+      "nodes": [
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatic Neoplasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Testosterone Propionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Ar",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Danazol",
+          "target": "Hepatic Neoplasm",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatic Neoplasm",
+          "target": "Testosterone Propionate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Testosterone Propionate",
+          "target": "Ar",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Danazol,Testosterone Propionate": [
+          "Therapeutic Androgen",
+          "Steroid"
+        ]
+      },
+      "id": "path_12183"
+    },
+    {
+      "score": {
+        "ic_mean": 0.538,
+        "final_score": 0.538
+      },
+      "nodes": [
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Atrophy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Testosterone Propionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Ar",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Danazol",
+          "target": "Testicular Atrophy",
+          "label": "causes"
+        },
+        {
+          "source": "Testicular Atrophy",
+          "target": "Testosterone Propionate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Testosterone Propionate",
+          "target": "Ar",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Danazol,Testosterone Propionate": [
+          "Therapeutic Androgen",
+          "Steroid"
+        ]
+      },
+      "id": "path_12184"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5902,
-        "final_score": 0.5902
+        "ic_mean": 0.7099,
+        "final_score": 0.7099
       },
       "nodes": [
         {
@@ -16,7 +16,49 @@
           "type": "Gene"
         },
         {
-          "id": "Phentolamine",
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamsulosin",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12505"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6202,
+        "final_score": 0.6202
+      },
+      "nodes": [
+        {
+          "id": "Tamsulosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Xylometazoline",
           "type": "Compound"
         },
         {
@@ -32,23 +74,70 @@
         },
         {
           "source": "Adra1d",
-          "target": "Phentolamine",
+          "target": "Xylometazoline",
           "label": "is bound by"
         },
         {
-          "source": "Phentolamine",
+          "source": "Xylometazoline",
           "target": "Adra2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Tamsulosin,Phentolamine": [
-          "Organic Amino Compound",
-          "Alpha-Adrenergic Antagonist"
+        "Tamsulosin,Xylometazoline": [
+          "Organic Aromatic Compound",
+          "Adrenergic Agent"
         ]
       },
-      "id": "path_24730"
+      "id": "path_12506"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4991,
+        "final_score": 0.4991
+      },
+      "nodes": [
+        {
+          "id": "Tamsulosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Congenital Genitourinary Abnormality",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamsulosin",
+          "target": "Congenital Genitourinary Abnormality",
+          "label": "causes"
+        },
+        {
+          "source": "Congenital Genitourinary Abnormality",
+          "target": "Cabergoline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cabergoline",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamsulosin,Cabergoline": [
+          "Primary Amide",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12507"
     }
-  ],
-  "verbalization": ""
+  ]
 }

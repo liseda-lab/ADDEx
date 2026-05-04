@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00384 - Gene::1544",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4951,
+        "final_score": 0.4951
+      },
+      "nodes": [
+        {
+          "id": "Triamterene",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Interstitial Nephritis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triamterene",
+          "target": "Acute Interstitial Nephritis",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Interstitial Nephritis",
+          "target": "Ranitidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Triamterene,Ranitidine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12793"
+    }
+  ]
 }

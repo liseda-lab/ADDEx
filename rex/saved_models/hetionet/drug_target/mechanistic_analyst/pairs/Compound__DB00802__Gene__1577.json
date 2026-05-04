@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB00802 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5959,
+        "final_score": 0.5959
+      },
+      "nodes": [
+        {
+          "id": "Alfentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alfentanil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4791"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5533,
+        "final_score": 0.5533
+      },
+      "nodes": [
+        {
+          "id": "Alfentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alfentanil",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Oxycodone",
+          "label": "includes"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alfentanil,Oxycodone": [
+          "Opioid",
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_4792"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5276,
+        "final_score": 0.5276
+      },
+      "nodes": [
+        {
+          "id": "Alfentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alfentanil",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Methadone",
+          "label": "includes"
+        },
+        {
+          "source": "Methadone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alfentanil,Methadone": [
+          "Opioid",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_4793"
+    }
+  ]
+}

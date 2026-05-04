@@ -3,56 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.705,
-        "final_score": 0.705
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "F10",
-          "type": "Gene"
-        },
-        {
-          "id": "Apixaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "F10",
-          "label": "binds"
-        },
-        {
-          "source": "F10",
-          "target": "Apixaban",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apixaban",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Apixaban": [
-          "Lactam",
-          "Direct Factor Xa Inhibitor"
-        ]
-      },
-      "id": "path_24269"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6749,
-        "final_score": 0.6749
+        "ic_mean": 0.7369,
+        "final_score": 0.7369
       },
       "nodes": [
         {
@@ -64,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Apixaban",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -80,64 +32,100 @@
         },
         {
           "source": "Cyp2j2",
-          "target": "Apixaban",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apixaban",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Apixaban": [
-          "Lactam",
-          "Direct Factor Xa Inhibitor"
-        ]
-      },
-      "id": "path_24270"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6609,
-        "final_score": 0.6609
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2j2",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxidation By Cytochrome P450",
-          "type": "Pathway"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "Cyp2j2",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2j2",
-          "target": "Oxidation By Cytochrome P450",
+          "target": "Aromatase Activity",
           "label": "participates"
         },
         {
-          "source": "Oxidation By Cytochrome P450",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
           "label": "is participated by"
         }
       ],
-      "id": "path_24271"
+      "id": "path_12273"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7369,
+        "final_score": 0.7369
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2j2",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp2j2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2j2",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12274"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6982,
+        "final_score": 0.6982
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2j2",
+          "type": "Gene"
+        },
+        {
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp2j2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2j2",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12275"
     },
     {
       "score": {
@@ -184,7 +172,91 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_24272"
+      "id": "path_12276"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6383,
+        "final_score": 0.6383
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12277"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6383,
+        "final_score": 0.6383
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12278"
     },
     {
       "score": {
@@ -231,54 +303,7 @@
           "Carboxamide"
         ]
       },
-      "id": "path_24273"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6071,
-        "final_score": 0.6071
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2j2",
-          "type": "Gene"
-        },
-        {
-          "id": "Cholecalciferol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "Cyp2j2",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2j2",
-          "target": "Cholecalciferol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cholecalciferol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Cholecalciferol": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_24274"
+      "id": "path_12279"
     },
     {
       "score": {
@@ -322,106 +347,10 @@
       ],
       "lowest_common_ancestors": {
         "Rivaroxaban,Trabectedin": [
-          "Organosulfur Compound"
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_24275"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4875,
-        "final_score": 0.4875
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Muscle Haemorrhage",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Apixaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "Muscle Haemorrhage",
-          "label": "causes"
-        },
-        {
-          "source": "Muscle Haemorrhage",
-          "target": "Apixaban",
-          "label": "is caused by"
-        },
-        {
-          "source": "Apixaban",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Apixaban": [
-          "Lactam",
-          "Direct Factor Xa Inhibitor"
-        ]
-      },
-      "id": "path_24276"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4875,
-        "final_score": 0.4875
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Compartment Syndrome",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Apixaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "Compartment Syndrome",
-          "label": "causes"
-        },
-        {
-          "source": "Compartment Syndrome",
-          "target": "Apixaban",
-          "label": "is caused by"
-        },
-        {
-          "source": "Apixaban",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Apixaban": [
-          "Lactam",
-          "Direct Factor Xa Inhibitor"
-        ]
-      },
-      "id": "path_24277"
+      "id": "path_12280"
     },
     {
       "score": {
@@ -465,11 +394,58 @@
       ],
       "lowest_common_ancestors": {
         "Rivaroxaban,Clopidogrel": [
-          "Organosulfur Heterocyclic Compound",
+          "Organonitrogen Heterocyclic Compound",
           "Agent Affecting Blood Or Body Fluid"
         ]
       },
-      "id": "path_24278"
+      "id": "path_12281"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4777,
+        "final_score": 0.4777
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Clarithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Clarithromycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clarithromycin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Clarithromycin": [
+          "Oxacycle"
+        ]
+      },
+      "id": "path_12282"
     },
     {
       "score": {
@@ -513,107 +489,11 @@
       ],
       "lowest_common_ancestors": {
         "Rivaroxaban,Ticagrelor": [
-          "Organosulfur Compound",
+          "Organonitrogen Heterocyclic Compound",
           "Agent Affecting Blood Or Body Fluid"
         ]
       },
-      "id": "path_24279"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4661,
-        "final_score": 0.4661
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Epidural Haemorrhage",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Cilostazol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "Epidural Haemorrhage",
-          "label": "causes"
-        },
-        {
-          "source": "Epidural Haemorrhage",
-          "target": "Cilostazol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Cilostazol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Cilostazol": [
-          "Lactam",
-          "Agent Affecting Blood Or Body Fluid"
-        ]
-      },
-      "id": "path_24280"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4625,
-        "final_score": 0.4625
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Wound Haemorrhage",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Apixaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "Wound Haemorrhage",
-          "label": "causes"
-        },
-        {
-          "source": "Wound Haemorrhage",
-          "target": "Apixaban",
-          "label": "is caused by"
-        },
-        {
-          "source": "Apixaban",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Apixaban": [
-          "Lactam",
-          "Direct Factor Xa Inhibitor"
-        ]
-      },
-      "id": "path_24281"
+      "id": "path_12283"
     },
     {
       "score": {
@@ -657,11 +537,11 @@
       ],
       "lowest_common_ancestors": {
         "Rivaroxaban,Ticagrelor": [
-          "Organosulfur Compound",
+          "Organonitrogen Heterocyclic Compound",
           "Agent Affecting Blood Or Body Fluid"
         ]
       },
-      "id": "path_24282"
+      "id": "path_12284"
     },
     {
       "score": {
@@ -708,54 +588,7 @@
           "Carboxamide"
         ]
       },
-      "id": "path_24283"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4477,
-        "final_score": 0.4477
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Muscle Haemorrhage",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sitaxentan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "Muscle Haemorrhage",
-          "label": "causes"
-        },
-        {
-          "source": "Muscle Haemorrhage",
-          "target": "Sitaxentan",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sitaxentan",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Sitaxentan": [
-          "Oxacycle"
-        ]
-      },
-      "id": "path_24284"
+      "id": "path_12285"
     },
     {
       "score": {
@@ -802,7 +635,7 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_24285"
+      "id": "path_12286"
     },
     {
       "score": {
@@ -846,59 +679,11 @@
       ],
       "lowest_common_ancestors": {
         "Rivaroxaban,Ticagrelor": [
-          "Organosulfur Compound",
+          "Organonitrogen Heterocyclic Compound",
           "Agent Affecting Blood Or Body Fluid"
         ]
       },
-      "id": "path_24286"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4395,
-        "final_score": 0.4395
-      },
-      "nodes": [
-        {
-          "id": "Rivaroxaban",
-          "type": "Compound"
-        },
-        {
-          "id": "Retroperitoneal Haemorrhage",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Argatroban",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Rivaroxaban",
-          "target": "Retroperitoneal Haemorrhage",
-          "label": "causes"
-        },
-        {
-          "source": "Retroperitoneal Haemorrhage",
-          "target": "Argatroban",
-          "label": "is caused by"
-        },
-        {
-          "source": "Argatroban",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Rivaroxaban,Argatroban": [
-          "Anticoagulant Agent",
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_24287"
+      "id": "path_12287"
     },
     {
       "score": {
@@ -942,15 +727,15 @@
       ],
       "lowest_common_ancestors": {
         "Rivaroxaban,Darunavir": [
-          "Organosulfur Compound"
+          "Oxacycle"
         ]
       },
-      "id": "path_24288"
+      "id": "path_12288"
     },
     {
       "score": {
-        "ic_mean": 0.4071,
-        "final_score": 0.4071
+        "ic_mean": 0.4311,
+        "final_score": 0.4311
       },
       "nodes": [
         {
@@ -958,11 +743,11 @@
           "type": "Compound"
         },
         {
-          "id": "Haemarthrosis",
+          "id": "Cytolytic Hepatitis",
           "type": "Side Effect"
         },
         {
-          "id": "Testosterone",
+          "id": "Etravirine",
           "type": "Compound"
         },
         {
@@ -973,31 +758,31 @@
       "edges": [
         {
           "source": "Rivaroxaban",
-          "target": "Haemarthrosis",
+          "target": "Cytolytic Hepatitis",
           "label": "causes"
         },
         {
-          "source": "Haemarthrosis",
-          "target": "Testosterone",
+          "source": "Cytolytic Hepatitis",
+          "target": "Etravirine",
           "label": "is caused by"
         },
         {
-          "source": "Testosterone",
+          "source": "Etravirine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rivaroxaban,Testosterone": [
-          "Organic Cyclic Compound"
+        "Rivaroxaban,Etravirine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_24289"
+      "id": "path_12289"
     },
     {
       "score": {
-        "ic_mean": 0.4062,
-        "final_score": 0.4062
+        "ic_mean": 0.4181,
+        "final_score": 0.4181
       },
       "nodes": [
         {
@@ -1005,11 +790,11 @@
           "type": "Compound"
         },
         {
-          "id": "Wound Haemorrhage",
+          "id": "Pulmonary Haemorrhage",
           "type": "Side Effect"
         },
         {
-          "id": "Tramadol",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -1020,31 +805,32 @@
       "edges": [
         {
           "source": "Rivaroxaban",
-          "target": "Wound Haemorrhage",
+          "target": "Pulmonary Haemorrhage",
           "label": "causes"
         },
         {
-          "source": "Wound Haemorrhage",
-          "target": "Tramadol",
+          "source": "Pulmonary Haemorrhage",
+          "target": "Clopidogrel",
           "label": "is caused by"
         },
         {
-          "source": "Tramadol",
+          "source": "Clopidogrel",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rivaroxaban,Tramadol": [
-          "Chemical Entity"
+        "Rivaroxaban,Clopidogrel": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Blood Or Body Fluid"
         ]
       },
-      "id": "path_24290"
+      "id": "path_12290"
     },
     {
       "score": {
-        "ic_mean": 0.4036,
-        "final_score": 0.4036
+        "ic_mean": 0.4131,
+        "final_score": 0.4131
       },
       "nodes": [
         {
@@ -1052,11 +838,11 @@
           "type": "Compound"
         },
         {
-          "id": "Wound Secretion",
+          "id": "Post Procedural Haemorrhage",
           "type": "Side Effect"
         },
         {
-          "id": "Bupivacaine",
+          "id": "Ticagrelor",
           "type": "Compound"
         },
         {
@@ -1067,26 +853,215 @@
       "edges": [
         {
           "source": "Rivaroxaban",
-          "target": "Wound Secretion",
+          "target": "Post Procedural Haemorrhage",
           "label": "causes"
         },
         {
-          "source": "Wound Secretion",
-          "target": "Bupivacaine",
+          "source": "Post Procedural Haemorrhage",
+          "target": "Ticagrelor",
           "label": "is caused by"
         },
         {
-          "source": "Bupivacaine",
+          "source": "Ticagrelor",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rivaroxaban,Bupivacaine": [
-          "Chemical Entity"
+        "Rivaroxaban,Ticagrelor": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Blood Or Body Fluid"
         ]
       },
-      "id": "path_24291"
+      "id": "path_12291"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4098,
+        "final_score": 0.4098
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Nelfinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Nelfinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nelfinavir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Nelfinavir": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12292"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4098,
+        "final_score": 0.4098
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Eplerenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Eplerenone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Eplerenone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Eplerenone": [
+          "Oxacycle"
+        ]
+      },
+      "id": "path_12293"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4098,
+        "final_score": 0.4098
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Domperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Domperidone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Domperidone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Domperidone": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12294"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4098,
+        "final_score": 0.4098
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Fluvastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Fluvastatin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_12295"
     },
     {
       "score": {
@@ -1130,15 +1105,15 @@
       ],
       "lowest_common_ancestors": {
         "Rivaroxaban,Ifosfamide": [
-          "Organochlorine Compound"
+          "Organonitrogen Compound"
         ]
       },
-      "id": "path_24292"
+      "id": "path_12296"
     },
     {
       "score": {
-        "ic_mean": 0.3921,
-        "final_score": 0.3921
+        "ic_mean": 0.3963,
+        "final_score": 0.3963
       },
       "nodes": [
         {
@@ -1146,11 +1121,11 @@
           "type": "Compound"
         },
         {
-          "id": "Haemarthrosis",
-          "type": "Side Effect"
+          "id": "Cyp3a5",
+          "type": "Gene"
         },
         {
-          "id": "Saquinavir",
+          "id": "Zaleplon",
           "type": "Compound"
         },
         {
@@ -1161,31 +1136,31 @@
       "edges": [
         {
           "source": "Rivaroxaban",
-          "target": "Haemarthrosis",
-          "label": "causes"
+          "target": "Cyp3a5",
+          "label": "binds"
         },
         {
-          "source": "Haemarthrosis",
-          "target": "Saquinavir",
-          "label": "is caused by"
+          "source": "Cyp3a5",
+          "target": "Zaleplon",
+          "label": "is bound by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Zaleplon",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rivaroxaban,Saquinavir": [
+        "Rivaroxaban,Zaleplon": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_24293"
+      "id": "path_12297"
     },
     {
       "score": {
-        "ic_mean": 0.3752,
-        "final_score": 0.3752
+        "ic_mean": 0.3849,
+        "final_score": 0.3849
       },
       "nodes": [
         {
@@ -1193,11 +1168,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cytolytic Hepatitis",
-          "type": "Side Effect"
+          "id": "Cyp3a5",
+          "type": "Gene"
         },
         {
-          "id": "Cyclophosphamide",
+          "id": "Lapatinib",
           "type": "Compound"
         },
         {
@@ -1208,27 +1183,214 @@
       "edges": [
         {
           "source": "Rivaroxaban",
-          "target": "Cytolytic Hepatitis",
-          "label": "causes"
+          "target": "Cyp3a5",
+          "label": "binds"
         },
         {
-          "source": "Cytolytic Hepatitis",
-          "target": "Cyclophosphamide",
-          "label": "is caused by"
+          "source": "Cyp3a5",
+          "target": "Lapatinib",
+          "label": "is bound by"
         },
         {
-          "source": "Cyclophosphamide",
+          "source": "Lapatinib",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Rivaroxaban,Cyclophosphamide": [
-          "Organochlorine Compound"
+        "Rivaroxaban,Lapatinib": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_24294"
+      "id": "path_12298"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3849,
+        "final_score": 0.3849
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Felodipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Felodipine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12299"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3791,
+        "final_score": 0.3791
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Subdural Haematoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Subdural Haematoma",
+          "label": "causes"
+        },
+        {
+          "source": "Subdural Haematoma",
+          "target": "Fosphenytoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fosphenytoin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Fosphenytoin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12300"
+    },
+    {
+      "score": {
+        "ic_mean": 0.375,
+        "final_score": 0.375
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Phenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12301"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3287,
+        "final_score": 0.3287
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Subdural Haematoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Subdural Haematoma",
+          "label": "causes"
+        },
+        {
+          "source": "Subdural Haematoma",
+          "target": "Phenytoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Phenytoin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12302"
     }
-  ],
-  "verbalization": ""
+  ]
 }

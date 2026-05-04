@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00870 - Gene::5743",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5205,
+        "final_score": 0.5205
+      },
+      "nodes": [
+        {
+          "id": "Suprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Bleeding Tendency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Suprofen",
+          "target": "Bleeding Tendency",
+          "label": "causes"
+        },
+        {
+          "source": "Bleeding Tendency",
+          "target": "Flurbiprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurbiprofen",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Suprofen,Flurbiprofen": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_6590"
+    }
+  ]
+}

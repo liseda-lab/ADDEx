@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5678,
-        "final_score": 0.5678
+        "ic_mean": 0.6304,
+        "final_score": 0.6304
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Grin3b",
-          "type": "Gene"
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Orphenadrine",
+          "id": "Dexmedetomidine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Ketamine",
-          "target": "Grin3b",
-          "label": "binds"
+          "target": "General Anesthesia",
+          "label": "is included in"
         },
         {
-          "source": "Grin3b",
-          "target": "Orphenadrine",
-          "label": "is bound by"
+          "source": "General Anesthesia",
+          "target": "Dexmedetomidine",
+          "label": "includes"
         },
         {
-          "source": "Orphenadrine",
+          "source": "Dexmedetomidine",
           "target": "Slc6a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ketamine,Orphenadrine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Ketamine,Dexmedetomidine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_30215"
+      "id": "path_15618"
+    },
+    {
+      "score": {
+        "ic_mean": 0.624,
+        "final_score": 0.624
+      },
+      "nodes": [
+        {
+          "id": "Ketamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketamine",
+          "target": "Grin2c",
+          "label": "binds"
+        },
+        {
+          "source": "Grin2c",
+          "target": "Pethidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pethidine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketamine,Pethidine": [
+          "Carbonyl Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_15619"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01045 - Gene::8856",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7896,
+        "final_score": 0.7281,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Rifamycins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Rifaximin",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr1i2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Rifamycins",
+          "label": "is included in"
+        },
+        {
+          "source": "Rifamycins",
+          "target": "Rifaximin",
+          "label": "includes"
+        },
+        {
+          "source": "Rifaximin",
+          "target": "Nr1i2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Rifamycins": [
+          "Rifamycins"
+        ],
+        "Rifampicin,Rifaximin": [
+          "Anti-Infective Agent",
+          "Rifamycins"
+        ],
+        "Rifamycins,Rifaximin": [
+          "Rifamycins"
+        ]
+      },
+      "id": "path_7635"
+    }
+  ]
+}

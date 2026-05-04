@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5293,
-        "final_score": 0.5293
+        "ic_mean": 0.4625,
+        "final_score": 0.4625
       },
       "nodes": [
         {
@@ -12,106 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Norfloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Domperidone",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Norfloxacin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Norfloxacin",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Domperidone,Norfloxacin": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_10501"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5059,
-        "final_score": 0.5059
-      },
-      "nodes": [
-        {
-          "id": "Domperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd3",
-          "type": "Gene"
-        },
-        {
-          "id": "Rotigotine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Domperidone",
-          "target": "Drd3",
-          "label": "binds"
-        },
-        {
-          "source": "Drd3",
-          "target": "Rotigotine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rotigotine",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Domperidone,Rotigotine": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_10502"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4912,
-        "final_score": 0.4912
-      },
-      "nodes": [
-        {
-          "id": "Domperidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Serum Prolactin Increased",
+          "id": "Blood Prolactin Increased",
           "type": "Side Effect"
         },
         {
-          "id": "Ziprasidone",
+          "id": "Propafenone",
           "type": "Compound"
         },
         {
@@ -122,32 +27,31 @@
       "edges": [
         {
           "source": "Domperidone",
-          "target": "Serum Prolactin Increased",
+          "target": "Blood Prolactin Increased",
           "label": "causes"
         },
         {
-          "source": "Serum Prolactin Increased",
-          "target": "Ziprasidone",
+          "source": "Blood Prolactin Increased",
+          "target": "Propafenone",
           "label": "is caused by"
         },
         {
-          "source": "Ziprasidone",
+          "source": "Propafenone",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Domperidone,Ziprasidone": [
-          "Organic Heterobicyclic Compound",
-          "Antipsychotic Agent"
+        "Domperidone,Propafenone": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_10503"
+      "id": "path_5177"
     },
     {
       "score": {
-        "ic_mean": 0.4479,
-        "final_score": 0.4479
+        "ic_mean": 0.41,
+        "final_score": 0.41
       },
       "nodes": [
         {
@@ -159,7 +63,7 @@
           "type": "Gene"
         },
         {
-          "id": "Telithromycin",
+          "id": "Erythromycin",
           "type": "Compound"
         },
         {
@@ -175,26 +79,73 @@
         },
         {
           "source": "Cyp3a7-cyp3a51p",
-          "target": "Telithromycin",
+          "target": "Erythromycin",
           "label": "is bound by"
         },
         {
-          "source": "Telithromycin",
+          "source": "Erythromycin",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Domperidone,Telithromycin": [
+        "Domperidone,Erythromycin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5178"
+    },
+    {
+      "score": {
+        "ic_mean": 0.408,
+        "final_score": 0.408
+      },
+      "nodes": [
+        {
+          "id": "Domperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Domperidone",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Fluvastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Domperidone,Fluvastatin": [
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_10504"
+      "id": "path_5179"
     },
     {
       "score": {
-        "ic_mean": 0.4262,
-        "final_score": 0.4262
+        "ic_mean": 0.3948,
+        "final_score": 0.3948
       },
       "nodes": [
         {
@@ -202,11 +153,11 @@
           "type": "Compound"
         },
         {
-          "id": "Drug Intolerance",
-          "type": "Side Effect"
+          "id": "Cyp3a5",
+          "type": "Gene"
         },
         {
-          "id": "Ciprofloxacin",
+          "id": "Fluvastatin",
           "type": "Compound"
         },
         {
@@ -217,27 +168,26 @@
       "edges": [
         {
           "source": "Domperidone",
-          "target": "Drug Intolerance",
-          "label": "causes"
+          "target": "Cyp3a5",
+          "label": "binds"
         },
         {
-          "source": "Drug Intolerance",
-          "target": "Ciprofloxacin",
-          "label": "is caused by"
+          "source": "Cyp3a5",
+          "target": "Fluvastatin",
+          "label": "is bound by"
         },
         {
-          "source": "Ciprofloxacin",
+          "source": "Fluvastatin",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Domperidone,Ciprofloxacin": [
-          "Organonitrogen Heterocyclic Compound"
+        "Domperidone,Fluvastatin": [
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_10505"
+      "id": "path_5180"
     }
-  ],
-  "verbalization": ""
+  ]
 }

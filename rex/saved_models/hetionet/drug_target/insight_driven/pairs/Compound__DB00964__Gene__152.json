@@ -1,0 +1,154 @@
+{
+  "id": "Compound::DB00964 - Gene::152",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7135,
+        "final_score": 0.7734,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Apraclonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Apraclonidine",
+          "target": "Adra1a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1a",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7652"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5548,
+        "final_score": 0.6107,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Apraclonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blanching",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Apraclonidine",
+          "target": "Blanching",
+          "label": "causes"
+        },
+        {
+          "source": "Blanching",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Apraclonidine,Clonidine": [
+          "Alpha-Adrenergic Agonist",
+          "Dichlorobenzene"
+        ]
+      },
+      "id": "path_7653"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6166,
+        "final_score": 0.5166,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Apraclonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lofexidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Apraclonidine",
+          "target": "Lofexidine",
+          "label": "resembles"
+        },
+        {
+          "source": "Lofexidine",
+          "target": "Clonidine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Apraclonidine,Lofexidine": [
+          "Alpha-Adrenergic Agonist",
+          "Dichlorobenzene"
+        ],
+        "Apraclonidine,Clonidine": [
+          "Alpha-Adrenergic Agonist",
+          "Dichlorobenzene"
+        ],
+        "Lofexidine,Clonidine": [
+          "Alpha-Adrenergic Agonist",
+          "Dichlorobenzene"
+        ]
+      },
+      "id": "path_7654"
+    }
+  ]
+}

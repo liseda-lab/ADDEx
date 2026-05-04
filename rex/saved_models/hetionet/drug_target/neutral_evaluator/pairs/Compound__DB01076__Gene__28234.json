@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01076 - Gene::28234",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5511,
+        "final_score": 0.5511
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Pioglitazone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pioglitazone",
+          "target": "Slco1b3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Pioglitazone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Digestive System Or Metabolism"
+        ]
+      },
+      "id": "path_6003"
+    }
+  ]
 }

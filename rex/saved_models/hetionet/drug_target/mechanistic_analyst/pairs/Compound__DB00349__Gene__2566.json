@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00349 - Gene::2566",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7154,
+        "final_score": 0.7744,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Clobazam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clobazam",
+          "target": "Gabra1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra1",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrg2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3415"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6164,
+        "final_score": 0.5165,
+        "agentic_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Clobazam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clobazam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Clorazepate",
+          "label": "includes"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Gabrg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clobazam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Clobazam,Clorazepate": [
+          "1,4-Benzodiazepinone"
+        ],
+        "Benzodiazepines,Clorazepate": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_3416"
+    }
+  ]
+}

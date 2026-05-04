@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00584 - Gene::6579",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5074,
+        "final_score": 0.5074
+      },
+      "nodes": [
+        {
+          "id": "Enalapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aminohippurate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Enalapril",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Aminohippurate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aminohippurate",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Enalapril,Aminohippurate": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_10601"
+    }
+  ]
 }

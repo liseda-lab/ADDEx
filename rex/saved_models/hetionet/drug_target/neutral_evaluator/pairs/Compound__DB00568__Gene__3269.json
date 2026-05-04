@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7321,
-        "final_score": 0.7321
+        "ic_mean": 0.3926,
+        "final_score": 0.3926
       },
       "nodes": [
         {
@@ -12,53 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hrh4",
-          "type": "Gene"
-        },
-        {
-          "id": "Histamine Receptors",
-          "type": "Pathway"
-        },
-        {
-          "id": "Hrh1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cinnarizine",
-          "target": "Hrh4",
-          "label": "binds"
-        },
-        {
-          "source": "Hrh4",
-          "target": "Histamine Receptors",
-          "label": "participates"
-        },
-        {
-          "source": "Histamine Receptors",
-          "target": "Hrh1",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_7521"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6586,
-        "final_score": 0.6586
-      },
-      "nodes": [
-        {
-          "id": "Cinnarizine",
+          "id": "Difenoxin",
           "type": "Compound"
         },
         {
-          "id": "Cacna1i",
-          "type": "Gene"
-        },
-        {
-          "id": "Flunarizine",
+          "id": "Fexofenadine",
           "type": "Compound"
         },
         {
@@ -69,28 +27,128 @@
       "edges": [
         {
           "source": "Cinnarizine",
-          "target": "Cacna1i",
-          "label": "binds"
+          "target": "Difenoxin",
+          "label": "resembles"
         },
         {
-          "source": "Cacna1i",
-          "target": "Flunarizine",
-          "label": "is bound by"
+          "source": "Difenoxin",
+          "target": "Fexofenadine",
+          "label": "resembles"
         },
         {
-          "source": "Flunarizine",
+          "source": "Fexofenadine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cinnarizine,Flunarizine": [
-          "Diarylmethane",
+        "Cinnarizine,Difenoxin": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Cinnarizine,Fexofenadine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Difenoxin,Fexofenadine": [
+          "Piperidines"
+        ]
+      },
+      "id": "path_3548"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3205,
+        "final_score": 0.3205
+      },
+      "nodes": [
+        {
+          "id": "Cinnarizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hydroxyzine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ifenprodil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cinnarizine",
+          "target": "Hydroxyzine",
+          "label": "resembles"
+        },
+        {
+          "source": "Hydroxyzine",
+          "target": "Ifenprodil",
+          "label": "resembles"
+        },
+        {
+          "source": "Ifenprodil",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cinnarizine,Hydroxyzine": [
+          "Histamine-1 Receptor Antagonist",
+          "N-Alkylpiperazine"
+        ]
+      },
+      "id": "path_3549"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3132,
+        "final_score": 0.3132
+      },
+      "nodes": [
+        {
+          "id": "Cinnarizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chlorcyclizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ifenprodil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cinnarizine",
+          "target": "Chlorcyclizine",
+          "label": "resembles"
+        },
+        {
+          "source": "Chlorcyclizine",
+          "target": "Ifenprodil",
+          "label": "resembles"
+        },
+        {
+          "source": "Ifenprodil",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cinnarizine,Chlorcyclizine": [
           "Histamine-1 Receptor Antagonist"
         ]
       },
-      "id": "path_7522"
+      "id": "path_3550"
     }
-  ],
-  "verbalization": ""
+  ]
 }

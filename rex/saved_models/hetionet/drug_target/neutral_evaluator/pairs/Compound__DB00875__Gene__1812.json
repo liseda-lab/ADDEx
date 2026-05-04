@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6841,
-        "final_score": 0.6841
+        "ic_mean": 0.5865,
+        "final_score": 0.5865
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Drd2",
+          "id": "Chrm1",
           "type": "Gene"
         },
         {
-          "id": "Dopamine Receptors",
-          "type": "Pathway"
+          "id": "Propiomazine",
+          "type": "Compound"
         },
         {
           "id": "Drd1",
@@ -27,22 +27,27 @@
       "edges": [
         {
           "source": "Flupentixol",
-          "target": "Drd2",
+          "target": "Chrm1",
           "label": "binds"
         },
         {
-          "source": "Drd2",
-          "target": "Dopamine Receptors",
-          "label": "participates"
+          "source": "Chrm1",
+          "target": "Propiomazine",
+          "label": "is bound by"
         },
         {
-          "source": "Dopamine Receptors",
+          "source": "Propiomazine",
           "target": "Drd1",
-          "label": "is participated by"
+          "label": "binds"
         }
       ],
-      "id": "path_11046"
+      "lowest_common_ancestors": {
+        "Flupentixol,Propiomazine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5481"
     }
-  ],
-  "verbalization": ""
+  ]
 }

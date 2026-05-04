@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7532,
-        "final_score": 0.7532
+        "ic_mean": 0.7946,
+        "final_score": 0.7946
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca5b",
+          "id": "Slc12a3",
           "type": "Gene"
         },
         {
-          "id": "Dobutamine",
+          "id": "Metolazone",
           "type": "Compound"
         },
         {
@@ -27,31 +27,32 @@
       "edges": [
         {
           "source": "Trichlormethiazide",
-          "target": "Ca5b",
+          "target": "Slc12a3",
           "label": "binds"
         },
         {
-          "source": "Ca5b",
-          "target": "Dobutamine",
+          "source": "Slc12a3",
+          "target": "Metolazone",
           "label": "is bound by"
         },
         {
-          "source": "Dobutamine",
+          "source": "Metolazone",
           "target": "Ca5a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trichlormethiazide,Dobutamine": [
-          "Organic Cyclic Compound"
+        "Trichlormethiazide,Metolazone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
         ]
       },
-      "id": "path_9461"
+      "id": "path_4602"
     },
     {
       "score": {
-        "ic_mean": 0.7267,
-        "final_score": 0.7267
+        "ic_mean": 0.6919,
+        "final_score": 0.6919
       },
       "nodes": [
         {
@@ -59,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ca9",
+          "id": "Ca7",
           "type": "Gene"
         },
         {
-          "id": "Diclofenamide",
+          "id": "Metolazone",
           "type": "Compound"
         },
         {
@@ -74,27 +75,122 @@
       "edges": [
         {
           "source": "Trichlormethiazide",
-          "target": "Ca9",
+          "target": "Ca7",
           "label": "binds"
         },
         {
-          "source": "Ca9",
-          "target": "Diclofenamide",
+          "source": "Ca7",
+          "target": "Metolazone",
           "label": "is bound by"
         },
         {
-          "source": "Diclofenamide",
+          "source": "Metolazone",
           "target": "Ca5a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trichlormethiazide,Diclofenamide": [
-          "Sulfonamide"
+        "Trichlormethiazide,Metolazone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
         ]
       },
-      "id": "path_9462"
+      "id": "path_4603"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6919,
+        "final_score": 0.6919
+      },
+      "nodes": [
+        {
+          "id": "Trichlormethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        },
+        {
+          "id": "Brinzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trichlormethiazide",
+          "target": "Ca7",
+          "label": "binds"
+        },
+        {
+          "source": "Ca7",
+          "target": "Brinzolamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Brinzolamide",
+          "target": "Ca5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trichlormethiazide,Brinzolamide": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4604"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6832,
+        "final_score": 0.6832
+      },
+      "nodes": [
+        {
+          "id": "Trichlormethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trichlormethiazide",
+          "target": "Slc12a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc12a1",
+          "target": "Chlorthalidone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Chlorthalidone",
+          "target": "Ca5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trichlormethiazide,Chlorthalidone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_4605"
     }
-  ],
-  "verbalization": ""
+  ]
 }

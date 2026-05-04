@@ -1,6 +1,100 @@
 {
   "id": "Compound::DB00459 - Gene::213",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4997,
+        "final_score": 0.4997
+      },
+      "nodes": [
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Thinness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acitretin",
+          "target": "Skin Thinness",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Thinness",
+          "target": "Prednisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisone",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acitretin,Prednisone": [
+          "Hydroxides",
+          "Immunotherapeutic Agent"
+        ]
+      },
+      "id": "path_10736"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4923,
+        "final_score": 0.4923
+      },
+      "nodes": [
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Uric Acid Level Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telaprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acitretin",
+          "target": "Uric Acid Level Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Uric Acid Level Increased",
+          "target": "Telaprevir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telaprevir",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acitretin,Telaprevir": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_10737"
+    }
+  ]
 }

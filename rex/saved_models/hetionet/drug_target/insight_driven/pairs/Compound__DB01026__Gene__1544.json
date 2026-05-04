@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01026 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3307,
+        "final_score": 0.3307
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 3a4 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cytochrome P450 3a4 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 3a4 Inhibitors",
+          "target": "Simeprevir",
+          "label": "includes"
+        },
+        {
+          "source": "Simeprevir",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Simeprevir": [
+          "Organooxygen Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_8584"
+    }
+  ]
+}

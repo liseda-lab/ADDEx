@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4846,
-        "final_score": 0.4846
+        "ic_mean": 0.5052,
+        "final_score": 0.5052
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Neuroma",
+          "id": "Excessive Daytime Sleepiness",
           "type": "Side Effect"
         },
         {
-          "id": "Ropinirole",
+          "id": "Bromocriptine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,123 @@
       "edges": [
         {
           "source": "Pramipexole",
-          "target": "Neuroma",
+          "target": "Excessive Daytime Sleepiness",
           "label": "causes"
         },
         {
-          "source": "Neuroma",
-          "target": "Ropinirole",
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Bromocriptine",
           "label": "is caused by"
         },
         {
-          "source": "Ropinirole",
+          "source": "Bromocriptine",
           "target": "Htr2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pramipexole,Ropinirole": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Pramipexole,Bromocriptine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_8681"
+      "id": "path_4172"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4935,
+        "final_score": 0.4935
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Excessive Daytime Sleepiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Excessive Daytime Sleepiness",
+          "label": "causes"
+        },
+        {
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Cabergoline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cabergoline",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Cabergoline": [
+          "Agent Affecting Nervous System",
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_4173"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4765,
+        "final_score": 0.4765
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Binge Eating",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Binge Eating",
+          "label": "causes"
+        },
+        {
+          "source": "Binge Eating",
+          "target": "Lisuride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4174"
     }
-  ],
-  "verbalization": ""
+  ]
 }

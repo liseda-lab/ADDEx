@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00608 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4656,
+        "final_score": 0.4656
+      },
+      "nodes": [
+        {
+          "id": "Chloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuromyopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chloroquine",
+          "target": "Neuromyopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Neuromyopathy",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chloroquine,Amiodarone": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_9501"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6629,
-        "final_score": 0.6629
+        "ic_mean": 0.2909,
+        "final_score": 0.2909
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Histamine Receptor Antagonists",
-          "type": "Pharmacologic Class"
+          "id": "Chlorcyclizine",
+          "type": "Compound"
         },
         {
-          "id": "Hydroxyzine",
+          "id": "Clemastine",
           "type": "Compound"
         },
         {
@@ -27,123 +27,76 @@
       "edges": [
         {
           "source": "Benzatropine",
-          "target": "Histamine Receptor Antagonists",
-          "label": "is included in"
+          "target": "Chlorcyclizine",
+          "label": "resembles"
         },
         {
-          "source": "Histamine Receptor Antagonists",
-          "target": "Hydroxyzine",
-          "label": "includes"
+          "source": "Chlorcyclizine",
+          "target": "Clemastine",
+          "label": "resembles"
         },
         {
-          "source": "Hydroxyzine",
+          "source": "Clemastine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Benzatropine,Hydroxyzine": [
+        "Benzatropine,Clemastine": [
+          "Tertiary Amino Compound"
+        ],
+        "Chlorcyclizine,Clemastine": [
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_13574"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2652,
+        "final_score": 0.2652
+      },
+      "nodes": [
+        {
+          "id": "Benzatropine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chlorcyclizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chlorphenamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzatropine",
+          "target": "Chlorcyclizine",
+          "label": "resembles"
+        },
+        {
+          "source": "Chlorcyclizine",
+          "target": "Chlorphenamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Chlorphenamine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzatropine,Chlorphenamine": [
           "Tertiary Amino Compound"
         ]
       },
-      "id": "path_26603"
-    },
-    {
-      "score": {
-        "ic_mean": 0.465,
-        "final_score": 0.465
-      },
-      "nodes": [
-        {
-          "id": "Benzatropine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Dextroamphetamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzatropine",
-          "target": "Slc6a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc6a3",
-          "target": "Dextroamphetamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dextroamphetamine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzatropine,Dextroamphetamine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_26604"
-    },
-    {
-      "score": {
-        "ic_mean": 0.435,
-        "final_score": 0.435
-      },
-      "nodes": [
-        {
-          "id": "Benzatropine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Pseudoephedrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Benzatropine",
-          "target": "Slc6a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc6a3",
-          "target": "Pseudoephedrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pseudoephedrine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Benzatropine,Pseudoephedrine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_26605"
+      "id": "path_13575"
     }
-  ],
-  "verbalization": ""
+  ]
 }

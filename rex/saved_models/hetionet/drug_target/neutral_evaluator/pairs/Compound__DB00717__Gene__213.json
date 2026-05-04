@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4971,
-        "final_score": 0.4971
+        "ic_mean": 0.4546,
+        "final_score": 0.4546
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a7",
-          "type": "Gene"
+          "id": "Low Density Lipoprotein Increased",
+          "type": "Side Effect"
         },
         {
-          "id": "Alfentanil",
+          "id": "Canagliflozin",
           "type": "Compound"
         },
         {
@@ -27,74 +27,26 @@
       "edges": [
         {
           "source": "Norethindrone",
-          "target": "Cyp3a7",
-          "label": "binds"
+          "target": "Low Density Lipoprotein Increased",
+          "label": "causes"
         },
         {
-          "source": "Cyp3a7",
-          "target": "Alfentanil",
-          "label": "is bound by"
+          "source": "Low Density Lipoprotein Increased",
+          "target": "Canagliflozin",
+          "label": "is caused by"
         },
         {
-          "source": "Alfentanil",
+          "source": "Canagliflozin",
           "target": "Alb",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Norethindrone,Alfentanil": [
+        "Norethindrone,Canagliflozin": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_12454"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4779,
-        "final_score": 0.4779
-      },
-      "nodes": [
-        {
-          "id": "Norethindrone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Alfentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Alb",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Norethindrone",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Alfentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alfentanil",
-          "target": "Alb",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Norethindrone,Alfentanil": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_12455"
+      "id": "path_6283"
     }
-  ],
-  "verbalization": ""
+  ]
 }

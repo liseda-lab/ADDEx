@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00862 - Gene::5149",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7306,
+        "final_score": 0.7819,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Vardenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde10a",
+          "type": "Gene"
+        },
+        {
+          "id": "3',5'-cyclic-gmp Phosphodiesterase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Pde6h",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vardenafil",
+          "target": "Pde10a",
+          "label": "binds"
+        },
+        {
+          "source": "Pde10a",
+          "target": "3',5'-cyclic-gmp Phosphodiesterase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "3',5'-cyclic-gmp Phosphodiesterase Activity",
+          "target": "Pde6h",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9908"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6344,
+        "final_score": 0.5672,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Vardenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyanopsia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde6h",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vardenafil",
+          "target": "Cyanopsia",
+          "label": "causes"
+        },
+        {
+          "source": "Cyanopsia",
+          "target": "Sildenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sildenafil",
+          "target": "Pde6h",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vardenafil,Sildenafil": [
+          "Sulfonamide",
+          "Cgmp Phosphodiesterase Inhibitor"
+        ]
+      },
+      "id": "path_9909"
+    }
+  ]
+}

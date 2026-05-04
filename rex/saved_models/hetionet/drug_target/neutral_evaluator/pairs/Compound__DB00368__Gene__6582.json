@@ -1,6 +1,142 @@
 {
   "id": "Compound::DB00368 - Gene::6582",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6623,
+        "final_score": 0.6623
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Monoamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Slc18a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc18a1",
+          "target": "Monoamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Monoamine Transmembrane Transporter Activity",
+          "target": "Slc22a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7125"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6196,
+        "final_score": 0.6196
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Dopamine",
+          "label": "includes"
+        },
+        {
+          "source": "Dopamine",
+          "target": "Slc22a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norepinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Norepinephrine,Dopamine": [
+          "Catecholamine"
+        ],
+        "Catecholamines,Dopamine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_7126"
+    },
+    {
+      "score": {
+        "ic_mean": 0.599,
+        "final_score": 0.599
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Monoamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Monoamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Monoamine Transmembrane Transporter Activity",
+          "target": "Slc22a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7127"
+    }
+  ]
 }

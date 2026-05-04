@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00862 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5959,
+        "final_score": 0.5959
+      },
+      "nodes": [
+        {
+          "id": "Vardenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vardenafil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9499"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4679,
+        "final_score": 0.4679
+      },
+      "nodes": [
+        {
+          "id": "Vardenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Premature Ejaculation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dutasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vardenafil",
+          "target": "Premature Ejaculation",
+          "label": "causes"
+        },
+        {
+          "source": "Premature Ejaculation",
+          "target": "Dutasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dutasteride",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vardenafil,Dutasteride": [
+          "Enzyme Inhibitor",
+          "Primary Amide"
+        ]
+      },
+      "id": "path_9500"
+    }
+  ]
+}

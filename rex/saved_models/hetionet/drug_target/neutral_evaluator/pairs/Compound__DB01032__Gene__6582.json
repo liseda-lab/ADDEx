@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01032 - Gene::6582",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4818,
+        "final_score": 0.4818
+      },
+      "nodes": [
+        {
+          "id": "Probenecid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aminohippurate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Probenecid",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Aminohippurate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aminohippurate",
+          "target": "Slc22a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Probenecid,Aminohippurate": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_12763"
+    }
+  ]
 }

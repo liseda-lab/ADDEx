@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00413 - Gene::150",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4874,
+        "final_score": 0.4874
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Excessive Daytime Sleepiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Excessive Daytime Sleepiness",
+          "label": "causes"
+        },
+        {
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Bromocriptine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Bromocriptine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_2144"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4757,
+        "final_score": 0.4757
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Excessive Daytime Sleepiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Excessive Daytime Sleepiness",
+          "label": "causes"
+        },
+        {
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Cabergoline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cabergoline",
+          "target": "Adra2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Cabergoline": [
+          "Agent Affecting Nervous System",
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_2145"
+    }
+  ]
 }

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00675 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5201,
+        "final_score": 0.5201
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer Male",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Breast Cancer Male",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Cancer Male",
+          "target": "Finasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Finasteride": [
+          "Hormone Antagonist",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_11475"
+    }
+  ]
+}

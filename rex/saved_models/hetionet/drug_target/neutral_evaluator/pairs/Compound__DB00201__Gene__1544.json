@@ -52,7 +52,7 @@
           "Chemical Entity"
         ]
       },
-      "id": "path_4164"
+      "id": "path_1912"
     },
     {
       "score": {
@@ -105,101 +105,7 @@
           "Purines"
         ]
       },
-      "id": "path_4165"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6261,
-        "final_score": 0.6261
-      },
-      "nodes": [
-        {
-          "id": "Caffeine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adora2b",
-          "type": "Gene"
-        },
-        {
-          "id": "Aminophylline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Caffeine",
-          "target": "Adora2b",
-          "label": "binds"
-        },
-        {
-          "source": "Adora2b",
-          "target": "Aminophylline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Aminophylline",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Caffeine,Aminophylline": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_4166"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5448,
-        "final_score": 0.5448
-      },
-      "nodes": [
-        {
-          "id": "Caffeine",
-          "type": "Compound"
-        },
-        {
-          "id": "Pde4b",
-          "type": "Gene"
-        },
-        {
-          "id": "Theobromine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Caffeine",
-          "target": "Pde4b",
-          "label": "binds"
-        },
-        {
-          "source": "Pde4b",
-          "target": "Theobromine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Theobromine",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Caffeine,Theobromine": [
-          "Methylxanthine"
-        ]
-      },
-      "id": "path_4167"
+      "id": "path_1913"
     },
     {
       "score": {
@@ -246,7 +152,55 @@
           "Methylxanthine"
         ]
       },
-      "id": "path_4168"
+      "id": "path_1914"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5256,
+        "final_score": 0.5256
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Nervous System Stimulation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Modafinil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Central Nervous System Stimulation",
+          "label": "is included in"
+        },
+        {
+          "source": "Central Nervous System Stimulation",
+          "target": "Modafinil",
+          "label": "includes"
+        },
+        {
+          "source": "Modafinil",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Modafinil": [
+          "Organonitrogen Compound",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_1915"
     },
     {
       "score": {
@@ -263,7 +217,7 @@
           "type": "Gene"
         },
         {
-          "id": "Aminophylline",
+          "id": "Oxtriphylline",
           "type": "Compound"
         },
         {
@@ -279,26 +233,21 @@
         },
         {
           "source": "Adora2a",
-          "target": "Aminophylline",
+          "target": "Oxtriphylline",
           "label": "is bound by"
         },
         {
-          "source": "Aminophylline",
+          "source": "Oxtriphylline",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
-      "lowest_common_ancestors": {
-        "Caffeine,Aminophylline": [
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_4169"
+      "id": "path_1916"
     },
     {
       "score": {
-        "ic_mean": 0.5022,
-        "final_score": 0.5022
+        "ic_mean": 0.4904,
+        "final_score": 0.4904
       },
       "nodes": [
         {
@@ -306,11 +255,11 @@
           "type": "Compound"
         },
         {
-          "id": "Skin Breakdown",
-          "type": "Side Effect"
+          "id": "Adora2a",
+          "type": "Gene"
         },
         {
-          "id": "Imiquimod",
+          "id": "Pentoxifylline",
           "type": "Compound"
         },
         {
@@ -321,27 +270,120 @@
       "edges": [
         {
           "source": "Caffeine",
-          "target": "Skin Breakdown",
-          "label": "causes"
+          "target": "Adora2a",
+          "label": "binds"
         },
         {
-          "source": "Skin Breakdown",
-          "target": "Imiquimod",
-          "label": "is caused by"
+          "source": "Adora2a",
+          "target": "Pentoxifylline",
+          "label": "is bound by"
         },
         {
-          "source": "Imiquimod",
+          "source": "Pentoxifylline",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Caffeine,Imiquimod": [
-          "Organic Heteropolycyclic Compound"
+        "Caffeine,Pentoxifylline": [
+          "Purines"
         ]
       },
-      "id": "path_4170"
+      "id": "path_1917"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4655,
+        "final_score": 0.4655
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora2a",
+          "type": "Gene"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Adora2a",
+          "label": "binds"
+        },
+        {
+          "source": "Adora2a",
+          "target": "Theophylline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Theophylline": [
+          "Methylxanthine"
+        ]
+      },
+      "id": "path_1918"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4564,
+        "final_score": 0.4564
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Brain Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Brain Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Brain Injury",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Propafenone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_1919"
     }
-  ],
-  "verbalization": ""
+  ]
 }

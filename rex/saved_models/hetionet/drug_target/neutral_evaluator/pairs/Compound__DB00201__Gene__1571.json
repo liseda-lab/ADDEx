@@ -52,12 +52,12 @@
           "Chemical Entity"
         ]
       },
-      "id": "path_22648"
+      "id": "path_11523"
     },
     {
       "score": {
-        "ic_mean": 0.5588,
-        "final_score": 0.5588
+        "ic_mean": 0.6437,
+        "final_score": 0.6437
       },
       "nodes": [
         {
@@ -65,11 +65,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pde4b",
-          "type": "Gene"
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Theobromine",
+          "id": "Theophylline",
           "type": "Compound"
         },
         {
@@ -80,31 +80,37 @@
       "edges": [
         {
           "source": "Caffeine",
-          "target": "Pde4b",
-          "label": "binds"
+          "target": "Xanthines",
+          "label": "is included in"
         },
         {
-          "source": "Pde4b",
-          "target": "Theobromine",
-          "label": "is bound by"
+          "source": "Xanthines",
+          "target": "Theophylline",
+          "label": "includes"
         },
         {
-          "source": "Theobromine",
+          "source": "Theophylline",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Caffeine,Theobromine": [
+        "Caffeine,Xanthines": [
+          "Purines"
+        ],
+        "Caffeine,Theophylline": [
           "Methylxanthine"
+        ],
+        "Xanthines,Theophylline": [
+          "Purines"
         ]
       },
-      "id": "path_22649"
+      "id": "path_11524"
     },
     {
       "score": {
-        "ic_mean": 0.5422,
-        "final_score": 0.5422
+        "ic_mean": 0.4059,
+        "final_score": 0.4059
       },
       "nodes": [
         {
@@ -112,11 +118,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adora2a",
+          "id": "Cyp3a7",
           "type": "Gene"
         },
         {
-          "id": "Theobromine",
+          "id": "Cimetidine",
           "type": "Compound"
         },
         {
@@ -127,27 +133,73 @@
       "edges": [
         {
           "source": "Caffeine",
-          "target": "Adora2a",
+          "target": "Cyp3a7",
           "label": "binds"
         },
         {
-          "source": "Adora2a",
-          "target": "Theobromine",
+          "source": "Cyp3a7",
+          "target": "Cimetidine",
           "label": "is bound by"
         },
         {
-          "source": "Theobromine",
+          "source": "Cimetidine",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Caffeine,Theobromine": [
-          "Methylxanthine"
+        "Caffeine,Cimetidine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_22650"
+      "id": "path_11525"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3867,
+        "final_score": 0.3867
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Cimetidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Cimetidine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_11526"
     }
-  ],
-  "verbalization": ""
+  ]
 }

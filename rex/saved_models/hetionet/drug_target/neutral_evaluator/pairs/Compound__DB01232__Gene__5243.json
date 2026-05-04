@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5234,
-        "final_score": 0.5234
+        "ic_mean": 0.4914,
+        "final_score": 0.4914
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp11a1",
-          "type": "Gene"
+          "id": "Cytochrome P450 3a Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Digitoxin",
+          "id": "Ivacaftor",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Saquinavir",
-          "target": "Cyp11a1",
-          "label": "binds"
+          "target": "Cytochrome P450 3a Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Cyp11a1",
-          "target": "Digitoxin",
-          "label": "is bound by"
+          "source": "Cytochrome P450 3a Inhibitors",
+          "target": "Ivacaftor",
+          "label": "includes"
         },
         {
-          "source": "Digitoxin",
+          "source": "Ivacaftor",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Saquinavir,Digitoxin": [
-          "Organic Heterocyclic Compound",
-          "Enzyme Inhibitor"
+        "Saquinavir,Ivacaftor": [
+          "Quinolines"
         ]
       },
-      "id": "path_1425"
+      "id": "path_703"
     },
     {
       "score": {
-        "ic_mean": 0.5033,
-        "final_score": 0.5033
+        "ic_mean": 0.4624,
+        "final_score": 0.4624
       },
       "nodes": [
         {
@@ -60,106 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Orm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Alfentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Saquinavir",
-          "target": "Orm1",
-          "label": "binds"
-        },
-        {
-          "source": "Orm1",
-          "target": "Alfentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alfentanil",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Saquinavir,Alfentanil": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_1426"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4847,
-        "final_score": 0.4847
-      },
-      "nodes": [
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Saquinavir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Simeprevir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Simeprevir",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Saquinavir,Simeprevir": [
-          "Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_1427"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4409,
-        "final_score": 0.4409
-      },
-      "nodes": [
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Haemorrhage Urinary Tract",
+          "id": "Acute Renal Insufficiency",
           "type": "Side Effect"
         },
         {
-          "id": "Ticagrelor",
+          "id": "Telaprevir",
           "type": "Compound"
         },
         {
@@ -170,79 +74,32 @@
       "edges": [
         {
           "source": "Saquinavir",
-          "target": "Haemorrhage Urinary Tract",
+          "target": "Acute Renal Insufficiency",
           "label": "causes"
         },
         {
-          "source": "Haemorrhage Urinary Tract",
-          "target": "Ticagrelor",
+          "source": "Acute Renal Insufficiency",
+          "target": "Telaprevir",
           "label": "is caused by"
         },
         {
-          "source": "Ticagrelor",
+          "source": "Telaprevir",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Saquinavir,Ticagrelor": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_1428"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4057,
-        "final_score": 0.4057
-      },
-      "nodes": [
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Kaposi's Sarcoma",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Posaconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Saquinavir",
-          "target": "Kaposi's Sarcoma",
-          "label": "causes"
-        },
-        {
-          "source": "Kaposi's Sarcoma",
-          "target": "Posaconazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Posaconazole",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Saquinavir,Posaconazole": [
+        "Saquinavir,Telaprevir": [
           "Organonitrogen Heterocyclic Compound",
-          "Anti-Infective Agent"
+          "Protease Inhibitor"
         ]
       },
-      "id": "path_1429"
+      "id": "path_704"
     },
     {
       "score": {
-        "ic_mean": 0.3993,
-        "final_score": 0.3993
+        "ic_mean": 0.4029,
+        "final_score": 0.4029
       },
       "nodes": [
         {
@@ -250,11 +107,11 @@
           "type": "Compound"
         },
         {
-          "id": "Vein Distended",
+          "id": "Hepatitis Chronic Active",
           "type": "Side Effect"
         },
         {
-          "id": "Citalopram",
+          "id": "Pravastatin",
           "type": "Compound"
         },
         {
@@ -265,168 +122,27 @@
       "edges": [
         {
           "source": "Saquinavir",
-          "target": "Vein Distended",
+          "target": "Hepatitis Chronic Active",
           "label": "causes"
         },
         {
-          "source": "Vein Distended",
-          "target": "Citalopram",
+          "source": "Hepatitis Chronic Active",
+          "target": "Pravastatin",
           "label": "is caused by"
         },
         {
-          "source": "Citalopram",
+          "source": "Pravastatin",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Saquinavir,Citalopram": [
-          "Organic Heterocyclic Compound"
+        "Saquinavir,Pravastatin": [
+          "Enzyme Inhibitor",
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_1430"
-    },
-    {
-      "score": {
-        "ic_mean": 0.397,
-        "final_score": 0.397
-      },
-      "nodes": [
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Lymphocyte Count Decreased",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sumatriptan",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Saquinavir",
-          "target": "Lymphocyte Count Decreased",
-          "label": "causes"
-        },
-        {
-          "source": "Lymphocyte Count Decreased",
-          "target": "Sumatriptan",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sumatriptan",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Saquinavir,Sumatriptan": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_1431"
-    },
-    {
-      "score": {
-        "ic_mean": 0.397,
-        "final_score": 0.397
-      },
-      "nodes": [
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Thyrotropin High",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sumatriptan",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Saquinavir",
-          "target": "Thyrotropin High",
-          "label": "causes"
-        },
-        {
-          "source": "Thyrotropin High",
-          "target": "Sumatriptan",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sumatriptan",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Saquinavir,Sumatriptan": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_1432"
-    },
-    {
-      "score": {
-        "ic_mean": 0.397,
-        "final_score": 0.397
-      },
-      "nodes": [
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Lipoatrophy",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sumatriptan",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Saquinavir",
-          "target": "Lipoatrophy",
-          "label": "causes"
-        },
-        {
-          "source": "Lipoatrophy",
-          "target": "Sumatriptan",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sumatriptan",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Saquinavir,Sumatriptan": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_1433"
+      "id": "path_705"
     }
-  ],
-  "verbalization": ""
+  ]
 }

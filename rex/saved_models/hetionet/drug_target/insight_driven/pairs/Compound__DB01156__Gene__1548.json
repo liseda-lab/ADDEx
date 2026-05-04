@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01156 - Gene::1548",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3916,
+        "final_score": 0.3916
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Energy Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Energy Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Energy Increased",
+          "target": "Acetaminophen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Acetaminophen",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Acetaminophen": [
+          "Organooxygen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9601"
+    }
+  ]
+}

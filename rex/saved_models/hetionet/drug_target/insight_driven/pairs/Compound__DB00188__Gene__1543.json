@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00188 - Gene::1543",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4663,
+        "final_score": 0.4663
+      },
+      "nodes": [
+        {
+          "id": "Bortezomib",
+          "type": "Compound"
+        },
+        {
+          "id": "Failure To Thrive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bortezomib",
+          "target": "Failure To Thrive",
+          "label": "causes"
+        },
+        {
+          "source": "Failure To Thrive",
+          "target": "Caffeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bortezomib,Caffeine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6072"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7278,
-        "final_score": 0.7278
+        "ic_mean": 0.7653,
+        "final_score": 0.7653
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Muscarinic Acetylcholine Receptors",
-          "type": "Pathway"
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Chrm2",
@@ -32,21 +32,21 @@
         },
         {
           "source": "Chrm5",
-          "target": "Muscarinic Acetylcholine Receptors",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Muscarinic Acetylcholine Receptors",
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
           "target": "Chrm2",
           "label": "is participated by"
         }
       ],
-      "id": "path_9470"
+      "id": "path_4620"
     },
     {
       "score": {
-        "ic_mean": 0.7146,
-        "final_score": 0.7146
+        "ic_mean": 0.7216,
+        "final_score": 0.7216
       },
       "nodes": [
         {
@@ -54,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
+          "id": "Chrm3",
           "type": "Gene"
         },
         {
-          "id": "Muscarinic Acetylcholine Receptors",
-          "type": "Pathway"
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Chrm2",
@@ -69,26 +69,26 @@
       "edges": [
         {
           "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
+          "target": "Chrm3",
           "label": "binds"
         },
         {
-          "source": "Chrm4",
-          "target": "Muscarinic Acetylcholine Receptors",
+          "source": "Chrm3",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Muscarinic Acetylcholine Receptors",
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
           "target": "Chrm2",
           "label": "is participated by"
         }
       ],
-      "id": "path_9471"
+      "id": "path_4621"
     },
     {
       "score": {
-        "ic_mean": 0.7125,
-        "final_score": 0.7125
+        "ic_mean": 0.6311,
+        "final_score": 0.6311
       },
       "nodes": [
         {
@@ -100,7 +100,7 @@
           "type": "Gene"
         },
         {
-          "id": "Methylscopolamine Bromide",
+          "id": "Trihexyphenidyl",
           "type": "Compound"
         },
         {
@@ -116,26 +116,27 @@
         },
         {
           "source": "Chrm5",
-          "target": "Methylscopolamine Bromide",
+          "target": "Trihexyphenidyl",
           "label": "is bound by"
         },
         {
-          "source": "Methylscopolamine Bromide",
+          "source": "Trihexyphenidyl",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Methylscopolamine Bromide": [
-          "Organonitrogen Compound"
+        "Homatropine Methylbromide,Trihexyphenidyl": [
+          "Organonitrogen Compound",
+          "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9472"
+      "id": "path_4622"
     },
     {
       "score": {
-        "ic_mean": 0.686,
-        "final_score": 0.686
+        "ic_mean": 0.6311,
+        "final_score": 0.6311
       },
       "nodes": [
         {
@@ -143,11 +144,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
+          "id": "Chrm5",
           "type": "Gene"
         },
         {
-          "id": "Glycopyrrolate",
+          "id": "Propiomazine",
           "type": "Compound"
         },
         {
@@ -158,127 +159,80 @@
       "edges": [
         {
           "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
+          "target": "Chrm5",
           "label": "binds"
         },
         {
-          "source": "Chrm4",
-          "target": "Glycopyrrolate",
+          "source": "Chrm5",
+          "target": "Propiomazine",
           "label": "is bound by"
         },
         {
-          "source": "Glycopyrrolate",
+          "source": "Propiomazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Glycopyrrolate": [
+        "Homatropine Methylbromide,Propiomazine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4623"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5999,
+        "final_score": 0.5999
+      },
+      "nodes": [
+        {
+          "id": "Homatropine Methylbromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxyphencyclimine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Homatropine Methylbromide",
+          "target": "Chrm3",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm3",
+          "target": "Oxyphencyclimine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Oxyphencyclimine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Homatropine Methylbromide,Oxyphencyclimine": [
           "Antimuscarinic Agent",
-          "Organic Cyclic Compound"
+          "Organic Molecule"
         ]
       },
-      "id": "path_9473"
+      "id": "path_4624"
     },
     {
       "score": {
-        "ic_mean": 0.6611,
-        "final_score": 0.6611
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Methylscopolamine Bromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Methylscopolamine Bromide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_9474"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6611,
-        "final_score": 0.6611
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Anisotropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Anisotropine Methylbromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Anisotropine Methylbromide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Anisotropine Methylbromide": [
-          "Organonitrogen Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9475"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6512,
-        "final_score": 0.6512
+        "ic_mean": 0.5999,
+        "final_score": 0.5999
       },
       "nodes": [
         {
@@ -287,149 +241,6 @@
         },
         {
           "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Methylscopolamine Bromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Methylscopolamine Bromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methylscopolamine Bromide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Methylscopolamine Bromide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_9476"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6512,
-        "final_score": 0.6512
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Anisotropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Anisotropine Methylbromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Anisotropine Methylbromide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Anisotropine Methylbromide": [
-          "Organonitrogen Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9477"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6347,
-        "final_score": 0.6347
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Tropicamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Tropicamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tropicamide",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Tropicamide": [
-          "Organonitrogen Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9478"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6347,
-        "final_score": 0.6347
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
           "type": "Gene"
         },
         {
@@ -444,11 +255,11 @@
       "edges": [
         {
           "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
+          "target": "Chrm3",
           "label": "binds"
         },
         {
-          "source": "Chrm4",
+          "source": "Chrm3",
           "target": "Hyoscyamine",
           "label": "is bound by"
         },
@@ -460,16 +271,16 @@
       ],
       "lowest_common_ancestors": {
         "Homatropine Methylbromide,Hyoscyamine": [
-          "Azabicycloalkane",
-          "Antimuscarinic Agent"
+          "Antimuscarinic Agent",
+          "Azabicycloalkane"
         ]
       },
-      "id": "path_9479"
+      "id": "path_4625"
     },
     {
       "score": {
-        "ic_mean": 0.6347,
-        "final_score": 0.6347
+        "ic_mean": 0.5698,
+        "final_score": 0.5698
       },
       "nodes": [
         {
@@ -477,342 +288,7 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Atropine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Atropine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atropine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Atropine": [
-          "Azabicycloalkane",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9480"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6347,
-        "final_score": 0.6347
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Chlorprothixene",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Chlorprothixene",
-          "label": "is bound by"
-        },
-        {
-          "source": "Chlorprothixene",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Chlorprothixene": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_9481"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6311,
-        "final_score": 0.6311
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Trihexyphenidyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trihexyphenidyl",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Trihexyphenidyl": [
-          "Organonitrogen Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9482"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6311,
-        "final_score": 0.6311
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Metixene",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Metixene",
-          "label": "is bound by"
-        },
-        {
-          "source": "Metixene",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Metixene": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_9483"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6311,
-        "final_score": 0.6311
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        },
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm5",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm5",
-          "target": "Scopolamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Scopolamine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Scopolamine": [
-          "Azabicycloalkane",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9484"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6098,
-        "final_score": 0.6098
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxyphencyclimine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Oxyphencyclimine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxyphencyclimine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Oxyphencyclimine": [
-          "Heteroorganic Entity",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9485"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6047,
-        "final_score": 0.6047
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Trihexyphenidyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trihexyphenidyl",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Trihexyphenidyl": [
-          "Organonitrogen Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9486"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6047,
-        "final_score": 0.6047
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
+          "id": "Chrm3",
           "type": "Gene"
         },
         {
@@ -827,11 +303,11 @@
       "edges": [
         {
           "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
+          "target": "Chrm3",
           "label": "binds"
         },
         {
-          "source": "Chrm4",
+          "source": "Chrm3",
           "target": "Procyclidine",
           "label": "is bound by"
         },
@@ -843,16 +319,16 @@
       ],
       "lowest_common_ancestors": {
         "Homatropine Methylbromide,Procyclidine": [
-          "Antimuscarinic Agent",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9487"
+      "id": "path_4626"
     },
     {
       "score": {
-        "ic_mean": 0.6047,
-        "final_score": 0.6047
+        "ic_mean": 0.5698,
+        "final_score": 0.5698
       },
       "nodes": [
         {
@@ -860,7 +336,7 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
+          "id": "Chrm3",
           "type": "Gene"
         },
         {
@@ -875,11 +351,11 @@
       "edges": [
         {
           "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
+          "target": "Chrm3",
           "label": "binds"
         },
         {
-          "source": "Chrm4",
+          "source": "Chrm3",
           "target": "Metixene",
           "label": "is bound by"
         },
@@ -894,60 +370,12 @@
           "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_9488"
+      "id": "path_4627"
     },
     {
       "score": {
-        "ic_mean": 0.6047,
-        "final_score": 0.6047
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Scopolamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Scopolamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Scopolamine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Scopolamine": [
-          "Azabicycloalkane",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9489"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5999,
-        "final_score": 0.5999
+        "ic_mean": 0.5698,
+        "final_score": 0.5698
       },
       "nodes": [
         {
@@ -959,7 +387,7 @@
           "type": "Gene"
         },
         {
-          "id": "Oxyphencyclimine",
+          "id": "Carbachol",
           "type": "Compound"
         },
         {
@@ -975,118 +403,21 @@
         },
         {
           "source": "Chrm3",
-          "target": "Oxyphencyclimine",
+          "target": "Carbachol",
           "label": "is bound by"
         },
         {
-          "source": "Oxyphencyclimine",
+          "source": "Carbachol",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Oxyphencyclimine": [
-          "Heteroorganic Entity",
-          "Antimuscarinic Agent"
+        "Homatropine Methylbromide,Carbachol": [
+          "Organic Molecule"
         ]
       },
-      "id": "path_9490"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5999,
-        "final_score": 0.5999
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm3",
-          "type": "Gene"
-        },
-        {
-          "id": "Mepenzolate",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm3",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm3",
-          "target": "Mepenzolate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mepenzolate",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Mepenzolate": [
-          "Antimuscarinic Agent",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_9491"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5797,
-        "final_score": 0.5797
-      },
-      "nodes": [
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Trihexyphenidyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Trihexyphenidyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trihexyphenidyl",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Homatropine Methylbromide,Trihexyphenidyl": [
-          "Organonitrogen Compound",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9492"
+      "id": "path_4628"
     },
     {
       "score": {
@@ -1134,8 +465,163 @@
           "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9493"
+      "id": "path_4629"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5698,
+        "final_score": 0.5698
+      },
+      "nodes": [
+        {
+          "id": "Homatropine Methylbromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        },
+        {
+          "id": "Mivacurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Homatropine Methylbromide",
+          "target": "Chrm3",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm3",
+          "target": "Mivacurium",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mivacurium",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Homatropine Methylbromide,Mivacurium": [
+          "Organic Heteropolycyclic Compound",
+          "Anticholinergic Agent"
+        ]
+      },
+      "id": "path_4630"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4832,
+        "final_score": 0.4832
+      },
+      "nodes": [
+        {
+          "id": "Homatropine Methylbromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclandelate",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Homatropine Methylbromide",
+          "target": "Cyclandelate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclandelate",
+          "target": "Hyoscyamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Homatropine Methylbromide,Cyclandelate": [
+          "Organic Molecule"
+        ],
+        "Homatropine Methylbromide,Hyoscyamine": [
+          "Antimuscarinic Agent",
+          "Azabicycloalkane"
+        ],
+        "Cyclandelate,Hyoscyamine": [
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_4631"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4832,
+        "final_score": 0.4832
+      },
+      "nodes": [
+        {
+          "id": "Homatropine Methylbromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Homatropine Methylbromide",
+          "target": "Methylscopolamine Bromide",
+          "label": "resembles"
+        },
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Hyoscyamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Homatropine Methylbromide,Methylscopolamine Bromide": [
+          "Bromide Salt"
+        ],
+        "Homatropine Methylbromide,Hyoscyamine": [
+          "Antimuscarinic Agent",
+          "Azabicycloalkane"
+        ],
+        "Methylscopolamine Bromide,Hyoscyamine": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_4632"
     }
-  ],
-  "verbalization": ""
+  ]
 }

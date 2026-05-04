@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6972,
-        "final_score": 0.6972
+        "ic_mean": 0.4173,
+        "final_score": 0.4173
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp3a43",
+          "id": "Cyp3a7-cyp3a51p",
           "type": "Gene"
         },
         {
-          "id": "Ethosuximide",
+          "id": "Dapsone",
           "type": "Compound"
         },
         {
@@ -27,28 +27,80 @@
       "edges": [
         {
           "source": "Phenelzine",
-          "target": "Cyp3a43",
+          "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         },
         {
-          "source": "Cyp3a43",
-          "target": "Ethosuximide",
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Dapsone",
           "label": "is bound by"
         },
         {
-          "source": "Ethosuximide",
+          "source": "Dapsone",
           "target": "Cyp2e1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Phenelzine,Ethosuximide": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Phenelzine,Dapsone": [
+          "Organic Amino Compound"
         ]
       },
-      "id": "path_26824"
+      "id": "path_13689"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3818,
+        "final_score": 0.3818
+      },
+      "nodes": [
+        {
+          "id": "Phenelzine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenol",
+          "type": "Compound"
+        },
+        {
+          "id": "Tranylcypromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenelzine",
+          "target": "Phenol",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenol",
+          "target": "Tranylcypromine",
+          "label": "resembles"
+        },
+        {
+          "source": "Tranylcypromine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenelzine,Phenol": [
+          "Organic Molecular Entity"
+        ],
+        "Phenelzine,Tranylcypromine": [
+          "Primary Amine",
+          "Monoamine Oxidase Inhibitor"
+        ],
+        "Phenol,Tranylcypromine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_13690"
     }
-  ],
-  "verbalization": ""
+  ]
 }

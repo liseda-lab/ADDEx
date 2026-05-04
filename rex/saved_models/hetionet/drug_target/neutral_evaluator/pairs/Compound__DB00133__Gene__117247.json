@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7439,
-        "final_score": 0.7439
+        "ic_mean": 0.6588,
+        "final_score": 0.6588
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Loc102724560",
-          "type": "Gene"
+          "id": "L-threonine",
+          "type": "Compound"
         },
         {
-          "id": "L-cysteine",
+          "id": "L-valine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,91 @@
       "edges": [
         {
           "source": "L-serine",
-          "target": "Loc102724560",
-          "label": "binds"
+          "target": "L-threonine",
+          "label": "resembles"
         },
         {
-          "source": "Loc102724560",
-          "target": "L-cysteine",
-          "label": "is bound by"
+          "source": "L-threonine",
+          "target": "L-valine",
+          "label": "resembles"
         },
         {
-          "source": "L-cysteine",
+          "source": "L-valine",
           "target": "Slc16a10",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "L-serine,L-cysteine": [
-          "Serine Family Amino Acid",
+        "L-serine,L-threonine": [
+          "Dietary Amino Acid",
+          "Proteinogenic Amino Acid"
+        ],
+        "L-serine,L-valine": [
+          "Dietary Amino Acid",
+          "Proteinogenic Amino Acid"
+        ],
+        "L-threonine,L-valine": [
+          "Dietary Amino Acid",
+          "Proteinogenic Amino Acid"
+        ]
+      },
+      "id": "path_13027"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6402,
+        "final_score": 0.6402
+      },
+      "nodes": [
+        {
+          "id": "L-serine",
+          "type": "Compound"
+        },
+        {
+          "id": "L-threonine",
+          "type": "Compound"
+        },
+        {
+          "id": "L-isoleucine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc16a10",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-serine",
+          "target": "L-threonine",
+          "label": "resembles"
+        },
+        {
+          "source": "L-threonine",
+          "target": "L-isoleucine",
+          "label": "resembles"
+        },
+        {
+          "source": "L-isoleucine",
+          "target": "Slc16a10",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "L-serine,L-threonine": [
+          "Dietary Amino Acid",
+          "Proteinogenic Amino Acid"
+        ],
+        "L-serine,L-isoleucine": [
+          "Dietary Amino Acid",
+          "Proteinogenic Amino Acid"
+        ],
+        "L-threonine,L-isoleucine": [
+          "Aspartate Family Amino Acid",
           "Dietary Amino Acid"
         ]
       },
-      "id": "path_25626"
+      "id": "path_13028"
     }
-  ],
-  "verbalization": ""
+  ]
 }

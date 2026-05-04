@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00390 - Gene::1576",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4489,
+        "final_score": 0.4489
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atrial Tachycardia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Enalapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Atrial Tachycardia",
+          "label": "causes"
+        },
+        {
+          "source": "Atrial Tachycardia",
+          "target": "Enalapril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Enalapril",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Enalapril": [
+          "Agent Affecting Cardiovascular System",
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_7155"
+    }
+  ]
+}

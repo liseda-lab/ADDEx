@@ -3,53 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4884,
-        "final_score": 0.4884
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pantoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Pantoprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pantoprazole",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Pantoprazole": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_4185"
-    },
-    {
-      "score": {
         "ic_mean": 0.482,
         "final_score": 0.482
       },
@@ -90,11 +43,58 @@
       ],
       "lowest_common_ancestors": {
         "Indinavir,Delavirdine": [
-          "Organic Amino Compound",
+          "Piperazines",
           "Antiviral Agent"
         ]
       },
-      "id": "path_4186"
+      "id": "path_1921"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4753,
+        "final_score": 0.4753
+      },
+      "nodes": [
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Food Allergy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indinavir",
+          "target": "Food Allergy",
+          "label": "causes"
+        },
+        {
+          "source": "Food Allergy",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indinavir,Clopidogrel": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1922"
     },
     {
       "score": {
@@ -141,102 +141,7 @@
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_4187"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4529,
-        "final_score": 0.4529
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Serum Amylase Increased",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Efavirenz",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Serum Amylase Increased",
-          "label": "causes"
-        },
-        {
-          "source": "Serum Amylase Increased",
-          "target": "Efavirenz",
-          "label": "is caused by"
-        },
-        {
-          "source": "Efavirenz",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Efavirenz": [
-          "Organonitrogen Heterocyclic Compound",
-          "Antiviral Agent"
-        ]
-      },
-      "id": "path_4188"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4496,
-        "final_score": 0.4496
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Sinus Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Famotidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Sinus Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Sinus Disorder",
-          "target": "Famotidine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Famotidine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Famotidine": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_4189"
+      "id": "path_1923"
     },
     {
       "score": {
@@ -280,11 +185,11 @@
       ],
       "lowest_common_ancestors": {
         "Indinavir,Ritonavir": [
-          "Hiv Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_4190"
+      "id": "path_1924"
     },
     {
       "score": {
@@ -328,16 +233,63 @@
       ],
       "lowest_common_ancestors": {
         "Indinavir,Etoricoxib": [
-          "Enzyme Inhibitor",
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_1925"
+    },
+    {
+      "score": {
+        "ic_mean": 0.407,
+        "final_score": 0.407
+      },
+      "nodes": [
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Imipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Imipramine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indinavir,Imipramine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_4191"
+      "id": "path_1926"
     },
     {
       "score": {
-        "ic_mean": 0.437,
-        "final_score": 0.437
+        "ic_mean": 0.3531,
+        "final_score": 0.3531
       },
       "nodes": [
         {
@@ -345,11 +297,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1a2",
-          "type": "Gene"
+          "id": "Premenstrual Syndrome",
+          "type": "Side Effect"
         },
         {
-          "id": "Quinine",
+          "id": "Progesterone",
           "type": "Compound"
         },
         {
@@ -360,499 +312,26 @@
       "edges": [
         {
           "source": "Indinavir",
-          "target": "Slco1a2",
-          "label": "binds"
+          "target": "Premenstrual Syndrome",
+          "label": "causes"
         },
         {
-          "source": "Slco1a2",
-          "target": "Quinine",
-          "label": "is bound by"
+          "source": "Premenstrual Syndrome",
+          "target": "Progesterone",
+          "label": "is caused by"
         },
         {
-          "source": "Quinine",
+          "source": "Progesterone",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Indinavir,Quinine": [
-          "Organonitrogen Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_4192"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4344,
-        "final_score": 0.4344
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Glyburide": [
+        "Indinavir,Progesterone": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_4193"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3952,
-        "final_score": 0.3952
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Ingrowing Nail",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Citalopram",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Ingrowing Nail",
-          "label": "causes"
-        },
-        {
-          "source": "Ingrowing Nail",
-          "target": "Citalopram",
-          "label": "is caused by"
-        },
-        {
-          "source": "Citalopram",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Citalopram": [
-          "Tertiary Amino Compound"
-        ]
-      },
-      "id": "path_4194"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3942,
-        "final_score": 0.3942
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Calculus Urinary",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Fluoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Calculus Urinary",
-          "label": "causes"
-        },
-        {
-          "source": "Calculus Urinary",
-          "target": "Fluoxetine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fluoxetine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Fluoxetine": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_4195"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3942,
-        "final_score": 0.3942
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Urolithiasis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Fluoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Urolithiasis",
-          "label": "causes"
-        },
-        {
-          "source": "Urolithiasis",
-          "target": "Fluoxetine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fluoxetine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Fluoxetine": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_4196"
-    },
-    {
-      "score": {
-        "ic_mean": 0.391,
-        "final_score": 0.391
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Calculus Urinary",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Calculus Urinary",
-          "label": "causes"
-        },
-        {
-          "source": "Calculus Urinary",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Venlafaxine": [
-          "Alcohol"
-        ]
-      },
-      "id": "path_4197"
-    },
-    {
-      "score": {
-        "ic_mean": 0.391,
-        "final_score": 0.391
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Urolithiasis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Urolithiasis",
-          "label": "causes"
-        },
-        {
-          "source": "Urolithiasis",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Venlafaxine": [
-          "Alcohol"
-        ]
-      },
-      "id": "path_4198"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3895,
-        "final_score": 0.3895
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Glucose Increased",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Pantoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Glucose Increased",
-          "label": "causes"
-        },
-        {
-          "source": "Glucose Increased",
-          "target": "Pantoprazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Pantoprazole",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Pantoprazole": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_4199"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3861,
-        "final_score": 0.3861
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "White Blood Cells Urine Positive",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Aprepitant",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "White Blood Cells Urine Positive",
-          "label": "causes"
-        },
-        {
-          "source": "White Blood Cells Urine Positive",
-          "target": "Aprepitant",
-          "label": "is caused by"
-        },
-        {
-          "source": "Aprepitant",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Aprepitant": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_4200"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3652,
-        "final_score": 0.3652
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Lipoatrophy",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Lipoatrophy",
-          "label": "causes"
-        },
-        {
-          "source": "Lipoatrophy",
-          "target": "Saquinavir",
-          "label": "is caused by"
-        },
-        {
-          "source": "Saquinavir",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Saquinavir": [
-          "Hiv Protease Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_4201"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3652,
-        "final_score": 0.3652
-      },
-      "nodes": [
-        {
-          "id": "Indinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Neutrophil Count Increased",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Lansoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Indinavir",
-          "target": "Neutrophil Count Increased",
-          "label": "causes"
-        },
-        {
-          "source": "Neutrophil Count Increased",
-          "target": "Lansoprazole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Lansoprazole",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Indinavir,Lansoprazole": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_4202"
+      "id": "path_1927"
     }
-  ],
-  "verbalization": ""
+  ]
 }

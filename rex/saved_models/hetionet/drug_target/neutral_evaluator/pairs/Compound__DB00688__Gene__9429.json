@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00688 - Gene::9429",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4718,
+        "final_score": 0.4718
+      },
+      "nodes": [
+        {
+          "id": "Mycophenolate Mofetil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rabeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mycophenolate Mofetil",
+          "target": "Pancreatic Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Pancreatic Disorder",
+          "target": "Rabeprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rabeprazole",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mycophenolate Mofetil,Rabeprazole": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8884"
+    }
+  ]
 }

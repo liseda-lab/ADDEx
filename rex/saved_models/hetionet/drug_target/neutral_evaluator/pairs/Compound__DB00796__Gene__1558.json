@@ -3,101 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5802,
-        "final_score": 0.5802
-      },
-      "nodes": [
-        {
-          "id": "Candesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Eltrombopag",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Candesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Eltrombopag",
-          "label": "is bound by"
-        },
-        {
-          "source": "Eltrombopag",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Candesartan,Eltrombopag": [
-          "Carboxylic Acid"
-        ]
-      },
-      "id": "path_11527"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5802,
-        "final_score": 0.5802
-      },
-      "nodes": [
-        {
-          "id": "Candesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Irbesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Candesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a3",
-          "target": "Irbesartan",
-          "label": "is bound by"
-        },
-        {
-          "source": "Irbesartan",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Candesartan,Irbesartan": [
-          "Biphenylyltetrazole",
-          "Angiotensin Ii Receptor Antagonist"
-        ]
-      },
-      "id": "path_11528"
-    },
-    {
-      "score": {
         "ic_mean": 0.5578,
         "final_score": 0.5578
       },
@@ -141,12 +46,12 @@
           "Organic Heterobicyclic Compound"
         ]
       },
-      "id": "path_11529"
+      "id": "path_5760"
     },
     {
       "score": {
-        "ic_mean": 0.4688,
-        "final_score": 0.4688
+        "ic_mean": 0.5323,
+        "final_score": 0.5323
       },
       "nodes": [
         {
@@ -154,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a3",
-          "type": "Gene"
+          "id": "Forasartan",
+          "type": "Compound"
         },
         {
-          "id": "Ibuprofen",
+          "id": "Irbesartan",
           "type": "Compound"
         },
         {
@@ -169,31 +74,40 @@
       "edges": [
         {
           "source": "Candesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
+          "target": "Forasartan",
+          "label": "resembles"
         },
         {
-          "source": "Ugt1a3",
-          "target": "Ibuprofen",
-          "label": "is bound by"
+          "source": "Forasartan",
+          "target": "Irbesartan",
+          "label": "resembles"
         },
         {
-          "source": "Ibuprofen",
+          "source": "Irbesartan",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Candesartan,Ibuprofen": [
-          "Monocarboxylic Acid Anion"
+        "Candesartan,Forasartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
+        ],
+        "Candesartan,Irbesartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ],
+        "Forasartan,Irbesartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
         ]
       },
-      "id": "path_11530"
+      "id": "path_5761"
     },
     {
       "score": {
-        "ic_mean": 0.4688,
-        "final_score": 0.4688
+        "ic_mean": 0.5257,
+        "final_score": 0.5257
       },
       "nodes": [
         {
@@ -201,11 +115,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a3",
-          "type": "Gene"
+          "id": "Hepatitis A",
+          "type": "Side Effect"
         },
         {
-          "id": "Atorvastatin",
+          "id": "Perphenazine",
           "type": "Compound"
         },
         {
@@ -216,27 +130,138 @@
       "edges": [
         {
           "source": "Candesartan",
-          "target": "Ugt1a3",
-          "label": "binds"
+          "target": "Hepatitis A",
+          "label": "causes"
         },
         {
-          "source": "Ugt1a3",
-          "target": "Atorvastatin",
-          "label": "is bound by"
+          "source": "Hepatitis A",
+          "target": "Perphenazine",
+          "label": "is caused by"
         },
         {
-          "source": "Atorvastatin",
+          "source": "Perphenazine",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Candesartan,Atorvastatin": [
-          "Carboxylic Acid Anion"
+        "Candesartan,Perphenazine": [
+          "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_11531"
+      "id": "path_5762"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5101,
+        "final_score": 0.5101
+      },
+      "nodes": [
+        {
+          "id": "Candesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Azilsartan Medoxomil",
+          "type": "Compound"
+        },
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Candesartan",
+          "target": "Azilsartan Medoxomil",
+          "label": "resembles"
+        },
+        {
+          "source": "Azilsartan Medoxomil",
+          "target": "Losartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Losartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Candesartan,Azilsartan Medoxomil": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Benzimidazoles"
+        ],
+        "Candesartan,Losartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ],
+        "Azilsartan Medoxomil,Losartan": [
+          "Organonitrogen Heterocyclic Compound",
+          "Angiotensin Ii Receptor Antagonist"
+        ]
+      },
+      "id": "path_5763"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4795,
+        "final_score": 0.4795
+      },
+      "nodes": [
+        {
+          "id": "Candesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Forasartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Candesartan",
+          "target": "Forasartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Forasartan",
+          "target": "Losartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Losartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Candesartan,Forasartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
+        ],
+        "Candesartan,Losartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ],
+        "Forasartan,Losartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
+        ]
+      },
+      "id": "path_5764"
     }
-  ],
-  "verbalization": ""
+  ]
 }

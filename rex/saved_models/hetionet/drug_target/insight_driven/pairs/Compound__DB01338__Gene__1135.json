@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB01338 - Gene::1135",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6892,
+        "final_score": 0.803,
+        "agentic_score": 0.9167
+      },
+      "nodes": [
+        {
+          "id": "Pipecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrna2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pipecuronium",
+          "target": "Chrm3",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm3",
+          "target": "Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Acetylcholine Receptor Activity",
+          "target": "Chrna2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9203"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7,
+        "final_score": 0.725,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Pipecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pipecuronium",
+          "target": "Pancuronium",
+          "label": "resembles"
+        },
+        {
+          "source": "Pancuronium",
+          "target": "Vecuronium",
+          "label": "resembles"
+        },
+        {
+          "source": "Vecuronium",
+          "target": "Chrna2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pipecuronium,Pancuronium": [
+          "Steroid Ester"
+        ],
+        "Pipecuronium,Vecuronium": [
+          "Ester",
+          "Nicotinic Antagonist"
+        ],
+        "Pancuronium,Vecuronium": [
+          "Acetate Ester"
+        ]
+      },
+      "id": "path_9204"
+    }
+  ]
+}

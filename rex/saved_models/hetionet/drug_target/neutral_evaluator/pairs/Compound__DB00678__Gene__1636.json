@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00678 - Gene::1636",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5916,
+        "final_score": 0.5916
+      },
+      "nodes": [
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Persistent Dry Cough",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Captopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Ace",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Losartan",
+          "target": "Persistent Dry Cough",
+          "label": "causes"
+        },
+        {
+          "source": "Persistent Dry Cough",
+          "target": "Captopril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Captopril",
+          "target": "Ace",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Losartan,Captopril": [
+          "Antihypertensive Agent",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1097"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5564,
+        "final_score": 0.5564
+      },
+      "nodes": [
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Coxalgia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisinopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Ace",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Losartan",
+          "target": "Coxalgia",
+          "label": "causes"
+        },
+        {
+          "source": "Coxalgia",
+          "target": "Lisinopril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisinopril",
+          "target": "Ace",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Losartan,Lisinopril": [
+          "Antihypertensive Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_1098"
+    }
+  ]
 }

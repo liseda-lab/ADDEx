@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00683 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4429,
+        "final_score": 0.4429
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Withdrawal Convulsions",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Levetiracetam",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Drug Withdrawal Convulsions",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Withdrawal Convulsions",
+          "target": "Levetiracetam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Levetiracetam",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midazolam,Levetiracetam": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4836"
+    }
+  ]
+}

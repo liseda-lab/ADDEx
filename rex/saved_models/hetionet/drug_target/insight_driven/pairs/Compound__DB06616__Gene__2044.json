@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB06616 - Gene::2044",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6674,
+        "final_score": 0.8337,
+        "agentic_score": 1
+      },
+      "nodes": [
+        {
+          "id": "Bosutinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Protein Kinase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Vandetanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Epha5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bosutinib",
+          "target": "Protein Kinase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Protein Kinase Inhibitors",
+          "target": "Vandetanib",
+          "label": "includes"
+        },
+        {
+          "source": "Vandetanib",
+          "target": "Epha5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bosutinib,Vandetanib": [
+          "Tyrosine Kinase Inhibitor",
+          "Aromatic Ether"
+        ]
+      },
+      "id": "path_3838"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7615,
+        "final_score": 0.7974,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Bosutinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Epha8",
+          "type": "Gene"
+        },
+        {
+          "id": "Gpi-linked Ephrin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Epha5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bosutinib",
+          "target": "Epha8",
+          "label": "binds"
+        },
+        {
+          "source": "Epha8",
+          "target": "Gpi-linked Ephrin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gpi-linked Ephrin Receptor Activity",
+          "target": "Epha5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3839"
+    }
+  ]
+}

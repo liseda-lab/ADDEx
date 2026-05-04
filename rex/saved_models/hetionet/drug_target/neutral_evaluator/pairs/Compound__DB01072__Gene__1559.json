@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6304,
-        "final_score": 0.6304
+        "ic_mean": 0.6004,
+        "final_score": 0.6004
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Gene"
         },
         {
-          "id": "Valsartan",
+          "id": "Pioglitazone",
           "type": "Compound"
         },
         {
@@ -32,26 +32,26 @@
         },
         {
           "source": "Slco1b3",
-          "target": "Valsartan",
+          "target": "Pioglitazone",
           "label": "is bound by"
         },
         {
-          "source": "Valsartan",
+          "source": "Pioglitazone",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atazanavir,Valsartan": [
+        "Atazanavir,Pioglitazone": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_9360"
+      "id": "path_4527"
     },
     {
       "score": {
-        "ic_mean": 0.594,
-        "final_score": 0.594
+        "ic_mean": 0.5625,
+        "final_score": 0.5625
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chronic Hepatitis B",
-          "type": "Side Effect"
+          "id": "Slco1b3",
+          "type": "Gene"
         },
         {
-          "id": "Nevirapine",
+          "id": "Fluvastatin",
           "type": "Compound"
         },
         {
@@ -74,171 +74,27 @@
       "edges": [
         {
           "source": "Atazanavir",
-          "target": "Chronic Hepatitis B",
-          "label": "causes"
-        },
-        {
-          "source": "Chronic Hepatitis B",
-          "target": "Nevirapine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Nevirapine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atazanavir,Nevirapine": [
-          "Organonitrogen Compound",
-          "Antiviral Agent"
-        ]
-      },
-      "id": "path_9361"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5692,
-        "final_score": 0.5692
-      },
-      "nodes": [
-        {
-          "id": "Atazanavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Idarubicin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atazanavir",
-          "target": "Abcc1",
+          "target": "Slco1b3",
           "label": "binds"
         },
         {
-          "source": "Abcc1",
-          "target": "Idarubicin",
+          "source": "Slco1b3",
+          "target": "Fluvastatin",
           "label": "is bound by"
         },
         {
-          "source": "Idarubicin",
+          "source": "Fluvastatin",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atazanavir,Idarubicin": [
-          "Heteroorganic Entity",
-          "Enzyme Inhibitor"
+        "Atazanavir,Fluvastatin": [
+          "Enzyme Inhibitor",
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_9362"
-    },
-    {
-      "score": {
-        "ic_mean": 0.569,
-        "final_score": 0.569
-      },
-      "nodes": [
-        {
-          "id": "Atazanavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Chronic Hepatitis B",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Etravirine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atazanavir",
-          "target": "Chronic Hepatitis B",
-          "label": "causes"
-        },
-        {
-          "source": "Chronic Hepatitis B",
-          "target": "Etravirine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Etravirine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atazanavir,Etravirine": [
-          "Organonitrogen Compound",
-          "Antiviral Agent"
-        ]
-      },
-      "id": "path_9363"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5457,
-        "final_score": 0.5457
-      },
-      "nodes": [
-        {
-          "id": "Atazanavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 2c8 Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Trimethoprim",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atazanavir",
-          "target": "Cytochrome P450 2c8 Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 2c8 Inhibitors",
-          "target": "Trimethoprim",
-          "label": "includes"
-        },
-        {
-          "source": "Trimethoprim",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atazanavir,Trimethoprim": [
-          "Organonitrogen Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_9364"
+      "id": "path_4528"
     },
     {
       "score": {
@@ -285,7 +141,7 @@
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_9365"
+      "id": "path_4529"
     },
     {
       "score": {
@@ -333,55 +189,7 @@
           "Hiv Protease Inhibitor"
         ]
       },
-      "id": "path_9366"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4715,
-        "final_score": 0.4715
-      },
-      "nodes": [
-        {
-          "id": "Atazanavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Scleral Icterus",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Zalcitabine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atazanavir",
-          "target": "Scleral Icterus",
-          "label": "causes"
-        },
-        {
-          "source": "Scleral Icterus",
-          "target": "Zalcitabine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Zalcitabine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atazanavir,Zalcitabine": [
-          "Organonitrogen Compound",
-          "Anti-Hiv Agent"
-        ]
-      },
-      "id": "path_9367"
+      "id": "path_4530"
     },
     {
       "score": {
@@ -428,12 +236,12 @@
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_9368"
+      "id": "path_4531"
     },
     {
       "score": {
-        "ic_mean": 0.4333,
-        "final_score": 0.4333
+        "ic_mean": 0.4499,
+        "final_score": 0.4499
       },
       "nodes": [
         {
@@ -441,11 +249,11 @@
           "type": "Compound"
         },
         {
-          "id": "Fasting",
+          "id": "Infertility Male",
           "type": "Side Effect"
         },
         {
-          "id": "Bexarotene",
+          "id": "Gemfibrozil",
           "type": "Compound"
         },
         {
@@ -456,31 +264,31 @@
       "edges": [
         {
           "source": "Atazanavir",
-          "target": "Fasting",
+          "target": "Infertility Male",
           "label": "causes"
         },
         {
-          "source": "Fasting",
-          "target": "Bexarotene",
+          "source": "Infertility Male",
+          "target": "Gemfibrozil",
           "label": "is caused by"
         },
         {
-          "source": "Bexarotene",
+          "source": "Gemfibrozil",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atazanavir,Bexarotene": [
+        "Atazanavir,Gemfibrozil": [
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_9369"
+      "id": "path_4532"
     },
     {
       "score": {
-        "ic_mean": 0.4333,
-        "final_score": 0.4333
+        "ic_mean": 0.4449,
+        "final_score": 0.4449
       },
       "nodes": [
         {
@@ -488,11 +296,11 @@
           "type": "Compound"
         },
         {
-          "id": "Fasting",
+          "id": "Hepatosplenomegaly",
           "type": "Side Effect"
         },
         {
-          "id": "Efavirenz",
+          "id": "Trimethadione",
           "type": "Compound"
         },
         {
@@ -503,32 +311,31 @@
       "edges": [
         {
           "source": "Atazanavir",
-          "target": "Fasting",
+          "target": "Hepatosplenomegaly",
           "label": "causes"
         },
         {
-          "source": "Fasting",
-          "target": "Efavirenz",
+          "source": "Hepatosplenomegaly",
+          "target": "Trimethadione",
           "label": "is caused by"
         },
         {
-          "source": "Efavirenz",
+          "source": "Trimethadione",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atazanavir,Efavirenz": [
-          "Organonitrogen Compound",
-          "Antiviral Agent"
+        "Atazanavir,Trimethadione": [
+          "Organonitrogen Compound"
         ]
       },
-      "id": "path_9370"
+      "id": "path_4533"
     },
     {
       "score": {
-        "ic_mean": 0.4288,
-        "final_score": 0.4288
+        "ic_mean": 0.4348,
+        "final_score": 0.4348
       },
       "nodes": [
         {
@@ -536,11 +343,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ocular Icterus",
+          "id": "Dysplasia",
           "type": "Side Effect"
         },
         {
-          "id": "Zalcitabine",
+          "id": "Omeprazole",
           "type": "Compound"
         },
         {
@@ -551,27 +358,214 @@
       "edges": [
         {
           "source": "Atazanavir",
-          "target": "Ocular Icterus",
+          "target": "Dysplasia",
           "label": "causes"
         },
         {
-          "source": "Ocular Icterus",
-          "target": "Zalcitabine",
+          "source": "Dysplasia",
+          "target": "Omeprazole",
           "label": "is caused by"
         },
         {
-          "source": "Zalcitabine",
+          "source": "Omeprazole",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atazanavir,Zalcitabine": [
-          "Organonitrogen Compound",
-          "Anti-Hiv Agent"
+        "Atazanavir,Omeprazole": [
+          "Organonitrogen Compound"
         ]
       },
-      "id": "path_9371"
+      "id": "path_4534"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4308,
+        "final_score": 0.4308
+      },
+      "nodes": [
+        {
+          "id": "Atazanavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Bundle Branch Block Left",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tapentadol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atazanavir",
+          "target": "Bundle Branch Block Left",
+          "label": "causes"
+        },
+        {
+          "source": "Bundle Branch Block Left",
+          "target": "Tapentadol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tapentadol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atazanavir,Tapentadol": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_4535"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4282,
+        "final_score": 0.4282
+      },
+      "nodes": [
+        {
+          "id": "Atazanavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Viral",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tolcapone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atazanavir",
+          "target": "Hepatitis Viral",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Viral",
+          "target": "Tolcapone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tolcapone",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atazanavir,Tolcapone": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_4536"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4191,
+        "final_score": 0.4191
+      },
+      "nodes": [
+        {
+          "id": "Atazanavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Viral",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atazanavir",
+          "target": "Hepatitis Viral",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Viral",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atazanavir,Ifosfamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_4537"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4108,
+        "final_score": 0.4108
+      },
+      "nodes": [
+        {
+          "id": "Atazanavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Bundle Branch Block Left",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atazanavir",
+          "target": "Bundle Branch Block Left",
+          "label": "causes"
+        },
+        {
+          "source": "Bundle Branch Block Left",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atazanavir,Ifosfamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_4538"
     },
     {
       "score": {
@@ -618,55 +612,7 @@
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_9372"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4061,
-        "final_score": 0.4061
-      },
-      "nodes": [
-        {
-          "id": "Atazanavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Liver Fatty Deposition",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Fluoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atazanavir",
-          "target": "Liver Fatty Deposition",
-          "label": "causes"
-        },
-        {
-          "source": "Liver Fatty Deposition",
-          "target": "Fluoxetine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fluoxetine",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atazanavir,Fluoxetine": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_9373"
+      "id": "path_4539"
     }
-  ],
-  "verbalization": ""
+  ]
 }

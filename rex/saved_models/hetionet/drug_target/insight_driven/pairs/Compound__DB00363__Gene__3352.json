@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00363 - Gene::3352",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6834,
+        "final_score": 0.7584,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Htr3a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr3a",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr1d",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3249"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3508,
+        "final_score": 0.3508
+      },
+      "nodes": [
+        {
+          "id": "Clozapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clozapine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Mianserin",
+          "label": "resembles"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Htr1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clozapine,Azatadine": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Clozapine,Mianserin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Serotonin Antagonist"
+        ],
+        "Azatadine,Mianserin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3250"
+    }
+  ]
+}

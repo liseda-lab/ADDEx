@@ -1,0 +1,198 @@
+{
+  "id": "Compound::DB00622 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5852,
+        "final_score": 0.7093,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Nifedipine",
+          "label": "includes"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicardipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nicardipine,Nifedipine": [
+          "Methyl Ester",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Nifedipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_1640"
+    },
+    {
+      "score": {
+        "ic_mean": 0.619,
+        "final_score": 0.5595,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2b6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1641"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5265,
+        "final_score": 0.5265
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Nifedipine",
+          "label": "includes"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicardipine,Nifedipine": [
+          "Methyl Ester",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_1642"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4933,
+        "final_score": 0.4933
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pericardial Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Pericardial Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Pericardial Haemorrhage",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicardipine,Cyclophosphamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_1643"
+    }
+  ]
+}

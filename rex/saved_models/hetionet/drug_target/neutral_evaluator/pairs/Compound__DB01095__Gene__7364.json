@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7149,
-        "final_score": 0.7149
+        "ic_mean": 0.555,
+        "final_score": 0.555
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a3",
-          "type": "Gene"
+          "id": "Peripheral Nerve Palsy",
+          "type": "Side Effect"
         },
         {
-          "id": "Mitiglinide",
+          "id": "Lovastatin",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Fluvastatin",
-          "target": "Ugt1a3",
-          "label": "binds"
+          "target": "Peripheral Nerve Palsy",
+          "label": "causes"
         },
         {
-          "source": "Ugt1a3",
-          "target": "Mitiglinide",
-          "label": "is bound by"
+          "source": "Peripheral Nerve Palsy",
+          "target": "Lovastatin",
+          "label": "is caused by"
         },
         {
-          "source": "Mitiglinide",
+          "source": "Lovastatin",
           "target": "Ugt2b7",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluvastatin,Mitiglinide": [
-          "Agent Affecting Digestive System Or Metabolism",
-          "Organooxygen Compound"
+        "Fluvastatin,Lovastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Statin"
         ]
       },
-      "id": "path_21061"
+      "id": "path_10652"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5236,
+        "final_score": 0.5236
+      },
+      "nodes": [
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Chronic Active",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lovastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvastatin",
+          "target": "Hepatitis Chronic Active",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Chronic Active",
+          "target": "Lovastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lovastatin",
+          "target": "Ugt2b7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluvastatin,Lovastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Statin"
+        ]
+      },
+      "id": "path_10653"
     }
-  ],
-  "verbalization": ""
+  ]
 }

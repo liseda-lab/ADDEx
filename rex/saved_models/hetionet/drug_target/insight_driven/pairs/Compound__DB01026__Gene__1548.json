@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB01026 - Gene::1548",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4096,
+        "final_score": 0.4096
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Miconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Miconazole",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Azoles": [
+          "Azole"
+        ],
+        "Ketoconazole,Miconazole": [
+          "Anti-Infective Agent",
+          "Racemate"
+        ],
+        "Azoles,Miconazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_9339"
+    }
+  ]
+}

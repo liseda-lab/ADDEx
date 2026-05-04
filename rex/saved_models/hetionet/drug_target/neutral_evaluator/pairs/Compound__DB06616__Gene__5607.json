@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5697,
-        "final_score": 0.5697
+        "ic_mean": 0.5997,
+        "final_score": 0.5997
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Loc102724428",
+          "id": "Stk35",
           "type": "Gene"
         },
         {
-          "id": "Dasatinib",
+          "id": "Vandetanib",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Bosutinib",
-          "target": "Loc102724428",
+          "target": "Stk35",
           "label": "binds"
         },
         {
-          "source": "Loc102724428",
-          "target": "Dasatinib",
+          "source": "Stk35",
+          "target": "Vandetanib",
           "label": "is bound by"
         },
         {
-          "source": "Dasatinib",
+          "source": "Vandetanib",
           "target": "Map2k5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bosutinib,Dasatinib": [
-          "Bcr-Abl Inhibitor",
-          "Aromatic Amine"
+        "Bosutinib,Vandetanib": [
+          "Aromatic Ether",
+          "Targeted Therapy Agent"
         ]
       },
-      "id": "path_27082"
+      "id": "path_13847"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5997,
+        "final_score": 0.5997
+      },
+      "nodes": [
+        {
+          "id": "Bosutinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Epha8",
+          "type": "Gene"
+        },
+        {
+          "id": "Vandetanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Map2k5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bosutinib",
+          "target": "Epha8",
+          "label": "binds"
+        },
+        {
+          "source": "Epha8",
+          "target": "Vandetanib",
+          "label": "is bound by"
+        },
+        {
+          "source": "Vandetanib",
+          "target": "Map2k5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bosutinib,Vandetanib": [
+          "Aromatic Ether",
+          "Targeted Therapy Agent"
+        ]
+      },
+      "id": "path_13848"
     }
-  ],
-  "verbalization": ""
+  ]
 }

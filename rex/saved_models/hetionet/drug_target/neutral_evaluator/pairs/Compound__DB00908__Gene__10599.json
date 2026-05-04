@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00908 - Gene::10599",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4183,
+        "final_score": 0.4183
+      },
+      "nodes": [
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinidine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Indinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinidine,Indinavir": [
+          "Organonitrogen Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_15340"
+    }
+  ]
 }

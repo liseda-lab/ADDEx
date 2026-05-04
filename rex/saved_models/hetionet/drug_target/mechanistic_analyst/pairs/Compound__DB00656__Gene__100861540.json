@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00656 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4971,
+        "final_score": 0.4971
+      },
+      "nodes": [
+        {
+          "id": "Trazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Wakefulness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trazodone",
+          "target": "Wakefulness",
+          "label": "causes"
+        },
+        {
+          "source": "Wakefulness",
+          "target": "Buprenorphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trazodone,Buprenorphine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_3107"
+    }
+  ]
+}

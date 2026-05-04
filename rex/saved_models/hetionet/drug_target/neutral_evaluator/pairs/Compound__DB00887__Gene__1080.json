@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00887 - Gene::1080",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5936,
+        "final_score": 0.5936
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Nipple Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ivacaftor",
+          "type": "Compound"
+        },
+        {
+          "id": "Cftr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Nipple Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Nipple Pain",
+          "target": "Ivacaftor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ivacaftor",
+          "target": "Cftr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bumetanide,Ivacaftor": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_8704"
+    }
+  ]
 }

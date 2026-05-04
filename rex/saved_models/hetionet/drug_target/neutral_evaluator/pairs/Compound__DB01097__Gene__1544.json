@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.507,
-        "final_score": 0.507
+        "ic_mean": 0.4424,
+        "final_score": 0.4424
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Acute Yellow Liver Atrophy",
+          "id": "Overdose",
           "type": "Side Effect"
         },
         {
-          "id": "Pyrazinamide",
+          "id": "Delavirdine",
           "type": "Compound"
         },
         {
@@ -27,31 +27,32 @@
       "edges": [
         {
           "source": "Leflunomide",
-          "target": "Acute Yellow Liver Atrophy",
+          "target": "Overdose",
           "label": "causes"
         },
         {
-          "source": "Acute Yellow Liver Atrophy",
-          "target": "Pyrazinamide",
+          "source": "Overdose",
+          "target": "Delavirdine",
           "label": "is caused by"
         },
         {
-          "source": "Pyrazinamide",
+          "source": "Delavirdine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Leflunomide,Pyrazinamide": [
-          "Organonitrogen Heterocyclic Compound"
+        "Leflunomide,Delavirdine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_13053"
+      "id": "path_6617"
     },
     {
       "score": {
-        "ic_mean": 0.4353,
-        "final_score": 0.4353
+        "ic_mean": 0.4362,
+        "final_score": 0.4362
       },
       "nodes": [
         {
@@ -59,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cutaneous Lupus Erythematosus",
-          "type": "Side Effect"
+          "id": "Cyp2c9",
+          "type": "Gene"
         },
         {
-          "id": "Imiquimod",
+          "id": "Clevidipine",
           "type": "Compound"
         },
         {
@@ -74,27 +75,74 @@
       "edges": [
         {
           "source": "Leflunomide",
-          "target": "Cutaneous Lupus Erythematosus",
-          "label": "causes"
+          "target": "Cyp2c9",
+          "label": "binds"
         },
         {
-          "source": "Cutaneous Lupus Erythematosus",
-          "target": "Imiquimod",
-          "label": "is caused by"
+          "source": "Cyp2c9",
+          "target": "Clevidipine",
+          "label": "is bound by"
         },
         {
-          "source": "Imiquimod",
+          "source": "Clevidipine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Leflunomide,Imiquimod": [
-          "Organonitrogen Heterocyclic Compound",
-          "Antineoplastic Agent"
+        "Leflunomide,Clevidipine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_13054"
+      "id": "path_6618"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4352,
+        "final_score": 0.4352
+      },
+      "nodes": [
+        {
+          "id": "Leflunomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Tuberculosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Delavirdine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Leflunomide",
+          "target": "Tuberculosis",
+          "label": "causes"
+        },
+        {
+          "source": "Tuberculosis",
+          "target": "Delavirdine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Delavirdine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Leflunomide,Delavirdine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_6619"
     },
     {
       "score": {
@@ -107,11 +155,11 @@
           "type": "Compound"
         },
         {
-          "id": "Acute Yellow Liver Atrophy",
+          "id": "Acquired Immunodeficiency Syndrome",
           "type": "Side Effect"
         },
         {
-          "id": "Ofloxacin",
+          "id": "Delavirdine",
           "type": "Compound"
         },
         {
@@ -122,31 +170,32 @@
       "edges": [
         {
           "source": "Leflunomide",
-          "target": "Acute Yellow Liver Atrophy",
+          "target": "Acquired Immunodeficiency Syndrome",
           "label": "causes"
         },
         {
-          "source": "Acute Yellow Liver Atrophy",
-          "target": "Ofloxacin",
+          "source": "Acquired Immunodeficiency Syndrome",
+          "target": "Delavirdine",
           "label": "is caused by"
         },
         {
-          "source": "Ofloxacin",
+          "source": "Delavirdine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Leflunomide,Ofloxacin": [
-          "Organonitrogen Heterocyclic Compound"
+        "Leflunomide,Delavirdine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_13055"
+      "id": "path_6620"
     },
     {
       "score": {
-        "ic_mean": 0.4077,
-        "final_score": 0.4077
+        "ic_mean": 0.4227,
+        "final_score": 0.4227
       },
       "nodes": [
         {
@@ -154,11 +203,11 @@
           "type": "Compound"
         },
         {
-          "id": "Subcutaneous Nodule",
+          "id": "Synovitis",
           "type": "Side Effect"
         },
         {
-          "id": "Naproxen",
+          "id": "Gemfibrozil",
           "type": "Compound"
         },
         {
@@ -169,28 +218,74 @@
       "edges": [
         {
           "source": "Leflunomide",
-          "target": "Subcutaneous Nodule",
+          "target": "Synovitis",
           "label": "causes"
         },
         {
-          "source": "Subcutaneous Nodule",
-          "target": "Naproxen",
+          "source": "Synovitis",
+          "target": "Gemfibrozil",
           "label": "is caused by"
         },
         {
-          "source": "Naproxen",
+          "source": "Gemfibrozil",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Leflunomide,Naproxen": [
-          "Enzyme Inhibitor",
-          "Benzenoid Aromatic Compound"
+        "Leflunomide,Gemfibrozil": [
+          "Organic Aromatic Compound"
         ]
       },
-      "id": "path_13056"
+      "id": "path_6621"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4216,
+        "final_score": 0.4216
+      },
+      "nodes": [
+        {
+          "id": "Leflunomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Overdose",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aminophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Leflunomide",
+          "target": "Overdose",
+          "label": "causes"
+        },
+        {
+          "source": "Overdose",
+          "target": "Aminophylline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aminophylline",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Leflunomide,Aminophylline": [
+          "Chemical Entity",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_6622"
     }
-  ],
-  "verbalization": ""
+  ]
 }

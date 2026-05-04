@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7136,
-        "final_score": 0.7136
+        "ic_mean": 0.7806,
+        "final_score": 0.7806
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Drd2",
+          "id": "Drd4",
           "type": "Gene"
         },
         {
-          "id": "Dopamine Receptors",
-          "type": "Pathway"
+          "id": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gi/go",
+          "type": "Molecular_Function"
         },
         {
           "id": "Drd3",
@@ -27,26 +27,26 @@
       "edges": [
         {
           "source": "Remoxipride",
-          "target": "Drd2",
+          "target": "Drd4",
           "label": "binds"
         },
         {
-          "source": "Drd2",
-          "target": "Dopamine Receptors",
+          "source": "Drd4",
+          "target": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gi/go",
           "label": "participates"
         },
         {
-          "source": "Dopamine Receptors",
+          "source": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gi/go",
           "target": "Drd3",
           "label": "is participated by"
         }
       ],
-      "id": "path_9192"
+      "id": "path_4438"
     },
     {
       "score": {
-        "ic_mean": 0.7117,
-        "final_score": 0.7117
+        "ic_mean": 0.6682,
+        "final_score": 0.6682
       },
       "nodes": [
         {
@@ -54,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Sigmar1",
+          "id": "Drd4",
           "type": "Gene"
         },
         {
-          "id": "Captodiame",
+          "id": "Apomorphine",
           "type": "Compound"
         },
         {
@@ -69,27 +69,79 @@
       "edges": [
         {
           "source": "Remoxipride",
-          "target": "Sigmar1",
+          "target": "Drd4",
           "label": "binds"
         },
         {
-          "source": "Sigmar1",
-          "target": "Captodiame",
+          "source": "Drd4",
+          "target": "Apomorphine",
           "label": "is bound by"
         },
         {
-          "source": "Captodiame",
+          "source": "Apomorphine",
           "target": "Drd3",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Remoxipride,Captodiame": [
+        "Remoxipride,Apomorphine": [
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_9193"
+      "id": "path_4439"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6591,
+        "final_score": 0.6591
+      },
+      "nodes": [
+        {
+          "id": "Remoxipride",
+          "type": "Compound"
+        },
+        {
+          "id": "Alizapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Amisulpride",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Remoxipride",
+          "target": "Alizapride",
+          "label": "resembles"
+        },
+        {
+          "source": "Alizapride",
+          "target": "Amisulpride",
+          "label": "resembles"
+        },
+        {
+          "source": "Amisulpride",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Remoxipride,Alizapride": [
+          "Agent Affecting Nervous System"
+        ],
+        "Remoxipride,Amisulpride": [
+          "Dopamine Antagonist"
+        ],
+        "Alizapride,Amisulpride": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4440"
     }
-  ],
-  "verbalization": ""
+  ]
 }

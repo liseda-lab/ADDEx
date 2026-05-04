@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00450 - Gene::3356",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5046,
+        "final_score": 0.5046
+      },
+      "nodes": [
+        {
+          "id": "Droperidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyperprolactinaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Droperidol",
+          "target": "Hyperprolactinaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Hyperprolactinaemia",
+          "target": "Lisuride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Droperidol,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10239"
+    }
+  ]
 }

@@ -1,0 +1,105 @@
+{
+  "id": "Compound::DB01244 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4114,
+        "final_score": 0.4114
+      },
+      "nodes": [
+        {
+          "id": "Bepridil",
+          "type": "Compound"
+        },
+        {
+          "id": "Distress Gastrointestinal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bepridil",
+          "target": "Distress Gastrointestinal",
+          "label": "causes"
+        },
+        {
+          "source": "Distress Gastrointestinal",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bepridil,Codeine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4473"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3222,
+        "final_score": 0.3222
+      },
+      "nodes": [
+        {
+          "id": "Bepridil",
+          "type": "Compound"
+        },
+        {
+          "id": "Alverine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tripelennamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bepridil",
+          "target": "Alverine",
+          "label": "resembles"
+        },
+        {
+          "source": "Alverine",
+          "target": "Tripelennamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Tripelennamine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bepridil,Alverine": [
+          "Tertiary Amine"
+        ],
+        "Bepridil,Tripelennamine": [
+          "Organic Amino Compound"
+        ],
+        "Alverine,Tripelennamine": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_4474"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5122,
-        "final_score": 0.5122
+        "ic_mean": 0.5731,
+        "final_score": 0.5731
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc22a10",
+          "id": "Slc10a1",
           "type": "Gene"
         },
         {
-          "id": "Conjugated Estrogens",
+          "id": "Ursodeoxycholic Acid",
           "type": "Compound"
         },
         {
@@ -27,22 +27,73 @@
       "edges": [
         {
           "source": "Probenecid",
-          "target": "Slc22a10",
+          "target": "Slc10a1",
           "label": "binds"
         },
         {
-          "source": "Slc22a10",
-          "target": "Conjugated Estrogens",
+          "source": "Slc10a1",
+          "target": "Ursodeoxycholic Acid",
           "label": "is bound by"
         },
         {
-          "source": "Conjugated Estrogens",
+          "source": "Ursodeoxycholic Acid",
           "target": "Slco1a2",
           "label": "binds"
         }
       ],
-      "id": "path_10897"
+      "lowest_common_ancestors": {
+        "Probenecid,Ursodeoxycholic Acid": [
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_5416"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4774,
+        "final_score": 0.4774
+      },
+      "nodes": [
+        {
+          "id": "Probenecid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aminohippurate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Probenecid",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Aminohippurate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Aminohippurate",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Probenecid,Aminohippurate": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_5417"
     }
-  ],
-  "verbalization": ""
+  ]
 }

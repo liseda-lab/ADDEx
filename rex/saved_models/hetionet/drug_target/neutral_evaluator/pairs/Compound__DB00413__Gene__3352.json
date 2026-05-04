@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6899,
-        "final_score": 0.6899
+        "ic_mean": 0.5149,
+        "final_score": 0.5149
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Drd5",
-          "type": "Gene"
+          "id": "Excessive Daytime Sleepiness",
+          "type": "Side Effect"
         },
         {
-          "id": "Apomorphine",
+          "id": "Bromocriptine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,75 @@
       "edges": [
         {
           "source": "Pramipexole",
-          "target": "Drd5",
-          "label": "binds"
+          "target": "Excessive Daytime Sleepiness",
+          "label": "causes"
         },
         {
-          "source": "Drd5",
-          "target": "Apomorphine",
-          "label": "is bound by"
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Bromocriptine",
+          "label": "is caused by"
         },
         {
-          "source": "Apomorphine",
+          "source": "Bromocriptine",
           "target": "Htr1d",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pramipexole,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Pramipexole,Bromocriptine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_3401"
+      "id": "path_1599"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4863,
+        "final_score": 0.4863
+      },
+      "nodes": [
+        {
+          "id": "Pramipexole",
+          "type": "Compound"
+        },
+        {
+          "id": "Binge Eating",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pramipexole",
+          "target": "Binge Eating",
+          "label": "causes"
+        },
+        {
+          "source": "Binge Eating",
+          "target": "Lisuride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Htr1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pramipexole,Lisuride": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_1600"
     }
-  ],
-  "verbalization": ""
+  ]
 }

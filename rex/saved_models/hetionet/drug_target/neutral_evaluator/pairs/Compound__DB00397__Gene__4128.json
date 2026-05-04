@@ -1,6 +1,114 @@
 {
   "id": "Compound::DB00397 - Gene::4128",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4732,
+        "final_score": 0.4732
+      },
+      "nodes": [
+        {
+          "id": "Phenylpropanolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Metaraminol",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenylephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenylpropanolamine",
+          "target": "Metaraminol",
+          "label": "resembles"
+        },
+        {
+          "source": "Metaraminol",
+          "target": "Phenylephrine",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenylephrine",
+          "target": "Maoa",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenylpropanolamine,Metaraminol": [
+          "Adrenergic Agonist",
+          "Organic Amino Compound"
+        ],
+        "Phenylpropanolamine,Phenylephrine": [
+          "Adrenergic Agonist",
+          "Organic Amino Compound"
+        ],
+        "Metaraminol,Phenylephrine": [
+          "Alpha-Adrenergic Agonist",
+          "Phenylethanolamines"
+        ]
+      },
+      "id": "path_9947"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4599,
+        "final_score": 0.4599
+      },
+      "nodes": [
+        {
+          "id": "Phenylpropanolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenol",
+          "type": "Compound"
+        },
+        {
+          "id": "Pargyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenylpropanolamine",
+          "target": "Phenol",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenol",
+          "target": "Pargyline",
+          "label": "resembles"
+        },
+        {
+          "source": "Pargyline",
+          "target": "Maoa",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenylpropanolamine,Phenol": [
+          "Organic Molecular Entity"
+        ],
+        "Phenylpropanolamine,Pargyline": [
+          "Organic Amino Compound"
+        ],
+        "Phenol,Pargyline": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_9948"
+    }
+  ]
 }

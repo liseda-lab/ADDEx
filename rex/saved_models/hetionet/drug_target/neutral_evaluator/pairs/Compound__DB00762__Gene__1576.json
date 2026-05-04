@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.641,
-        "final_score": 0.641
+        "ic_mean": 0.5298,
+        "final_score": 0.5298
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ces2",
-          "type": "Gene"
+          "id": "Genetic Polymorphism",
+          "type": "Side Effect"
         },
         {
-          "id": "Prasugrel",
+          "id": "Azithromycin",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Irinotecan",
-          "target": "Ces2",
-          "label": "binds"
+          "target": "Genetic Polymorphism",
+          "label": "causes"
         },
         {
-          "source": "Ces2",
-          "target": "Prasugrel",
-          "label": "is bound by"
+          "source": "Genetic Polymorphism",
+          "target": "Azithromycin",
+          "label": "is caused by"
         },
         {
-          "source": "Prasugrel",
+          "source": "Azithromycin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irinotecan,Prasugrel": [
-          "Tertiary Amino Compound"
+        "Irinotecan,Azithromycin": [
+          "Lactone"
         ]
       },
-      "id": "path_9932"
+      "id": "path_4868"
     },
     {
       "score": {
-        "ic_mean": 0.5782,
-        "final_score": 0.5782
+        "ic_mean": 0.4479,
+        "final_score": 0.4479
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ces2",
-          "type": "Gene"
+          "id": "Cholinergic Syndrome",
+          "type": "Side Effect"
         },
         {
-          "id": "Mycophenolate Mofetil",
+          "id": "Pyridostigmine",
           "type": "Compound"
         },
         {
@@ -74,32 +74,32 @@
       "edges": [
         {
           "source": "Irinotecan",
-          "target": "Ces2",
-          "label": "binds"
+          "target": "Cholinergic Syndrome",
+          "label": "causes"
         },
         {
-          "source": "Ces2",
-          "target": "Mycophenolate Mofetil",
-          "label": "is bound by"
+          "source": "Cholinergic Syndrome",
+          "target": "Pyridostigmine",
+          "label": "is caused by"
         },
         {
-          "source": "Mycophenolate Mofetil",
+          "source": "Pyridostigmine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irinotecan,Mycophenolate Mofetil": [
+        "Irinotecan,Pyridostigmine": [
           "Enzyme Inhibitor",
-          "Organic Hydroxy Compound"
+          "Organic Cation"
         ]
       },
-      "id": "path_9933"
+      "id": "path_4869"
     },
     {
       "score": {
-        "ic_mean": 0.5257,
-        "final_score": 0.5257
+        "ic_mean": 0.4137,
+        "final_score": 0.4137
       },
       "nodes": [
         {
@@ -107,11 +107,11 @@
           "type": "Compound"
         },
         {
-          "id": "Top1mt",
-          "type": "Gene"
+          "id": "Megacolon",
+          "type": "Side Effect"
         },
         {
-          "id": "Topotecan",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -122,363 +122,31 @@
       "edges": [
         {
           "source": "Irinotecan",
-          "target": "Top1mt",
-          "label": "binds"
+          "target": "Megacolon",
+          "label": "causes"
         },
         {
-          "source": "Top1mt",
-          "target": "Topotecan",
-          "label": "is bound by"
+          "source": "Megacolon",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Topotecan",
+          "source": "Prochlorperazine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irinotecan,Topotecan": [
-          "Camptothecin Analogue",
-          "Pyranoindolizinoquinoline"
-        ]
-      },
-      "id": "path_9934"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5083,
-        "final_score": 0.5083
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Dicloxacillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Dicloxacillin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dicloxacillin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Dicloxacillin": [
-          "Polyatomic Ion"
-        ]
-      },
-      "id": "path_9935"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5023,
-        "final_score": 0.5023
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Ketobemidone": [
-          "Piperidines"
-        ]
-      },
-      "id": "path_9936"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4839,
-        "final_score": 0.4839
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ache",
-          "type": "Gene"
-        },
-        {
-          "id": "Donepezil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ache",
-          "label": "binds"
-        },
-        {
-          "source": "Ache",
-          "target": "Donepezil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Donepezil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Donepezil": [
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_9937"
-    },
-    {
-      "score": {
-        "ic_mean": 0.481,
-        "final_score": 0.481
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Dapagliflozin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Dapagliflozin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dapagliflozin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Dapagliflozin": [
-          "Enzyme Inhibitor",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_9938"
-    },
-    {
-      "score": {
-        "ic_mean": 0.481,
-        "final_score": 0.481
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Hydromorphone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Hydromorphone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hydromorphone",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Hydromorphone": [
-          "Organic Heteropentacyclic Compound"
-        ]
-      },
-      "id": "path_9939"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4782,
-        "final_score": 0.4782
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Simeprevir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Simeprevir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Simeprevir",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Simeprevir": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_9940"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4782,
-        "final_score": 0.4782
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pantoprazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Pantoprazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pantoprazole",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Pantoprazole": [
+        "Irinotecan,Prochlorperazine": [
           "Organic Heteropolycyclic Compound"
         ]
       },
-      "id": "path_9941"
+      "id": "path_4870"
     },
     {
       "score": {
-        "ic_mean": 0.4645,
-        "final_score": 0.4645
+        "ic_mean": 0.4037,
+        "final_score": 0.4037
       },
       "nodes": [
         {
@@ -486,11 +154,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a9",
-          "type": "Gene"
+          "id": "Megacolon",
+          "type": "Side Effect"
         },
         {
-          "id": "Oxazepam",
+          "id": "Loperamide",
           "type": "Compound"
         },
         {
@@ -501,215 +169,31 @@
       "edges": [
         {
           "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
+          "target": "Megacolon",
+          "label": "causes"
         },
         {
-          "source": "Ugt1a9",
-          "target": "Oxazepam",
-          "label": "is bound by"
+          "source": "Megacolon",
+          "target": "Loperamide",
+          "label": "is caused by"
         },
         {
-          "source": "Oxazepam",
+          "source": "Loperamide",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irinotecan,Oxazepam": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_9942"
-    },
-    {
-      "score": {
-        "ic_mean": 0.451,
-        "final_score": 0.451
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Nateglinide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Nateglinide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Nateglinide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Nateglinide": [
-          "Hydroxides"
-        ]
-      },
-      "id": "path_9943"
-    },
-    {
-      "score": {
-        "ic_mean": 0.451,
-        "final_score": 0.451
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Regorafenib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Regorafenib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Regorafenib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Regorafenib": [
-          "Organonitrogen Heterocyclic Compound",
-          "Antineoplastic Agent"
-        ]
-      },
-      "id": "path_9944"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4356,
-        "final_score": 0.4356
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_9945"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4297,
-        "final_score": 0.4297
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Haloperidol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Haloperidol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Haloperidol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Haloperidol": [
+        "Irinotecan,Loperamide": [
           "Tertiary Alcohol"
         ]
       },
-      "id": "path_9946"
+      "id": "path_4871"
     },
     {
       "score": {
-        "ic_mean": 0.4297,
-        "final_score": 0.4297
+        "ic_mean": 0.3732,
+        "final_score": 0.3732
       },
       "nodes": [
         {
@@ -717,11 +201,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a9",
-          "type": "Gene"
+          "id": "Neutropenic Colitis",
+          "type": "Side Effect"
         },
         {
-          "id": "Propofol",
+          "id": "Docetaxel",
           "type": "Compound"
         },
         {
@@ -732,354 +216,26 @@
       "edges": [
         {
           "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
+          "target": "Neutropenic Colitis",
+          "label": "causes"
         },
         {
-          "source": "Ugt1a9",
-          "target": "Propofol",
-          "label": "is bound by"
+          "source": "Neutropenic Colitis",
+          "target": "Docetaxel",
+          "label": "is caused by"
         },
         {
-          "source": "Propofol",
+          "source": "Docetaxel",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Irinotecan,Propofol": [
-          "Organic Hydroxy Compound"
+        "Irinotecan,Docetaxel": [
+          "Alcohol"
         ]
       },
-      "id": "path_9947"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4269,
-        "final_score": 0.4269
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_9948"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4242,
-        "final_score": 0.4242
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc1",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Abcc1",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc1",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Glyburide": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_9949"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4155,
-        "final_score": 0.4155
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a1",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a1",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Erlotinib": [
-          "Organic Amino Compound",
-          "Antineoplastic Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_9950"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4155,
-        "final_score": 0.4155
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Pravastatin": [
-          "Polyatomic Ion",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_9951"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4155,
-        "final_score": 0.4155
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a1",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Atorvastatin": [
-          "Polyatomic Ion",
-          "Enzyme Inhibitor"
-        ]
-      },
-      "id": "path_9952"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4131,
-        "final_score": 0.4131
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Ugt1a9",
-          "type": "Gene"
-        },
-        {
-          "id": "Acetaminophen",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Ugt1a9",
-          "label": "binds"
-        },
-        {
-          "source": "Ugt1a9",
-          "target": "Acetaminophen",
-          "label": "is bound by"
-        },
-        {
-          "source": "Acetaminophen",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Acetaminophen": [
-          "Organic Hydroxy Compound"
-        ]
-      },
-      "id": "path_9953"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4056,
-        "final_score": 0.4056
-      },
-      "nodes": [
-        {
-          "id": "Irinotecan",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc2",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Irinotecan",
-          "target": "Abcc2",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc2",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Irinotecan,Ethinyl Estradiol": [
-          "Organic Hydroxy Compound"
-        ]
-      },
-      "id": "path_9954"
+      "id": "path_4872"
     }
-  ],
-  "verbalization": ""
+  ]
 }

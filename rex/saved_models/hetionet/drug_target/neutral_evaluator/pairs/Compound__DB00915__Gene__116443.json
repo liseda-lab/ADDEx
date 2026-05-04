@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7306,
-        "final_score": 0.7306
+        "ic_mean": 0.7499,
+        "final_score": 0.7499
       },
       "nodes": [
         {
@@ -12,7 +12,7 @@
           "type": "Compound"
         },
         {
-          "id": "Grin3b",
+          "id": "Grin2d",
           "type": "Gene"
         },
         {
@@ -27,11 +27,11 @@
       "edges": [
         {
           "source": "Amantadine",
-          "target": "Grin3b",
+          "target": "Grin2d",
           "label": "binds"
         },
         {
-          "source": "Grin3b",
+          "source": "Grin2d",
           "target": "Nmda Glutamate Receptor Activity",
           "label": "participates"
         },
@@ -41,8 +41,97 @@
           "label": "is participated by"
         }
       ],
-      "id": "path_21710"
+      "id": "path_11023"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7499,
+        "final_score": 0.7499
+      },
+      "nodes": [
+        {
+          "id": "Amantadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin2a",
+          "type": "Gene"
+        },
+        {
+          "id": "Nmda Glutamate Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Grin3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amantadine",
+          "target": "Grin2a",
+          "label": "binds"
+        },
+        {
+          "source": "Grin2a",
+          "target": "Nmda Glutamate Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Nmda Glutamate Receptor Activity",
+          "target": "Grin3a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11024"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5387,
+        "final_score": 0.5387
+      },
+      "nodes": [
+        {
+          "id": "Amantadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Livedo Reticularis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Felbamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amantadine",
+          "target": "Livedo Reticularis",
+          "label": "causes"
+        },
+        {
+          "source": "Livedo Reticularis",
+          "target": "Felbamate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Felbamate",
+          "target": "Grin3a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amantadine,Felbamate": [
+          "Organic Molecule",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_11025"
     }
-  ],
-  "verbalization": ""
+  ]
 }

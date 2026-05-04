@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB00470 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5568,
+        "final_score": 0.5568
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Troleandomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Troleandomycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Troleandomycin",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Troleandomycin": [
+          "Oxacycle"
+        ]
+      },
+      "id": "path_11623"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4754,
+        "final_score": 0.4754
+      },
+      "nodes": [
+        {
+          "id": "Dronabinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronabinol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Azelastine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Azelastine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronabinol,Azelastine": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_11624"
+    }
+  ]
 }

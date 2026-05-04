@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01156 - Gene::6530",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4396,
+        "final_score": 0.4396
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Back Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Back Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Back Injury",
+          "target": "Doxepin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxepin",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Doxepin": [
+          "Antidepressant Agent",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_10182"
+    }
+  ]
+}

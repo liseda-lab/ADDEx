@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00461 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5094,
+        "final_score": 0.5094
+      },
+      "nodes": [
+        {
+          "id": "Nabumetone",
+          "type": "Compound"
+        },
+        {
+          "id": "Occult Blood Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Apixaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nabumetone",
+          "target": "Occult Blood Positive",
+          "label": "causes"
+        },
+        {
+          "source": "Occult Blood Positive",
+          "target": "Apixaban",
+          "label": "is caused by"
+        },
+        {
+          "source": "Apixaban",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nabumetone,Apixaban": [
+          "Aromatic Ether"
+        ]
+      },
+      "id": "path_6869"
+    }
+  ]
+}

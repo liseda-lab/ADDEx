@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00321 - Gene::3269",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7141,
+        "final_score": 0.7321,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptor Activity",
+          "target": "Hrh1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10479"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4627,
+        "final_score": 0.4627
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alcaftadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Alcaftadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Alcaftadine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Azatadine": [
+          "Tertiary Amine"
+        ],
+        "Amitriptyline,Alcaftadine": [
+          "Agent Affecting Nervous System",
+          "Tertiary Amino Compound"
+        ],
+        "Azatadine,Alcaftadine": [
+          "Histamine-1 Receptor Antagonist",
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_10480"
+    }
+  ]
+}

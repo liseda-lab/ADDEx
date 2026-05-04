@@ -3,6 +3,48 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.7342,
+        "final_score": 0.7342
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        },
+        {
+          "id": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gi/go",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Drd4",
+          "label": "binds"
+        },
+        {
+          "source": "Drd4",
+          "target": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gi/go",
+          "label": "participates"
+        },
+        {
+          "source": "Dopamine Neurotransmitter Receptor Activity, Coupled Via Gi/go",
+          "target": "Drd3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10507"
+    },
+    {
+      "score": {
         "ic_mean": 0.6653,
         "final_score": 0.6653
       },
@@ -46,8 +88,143 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_20764"
+      "id": "path_10508"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5157,
+        "final_score": 0.5157
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Prolactin Level",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Increased Prolactin Level",
+          "label": "causes"
+        },
+        {
+          "source": "Increased Prolactin Level",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asenapine,Paliperidone": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10509"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5113,
+        "final_score": 0.5113
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr7",
+          "type": "Gene"
+        },
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Htr7",
+          "label": "binds"
+        },
+        {
+          "source": "Htr7",
+          "target": "Dopamine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dopamine",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "id": "path_10510"
+    },
+    {
+      "score": {
+        "ic_mean": 0.498,
+        "final_score": 0.498
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Withdrawal Syndrome Neonatal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Drug Withdrawal Syndrome Neonatal",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Withdrawal Syndrome Neonatal",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asenapine,Paliperidone": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10511"
     }
-  ],
-  "verbalization": ""
+  ]
 }

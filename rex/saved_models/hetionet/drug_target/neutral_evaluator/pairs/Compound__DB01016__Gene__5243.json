@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5033,
-        "final_score": 0.5033
+        "ic_mean": 0.7112,
+        "final_score": 0.7112
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco2b1",
-          "type": "Gene"
+          "id": "Sulfonylurea Compounds",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Conjugated Estrogens",
+          "id": "Chlorpropamide",
           "type": "Compound"
         },
         {
@@ -27,74 +27,32 @@
       "edges": [
         {
           "source": "Glyburide",
-          "target": "Slco2b1",
-          "label": "binds"
+          "target": "Sulfonylurea Compounds",
+          "label": "is included in"
         },
         {
-          "source": "Slco2b1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
+          "source": "Sulfonylurea Compounds",
+          "target": "Chlorpropamide",
+          "label": "includes"
         },
         {
-          "source": "Conjugated Estrogens",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "id": "path_2117"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4919,
-        "final_score": 0.4919
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
+          "source": "Chlorpropamide",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Glyburide,Pravastatin": [
-          "Carbocyclic Compound",
-          "Agent Affecting Digestive System Or Metabolism"
+        "Glyburide,Chlorpropamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "Monochlorobenzenes"
         ]
       },
-      "id": "path_2118"
+      "id": "path_1022"
     },
     {
       "score": {
-        "ic_mean": 0.4574,
-        "final_score": 0.4574
+        "ic_mean": 0.529,
+        "final_score": 0.529
       },
       "nodes": [
         {
@@ -102,58 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Ethinyl Estradiol": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_2119"
-    },
-    {
-      "score": {
-        "ic_mean": 0.449,
-        "final_score": 0.449
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Sensation Of Pressure",
+          "id": "Porphyria Hepatic",
           "type": "Side Effect"
         },
         {
-          "id": "Sumatriptan",
+          "id": "Chlorpropamide",
           "type": "Compound"
         },
         {
@@ -164,27 +75,121 @@
       "edges": [
         {
           "source": "Glyburide",
-          "target": "Sensation Of Pressure",
+          "target": "Porphyria Hepatic",
           "label": "causes"
         },
         {
-          "source": "Sensation Of Pressure",
-          "target": "Sumatriptan",
+          "source": "Porphyria Hepatic",
+          "target": "Chlorpropamide",
           "label": "is caused by"
         },
         {
-          "source": "Sumatriptan",
+          "source": "Chlorpropamide",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Glyburide,Sumatriptan": [
-          "Sulfonamide"
+        "Glyburide,Chlorpropamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "Monochlorobenzenes"
         ]
       },
-      "id": "path_2120"
+      "id": "path_1023"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4595,
+        "final_score": 0.4595
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypopituitarism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Hypopituitarism",
+          "label": "causes"
+        },
+        {
+          "source": "Hypopituitarism",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glyburide,Methylprednisolone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1024"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4411,
+        "final_score": 0.4411
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Porphyria Hepatic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Porphyria Hepatic",
+          "label": "causes"
+        },
+        {
+          "source": "Porphyria Hepatic",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glyburide,Carbamazepine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1025"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00818 - Gene::2566",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7189,
+        "final_score": 0.6094,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Etomidate",
+          "label": "includes"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Etomidate": [
+          "Agent Affecting Nervous System",
+          "Oxygen Molecular Entity"
+        ]
+      },
+      "id": "path_11192"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5652,
+        "final_score": 0.5652
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Upper Airway Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Upper Airway Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Upper Airway Obstruction",
+          "target": "Etomidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Etomidate": [
+          "Agent Affecting Nervous System",
+          "Oxygen Molecular Entity"
+        ]
+      },
+      "id": "path_11193"
+    }
+  ]
+}

@@ -46,19 +46,19 @@
           "Phenothiazines"
         ],
         "Fluphenazine,Trifluoperazine": [
-          "N-Alkylpiperazine",
+          "Phenothiazines",
           "Antipsychotic Agent"
         ],
         "Phenothiazines,Trifluoperazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_8971"
+      "id": "path_4375"
     },
     {
       "score": {
-        "ic_mean": 0.6617,
-        "final_score": 0.6617
+        "ic_mean": 0.5841,
+        "final_score": 0.5841
       },
       "nodes": [
         {
@@ -66,56 +66,8 @@
           "type": "Compound"
         },
         {
-          "id": "Paralysis Of Bladder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Perphenazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Calm2",
+          "id": "Htr6",
           "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluphenazine",
-          "target": "Paralysis Of Bladder",
-          "label": "causes"
-        },
-        {
-          "source": "Paralysis Of Bladder",
-          "target": "Perphenazine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Perphenazine",
-          "target": "Calm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluphenazine,Perphenazine": [
-          "N-Alkylpiperazine",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_8972"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4517,
-        "final_score": 0.4517
-      },
-      "nodes": [
-        {
-          "id": "Fluphenazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Clocapramine",
-          "type": "Compound"
         },
         {
           "id": "Trifluoperazine",
@@ -129,13 +81,13 @@
       "edges": [
         {
           "source": "Fluphenazine",
-          "target": "Clocapramine",
-          "label": "resembles"
+          "target": "Htr6",
+          "label": "binds"
         },
         {
-          "source": "Clocapramine",
+          "source": "Htr6",
           "target": "Trifluoperazine",
-          "label": "resembles"
+          "label": "is bound by"
         },
         {
           "source": "Trifluoperazine",
@@ -144,21 +96,60 @@
         }
       ],
       "lowest_common_ancestors": {
-        "Fluphenazine,Clocapramine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
-        ],
         "Fluphenazine,Trifluoperazine": [
-          "N-Alkylpiperazine",
+          "Phenothiazines",
           "Antipsychotic Agent"
-        ],
-        "Clocapramine,Trifluoperazine": [
-          "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
         ]
       },
-      "id": "path_8973"
+      "id": "path_4376"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5487,
+        "final_score": 0.5487
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Trifluoperazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trifluoperazine",
+          "target": "Calm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluphenazine,Trifluoperazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_4377"
     }
-  ],
-  "verbalization": ""
+  ]
 }

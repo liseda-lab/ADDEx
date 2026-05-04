@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00325 - Gene::1543",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4768,
+        "final_score": 0.4768
+      },
+      "nodes": [
+        {
+          "id": "Nitroprusside",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Albendazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nitroprusside",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Albendazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Albendazole",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nitroprusside,Albendazole": [
+          "Polyatomic Entity"
+        ]
+      },
+      "id": "path_7995"
+    }
+  ]
 }

@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00320 - Gene::3362",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.676,
+        "final_score": 0.676
+      },
+      "nodes": [
+        {
+          "id": "Dihydroergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Methysergide",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dihydroergotamine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Methysergide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methysergide",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dihydroergotamine,Methysergide": [
+          "Agent Affecting Nervous System",
+          "Ergot Alkaloid"
+        ]
+      },
+      "id": "path_11362"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6547,
+        "final_score": 0.6547
+      },
+      "nodes": [
+        {
+          "id": "Dihydroergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dihydroergotamine",
+          "target": "Htr1d",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1d",
+          "target": "Mianserin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dihydroergotamine,Mianserin": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_11363"
+    }
+  ]
 }

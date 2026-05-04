@@ -3,6 +3,54 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.5431,
+        "final_score": 0.5431
+      },
+      "nodes": [
+        {
+          "id": "Ofloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Candiduria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ofloxacin",
+          "target": "Candiduria",
+          "label": "causes"
+        },
+        {
+          "source": "Candiduria",
+          "target": "Norfloxacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Norfloxacin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ofloxacin,Norfloxacin": [
+          "Quinolone Antibiotic",
+          "Quinolone Antibiotic"
+        ]
+      },
+      "id": "path_13955"
+    },
+    {
+      "score": {
         "ic_mean": 0.5131,
         "final_score": 0.5131
       },
@@ -47,8 +95,55 @@
           "Quinolone Antibiotic"
         ]
       },
-      "id": "path_27291"
+      "id": "path_13956"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4704,
+        "final_score": 0.4704
+      },
+      "nodes": [
+        {
+          "id": "Ofloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cerebral Thrombosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lomefloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ofloxacin",
+          "target": "Cerebral Thrombosis",
+          "label": "causes"
+        },
+        {
+          "source": "Cerebral Thrombosis",
+          "target": "Lomefloxacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lomefloxacin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ofloxacin,Lomefloxacin": [
+          "Quinolone Antibiotic",
+          "Quinolone Antibiotic"
+        ]
+      },
+      "id": "path_13957"
     }
-  ],
-  "verbalization": ""
+  ]
 }

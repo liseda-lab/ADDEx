@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7082,
-        "final_score": 0.7082
+        "ic_mean": 0.7339,
+        "final_score": 0.7339
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Fluphenazine",
+          "id": "Promethazine",
           "type": "Compound"
         },
         {
@@ -32,11 +32,11 @@
         },
         {
           "source": "Phenothiazines",
-          "target": "Fluphenazine",
+          "target": "Promethazine",
           "label": "includes"
         },
         {
-          "source": "Fluphenazine",
+          "source": "Promethazine",
           "target": "Calm3",
           "label": "binds"
         }
@@ -45,16 +45,111 @@
         "Chlorpromazine,Phenothiazines": [
           "Phenothiazines"
         ],
-        "Chlorpromazine,Fluphenazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
+        "Chlorpromazine,Promethazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ],
-        "Phenothiazines,Fluphenazine": [
+        "Phenothiazines,Promethazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_14787"
+      "id": "path_7407"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6775,
+        "final_score": 0.6775
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "Promethazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Promethazine",
+          "target": "Calm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Promethazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_7408"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5499,
+        "final_score": 0.5499
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Calm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Fluphenazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_7409"
     }
-  ],
-  "verbalization": ""
+  ]
 }

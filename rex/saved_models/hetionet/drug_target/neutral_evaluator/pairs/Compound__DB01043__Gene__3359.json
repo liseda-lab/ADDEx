@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB01043 - Gene::3359",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.492,
+        "final_score": 0.492
+      },
+      "nodes": [
+        {
+          "id": "Memantine",
+          "type": "Compound"
+        },
+        {
+          "id": "Feeling Of Body Temperature Change",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Alosetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Memantine",
+          "target": "Feeling Of Body Temperature Change",
+          "label": "causes"
+        },
+        {
+          "source": "Feeling Of Body Temperature Change",
+          "target": "Alosetron",
+          "label": "is caused by"
+        },
+        {
+          "source": "Alosetron",
+          "target": "Htr3a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Memantine,Alosetron": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9261"
+    }
+  ]
 }

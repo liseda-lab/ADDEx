@@ -3,102 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7381,
-        "final_score": 0.7381
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn4a",
-          "type": "Gene"
-        },
-        {
-          "id": "Etidocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Scn4a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn4a",
-          "target": "Etidocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Etidocaine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Etidocaine": [
-          "Anesthetic Agent",
-          "Carboxamide"
-        ]
-      },
-      "id": "path_20859"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7283,
-        "final_score": 0.7283
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn8a",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Scn8a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn8a",
-          "target": "Benzocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benzocaine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Benzocaine": [
-          "Anesthetic Agent",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_20860"
-    },
-    {
-      "score": {
         "ic_mean": 0.6982,
         "final_score": 0.6982
       },
@@ -143,7 +47,7 @@
           "Monocarboxylic Acid Amide"
         ]
       },
-      "id": "path_20861"
+      "id": "path_10540"
     },
     {
       "score": {
@@ -187,16 +91,16 @@
       ],
       "lowest_common_ancestors": {
         "Mepivacaine,Phenazopyridine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_20862"
+      "id": "path_10541"
     },
     {
       "score": {
-        "ic_mean": 0.6982,
-        "final_score": 0.6982
+        "ic_mean": 0.6816,
+        "final_score": 0.6816
       },
       "nodes": [
         {
@@ -204,11 +108,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn3a",
-          "type": "Gene"
+          "id": "Amides",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Benzocaine",
+          "id": "Prilocaine",
           "type": "Compound"
         },
         {
@@ -219,32 +123,38 @@
       "edges": [
         {
           "source": "Mepivacaine",
-          "target": "Scn3a",
-          "label": "binds"
+          "target": "Amides",
+          "label": "is included in"
         },
         {
-          "source": "Scn3a",
-          "target": "Benzocaine",
-          "label": "is bound by"
+          "source": "Amides",
+          "target": "Prilocaine",
+          "label": "includes"
         },
         {
-          "source": "Benzocaine",
+          "source": "Prilocaine",
           "target": "Scn5a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mepivacaine,Benzocaine": [
+        "Mepivacaine,Amides": [
+          "Amide"
+        ],
+        "Mepivacaine,Prilocaine": [
           "Anesthetic Agent",
-          "Organic Cyclic Compound"
+          "Monocarboxylic Acid Amide"
+        ],
+        "Amides,Prilocaine": [
+          "Amide"
         ]
       },
-      "id": "path_20863"
+      "id": "path_10542"
     },
     {
       "score": {
-        "ic_mean": 0.6868,
-        "final_score": 0.6868
+        "ic_mean": 0.6816,
+        "final_score": 0.6816
       },
       "nodes": [
         {
@@ -252,11 +162,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn4a",
-          "type": "Gene"
+          "id": "Local Anesthesia",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Benzocaine",
+          "id": "Prilocaine",
           "type": "Compound"
         },
         {
@@ -267,75 +177,27 @@
       "edges": [
         {
           "source": "Mepivacaine",
-          "target": "Scn4a",
-          "label": "binds"
+          "target": "Local Anesthesia",
+          "label": "is included in"
         },
         {
-          "source": "Scn4a",
-          "target": "Benzocaine",
-          "label": "is bound by"
+          "source": "Local Anesthesia",
+          "target": "Prilocaine",
+          "label": "includes"
         },
         {
-          "source": "Benzocaine",
+          "source": "Prilocaine",
           "target": "Scn5a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mepivacaine,Benzocaine": [
+        "Mepivacaine,Prilocaine": [
           "Anesthetic Agent",
-          "Organic Cyclic Compound"
+          "Monocarboxylic Acid Amide"
         ]
       },
-      "id": "path_20864"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6769,
-        "final_score": 0.6769
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn10a",
-          "type": "Gene"
-        },
-        {
-          "id": "Benzocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Scn10a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn10a",
-          "target": "Benzocaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Benzocaine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Benzocaine": [
-          "Anesthetic Agent",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_20865"
+      "id": "path_10543"
     },
     {
       "score": {
@@ -382,7 +244,7 @@
           "Monocarboxylic Acid Amide"
         ]
       },
-      "id": "path_20866"
+      "id": "path_10544"
     },
     {
       "score": {
@@ -426,11 +288,11 @@
       ],
       "lowest_common_ancestors": {
         "Mepivacaine,Hexylcaine": [
-          "Anesthetic Agent",
-          "Organic Cyclic Compound"
+          "Organic Cyclic Compound",
+          "Anesthetic Agent"
         ]
       },
-      "id": "path_20867"
+      "id": "path_10545"
     },
     {
       "score": {
@@ -474,251 +336,11 @@
       ],
       "lowest_common_ancestors": {
         "Mepivacaine,Phenazopyridine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_20868"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6568,
-        "final_score": 0.6568
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn4a",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenazopyridine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Scn4a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn4a",
-          "target": "Phenazopyridine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenazopyridine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Phenazopyridine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_20869"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6568,
-        "final_score": 0.6568
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn9a",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenazopyridine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Scn9a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn9a",
-          "target": "Phenazopyridine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenazopyridine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Phenazopyridine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_20870"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6568,
-        "final_score": 0.6568
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn2a",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenazopyridine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Scn2a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn2a",
-          "target": "Phenazopyridine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenazopyridine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Phenazopyridine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_20871"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6469,
-        "final_score": 0.6469
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn10a",
-          "type": "Gene"
-        },
-        {
-          "id": "Hexylcaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Scn10a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn10a",
-          "target": "Hexylcaine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Hexylcaine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Hexylcaine": [
-          "Anesthetic Agent",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_20872"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6469,
-        "final_score": 0.6469
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn10a",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenazopyridine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Scn10a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn10a",
-          "target": "Phenazopyridine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenazopyridine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Phenazopyridine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_20873"
+      "id": "path_10546"
     },
     {
       "score": {
@@ -765,55 +387,7 @@
           "Monocarboxylic Acid Amide"
         ]
       },
-      "id": "path_20874"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6281,
-        "final_score": 0.6281
-      },
-      "nodes": [
-        {
-          "id": "Mepivacaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Paresthesia Lips",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Prilocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mepivacaine",
-          "target": "Paresthesia Lips",
-          "label": "causes"
-        },
-        {
-          "source": "Paresthesia Lips",
-          "target": "Prilocaine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Prilocaine",
-          "target": "Scn5a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mepivacaine,Prilocaine": [
-          "Anesthetic Agent",
-          "Monocarboxylic Acid Amide"
-        ]
-      },
-      "id": "path_20875"
+      "id": "path_10547"
     },
     {
       "score": {
@@ -861,12 +435,12 @@
           "Monocarboxylic Acid Amide"
         ]
       },
-      "id": "path_20876"
+      "id": "path_10548"
     },
     {
       "score": {
-        "ic_mean": 0.6256,
-        "final_score": 0.6256
+        "ic_mean": 0.6281,
+        "final_score": 0.6281
       },
       "nodes": [
         {
@@ -874,11 +448,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn10a",
-          "type": "Gene"
+          "id": "Paresthesia Lips",
+          "type": "Side Effect"
         },
         {
-          "id": "Tocainide",
+          "id": "Prilocaine",
           "type": "Compound"
         },
         {
@@ -889,27 +463,27 @@
       "edges": [
         {
           "source": "Mepivacaine",
-          "target": "Scn10a",
-          "label": "binds"
+          "target": "Paresthesia Lips",
+          "label": "causes"
         },
         {
-          "source": "Scn10a",
-          "target": "Tocainide",
-          "label": "is bound by"
+          "source": "Paresthesia Lips",
+          "target": "Prilocaine",
+          "label": "is caused by"
         },
         {
-          "source": "Tocainide",
+          "source": "Prilocaine",
           "target": "Scn5a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mepivacaine,Tocainide": [
+        "Mepivacaine,Prilocaine": [
+          "Anesthetic Agent",
           "Monocarboxylic Acid Amide"
         ]
       },
-      "id": "path_20877"
+      "id": "path_10549"
     }
-  ],
-  "verbalization": ""
+  ]
 }

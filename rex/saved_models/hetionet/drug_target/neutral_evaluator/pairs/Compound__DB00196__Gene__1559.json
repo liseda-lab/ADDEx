@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5028,
-        "final_score": 0.5028
+        "ic_mean": 0.4907,
+        "final_score": 0.4907
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp11b1",
-          "type": "Gene"
+          "id": "Cytochrome P450 2c19 Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Phenytoin",
+          "id": "Omeprazole",
           "type": "Compound"
         },
         {
@@ -27,26 +27,26 @@
       "edges": [
         {
           "source": "Fluconazole",
-          "target": "Cyp11b1",
-          "label": "binds"
+          "target": "Cytochrome P450 2c19 Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Cyp11b1",
-          "target": "Phenytoin",
-          "label": "is bound by"
+          "source": "Cytochrome P450 2c19 Inhibitors",
+          "target": "Omeprazole",
+          "label": "includes"
         },
         {
-          "source": "Phenytoin",
+          "source": "Omeprazole",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluconazole,Phenytoin": [
+        "Fluconazole,Omeprazole": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_23954"
+      "id": "path_12094"
     },
     {
       "score": {
@@ -94,12 +94,12 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_23955"
+      "id": "path_12095"
     },
     {
       "score": {
-        "ic_mean": 0.4519,
-        "final_score": 0.4519
+        "ic_mean": 0.4444,
+        "final_score": 0.4444
       },
       "nodes": [
         {
@@ -107,11 +107,11 @@
           "type": "Compound"
         },
         {
-          "id": "Aspergillosis",
+          "id": "Shallow Breathing",
           "type": "Side Effect"
         },
         {
-          "id": "Bortezomib",
+          "id": "Glimepiride",
           "type": "Compound"
         },
         {
@@ -122,167 +122,26 @@
       "edges": [
         {
           "source": "Fluconazole",
-          "target": "Aspergillosis",
+          "target": "Shallow Breathing",
           "label": "causes"
         },
         {
-          "source": "Aspergillosis",
-          "target": "Bortezomib",
+          "source": "Shallow Breathing",
+          "target": "Glimepiride",
           "label": "is caused by"
         },
         {
-          "source": "Bortezomib",
+          "source": "Glimepiride",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluconazole,Bortezomib": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_23956"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4519,
-        "final_score": 0.4519
-      },
-      "nodes": [
-        {
-          "id": "Fluconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Aspergillus Infection",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Bortezomib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluconazole",
-          "target": "Aspergillus Infection",
-          "label": "causes"
-        },
-        {
-          "source": "Aspergillus Infection",
-          "target": "Bortezomib",
-          "label": "is caused by"
-        },
-        {
-          "source": "Bortezomib",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluconazole,Bortezomib": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_23957"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4454,
-        "final_score": 0.4454
-      },
-      "nodes": [
-        {
-          "id": "Fluconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Hypopnoea",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Gliclazide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluconazole",
-          "target": "Hypopnoea",
-          "label": "causes"
-        },
-        {
-          "source": "Hypopnoea",
-          "target": "Gliclazide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Gliclazide",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluconazole,Gliclazide": [
+        "Fluconazole,Glimepiride": [
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_23958"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4405,
-        "final_score": 0.4405
-      },
-      "nodes": [
-        {
-          "id": "Fluconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cryptococcosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Fosphenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluconazole",
-          "target": "Cryptococcosis",
-          "label": "causes"
-        },
-        {
-          "source": "Cryptococcosis",
-          "target": "Fosphenytoin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fosphenytoin",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluconazole,Fosphenytoin": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_23959"
+      "id": "path_12096"
     },
     {
       "score": {
@@ -330,107 +189,12 @@
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_23960"
+      "id": "path_12097"
     },
     {
       "score": {
-        "ic_mean": 0.4322,
-        "final_score": 0.4322
-      },
-      "nodes": [
-        {
-          "id": "Fluconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cytochrome P450 2c19 Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Voriconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluconazole",
-          "target": "Cytochrome P450 2c19 Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Cytochrome P450 2c19 Inhibitors",
-          "target": "Voriconazole",
-          "label": "includes"
-        },
-        {
-          "source": "Voriconazole",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluconazole,Voriconazole": [
-          "Conazole Antifungal Drug",
-          "Antifungal Agent"
-        ]
-      },
-      "id": "path_23961"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4289,
-        "final_score": 0.4289
-      },
-      "nodes": [
-        {
-          "id": "Fluconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Hypopnoea",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Glimepiride",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluconazole",
-          "target": "Hypopnoea",
-          "label": "causes"
-        },
-        {
-          "source": "Hypopnoea",
-          "target": "Glimepiride",
-          "label": "is caused by"
-        },
-        {
-          "source": "Glimepiride",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluconazole,Glimepiride": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_23962"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4099,
-        "final_score": 0.4099
+        "ic_mean": 0.4182,
+        "final_score": 0.4182
       },
       "nodes": [
         {
@@ -442,7 +206,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Voriconazole",
+          "id": "Sulfamethoxazole",
           "type": "Compound"
         },
         {
@@ -458,70 +222,22 @@
         },
         {
           "source": "Cytochrome P450 2c9 Inhibitors",
-          "target": "Voriconazole",
+          "target": "Sulfamethoxazole",
           "label": "includes"
         },
         {
-          "source": "Voriconazole",
+          "source": "Sulfamethoxazole",
           "target": "Cyp2c9",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluconazole,Voriconazole": [
-          "Conazole Antifungal Drug",
-          "Antifungal Agent"
+        "Fluconazole,Sulfamethoxazole": [
+          "Azole",
+          "Anti-Infective Agent"
         ]
       },
-      "id": "path_23963"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4092,
-        "final_score": 0.4092
-      },
-      "nodes": [
-        {
-          "id": "Fluconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Vaginal Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c9",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluconazole",
-          "target": "Vaginal Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Vaginal Disorder",
-          "target": "Estradiol",
-          "label": "is caused by"
-        },
-        {
-          "source": "Estradiol",
-          "target": "Cyp2c9",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluconazole,Estradiol": [
-          "Organic Hydroxy Compound"
-        ]
-      },
-      "id": "path_23964"
+      "id": "path_12098"
     }
-  ],
-  "verbalization": ""
+  ]
 }

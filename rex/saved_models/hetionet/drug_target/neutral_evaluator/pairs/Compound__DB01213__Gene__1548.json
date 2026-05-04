@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01213 - Gene::1548",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5348,
+        "final_score": 0.5348
+      },
+      "nodes": [
+        {
+          "id": "Fomepizole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Methimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fomepizole",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Methimazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methimazole",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fomepizole,Methimazole": [
+          "Diazole"
+        ]
+      },
+      "id": "path_15363"
+    }
+  ]
 }

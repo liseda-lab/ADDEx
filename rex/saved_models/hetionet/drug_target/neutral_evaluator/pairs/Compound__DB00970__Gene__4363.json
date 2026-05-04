@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00970 - Gene::4363",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5058,
+        "final_score": 0.5058
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Sepsis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Neutropenic Sepsis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Sepsis",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Abcc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Etoposide": [
+          "Organooxygen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_14183"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5058,
+        "final_score": 0.5058
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Recall Phenomenon",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Recall Phenomenon",
+          "label": "causes"
+        },
+        {
+          "source": "Recall Phenomenon",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Abcc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Etoposide": [
+          "Organooxygen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_14184"
+    }
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5444,
-        "final_score": 0.5444
+        "ic_mean": 0.5289,
+        "final_score": 0.5289
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Endotracheal Intubation Complication",
+          "id": "Cauda Equina Syndrome",
           "type": "Side Effect"
         },
         {
-          "id": "Alfentanil",
+          "id": "Enzalutamide",
           "type": "Compound"
         },
         {
@@ -27,74 +27,26 @@
       "edges": [
         {
           "source": "Lidocaine",
-          "target": "Endotracheal Intubation Complication",
+          "target": "Cauda Equina Syndrome",
           "label": "causes"
         },
         {
-          "source": "Endotracheal Intubation Complication",
-          "target": "Alfentanil",
+          "source": "Cauda Equina Syndrome",
+          "target": "Enzalutamide",
           "label": "is caused by"
         },
         {
-          "source": "Alfentanil",
+          "source": "Enzalutamide",
           "target": "Cyp3a5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Lidocaine,Alfentanil": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+        "Lidocaine,Enzalutamide": [
+          "Benzenes"
         ]
       },
-      "id": "path_16824"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5186,
-        "final_score": 0.5186
-      },
-      "nodes": [
-        {
-          "id": "Lidocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Myocardial Depression",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ifosfamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Lidocaine",
-          "target": "Myocardial Depression",
-          "label": "causes"
-        },
-        {
-          "source": "Myocardial Depression",
-          "target": "Ifosfamide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ifosfamide",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Lidocaine,Ifosfamide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_16825"
+      "id": "path_8419"
     },
     {
       "score": {
@@ -138,12 +90,107 @@
       ],
       "lowest_common_ancestors": {
         "Lidocaine,Oxycodone": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_16826"
+      "id": "path_8420"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4697,
+        "final_score": 0.4697
+      },
+      "nodes": [
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lidocaine",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Phenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lidocaine,Phenytoin": [
+          "Organic Cyclic Compound",
+          "Cation Channel Blocker"
+        ]
+      },
+      "id": "path_8421"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4543,
+        "final_score": 0.4543
+      },
+      "nodes": [
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aphonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Buspirone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lidocaine",
+          "target": "Aphonia",
+          "label": "causes"
+        },
+        {
+          "source": "Aphonia",
+          "target": "Buspirone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Buspirone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lidocaine,Buspirone": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8422"
     }
-  ],
-  "verbalization": ""
+  ]
 }

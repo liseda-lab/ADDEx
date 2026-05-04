@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB01119 - Gene::476",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6127,
+        "final_score": 0.6127
+      },
+      "nodes": [
+        {
+          "id": "Diazoxide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gout Acute",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ethacrynic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Atp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazoxide",
+          "target": "Gout Acute",
+          "label": "causes"
+        },
+        {
+          "source": "Gout Acute",
+          "target": "Ethacrynic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ethacrynic Acid",
+          "target": "Atp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazoxide,Ethacrynic Acid": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_11781"
+    }
+  ]
 }

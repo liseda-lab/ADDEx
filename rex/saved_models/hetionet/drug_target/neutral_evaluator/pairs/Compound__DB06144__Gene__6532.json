@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB06144 - Gene::6532",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5678,
+        "final_score": 0.5678
+      },
+      "nodes": [
+        {
+          "id": "Sertindole",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Vilazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sertindole",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Vilazodone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Vilazodone",
+          "target": "Slc6a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sertindole,Vilazodone": [
+          "Indoles",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_15579"
+    }
+  ]
 }

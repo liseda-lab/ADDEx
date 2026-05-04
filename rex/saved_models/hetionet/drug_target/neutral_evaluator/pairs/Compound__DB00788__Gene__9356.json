@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5572,
-        "final_score": 0.5572
+        "ic_mean": 0.5272,
+        "final_score": 0.5272
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Gene"
         },
         {
-          "id": "Flurbiprofen",
+          "id": "Zidovudine",
           "type": "Compound"
         },
         {
@@ -32,27 +32,122 @@
         },
         {
           "source": "Ugt2b7",
-          "target": "Flurbiprofen",
+          "target": "Zidovudine",
           "label": "is bound by"
         },
         {
-          "source": "Flurbiprofen",
+          "source": "Zidovudine",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Naproxen,Flurbiprofen": [
-          "Monocarboxylic Acid",
-          "Cyclooxygenase Inhibitor"
+        "Naproxen,Zidovudine": [
+          "Organic Aromatic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_17662"
+      "id": "path_8871"
     },
     {
       "score": {
-        "ic_mean": 0.4672,
-        "final_score": 0.4672
+        "ic_mean": 0.4933,
+        "final_score": 0.4933
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Epidermolysis Bullosa",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Epidermolysis Bullosa",
+          "label": "causes"
+        },
+        {
+          "source": "Epidermolysis Bullosa",
+          "target": "Furosemide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Furosemide",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Furosemide": [
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_8872"
+    },
+    {
+      "score": {
+        "ic_mean": 0.458,
+        "final_score": 0.458
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephritic Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sulindac",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Nephritic Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Nephritic Syndrome",
+          "target": "Sulindac",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sulindac",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Sulindac": [
+          "Monocarboxylic Acid",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_8873"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4135,
+        "final_score": 0.4135
       },
       "nodes": [
         {
@@ -64,7 +159,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Etodolac",
+          "id": "Ibuprofen",
           "type": "Compound"
         },
         {
@@ -80,23 +175,70 @@
         },
         {
           "source": "Renal Papillary Necrosis",
-          "target": "Etodolac",
+          "target": "Ibuprofen",
           "label": "is caused by"
         },
         {
-          "source": "Etodolac",
+          "source": "Ibuprofen",
           "target": "Slc22a6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Naproxen,Etodolac": [
+        "Naproxen,Ibuprofen": [
           "Monocarboxylic Acid",
-          "Nonsteroidal Antiinflammatory Drug"
+          "Cyclooxygenase Inhibitor"
         ]
       },
-      "id": "path_17663"
+      "id": "path_8874"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3912,
+        "final_score": 0.3912
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Vascular Anomaly",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Vascular Anomaly",
+          "label": "causes"
+        },
+        {
+          "source": "Vascular Anomaly",
+          "target": "Valproic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valproic Acid",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Valproic Acid": [
+          "Monocarboxylic Acid",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8875"
     }
-  ],
-  "verbalization": ""
+  ]
 }

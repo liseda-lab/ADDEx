@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.753,
-        "final_score": 0.753
+        "ic_mean": 0.7373,
+        "final_score": 0.7373
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Serotonin Receptors",
-          "type": "Pathway"
+          "id": "Serotonin Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Htr1a",
@@ -32,21 +32,21 @@
         },
         {
           "source": "Htr5a",
-          "target": "Serotonin Receptors",
+          "target": "Serotonin Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Serotonin Receptors",
+          "source": "Serotonin Receptor Activity",
           "target": "Htr1a",
           "label": "is participated by"
         }
       ],
-      "id": "path_17813"
+      "id": "path_8944"
     },
     {
       "score": {
-        "ic_mean": 0.6172,
-        "final_score": 0.6172
+        "ic_mean": 0.7373,
+        "final_score": 0.7373
       },
       "nodes": [
         {
@@ -54,11 +54,53 @@
           "type": "Compound"
         },
         {
-          "id": "Drd5",
+          "id": "Htr5a",
           "type": "Gene"
         },
         {
-          "id": "Pramipexole",
+          "id": "G-protein Coupled Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Htr5a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr5a",
+          "target": "G-protein Coupled Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Serotonin Receptor Activity",
+          "target": "Htr1a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8945"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6058,
+        "final_score": 0.6058
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Methysergide",
           "type": "Compound"
         },
         {
@@ -69,32 +111,32 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Drd5",
+          "target": "Htr6",
           "label": "binds"
         },
         {
-          "source": "Drd5",
-          "target": "Pramipexole",
+          "source": "Htr6",
+          "target": "Methysergide",
           "label": "is bound by"
         },
         {
-          "source": "Pramipexole",
+          "source": "Methysergide",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Pramipexole": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
+        "Loxapine,Methysergide": [
+          "Agent Affecting Nervous System",
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_17814"
+      "id": "path_8946"
     },
     {
       "score": {
-        "ic_mean": 0.6094,
-        "final_score": 0.6094
+        "ic_mean": 0.6058,
+        "final_score": 0.6058
       },
       "nodes": [
         {
@@ -102,11 +144,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr7",
+          "id": "Htr6",
           "type": "Gene"
         },
         {
-          "id": "Molindone",
+          "id": "Thiothixene",
           "type": "Compound"
         },
         {
@@ -117,32 +159,32 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Htr7",
+          "target": "Htr6",
           "label": "binds"
         },
         {
-          "source": "Htr7",
-          "target": "Molindone",
+          "source": "Htr6",
+          "target": "Thiothixene",
           "label": "is bound by"
         },
         {
-          "source": "Molindone",
+          "source": "Thiothixene",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Molindone": [
-          "Organic Heteropolycyclic Compound",
+        "Loxapine,Thiothixene": [
+          "Organic Heterocyclic Compound",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_17815"
+      "id": "path_8947"
     },
     {
       "score": {
-        "ic_mean": 0.5959,
-        "final_score": 0.5959
+        "ic_mean": 0.3234,
+        "final_score": 0.3234
       },
       "nodes": [
         {
@@ -150,11 +192,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1b",
-          "type": "Gene"
+          "id": "Azatadine",
+          "type": "Compound"
         },
         {
-          "id": "Penbutolol",
+          "id": "Mianserin",
           "type": "Compound"
         },
         {
@@ -165,28 +207,33 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Htr1b",
-          "label": "binds"
+          "target": "Azatadine",
+          "label": "resembles"
         },
         {
-          "source": "Htr1b",
-          "target": "Penbutolol",
-          "label": "is bound by"
+          "source": "Azatadine",
+          "target": "Mianserin",
+          "label": "resembles"
         },
         {
-          "source": "Penbutolol",
+          "source": "Mianserin",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Penbutolol": [
-          "Heteroorganic Entity",
+        "Loxapine,Azatadine": [
+          "Organic Heterotricyclic Compound"
+        ],
+        "Loxapine,Mianserin": [
+          "Organic Heterotricyclic Compound",
           "Agent Affecting Nervous System"
+        ],
+        "Azatadine,Mianserin": [
+          "Organic Heterotricyclic Compound"
         ]
       },
-      "id": "path_17816"
+      "id": "path_8948"
     }
-  ],
-  "verbalization": ""
+  ]
 }

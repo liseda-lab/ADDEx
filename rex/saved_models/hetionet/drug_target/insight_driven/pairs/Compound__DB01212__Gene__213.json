@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01212 - Gene::213",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.715,
+        "final_score": 0.6075,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Ceftriaxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cephalosporins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cefotetan",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ceftriaxone",
+          "target": "Cephalosporins",
+          "label": "is included in"
+        },
+        {
+          "source": "Cephalosporins",
+          "target": "Cefotetan",
+          "label": "includes"
+        },
+        {
+          "source": "Cefotetan",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ceftriaxone,Cephalosporins": [
+          "Cephalosporin"
+        ],
+        "Ceftriaxone,Cefotetan": [
+          "Cephalosporin Antibiotic",
+          "Cephem"
+        ],
+        "Cephalosporins,Cefotetan": [
+          "Cephem"
+        ]
+      },
+      "id": "path_10556"
+    }
+  ]
+}

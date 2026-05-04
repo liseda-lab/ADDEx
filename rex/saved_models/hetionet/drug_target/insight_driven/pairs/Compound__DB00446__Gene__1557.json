@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00446 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.51,
+        "final_score": 0.51
+      },
+      "nodes": [
+        {
+          "id": "Chloramphenicol",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypoplastic Anaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimethadione",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chloramphenicol",
+          "target": "Hypoplastic Anaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Hypoplastic Anaemia",
+          "target": "Trimethadione",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimethadione",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chloramphenicol,Trimethadione": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_1990"
+    }
+  ]
+}

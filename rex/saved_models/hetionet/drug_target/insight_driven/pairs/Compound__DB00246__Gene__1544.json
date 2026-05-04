@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00246 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4671,
+        "final_score": 0.4671
+      },
+      "nodes": [
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Vertigo Positional",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ziprasidone",
+          "target": "Vertigo Positional",
+          "label": "causes"
+        },
+        {
+          "source": "Vertigo Positional",
+          "target": "Melatonin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Melatonin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ziprasidone,Melatonin": [
+          "Indoles"
+        ]
+      },
+      "id": "path_9894"
+    }
+  ]
+}

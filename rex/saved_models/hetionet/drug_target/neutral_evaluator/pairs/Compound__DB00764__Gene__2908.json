@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6357,
-        "final_score": 0.6357
+        "ic_mean": 0.6248,
+        "final_score": 0.6248
       },
       "nodes": [
         {
@@ -16,7 +16,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Medrysone",
+          "id": "Beclomethasone",
           "type": "Compound"
         },
         {
@@ -32,27 +32,131 @@
         },
         {
           "source": "Hyperadrenocorticism",
-          "target": "Medrysone",
+          "target": "Beclomethasone",
           "label": "is caused by"
         },
         {
-          "source": "Medrysone",
+          "source": "Beclomethasone",
           "target": "Nr3c1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mometasone,Medrysone": [
+        "Mometasone,Beclomethasone": [
+          "Tertiary Alpha-Hydroxy Ketone",
+          "Therapeutic Corticosteroid"
+        ]
+      },
+      "id": "path_16058"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6071,
+        "final_score": 0.6071
+      },
+      "nodes": [
+        {
+          "id": "Mometasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nasal Septum Perforation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Beclomethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mometasone",
+          "target": "Nasal Septum Perforation",
+          "label": "causes"
+        },
+        {
+          "source": "Nasal Septum Perforation",
+          "target": "Beclomethasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Beclomethasone",
+          "target": "Nr3c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mometasone,Beclomethasone": [
+          "Tertiary Alpha-Hydroxy Ketone",
+          "Therapeutic Corticosteroid"
+        ]
+      },
+      "id": "path_16059"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6026,
+        "final_score": 0.6026
+      },
+      "nodes": [
+        {
+          "id": "Mometasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluocortolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Halobetasol Propionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mometasone",
+          "target": "Fluocortolone",
+          "label": "resembles"
+        },
+        {
+          "source": "Fluocortolone",
+          "target": "Halobetasol Propionate",
+          "label": "resembles"
+        },
+        {
+          "source": "Halobetasol Propionate",
+          "target": "Nr3c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mometasone,Fluocortolone": [
+          "Hydroxy Steroid",
+          "Therapeutic Corticosteroid"
+        ],
+        "Mometasone,Halobetasol Propionate": [
           "Steroid",
           "Therapeutic Corticosteroid"
+        ],
+        "Fluocortolone,Halobetasol Propionate": [
+          "Steroid",
+          "Therapeutic Glucocorticoid"
         ]
       },
-      "id": "path_31346"
+      "id": "path_16060"
     },
     {
       "score": {
-        "ic_mean": 0.5908,
-        "final_score": 0.5908
+        "ic_mean": 0.5933,
+        "final_score": 0.5933
       },
       "nodes": [
         {
@@ -60,11 +164,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hyperadrenocorticism",
+          "id": "Secondary Adrenocortical Insufficiency",
           "type": "Side Effect"
         },
         {
-          "id": "Ciclesonide",
+          "id": "Beclomethasone",
           "type": "Compound"
         },
         {
@@ -75,75 +179,27 @@
       "edges": [
         {
           "source": "Mometasone",
-          "target": "Hyperadrenocorticism",
+          "target": "Secondary Adrenocortical Insufficiency",
           "label": "causes"
         },
         {
-          "source": "Hyperadrenocorticism",
-          "target": "Ciclesonide",
+          "source": "Secondary Adrenocortical Insufficiency",
+          "target": "Beclomethasone",
           "label": "is caused by"
         },
         {
-          "source": "Ciclesonide",
+          "source": "Beclomethasone",
           "target": "Nr3c1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mometasone,Ciclesonide": [
-          "Organic Molecular Entity",
+        "Mometasone,Beclomethasone": [
+          "Tertiary Alpha-Hydroxy Ketone",
           "Therapeutic Corticosteroid"
         ]
       },
-      "id": "path_31347"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5809,
-        "final_score": 0.5809
-      },
-      "nodes": [
-        {
-          "id": "Mometasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nasal Burning",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Fluticasone Furoate",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mometasone",
-          "target": "Nasal Burning",
-          "label": "causes"
-        },
-        {
-          "source": "Nasal Burning",
-          "target": "Fluticasone Furoate",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fluticasone Furoate",
-          "target": "Nr3c1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mometasone,Fluticasone Furoate": [
-          "Therapeutic Corticosteroid",
-          "11Beta-Hydroxy Steroid"
-        ]
-      },
-      "id": "path_31348"
+      "id": "path_16061"
     },
     {
       "score": {
@@ -187,16 +243,16 @@
       ],
       "lowest_common_ancestors": {
         "Mometasone,Beclomethasone": [
-          "20-Oxo Steroid",
+          "Tertiary Alpha-Hydroxy Ketone",
           "Therapeutic Corticosteroid"
         ]
       },
-      "id": "path_31349"
+      "id": "path_16062"
     },
     {
       "score": {
-        "ic_mean": 0.5721,
-        "final_score": 0.5721
+        "ic_mean": 0.5507,
+        "final_score": 0.5507
       },
       "nodes": [
         {
@@ -204,11 +260,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hyperadrenocorticism",
+          "id": "Nasal Irritation",
           "type": "Side Effect"
         },
         {
-          "id": "Methylprednisolone",
+          "id": "Beclomethasone",
           "type": "Compound"
         },
         {
@@ -219,171 +275,27 @@
       "edges": [
         {
           "source": "Mometasone",
-          "target": "Hyperadrenocorticism",
+          "target": "Nasal Irritation",
           "label": "causes"
         },
         {
-          "source": "Hyperadrenocorticism",
-          "target": "Methylprednisolone",
+          "source": "Nasal Irritation",
+          "target": "Beclomethasone",
           "label": "is caused by"
         },
         {
-          "source": "Methylprednisolone",
+          "source": "Beclomethasone",
           "target": "Nr3c1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mometasone,Methylprednisolone": [
-          "20-Oxo Steroid",
+        "Mometasone,Beclomethasone": [
+          "Tertiary Alpha-Hydroxy Ketone",
           "Therapeutic Corticosteroid"
         ]
       },
-      "id": "path_31350"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5482,
-        "final_score": 0.5482
-      },
-      "nodes": [
-        {
-          "id": "Mometasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nasal Ulcer",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ciclesonide",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mometasone",
-          "target": "Nasal Ulcer",
-          "label": "causes"
-        },
-        {
-          "source": "Nasal Ulcer",
-          "target": "Ciclesonide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ciclesonide",
-          "target": "Nr3c1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mometasone,Ciclesonide": [
-          "Organic Molecular Entity",
-          "Therapeutic Corticosteroid"
-        ]
-      },
-      "id": "path_31351"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5428,
-        "final_score": 0.5428
-      },
-      "nodes": [
-        {
-          "id": "Mometasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Skin Depigmentation",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Hydrocortisone",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mometasone",
-          "target": "Skin Depigmentation",
-          "label": "causes"
-        },
-        {
-          "source": "Skin Depigmentation",
-          "target": "Hydrocortisone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Hydrocortisone",
-          "target": "Nr3c1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mometasone,Hydrocortisone": [
-          "20-Oxo Steroid"
-        ]
-      },
-      "id": "path_31352"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5387,
-        "final_score": 0.5387
-      },
-      "nodes": [
-        {
-          "id": "Mometasone",
-          "type": "Compound"
-        },
-        {
-          "id": "Type Iv Hypersensitivity Reaction",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ciclesonide",
-          "type": "Compound"
-        },
-        {
-          "id": "Nr3c1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mometasone",
-          "target": "Type Iv Hypersensitivity Reaction",
-          "label": "causes"
-        },
-        {
-          "source": "Type Iv Hypersensitivity Reaction",
-          "target": "Ciclesonide",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ciclesonide",
-          "target": "Nr3c1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mometasone,Ciclesonide": [
-          "Organic Molecular Entity",
-          "Therapeutic Corticosteroid"
-        ]
-      },
-      "id": "path_31353"
+      "id": "path_16063"
     }
-  ],
-  "verbalization": ""
+  ]
 }

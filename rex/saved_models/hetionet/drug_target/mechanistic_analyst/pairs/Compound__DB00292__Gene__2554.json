@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00292 - Gene::2554",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7217,
+        "final_score": 0.7775,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etomidate",
+          "target": "Gabrg2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrg2",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabra1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2733"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6022,
+        "final_score": 0.5511,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Disinhibition",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lorazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etomidate",
+          "target": "Disinhibition",
+          "label": "causes"
+        },
+        {
+          "source": "Disinhibition",
+          "target": "Lorazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lorazepam",
+          "target": "Gabra1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etomidate,Lorazepam": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_2734"
+    }
+  ]
+}

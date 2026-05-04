@@ -41,12 +41,54 @@
           "label": "is participated by"
         }
       ],
-      "id": "path_23252"
+      "id": "path_11784"
     },
     {
       "score": {
-        "ic_mean": 0.6021,
-        "final_score": 0.6021
+        "ic_mean": 0.6932,
+        "final_score": 0.6932
+      },
+      "nodes": [
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc6a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methamphetamine",
+          "target": "Slc18a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc18a2",
+          "target": "Serotonin Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Transmembrane Transporter Activity",
+          "target": "Slc6a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11785"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5871,
+        "final_score": 0.5871
       },
       "nodes": [
         {
@@ -58,7 +100,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Methylphenidate",
+          "id": "Dexmethylphenidate",
           "type": "Compound"
         },
         {
@@ -74,23 +116,22 @@
         },
         {
           "source": "Central Nervous System Stimulation",
-          "target": "Methylphenidate",
+          "target": "Dexmethylphenidate",
           "label": "includes"
         },
         {
-          "source": "Methylphenidate",
+          "source": "Dexmethylphenidate",
           "target": "Slc6a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Methamphetamine,Methylphenidate": [
-          "Ammonium Ion Derivative",
+        "Methamphetamine,Dexmethylphenidate": [
+          "Organonitrogen Compound",
           "Cns Stimulant"
         ]
       },
-      "id": "path_23253"
+      "id": "path_11786"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,6 +3,54 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.6544,
+        "final_score": 0.6544
+      },
+      "nodes": [
+        {
+          "id": "Nilutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Androgen Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Enzalutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ar",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nilutamide",
+          "target": "Androgen Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Androgen Receptor Antagonists",
+          "target": "Enzalutamide",
+          "label": "includes"
+        },
+        {
+          "source": "Enzalutamide",
+          "target": "Ar",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nilutamide,Enzalutamide": [
+          "Imidazolidinone",
+          "Androgen Receptor Inhibitor"
+        ]
+      },
+      "id": "path_1228"
+    },
+    {
+      "score": {
         "ic_mean": 0.6001,
         "final_score": 0.6001
       },
@@ -43,16 +91,16 @@
       ],
       "lowest_common_ancestors": {
         "Nilutamide,Oxandrolone": [
-          "Hormone Therapy Agent",
-          "Organic Cyclic Compound"
+          "Organic Cyclic Compound",
+          "Hormone Therapy Agent"
         ]
       },
-      "id": "path_2551"
+      "id": "path_1229"
     },
     {
       "score": {
-        "ic_mean": 0.5901,
-        "final_score": 0.5901
+        "ic_mean": 0.5531,
+        "final_score": 0.5531
       },
       "nodes": [
         {
@@ -64,7 +112,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Nandrolone Decanoate",
+          "id": "Testosterone Propionate",
           "type": "Compound"
         },
         {
@@ -80,23 +128,22 @@
         },
         {
           "source": "Testicular Atrophy",
-          "target": "Nandrolone Decanoate",
+          "target": "Testosterone Propionate",
           "label": "is caused by"
         },
         {
-          "source": "Nandrolone Decanoate",
+          "source": "Testosterone Propionate",
           "target": "Ar",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nilutamide,Nandrolone Decanoate": [
-          "Hormone Therapy Agent",
-          "Organic Cyclic Compound"
+        "Nilutamide,Testosterone Propionate": [
+          "Organic Cyclic Compound",
+          "Hormone Therapy Agent"
         ]
       },
-      "id": "path_2552"
+      "id": "path_1230"
     }
-  ],
-  "verbalization": ""
+  ]
 }

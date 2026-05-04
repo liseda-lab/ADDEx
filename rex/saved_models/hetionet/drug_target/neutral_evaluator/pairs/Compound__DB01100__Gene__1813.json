@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6184,
-        "final_score": 0.6184
+        "ic_mean": 0.5827,
+        "final_score": 0.5827
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Motor Restlessness",
+          "type": "Side Effect"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Molindone",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Motor Restlessness",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
-          "label": "is bound by"
+          "source": "Motor Restlessness",
+          "target": "Molindone",
+          "label": "is caused by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Molindone",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Mesoridazine": [
-          "Organic Heteropolycyclic Compound",
+        "Pimozide,Molindone": [
+          "Organic Heterobicyclic Compound",
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_13445"
+      "id": "path_6816"
     },
     {
       "score": {
-        "ic_mean": 0.5884,
-        "final_score": 0.5884
+        "ic_mean": 0.5588,
+        "final_score": 0.5588
       },
       "nodes": [
         {
@@ -60,8 +60,104 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Motor Restlessness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
           "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pimozide",
+          "target": "Motor Restlessness",
+          "label": "causes"
+        },
+        {
+          "source": "Motor Restlessness",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prochlorperazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pimozide,Prochlorperazine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6817"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5457,
+        "final_score": 0.5457
+      },
+      "nodes": [
+        {
+          "id": "Pimozide",
+          "type": "Compound"
+        },
+        {
+          "id": "Motor Restlessness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Metoclopramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pimozide",
+          "target": "Motor Restlessness",
+          "label": "causes"
+        },
+        {
+          "source": "Motor Restlessness",
+          "target": "Metoclopramide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Metoclopramide",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pimozide,Metoclopramide": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6818"
+    },
+    {
+      "score": {
+        "ic_mean": 0.545,
+        "final_score": 0.545
+      },
+      "nodes": [
+        {
+          "id": "Pimozide",
+          "type": "Compound"
+        },
+        {
+          "id": "Vermiculation",
+          "type": "Side Effect"
         },
         {
           "id": "Thiothixene",
@@ -75,13 +171,13 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Vermiculation",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
+          "source": "Vermiculation",
           "target": "Thiothixene",
-          "label": "is bound by"
+          "label": "is caused by"
         },
         {
           "source": "Thiothixene",
@@ -95,12 +191,12 @@
           "Antipsychotic Agent"
         ]
       },
-      "id": "path_13446"
+      "id": "path_6819"
     },
     {
       "score": {
-        "ic_mean": 0.537,
-        "final_score": 0.537
+        "ic_mean": 0.4852,
+        "final_score": 0.4852
       },
       "nodes": [
         {
@@ -108,11 +204,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Vermiculation",
+          "type": "Side Effect"
         },
         {
-          "id": "Fluphenazine",
+          "id": "Haloperidol",
           "type": "Compound"
         },
         {
@@ -123,28 +219,27 @@
       "edges": [
         {
           "source": "Pimozide",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Vermiculation",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Fluphenazine",
-          "label": "is bound by"
+          "source": "Vermiculation",
+          "target": "Haloperidol",
+          "label": "is caused by"
         },
         {
-          "source": "Fluphenazine",
+          "source": "Haloperidol",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Pimozide,Fluphenazine": [
-          "Organic Heteropolycyclic Compound",
-          "Antipsychotic Agent"
+        "Pimozide,Haloperidol": [
+          "Piperidines",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_13447"
+      "id": "path_6820"
     }
-  ],
-  "verbalization": ""
+  ]
 }

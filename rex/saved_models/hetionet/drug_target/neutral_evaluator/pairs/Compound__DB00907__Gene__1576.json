@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6129,
-        "final_score": 0.6129
+        "ic_mean": 0.5976,
+        "final_score": 0.5976
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Scn10a",
+          "id": "Cyp3a5",
           "type": "Gene"
         },
         {
-          "id": "Levobupivacaine",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -27,32 +27,26 @@
       "edges": [
         {
           "source": "Cocaine",
-          "target": "Scn10a",
+          "target": "Cyp3a5",
           "label": "binds"
         },
         {
-          "source": "Scn10a",
-          "target": "Levobupivacaine",
-          "label": "is bound by"
+          "source": "Cyp3a5",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Levobupivacaine",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Cocaine,Levobupivacaine": [
-          "Agent Affecting Nervous System",
-          "Ammonium Ion Derivative"
-        ]
-      },
-      "id": "path_27209"
+      "id": "path_13893"
     },
     {
       "score": {
-        "ic_mean": 0.5616,
-        "final_score": 0.5616
+        "ic_mean": 0.5959,
+        "final_score": 0.5959
       },
       "nodes": [
         {
@@ -60,12 +54,12 @@
           "type": "Compound"
         },
         {
-          "id": "Scn10a",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Ropivacaine",
-          "type": "Compound"
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Cyp3a4",
@@ -75,27 +69,63 @@
       "edges": [
         {
           "source": "Cocaine",
-          "target": "Scn10a",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Scn10a",
-          "target": "Ropivacaine",
-          "label": "is bound by"
+          "source": "Cyp2c8",
+          "target": "Aromatase Activity",
+          "label": "participates"
         },
         {
-          "source": "Ropivacaine",
+          "source": "Aromatase Activity",
           "target": "Cyp3a4",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Cocaine,Ropivacaine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
+      "id": "path_13894"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5959,
+        "final_score": 0.5959
       },
-      "id": "path_27210"
+      "nodes": [
+        {
+          "id": "Cocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cocaine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Reduced Flavin Or Flavoprotein As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13895"
     },
     {
       "score": {
@@ -143,12 +173,12 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27211"
+      "id": "path_13896"
     },
     {
       "score": {
-        "ic_mean": 0.5529,
-        "final_score": 0.5529
+        "ic_mean": 0.485,
+        "final_score": 0.485
       },
       "nodes": [
         {
@@ -156,11 +186,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn11a",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Zonisamide",
+          "id": "Fenofibrate",
           "type": "Compound"
         },
         {
@@ -171,32 +201,31 @@
       "edges": [
         {
           "source": "Cocaine",
-          "target": "Scn11a",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Scn11a",
-          "target": "Zonisamide",
+          "source": "Cyp2c8",
+          "target": "Fenofibrate",
           "label": "is bound by"
         },
         {
-          "source": "Zonisamide",
+          "source": "Fenofibrate",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cocaine,Zonisamide": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
+        "Cocaine,Fenofibrate": [
+          "Carboxylic Ester"
         ]
       },
-      "id": "path_27212"
+      "id": "path_13897"
     },
     {
       "score": {
-        "ic_mean": 0.5315,
-        "final_score": 0.5315
+        "ic_mean": 0.485,
+        "final_score": 0.485
       },
       "nodes": [
         {
@@ -204,11 +233,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn10a",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Bupivacaine",
+          "id": "Metronidazole",
           "type": "Compound"
         },
         {
@@ -219,265 +248,26 @@
       "edges": [
         {
           "source": "Cocaine",
-          "target": "Scn10a",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Scn10a",
-          "target": "Bupivacaine",
+          "source": "Cyp2c8",
+          "target": "Metronidazole",
           "label": "is bound by"
         },
         {
-          "source": "Bupivacaine",
+          "source": "Metronidazole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cocaine,Bupivacaine": [
-          "Agent Affecting Nervous System",
-          "Chemical Entity"
-        ]
-      },
-      "id": "path_27213"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5315,
-        "final_score": 0.5315
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn10a",
-          "type": "Gene"
-        },
-        {
-          "id": "Mexiletine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Scn10a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn10a",
-          "target": "Mexiletine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mexiletine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Mexiletine": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_27214"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5201,
-        "final_score": 0.5201
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm1",
-          "type": "Gene"
-        },
-        {
-          "id": "Tolterodine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Chrm1",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm1",
-          "target": "Tolterodine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tolterodine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Tolterodine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_27215"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5015,
-        "final_score": 0.5015
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        },
-        {
-          "id": "Fosphenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Scn5a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn5a",
-          "target": "Fosphenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Fosphenytoin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Fosphenytoin": [
-          "Agent Affecting Nervous System",
+        "Cocaine,Metronidazole": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_27216"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5015,
-        "final_score": 0.5015
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn5a",
-          "type": "Gene"
-        },
-        {
-          "id": "Mexiletine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Scn5a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn5a",
-          "target": "Mexiletine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mexiletine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Mexiletine": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_27217"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4901,
-        "final_score": 0.4901
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a3",
-          "type": "Gene"
-        },
-        {
-          "id": "Sertraline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Slc6a3",
-          "label": "binds"
-        },
-        {
-          "source": "Slc6a3",
-          "target": "Sertraline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sertraline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Sertraline": [
-          "Agent Affecting Nervous System",
-          "Ammonium Ion Derivative"
-        ]
-      },
-      "id": "path_27218"
+      "id": "path_13898"
     },
     {
       "score": {
@@ -521,11 +311,11 @@
       ],
       "lowest_common_ancestors": {
         "Cocaine,Lidocaine": [
-          "Tertiary Amino Compound",
+          "Organic Aromatic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27219"
+      "id": "path_13899"
     },
     {
       "score": {
@@ -573,12 +363,12 @@
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27220"
+      "id": "path_13900"
     },
     {
       "score": {
-        "ic_mean": 0.4675,
-        "final_score": 0.4675
+        "ic_mean": 0.4802,
+        "final_score": 0.4802
       },
       "nodes": [
         {
@@ -586,11 +376,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc6a2",
+          "id": "Slc22a2",
           "type": "Gene"
         },
         {
-          "id": "Sertraline",
+          "id": "Propranolol",
           "type": "Compound"
         },
         {
@@ -601,75 +391,27 @@
       "edges": [
         {
           "source": "Cocaine",
-          "target": "Slc6a2",
+          "target": "Slc22a2",
           "label": "binds"
         },
         {
-          "source": "Slc6a2",
-          "target": "Sertraline",
+          "source": "Slc22a2",
+          "target": "Propranolol",
           "label": "is bound by"
         },
         {
-          "source": "Sertraline",
+          "source": "Propranolol",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cocaine,Sertraline": [
-          "Agent Affecting Nervous System",
-          "Ammonium Ion Derivative"
-        ]
-      },
-      "id": "path_27221"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4589,
-        "final_score": 0.4589
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Scn10a",
-          "type": "Gene"
-        },
-        {
-          "id": "Orphenadrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Scn10a",
-          "label": "binds"
-        },
-        {
-          "source": "Scn10a",
-          "target": "Orphenadrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Orphenadrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Orphenadrine": [
-          "Tertiary Amino Compound",
+        "Cocaine,Propranolol": [
+          "Organic Aromatic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27222"
+      "id": "path_13901"
     },
     {
       "score": {
@@ -686,7 +428,7 @@
           "type": "Gene"
         },
         {
-          "id": "Cytarabine",
+          "id": "Disopyramide",
           "type": "Compound"
         },
         {
@@ -702,26 +444,26 @@
         },
         {
           "source": "Slc22a2",
-          "target": "Cytarabine",
+          "target": "Disopyramide",
           "label": "is bound by"
         },
         {
-          "source": "Cytarabine",
+          "source": "Disopyramide",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cocaine,Cytarabine": [
+        "Cocaine,Disopyramide": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_27223"
+      "id": "path_13902"
     },
     {
       "score": {
-        "ic_mean": 0.4387,
-        "final_score": 0.4387
+        "ic_mean": 0.4336,
+        "final_score": 0.4336
       },
       "nodes": [
         {
@@ -729,11 +471,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm1",
+          "id": "Cyp2c8",
           "type": "Gene"
         },
         {
-          "id": "Citalopram",
+          "id": "Paramethadione",
           "type": "Compound"
         },
         {
@@ -744,27 +486,74 @@
       "edges": [
         {
           "source": "Cocaine",
-          "target": "Chrm1",
+          "target": "Cyp2c8",
           "label": "binds"
         },
         {
-          "source": "Chrm1",
-          "target": "Citalopram",
+          "source": "Cyp2c8",
+          "target": "Paramethadione",
           "label": "is bound by"
         },
         {
-          "source": "Citalopram",
+          "source": "Paramethadione",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cocaine,Citalopram": [
-          "Tertiary Amino Compound",
+        "Cocaine,Paramethadione": [
+          "Organonitrogen Heterocyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27224"
+      "id": "path_13903"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4336,
+        "final_score": 0.4336
+      },
+      "nodes": [
+        {
+          "id": "Cocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cocaine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Ifosfamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cocaine,Ifosfamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_13904"
     },
     {
       "score": {
@@ -777,11 +566,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn5a",
+          "id": "Slc22a2",
           "type": "Gene"
         },
         {
-          "id": "Orphenadrine",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -792,32 +581,32 @@
       "edges": [
         {
           "source": "Cocaine",
-          "target": "Scn5a",
+          "target": "Slc22a2",
           "label": "binds"
         },
         {
-          "source": "Scn5a",
-          "target": "Orphenadrine",
+          "source": "Slc22a2",
+          "target": "Imipramine",
           "label": "is bound by"
         },
         {
-          "source": "Orphenadrine",
+          "source": "Imipramine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cocaine,Orphenadrine": [
-          "Tertiary Amino Compound",
+        "Cocaine,Imipramine": [
+          "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_27225"
+      "id": "path_13905"
     },
     {
       "score": {
-        "ic_mean": 0.4289,
-        "final_score": 0.4289
+        "ic_mean": 0.4087,
+        "final_score": 0.4087
       },
       "nodes": [
         {
@@ -825,11 +614,11 @@
           "type": "Compound"
         },
         {
-          "id": "Scn5a",
+          "id": "Cyp2d6",
           "type": "Gene"
         },
         {
-          "id": "Phenytoin",
+          "id": "Ranitidine",
           "type": "Compound"
         },
         {
@@ -840,122 +629,26 @@
       "edges": [
         {
           "source": "Cocaine",
-          "target": "Scn5a",
+          "target": "Cyp2d6",
           "label": "binds"
         },
         {
-          "source": "Scn5a",
-          "target": "Phenytoin",
+          "source": "Cyp2d6",
+          "target": "Ranitidine",
           "label": "is bound by"
         },
         {
-          "source": "Phenytoin",
+          "source": "Ranitidine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cocaine,Phenytoin": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+        "Cocaine,Ranitidine": [
+          "Organic Heterocyclic Compound"
         ]
       },
-      "id": "path_27226"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4222,
-        "final_score": 0.4222
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Alfentanil",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Alfentanil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alfentanil",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Alfentanil": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_27227"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4222,
-        "final_score": 0.4222
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Diltiazem",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Diltiazem",
-          "label": "is bound by"
-        },
-        {
-          "source": "Diltiazem",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Diltiazem": [
-          "Ammonium Ion Derivative"
-        ]
-      },
-      "id": "path_27228"
+      "id": "path_13906"
     },
     {
       "score": {
@@ -972,7 +665,7 @@
           "type": "Gene"
         },
         {
-          "id": "Antipyrine",
+          "id": "Fosphenytoin",
           "type": "Compound"
         },
         {
@@ -988,213 +681,211 @@
         },
         {
           "source": "Cyp2c8",
-          "target": "Antipyrine",
+          "target": "Fosphenytoin",
           "label": "is bound by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Fosphenytoin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cocaine,Antipyrine": [
-          "Agent Affecting Nervous System",
+        "Cocaine,Fosphenytoin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_13907"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3691,
+        "final_score": 0.3691
+      },
+      "nodes": [
+        {
+          "id": "Cocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cocaine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Fluvastatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cocaine,Fluvastatin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_13908"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3523,
+        "final_score": 0.3523
+      },
+      "nodes": [
+        {
+          "id": "Cocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cocaine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Lidocaine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cocaine,Lidocaine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_13909"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3442,
+        "final_score": 0.3442
+      },
+      "nodes": [
+        {
+          "id": "Cocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cocaine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Lapatinib",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lapatinib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cocaine,Lapatinib": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_13910"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3442,
+        "final_score": 0.3442
+      },
+      "nodes": [
+        {
+          "id": "Cocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cocaine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Felodipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cocaine,Felodipine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_27229"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4009,
-        "final_score": 0.4009
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a7-cyp3a51p",
-          "type": "Gene"
-        },
-        {
-          "id": "Rifapentine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Cyp3a7-cyp3a51p",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp3a7-cyp3a51p",
-          "target": "Rifapentine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rifapentine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Rifapentine": [
-          "Tertiary Amino Compound"
-        ]
-      },
-      "id": "path_27230"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3988,
-        "final_score": 0.3988
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        },
-        {
-          "id": "Quinine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Chrm2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm2",
-          "target": "Quinine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Quinine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Quinine": [
-          "Cation"
-        ]
-      },
-      "id": "path_27231"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3948,
-        "final_score": 0.3948
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc6a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Orphenadrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Slc6a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc6a2",
-          "target": "Orphenadrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Orphenadrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Orphenadrine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_27232"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3775,
-        "final_score": 0.3775
-      },
-      "nodes": [
-        {
-          "id": "Cocaine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        },
-        {
-          "id": "Orphenadrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cocaine",
-          "target": "Chrm2",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm2",
-          "target": "Orphenadrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Orphenadrine",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cocaine,Orphenadrine": [
-          "Tertiary Amino Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_27233"
+      "id": "path_13911"
     }
-  ],
-  "verbalization": ""
+  ]
 }

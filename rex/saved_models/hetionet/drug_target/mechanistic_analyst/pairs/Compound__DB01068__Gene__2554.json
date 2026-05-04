@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB01068 - Gene::2554",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7624,
+        "final_score": 0.7978,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Clonazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonazepam",
+          "target": "Gabrg2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrg2",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabra1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10548"
+    },
+    {
+      "score": {
+        "ic_mean": 0.466,
+        "final_score": 0.466
+      },
+      "nodes": [
+        {
+          "id": "Clonazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cloxazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Prazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonazepam",
+          "target": "Cloxazolam",
+          "label": "resembles"
+        },
+        {
+          "source": "Cloxazolam",
+          "target": "Prazepam",
+          "label": "resembles"
+        },
+        {
+          "source": "Prazepam",
+          "target": "Gabra1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonazepam,Cloxazolam": [
+          "Antianxiety Agent",
+          "Organonitrogen Compound"
+        ],
+        "Clonazepam,Prazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Cloxazolam,Prazepam": [
+          "Antianxiety Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_10549"
+    }
+  ]
+}

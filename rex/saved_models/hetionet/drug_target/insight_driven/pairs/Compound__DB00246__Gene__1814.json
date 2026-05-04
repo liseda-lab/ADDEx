@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00246 - Gene::1814",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6641,
+        "final_score": 0.7487,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ziprasidone",
+          "target": "Chrm4",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm4",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3615"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5128,
+        "final_score": 0.5128
+      },
+      "nodes": [
+        {
+          "id": "Ziprasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Diabetic Coma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ziprasidone",
+          "target": "Diabetic Coma",
+          "label": "causes"
+        },
+        {
+          "source": "Diabetic Coma",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ziprasidone,Paliperidone": [
+          "Organochalcogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_3616"
+    }
+  ]
+}

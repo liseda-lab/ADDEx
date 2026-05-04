@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB01016 - Gene::6579",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.733,
+        "final_score": 0.6165,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfonylurea Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tolbutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Sulfonylurea Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Sulfonylurea Compounds",
+          "target": "Tolbutamide",
+          "label": "includes"
+        },
+        {
+          "source": "Tolbutamide",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glyburide,Tolbutamide": [
+          "N-Sulfonylurea",
+          "Sulfonylurea Antidiabetic Agent"
+        ]
+      },
+      "id": "path_7561"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5704,
+        "final_score": 0.5704
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Epigastric Fullness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tolbutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Epigastric Fullness",
+          "label": "causes"
+        },
+        {
+          "source": "Epigastric Fullness",
+          "target": "Tolbutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tolbutamide",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glyburide,Tolbutamide": [
+          "N-Sulfonylurea",
+          "Sulfonylurea Antidiabetic Agent"
+        ]
+      },
+      "id": "path_7562"
+    }
+  ]
+}

@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4901,
-        "final_score": 0.4901
-      },
-      "nodes": [
-        {
-          "id": "Caffeine",
-          "type": "Compound"
-        },
-        {
-          "id": "Skin Breakdown",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sumatriptan",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Caffeine",
-          "target": "Skin Breakdown",
-          "label": "causes"
-        },
-        {
-          "source": "Skin Breakdown",
-          "target": "Sumatriptan",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sumatriptan",
-          "target": "Abcb1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Caffeine,Sumatriptan": [
-          "Agent Affecting Nervous System",
-          "Organic Heterobicyclic Compound"
-        ]
-      },
-      "id": "path_9334"
-    },
-    {
-      "score": {
         "ic_mean": 0.4655,
         "final_score": 0.4655
       },
@@ -94,12 +46,12 @@
           "Chemical Entity"
         ]
       },
-      "id": "path_9335"
+      "id": "path_4517"
     },
     {
       "score": {
-        "ic_mean": 0.4573,
-        "final_score": 0.4573
+        "ic_mean": 0.4033,
+        "final_score": 0.4033
       },
       "nodes": [
         {
@@ -107,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Infusion Site Phlebitis",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Caspofungin",
+          "id": "Indinavir",
           "type": "Compound"
         },
         {
@@ -122,31 +74,31 @@
       "edges": [
         {
           "source": "Caffeine",
-          "target": "Infusion Site Phlebitis",
-          "label": "causes"
+          "target": "Cyp3a7",
+          "label": "binds"
         },
         {
-          "source": "Infusion Site Phlebitis",
-          "target": "Caspofungin",
-          "label": "is caused by"
+          "source": "Cyp3a7",
+          "target": "Indinavir",
+          "label": "is bound by"
         },
         {
-          "source": "Caspofungin",
+          "source": "Indinavir",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Caffeine,Caspofungin": [
-          "Organonitrogen Compound"
+        "Caffeine,Indinavir": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_9336"
+      "id": "path_4518"
     },
     {
       "score": {
-        "ic_mean": 0.4366,
-        "final_score": 0.4366
+        "ic_mean": 0.3919,
+        "final_score": 0.3919
       },
       "nodes": [
         {
@@ -154,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Infusion Site Inflammation",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Paclitaxel",
+          "id": "Cimetidine",
           "type": "Compound"
         },
         {
@@ -169,27 +121,73 @@
       "edges": [
         {
           "source": "Caffeine",
-          "target": "Infusion Site Inflammation",
-          "label": "causes"
+          "target": "Cyp3a7",
+          "label": "binds"
         },
         {
-          "source": "Infusion Site Inflammation",
-          "target": "Paclitaxel",
-          "label": "is caused by"
+          "source": "Cyp3a7",
+          "target": "Cimetidine",
+          "label": "is bound by"
         },
         {
-          "source": "Paclitaxel",
+          "source": "Cimetidine",
           "target": "Abcb1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Caffeine,Paclitaxel": [
-          "Organic Molecular Entity"
+        "Caffeine,Cimetidine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_9337"
+      "id": "path_4519"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3727,
+        "final_score": 0.3727
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Cimetidine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Cimetidine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4520"
     }
-  ],
-  "verbalization": ""
+  ]
 }

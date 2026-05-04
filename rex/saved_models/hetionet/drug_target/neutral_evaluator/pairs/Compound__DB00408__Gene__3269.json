@@ -3,50 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7321,
-        "final_score": 0.7321
-      },
-      "nodes": [
-        {
-          "id": "Loxapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh4",
-          "type": "Gene"
-        },
-        {
-          "id": "Histamine Receptors",
-          "type": "Pathway"
-        },
-        {
-          "id": "Hrh1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Loxapine",
-          "target": "Hrh4",
-          "label": "binds"
-        },
-        {
-          "source": "Hrh4",
-          "target": "Histamine Receptors",
-          "label": "participates"
-        },
-        {
-          "source": "Histamine Receptors",
-          "target": "Hrh1",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_5130"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6471,
-        "final_score": 0.6471
+        "ic_mean": 0.7398,
+        "final_score": 0.7398
       },
       "nodes": [
         {
@@ -58,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Cyproheptadine",
-          "type": "Compound"
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Hrh1",
@@ -74,26 +32,21 @@
         },
         {
           "source": "Htr6",
-          "target": "Cyproheptadine",
-          "label": "is bound by"
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
         },
         {
-          "source": "Cyproheptadine",
+          "source": "Histamine Receptor Activity",
           "target": "Hrh1",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Loxapine,Cyproheptadine": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5131"
+      "id": "path_2308"
     },
     {
       "score": {
-        "ic_mean": 0.6171,
-        "final_score": 0.6171
+        "ic_mean": 0.5605,
+        "final_score": 0.5605
       },
       "nodes": [
         {
@@ -101,11 +54,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hrh2",
-          "type": "Gene"
+          "id": "Gait Shuffling",
+          "type": "Side Effect"
         },
         {
-          "id": "Tolazoline",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -116,28 +69,136 @@
       "edges": [
         {
           "source": "Loxapine",
-          "target": "Hrh2",
-          "label": "binds"
+          "target": "Gait Shuffling",
+          "label": "causes"
         },
         {
-          "source": "Hrh2",
-          "target": "Tolazoline",
-          "label": "is bound by"
+          "source": "Gait Shuffling",
+          "target": "Chlorpromazine",
+          "label": "is caused by"
         },
         {
-          "source": "Tolazoline",
+          "source": "Chlorpromazine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Loxapine,Tolazoline": [
-          "Organic Heterocyclic Compound",
-          "Agent Affecting Nervous System"
+        "Loxapine,Chlorpromazine": [
+          "Organic Heterotricyclic Compound",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_5132"
+      "id": "path_2309"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4551,
+        "final_score": 0.4551
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alcaftadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Alcaftadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Alcaftadine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loxapine,Azatadine": [
+          "Organic Heterotricyclic Compound"
+        ],
+        "Loxapine,Alcaftadine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Azatadine,Alcaftadine": [
+          "Organic Heterotricyclic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_2310"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3347,
+        "final_score": 0.3347
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Mianserin",
+          "label": "resembles"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loxapine,Azatadine": [
+          "Organic Heterotricyclic Compound"
+        ],
+        "Loxapine,Mianserin": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Azatadine,Mianserin": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_2311"
     }
-  ],
-  "verbalization": ""
+  ]
 }

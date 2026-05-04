@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB01026 - Gene::1584",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4516,
+        "final_score": 0.4516
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 3a4 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cytochrome P450 3a4 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 3a4 Inhibitors",
+          "target": "Fluconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Fluconazole",
+          "target": "Cyp11b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Fluconazole": [
+          "Anti-Infective Agent",
+          "Oxygen Molecular Entity"
+        ]
+      },
+      "id": "path_6143"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4345,
+        "final_score": 0.4345
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Fluconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Fluconazole",
+          "target": "Cyp11b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Azoles": [
+          "Azole"
+        ],
+        "Ketoconazole,Fluconazole": [
+          "Anti-Infective Agent",
+          "Oxygen Molecular Entity"
+        ],
+        "Azoles,Fluconazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_6144"
+    }
+  ]
+}

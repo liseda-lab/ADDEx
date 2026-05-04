@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6153,
-        "final_score": 0.6153
+        "ic_mean": 0.4613,
+        "final_score": 0.4613
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr3a",
+          "id": "Adra2c",
           "type": "Gene"
         },
         {
-          "id": "Alosetron",
+          "id": "Norepinephrine",
           "type": "Compound"
         },
         {
@@ -27,217 +27,74 @@
       "edges": [
         {
           "source": "Mirtazapine",
-          "target": "Htr3a",
+          "target": "Adra2c",
           "label": "binds"
         },
         {
-          "source": "Htr3a",
-          "target": "Alosetron",
+          "source": "Adra2c",
+          "target": "Norepinephrine",
           "label": "is bound by"
         },
         {
-          "source": "Alosetron",
+          "source": "Norepinephrine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mirtazapine,Alosetron": [
+        "Mirtazapine,Norepinephrine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_15180"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4279,
+        "final_score": 0.4279
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Asphyxia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Asphyxia",
+          "label": "causes"
+        },
+        {
+          "source": "Asphyxia",
+          "target": "Perphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Perphenazine": [
           "Organic Heteropolycyclic Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_29432"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5126,
-        "final_score": 0.5126
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr7",
-          "type": "Gene"
-        },
-        {
-          "id": "Mianserin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Htr7",
-          "label": "binds"
-        },
-        {
-          "source": "Htr7",
-          "target": "Mianserin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mianserin",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Mianserin": [
-          "Organic Heteropolycyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_29433"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4763,
-        "final_score": 0.4763
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Partial Transitory Deafness",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Clarithromycin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Partial Transitory Deafness",
-          "label": "causes"
-        },
-        {
-          "source": "Partial Transitory Deafness",
-          "target": "Clarithromycin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Clarithromycin",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Clarithromycin": [
-          "Organic Heterocyclic Compound"
-        ]
-      },
-      "id": "path_29434"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4709,
-        "final_score": 0.4709
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Osteoporotic Fracture",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Anastrozole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Osteoporotic Fracture",
-          "label": "causes"
-        },
-        {
-          "source": "Osteoporotic Fracture",
-          "target": "Anastrozole",
-          "label": "is caused by"
-        },
-        {
-          "source": "Anastrozole",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Anastrozole": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_29435"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4246,
-        "final_score": 0.4246
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Acute Abdomen",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Fluoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Acute Abdomen",
-          "label": "causes"
-        },
-        {
-          "source": "Acute Abdomen",
-          "target": "Fluoxetine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Fluoxetine",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Fluoxetine": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_29436"
+      "id": "path_15181"
     },
     {
       "score": {
@@ -285,12 +142,12 @@
           "Antidepressant Agent"
         ]
       },
-      "id": "path_29437"
+      "id": "path_15182"
     },
     {
       "score": {
-        "ic_mean": 0.421,
-        "final_score": 0.421
+        "ic_mean": 0.4193,
+        "final_score": 0.4193
       },
       "nodes": [
         {
@@ -298,11 +155,11 @@
           "type": "Compound"
         },
         {
-          "id": "High Cholesterol",
+          "id": "Acute Abdomen",
           "type": "Side Effect"
         },
         {
-          "id": "Anastrozole",
+          "id": "Clomifene",
           "type": "Compound"
         },
         {
@@ -313,31 +170,31 @@
       "edges": [
         {
           "source": "Mirtazapine",
-          "target": "High Cholesterol",
+          "target": "Acute Abdomen",
           "label": "causes"
         },
         {
-          "source": "High Cholesterol",
-          "target": "Anastrozole",
+          "source": "Acute Abdomen",
+          "target": "Clomifene",
           "label": "is caused by"
         },
         {
-          "source": "Anastrozole",
+          "source": "Clomifene",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mirtazapine,Anastrozole": [
-          "Organonitrogen Heterocyclic Compound"
+        "Mirtazapine,Clomifene": [
+          "Organonitrogen Compound"
         ]
       },
-      "id": "path_29438"
+      "id": "path_15183"
     },
     {
       "score": {
-        "ic_mean": 0.4047,
-        "final_score": 0.4047
+        "ic_mean": 0.3085,
+        "final_score": 0.3085
       },
       "nodes": [
         {
@@ -345,11 +202,11 @@
           "type": "Compound"
         },
         {
-          "id": "Self-injurious Ideation",
-          "type": "Side Effect"
+          "id": "Azatadine",
+          "type": "Compound"
         },
         {
-          "id": "Sertraline",
+          "id": "Desipramine",
           "type": "Compound"
         },
         {
@@ -360,75 +217,33 @@
       "edges": [
         {
           "source": "Mirtazapine",
-          "target": "Self-injurious Ideation",
-          "label": "causes"
+          "target": "Azatadine",
+          "label": "resembles"
         },
         {
-          "source": "Self-injurious Ideation",
-          "target": "Sertraline",
-          "label": "is caused by"
+          "source": "Azatadine",
+          "target": "Desipramine",
+          "label": "resembles"
         },
         {
-          "source": "Sertraline",
+          "source": "Desipramine",
           "target": "Cyp1a2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mirtazapine,Sertraline": [
-          "Organic Cyclic Compound",
+        "Mirtazapine,Azatadine": [
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Mirtazapine,Desipramine": [
+          "Organic Heteropolycyclic Compound",
           "Antidepressant Agent"
+        ],
+        "Azatadine,Desipramine": [
+          "Organic Heterotricyclic Compound"
         ]
       },
-      "id": "path_29439"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3971,
-        "final_score": 0.3971
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Deafness Transitory",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Ciprofloxacin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp1a2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Deafness Transitory",
-          "label": "causes"
-        },
-        {
-          "source": "Deafness Transitory",
-          "target": "Ciprofloxacin",
-          "label": "is caused by"
-        },
-        {
-          "source": "Ciprofloxacin",
-          "target": "Cyp1a2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Ciprofloxacin": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_29440"
+      "id": "path_15184"
     }
-  ],
-  "verbalization": ""
+  ]
 }

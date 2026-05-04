@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.8151,
-        "final_score": 0.8151
+        "ic_mean": 0.5144,
+        "final_score": 0.5144
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Dopa Decarboxylase Inhibitors",
-          "type": "Pharmacologic Class"
+          "id": "Htr1a",
+          "type": "Gene"
         },
         {
-          "id": "L-dopa",
+          "id": "Sertindole",
           "type": "Compound"
         },
         {
@@ -27,225 +27,31 @@
       "edges": [
         {
           "source": "Dopamine",
-          "target": "Dopa Decarboxylase Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Dopa Decarboxylase Inhibitors",
-          "target": "L-dopa",
-          "label": "includes"
-        },
-        {
-          "source": "L-dopa",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dopamine,L-dopa": [
-          "Hydroxides"
-        ]
-      },
-      "id": "path_13939"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6434,
-        "final_score": 0.6434
-      },
-      "nodes": [
-        {
-          "id": "Dopamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr7",
-          "type": "Gene"
-        },
-        {
-          "id": "Amisulpride",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dopamine",
-          "target": "Htr7",
+          "target": "Htr1a",
           "label": "binds"
         },
         {
-          "source": "Htr7",
-          "target": "Amisulpride",
+          "source": "Htr1a",
+          "target": "Sertindole",
           "label": "is bound by"
         },
         {
-          "source": "Amisulpride",
+          "source": "Sertindole",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dopamine,Amisulpride": [
-          "Organic Amino Compound"
-        ]
-      },
-      "id": "path_13940"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6132,
-        "final_score": 0.6132
-      },
-      "nodes": [
-        {
-          "id": "Dopamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Catecholamines",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Norepinephrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dopamine",
-          "target": "Catecholamines",
-          "label": "is included in"
-        },
-        {
-          "source": "Catecholamines",
-          "target": "Norepinephrine",
-          "label": "includes"
-        },
-        {
-          "source": "Norepinephrine",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dopamine,Catecholamines": [
-          "Catecholamine"
-        ],
-        "Dopamine,Norepinephrine": [
-          "Catecholamine"
-        ],
-        "Catecholamines,Norepinephrine": [
-          "Catecholamine"
-        ]
-      },
-      "id": "path_13941"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5998,
-        "final_score": 0.5998
-      },
-      "nodes": [
-        {
-          "id": "Dopamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd5",
-          "type": "Gene"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dopamine",
-          "target": "Drd5",
-          "label": "binds"
-        },
-        {
-          "source": "Drd5",
-          "target": "Pramipexole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dopamine,Pramipexole": [
-          "Ammonium Ion Derivative"
-        ]
-      },
-      "id": "path_13942"
-    },
-    {
-      "score": {
-        "ic_mean": 0.592,
-        "final_score": 0.592
-      },
-      "nodes": [
-        {
-          "id": "Dopamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr7",
-          "type": "Gene"
-        },
-        {
-          "id": "Molindone",
-          "type": "Compound"
-        },
-        {
-          "id": "Drd2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dopamine",
-          "target": "Htr7",
-          "label": "binds"
-        },
-        {
-          "source": "Htr7",
-          "target": "Molindone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Molindone",
-          "target": "Drd2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dopamine,Molindone": [
+        "Dopamine,Sertindole": [
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_13943"
+      "id": "path_6987"
     },
     {
       "score": {
-        "ic_mean": 0.561,
-        "final_score": 0.561
+        "ic_mean": 0.4931,
+        "final_score": 0.4931
       },
       "nodes": [
         {
@@ -253,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyanosis Peripheral",
-          "type": "Side Effect"
+          "id": "Htr1a",
+          "type": "Gene"
         },
         {
-          "id": "Sumatriptan",
+          "id": "Thioproperazine",
           "type": "Compound"
         },
         {
@@ -268,27 +74,73 @@
       "edges": [
         {
           "source": "Dopamine",
-          "target": "Cyanosis Peripheral",
-          "label": "causes"
+          "target": "Htr1a",
+          "label": "binds"
         },
         {
-          "source": "Cyanosis Peripheral",
-          "target": "Sumatriptan",
-          "label": "is caused by"
+          "source": "Htr1a",
+          "target": "Thioproperazine",
+          "label": "is bound by"
         },
         {
-          "source": "Sumatriptan",
+          "source": "Thioproperazine",
           "target": "Drd2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dopamine,Sumatriptan": [
-          "Ammonium Ion Derivative"
+        "Dopamine,Thioproperazine": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_13944"
+      "id": "path_6988"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4517,
+        "final_score": 0.4517
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Trimipramine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Trimipramine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dopamine,Trimipramine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6989"
     }
-  ],
-  "verbalization": ""
+  ]
 }

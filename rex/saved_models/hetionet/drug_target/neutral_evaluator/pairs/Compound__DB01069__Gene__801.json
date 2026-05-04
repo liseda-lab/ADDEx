@@ -46,19 +46,19 @@
           "Phenothiazines"
         ],
         "Promethazine,Fluphenazine": [
-          "Tertiary Amino Compound",
+          "Phenothiazines",
           "Agent Affecting Nervous System"
         ],
         "Phenothiazines,Fluphenazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_5049"
+      "id": "path_2255"
     },
     {
       "score": {
-        "ic_mean": 0.7043,
-        "final_score": 0.7043
+        "ic_mean": 0.7093,
+        "final_score": 0.7093
       },
       "nodes": [
         {
@@ -70,7 +70,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Trifluoperazine",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -86,11 +86,11 @@
         },
         {
           "source": "Phenothiazines",
-          "target": "Trifluoperazine",
+          "target": "Chlorpromazine",
           "label": "includes"
         },
         {
-          "source": "Trifluoperazine",
+          "source": "Chlorpromazine",
           "target": "Calm1",
           "label": "binds"
         }
@@ -99,16 +99,63 @@
         "Promethazine,Phenothiazines": [
           "Phenothiazines"
         ],
-        "Promethazine,Trifluoperazine": [
-          "Phenothiazine",
-          "Tertiary Amino Compound"
+        "Promethazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ],
-        "Phenothiazines,Trifluoperazine": [
+        "Phenothiazines,Chlorpromazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_5050"
+      "id": "path_2256"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6529,
+        "final_score": 0.6529
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "Chlorpromazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Chlorpromazine",
+          "target": "Calm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ]
+      },
+      "id": "path_2257"
     }
-  ],
-  "verbalization": ""
+  ]
 }

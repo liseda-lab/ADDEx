@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00307 - Gene::6258",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.75,
+        "agentic_score": 0.6667
+      },
+      "nodes": [
+        {
+          "id": "Bexarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinoids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Adapalene",
+          "type": "Compound"
+        },
+        {
+          "id": "Rxrg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bexarotene",
+          "target": "Retinoids",
+          "label": "is included in"
+        },
+        {
+          "source": "Retinoids",
+          "target": "Adapalene",
+          "label": "includes"
+        },
+        {
+          "source": "Adapalene",
+          "target": "Rxrg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bexarotene,Retinoids": [
+          "Retinoid"
+        ],
+        "Bexarotene,Adapalene": [
+          "Naphthalenes",
+          "Retinoic Acid Agent"
+        ],
+        "Retinoids,Adapalene": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_6088"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5976,
+        "final_score": 0.4655,
+        "agentic_score": 0.3333
+      },
+      "nodes": [
+        {
+          "id": "Bexarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Dermatitis Irritant Contact",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Adapalene",
+          "type": "Compound"
+        },
+        {
+          "id": "Rxrg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bexarotene",
+          "target": "Dermatitis Irritant Contact",
+          "label": "causes"
+        },
+        {
+          "source": "Dermatitis Irritant Contact",
+          "target": "Adapalene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Adapalene",
+          "target": "Rxrg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bexarotene,Adapalene": [
+          "Naphthalenes",
+          "Retinoic Acid Agent"
+        ]
+      },
+      "id": "path_6089"
+    }
+  ]
+}

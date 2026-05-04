@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6837,
-        "final_score": 0.6837
+        "ic_mean": 0.6636,
+        "final_score": 0.6636
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slc29a1",
-          "type": "Gene"
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Fludarabine",
+          "id": "Clofarabine",
           "type": "Compound"
         },
         {
@@ -27,27 +27,75 @@
       "edges": [
         {
           "source": "Cytarabine",
-          "target": "Slc29a1",
-          "label": "binds"
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
         },
         {
-          "source": "Slc29a1",
-          "target": "Fludarabine",
-          "label": "is bound by"
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Clofarabine",
+          "label": "includes"
         },
         {
-          "source": "Fludarabine",
+          "source": "Clofarabine",
           "target": "Dck",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cytarabine,Fludarabine": [
+        "Cytarabine,Clofarabine": [
+          "Organonitrogen Heterocyclic Compound",
           "Antimetabolite"
         ]
       },
-      "id": "path_17817"
+      "id": "path_8949"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6379,
+        "final_score": 0.6379
+      },
+      "nodes": [
+        {
+          "id": "Cytarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dck",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cytarabine",
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Nelarabine",
+          "label": "includes"
+        },
+        {
+          "source": "Nelarabine",
+          "target": "Dck",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cytarabine,Nelarabine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antimetabolite"
+        ]
+      },
+      "id": "path_8950"
     }
-  ],
-  "verbalization": ""
+  ]
 }

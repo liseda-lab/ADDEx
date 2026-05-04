@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB00181 - Gene::2550",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8693,
+        "final_score": 0.8693
+      },
+      "nodes": [
+        {
+          "id": "Baclofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabbr2",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Gaba Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabbr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Baclofen",
+          "target": "Gabbr2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabbr2",
+          "target": "G-protein Coupled Gaba Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Gaba Receptor Activity",
+          "target": "Gabbr1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6662"
+    }
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.803,
-        "final_score": 0.803
+        "ic_mean": 0.7227,
+        "final_score": 0.7227
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1f",
+          "id": "Htr2c",
           "type": "Gene"
         },
         {
-          "id": "Methylergometrine",
-          "type": "Compound"
+          "id": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Htr2a",
@@ -27,74 +27,26 @@
       "edges": [
         {
           "source": "Yohimbine",
-          "target": "Htr1f",
+          "target": "Htr2c",
           "label": "binds"
         },
         {
-          "source": "Htr1f",
-          "target": "Methylergometrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methylergometrine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Methylergometrine": [
-          "Agent Affecting Nervous System",
-          "Alkaloid"
-        ]
-      },
-      "id": "path_17499"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7882,
-        "final_score": 0.7882
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1f",
-          "type": "Gene"
-        },
-        {
-          "id": "Serotonin Receptors",
-          "type": "Pathway"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1f",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1f",
-          "target": "Serotonin Receptors",
+          "source": "Htr2c",
+          "target": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
           "label": "participates"
         },
         {
-          "source": "Serotonin Receptors",
+          "source": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
           "target": "Htr2a",
           "label": "is participated by"
         }
       ],
-      "id": "path_17500"
+      "id": "path_8805"
     },
     {
       "score": {
-        "ic_mean": 0.773,
-        "final_score": 0.773
+        "ic_mean": 0.653,
+        "final_score": 0.653
       },
       "nodes": [
         {
@@ -102,11 +54,95 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1f",
+          "id": "Htr2b",
           "type": "Gene"
         },
         {
-          "id": "Methysergide",
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Yohimbine",
+          "target": "Htr2b",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2b",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8806"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6527,
+        "final_score": 0.6527
+      },
+      "nodes": [
+        {
+          "id": "Yohimbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Yohimbine",
+          "target": "Htr2c",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2c",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8807"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6024,
+        "final_score": 0.6024
+      },
+      "nodes": [
+        {
+          "id": "Yohimbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Fluspirilene",
           "type": "Compound"
         },
         {
@@ -117,80 +153,31 @@
       "edges": [
         {
           "source": "Yohimbine",
-          "target": "Htr1f",
+          "target": "Htr2b",
           "label": "binds"
         },
         {
-          "source": "Htr1f",
-          "target": "Methysergide",
+          "source": "Htr2b",
+          "target": "Fluspirilene",
           "label": "is bound by"
         },
         {
-          "source": "Methysergide",
+          "source": "Fluspirilene",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Yohimbine,Methysergide": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_17501"
-    },
-    {
-      "score": {
-        "ic_mean": 0.773,
-        "final_score": 0.773
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1f",
-          "type": "Gene"
-        },
-        {
-          "id": "Sertindole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1f",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1f",
-          "target": "Sertindole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Sertindole",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Sertindole": [
-          "Organic Heteropolycyclic Compound",
+        "Yohimbine,Fluspirilene": [
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_17502"
+      "id": "path_8808"
     },
     {
       "score": {
-        "ic_mean": 0.7517,
-        "final_score": 0.7517
+        "ic_mean": 0.583,
+        "final_score": 0.583
       },
       "nodes": [
         {
@@ -198,535 +185,7 @@
           "type": "Compound"
         },
         {
-          "id": "Htr1f",
-          "type": "Gene"
-        },
-        {
-          "id": "Mianserin",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1f",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1f",
-          "target": "Mianserin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mianserin",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Mianserin": [
-          "Organic Heteropolycyclic Compound",
-          "Adrenergic Antagonist"
-        ]
-      },
-      "id": "path_17503"
-    },
-    {
-      "score": {
-        "ic_mean": 0.7351,
-        "final_score": 0.7351
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1f",
-          "type": "Gene"
-        },
-        {
-          "id": "Ergotamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1f",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1f",
-          "target": "Ergotamine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ergotamine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Ergotamine": [
-          "Agent Affecting Nervous System",
-          "Terpenoid Indole Alkaloid"
-        ]
-      },
-      "id": "path_17504"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6838,
-        "final_score": 0.6838
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1d",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1d",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Oxymetazoline": [
-          "Organic Heterocyclic Compound",
-          "Adrenergic Agent"
-        ]
-      },
-      "id": "path_17505"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6703,
-        "final_score": 0.6703
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Oxymetazoline": [
-          "Organic Heterocyclic Compound",
-          "Adrenergic Agent"
-        ]
-      },
-      "id": "path_17506"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6644,
-        "final_score": 0.6644
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Oxymetazoline": [
-          "Organic Heterocyclic Compound",
-          "Adrenergic Agent"
-        ]
-      },
-      "id": "path_17507"
-    },
-    {
-      "score": {
-        "ic_mean": 0.649,
-        "final_score": 0.649
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Oxymetazoline",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Adra1b",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1b",
-          "target": "Oxymetazoline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Oxymetazoline",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Oxymetazoline": [
-          "Organic Heterocyclic Compound",
-          "Adrenergic Agent"
-        ]
-      },
-      "id": "path_17508"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6325,
-        "final_score": 0.6325
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1d",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1d",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Alkaloid"
-        ]
-      },
-      "id": "path_17509"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6189,
-        "final_score": 0.6189
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Alkaloid"
-        ]
-      },
-      "id": "path_17510"
-    },
-    {
-      "score": {
-        "ic_mean": 0.613,
-        "final_score": 0.613
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Adra1d",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1d",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Alkaloid"
-        ]
-      },
-      "id": "path_17511"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6024,
-        "final_score": 0.6024
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Methysergide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1d",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1d",
-          "target": "Methysergide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methysergide",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Methysergide": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_17512"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6024,
-        "final_score": 0.6024
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1d",
-          "type": "Gene"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1d",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1d",
-          "target": "Pramipexole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Pramipexole": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_17513"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6024,
-        "final_score": 0.6024
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1d",
+          "id": "Htr2c",
           "type": "Gene"
         },
         {
@@ -741,11 +200,11 @@
       "edges": [
         {
           "source": "Yohimbine",
-          "target": "Htr1d",
+          "target": "Htr2c",
           "label": "binds"
         },
         {
-          "source": "Htr1d",
+          "source": "Htr2c",
           "target": "Lisuride",
           "label": "is bound by"
         },
@@ -757,203 +216,11 @@
       ],
       "lowest_common_ancestors": {
         "Yohimbine,Lisuride": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_17514"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5976,
-        "final_score": 0.5976
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adra1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Apomorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Adra1b",
-          "label": "binds"
-        },
-        {
-          "source": "Adra1b",
-          "target": "Apomorphine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Apomorphine",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Alkaloid"
-        ]
-      },
-      "id": "path_17515"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5889,
-        "final_score": 0.5889
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Methysergide",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Methysergide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methysergide",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Methysergide": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_17516"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5889,
-        "final_score": 0.5889
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Pramipexole",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Pramipexole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pramipexole",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Pramipexole": [
-          "Organic Heteropolycyclic Compound",
+          "Organonitrogen Compound",
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_17517"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5889,
-        "final_score": 0.5889
-      },
-      "nodes": [
-        {
-          "id": "Yohimbine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr1b",
-          "type": "Gene"
-        },
-        {
-          "id": "Lisuride",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2a",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Yohimbine",
-          "target": "Htr1b",
-          "label": "binds"
-        },
-        {
-          "source": "Htr1b",
-          "target": "Lisuride",
-          "label": "is bound by"
-        },
-        {
-          "source": "Lisuride",
-          "target": "Htr2a",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Yohimbine,Lisuride": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_17518"
+      "id": "path_8809"
     },
     {
       "score": {
@@ -970,7 +237,7 @@
           "type": "Gene"
         },
         {
-          "id": "Lisuride",
+          "id": "Propiomazine",
           "type": "Compound"
         },
         {
@@ -986,23 +253,118 @@
         },
         {
           "source": "Adra1d",
-          "target": "Lisuride",
+          "target": "Propiomazine",
           "label": "is bound by"
         },
         {
-          "source": "Lisuride",
+          "source": "Propiomazine",
           "target": "Htr2a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Yohimbine,Lisuride": [
-          "Agent Affecting Nervous System",
-          "Organooxygen Compound"
+        "Yohimbine,Propiomazine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_17519"
+      "id": "path_8810"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5811,
+        "final_score": 0.5811
+      },
+      "nodes": [
+        {
+          "id": "Yohimbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Yohimbine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Paliperidone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Yohimbine,Paliperidone": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8811"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5617,
+        "final_score": 0.5617
+      },
+      "nodes": [
+        {
+          "id": "Yohimbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Methotrimeprazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Yohimbine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Methotrimeprazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methotrimeprazine",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Yohimbine,Methotrimeprazine": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8812"
     }
-  ],
-  "verbalization": ""
+  ]
 }

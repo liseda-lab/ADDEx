@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7112,
-        "final_score": 0.7112
+        "ic_mean": 0.7062,
+        "final_score": 0.7062
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Caly",
-          "type": "Gene"
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Apomorphine",
+          "id": "Mesoridazine",
           "type": "Compound"
         },
         {
@@ -27,28 +27,129 @@
       "edges": [
         {
           "source": "Trifluoperazine",
-          "target": "Caly",
-          "label": "binds"
+          "target": "Phenothiazines",
+          "label": "is included in"
         },
         {
-          "source": "Caly",
-          "target": "Apomorphine",
-          "label": "is bound by"
+          "source": "Phenothiazines",
+          "target": "Mesoridazine",
+          "label": "includes"
         },
         {
-          "source": "Apomorphine",
+          "source": "Mesoridazine",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trifluoperazine,Apomorphine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Trifluoperazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Trifluoperazine,Mesoridazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Mesoridazine": [
+          "Phenothiazines"
         ]
       },
-      "id": "path_9381"
+      "id": "path_4545"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5884,
+        "final_score": 0.5884
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Methysergide",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Methysergide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methysergide",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Methysergide": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4546"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5437,
+        "final_score": 0.5437
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Thiothixene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Thiothixene",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Thiothixene": [
+          "Antipsychotic Agent",
+          "N-Methylpiperazine"
+        ]
+      },
+      "id": "path_4547"
     }
-  ],
-  "verbalization": ""
+  ]
 }

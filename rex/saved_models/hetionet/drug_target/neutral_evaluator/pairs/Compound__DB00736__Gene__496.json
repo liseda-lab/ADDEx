@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB00736 - Gene::496",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7726,
+        "final_score": 0.7726
+      },
+      "nodes": [
+        {
+          "id": "Esomeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Atp4a",
+          "type": "Gene"
+        },
+        {
+          "id": "Hydrogen:potassium-exchanging Atpase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Atp4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Esomeprazole",
+          "target": "Atp4a",
+          "label": "binds"
+        },
+        {
+          "source": "Atp4a",
+          "target": "Hydrogen:potassium-exchanging Atpase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Hydrogen:potassium-exchanging Atpase Activity",
+          "target": "Atp4b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7551"
+    }
+  ]
 }

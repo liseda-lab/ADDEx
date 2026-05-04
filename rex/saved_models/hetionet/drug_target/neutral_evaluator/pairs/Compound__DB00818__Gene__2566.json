@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6461,
-        "final_score": 0.6461
+        "ic_mean": 0.7189,
+        "final_score": 0.7189
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Gabrb3",
-          "type": "Gene"
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Ethchlorvynol",
+          "id": "Etomidate",
           "type": "Compound"
         },
         {
@@ -27,27 +27,165 @@
       "edges": [
         {
           "source": "Propofol",
-          "target": "Gabrb3",
-          "label": "binds"
+          "target": "General Anesthesia",
+          "label": "is included in"
         },
         {
-          "source": "Gabrb3",
-          "target": "Ethchlorvynol",
-          "label": "is bound by"
+          "source": "General Anesthesia",
+          "target": "Etomidate",
+          "label": "includes"
         },
         {
-          "source": "Ethchlorvynol",
+          "source": "Etomidate",
           "target": "Gabrg2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Propofol,Ethchlorvynol": [
-          "Sedative And Hypnotic",
-          "Organic Hydroxy Compound"
+        "Propofol,Etomidate": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_28813"
+      "id": "path_14846"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6896,
+        "final_score": 0.6896
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Benzodiazepine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Benzodiazepine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Benzodiazepine Receptor Activity",
+          "target": "Gabrg2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14847"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6161,
+        "final_score": 0.6161
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Clotiazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Clotiazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clotiazepam",
+          "target": "Gabrg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Clotiazepam": [
+          "Organic Molecular Entity",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_14848"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6161,
+        "final_score": 0.6161
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Prazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Prazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Prazepam",
+          "target": "Gabrg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Prazepam": [
+          "Organic Cyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_14849"
     },
     {
       "score": {
@@ -64,7 +202,7 @@
           "type": "Gene"
         },
         {
-          "id": "Thiopental",
+          "id": "Clorazepate",
           "type": "Compound"
         },
         {
@@ -80,70 +218,21 @@
         },
         {
           "source": "Gabra2",
-          "target": "Thiopental",
+          "target": "Clorazepate",
           "label": "is bound by"
         },
         {
-          "source": "Thiopental",
+          "source": "Clorazepate",
           "target": "Gabrg2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Propofol,Thiopental": [
-          "Agent Affecting Nervous System",
+        "Propofol,Clorazepate": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_28814"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5722,
-        "final_score": 0.5722
-      },
-      "nodes": [
-        {
-          "id": "Propofol",
-          "type": "Compound"
-        },
-        {
-          "id": "Faah",
-          "type": "Gene"
-        },
-        {
-          "id": "Thiopental",
-          "type": "Compound"
-        },
-        {
-          "id": "Gabrg2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Propofol",
-          "target": "Faah",
-          "label": "binds"
-        },
-        {
-          "source": "Faah",
-          "target": "Thiopental",
-          "label": "is bound by"
-        },
-        {
-          "source": "Thiopental",
-          "target": "Gabrg2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Propofol,Thiopental": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_28815"
+      "id": "path_14850"
     },
     {
       "score": {
@@ -187,12 +276,11 @@
       ],
       "lowest_common_ancestors": {
         "Propofol,Etomidate": [
-          "Agent Affecting Nervous System",
-          "Organic Aromatic Compound"
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_28816"
+      "id": "path_14851"
     }
-  ],
-  "verbalization": ""
+  ]
 }

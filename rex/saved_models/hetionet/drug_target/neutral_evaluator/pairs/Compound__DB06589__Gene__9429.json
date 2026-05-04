@@ -1,6 +1,100 @@
 {
   "id": "Compound::DB06589 - Gene::9429",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5381,
+        "final_score": 0.5381
+      },
+      "nodes": [
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Anal Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Apixaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pazopanib",
+          "target": "Anal Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Anal Haemorrhage",
+          "target": "Apixaban",
+          "label": "is caused by"
+        },
+        {
+          "source": "Apixaban",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pazopanib,Apixaban": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_14844"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4877,
+        "final_score": 0.4877
+      },
+      "nodes": [
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Gastrointestinal Fistula",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pazopanib",
+          "target": "Gastrointestinal Fistula",
+          "label": "causes"
+        },
+        {
+          "source": "Gastrointestinal Fistula",
+          "target": "Regorafenib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Regorafenib",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pazopanib,Regorafenib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_14845"
+    }
+  ]
 }

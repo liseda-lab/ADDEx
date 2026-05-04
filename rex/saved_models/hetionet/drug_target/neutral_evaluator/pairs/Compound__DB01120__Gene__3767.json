@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.8973,
-        "final_score": 0.8973
+        "ic_mean": 0.6557,
+        "final_score": 0.6557
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcc8",
-          "type": "Gene"
+          "id": "Epigastric Fullness",
+          "type": "Side Effect"
         },
         {
-          "id": "Glisoxepide",
+          "id": "Tolazamide",
           "type": "Compound"
         },
         {
@@ -27,27 +27,27 @@
       "edges": [
         {
           "source": "Gliclazide",
-          "target": "Abcc8",
-          "label": "binds"
+          "target": "Epigastric Fullness",
+          "label": "causes"
         },
         {
-          "source": "Abcc8",
-          "target": "Glisoxepide",
-          "label": "is bound by"
+          "source": "Epigastric Fullness",
+          "target": "Tolazamide",
+          "label": "is caused by"
         },
         {
-          "source": "Glisoxepide",
+          "source": "Tolazamide",
           "target": "Kcnj11",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Gliclazide,Glisoxepide": [
-          "Sulfonamide",
-          "Sulfonylurea Antidiabetic Agent"
+        "Gliclazide,Tolazamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
         ]
       },
-      "id": "path_10591"
+      "id": "path_5238"
     },
     {
       "score": {
@@ -91,11 +91,59 @@
       ],
       "lowest_common_ancestors": {
         "Gliclazide,Tolazamide": [
-          "N-Sulfonylurea",
-          "Sulfonylurea Antidiabetic Agent"
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
         ]
       },
-      "id": "path_10592"
+      "id": "path_5239"
+    },
+    {
+      "score": {
+        "ic_mean": 0.638,
+        "final_score": 0.638
+      },
+      "nodes": [
+        {
+          "id": "Gliclazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Disulfiram Like Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tolazamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnj11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gliclazide",
+          "target": "Disulfiram Like Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Disulfiram Like Reaction",
+          "target": "Tolazamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tolazamide",
+          "target": "Kcnj11",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gliclazide,Tolazamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
+        ]
+      },
+      "id": "path_5240"
     },
     {
       "score": {
@@ -139,11 +187,59 @@
       ],
       "lowest_common_ancestors": {
         "Gliclazide,Glimepiride": [
-          "N-Sulfonylurea",
-          "Sulfonylurea Antidiabetic Agent"
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
         ]
       },
-      "id": "path_10593"
+      "id": "path_5241"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5953,
+        "final_score": 0.5953
+      },
+      "nodes": [
+        {
+          "id": "Gliclazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Porphyria Non-acute",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tolazamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnj11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gliclazide",
+          "target": "Porphyria Non-acute",
+          "label": "causes"
+        },
+        {
+          "source": "Porphyria Non-acute",
+          "target": "Tolazamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tolazamide",
+          "target": "Kcnj11",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gliclazide,Tolazamide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
+        ]
+      },
+      "id": "path_5242"
     },
     {
       "score": {
@@ -156,7 +252,7 @@
           "type": "Compound"
         },
         {
-          "id": "Hunger",
+          "id": "Erythropenia",
           "type": "Side Effect"
         },
         {
@@ -171,11 +267,11 @@
       "edges": [
         {
           "source": "Gliclazide",
-          "target": "Hunger",
+          "target": "Erythropenia",
           "label": "causes"
         },
         {
-          "source": "Hunger",
+          "source": "Erythropenia",
           "target": "Glimepiride",
           "label": "is caused by"
         },
@@ -187,12 +283,11 @@
       ],
       "lowest_common_ancestors": {
         "Gliclazide,Glimepiride": [
-          "N-Sulfonylurea",
-          "Sulfonylurea Antidiabetic Agent"
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
         ]
       },
-      "id": "path_10594"
+      "id": "path_5243"
     }
-  ],
-  "verbalization": ""
+  ]
 }

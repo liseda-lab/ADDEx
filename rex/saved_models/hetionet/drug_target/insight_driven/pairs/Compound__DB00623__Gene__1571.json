@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00623 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4483,
+        "final_score": 0.4483
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Brain Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aminophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Brain Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Brain Injury",
+          "target": "Aminophylline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aminophylline",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluphenazine,Aminophylline": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_5573"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3649,
+        "final_score": 0.3649
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Desipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluphenazine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Fluphenazine,Desipramine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Clocapramine,Desipramine": [
+          "Antidepressant Agent",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_5574"
+    }
+  ]
+}

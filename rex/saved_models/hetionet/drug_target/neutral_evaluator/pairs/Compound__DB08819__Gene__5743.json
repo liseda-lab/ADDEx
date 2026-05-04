@@ -1,6 +1,99 @@
 {
   "id": "Compound::DB08819 - Gene::5743",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5442,
+        "final_score": 0.5442
+      },
+      "nodes": [
+        {
+          "id": "Tafluprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Conjunctivitis Allergic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nepafenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tafluprost",
+          "target": "Conjunctivitis Allergic",
+          "label": "causes"
+        },
+        {
+          "source": "Conjunctivitis Allergic",
+          "target": "Nepafenac",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nepafenac",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tafluprost,Nepafenac": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_15164"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5359,
+        "final_score": 0.5359
+      },
+      "nodes": [
+        {
+          "id": "Tafluprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Foreign Body Sensation In Eyes",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nepafenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tafluprost",
+          "target": "Foreign Body Sensation In Eyes",
+          "label": "causes"
+        },
+        {
+          "source": "Foreign Body Sensation In Eyes",
+          "target": "Nepafenac",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nepafenac",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tafluprost,Nepafenac": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_15165"
+    }
+  ]
 }

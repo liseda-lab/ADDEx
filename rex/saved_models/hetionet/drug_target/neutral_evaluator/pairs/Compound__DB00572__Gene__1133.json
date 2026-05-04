@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6803,
-        "final_score": 0.6803
-      },
-      "nodes": [
-        {
-          "id": "Atropine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm4",
-          "type": "Gene"
-        },
-        {
-          "id": "Homatropine Methylbromide",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atropine",
-          "target": "Chrm4",
-          "label": "binds"
-        },
-        {
-          "source": "Chrm4",
-          "target": "Homatropine Methylbromide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Homatropine Methylbromide",
-          "target": "Chrm5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atropine,Homatropine Methylbromide": [
-          "Azabicycloalkane",
-          "Antimuscarinic Agent"
-        ]
-      },
-      "id": "path_9210"
-    },
-    {
-      "score": {
         "ic_mean": 0.6503,
         "final_score": 0.6503
       },
@@ -95,12 +47,12 @@
           "Antimuscarinic Agent"
         ]
       },
-      "id": "path_9211"
+      "id": "path_4451"
     },
     {
       "score": {
-        "ic_mean": 0.6503,
-        "final_score": 0.6503
+        "ic_mean": 0.5545,
+        "final_score": 0.5545
       },
       "nodes": [
         {
@@ -108,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
-          "type": "Gene"
+          "id": "Cyclandelate",
+          "type": "Compound"
         },
         {
-          "id": "Scopolamine",
+          "id": "Methylscopolamine Bromide",
           "type": "Compound"
         },
         {
@@ -123,28 +75,134 @@
       "edges": [
         {
           "source": "Atropine",
-          "target": "Chrm4",
-          "label": "binds"
+          "target": "Cyclandelate",
+          "label": "resembles"
         },
         {
-          "source": "Chrm4",
-          "target": "Scopolamine",
-          "label": "is bound by"
+          "source": "Cyclandelate",
+          "target": "Methylscopolamine Bromide",
+          "label": "resembles"
         },
         {
-          "source": "Scopolamine",
+          "source": "Methylscopolamine Bromide",
           "target": "Chrm5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atropine,Scopolamine": [
-          "Ammonium Ion Derivative",
-          "Antimuscarinic Agent"
+        "Atropine,Cyclandelate": [
+          "Carboxylic Ester"
+        ],
+        "Atropine,Methylscopolamine Bromide": [
+          "Carbonyl Compound"
+        ],
+        "Cyclandelate,Methylscopolamine Bromide": [
+          "Organic Hydroxy Compound"
         ]
       },
-      "id": "path_9212"
+      "id": "path_4452"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5479,
+        "final_score": 0.5479
+      },
+      "nodes": [
+        {
+          "id": "Atropine",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Angle-closure Glaucoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ipratropium Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atropine",
+          "target": "Acute Angle-closure Glaucoma",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Angle-closure Glaucoma",
+          "target": "Ipratropium Bromide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ipratropium Bromide",
+          "target": "Chrm5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atropine,Ipratropium Bromide": [
+          "Antimuscarinic Agent",
+          "P-Block Molecular Entity"
+        ]
+      },
+      "id": "path_4453"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4934,
+        "final_score": 0.4934
+      },
+      "nodes": [
+        {
+          "id": "Atropine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclandelate",
+          "type": "Compound"
+        },
+        {
+          "id": "Ipratropium Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atropine",
+          "target": "Cyclandelate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclandelate",
+          "target": "Ipratropium Bromide",
+          "label": "resembles"
+        },
+        {
+          "source": "Ipratropium Bromide",
+          "target": "Chrm5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atropine,Cyclandelate": [
+          "Carboxylic Ester"
+        ],
+        "Atropine,Ipratropium Bromide": [
+          "Antimuscarinic Agent",
+          "P-Block Molecular Entity"
+        ],
+        "Cyclandelate,Ipratropium Bromide": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_4454"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00317 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6365,
+        "final_score": 0.6933,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Loc400927-csnk1e",
+          "type": "Gene"
+        },
+        {
+          "id": "Melatonin Metabolism And Effects",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Loc400927-csnk1e",
+          "label": "binds"
+        },
+        {
+          "source": "Loc400927-csnk1e",
+          "target": "Melatonin Metabolism And Effects",
+          "label": "participates"
+        },
+        {
+          "source": "Melatonin Metabolism And Effects",
+          "target": "Cyp2c19",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9423"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4617,
+        "final_score": 0.4617
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Sinoatrial Node Dysfunction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Sinoatrial Node Dysfunction",
+          "label": "causes"
+        },
+        {
+          "source": "Sinoatrial Node Dysfunction",
+          "target": "Nicardipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nicardipine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Nicardipine": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_9424"
+    }
+  ]
+}

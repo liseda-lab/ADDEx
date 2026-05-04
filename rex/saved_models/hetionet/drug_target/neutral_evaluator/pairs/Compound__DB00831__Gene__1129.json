@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6976,
-        "final_score": 0.6976
+        "ic_mean": 0.5738,
+        "final_score": 0.5738
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Phenothiazines",
-          "type": "Pharmacologic Class"
+          "id": "Pill Rolling",
+          "type": "Side Effect"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Prochlorperazine",
           "type": "Compound"
         },
         {
@@ -27,129 +27,27 @@
       "edges": [
         {
           "source": "Trifluoperazine",
-          "target": "Phenothiazines",
-          "label": "is included in"
+          "target": "Pill Rolling",
+          "label": "causes"
         },
         {
-          "source": "Phenothiazines",
-          "target": "Mesoridazine",
-          "label": "includes"
+          "source": "Pill Rolling",
+          "target": "Prochlorperazine",
+          "label": "is caused by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Prochlorperazine",
           "target": "Chrm2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Trifluoperazine,Phenothiazines": [
-          "Phenothiazines"
-        ],
-        "Trifluoperazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
-        ],
-        "Phenothiazines,Mesoridazine": [
-          "Phenothiazines"
+        "Trifluoperazine,Prochlorperazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_28553"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6098,
-        "final_score": 0.6098
-      },
-      "nodes": [
-        {
-          "id": "Trifluoperazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Mesoridazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Trifluoperazine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Mesoridazine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mesoridazine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Trifluoperazine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_28554"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6098,
-        "final_score": 0.6098
-      },
-      "nodes": [
-        {
-          "id": "Trifluoperazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyproheptadine",
-          "type": "Compound"
-        },
-        {
-          "id": "Chrm2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Trifluoperazine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Cyproheptadine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyproheptadine",
-          "target": "Chrm2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Trifluoperazine,Cyproheptadine": [
-          "Tertiary Amino Compound"
-        ]
-      },
-      "id": "path_28555"
+      "id": "path_14689"
     }
-  ],
-  "verbalization": ""
+  ]
 }

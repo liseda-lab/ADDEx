@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00619 - Gene::6582",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5776,
+        "final_score": 0.7055,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Quaternary Ammonium Group Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imatinib",
+          "target": "Slc22a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a1",
+          "target": "Quaternary Ammonium Group Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Quaternary Ammonium Group Transmembrane Transporter Activity",
+          "target": "Slc22a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8765"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5058,
+        "final_score": 0.5058
+      },
+      "nodes": [
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Respiratory Failure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amantadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imatinib",
+          "target": "Acute Respiratory Failure",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Respiratory Failure",
+          "target": "Amantadine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amantadine",
+          "target": "Slc22a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imatinib,Amantadine": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_8766"
+    }
+  ]
+}

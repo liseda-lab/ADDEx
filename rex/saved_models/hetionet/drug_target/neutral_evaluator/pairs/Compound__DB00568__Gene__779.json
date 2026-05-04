@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00568 - Gene::779",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6763,
+        "final_score": 0.6763
+      },
+      "nodes": [
+        {
+          "id": "Cinnarizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1s",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cinnarizine",
+          "target": "Cacna1d",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna1d",
+          "target": "Clevidipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cacna1s",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cinnarizine,Clevidipine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_11908"
+    }
+  ]
 }

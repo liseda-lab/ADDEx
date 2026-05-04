@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6705,
-        "final_score": 0.6705
+        "ic_mean": 0.6846,
+        "final_score": 0.6846
       },
       "nodes": [
         {
@@ -12,11 +12,53 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp51a1",
+          "id": "Cyp21a2",
           "type": "Gene"
         },
         {
-          "id": "Tioconazole",
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp21a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp21a2",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp2c19",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2735"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4912,
+        "final_score": 0.4912
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Terbinafine",
           "type": "Compound"
         },
         {
@@ -27,460 +69,32 @@
       "edges": [
         {
           "source": "Ketoconazole",
-          "target": "Cyp51a1",
+          "target": "Cyp19a1",
           "label": "binds"
         },
         {
-          "source": "Cyp51a1",
-          "target": "Tioconazole",
+          "source": "Cyp19a1",
+          "target": "Terbinafine",
           "label": "is bound by"
         },
         {
-          "source": "Tioconazole",
+          "source": "Terbinafine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ketoconazole,Tioconazole": [
-          "Conazole Antifungal Drug",
+        "Ketoconazole,Terbinafine": [
+          "Benzenoid Aromatic Compound",
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_5917"
+      "id": "path_2736"
     },
     {
       "score": {
-        "ic_mean": 0.5513,
-        "final_score": 0.5513
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp17a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Tioconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp17a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp17a1",
-          "target": "Tioconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tioconazole",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Tioconazole": [
-          "Conazole Antifungal Drug",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_5918"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5378,
-        "final_score": 0.5378
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Fluconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Fluconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Fluconazole",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Fluconazole": [
-          "Conazole Antifungal Drug",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_5919"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5,
-        "final_score": 0.5
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Cholecalciferol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp11a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11a1",
-          "target": "Cholecalciferol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cholecalciferol",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Cholecalciferol": [
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_5920"
-    },
-    {
-      "score": {
-        "ic_mean": 0.475,
-        "final_score": 0.475
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Clotrimazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Clotrimazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Clotrimazole",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Clotrimazole": [
-          "Conazole Antifungal Drug",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_5921"
-    },
-    {
-      "score": {
-        "ic_mean": 0.475,
-        "final_score": 0.475
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp11a1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11a1",
-          "target": "Saquinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Saquinavir",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Saquinavir": [
-          "Organonitrogen Heterocyclic Compound",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_5922"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4652,
-        "final_score": 0.4652
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp11b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenytoin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp11b1",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp11b1",
-          "target": "Phenytoin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenytoin",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Phenytoin": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5923"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4505,
-        "final_score": 0.4505
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp2a6",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Antipyrine": [
-          "Diazole"
-        ]
-      },
-      "id": "path_5924"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4505,
-        "final_score": 0.4505
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Rosuvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rosuvastatin",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Rosuvastatin": [
-          "Enzyme Inhibitor",
-          "Benzenes"
-        ]
-      },
-      "id": "path_5925"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4071,
-        "final_score": 0.4071
-      },
-      "nodes": [
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Hair Discoloration",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Ketoconazole",
-          "target": "Hair Discoloration",
-          "label": "causes"
-        },
-        {
-          "source": "Hair Discoloration",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Ketoconazole,Venlafaxine": [
-          "Tertiary Amino Compound"
-        ]
-      },
-      "id": "path_5926"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3863,
-        "final_score": 0.3863
+        "ic_mean": 0.4455,
+        "final_score": 0.4455
       },
       "nodes": [
         {
@@ -492,7 +106,7 @@
           "type": "Side Effect"
         },
         {
-          "id": "Citalopram",
+          "id": "Oxcarbazepine",
           "type": "Compound"
         },
         {
@@ -508,26 +122,26 @@
         },
         {
           "source": "Impetigo",
-          "target": "Citalopram",
+          "target": "Oxcarbazepine",
           "label": "is caused by"
         },
         {
-          "source": "Citalopram",
+          "source": "Oxcarbazepine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ketoconazole,Citalopram": [
-          "Tertiary Amino Compound"
+        "Ketoconazole,Oxcarbazepine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_5927"
+      "id": "path_2737"
     },
     {
       "score": {
-        "ic_mean": 0.3813,
-        "final_score": 0.3813
+        "ic_mean": 0.3964,
+        "final_score": 0.3964
       },
       "nodes": [
         {
@@ -535,11 +149,11 @@
           "type": "Compound"
         },
         {
-          "id": "Xeroderma",
-          "type": "Side Effect"
+          "id": "Cyp3a7",
+          "type": "Gene"
         },
         {
-          "id": "Saquinavir",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -550,28 +164,26 @@
       "edges": [
         {
           "source": "Ketoconazole",
-          "target": "Xeroderma",
-          "label": "causes"
+          "target": "Cyp3a7",
+          "label": "binds"
         },
         {
-          "source": "Xeroderma",
-          "target": "Saquinavir",
-          "label": "is caused by"
+          "source": "Cyp3a7",
+          "target": "Imipramine",
+          "label": "is bound by"
         },
         {
-          "source": "Saquinavir",
+          "source": "Imipramine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Ketoconazole,Saquinavir": [
-          "Organonitrogen Heterocyclic Compound",
-          "Anti-Infective Agent"
+        "Ketoconazole,Imipramine": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_5928"
+      "id": "path_2738"
     }
-  ],
-  "verbalization": ""
+  ]
 }

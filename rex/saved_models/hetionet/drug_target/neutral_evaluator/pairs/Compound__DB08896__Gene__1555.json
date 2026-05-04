@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5295,
-        "final_score": 0.5295
+        "ic_mean": 0.4993,
+        "final_score": 0.4993
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ugt1a9",
-          "type": "Gene"
+          "id": "Exfoliative Rash",
+          "type": "Side Effect"
         },
         {
-          "id": "Ketobemidone",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -27,26 +27,26 @@
       "edges": [
         {
           "source": "Regorafenib",
-          "target": "Ugt1a9",
-          "label": "binds"
+          "target": "Exfoliative Rash",
+          "label": "causes"
         },
         {
-          "source": "Ugt1a9",
-          "target": "Ketobemidone",
-          "label": "is bound by"
+          "source": "Exfoliative Rash",
+          "target": "Clopidogrel",
+          "label": "is caused by"
         },
         {
-          "source": "Ketobemidone",
+          "source": "Clopidogrel",
           "target": "Cyp2b6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Regorafenib,Ketobemidone": [
+        "Regorafenib,Clopidogrel": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_14148"
+      "id": "path_7087"
     },
     {
       "score": {
@@ -90,12 +90,59 @@
       ],
       "lowest_common_ancestors": {
         "Regorafenib,Efavirenz": [
-          "Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
         ]
       },
-      "id": "path_14149"
+      "id": "path_7088"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4459,
+        "final_score": 0.4459
+      },
+      "nodes": [
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Posterior Reversible Encephalopathy Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Regorafenib",
+          "target": "Posterior Reversible Encephalopathy Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Posterior Reversible Encephalopathy Syndrome",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Regorafenib,Ifosfamide": [
+          "Organonitrogen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_7089"
     }
-  ],
-  "verbalization": ""
+  ]
 }

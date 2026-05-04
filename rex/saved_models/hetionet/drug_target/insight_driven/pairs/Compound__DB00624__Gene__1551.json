@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00624 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4766,
+        "final_score": 0.4766
+      },
+      "nodes": [
+        {
+          "id": "Testosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Neoplasm Prostate",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Testosterone",
+          "target": "Neoplasm Prostate",
+          "label": "causes"
+        },
+        {
+          "source": "Neoplasm Prostate",
+          "target": "Finasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Testosterone,Finasteride": [
+          "3-Oxo Steroid"
+        ]
+      },
+      "id": "path_11885"
+    }
+  ]
+}

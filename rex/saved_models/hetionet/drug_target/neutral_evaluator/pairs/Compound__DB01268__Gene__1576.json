@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5499,
-        "final_score": 0.5499
+        "ic_mean": 0.4504,
+        "final_score": 0.4504
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ulk3",
-          "type": "Gene"
+          "id": "Peritoneal Haemorrhage",
+          "type": "Side Effect"
         },
         {
-          "id": "Erlotinib",
+          "id": "Clopidogrel",
           "type": "Compound"
         },
         {
@@ -27,32 +27,31 @@
       "edges": [
         {
           "source": "Sunitinib",
-          "target": "Ulk3",
-          "label": "binds"
+          "target": "Peritoneal Haemorrhage",
+          "label": "causes"
         },
         {
-          "source": "Ulk3",
-          "target": "Erlotinib",
-          "label": "is bound by"
+          "source": "Peritoneal Haemorrhage",
+          "target": "Clopidogrel",
+          "label": "is caused by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Clopidogrel",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sunitinib,Erlotinib": [
-          "Antineoplastic Enzyme Inhibitor",
+        "Sunitinib,Clopidogrel": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_5272"
+      "id": "path_2366"
     },
     {
       "score": {
-        "ic_mean": 0.535,
-        "final_score": 0.535
+        "ic_mean": 0.4329,
+        "final_score": 0.4329
       },
       "nodes": [
         {
@@ -60,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Dclk3",
-          "type": "Gene"
+          "id": "Mucosal Dryness",
+          "type": "Side Effect"
         },
         {
-          "id": "Ruxolitinib",
+          "id": "Letrozole",
           "type": "Compound"
         },
         {
@@ -75,32 +74,32 @@
       "edges": [
         {
           "source": "Sunitinib",
-          "target": "Dclk3",
-          "label": "binds"
+          "target": "Mucosal Dryness",
+          "label": "causes"
         },
         {
-          "source": "Dclk3",
-          "target": "Ruxolitinib",
-          "label": "is bound by"
+          "source": "Mucosal Dryness",
+          "target": "Letrozole",
+          "label": "is caused by"
         },
         {
-          "source": "Ruxolitinib",
+          "source": "Letrozole",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sunitinib,Ruxolitinib": [
+        "Sunitinib,Letrozole": [
           "Antineoplastic Enzyme Inhibitor",
           "Azole"
         ]
       },
-      "id": "path_5273"
+      "id": "path_2367"
     },
     {
       "score": {
-        "ic_mean": 0.535,
-        "final_score": 0.535
+        "ic_mean": 0.4296,
+        "final_score": 0.4296
       },
       "nodes": [
         {
@@ -108,11 +107,11 @@
           "type": "Compound"
         },
         {
-          "id": "Mast1",
-          "type": "Gene"
+          "id": "Wound Haemorrhage",
+          "type": "Side Effect"
         },
         {
-          "id": "Ruxolitinib",
+          "id": "Ticagrelor",
           "type": "Compound"
         },
         {
@@ -123,32 +122,270 @@
       "edges": [
         {
           "source": "Sunitinib",
-          "target": "Mast1",
-          "label": "binds"
+          "target": "Wound Haemorrhage",
+          "label": "causes"
         },
         {
-          "source": "Mast1",
-          "target": "Ruxolitinib",
-          "label": "is bound by"
+          "source": "Wound Haemorrhage",
+          "target": "Ticagrelor",
+          "label": "is caused by"
         },
         {
-          "source": "Ruxolitinib",
+          "source": "Ticagrelor",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sunitinib,Ruxolitinib": [
+        "Sunitinib,Ticagrelor": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_2368"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4258,
+        "final_score": 0.4258
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Limb Discomfort",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tadalafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Limb Discomfort",
+          "label": "causes"
+        },
+        {
+          "source": "Limb Discomfort",
+          "target": "Tadalafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tadalafil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Tadalafil": [
+          "Organonitrogen Heterocyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_2369"
+    },
+    {
+      "score": {
+        "ic_mean": 0.407,
+        "final_score": 0.407
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Glucose Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vandetanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Glucose Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Glucose Decreased",
+          "target": "Vandetanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vandetanib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Vandetanib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_2370"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4051,
+        "final_score": 0.4051
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Blood Magnesium Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Caspofungin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Blood Magnesium Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Blood Magnesium Decreased",
+          "target": "Caspofungin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Caspofungin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Caspofungin": [
+          "Carboxamide"
+        ]
+      },
+      "id": "path_2371"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3848,
+        "final_score": 0.3848
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Peritoneal Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Peritoneal Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Peritoneal Haemorrhage",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Clomifene": [
+          "Organonitrogen Compound",
+          "Angiogenesis Inhibitor"
+        ]
+      },
+      "id": "path_2372"
+    },
+    {
+      "score": {
+        "ic_mean": 0.367,
+        "final_score": 0.367
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Hair Discoloration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Hair Discoloration",
+          "label": "causes"
+        },
+        {
+          "source": "Hair Discoloration",
+          "target": "Ketoconazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Ketoconazole": [
           "Antineoplastic Enzyme Inhibitor",
           "Azole"
         ]
       },
-      "id": "path_5274"
+      "id": "path_2373"
     },
     {
       "score": {
-        "ic_mean": 0.535,
-        "final_score": 0.535
+        "ic_mean": 0.3528,
+        "final_score": 0.3528
       },
       "nodes": [
         {
@@ -156,11 +393,11 @@
           "type": "Compound"
         },
         {
-          "id": "Clk2",
-          "type": "Gene"
+          "id": "Thyrotropin High",
+          "type": "Side Effect"
         },
         {
-          "id": "Ruxolitinib",
+          "id": "Carbamazepine",
           "type": "Compound"
         },
         {
@@ -171,80 +408,31 @@
       "edges": [
         {
           "source": "Sunitinib",
-          "target": "Clk2",
-          "label": "binds"
+          "target": "Thyrotropin High",
+          "label": "causes"
         },
         {
-          "source": "Clk2",
-          "target": "Ruxolitinib",
-          "label": "is bound by"
+          "source": "Thyrotropin High",
+          "target": "Carbamazepine",
+          "label": "is caused by"
         },
         {
-          "source": "Ruxolitinib",
+          "source": "Carbamazepine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sunitinib,Ruxolitinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Azole"
-        ]
-      },
-      "id": "path_5275"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5227,
-        "final_score": 0.5227
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Sbk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Gefitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Sbk1",
-          "label": "binds"
-        },
-        {
-          "source": "Sbk1",
-          "target": "Gefitinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Gefitinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Gefitinib": [
-          "Antineoplastic Enzyme Inhibitor",
+        "Sunitinib,Carbamazepine": [
           "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_5276"
+      "id": "path_2374"
     },
     {
       "score": {
-        "ic_mean": 0.4985,
-        "final_score": 0.4985
+        "ic_mean": 0.3506,
+        "final_score": 0.3506
       },
       "nodes": [
         {
@@ -252,11 +440,11 @@
           "type": "Compound"
         },
         {
-          "id": "Aurkc",
-          "type": "Gene"
+          "id": "Blood Magnesium Decreased",
+          "type": "Side Effect"
         },
         {
-          "id": "Erlotinib",
+          "id": "Vandetanib",
           "type": "Compound"
         },
         {
@@ -267,796 +455,27 @@
       "edges": [
         {
           "source": "Sunitinib",
-          "target": "Aurkc",
-          "label": "binds"
+          "target": "Blood Magnesium Decreased",
+          "label": "causes"
         },
         {
-          "source": "Aurkc",
-          "target": "Erlotinib",
-          "label": "is bound by"
+          "source": "Blood Magnesium Decreased",
+          "target": "Vandetanib",
+          "label": "is caused by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Vandetanib",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Sunitinib,Erlotinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
+        "Sunitinib,Vandetanib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
         ]
       },
-      "id": "path_5277"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4871,
-        "final_score": 0.4871
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Phkg1",
-          "type": "Gene"
-        },
-        {
-          "id": "Bosutinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Phkg1",
-          "label": "binds"
-        },
-        {
-          "source": "Phkg1",
-          "target": "Bosutinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bosutinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Bosutinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5278"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4871,
-        "final_score": 0.4871
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Mast1",
-          "type": "Gene"
-        },
-        {
-          "id": "Bosutinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Mast1",
-          "label": "binds"
-        },
-        {
-          "source": "Mast1",
-          "target": "Bosutinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bosutinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Bosutinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5279"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4871,
-        "final_score": 0.4871
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Mertk",
-          "type": "Gene"
-        },
-        {
-          "id": "Bosutinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Mertk",
-          "label": "binds"
-        },
-        {
-          "source": "Mertk",
-          "target": "Bosutinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bosutinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Bosutinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5280"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4837,
-        "final_score": 0.4837
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Bmp2k",
-          "type": "Gene"
-        },
-        {
-          "id": "Ruxolitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Bmp2k",
-          "label": "binds"
-        },
-        {
-          "source": "Bmp2k",
-          "target": "Ruxolitinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ruxolitinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Ruxolitinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Azole"
-        ]
-      },
-      "id": "path_5281"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4837,
-        "final_score": 0.4837
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Nuak2",
-          "type": "Gene"
-        },
-        {
-          "id": "Ruxolitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Nuak2",
-          "label": "binds"
-        },
-        {
-          "source": "Nuak2",
-          "target": "Ruxolitinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ruxolitinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Ruxolitinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Azole"
-        ]
-      },
-      "id": "path_5282"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4837,
-        "final_score": 0.4837
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Dapk2",
-          "type": "Gene"
-        },
-        {
-          "id": "Ruxolitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Dapk2",
-          "label": "binds"
-        },
-        {
-          "source": "Dapk2",
-          "target": "Ruxolitinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ruxolitinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Ruxolitinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Azole"
-        ]
-      },
-      "id": "path_5283"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4837,
-        "final_score": 0.4837
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Dyrk1a",
-          "type": "Gene"
-        },
-        {
-          "id": "Ruxolitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Dyrk1a",
-          "label": "binds"
-        },
-        {
-          "source": "Dyrk1a",
-          "target": "Ruxolitinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ruxolitinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Ruxolitinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Azole"
-        ]
-      },
-      "id": "path_5284"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4713,
-        "final_score": 0.4713
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Loc400927-csnk1e",
-          "type": "Gene"
-        },
-        {
-          "id": "Gefitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Loc400927-csnk1e",
-          "label": "binds"
-        },
-        {
-          "source": "Loc400927-csnk1e",
-          "target": "Gefitinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Gefitinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Gefitinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5285"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4685,
-        "final_score": 0.4685
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Tnk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Tnk1",
-          "label": "binds"
-        },
-        {
-          "source": "Tnk1",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Erlotinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5286"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4685,
-        "final_score": 0.4685
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Slk",
-          "type": "Gene"
-        },
-        {
-          "id": "Erlotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Slk",
-          "label": "binds"
-        },
-        {
-          "source": "Slk",
-          "target": "Erlotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Erlotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Erlotinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5287"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4394,
-        "final_score": 0.4394
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Bmp2k",
-          "type": "Gene"
-        },
-        {
-          "id": "Crizotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Bmp2k",
-          "label": "binds"
-        },
-        {
-          "source": "Bmp2k",
-          "target": "Crizotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Crizotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Crizotinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Azole"
-        ]
-      },
-      "id": "path_5288"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4394,
-        "final_score": 0.4394
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Nuak2",
-          "type": "Gene"
-        },
-        {
-          "id": "Crizotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Nuak2",
-          "label": "binds"
-        },
-        {
-          "source": "Nuak2",
-          "target": "Crizotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Crizotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Crizotinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Azole"
-        ]
-      },
-      "id": "path_5289"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4358,
-        "final_score": 0.4358
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Bmp2k",
-          "type": "Gene"
-        },
-        {
-          "id": "Bosutinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Bmp2k",
-          "label": "binds"
-        },
-        {
-          "source": "Bmp2k",
-          "target": "Bosutinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bosutinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Bosutinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5290"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4358,
-        "final_score": 0.4358
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Nuak2",
-          "type": "Gene"
-        },
-        {
-          "id": "Bosutinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Nuak2",
-          "label": "binds"
-        },
-        {
-          "source": "Nuak2",
-          "target": "Bosutinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bosutinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Bosutinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5291"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4358,
-        "final_score": 0.4358
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Loc400927-csnk1e",
-          "type": "Gene"
-        },
-        {
-          "id": "Bosutinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Loc400927-csnk1e",
-          "label": "binds"
-        },
-        {
-          "source": "Loc400927-csnk1e",
-          "target": "Bosutinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Bosutinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Bosutinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_5292"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4094,
-        "final_score": 0.4094
-      },
-      "nodes": [
-        {
-          "id": "Sunitinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Tnk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Crizotinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Sunitinib",
-          "target": "Tnk1",
-          "label": "binds"
-        },
-        {
-          "source": "Tnk1",
-          "target": "Crizotinib",
-          "label": "is bound by"
-        },
-        {
-          "source": "Crizotinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Sunitinib,Crizotinib": [
-          "Antineoplastic Enzyme Inhibitor",
-          "Azole"
-        ]
-      },
-      "id": "path_5293"
+      "id": "path_2375"
     }
-  ],
-  "verbalization": ""
+  ]
 }

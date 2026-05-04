@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB06770 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6824,
+        "final_score": 0.7579,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Benzyl Alcohol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzyl Alcohol",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4822"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5065,
+        "final_score": 0.5065
+      },
+      "nodes": [
+        {
+          "id": "Benzyl Alcohol",
+          "type": "Compound"
+        },
+        {
+          "id": "Application Site Dryness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzyl Alcohol",
+          "target": "Application Site Dryness",
+          "label": "causes"
+        },
+        {
+          "source": "Application Site Dryness",
+          "target": "Dapsone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dapsone",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzyl Alcohol,Dapsone": [
+          "Organic Aromatic Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_4823"
+    }
+  ]
+}

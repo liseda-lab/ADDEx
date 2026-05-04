@@ -3,6 +3,60 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.7281,
+        "final_score": 0.7281
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostaglandins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Alprostadil",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco3a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Prostaglandins",
+          "label": "is included in"
+        },
+        {
+          "source": "Prostaglandins",
+          "target": "Alprostadil",
+          "label": "includes"
+        },
+        {
+          "source": "Alprostadil",
+          "target": "Slco3a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Prostaglandins": [
+          "Prostaglandin"
+        ],
+        "Dinoprostone,Alprostadil": [
+          "Prostaglandin Analogue",
+          "Prostaglandins E"
+        ],
+        "Prostaglandins,Alprostadil": [
+          "Prostaglandin"
+        ]
+      },
+      "id": "path_13335"
+    },
+    {
+      "score": {
         "ic_mean": 0.72,
         "final_score": 0.72
       },
@@ -43,11 +97,11 @@
       ],
       "lowest_common_ancestors": {
         "Dinoprostone,Alprostadil": [
-          "Prostaglandin Carboxylic Acid Anion",
-          "Prostaglandin E"
+          "Prostaglandin Analogue",
+          "Prostaglandins E"
         ]
       },
-      "id": "path_26227"
+      "id": "path_13336"
     },
     {
       "score": {
@@ -91,16 +145,64 @@
       ],
       "lowest_common_ancestors": {
         "Dinoprostone,Dinoprost Tromethamine": [
-          "Prostaglandin Analogue",
-          "Organic Molecular Entity"
+          "Organic Molecular Entity",
+          "Prostaglandin Analogue"
         ]
       },
-      "id": "path_26228"
+      "id": "path_13337"
     },
     {
       "score": {
-        "ic_mean": 0.6686,
-        "final_score": 0.6686
+        "ic_mean": 0.6521,
+        "final_score": 0.6521
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgir",
+          "type": "Gene"
+        },
+        {
+          "id": "Alprostadil",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco3a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Ptgir",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgir",
+          "target": "Alprostadil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Alprostadil",
+          "target": "Slco3a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Alprostadil": [
+          "Prostaglandin Analogue",
+          "Prostaglandins E"
+        ]
+      },
+      "id": "path_13338"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6521,
+        "final_score": 0.6521
       },
       "nodes": [
         {
@@ -112,7 +214,7 @@
           "type": "Gene"
         },
         {
-          "id": "Alprostadil",
+          "id": "Dinoprost Tromethamine",
           "type": "Compound"
         },
         {
@@ -128,27 +230,27 @@
         },
         {
           "source": "Slco2a1",
-          "target": "Alprostadil",
+          "target": "Dinoprost Tromethamine",
           "label": "is bound by"
         },
         {
-          "source": "Alprostadil",
+          "source": "Dinoprost Tromethamine",
           "target": "Slco3a1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dinoprostone,Alprostadil": [
-          "Prostaglandin Carboxylic Acid Anion",
-          "Prostaglandin E"
+        "Dinoprostone,Dinoprost Tromethamine": [
+          "Organic Molecular Entity",
+          "Prostaglandin Analogue"
         ]
       },
-      "id": "path_26229"
+      "id": "path_13339"
     },
     {
       "score": {
-        "ic_mean": 0.6686,
-        "final_score": 0.6686
+        "ic_mean": 0.6279,
+        "final_score": 0.6279
       },
       "nodes": [
         {
@@ -156,11 +258,11 @@
           "type": "Compound"
         },
         {
-          "id": "Ptger1",
-          "type": "Gene"
+          "id": "Anaphylactoid Syndrome Of Pregnancy",
+          "type": "Side Effect"
         },
         {
-          "id": "Alprostadil",
+          "id": "Dinoprost Tromethamine",
           "type": "Compound"
         },
         {
@@ -171,28 +273,267 @@
       "edges": [
         {
           "source": "Dinoprostone",
-          "target": "Ptger1",
-          "label": "binds"
+          "target": "Anaphylactoid Syndrome Of Pregnancy",
+          "label": "causes"
         },
         {
-          "source": "Ptger1",
-          "target": "Alprostadil",
-          "label": "is bound by"
+          "source": "Anaphylactoid Syndrome Of Pregnancy",
+          "target": "Dinoprost Tromethamine",
+          "label": "is caused by"
         },
         {
-          "source": "Alprostadil",
+          "source": "Dinoprost Tromethamine",
           "target": "Slco3a1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Dinoprostone,Alprostadil": [
-          "Prostaglandin Carboxylic Acid Anion",
-          "Prostaglandin E"
+        "Dinoprostone,Dinoprost Tromethamine": [
+          "Organic Molecular Entity",
+          "Prostaglandin Analogue"
         ]
       },
-      "id": "path_26230"
+      "id": "path_13340"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6279,
+        "final_score": 0.6279
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Hypertonus",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco3a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Uterine Hypertonus",
+          "label": "causes"
+        },
+        {
+          "source": "Uterine Hypertonus",
+          "target": "Dinoprost Tromethamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprost Tromethamine",
+          "target": "Slco3a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Dinoprost Tromethamine": [
+          "Organic Molecular Entity",
+          "Prostaglandin Analogue"
+        ]
+      },
+      "id": "path_13341"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6279,
+        "final_score": 0.6279
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Amniotic Fluid Embolism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco3a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Amniotic Fluid Embolism",
+          "label": "causes"
+        },
+        {
+          "source": "Amniotic Fluid Embolism",
+          "target": "Dinoprost Tromethamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprost Tromethamine",
+          "target": "Slco3a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Dinoprost Tromethamine": [
+          "Organic Molecular Entity",
+          "Prostaglandin Analogue"
+        ]
+      },
+      "id": "path_13342"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6279,
+        "final_score": 0.6279
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Death Neonatal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco3a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Death Neonatal",
+          "label": "causes"
+        },
+        {
+          "source": "Death Neonatal",
+          "target": "Dinoprost Tromethamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprost Tromethamine",
+          "target": "Slco3a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Dinoprost Tromethamine": [
+          "Organic Molecular Entity",
+          "Prostaglandin Analogue"
+        ]
+      },
+      "id": "path_13343"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6279,
+        "final_score": 0.6279
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Foetal Distress Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco3a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Foetal Distress Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Foetal Distress Syndrome",
+          "target": "Dinoprost Tromethamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprost Tromethamine",
+          "target": "Slco3a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Dinoprost Tromethamine": [
+          "Organic Molecular Entity",
+          "Prostaglandin Analogue"
+        ]
+      },
+      "id": "path_13344"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6029,
+        "final_score": 0.6029
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Rupture",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco3a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Uterine Rupture",
+          "label": "causes"
+        },
+        {
+          "source": "Uterine Rupture",
+          "target": "Dinoprost Tromethamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprost Tromethamine",
+          "target": "Slco3a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Dinoprost Tromethamine": [
+          "Organic Molecular Entity",
+          "Prostaglandin Analogue"
+        ]
+      },
+      "id": "path_13345"
     }
-  ],
-  "verbalization": ""
+  ]
 }

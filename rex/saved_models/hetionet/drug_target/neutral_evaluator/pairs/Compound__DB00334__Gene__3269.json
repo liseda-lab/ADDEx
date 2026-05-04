@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7321,
-        "final_score": 0.7321
+        "ic_mean": 0.7605,
+        "final_score": 0.7605
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Histamine Receptors",
-          "type": "Pathway"
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Hrh1",
@@ -32,21 +32,21 @@
         },
         {
           "source": "Hrh4",
-          "target": "Histamine Receptors",
+          "target": "Histamine Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Histamine Receptors",
+          "source": "Histamine Receptor Activity",
           "target": "Hrh1",
           "label": "is participated by"
         }
       ],
-      "id": "path_29648"
+      "id": "path_15287"
     },
     {
       "score": {
-        "ic_mean": 0.6721,
-        "final_score": 0.6721
+        "ic_mean": 0.7398,
+        "final_score": 0.7398
       },
       "nodes": [
         {
@@ -54,11 +54,53 @@
           "type": "Compound"
         },
         {
-          "id": "Htr5a",
+          "id": "Hrh2",
           "type": "Gene"
         },
         {
-          "id": "Loxapine",
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Olanzapine",
+          "target": "Hrh2",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh2",
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptor Activity",
+          "target": "Hrh1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15288"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6886,
+        "final_score": 0.6886
+      },
+      "nodes": [
+        {
+          "id": "Olanzapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "Amoxapine",
           "type": "Compound"
         },
         {
@@ -69,122 +111,27 @@
       "edges": [
         {
           "source": "Olanzapine",
-          "target": "Htr5a",
+          "target": "Hrh4",
           "label": "binds"
         },
         {
-          "source": "Htr5a",
-          "target": "Loxapine",
+          "source": "Hrh4",
+          "target": "Amoxapine",
           "label": "is bound by"
         },
         {
-          "source": "Loxapine",
+          "source": "Amoxapine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Olanzapine,Loxapine": [
+        "Olanzapine,Amoxapine": [
           "Organic Heteropolycyclic Compound",
-          "Antipsychotic Agent"
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_29649"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6471,
-        "final_score": 0.6471
-      },
-      "nodes": [
-        {
-          "id": "Olanzapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Mesoridazine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Olanzapine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Mesoridazine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mesoridazine",
-          "target": "Hrh1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Olanzapine,Mesoridazine": [
-          "Tertiary Amino Compound",
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_29650"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6471,
-        "final_score": 0.6471
-      },
-      "nodes": [
-        {
-          "id": "Olanzapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr5a",
-          "type": "Gene"
-        },
-        {
-          "id": "Asenapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Olanzapine",
-          "target": "Htr5a",
-          "label": "binds"
-        },
-        {
-          "source": "Htr5a",
-          "target": "Asenapine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Asenapine",
-          "target": "Hrh1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Olanzapine,Asenapine": [
-          "Antipsychotic Agent"
-        ]
-      },
-      "id": "path_29651"
+      "id": "path_15289"
     },
     {
       "score": {
@@ -228,11 +175,11 @@
       ],
       "lowest_common_ancestors": {
         "Olanzapine,Tolazoline": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_29652"
+      "id": "path_15290"
     },
     {
       "score": {
@@ -245,11 +192,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hrh2",
+          "id": "Hrh4",
           "type": "Gene"
         },
         {
-          "id": "Epinastine",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -260,26 +207,27 @@
       "edges": [
         {
           "source": "Olanzapine",
-          "target": "Hrh2",
+          "target": "Hrh4",
           "label": "binds"
         },
         {
-          "source": "Hrh2",
-          "target": "Epinastine",
+          "source": "Hrh4",
+          "target": "Chlorpromazine",
           "label": "is bound by"
         },
         {
-          "source": "Epinastine",
+          "source": "Chlorpromazine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Olanzapine,Epinastine": [
-          "Organic Heteropolycyclic Compound"
+        "Olanzapine,Chlorpromazine": [
+          "Organic Heteropolycyclic Compound",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_29653"
+      "id": "path_15291"
     },
     {
       "score": {
@@ -292,11 +240,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr7",
+          "id": "Htr1d",
           "type": "Gene"
         },
         {
-          "id": "Epinastine",
+          "id": "Mianserin",
           "type": "Compound"
         },
         {
@@ -307,27 +255,27 @@
       "edges": [
         {
           "source": "Olanzapine",
-          "target": "Htr7",
+          "target": "Htr1d",
           "label": "binds"
         },
         {
-          "source": "Htr7",
-          "target": "Epinastine",
+          "source": "Htr1d",
+          "target": "Mianserin",
           "label": "is bound by"
         },
         {
-          "source": "Epinastine",
+          "source": "Mianserin",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Olanzapine,Epinastine": [
-          "Organic Heteropolycyclic Compound"
+        "Olanzapine,Mianserin": [
+          "Organic Heteropolycyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_29654"
+      "id": "path_15292"
     }
-  ],
-  "verbalization": ""
+  ]
 }

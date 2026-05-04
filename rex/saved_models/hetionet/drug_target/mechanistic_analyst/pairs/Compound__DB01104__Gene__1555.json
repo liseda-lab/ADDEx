@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01104 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4795,
+        "final_score": 0.4795
+      },
+      "nodes": [
+        {
+          "id": "Sertraline",
+          "type": "Compound"
+        },
+        {
+          "id": "Peritoneal Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sertraline",
+          "target": "Peritoneal Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Peritoneal Haemorrhage",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sertraline,Clopidogrel": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_4310"
+    }
+  ]
+}

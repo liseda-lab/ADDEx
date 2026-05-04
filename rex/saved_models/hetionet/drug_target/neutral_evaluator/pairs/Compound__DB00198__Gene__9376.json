@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00198 - Gene::9376",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5787,
+        "final_score": 0.5787
+      },
+      "nodes": [
+        {
+          "id": "Oseltamivir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Cefalotin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oseltamivir",
+          "target": "Slc15a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a1",
+          "target": "Cefalotin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cefalotin",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oseltamivir,Cefalotin": [
+          "Carbonyl Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_2437"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5787,
+        "final_score": 0.5787
+      },
+      "nodes": [
+        {
+          "id": "Oseltamivir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Cefadroxil",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oseltamivir",
+          "target": "Slc15a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a1",
+          "target": "Cefadroxil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cefadroxil",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oseltamivir,Cefadroxil": [
+          "Organic Molecule",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_2438"
+    }
+  ]
 }

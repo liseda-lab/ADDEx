@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4627,
-        "final_score": 0.4627
+        "ic_mean": 0.4405,
+        "final_score": 0.4405
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Hypotrichosis",
+          "type": "Side Effect"
         },
         {
-          "id": "Pantoprazole",
+          "id": "Famotidine",
           "type": "Compound"
         },
         {
@@ -27,31 +27,31 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Hypotrichosis",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Pantoprazole",
-          "label": "is bound by"
+          "source": "Hypotrichosis",
+          "target": "Famotidine",
+          "label": "is caused by"
         },
         {
-          "source": "Pantoprazole",
+          "source": "Famotidine",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Pantoprazole": [
-          "Organooxygen Compound"
+        "Cyclosporine,Famotidine": [
+          "Organonitrogen Compound"
         ]
       },
-      "id": "path_20645"
+      "id": "path_10446"
     },
     {
       "score": {
-        "ic_mean": 0.4414,
-        "final_score": 0.4414
+        "ic_mean": 0.4383,
+        "final_score": 0.4383
       },
       "nodes": [
         {
@@ -59,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Hyperamylasaemia",
+          "type": "Side Effect"
         },
         {
-          "id": "Rilpivirine",
+          "id": "Ritonavir",
           "type": "Compound"
         },
         {
@@ -74,31 +74,79 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Hyperamylasaemia",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Rilpivirine",
-          "label": "is bound by"
+          "source": "Hyperamylasaemia",
+          "target": "Ritonavir",
+          "label": "is caused by"
         },
         {
-          "source": "Rilpivirine",
+          "source": "Ritonavir",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Rilpivirine": [
+        "Cyclosporine,Ritonavir": [
+          "Carboxamide"
+        ]
+      },
+      "id": "path_10447"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4299,
+        "final_score": 0.4299
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Joint Dislocation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Joint Dislocation",
+          "label": "causes"
+        },
+        {
+          "source": "Joint Dislocation",
+          "target": "Azelastine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azelastine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Azelastine": [
+          "Immunotherapeutic Agent",
           "Organic Amino Compound"
         ]
       },
-      "id": "path_20646"
+      "id": "path_10448"
     },
     {
       "score": {
-        "ic_mean": 0.4355,
-        "final_score": 0.4355
+        "ic_mean": 0.41,
+        "final_score": 0.41
       },
       "nodes": [
         {
@@ -106,11 +154,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb11",
-          "type": "Gene"
+          "id": "Cerebellar Ataxia",
+          "type": "Side Effect"
         },
         {
-          "id": "Rosuvastatin",
+          "id": "Amiodarone",
           "type": "Compound"
         },
         {
@@ -121,219 +169,31 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Abcb11",
-          "label": "binds"
+          "target": "Cerebellar Ataxia",
+          "label": "causes"
         },
         {
-          "source": "Abcb11",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
+          "source": "Cerebellar Ataxia",
+          "target": "Amiodarone",
+          "label": "is caused by"
         },
         {
-          "source": "Rosuvastatin",
+          "source": "Amiodarone",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Rosuvastatin": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_20647"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4355,
-        "final_score": 0.4355
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Progesterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Progesterone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Progesterone",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Progesterone": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_20648"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4249,
-        "final_score": 0.4249
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a6",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Slc22a6",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a6",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Antipyrine": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_20649"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4241,
-        "final_score": 0.4241
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Glyburide": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_20650"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4142,
-        "final_score": 0.4142
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketoconazole",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Ketoconazole",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketoconazole",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Ketoconazole": [
+        "Cyclosporine,Amiodarone": [
           "Organic Amino Compound"
         ]
       },
-      "id": "path_20651"
+      "id": "path_10449"
     },
     {
       "score": {
-        "ic_mean": 0.4114,
-        "final_score": 0.4114
+        "ic_mean": 0.41,
+        "final_score": 0.41
       },
       "nodes": [
         {
@@ -341,11 +201,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1b1",
-          "type": "Gene"
+          "id": "Pustular Psoriasis",
+          "type": "Side Effect"
         },
         {
-          "id": "Rosuvastatin",
+          "id": "Amiodarone",
           "type": "Compound"
         },
         {
@@ -356,31 +216,31 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Slco1b1",
-          "label": "binds"
+          "target": "Pustular Psoriasis",
+          "label": "causes"
         },
         {
-          "source": "Slco1b1",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
+          "source": "Pustular Psoriasis",
+          "target": "Amiodarone",
+          "label": "is caused by"
         },
         {
-          "source": "Rosuvastatin",
+          "source": "Amiodarone",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Rosuvastatin": [
-          "Organooxygen Compound"
+        "Cyclosporine,Amiodarone": [
+          "Organic Amino Compound"
         ]
       },
-      "id": "path_20652"
+      "id": "path_10450"
     },
     {
       "score": {
-        "ic_mean": 0.4114,
-        "final_score": 0.4114
+        "ic_mean": 0.4028,
+        "final_score": 0.4028
       },
       "nodes": [
         {
@@ -388,11 +248,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco1a2",
-          "type": "Gene"
+          "id": "Gingival Disorder",
+          "type": "Side Effect"
         },
         {
-          "id": "Quinine",
+          "id": "Etoricoxib",
           "type": "Compound"
         },
         {
@@ -403,309 +263,26 @@
       "edges": [
         {
           "source": "Cyclosporine",
-          "target": "Slco1a2",
-          "label": "binds"
+          "target": "Gingival Disorder",
+          "label": "causes"
         },
         {
-          "source": "Slco1a2",
-          "target": "Quinine",
-          "label": "is bound by"
+          "source": "Gingival Disorder",
+          "target": "Etoricoxib",
+          "label": "is caused by"
         },
         {
-          "source": "Quinine",
+          "source": "Etoricoxib",
           "target": "Cyp2c19",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Cyclosporine,Quinine": [
+        "Cyclosporine,Etoricoxib": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_20653"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4,
-        "final_score": 0.4
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Saquinavir",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Saquinavir",
-          "label": "is bound by"
-        },
-        {
-          "source": "Saquinavir",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Saquinavir": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_20654"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4,
-        "final_score": 0.4
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Slco1a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1a2",
-          "target": "Glyburide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Glyburide",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Glyburide": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_20655"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3976,
-        "final_score": 0.3976
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Phenobarbital",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Phenobarbital",
-          "label": "is bound by"
-        },
-        {
-          "source": "Phenobarbital",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Phenobarbital": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_20656"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3948,
-        "final_score": 0.3948
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Antipyrine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Antipyrine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Antipyrine",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Antipyrine": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_20657"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3813,
-        "final_score": 0.3813
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Slco1b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Atorvastatin": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_20658"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3813,
-        "final_score": 0.3813
-      },
-      "nodes": [
-        {
-          "id": "Cyclosporine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c19",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Cyclosporine",
-          "target": "Slco1a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1a2",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp2c19",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Cyclosporine,Atorvastatin": [
-          "Organooxygen Compound"
-        ]
-      },
-      "id": "path_20659"
+      "id": "path_10451"
     }
-  ],
-  "verbalization": ""
+  ]
 }

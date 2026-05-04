@@ -3,96 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6837,
-        "final_score": 0.6837
-      },
-      "nodes": [
-        {
-          "id": "Dinoprost Tromethamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Alprostadil",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptger1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dinoprost Tromethamine",
-          "target": "Slco2a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2a1",
-          "target": "Alprostadil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alprostadil",
-          "target": "Ptger1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dinoprost Tromethamine,Alprostadil": [
-          "Prostaglandin Analogue",
-          "Organic Molecular Entity"
-        ]
-      },
-      "id": "path_7303"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6809,
-        "final_score": 0.6809
-      },
-      "nodes": [
-        {
-          "id": "Dinoprost Tromethamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgir",
-          "type": "Gene"
-        },
-        {
-          "id": "Prostanoid Ligand Receptors",
-          "type": "Pathway"
-        },
-        {
-          "id": "Ptger1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dinoprost Tromethamine",
-          "target": "Ptgir",
-          "label": "binds"
-        },
-        {
-          "source": "Ptgir",
-          "target": "Prostanoid Ligand Receptors",
-          "label": "participates"
-        },
-        {
-          "source": "Prostanoid Ligand Receptors",
-          "target": "Ptger1",
-          "label": "is participated by"
-        }
-      ],
-      "id": "path_7304"
-    },
-    {
-      "score": {
         "ic_mean": 0.6211,
         "final_score": 0.6211
       },
@@ -133,11 +43,59 @@
       ],
       "lowest_common_ancestors": {
         "Dinoprost Tromethamine,Carboprost Tromethamine": [
-          "Prostaglandin Analogue",
-          "P-Block Molecular Entity"
+          "P-Block Molecular Entity",
+          "Prostaglandin Analogue"
         ]
       },
-      "id": "path_7305"
+      "id": "path_3431"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6211,
+        "final_score": 0.6211
+      },
+      "nodes": [
+        {
+          "id": "Dinoprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Venospasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carboprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptger1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprost Tromethamine",
+          "target": "Venospasm",
+          "label": "causes"
+        },
+        {
+          "source": "Venospasm",
+          "target": "Carboprost Tromethamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carboprost Tromethamine",
+          "target": "Ptger1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprost Tromethamine,Carboprost Tromethamine": [
+          "P-Block Molecular Entity",
+          "Prostaglandin Analogue"
+        ]
+      },
+      "id": "path_3432"
     },
     {
       "score": {
@@ -181,12 +139,11 @@
       ],
       "lowest_common_ancestors": {
         "Dinoprost Tromethamine,Carboprost Tromethamine": [
-          "Prostaglandin Analogue",
-          "P-Block Molecular Entity"
+          "P-Block Molecular Entity",
+          "Prostaglandin Analogue"
         ]
       },
-      "id": "path_7306"
+      "id": "path_3433"
     }
-  ],
-  "verbalization": ""
+  ]
 }

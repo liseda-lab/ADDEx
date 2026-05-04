@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00421 - Gene::6462",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6686,
+        "final_score": 0.6686
+      },
+      "nodes": [
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Mitotane",
+          "type": "Compound"
+        },
+        {
+          "id": "Shbg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Spironolactone",
+          "target": "Cyp11b1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp11b1",
+          "target": "Mitotane",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mitotane",
+          "target": "Shbg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Spironolactone,Mitotane": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_12807"
+    }
+  ]
 }

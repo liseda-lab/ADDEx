@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6749,
-        "final_score": 0.6749
+        "ic_mean": 0.4527,
+        "final_score": 0.4527
       },
       "nodes": [
         {
@@ -12,8 +12,55 @@
           "type": "Compound"
         },
         {
-          "id": "Tubb2b",
+          "id": "Infusion Site Inflammation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
           "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Infusion Site Inflammation",
+          "label": "causes"
+        },
+        {
+          "source": "Infusion Site Inflammation",
+          "target": "Caffeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Caffeine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_760"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4521,
+        "final_score": 0.4521
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Enterocolitis",
+          "type": "Side Effect"
         },
         {
           "id": "Cabazitaxel",
@@ -27,13 +74,13 @@
       "edges": [
         {
           "source": "Paclitaxel",
-          "target": "Tubb2b",
-          "label": "binds"
+          "target": "Neutropenic Enterocolitis",
+          "label": "causes"
         },
         {
-          "source": "Tubb2b",
+          "source": "Neutropenic Enterocolitis",
           "target": "Cabazitaxel",
-          "label": "is bound by"
+          "label": "is caused by"
         },
         {
           "source": "Cabazitaxel",
@@ -46,12 +93,12 @@
           "Tetracyclic Diterpenoid"
         ]
       },
-      "id": "path_1559"
+      "id": "path_761"
     },
     {
       "score": {
-        "ic_mean": 0.5935,
-        "final_score": 0.5935
+        "ic_mean": 0.4298,
+        "final_score": 0.4298
       },
       "nodes": [
         {
@@ -59,105 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Tubb1",
-          "type": "Gene"
-        },
-        {
-          "id": "Colchicine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Paclitaxel",
-          "target": "Tubb1",
-          "label": "binds"
-        },
-        {
-          "source": "Tubb1",
-          "target": "Colchicine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Colchicine",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Paclitaxel,Colchicine": [
-          "Organic Molecular Entity"
-        ]
-      },
-      "id": "path_1560"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4893,
-        "final_score": 0.4893
-      },
-      "nodes": [
-        {
-          "id": "Paclitaxel",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b3",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Paclitaxel",
-          "target": "Slco1b3",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b3",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Paclitaxel,Pravastatin": [
-          "Organic Molecular Entity"
-        ]
-      },
-      "id": "path_1561"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4597,
-        "final_score": 0.4597
-      },
-      "nodes": [
-        {
-          "id": "Paclitaxel",
-          "type": "Compound"
-        },
-        {
-          "id": "Respiratory Sounds Decreased",
+          "id": "Cranial Nerve Paralysis",
           "type": "Side Effect"
         },
         {
-          "id": "Propafenone",
+          "id": "Lidocaine",
           "type": "Compound"
         },
         {
@@ -168,31 +121,31 @@
       "edges": [
         {
           "source": "Paclitaxel",
-          "target": "Respiratory Sounds Decreased",
+          "target": "Cranial Nerve Paralysis",
           "label": "causes"
         },
         {
-          "source": "Respiratory Sounds Decreased",
-          "target": "Propafenone",
+          "source": "Cranial Nerve Paralysis",
+          "target": "Lidocaine",
           "label": "is caused by"
         },
         {
-          "source": "Propafenone",
+          "source": "Lidocaine",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Paclitaxel,Propafenone": [
+        "Paclitaxel,Lidocaine": [
           "Organic Molecular Entity"
         ]
       },
-      "id": "path_1562"
+      "id": "path_762"
     },
     {
       "score": {
-        "ic_mean": 0.4549,
-        "final_score": 0.4549
+        "ic_mean": 0.4206,
+        "final_score": 0.4206
       },
       "nodes": [
         {
@@ -200,11 +153,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb11",
-          "type": "Gene"
+          "id": "Leukoencephalopathy",
+          "type": "Side Effect"
         },
         {
-          "id": "Ethinyl Estradiol",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -215,31 +168,31 @@
       "edges": [
         {
           "source": "Paclitaxel",
-          "target": "Abcb11",
-          "label": "binds"
+          "target": "Leukoencephalopathy",
+          "label": "causes"
         },
         {
-          "source": "Abcb11",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
+          "source": "Leukoencephalopathy",
+          "target": "Ifosfamide",
+          "label": "is caused by"
         },
         {
-          "source": "Ethinyl Estradiol",
+          "source": "Ifosfamide",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Paclitaxel,Ethinyl Estradiol": [
-          "Lipid"
+        "Paclitaxel,Ifosfamide": [
+          "Organic Molecular Entity"
         ]
       },
-      "id": "path_1563"
+      "id": "path_763"
     },
     {
       "score": {
-        "ic_mean": 0.4435,
-        "final_score": 0.4435
+        "ic_mean": 0.4206,
+        "final_score": 0.4206
       },
       "nodes": [
         {
@@ -247,11 +200,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb11",
-          "type": "Gene"
+          "id": "Caecitis",
+          "type": "Side Effect"
         },
         {
-          "id": "Pravastatin",
+          "id": "Ifosfamide",
           "type": "Compound"
         },
         {
@@ -262,27 +215,167 @@
       "edges": [
         {
           "source": "Paclitaxel",
-          "target": "Abcb11",
-          "label": "binds"
+          "target": "Caecitis",
+          "label": "causes"
         },
         {
-          "source": "Abcb11",
-          "target": "Pravastatin",
-          "label": "is bound by"
+          "source": "Caecitis",
+          "target": "Ifosfamide",
+          "label": "is caused by"
         },
         {
-          "source": "Pravastatin",
+          "source": "Ifosfamide",
           "target": "Cyp2c8",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Paclitaxel,Pravastatin": [
+        "Paclitaxel,Ifosfamide": [
           "Organic Molecular Entity"
         ]
       },
-      "id": "path_1564"
+      "id": "path_764"
+    },
+    {
+      "score": {
+        "ic_mean": 0.41,
+        "final_score": 0.41
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Necrotizing Enterocolitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Necrotizing Enterocolitis",
+          "label": "causes"
+        },
+        {
+          "source": "Necrotizing Enterocolitis",
+          "target": "Caffeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Caffeine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_765"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3822,
+        "final_score": 0.3822
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Onychomadesis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Onychomadesis",
+          "label": "causes"
+        },
+        {
+          "source": "Onychomadesis",
+          "target": "Fluorouracil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluorouracil",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Fluorouracil": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_766"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3816,
+        "final_score": 0.3816
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Onychomadesis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Onychomadesis",
+          "label": "causes"
+        },
+        {
+          "source": "Onychomadesis",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Carbamazepine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_767"
     }
-  ],
-  "verbalization": ""
+  ]
 }

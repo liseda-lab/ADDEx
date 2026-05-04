@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5847,
-        "final_score": 0.5847
+        "ic_mean": 0.515,
+        "final_score": 0.515
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
+          "id": "Anxiety State",
+          "type": "Side Effect"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Moclobemide",
           "type": "Compound"
         },
         {
@@ -27,32 +27,79 @@
       "edges": [
         {
           "source": "Clomipramine",
-          "target": "Htr6",
-          "label": "binds"
+          "target": "Anxiety State",
+          "label": "causes"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
-          "label": "is bound by"
+          "source": "Anxiety State",
+          "target": "Moclobemide",
+          "label": "is caused by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Moclobemide",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clomipramine,Mesoridazine": [
+        "Clomipramine,Moclobemide": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13116"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4132,
+        "final_score": 0.4132
+      },
+      "nodes": [
+        {
+          "id": "Clomipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aneurysm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tiotropium",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clomipramine",
+          "target": "Aneurysm",
+          "label": "causes"
+        },
+        {
+          "source": "Aneurysm",
+          "target": "Tiotropium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tiotropium",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clomipramine,Tiotropium": [
           "Agent Affecting Nervous System",
-          "Organic Heterotricyclic Compound"
+          "Organic Cation"
         ]
       },
-      "id": "path_25823"
+      "id": "path_13117"
     },
     {
       "score": {
-        "ic_mean": 0.5333,
-        "final_score": 0.5333
+        "ic_mean": 0.3958,
+        "final_score": 0.3958
       },
       "nodes": [
         {
@@ -60,297 +107,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Duloxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clomipramine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Duloxetine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Duloxetine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clomipramine,Duloxetine": [
-          "Organic Heterocyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_25824"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5333,
-        "final_score": 0.5333
-      },
-      "nodes": [
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh2",
-          "type": "Gene"
-        },
-        {
-          "id": "Epinastine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clomipramine",
-          "target": "Hrh2",
-          "label": "binds"
-        },
-        {
-          "source": "Hrh2",
-          "target": "Epinastine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Epinastine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clomipramine,Epinastine": [
-          "Organic Heteropolycyclic Compound"
-        ]
-      },
-      "id": "path_25825"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5333,
-        "final_score": 0.5333
-      },
-      "nodes": [
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Atomoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clomipramine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Atomoxetine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atomoxetine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clomipramine,Atomoxetine": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_25826"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5333,
-        "final_score": 0.5333
-      },
-      "nodes": [
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh2",
-          "type": "Gene"
-        },
-        {
-          "id": "Mianserin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clomipramine",
-          "target": "Hrh2",
-          "label": "binds"
-        },
-        {
-          "source": "Hrh2",
-          "target": "Mianserin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mianserin",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clomipramine,Mianserin": [
-          "Dibenzoazepine",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_25827"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5333,
-        "final_score": 0.5333
-      },
-      "nodes": [
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Hrh2",
-          "type": "Gene"
-        },
-        {
-          "id": "Histamine Phosphate",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clomipramine",
-          "target": "Hrh2",
-          "label": "binds"
-        },
-        {
-          "source": "Hrh2",
-          "target": "Histamine Phosphate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Histamine Phosphate",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clomipramine,Histamine Phosphate": [
-          "Pnictogen Molecular Entity"
-        ]
-      },
-      "id": "path_25828"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5333,
-        "final_score": 0.5333
-      },
-      "nodes": [
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr6",
-          "type": "Gene"
-        },
-        {
-          "id": "Mianserin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clomipramine",
-          "target": "Htr6",
-          "label": "binds"
-        },
-        {
-          "source": "Htr6",
-          "target": "Mianserin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mianserin",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clomipramine,Mianserin": [
-          "Dibenzoazepine",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_25829"
-    },
-    {
-      "score": {
-        "ic_mean": 0.524,
-        "final_score": 0.524
-      },
-      "nodes": [
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Abdominal Disorder",
+          "id": "Inner Ear Disorder",
           "type": "Side Effect"
         },
         {
-          "id": "Maprotiline",
+          "id": "Irbesartan",
           "type": "Compound"
         },
         {
@@ -361,32 +122,31 @@
       "edges": [
         {
           "source": "Clomipramine",
-          "target": "Abdominal Disorder",
+          "target": "Inner Ear Disorder",
           "label": "causes"
         },
         {
-          "source": "Abdominal Disorder",
-          "target": "Maprotiline",
+          "source": "Inner Ear Disorder",
+          "target": "Irbesartan",
           "label": "is caused by"
         },
         {
-          "source": "Maprotiline",
+          "source": "Irbesartan",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clomipramine,Maprotiline": [
-          "Organic Tricyclic Compound",
-          "Tricyclic Antidepressant"
+        "Clomipramine,Irbesartan": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_25830"
+      "id": "path_13118"
     },
     {
       "score": {
-        "ic_mean": 0.4297,
-        "final_score": 0.4297
+        "ic_mean": 0.3884,
+        "final_score": 0.3884
       },
       "nodes": [
         {
@@ -394,11 +154,11 @@
           "type": "Compound"
         },
         {
-          "id": "Pupils Unequal",
+          "id": "Iiird Nerve Paralysis",
           "type": "Side Effect"
         },
         {
-          "id": "Betaxolol",
+          "id": "Fluvastatin",
           "type": "Compound"
         },
         {
@@ -409,32 +169,31 @@
       "edges": [
         {
           "source": "Clomipramine",
-          "target": "Pupils Unequal",
+          "target": "Iiird Nerve Paralysis",
           "label": "causes"
         },
         {
-          "source": "Pupils Unequal",
-          "target": "Betaxolol",
+          "source": "Iiird Nerve Paralysis",
+          "target": "Fluvastatin",
           "label": "is caused by"
         },
         {
-          "source": "Betaxolol",
+          "source": "Fluvastatin",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clomipramine,Betaxolol": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Clomipramine,Fluvastatin": [
+          "Heteroorganic Entity"
         ]
       },
-      "id": "path_25831"
+      "id": "path_13119"
     },
     {
       "score": {
-        "ic_mean": 0.3893,
-        "final_score": 0.3893
+        "ic_mean": 0.364,
+        "final_score": 0.364
       },
       "nodes": [
         {
@@ -442,11 +201,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cholinergic Syndrome",
+          "id": "Inner Ear Disorder",
           "type": "Side Effect"
         },
         {
-          "id": "Cevimeline",
+          "id": "Itraconazole",
           "type": "Compound"
         },
         {
@@ -457,32 +216,31 @@
       "edges": [
         {
           "source": "Clomipramine",
-          "target": "Cholinergic Syndrome",
+          "target": "Inner Ear Disorder",
           "label": "causes"
         },
         {
-          "source": "Cholinergic Syndrome",
-          "target": "Cevimeline",
+          "source": "Inner Ear Disorder",
+          "target": "Itraconazole",
           "label": "is caused by"
         },
         {
-          "source": "Cevimeline",
+          "source": "Itraconazole",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clomipramine,Cevimeline": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
+        "Clomipramine,Itraconazole": [
+          "Organonitrogen Heterocyclic Compound"
         ]
       },
-      "id": "path_25832"
+      "id": "path_13120"
     },
     {
       "score": {
-        "ic_mean": 0.3803,
-        "final_score": 0.3803
+        "ic_mean": 0.3345,
+        "final_score": 0.3345
       },
       "nodes": [
         {
@@ -490,11 +248,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cholinergic Syndrome",
-          "type": "Side Effect"
+          "id": "Clocapramine",
+          "type": "Compound"
         },
         {
-          "id": "Risperidone",
+          "id": "Desipramine",
           "type": "Compound"
         },
         {
@@ -505,76 +263,35 @@
       "edges": [
         {
           "source": "Clomipramine",
-          "target": "Cholinergic Syndrome",
-          "label": "causes"
+          "target": "Clocapramine",
+          "label": "resembles"
         },
         {
-          "source": "Cholinergic Syndrome",
-          "target": "Risperidone",
-          "label": "is caused by"
+          "source": "Clocapramine",
+          "target": "Desipramine",
+          "label": "resembles"
         },
         {
-          "source": "Risperidone",
+          "source": "Desipramine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clomipramine,Risperidone": [
-          "Organic Heteropolycyclic Compound",
-          "Agent Affecting Nervous System"
-        ]
-      },
-      "id": "path_25833"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3669,
-        "final_score": 0.3669
-      },
-      "nodes": [
-        {
-          "id": "Clomipramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Labyrinthine Disorder",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Sertraline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clomipramine",
-          "target": "Labyrinthine Disorder",
-          "label": "causes"
-        },
-        {
-          "source": "Labyrinthine Disorder",
-          "target": "Sertraline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Sertraline",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clomipramine,Sertraline": [
-          "Ammonium Ion Derivative",
+        "Clomipramine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Antidepressant Agent"
+        ],
+        "Clomipramine,Desipramine": [
+          "Tricyclic Antidepressant",
+          "Dibenzoazepine"
+        ],
+        "Clocapramine,Desipramine": [
+          "Organic Heterotricyclic Compound",
           "Antidepressant Agent"
         ]
       },
-      "id": "path_25834"
+      "id": "path_13121"
     }
-  ],
-  "verbalization": ""
+  ]
 }

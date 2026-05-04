@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6305,
-        "final_score": 0.6305
+        "ic_mean": 0.6777,
+        "final_score": 0.6777
       },
       "nodes": [
         {
@@ -16,7 +16,96 @@
           "type": "Gene"
         },
         {
-          "id": "Troleandomycin",
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9084"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5056,
+        "final_score": 0.5056
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Gestodene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Gestodene",
+          "label": "is bound by"
+        },
+        {
+          "source": "Gestodene",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Gestodene": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_9085"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4765,
+        "final_score": 0.4765
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenytoin",
           "type": "Compound"
         },
         {
@@ -32,26 +121,216 @@
         },
         {
           "source": "Cyp2c18",
-          "target": "Troleandomycin",
+          "target": "Phenytoin",
           "label": "is bound by"
         },
         {
-          "source": "Troleandomycin",
+          "source": "Phenytoin",
           "target": "Cyp3a5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Buprenorphine,Troleandomycin": [
+        "Buprenorphine,Phenytoin": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9086"
+    },
+    {
+      "score": {
+        "ic_mean": 0.435,
+        "final_score": 0.435
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Lercanidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Lercanidipine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lercanidipine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Lercanidipine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_9087"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4185,
+        "final_score": 0.4185
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Domperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Domperidone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Domperidone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Domperidone": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9088"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4185,
+        "final_score": 0.4185
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Nelfinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Nelfinavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nelfinavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Nelfinavir": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_9089"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4185,
+        "final_score": 0.4185
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Eplerenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Eplerenone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Eplerenone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Eplerenone": [
           "Heteroorganic Entity"
         ]
       },
-      "id": "path_18083"
+      "id": "path_9090"
     },
     {
       "score": {
-        "ic_mean": 0.587,
-        "final_score": 0.587
+        "ic_mean": 0.4185,
+        "final_score": 0.4185
       },
       "nodes": [
         {
@@ -59,11 +338,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprd1",
+          "id": "Cyp3a7-cyp3a51p",
           "type": "Gene"
         },
         {
-          "id": "Oxycodone",
+          "id": "Itraconazole",
           "type": "Compound"
         },
         {
@@ -74,79 +353,31 @@
       "edges": [
         {
           "source": "Buprenorphine",
-          "target": "Oprd1",
+          "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         },
         {
-          "source": "Oprd1",
-          "target": "Oxycodone",
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Itraconazole",
           "label": "is bound by"
         },
         {
-          "source": "Oxycodone",
+          "source": "Itraconazole",
           "target": "Cyp3a5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Buprenorphine,Oxycodone": [
-          "Heteroorganic Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_18084"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5792,
-        "final_score": 0.5792
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Ifosfamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Ifosfamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ifosfamide",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Ifosfamide": [
+        "Buprenorphine,Itraconazole": [
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_18085"
+      "id": "path_9091"
     },
     {
       "score": {
-        "ic_mean": 0.5657,
-        "final_score": 0.5657
+        "ic_mean": 0.4185,
+        "final_score": 0.4185
       },
       "nodes": [
         {
@@ -154,11 +385,11 @@
           "type": "Compound"
         },
         {
-          "id": "Oprm1",
+          "id": "Cyp3a7-cyp3a51p",
           "type": "Gene"
         },
         {
-          "id": "Alfentanil",
+          "id": "Dapsone",
           "type": "Compound"
         },
         {
@@ -169,315 +400,74 @@
       "edges": [
         {
           "source": "Buprenorphine",
-          "target": "Oprm1",
+          "target": "Cyp3a7-cyp3a51p",
           "label": "binds"
         },
         {
-          "source": "Oprm1",
-          "target": "Alfentanil",
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Dapsone",
           "label": "is bound by"
         },
         {
-          "source": "Alfentanil",
+          "source": "Dapsone",
           "target": "Cyp3a5",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Buprenorphine,Alfentanil": [
+        "Buprenorphine,Dapsone": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_9092"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4029,
+        "final_score": 0.4029
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Phenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Phenytoin": [
           "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_18086"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5569,
-        "final_score": 0.5569
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Fentanyl",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Fentanyl",
-          "label": "is bound by"
-        },
-        {
-          "source": "Fentanyl",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Fentanyl": [
-          "Organonitrogen Compound",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_18087"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5356,
-        "final_score": 0.5356
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprd1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Oprd1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprd1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Methadone": [
-          "Chemical Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_18088"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5356,
-        "final_score": 0.5356
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Oprk1",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Oprk1",
-          "label": "binds"
-        },
-        {
-          "source": "Oprk1",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Methadone": [
-          "Chemical Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_18089"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5278,
-        "final_score": 0.5278
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Methadone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Methadone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Methadone",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Methadone": [
-          "Chemical Entity",
-          "Opioid Receptor Agonist"
-        ]
-      },
-      "id": "path_18090"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5278,
-        "final_score": 0.5278
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c18",
-          "type": "Gene"
-        },
-        {
-          "id": "Cyclophosphamide",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Cyp2c18",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c18",
-          "target": "Cyclophosphamide",
-          "label": "is bound by"
-        },
-        {
-          "source": "Cyclophosphamide",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Cyclophosphamide": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_18091"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5234,
-        "final_score": 0.5234
-      },
-      "nodes": [
-        {
-          "id": "Buprenorphine",
-          "type": "Compound"
-        },
-        {
-          "id": "Wakefulness",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Trazodone",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Buprenorphine",
-          "target": "Wakefulness",
-          "label": "causes"
-        },
-        {
-          "source": "Wakefulness",
-          "target": "Trazodone",
-          "label": "is caused by"
-        },
-        {
-          "source": "Trazodone",
-          "target": "Cyp3a5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Buprenorphine,Trazodone": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_18092"
+      "id": "path_9093"
     }
-  ],
-  "verbalization": ""
+  ]
 }

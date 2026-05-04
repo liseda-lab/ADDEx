@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00870 - Gene::5742",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5423,
+        "final_score": 0.5423
+      },
+      "nodes": [
+        {
+          "id": "Suprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Bleeding Tendency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Montelukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Suprofen",
+          "target": "Bleeding Tendency",
+          "label": "causes"
+        },
+        {
+          "source": "Bleeding Tendency",
+          "target": "Montelukast",
+          "label": "is caused by"
+        },
+        {
+          "source": "Montelukast",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Suprofen,Montelukast": [
+          "Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_6758"
+    }
+  ]
+}

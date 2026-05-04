@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01182 - Gene::3757",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4913,
+        "final_score": 0.4913
+      },
+      "nodes": [
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nodal Arrhythmia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibutilide",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propafenone",
+          "target": "Nodal Arrhythmia",
+          "label": "causes"
+        },
+        {
+          "source": "Nodal Arrhythmia",
+          "target": "Ibutilide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibutilide",
+          "target": "Kcnh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propafenone,Ibutilide": [
+          "Antiarrhythmic Agent",
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_9261"
+    }
+  ]
+}

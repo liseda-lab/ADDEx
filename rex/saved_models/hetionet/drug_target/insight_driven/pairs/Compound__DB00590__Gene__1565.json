@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB00590 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6423,
+        "final_score": 0.6962,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxazosin",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4075"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4603,
+        "final_score": 0.4603
+      },
+      "nodes": [
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Essential Hypertension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxazosin",
+          "target": "Essential Hypertension",
+          "label": "causes"
+        },
+        {
+          "source": "Essential Hypertension",
+          "target": "Irbesartan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Irbesartan",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxazosin,Irbesartan": [
+          "Agent Affecting Cardiovascular System",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4076"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4278,
+        "final_score": 0.4278
+      },
+      "nodes": [
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Aneurysm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tiotropium",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxazosin",
+          "target": "Aneurysm",
+          "label": "causes"
+        },
+        {
+          "source": "Aneurysm",
+          "target": "Tiotropium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tiotropium",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxazosin,Tiotropium": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4077"
+    }
+  ]
+}

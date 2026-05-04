@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00408 - Gene::3269",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7398,
+        "final_score": 0.7866,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptor Activity",
+          "target": "Hrh1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1835"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5063,
+        "final_score": 0.5063
+      },
+      "nodes": [
+        {
+          "id": "Loxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Choreoathetoid Movements",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loxapine",
+          "target": "Choreoathetoid Movements",
+          "label": "causes"
+        },
+        {
+          "source": "Choreoathetoid Movements",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loxapine,Fluphenazine": [
+          "Organic Heterotricyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_1836"
+    }
+  ]
+}

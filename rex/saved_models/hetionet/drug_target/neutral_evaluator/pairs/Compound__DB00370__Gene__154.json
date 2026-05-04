@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6778,
-        "final_score": 0.6778
+        "ic_mean": 0.5964,
+        "final_score": 0.5964
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adrb1",
+          "id": "Adra2c",
           "type": "Gene"
         },
         {
-          "id": "Metipranolol",
+          "id": "Dipivefrin",
           "type": "Compound"
         },
         {
@@ -27,32 +27,78 @@
       "edges": [
         {
           "source": "Mirtazapine",
-          "target": "Adrb1",
+          "target": "Adra2c",
           "label": "binds"
         },
         {
-          "source": "Adrb1",
-          "target": "Metipranolol",
+          "source": "Adra2c",
+          "target": "Dipivefrin",
           "label": "is bound by"
         },
         {
-          "source": "Metipranolol",
+          "source": "Dipivefrin",
           "target": "Adrb2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mirtazapine,Metipranolol": [
-          "Agent Affecting Nervous System",
+        "Mirtazapine,Dipivefrin": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_2817"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5237,
+        "final_score": 0.5237
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Norepinephrine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Norepinephrine": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_6129"
+      "id": "path_2818"
     },
     {
       "score": {
-        "ic_mean": 0.6264,
-        "final_score": 0.6264
+        "ic_mean": 0.3709,
+        "final_score": 0.3709
       },
       "nodes": [
         {
@@ -60,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adrb1",
-          "type": "Gene"
+          "id": "Azatadine",
+          "type": "Compound"
         },
         {
-          "id": "Pirbuterol",
+          "id": "Desipramine",
           "type": "Compound"
         },
         {
@@ -75,76 +121,33 @@
       "edges": [
         {
           "source": "Mirtazapine",
-          "target": "Adrb1",
-          "label": "binds"
+          "target": "Azatadine",
+          "label": "resembles"
         },
         {
-          "source": "Adrb1",
-          "target": "Pirbuterol",
-          "label": "is bound by"
+          "source": "Azatadine",
+          "target": "Desipramine",
+          "label": "resembles"
         },
         {
-          "source": "Pirbuterol",
+          "source": "Desipramine",
           "target": "Adrb2",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Mirtazapine,Pirbuterol": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Heterocyclic Compound"
+        "Mirtazapine,Azatadine": [
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Mirtazapine,Desipramine": [
+          "Organic Heteropolycyclic Compound",
+          "Antidepressant Agent"
+        ],
+        "Azatadine,Desipramine": [
+          "Organic Heterotricyclic Compound"
         ]
       },
-      "id": "path_6130"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6264,
-        "final_score": 0.6264
-      },
-      "nodes": [
-        {
-          "id": "Mirtazapine",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb1",
-          "type": "Gene"
-        },
-        {
-          "id": "Penbutolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Adrb2",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Mirtazapine",
-          "target": "Adrb1",
-          "label": "binds"
-        },
-        {
-          "source": "Adrb1",
-          "target": "Penbutolol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Penbutolol",
-          "target": "Adrb2",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Mirtazapine,Penbutolol": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_6131"
+      "id": "path_2819"
     }
-  ],
-  "verbalization": ""
+  ]
 }

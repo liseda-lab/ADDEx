@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7805,
-        "final_score": 0.7805
+        "ic_mean": 0.585,
+        "final_score": 0.585
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Shbg",
-          "type": "Gene"
+          "id": "Genital Discharge",
+          "type": "Side Effect"
         },
         {
-          "id": "Desogestrel",
+          "id": "Etonogestrel",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Levonorgestrel",
-          "target": "Shbg",
-          "label": "binds"
+          "target": "Genital Discharge",
+          "label": "causes"
         },
         {
-          "source": "Shbg",
-          "target": "Desogestrel",
-          "label": "is bound by"
+          "source": "Genital Discharge",
+          "target": "Etonogestrel",
+          "label": "is caused by"
         },
         {
-          "source": "Desogestrel",
+          "source": "Etonogestrel",
           "target": "Pgr",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Levonorgestrel,Desogestrel": [
+        "Levonorgestrel,Etonogestrel": [
           "Progestin",
           "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_26760"
+      "id": "path_13657"
     },
     {
       "score": {
-        "ic_mean": 0.6613,
-        "final_score": 0.6613
+        "ic_mean": 0.5673,
+        "final_score": 0.5673
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Shbg",
-          "type": "Gene"
+          "id": "Device Expulsion",
+          "type": "Side Effect"
         },
         {
-          "id": "Danazol",
+          "id": "Etonogestrel",
           "type": "Compound"
         },
         {
@@ -75,28 +75,274 @@
       "edges": [
         {
           "source": "Levonorgestrel",
-          "target": "Shbg",
-          "label": "binds"
+          "target": "Device Expulsion",
+          "label": "causes"
         },
         {
-          "source": "Shbg",
-          "target": "Danazol",
-          "label": "is bound by"
+          "source": "Device Expulsion",
+          "target": "Etonogestrel",
+          "label": "is caused by"
         },
         {
-          "source": "Danazol",
+          "source": "Etonogestrel",
           "target": "Pgr",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Levonorgestrel,Danazol": [
-          "17Beta-Hydroxy Steroid",
-          "Therapeutic Steroid Hormone"
+        "Levonorgestrel,Etonogestrel": [
+          "Progestin",
+          "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_26761"
+      "id": "path_13658"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5673,
+        "final_score": 0.5673
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Premenstrual Tension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etonogestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Pgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Premenstrual Tension",
+          "label": "causes"
+        },
+        {
+          "source": "Premenstrual Tension",
+          "target": "Etonogestrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etonogestrel",
+          "target": "Pgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Etonogestrel": [
+          "Progestin",
+          "17Beta-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_13659"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5668,
+        "final_score": 0.5668
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Genital Discharge",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Norethindrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Pgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Genital Discharge",
+          "label": "causes"
+        },
+        {
+          "source": "Genital Discharge",
+          "target": "Norethindrone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Norethindrone",
+          "target": "Pgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Norethindrone": [
+          "Progestin",
+          "17Beta-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_13660"
+    },
+    {
+      "score": {
+        "ic_mean": 0.543,
+        "final_score": 0.543
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Nandrolone Phenpropionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Norelgestromin",
+          "type": "Compound"
+        },
+        {
+          "id": "Pgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Nandrolone Phenpropionate",
+          "label": "resembles"
+        },
+        {
+          "source": "Nandrolone Phenpropionate",
+          "target": "Norelgestromin",
+          "label": "resembles"
+        },
+        {
+          "source": "Norelgestromin",
+          "target": "Pgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Nandrolone Phenpropionate": [
+          "Therapeutic Steroid Hormone",
+          "Carbonyl Compound"
+        ],
+        "Levonorgestrel,Norelgestromin": [
+          "Progestin",
+          "Steroid"
+        ],
+        "Nandrolone Phenpropionate,Norelgestromin": [
+          "Therapeutic Steroid Hormone",
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_13661"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5423,
+        "final_score": 0.5423
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Hereditary Angioedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etonogestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Pgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Hereditary Angioedema",
+          "label": "causes"
+        },
+        {
+          "source": "Hereditary Angioedema",
+          "target": "Etonogestrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etonogestrel",
+          "target": "Pgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Etonogestrel": [
+          "Progestin",
+          "17Beta-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_13662"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5107,
+        "final_score": 0.5107
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Premenstrual Tension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Pgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Premenstrual Tension",
+          "label": "causes"
+        },
+        {
+          "source": "Premenstrual Tension",
+          "target": "Progesterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Pgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Progesterone": [
+          "3-Oxo-Delta(4) Steroid"
+        ]
+      },
+      "id": "path_13663"
     }
-  ],
-  "verbalization": ""
+  ]
 }

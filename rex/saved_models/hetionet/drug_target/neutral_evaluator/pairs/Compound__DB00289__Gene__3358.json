@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6996,
-        "final_score": 0.6996
+        "ic_mean": 0.6644,
+        "final_score": 0.6644
       },
       "nodes": [
         {
@@ -12,12 +12,12 @@
           "type": "Compound"
         },
         {
-          "id": "Npy1r",
+          "id": "Htr1b",
           "type": "Gene"
         },
         {
-          "id": "Duloxetine",
-          "type": "Compound"
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
         },
         {
           "id": "Htr2c",
@@ -27,27 +27,21 @@
       "edges": [
         {
           "source": "Atomoxetine",
-          "target": "Npy1r",
+          "target": "Htr1b",
           "label": "binds"
         },
         {
-          "source": "Npy1r",
-          "target": "Duloxetine",
-          "label": "is bound by"
+          "source": "Htr1b",
+          "target": "Serotonin Binding",
+          "label": "participates"
         },
         {
-          "source": "Duloxetine",
+          "source": "Serotonin Binding",
           "target": "Htr2c",
-          "label": "binds"
+          "label": "is participated by"
         }
       ],
-      "lowest_common_ancestors": {
-        "Atomoxetine,Duloxetine": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_16607"
+      "id": "path_8311"
     },
     {
       "score": {
@@ -64,7 +58,7 @@
           "type": "Gene"
         },
         {
-          "id": "Duloxetine",
+          "id": "Mianserin",
           "type": "Compound"
         },
         {
@@ -80,71 +74,22 @@
         },
         {
           "source": "Htr6",
-          "target": "Duloxetine",
+          "target": "Mianserin",
           "label": "is bound by"
         },
         {
-          "source": "Duloxetine",
+          "source": "Mianserin",
           "target": "Htr2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Atomoxetine,Duloxetine": [
+        "Atomoxetine,Mianserin": [
           "Organic Cyclic Compound",
-          "Antidepressant Agent"
+          "Adrenergic Agent"
         ]
       },
-      "id": "path_16608"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5943,
-        "final_score": 0.5943
-      },
-      "nodes": [
-        {
-          "id": "Atomoxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Norepinephrine Uptake Inhibitors",
-          "type": "Pharmacologic Class"
-        },
-        {
-          "id": "Duloxetine",
-          "type": "Compound"
-        },
-        {
-          "id": "Htr2c",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Atomoxetine",
-          "target": "Norepinephrine Uptake Inhibitors",
-          "label": "is included in"
-        },
-        {
-          "source": "Norepinephrine Uptake Inhibitors",
-          "target": "Duloxetine",
-          "label": "includes"
-        },
-        {
-          "source": "Duloxetine",
-          "target": "Htr2c",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Atomoxetine,Duloxetine": [
-          "Organic Cyclic Compound",
-          "Antidepressant Agent"
-        ]
-      },
-      "id": "path_16609"
+      "id": "path_8312"
     }
-  ],
-  "verbalization": ""
+  ]
 }

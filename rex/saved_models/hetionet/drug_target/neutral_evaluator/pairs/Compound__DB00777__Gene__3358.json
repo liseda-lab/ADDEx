@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6124,
-        "final_score": 0.6124
+        "ic_mean": 0.6688,
+        "final_score": 0.6688
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Chrm4",
+          "id": "Chrm5",
           "type": "Gene"
         },
         {
-          "id": "Metixene",
+          "id": "Chlorprothixene",
           "type": "Compound"
         },
         {
@@ -27,27 +27,75 @@
       "edges": [
         {
           "source": "Propiomazine",
-          "target": "Chrm4",
+          "target": "Chrm5",
           "label": "binds"
         },
         {
-          "source": "Chrm4",
-          "target": "Metixene",
+          "source": "Chrm5",
+          "target": "Chlorprothixene",
           "label": "is bound by"
         },
         {
-          "source": "Metixene",
+          "source": "Chlorprothixene",
           "target": "Htr2c",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Propiomazine,Metixene": [
-          "Organic Heterotricyclic Compound"
+        "Propiomazine,Chlorprothixene": [
+          "Organic Heterotricyclic Compound",
+          "Antipsychotic Agent"
         ]
       },
-      "id": "path_10296"
+      "id": "path_5087"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5716,
+        "final_score": 0.5716
+      },
+      "nodes": [
+        {
+          "id": "Propiomazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Promazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propiomazine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Promazine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Promazine",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propiomazine,Promazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_5088"
     }
-  ],
-  "verbalization": ""
+  ]
 }

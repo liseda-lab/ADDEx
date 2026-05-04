@@ -3,53 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5919,
-        "final_score": 0.5919
-      },
-      "nodes": [
-        {
-          "id": "Clonidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a4",
-          "type": "Gene"
-        },
-        {
-          "id": "Mepyramine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clonidine",
-          "target": "Slc22a4",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a4",
-          "target": "Mepyramine",
-          "label": "is bound by"
-        },
-        {
-          "source": "Mepyramine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clonidine,Mepyramine": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_11616"
-    },
-    {
-      "score": {
         "ic_mean": 0.5443,
         "final_score": 0.5443
       },
@@ -90,11 +43,11 @@
       ],
       "lowest_common_ancestors": {
         "Clonidine,Dexmedetomidine": [
-          "Alpha-Adrenergic Agonist",
-          "Organic Aromatic Compound"
+          "Organic Aromatic Compound",
+          "Alpha-Adrenergic Agonist"
         ]
       },
-      "id": "path_11617"
+      "id": "path_5796"
     },
     {
       "score": {
@@ -141,54 +94,7 @@
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_11618"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5212,
-        "final_score": 0.5212
-      },
-      "nodes": [
-        {
-          "id": "Clonidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Malaise And Fatigue",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Isoniazid",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clonidine",
-          "target": "Malaise And Fatigue",
-          "label": "causes"
-        },
-        {
-          "source": "Malaise And Fatigue",
-          "target": "Isoniazid",
-          "label": "is caused by"
-        },
-        {
-          "source": "Isoniazid",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clonidine,Isoniazid": [
-          "Organonitrogen Compound"
-        ]
-      },
-      "id": "path_11619"
+      "id": "path_5797"
     },
     {
       "score": {
@@ -235,7 +141,7 @@
           "Organic Aromatic Compound"
         ]
       },
-      "id": "path_11620"
+      "id": "path_5798"
     },
     {
       "score": {
@@ -282,12 +188,12 @@
           "Organonitrogen Compound"
         ]
       },
-      "id": "path_11621"
+      "id": "path_5799"
     },
     {
       "score": {
-        "ic_mean": 0.4614,
-        "final_score": 0.4614
+        "ic_mean": 0.4632,
+        "final_score": 0.4632
       },
       "nodes": [
         {
@@ -295,11 +201,11 @@
           "type": "Compound"
         },
         {
-          "id": "Adra1b",
-          "type": "Gene"
+          "id": "Sick Sinus Syndrome",
+          "type": "Side Effect"
         },
         {
-          "id": "Dextroamphetamine",
+          "id": "Propafenone",
           "type": "Compound"
         },
         {
@@ -310,124 +216,217 @@
       "edges": [
         {
           "source": "Clonidine",
-          "target": "Adra1b",
+          "target": "Sick Sinus Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Sick Sinus Syndrome",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Propafenone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_5800"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4318,
+        "final_score": 0.4318
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Auditory And Visual Hallucinations",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Auditory And Visual Hallucinations",
+          "label": "causes"
+        },
+        {
+          "source": "Auditory And Visual Hallucinations",
+          "target": "Pethidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pethidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Pethidine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5801"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4318,
+        "final_score": 0.4318
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hallucinations, Mixed",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Hallucinations, Mixed",
+          "label": "causes"
+        },
+        {
+          "source": "Hallucinations, Mixed",
+          "target": "Pethidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pethidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Pethidine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5802"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4318,
+        "final_score": 0.4318
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nodal Arrhythmia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Nodal Arrhythmia",
+          "label": "causes"
+        },
+        {
+          "source": "Nodal Arrhythmia",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Propafenone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_5803"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4073,
+        "final_score": 0.4073
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Slc6a2",
           "label": "binds"
         },
         {
-          "source": "Adra1b",
-          "target": "Dextroamphetamine",
+          "source": "Slc6a2",
+          "target": "Trimipramine",
           "label": "is bound by"
         },
         {
-          "source": "Dextroamphetamine",
+          "source": "Trimipramine",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Clonidine,Dextroamphetamine": [
-          "Agent Affecting Nervous System",
-          "Organonitrogen Compound"
+        "Clonidine,Trimipramine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_11622"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4581,
-        "final_score": 0.4581
-      },
-      "nodes": [
-        {
-          "id": "Clonidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Salivary Gland Pain",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Cevimeline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clonidine",
-          "target": "Salivary Gland Pain",
-          "label": "causes"
-        },
-        {
-          "source": "Salivary Gland Pain",
-          "target": "Cevimeline",
-          "label": "is caused by"
-        },
-        {
-          "source": "Cevimeline",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clonidine,Cevimeline": [
-          "Agent Affecting Nervous System",
-          "Organic Cyclic Compound"
-        ]
-      },
-      "id": "path_11623"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4208,
-        "final_score": 0.4208
-      },
-      "nodes": [
-        {
-          "id": "Clonidine",
-          "type": "Compound"
-        },
-        {
-          "id": "Parotitis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Venlafaxine",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2d6",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Clonidine",
-          "target": "Parotitis",
-          "label": "causes"
-        },
-        {
-          "source": "Parotitis",
-          "target": "Venlafaxine",
-          "label": "is caused by"
-        },
-        {
-          "source": "Venlafaxine",
-          "target": "Cyp2d6",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Clonidine,Venlafaxine": [
-          "Agent Affecting Nervous System",
-          "Benzenes"
-        ]
-      },
-      "id": "path_11624"
+      "id": "path_5804"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00586 - Gene::1543",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4582,
+        "final_score": 0.4582
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Application Site Papules",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Application Site Papules",
+          "label": "causes"
+        },
+        {
+          "source": "Application Site Papules",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Clonidine": [
+          "Dichlorobenzene",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_13492"
+    }
+  ]
 }

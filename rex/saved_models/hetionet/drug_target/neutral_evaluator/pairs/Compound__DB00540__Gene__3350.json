@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.6234,
-        "final_score": 0.6234
+        "ic_mean": 0.4961,
+        "final_score": 0.4961
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Adra1d",
           "type": "Gene"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Imipramine",
           "type": "Compound"
         },
         {
@@ -27,32 +27,32 @@
       "edges": [
         {
           "source": "Nortriptyline",
-          "target": "Htr6",
+          "target": "Adra1d",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Mesoridazine",
+          "source": "Adra1d",
+          "target": "Imipramine",
           "label": "is bound by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Imipramine",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nortriptyline,Mesoridazine": [
-          "Agent Affecting Nervous System",
-          "Organic Amino Compound"
+        "Nortriptyline,Imipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
         ]
       },
-      "id": "path_17259"
+      "id": "path_8624"
     },
     {
       "score": {
-        "ic_mean": 0.6234,
-        "final_score": 0.6234
+        "ic_mean": 0.4566,
+        "final_score": 0.4566
       },
       "nodes": [
         {
@@ -60,11 +60,11 @@
           "type": "Compound"
         },
         {
-          "id": "Htr6",
+          "id": "Slc6a2",
           "type": "Gene"
         },
         {
-          "id": "Cyproheptadine",
+          "id": "Trimipramine",
           "type": "Compound"
         },
         {
@@ -75,27 +75,81 @@
       "edges": [
         {
           "source": "Nortriptyline",
-          "target": "Htr6",
+          "target": "Slc6a2",
           "label": "binds"
         },
         {
-          "source": "Htr6",
-          "target": "Cyproheptadine",
+          "source": "Slc6a2",
+          "target": "Trimipramine",
           "label": "is bound by"
         },
         {
-          "source": "Cyproheptadine",
+          "source": "Trimipramine",
           "target": "Htr1a",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Nortriptyline,Cyproheptadine": [
-          "Organic Cyclic Compound"
+        "Nortriptyline,Trimipramine": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
         ]
       },
-      "id": "path_17260"
+      "id": "path_8625"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3353,
+        "final_score": 0.3353
+      },
+      "nodes": [
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mianserin",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nortriptyline",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Mianserin",
+          "label": "resembles"
+        },
+        {
+          "source": "Mianserin",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nortriptyline,Azatadine": [
+          "Organic Tricyclic Compound"
+        ],
+        "Nortriptyline,Mianserin": [
+          "Organic Tricyclic Compound",
+          "Antidepressant Agent"
+        ],
+        "Azatadine,Mianserin": [
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_8626"
     }
-  ],
-  "verbalization": ""
+  ]
 }

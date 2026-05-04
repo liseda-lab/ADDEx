@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB01151 - Gene::6532",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6254,
+        "final_score": 0.5627,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Protriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Protriptyline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Protriptyline",
+          "target": "Slc6a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Protriptyline": [
+          "Tricyclic Antidepressant",
+          "Organic Tricyclic Compound"
+        ]
+      },
+      "id": "path_3675"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3486,
+        "final_score": 0.3486
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Demexiptiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Protriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Demexiptiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Demexiptiline",
+          "target": "Protriptyline",
+          "label": "resembles"
+        },
+        {
+          "source": "Protriptyline",
+          "target": "Slc6a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Demexiptiline": [
+          "Tricyclic Antidepressant",
+          "Organic Cyclic Compound"
+        ],
+        "Desipramine,Protriptyline": [
+          "Tricyclic Antidepressant",
+          "Organic Tricyclic Compound"
+        ],
+        "Demexiptiline,Protriptyline": [
+          "Carbocyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_3676"
+    }
+  ]
+}

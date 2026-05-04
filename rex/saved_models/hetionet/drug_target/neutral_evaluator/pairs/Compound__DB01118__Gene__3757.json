@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5626,
-        "final_score": 0.5626
+        "ic_mean": 0.554,
+        "final_score": 0.554
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Sigmar1",
-          "type": "Gene"
+          "id": "Multifocal Ventricular Tachycardia",
+          "type": "Side Effect"
         },
         {
-          "id": "Ifenprodil",
+          "id": "Ibutilide",
           "type": "Compound"
         },
         {
@@ -27,22 +27,27 @@
       "edges": [
         {
           "source": "Amiodarone",
-          "target": "Sigmar1",
-          "label": "binds"
+          "target": "Multifocal Ventricular Tachycardia",
+          "label": "causes"
         },
         {
-          "source": "Sigmar1",
-          "target": "Ifenprodil",
-          "label": "is bound by"
+          "source": "Multifocal Ventricular Tachycardia",
+          "target": "Ibutilide",
+          "label": "is caused by"
         },
         {
-          "source": "Ifenprodil",
+          "source": "Ibutilide",
           "target": "Kcnh2",
           "label": "binds"
         }
       ],
-      "id": "path_26231"
+      "lowest_common_ancestors": {
+        "Amiodarone,Ibutilide": [
+          "Organic Cyclic Compound",
+          "Antiarrhythmic Agent"
+        ]
+      },
+      "id": "path_13346"
     }
-  ],
-  "verbalization": ""
+  ]
 }

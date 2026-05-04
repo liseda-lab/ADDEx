@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00619 - Gene::55244",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5591,
+        "final_score": 0.5591
+      },
+      "nodes": [
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Orbital Oedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Famotidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc47a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imatinib",
+          "target": "Orbital Oedema",
+          "label": "causes"
+        },
+        {
+          "source": "Orbital Oedema",
+          "target": "Famotidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Famotidine",
+          "target": "Slc47a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imatinib,Famotidine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3040"
+    }
+  ]
 }

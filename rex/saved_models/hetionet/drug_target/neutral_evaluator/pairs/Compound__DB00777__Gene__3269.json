@@ -1,6 +1,52 @@
 {
   "id": "Compound::DB00777 - Gene::3269",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6147,
+        "final_score": 0.6147
+      },
+      "nodes": [
+        {
+          "id": "Propiomazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        },
+        {
+          "id": "Buclizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propiomazine",
+          "target": "Chrm1",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm1",
+          "target": "Buclizine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Buclizine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propiomazine,Buclizine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12853"
+    }
+  ]
 }

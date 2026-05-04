@@ -3,54 +3,6 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7563,
-        "final_score": 0.7563
-      },
-      "nodes": [
-        {
-          "id": "Pyrimethamine",
-          "type": "Compound"
-        },
-        {
-          "id": "Dhfr",
-          "type": "Gene"
-        },
-        {
-          "id": "Trimethoprim",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Pyrimethamine",
-          "target": "Dhfr",
-          "label": "binds"
-        },
-        {
-          "source": "Dhfr",
-          "target": "Trimethoprim",
-          "label": "is bound by"
-        },
-        {
-          "source": "Trimethoprim",
-          "target": "Cyp2c8",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Pyrimethamine,Trimethoprim": [
-          "Benzenes",
-          "Anti-Infective Agent"
-        ]
-      },
-      "id": "path_26218"
-    },
-    {
-      "score": {
         "ic_mean": 0.6743,
         "final_score": 0.6743
       },
@@ -91,12 +43,106 @@
       ],
       "lowest_common_ancestors": {
         "Pyrimethamine,Trimethoprim": [
-          "Benzenes",
+          "Aminopyrimidine",
           "Anti-Infective Agent"
         ]
       },
-      "id": "path_26219"
+      "id": "path_13316"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5108,
+        "final_score": 0.5108
+      },
+      "nodes": [
+        {
+          "id": "Pyrimethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pyrimethamine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Irbesartan",
+          "label": "is bound by"
+        },
+        {
+          "source": "Irbesartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pyrimethamine,Irbesartan": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13317"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4916,
+        "final_score": 0.4916
+      },
+      "nodes": [
+        {
+          "id": "Pyrimethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Anaemia Megaloblastic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimethoprim",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pyrimethamine",
+          "target": "Anaemia Megaloblastic",
+          "label": "causes"
+        },
+        {
+          "source": "Anaemia Megaloblastic",
+          "target": "Trimethoprim",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimethoprim",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pyrimethamine,Trimethoprim": [
+          "Aminopyrimidine",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_13318"
     }
-  ],
-  "verbalization": ""
+  ]
 }

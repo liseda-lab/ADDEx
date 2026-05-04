@@ -52,8 +52,54 @@
           "Purines"
         ]
       },
-      "id": "path_4482"
+      "id": "path_2004"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4523,
+        "final_score": 0.4523
+      },
+      "nodes": [
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Brain Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theophylline",
+          "target": "Brain Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Brain Injury",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theophylline,Propafenone": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_2005"
     }
-  ],
-  "verbalization": ""
+  ]
 }

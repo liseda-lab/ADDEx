@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.733,
-        "final_score": 0.733
+        "ic_mean": 0.4809,
+        "final_score": 0.4809
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Sulfonylurea Compounds",
-          "type": "Pharmacologic Class"
+          "id": "Slc15a1",
+          "type": "Gene"
         },
         {
-          "id": "Glipizide",
+          "id": "Cephalexin",
           "type": "Compound"
         },
         {
@@ -27,353 +27,31 @@
       "edges": [
         {
           "source": "Glyburide",
-          "target": "Sulfonylurea Compounds",
-          "label": "is included in"
+          "target": "Slc15a1",
+          "label": "binds"
         },
         {
-          "source": "Sulfonylurea Compounds",
-          "target": "Glipizide",
-          "label": "includes"
+          "source": "Slc15a1",
+          "target": "Cephalexin",
+          "label": "is bound by"
         },
         {
-          "source": "Glipizide",
+          "source": "Cephalexin",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Glyburide,Glipizide": [
-          "N-Sulfonylurea",
-          "Sulfonylurea Antidiabetic Agent"
-        ]
-      },
-      "id": "path_8618"
-    },
-    {
-      "score": {
-        "ic_mean": 0.5471,
-        "final_score": 0.5471
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc15a2",
-          "type": "Gene"
-        },
-        {
-          "id": "Dicloxacillin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slc15a2",
-          "label": "binds"
-        },
-        {
-          "source": "Slc15a2",
-          "target": "Dicloxacillin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Dicloxacillin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Dicloxacillin": [
-          "Organosulfur Compound"
-        ]
-      },
-      "id": "path_8619"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4899,
-        "final_score": 0.4899
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a7",
-          "type": "Gene"
-        },
-        {
-          "id": "Tetracycline",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slc22a7",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a7",
-          "target": "Tetracycline",
-          "label": "is bound by"
-        },
-        {
-          "source": "Tetracycline",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Tetracycline": [
-          "Organochalcogen Compound"
-        ]
-      },
-      "id": "path_8620"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4844,
-        "final_score": 0.4844
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_8621"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4844,
-        "final_score": 0.4844
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Rosuvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Rosuvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Rosuvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Rosuvastatin": [
-          "Sulfonamide",
-          "Agent Affecting Digestive System Or Metabolism"
-        ]
-      },
-      "id": "path_8622"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4844,
-        "final_score": 0.4844
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc3",
-          "type": "Gene"
-        },
-        {
-          "id": "Conjugated Estrogens",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Abcc3",
-          "label": "binds"
-        },
-        {
-          "source": "Abcc3",
-          "target": "Conjugated Estrogens",
-          "label": "is bound by"
-        },
-        {
-          "source": "Conjugated Estrogens",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "id": "path_8623"
-    },
-    {
-      "score": {
-        "ic_mean": 0.473,
-        "final_score": 0.473
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Pravastatin": [
-          "Carbocyclic Compound",
-          "Agent Affecting Digestive System Or Metabolism"
-        ]
-      },
-      "id": "path_8624"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4631,
-        "final_score": 0.4631
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Digoxin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Digoxin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Digoxin": [
+        "Glyburide,Cephalexin": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_8625"
+      "id": "path_4148"
     },
     {
       "score": {
-        "ic_mean": 0.4543,
-        "final_score": 0.4543
+        "ic_mean": 0.4406,
+        "final_score": 0.4406
       },
       "nodes": [
         {
@@ -381,11 +59,11 @@
           "type": "Compound"
         },
         {
-          "id": "Slco2b1",
-          "type": "Gene"
+          "id": "Hypopituitarism",
+          "type": "Side Effect"
         },
         {
-          "id": "Erlotinib",
+          "id": "Methylprednisolone",
           "type": "Compound"
         },
         {
@@ -396,126 +74,31 @@
       "edges": [
         {
           "source": "Glyburide",
-          "target": "Slco2b1",
-          "label": "binds"
+          "target": "Hypopituitarism",
+          "label": "causes"
         },
         {
-          "source": "Slco2b1",
-          "target": "Erlotinib",
-          "label": "is bound by"
+          "source": "Hypopituitarism",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
         },
         {
-          "source": "Erlotinib",
+          "source": "Methylprednisolone",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Glyburide,Erlotinib": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_8626"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4543,
-        "final_score": 0.4543
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2b1",
-          "type": "Gene"
-        },
-        {
-          "id": "Atorvastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slco2b1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2b1",
-          "target": "Atorvastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Atorvastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Atorvastatin": [
-          "Benzenes",
-          "Agent Affecting Digestive System Or Metabolism"
-        ]
-      },
-      "id": "path_8627"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4385,
-        "final_score": 0.4385
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Ethinyl Estradiol",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Ethinyl Estradiol",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ethinyl Estradiol",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Ethinyl Estradiol": [
+        "Glyburide,Methylprednisolone": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_8628"
+      "id": "path_4149"
     },
     {
       "score": {
-        "ic_mean": 0.4271,
-        "final_score": 0.4271
+        "ic_mean": 0.4221,
+        "final_score": 0.4221
       },
       "nodes": [
         {
@@ -523,11 +106,11 @@
           "type": "Compound"
         },
         {
-          "id": "Abcb11",
-          "type": "Gene"
+          "id": "Porphyria Hepatic",
+          "type": "Side Effect"
         },
         {
-          "id": "Pravastatin",
+          "id": "Carbamazepine",
           "type": "Compound"
         },
         {
@@ -538,127 +121,31 @@
       "edges": [
         {
           "source": "Glyburide",
-          "target": "Abcb11",
-          "label": "binds"
+          "target": "Porphyria Hepatic",
+          "label": "causes"
         },
         {
-          "source": "Abcb11",
-          "target": "Pravastatin",
-          "label": "is bound by"
+          "source": "Porphyria Hepatic",
+          "target": "Carbamazepine",
+          "label": "is caused by"
         },
         {
-          "source": "Pravastatin",
+          "source": "Carbamazepine",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Glyburide,Pravastatin": [
-          "Carbocyclic Compound",
-          "Agent Affecting Digestive System Or Metabolism"
-        ]
-      },
-      "id": "path_8629"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4271,
-        "final_score": 0.4271
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Slc22a7",
-          "type": "Gene"
-        },
-        {
-          "id": "Pravastatin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Slc22a7",
-          "label": "binds"
-        },
-        {
-          "source": "Slc22a7",
-          "target": "Pravastatin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Pravastatin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Pravastatin": [
-          "Carbocyclic Compound",
-          "Agent Affecting Digestive System Or Metabolism"
-        ]
-      },
-      "id": "path_8630"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4172,
-        "final_score": 0.4172
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcb11",
-          "type": "Gene"
-        },
-        {
-          "id": "Digoxin",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Abcb11",
-          "label": "binds"
-        },
-        {
-          "source": "Abcb11",
-          "target": "Digoxin",
-          "label": "is bound by"
-        },
-        {
-          "source": "Digoxin",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Digoxin": [
+        "Glyburide,Carbamazepine": [
           "Organic Cyclic Compound"
         ]
       },
-      "id": "path_8631"
+      "id": "path_4150"
     },
     {
       "score": {
-        "ic_mean": 0.4059,
-        "final_score": 0.4059
+        "ic_mean": 0.4037,
+        "final_score": 0.4037
       },
       "nodes": [
         {
@@ -666,11 +153,11 @@
           "type": "Compound"
         },
         {
-          "id": "Granulomatous Liver Disease",
+          "id": "Erythropenia",
           "type": "Side Effect"
         },
         {
-          "id": "Quinine",
+          "id": "Donepezil",
           "type": "Compound"
         },
         {
@@ -681,31 +168,26 @@
       "edges": [
         {
           "source": "Glyburide",
-          "target": "Granulomatous Liver Disease",
+          "target": "Erythropenia",
           "label": "causes"
         },
         {
-          "source": "Granulomatous Liver Disease",
-          "target": "Quinine",
+          "source": "Erythropenia",
+          "target": "Donepezil",
           "label": "is caused by"
         },
         {
-          "source": "Quinine",
+          "source": "Donepezil",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
-      "lowest_common_ancestors": {
-        "Glyburide,Quinine": [
-          "Heteroorganic Entity"
-        ]
-      },
-      "id": "path_8632"
+      "id": "path_4151"
     },
     {
       "score": {
-        "ic_mean": 0.393,
-        "final_score": 0.393
+        "ic_mean": 0.4029,
+        "final_score": 0.4029
       },
       "nodes": [
         {
@@ -713,11 +195,11 @@
           "type": "Compound"
         },
         {
-          "id": "Hypotrichosis",
+          "id": "Acute Psychosis",
           "type": "Side Effect"
         },
         {
-          "id": "Bupropion",
+          "id": "Disopyramide",
           "type": "Compound"
         },
         {
@@ -728,74 +210,26 @@
       "edges": [
         {
           "source": "Glyburide",
-          "target": "Hypotrichosis",
+          "target": "Acute Psychosis",
           "label": "causes"
         },
         {
-          "source": "Hypotrichosis",
-          "target": "Bupropion",
+          "source": "Acute Psychosis",
+          "target": "Disopyramide",
           "label": "is caused by"
         },
         {
-          "source": "Bupropion",
+          "source": "Disopyramide",
           "target": "Cyp3a4",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Glyburide,Bupropion": [
-          "Monochlorobenzenes"
+        "Glyburide,Disopyramide": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_8633"
-    },
-    {
-      "score": {
-        "ic_mean": 0.3613,
-        "final_score": 0.3613
-      },
-      "nodes": [
-        {
-          "id": "Glyburide",
-          "type": "Compound"
-        },
-        {
-          "id": "Hypotrichosis",
-          "type": "Side Effect"
-        },
-        {
-          "id": "Imatinib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp3a4",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Glyburide",
-          "target": "Hypotrichosis",
-          "label": "causes"
-        },
-        {
-          "source": "Hypotrichosis",
-          "target": "Imatinib",
-          "label": "is caused by"
-        },
-        {
-          "source": "Imatinib",
-          "target": "Cyp3a4",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Glyburide,Imatinib": [
-          "Organic Aromatic Compound"
-        ]
-      },
-      "id": "path_8634"
+      "id": "path_4152"
     }
-  ],
-  "verbalization": ""
+  ]
 }

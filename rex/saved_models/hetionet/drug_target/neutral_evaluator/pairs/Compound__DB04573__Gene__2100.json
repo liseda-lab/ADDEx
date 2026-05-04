@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB04573 - Gene::2100",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5074,
+        "final_score": 0.5074
+      },
+      "nodes": [
+        {
+          "id": "Estriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Discomfort",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Esr2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estriol",
+          "target": "Breast Discomfort",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Discomfort",
+          "target": "Ethinyl Estradiol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Esr2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estriol,Ethinyl Estradiol": [
+          "Steroidal Estrogen",
+          "17-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_11372"
+    }
+  ]
 }

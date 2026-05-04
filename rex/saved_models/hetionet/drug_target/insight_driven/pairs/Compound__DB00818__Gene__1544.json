@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00818 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5917,
+        "final_score": 0.6708,
+        "agentic_score": 0.75
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Dexmedetomidine",
+          "label": "includes"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Dexmedetomidine": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10929"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4585,
+        "final_score": 0.4585
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Burning In Throat",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azelastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Burning In Throat",
+          "label": "causes"
+        },
+        {
+          "source": "Burning In Throat",
+          "target": "Azelastine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azelastine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Azelastine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_10930"
+    }
+  ]
+}

@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB01259 - Gene::1956",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7063,
+        "final_score": 0.7063
+      },
+      "nodes": [
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Erbb4",
+          "type": "Gene"
+        },
+        {
+          "id": "Receptor Signaling Protein Tyrosine Kinase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Egfr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lapatinib",
+          "target": "Erbb4",
+          "label": "binds"
+        },
+        {
+          "source": "Erbb4",
+          "target": "Receptor Signaling Protein Tyrosine Kinase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Receptor Signaling Protein Tyrosine Kinase Activity",
+          "target": "Egfr",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4249"
+    }
+  ]
 }

@@ -1,6 +1,53 @@
 {
   "id": "Compound::DB00428 - Gene::1571",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5589,
+        "final_score": 0.5589
+      },
+      "nodes": [
+        {
+          "id": "Streptozocin",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Streptozocin",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Dacarbazine",
+          "label": "includes"
+        },
+        {
+          "source": "Dacarbazine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Streptozocin,Dacarbazine": [
+          "Organooxygen Compound",
+          "Antineoplastic Alkylating Agent"
+        ]
+      },
+      "id": "path_6500"
+    }
+  ]
 }

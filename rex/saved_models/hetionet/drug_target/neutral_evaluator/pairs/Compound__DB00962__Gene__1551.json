@@ -1,6 +1,101 @@
 {
   "id": "Compound::DB00962 - Gene::1551",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7519,
+        "final_score": 0.7519
+      },
+      "nodes": [
+        {
+          "id": "Zaleplon",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Nervous System Depression",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zaleplon",
+          "target": "Central Nervous System Depression",
+          "label": "is included in"
+        },
+        {
+          "source": "Central Nervous System Depression",
+          "target": "Zolpidem",
+          "label": "includes"
+        },
+        {
+          "source": "Zolpidem",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zaleplon,Zolpidem": [
+          "Organic Heterobicyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_11837"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6932,
+        "final_score": 0.6932
+      },
+      "nodes": [
+        {
+          "id": "Zaleplon",
+          "type": "Compound"
+        },
+        {
+          "id": "Gaba A Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zaleplon",
+          "target": "Gaba A Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Gaba A Agonists",
+          "target": "Zolpidem",
+          "label": "includes"
+        },
+        {
+          "source": "Zolpidem",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zaleplon,Zolpidem": [
+          "Organic Heterobicyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_11838"
+    }
+  ]
 }

@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00327 - Gene::4988",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6671,
+        "final_score": 0.7502,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Hydromorphone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydromorphone",
+          "target": "Oprd1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprd1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprm1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7487"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6156,
+        "final_score": 0.5995,
+        "agentic_score": 0.5833
+      },
+      "nodes": [
+        {
+          "id": "Hydromorphone",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dihydrocodeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydromorphone",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Dihydrocodeine",
+          "label": "includes"
+        },
+        {
+          "source": "Dihydrocodeine",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hydromorphone,Dihydrocodeine": [
+          "Opioid",
+          "Morphinane Alkaloid"
+        ]
+      },
+      "id": "path_7488"
+    }
+  ]
+}

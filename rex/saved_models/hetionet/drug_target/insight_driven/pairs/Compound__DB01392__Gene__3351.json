@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB01392 - Gene::3351",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6721,
+        "final_score": 0.7527,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Yohimbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Yohimbine",
+          "target": "Htr2c",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2c",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr1b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1705"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6259,
+        "final_score": 0.6046,
+        "agentic_score": 0.5833
+      },
+      "nodes": [
+        {
+          "id": "Yohimbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Xylometazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Yohimbine",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Xylometazoline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Xylometazoline",
+          "target": "Htr1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Yohimbine,Xylometazoline": [
+          "Adrenergic Agent",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1706"
+    }
+  ]
+}

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.751,
-        "final_score": 0.751
+        "ic_mean": 0.7794,
+        "final_score": 0.7794
       },
       "nodes": [
         {
@@ -16,8 +16,8 @@
           "type": "Gene"
         },
         {
-          "id": "Histamine Receptors",
-          "type": "Pathway"
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
         },
         {
           "id": "Hrh1",
@@ -32,21 +32,69 @@
         },
         {
           "source": "Hrh4",
-          "target": "Histamine Receptors",
+          "target": "Histamine Receptor Activity",
           "label": "participates"
         },
         {
-          "source": "Histamine Receptors",
+          "source": "Histamine Receptor Activity",
           "target": "Hrh1",
           "label": "is participated by"
         }
       ],
-      "id": "path_497"
+      "id": "path_230"
     },
     {
       "score": {
-        "ic_mean": 0.7175,
-        "final_score": 0.7175
+        "ic_mean": 0.7075,
+        "final_score": 0.7075
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        },
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Hrh4",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh4",
+          "target": "Amoxapine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Amoxapine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Amoxapine": [
+          "Organic Heterotricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_231"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6768,
+        "final_score": 0.6768
       },
       "nodes": [
         {
@@ -58,7 +106,7 @@
           "type": "Pharmacologic Class"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Fluphenazine",
           "type": "Compound"
         },
         {
@@ -74,11 +122,11 @@
         },
         {
           "source": "Phenothiazines",
-          "target": "Mesoridazine",
+          "target": "Fluphenazine",
           "label": "includes"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Fluphenazine",
           "target": "Hrh1",
           "label": "binds"
         }
@@ -87,20 +135,74 @@
         "Promethazine,Phenothiazines": [
           "Phenothiazines"
         ],
-        "Promethazine,Mesoridazine": [
-          "Tertiary Amino Compound",
+        "Promethazine,Fluphenazine": [
+          "Phenothiazines",
           "Agent Affecting Nervous System"
         ],
-        "Phenothiazines,Mesoridazine": [
+        "Phenothiazines,Fluphenazine": [
           "Phenothiazines"
         ]
       },
-      "id": "path_498"
+      "id": "path_232"
     },
     {
       "score": {
-        "ic_mean": 0.6396,
-        "final_score": 0.6396
+        "ic_mean": 0.6711,
+        "final_score": 0.6711
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Chlorpromazine",
+          "label": "includes"
+        },
+        {
+          "source": "Chlorpromazine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Promethazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ],
+        "Phenothiazines,Chlorpromazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_233"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6147,
+        "final_score": 0.6147
       },
       "nodes": [
         {
@@ -112,7 +214,7 @@
           "type": "Gene"
         },
         {
-          "id": "Cinnarizine",
+          "id": "Chlorpromazine",
           "type": "Compound"
         },
         {
@@ -128,22 +230,22 @@
         },
         {
           "source": "Hrh4",
-          "target": "Cinnarizine",
+          "target": "Chlorpromazine",
           "label": "is bound by"
         },
         {
-          "source": "Cinnarizine",
+          "source": "Chlorpromazine",
           "target": "Hrh1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Promethazine,Cinnarizine": [
-          "Tertiary Amino Compound"
+        "Promethazine,Chlorpromazine": [
+          "Phenothiazines",
+          "Phenothiazine"
         ]
       },
-      "id": "path_499"
+      "id": "path_234"
     }
-  ],
-  "verbalization": ""
+  ]
 }

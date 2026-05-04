@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.7132,
-        "final_score": 0.7132
+        "ic_mean": 0.5607,
+        "final_score": 0.5607
       },
       "nodes": [
         {
@@ -12,8 +12,8 @@
           "type": "Compound"
         },
         {
-          "id": "Agtr1",
-          "type": "Gene"
+          "id": "Forasartan",
+          "type": "Compound"
         },
         {
           "id": "Valsartan",
@@ -27,13 +27,13 @@
       "edges": [
         {
           "source": "Olmesartan",
-          "target": "Agtr1",
-          "label": "binds"
+          "target": "Forasartan",
+          "label": "resembles"
         },
         {
-          "source": "Agtr1",
+          "source": "Forasartan",
           "target": "Valsartan",
-          "label": "is bound by"
+          "label": "resembles"
         },
         {
           "source": "Valsartan",
@@ -42,103 +42,20 @@
         }
       ],
       "lowest_common_ancestors": {
+        "Olmesartan,Forasartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
+        ],
         "Olmesartan,Valsartan": [
-          "Biphenylyltetrazole",
-          "Angiotensin Ii Receptor Antagonist"
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ],
+        "Forasartan,Valsartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Tetrazoles"
         ]
       },
-      "id": "path_8816"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6718,
-        "final_score": 0.6718
-      },
-      "nodes": [
-        {
-          "id": "Olmesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b3",
-          "type": "Gene"
-        },
-        {
-          "id": "Valsartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Olmesartan",
-          "target": "Slco1b3",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b3",
-          "target": "Valsartan",
-          "label": "is bound by"
-        },
-        {
-          "source": "Valsartan",
-          "target": "Slco1b1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Olmesartan,Valsartan": [
-          "Biphenylyltetrazole",
-          "Angiotensin Ii Receptor Antagonist"
-        ]
-      },
-      "id": "path_8817"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6718,
-        "final_score": 0.6718
-      },
-      "nodes": [
-        {
-          "id": "Olmesartan",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b3",
-          "type": "Gene"
-        },
-        {
-          "id": "Gadoxetate",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco1b1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Olmesartan",
-          "target": "Slco1b3",
-          "label": "binds"
-        },
-        {
-          "source": "Slco1b3",
-          "target": "Gadoxetate",
-          "label": "is bound by"
-        },
-        {
-          "source": "Gadoxetate",
-          "target": "Slco1b1",
-          "label": "binds"
-        }
-      ],
-      "id": "path_8818"
+      "id": "path_4264"
     }
-  ],
-  "verbalization": ""
+  ]
 }

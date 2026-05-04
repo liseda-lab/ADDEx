@@ -1,6 +1,47 @@
 {
   "id": "Compound::DB00184 - Gene::6582",
-  "warning": "No valid explanation paths found for this pair. The model could not reach the target entity.",
-  "paths": [],
-  "verbalization": ""
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6327,
+        "final_score": 0.6327
+      },
+      "nodes": [
+        {
+          "id": "Nicotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Dopamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicotine",
+          "target": "Slc22a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a1",
+          "target": "Dopamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Dopamine Transmembrane Transporter Activity",
+          "target": "Slc22a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15905"
+    }
+  ]
 }

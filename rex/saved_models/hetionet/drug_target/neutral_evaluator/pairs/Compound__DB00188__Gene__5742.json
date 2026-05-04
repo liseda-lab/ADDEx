@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.4965,
-        "final_score": 0.4965
+        "ic_mean": 0.4443,
+        "final_score": 0.4443
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Cyp2c8",
-          "type": "Gene"
+          "id": "Gastrointestinal Inflammation",
+          "type": "Side Effect"
         },
         {
-          "id": "Antipyrine",
+          "id": "Mefenamic Acid",
           "type": "Compound"
         },
         {
@@ -27,74 +27,26 @@
       "edges": [
         {
           "source": "Bortezomib",
-          "target": "Cyp2c8",
-          "label": "binds"
+          "target": "Gastrointestinal Inflammation",
+          "label": "causes"
         },
         {
-          "source": "Cyp2c8",
-          "target": "Antipyrine",
-          "label": "is bound by"
+          "source": "Gastrointestinal Inflammation",
+          "target": "Mefenamic Acid",
+          "label": "is caused by"
         },
         {
-          "source": "Antipyrine",
+          "source": "Mefenamic Acid",
           "target": "Ptgs1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Bortezomib,Antipyrine": [
-          "Organonitrogen Heterocyclic Compound"
+        "Bortezomib,Mefenamic Acid": [
+          "Organic Cyclic Compound"
         ]
       },
-      "id": "path_28556"
-    },
-    {
-      "score": {
-        "ic_mean": 0.4965,
-        "final_score": 0.4965
-      },
-      "nodes": [
-        {
-          "id": "Bortezomib",
-          "type": "Compound"
-        },
-        {
-          "id": "Cyp2c8",
-          "type": "Gene"
-        },
-        {
-          "id": "Ketobemidone",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptgs1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Bortezomib",
-          "target": "Cyp2c8",
-          "label": "binds"
-        },
-        {
-          "source": "Cyp2c8",
-          "target": "Ketobemidone",
-          "label": "is bound by"
-        },
-        {
-          "source": "Ketobemidone",
-          "target": "Ptgs1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Bortezomib,Ketobemidone": [
-          "Organonitrogen Heterocyclic Compound"
-        ]
-      },
-      "id": "path_28557"
+      "id": "path_14692"
     }
-  ],
-  "verbalization": ""
+  ]
 }

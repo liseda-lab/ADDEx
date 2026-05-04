@@ -1,0 +1,97 @@
+{
+  "id": "Compound::DB00696 - Gene::3352",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7704,
+        "final_score": 0.8019,
+        "agentic_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1f",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergotamine",
+          "target": "Htr1f",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1f",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr1d",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7153"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8144,
+        "final_score": 0.6572,
+        "agentic_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ergotamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dihydroergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergotamine",
+          "target": "Ergotamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Ergotamines",
+          "target": "Dihydroergotamine",
+          "label": "includes"
+        },
+        {
+          "source": "Dihydroergotamine",
+          "target": "Htr1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ergotamine,Dihydroergotamine": [
+          "Agent Affecting Nervous System",
+          "Ergot Alkaloid"
+        ]
+      },
+      "id": "path_7154"
+    }
+  ]
+}

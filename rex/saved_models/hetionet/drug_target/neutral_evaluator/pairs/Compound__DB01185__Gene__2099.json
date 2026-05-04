@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.783,
-        "final_score": 0.783
+        "ic_mean": 0.7093,
+        "final_score": 0.7093
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Shbg",
-          "type": "Gene"
+          "id": "Androstanes",
+          "type": "Pharmacologic Class"
         },
         {
-          "id": "Desogestrel",
+          "id": "Danazol",
           "type": "Compound"
         },
         {
@@ -27,84 +27,27 @@
       "edges": [
         {
           "source": "Fluoxymesterone",
-          "target": "Shbg",
-          "label": "binds"
+          "target": "Androstanes",
+          "label": "is included in"
         },
         {
-          "source": "Shbg",
-          "target": "Desogestrel",
-          "label": "is bound by"
+          "source": "Androstanes",
+          "target": "Danazol",
+          "label": "includes"
         },
         {
-          "source": "Desogestrel",
+          "source": "Danazol",
           "target": "Esr1",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Fluoxymesterone,Desogestrel": [
-          "17Beta-Hydroxy Steroid",
-          "Therapeutic Steroid Hormone"
-        ]
-      },
-      "id": "path_9800"
-    },
-    {
-      "score": {
-        "ic_mean": 0.634,
-        "final_score": 0.634
-      },
-      "nodes": [
-        {
-          "id": "Fluoxymesterone",
-          "type": "Compound"
-        },
-        {
-          "id": "Stanozolol",
-          "type": "Compound"
-        },
-        {
-          "id": "Trilostane",
-          "type": "Compound"
-        },
-        {
-          "id": "Esr1",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Fluoxymesterone",
-          "target": "Stanozolol",
-          "label": "resembles"
-        },
-        {
-          "source": "Stanozolol",
-          "target": "Trilostane",
-          "label": "resembles"
-        },
-        {
-          "source": "Trilostane",
-          "target": "Esr1",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Fluoxymesterone,Stanozolol": [
-          "Anabolic Steroid",
-          "17Beta-Hydroxy Steroid"
-        ],
-        "Fluoxymesterone,Trilostane": [
-          "Hormone Therapy Agent",
-          "17Beta-Hydroxy Steroid"
-        ],
-        "Stanozolol,Trilostane": [
-          "Hormone Therapy Agent",
+        "Fluoxymesterone,Danazol": [
+          "Therapeutic Androgen",
           "17Beta-Hydroxy Steroid"
         ]
       },
-      "id": "path_9801"
+      "id": "path_4776"
     }
-  ],
-  "verbalization": ""
+  ]
 }

@@ -3,8 +3,8 @@
   "paths": [
     {
       "score": {
-        "ic_mean": 0.5854,
-        "final_score": 0.5854
+        "ic_mean": 0.5554,
+        "final_score": 0.5554
       },
       "nodes": [
         {
@@ -12,11 +12,11 @@
           "type": "Compound"
         },
         {
-          "id": "Drd3",
+          "id": "Drd4",
           "type": "Gene"
         },
         {
-          "id": "Mesoridazine",
+          "id": "Paliperidone",
           "type": "Compound"
         },
         {
@@ -27,26 +27,68 @@
       "edges": [
         {
           "source": "Remoxipride",
-          "target": "Drd3",
+          "target": "Drd4",
           "label": "binds"
         },
         {
-          "source": "Drd3",
-          "target": "Mesoridazine",
+          "source": "Drd4",
+          "target": "Paliperidone",
           "label": "is bound by"
         },
         {
-          "source": "Mesoridazine",
+          "source": "Paliperidone",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Remoxipride,Mesoridazine": [
+        "Remoxipride,Paliperidone": [
           "Dopamine Antagonist"
         ]
       },
-      "id": "path_24701"
+      "id": "path_12487"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5311,
+        "final_score": 0.5311
+      },
+      "nodes": [
+        {
+          "id": "Remoxipride",
+          "type": "Compound"
+        },
+        {
+          "id": "Sigmar1",
+          "type": "Gene"
+        },
+        {
+          "id": "Donepezil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Remoxipride",
+          "target": "Sigmar1",
+          "label": "binds"
+        },
+        {
+          "source": "Sigmar1",
+          "target": "Donepezil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Donepezil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_12488"
     },
     {
       "score": {
@@ -63,7 +105,7 @@
           "type": "Gene"
         },
         {
-          "id": "Duloxetine",
+          "id": "Paliperidone",
           "type": "Compound"
         },
         {
@@ -79,22 +121,110 @@
         },
         {
           "source": "Htr2a",
-          "target": "Duloxetine",
+          "target": "Paliperidone",
           "label": "is bound by"
         },
         {
-          "source": "Duloxetine",
+          "source": "Paliperidone",
           "target": "Cyp2d6",
           "label": "binds"
         }
       ],
       "lowest_common_ancestors": {
-        "Remoxipride,Duloxetine": [
+        "Remoxipride,Paliperidone": [
+          "Dopamine Antagonist"
+        ]
+      },
+      "id": "path_12489"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5083,
+        "final_score": 0.5083
+      },
+      "nodes": [
+        {
+          "id": "Remoxipride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        },
+        {
+          "id": "Buspirone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Remoxipride",
+          "target": "Htr2a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2a",
+          "target": "Buspirone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Buspirone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Remoxipride,Buspirone": [
           "Agent Affecting Nervous System"
         ]
       },
-      "id": "path_24702"
+      "id": "path_12490"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5041,
+        "final_score": 0.5041
+      },
+      "nodes": [
+        {
+          "id": "Remoxipride",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        },
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Remoxipride",
+          "target": "Drd4",
+          "label": "binds"
+        },
+        {
+          "source": "Drd4",
+          "target": "Dopamine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dopamine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_12491"
     }
-  ],
-  "verbalization": ""
+  ]
 }

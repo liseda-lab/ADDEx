@@ -3,6 +3,60 @@
   "paths": [
     {
       "score": {
+        "ic_mean": 0.7281,
+        "final_score": 0.7281
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostaglandins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Alprostadil",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Prostaglandins",
+          "label": "is included in"
+        },
+        {
+          "source": "Prostaglandins",
+          "target": "Alprostadil",
+          "label": "includes"
+        },
+        {
+          "source": "Alprostadil",
+          "target": "Abcc5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Prostaglandins": [
+          "Prostaglandin"
+        ],
+        "Dinoprostone,Alprostadil": [
+          "Prostaglandin Analogue",
+          "Prostaglandins E"
+        ],
+        "Prostaglandins,Alprostadil": [
+          "Prostaglandin"
+        ]
+      },
+      "id": "path_8199"
+    },
+    {
+      "score": {
         "ic_mean": 0.72,
         "final_score": 0.72
       },
@@ -43,16 +97,16 @@
       ],
       "lowest_common_ancestors": {
         "Dinoprostone,Alprostadil": [
-          "Prostaglandin Carboxylic Acid Anion",
-          "Prostaglandin E"
+          "Prostaglandin Analogue",
+          "Prostaglandins E"
         ]
       },
-      "id": "path_16414"
+      "id": "path_8200"
     },
     {
       "score": {
-        "ic_mean": 0.6899,
-        "final_score": 0.6899
+        "ic_mean": 0.6521,
+        "final_score": 0.6521
       },
       "nodes": [
         {
@@ -60,7 +114,7 @@
           "type": "Compound"
         },
         {
-          "id": "Slco3a1",
+          "id": "Ptgir",
           "type": "Gene"
         },
         {
@@ -75,11 +129,11 @@
       "edges": [
         {
           "source": "Dinoprostone",
-          "target": "Slco3a1",
+          "target": "Ptgir",
           "label": "binds"
         },
         {
-          "source": "Slco3a1",
+          "source": "Ptgir",
           "target": "Alprostadil",
           "label": "is bound by"
         },
@@ -91,108 +145,11 @@
       ],
       "lowest_common_ancestors": {
         "Dinoprostone,Alprostadil": [
-          "Prostaglandin Carboxylic Acid Anion",
-          "Prostaglandin E"
+          "Prostaglandin Analogue",
+          "Prostaglandins E"
         ]
       },
-      "id": "path_16415"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6686,
-        "final_score": 0.6686
-      },
-      "nodes": [
-        {
-          "id": "Dinoprostone",
-          "type": "Compound"
-        },
-        {
-          "id": "Slco2a1",
-          "type": "Gene"
-        },
-        {
-          "id": "Alprostadil",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dinoprostone",
-          "target": "Slco2a1",
-          "label": "binds"
-        },
-        {
-          "source": "Slco2a1",
-          "target": "Alprostadil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alprostadil",
-          "target": "Abcc5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dinoprostone,Alprostadil": [
-          "Prostaglandin Carboxylic Acid Anion",
-          "Prostaglandin E"
-        ]
-      },
-      "id": "path_16416"
-    },
-    {
-      "score": {
-        "ic_mean": 0.6686,
-        "final_score": 0.6686
-      },
-      "nodes": [
-        {
-          "id": "Dinoprostone",
-          "type": "Compound"
-        },
-        {
-          "id": "Ptger1",
-          "type": "Gene"
-        },
-        {
-          "id": "Alprostadil",
-          "type": "Compound"
-        },
-        {
-          "id": "Abcc5",
-          "type": "Gene"
-        }
-      ],
-      "edges": [
-        {
-          "source": "Dinoprostone",
-          "target": "Ptger1",
-          "label": "binds"
-        },
-        {
-          "source": "Ptger1",
-          "target": "Alprostadil",
-          "label": "is bound by"
-        },
-        {
-          "source": "Alprostadil",
-          "target": "Abcc5",
-          "label": "binds"
-        }
-      ],
-      "lowest_common_ancestors": {
-        "Dinoprostone,Alprostadil": [
-          "Prostaglandin Carboxylic Acid Anion",
-          "Prostaglandin E"
-        ]
-      },
-      "id": "path_16417"
+      "id": "path_8201"
     }
-  ],
-  "verbalization": ""
+  ]
 }
