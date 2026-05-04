@@ -768,13 +768,14 @@ class Trainer(object):
                 self.entity_trajectory.append(
                     state['current_entities'])
 
-            # Process final rewards from environment
-            #HITS@k/MRR only checks reward > 0 (i.e. fidelity).
-            # For validation tests (print_paths=False), the LLM-shaped scores in
-            # get_reward_agenticAI are computed but never used by the metric ranking.
-            # So we can skip the entire LLM call during validation
+            # Process final rewards from environment.
+            # HITS@k/MRR only checks reward > 0 (fidelity); the LLM blend
+            # value never enters the metric. So at test we skip the LLM here
+            # (metric_only=True keeps the same sign for the >0 check) and
+            # call the LLM separately on the JSON-bound paths after
+            # trim_and_rank_batch below.
             if print_paths:
-                rewards = episode.get_reward_agenticAI()
+                rewards = episode.get_reward_agenticAI(metric_only=True)
             else:
                 rewards = episode.get_reward_ic_based()
             reward_reshape = rewards.reshape((temp_batch_size, self.test_rollouts))
@@ -795,6 +796,21 @@ class Trainer(object):
                     batch_size    = temp_batch_size,
                     K             = self.test_rollouts
                 )
+
+                # Per-batch LLM call: score the high-IC paths going in JSON.
+                # No top-K cap (addex is one pair at a time, per-pair count is small).
+                # Skip entirely with --no_llm_rerank=1 if you ever want a fast
+                # JSON-without-LLM dump.
+                if getattr(self, 'agentic_ai_enabled', False) and not int(getattr(self, 'no_llm_rerank', 0)):
+                    indices_to_score = []
+                    for b in range(temp_batch_size):
+                        for p in trimmed[b]:
+                            r = p['rollout_idx']
+                            indx = b * self.test_rollouts + r
+                            if rewards[indx] > 0 and episode.reward_kind[indx] == 'high_ic':
+                                indices_to_score.append(indx)
+                    if indices_to_score:
+                        episode.score_paths_for_json(indices_to_score)
 
             for b in range(temp_batch_size):
                 answer_pos = None

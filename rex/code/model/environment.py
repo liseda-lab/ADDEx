@@ -249,11 +249,10 @@ def configure_env_logger(path):
 COMPLETENESS_MAP = {1: 1.0, 2: 3.0, 3: 5.0, 4: 3.0, 5: 1.0}
 
 def threshold_for_step(step: int) -> float:
-    if step < 60:   return 0.50
-    elif step < 80: return 0.55
-    elif step < 120:return 0.60
-    elif step < 150:return 0.65
-    else:           return 0.70
+    if step < 60:    return 0.50
+    elif step < 80:  return 0.55
+    elif step < 100: return 0.60
+    else:            return 0.65
 
 
 class Episode(object):
@@ -642,7 +641,11 @@ class Episode(object):
 
         return results
     
-    def get_reward_agenticAI(self, wV=1/3, wC=1/3, wR=1/3):
+    def get_reward_agenticAI(self, wV=1/3, wC=1/3, wR=1/3, metric_only=False):
+        # metric_only=True: skip the LLM call entirely. Used in test() so the
+        # metric (rewards>0) never blocks on the LLM. The actual LLM scoring
+        # of JSON-bound paths is then done by score_paths_for_json() in the
+        # same batch (called from trainer.test()).
         training_step = getattr(Episode, '_training_step', 0)
 
         base = self.get_reward_ic_based()
@@ -659,10 +662,27 @@ class Episode(object):
 
         threshold = threshold_for_step(training_step)
 
-        # Three tiers of paths
+        # Three tiers of paths (boundaries match the paper: medium starts at 0.50)
+        #   low:    0  < base <  0.5  → 0.10 fixed
+        #   medium: 0.5 <= base <= threshold → 0.25 fixed
+        #   high:   base > threshold → IC + LLM blend
+        # low extends down to base > 0 so every successful rollout gets at
+        # least 0.1 (matches the test metric which counts all successes).
         high_ic_idxs = np.where(base > threshold)[0].tolist()
-        medium_ic_idxs = np.where((base >= 0.5) & (base <= threshold))[0].tolist() if threshold > 0.5 else []
-        low_ic_idxs = np.where((base > 0.3) & (base < 0.5))[0].tolist()
+        medium_ic_idxs = np.where((base >= 0.5) & (base <= threshold))[0].tolist()
+        low_ic_idxs = np.where((base > 0) & (base < 0.5))[0].tolist()
+
+        if metric_only:
+            # Test-time path: no LLM here. Each correct path's agentic_score
+            # defaults to its IC value; score_paths_for_json() then overwrites
+            # the high-IC subset with the IC+LLM blend.
+            out = base.astype(np.float32).copy()
+            self.agentic_scores = out.copy()
+            self.llm_dimensions = {}
+            self.reward_kind = np.array(['none'] * B, dtype=object)
+            self.reward_kind[(out > 0) & (out <= threshold)] = 'low_or_medium'
+            self.reward_kind[out > threshold] = 'high_ic'
+            return out
 
         lines = [
             f"[STEP {training_step}] Threshold={threshold:.2f}",
@@ -769,6 +789,55 @@ class Episode(object):
         return out
 
 
+    def score_paths_for_json(self, indices, wV=1/3, wC=1/3, wR=1/3):
+        """Call the persona LLM only on the given rollout indices and overwrite
+        their entries in self.agentic_scores / self.llm_dimensions with the
+        IC+LLM blend. Used in test() after we know which paths will actually be
+        written to JSON, so we don't pay the LLM cost during the metric path.
+
+        Safe to call when persona/agentic is disabled (no-op).
+        Falls back silently to the existing IC values on LLM failure.
+        """
+        if not indices:
+            return
+        if (not self.agentic_ai_enabled) or (_call_llm is None) or (not self.persona_text):
+            return
+
+        self._cache_ic_summaries()
+        if getattr(self, 'agentic_scores', None) is None:
+            B = self.batch_size * self.num_rollouts
+            self.agentic_scores = np.zeros((B,), dtype=np.float32)
+        if not hasattr(self, 'llm_dimensions') or self.llm_dimensions is None:
+            self.llm_dimensions = {}
+
+        scores_list = self.get_scores_AgenticAI(list(indices))
+        if scores_list is None:
+            # Whole-batch failure: keep the IC values that get_reward_agenticAI
+            # (metric_only) already wrote. Better than overwriting with a default.
+            return
+
+        ALPHA = 0.5
+        for idx, scores in zip(indices, scores_list):
+            try:
+                sv = float(scores["validity"])
+                comp_raw = float(scores["completeness"])
+                rel = float(scores["relevance"])
+            except Exception:
+                continue
+            comp_conv = COMPLETENESS_MAP[int(comp_raw)]
+            raw = wV * sv + wC * comp_conv + wR * rel
+            llm_norm = (raw - 1.0) / 4.0
+            llm_norm = float(max(0.0, min(1.0, llm_norm)))
+            ic_val = float(self.ic_mean[idx])
+            final_blend = ALPHA * ic_val + (1 - ALPHA) * llm_norm
+            self.agentic_scores[idx] = final_blend
+            self.llm_dimensions[idx] = {
+                'validity': sv,
+                'completeness_conv': comp_conv,
+                'relevance': rel,
+                'ic_mean': ic_val,
+                'llm_score': llm_norm,
+            }
 
 
 
