@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00703 - Gene::763",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6619,
+        "final_score": 0.6619
+      },
+      "nodes": [
+        {
+          "id": "Methazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca6",
+          "type": "Gene"
+        },
+        {
+          "id": "Dorzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methazolamide",
+          "target": "Ca6",
+          "label": "binds"
+        },
+        {
+          "source": "Ca6",
+          "target": "Dorzolamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dorzolamide",
+          "target": "Ca5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methazolamide,Dorzolamide": [
+          "Carbonic Anhydrase Inhibitor",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_5029"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6417,
+        "final_score": 0.6417
+      },
+      "nodes": [
+        {
+          "id": "Methazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Myopia Transient",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dorzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methazolamide",
+          "target": "Myopia Transient",
+          "label": "causes"
+        },
+        {
+          "source": "Myopia Transient",
+          "target": "Dorzolamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dorzolamide",
+          "target": "Ca5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methazolamide,Dorzolamide": [
+          "Carbonic Anhydrase Inhibitor",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_5030"
+    }
+  ]
+}

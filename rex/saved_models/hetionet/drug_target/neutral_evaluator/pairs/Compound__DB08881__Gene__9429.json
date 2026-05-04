@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB08881 - Gene::9429",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5544,
+        "final_score": 0.5544
+      },
+      "nodes": [
+        {
+          "id": "Vemurafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Keratoacanthoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vemurafenib",
+          "target": "Keratoacanthoma",
+          "label": "causes"
+        },
+        {
+          "source": "Keratoacanthoma",
+          "target": "Regorafenib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Regorafenib",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vemurafenib,Regorafenib": [
+          "Targeted Therapy Agent",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_23394"
+    }
+  ]
+}

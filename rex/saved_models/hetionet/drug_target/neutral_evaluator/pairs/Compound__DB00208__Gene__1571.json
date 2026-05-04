@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00208 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4461,
+        "final_score": 0.4461
+      },
+      "nodes": [
+        {
+          "id": "Ticlopidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Antinuclear Antibody Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mexiletine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ticlopidine",
+          "target": "Antinuclear Antibody Positive",
+          "label": "causes"
+        },
+        {
+          "source": "Antinuclear Antibody Positive",
+          "target": "Mexiletine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mexiletine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ticlopidine,Mexiletine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_14813"
+    }
+  ]
+}

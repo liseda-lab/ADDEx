@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00343 - Gene::775",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7302,
+        "final_score": 0.7302
+      },
+      "nodes": [
+        {
+          "id": "Diltiazem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacng1",
+          "type": "Gene"
+        },
+        {
+          "id": "Magnesium Sulfate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diltiazem",
+          "target": "Cacng1",
+          "label": "binds"
+        },
+        {
+          "source": "Cacng1",
+          "target": "Magnesium Sulfate",
+          "label": "is bound by"
+        },
+        {
+          "source": "Magnesium Sulfate",
+          "target": "Cacna1c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diltiazem,Magnesium Sulfate": [
+          "Sulfur Molecular Entity"
+        ]
+      },
+      "id": "path_6120"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5272,
+        "final_score": 0.5272
+      },
+      "nodes": [
+        {
+          "id": "Diltiazem",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypotension Asymptomatic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diltiazem",
+          "target": "Hypotension Asymptomatic",
+          "label": "causes"
+        },
+        {
+          "source": "Hypotension Asymptomatic",
+          "target": "Verapamil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Verapamil",
+          "target": "Cacna1c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diltiazem,Verapamil": [
+          "Tertiary Amino Compound",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_6121"
+    }
+  ]
+}

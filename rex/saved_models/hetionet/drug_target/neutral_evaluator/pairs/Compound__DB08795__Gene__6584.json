@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB08795 - Gene::6584",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6361,
+        "final_score": 0.6361
+      },
+      "nodes": [
+        {
+          "id": "Azidocillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Cefalotin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azidocillin",
+          "target": "Slc15a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a1",
+          "target": "Cefalotin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cefalotin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azidocillin,Cefalotin": [
+          "Beta-Lactam Antibiotic",
+          "Carboxylic Acid Anion"
+        ]
+      },
+      "id": "path_5242"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4734,
+        "final_score": 0.4734
+      },
+      "nodes": [
+        {
+          "id": "Azidocillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azidocillin",
+          "target": "Cyclacillin",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclacillin",
+          "target": "Benzylpenicillin",
+          "label": "resembles"
+        },
+        {
+          "source": "Benzylpenicillin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azidocillin,Cyclacillin": [
+          "Penicillin",
+          "Penicillin Antibiotic"
+        ],
+        "Azidocillin,Benzylpenicillin": [
+          "Penicillinate Anion",
+          "Penicillin Antibiotic"
+        ],
+        "Cyclacillin,Benzylpenicillin": [
+          "Penicillin",
+          "Penicillin Antibiotic"
+        ]
+      },
+      "id": "path_5243"
+    }
+  ]
+}

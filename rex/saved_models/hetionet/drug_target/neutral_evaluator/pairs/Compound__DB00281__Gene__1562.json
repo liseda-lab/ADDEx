@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00281 - Gene::1562",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5727,
+        "final_score": 0.5727
+      },
+      "nodes": [
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Myocardial Depression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lidocaine",
+          "target": "Myocardial Depression",
+          "label": "causes"
+        },
+        {
+          "source": "Myocardial Depression",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c18",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lidocaine,Ifosfamide": [
+          "Primary Amide"
+        ]
+      },
+      "id": "path_23072"
+    }
+  ]
+}

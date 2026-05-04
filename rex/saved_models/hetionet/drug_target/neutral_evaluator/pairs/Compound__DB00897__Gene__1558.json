@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00897 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.44,
+        "final_score": 0.44
+      },
+      "nodes": [
+        {
+          "id": "Triazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Mouth Irritation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triazolam",
+          "target": "Mouth Irritation",
+          "label": "causes"
+        },
+        {
+          "source": "Mouth Irritation",
+          "target": "Lidocaine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Triazolam,Lidocaine": [
+          "Agent Affecting Nervous System",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_17944"
+    }
+  ]
+}

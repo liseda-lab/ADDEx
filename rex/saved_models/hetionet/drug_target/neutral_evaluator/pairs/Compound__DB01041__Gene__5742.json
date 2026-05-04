@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01041 - Gene::5742",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4991,
+        "final_score": 0.4991
+      },
+      "nodes": [
+        {
+          "id": "Thalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "White Blood Cell Count Low",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zileuton",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thalidomide",
+          "target": "White Blood Cell Count Low",
+          "label": "causes"
+        },
+        {
+          "source": "White Blood Cell Count Low",
+          "target": "Zileuton",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zileuton",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thalidomide,Zileuton": [
+          "Amide"
+        ]
+      },
+      "id": "path_10699"
+    }
+  ]
+}

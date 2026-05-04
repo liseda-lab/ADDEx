@@ -1,0 +1,94 @@
+{
+  "id": "Compound::DB01095 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7029,
+        "final_score": 0.7029
+      },
+      "nodes": [
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6807"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4505,
+        "final_score": 0.4505
+      },
+      "nodes": [
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Reaction With Eosinophilia And Systemic Symptoms",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvastatin",
+          "target": "Drug Reaction With Eosinophilia And Systemic Symptoms",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Reaction With Eosinophilia And Systemic Symptoms",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluvastatin,Clopidogrel": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_6808"
+    }
+  ]
+}

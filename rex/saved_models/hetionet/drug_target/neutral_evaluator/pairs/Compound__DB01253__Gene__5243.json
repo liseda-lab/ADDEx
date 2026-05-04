@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01253 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4166,
+        "final_score": 0.4166
+      },
+      "nodes": [
+        {
+          "id": "Ergonovine",
+          "type": "Compound"
+        },
+        {
+          "id": "Water Intoxication",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergonovine",
+          "target": "Water Intoxication",
+          "label": "causes"
+        },
+        {
+          "source": "Water Intoxication",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ergonovine,Carbamazepine": [
+          "Agent Affecting Nervous System",
+          "Primary Amide"
+        ]
+      },
+      "id": "path_2897"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01337 - Gene::590",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6967,
+        "final_score": 0.6967
+      },
+      "nodes": [
+        {
+          "id": "Pancuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrnb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Doxacurium Chloride",
+          "type": "Compound"
+        },
+        {
+          "id": "Bche",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pancuronium",
+          "target": "Chrnb1",
+          "label": "binds"
+        },
+        {
+          "source": "Chrnb1",
+          "target": "Doxacurium Chloride",
+          "label": "is bound by"
+        },
+        {
+          "source": "Doxacurium Chloride",
+          "target": "Bche",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pancuronium,Doxacurium Chloride": [
+          "Ester",
+          "Muscle Relaxant"
+        ]
+      },
+      "id": "path_5005"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5494,
+        "final_score": 0.5494
+      },
+      "nodes": [
+        {
+          "id": "Pancuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Salivation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Physostigmine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bche",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pancuronium",
+          "target": "Salivation",
+          "label": "causes"
+        },
+        {
+          "source": "Salivation",
+          "target": "Physostigmine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Physostigmine",
+          "target": "Bche",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pancuronium,Physostigmine": [
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_5006"
+    }
+  ]
+}

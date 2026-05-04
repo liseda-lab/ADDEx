@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB01201 - Gene::64816",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7232,
+        "final_score": 0.7232
+      },
+      "nodes": [
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Rifamycins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifapentine",
+          "target": "Rifamycins",
+          "label": "is included in"
+        },
+        {
+          "source": "Rifamycins",
+          "target": "Rifampicin",
+          "label": "includes"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a43",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifapentine,Rifamycins": [
+          "Rifamycins"
+        ],
+        "Rifapentine,Rifampicin": [
+          "Antitubercular Agent",
+          "N-Alkylpiperazine"
+        ],
+        "Rifamycins,Rifampicin": [
+          "Rifamycins"
+        ]
+      },
+      "id": "path_8666"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01236 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6057,
+        "final_score": 0.6057
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Dexmedetomidine",
+          "label": "includes"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Dexmedetomidine": [
+          "Agent Affecting Nervous System",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_19211"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5422,
+        "final_score": 0.5422
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Tonic Clonic Movements",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Tonic Clonic Movements",
+          "label": "causes"
+        },
+        {
+          "source": "Tonic Clonic Movements",
+          "target": "Dapsone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dapsone",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Dapsone": [
+          "Organochalcogen Compound"
+        ]
+      },
+      "id": "path_19212"
+    }
+  ]
+}

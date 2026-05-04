@@ -1,0 +1,142 @@
+{
+  "id": "Compound::DB00178 - Disease::DOID:9352",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5203,
+        "final_score": 0.5203
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Potassium Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valsartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Serum Potassium Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Potassium Increased",
+          "target": "Valsartan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valsartan",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ramipril,Valsartan": [
+          "Carboxylic Acid",
+          "Antihypertensive Agent"
+        ]
+      },
+      "id": "path_123"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4933,
+        "final_score": 0.4933
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Obesity, Abdominal",
+          "type": "Symptom"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Obesity, Abdominal",
+          "label": "presents"
+        },
+        {
+          "source": "Obesity, Abdominal",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hypertension (disease),Obesity, Abdominal": [
+          "Ctrp Clinical Finding"
+        ]
+      },
+      "id": "path_124"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3747,
+        "final_score": 0.3747
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Femoral Artery",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Femoral Artery",
+          "label": "localizes"
+        },
+        {
+          "source": "Femoral Artery",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_125"
+    }
+  ]
+}

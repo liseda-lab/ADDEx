@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00196 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4376,
+        "final_score": 0.4376
+      },
+      "nodes": [
+        {
+          "id": "Fluconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clotrimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Clotrimazole",
+          "label": "includes"
+        },
+        {
+          "source": "Clotrimazole",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluconazole,Azoles": [
+          "Azole"
+        ],
+        "Fluconazole,Clotrimazole": [
+          "Antifungal Agent",
+          "Conazole Antifungal Drug"
+        ],
+        "Azoles,Clotrimazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_169"
+    }
+  ]
+}

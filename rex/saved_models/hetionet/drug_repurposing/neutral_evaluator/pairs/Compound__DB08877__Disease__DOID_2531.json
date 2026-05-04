@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB08877 - Disease::DOID:2531",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6096,
+        "final_score": 0.6096
+      },
+      "nodes": [
+        {
+          "id": "Ruxolitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Protein Kinase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nilotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ruxolitinib",
+          "target": "Protein Kinase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Protein Kinase Inhibitors",
+          "target": "Nilotinib",
+          "label": "includes"
+        },
+        {
+          "source": "Nilotinib",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ruxolitinib,Nilotinib": [
+          "Tyrosine Kinase Inhibitor",
+          "Diazole"
+        ]
+      },
+      "id": "path_1822"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4435,
+        "final_score": 0.4435
+      },
+      "nodes": [
+        {
+          "id": "Ruxolitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostate Cancer",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ruxolitinib",
+          "target": "Prostate Cancer",
+          "label": "causes"
+        },
+        {
+          "source": "Prostate Cancer",
+          "target": "Imatinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Imatinib",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ruxolitinib,Imatinib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_1823"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00695 - Gene::762",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7992,
+        "final_score": 0.7992
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca14",
+          "type": "Gene"
+        },
+        {
+          "id": "Reversible Hydration Of Carbon Dioxide",
+          "type": "Pathway"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Ca14",
+          "label": "binds"
+        },
+        {
+          "source": "Ca14",
+          "target": "Reversible Hydration Of Carbon Dioxide",
+          "label": "participates"
+        },
+        {
+          "source": "Reversible Hydration Of Carbon Dioxide",
+          "target": "Ca4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_22146"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5298,
+        "final_score": 0.5298
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cholestasis Intrahepatic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chlorthalidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Cholestasis Intrahepatic",
+          "label": "causes"
+        },
+        {
+          "source": "Cholestasis Intrahepatic",
+          "target": "Chlorthalidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chlorthalidone",
+          "target": "Ca4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Furosemide,Chlorthalidone": [
+          "Organochlorine Compound",
+          "Diuretic"
+        ]
+      },
+      "id": "path_22147"
+    }
+  ]
+}

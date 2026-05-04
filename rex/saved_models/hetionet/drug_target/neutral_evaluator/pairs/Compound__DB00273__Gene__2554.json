@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00273 - Gene::2554",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5086,
+        "final_score": 0.5086
+      },
+      "nodes": [
+        {
+          "id": "Topiramate",
+          "type": "Compound"
+        },
+        {
+          "id": "Clumsiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Topiramate",
+          "target": "Clumsiness",
+          "label": "causes"
+        },
+        {
+          "source": "Clumsiness",
+          "target": "Alprazolam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Alprazolam",
+          "target": "Gabra1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Topiramate,Alprazolam": [
+          "Agent Affecting Nervous System",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6122"
+    }
+  ]
+}

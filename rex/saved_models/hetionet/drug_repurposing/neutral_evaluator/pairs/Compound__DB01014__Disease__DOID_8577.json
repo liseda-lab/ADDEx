@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01014 - Disease::DOID:8577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6588,
+        "final_score": 0.6588
+      },
+      "nodes": [
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Aminosalicylic Acids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ulcerative Colitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Balsalazide",
+          "target": "Aminosalicylic Acids",
+          "label": "is included in"
+        },
+        {
+          "source": "Aminosalicylic Acids",
+          "target": "Sulfasalazine",
+          "label": "includes"
+        },
+        {
+          "source": "Sulfasalazine",
+          "target": "Ulcerative Colitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Balsalazide,Sulfasalazine": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Benzenes"
+        ]
+      },
+      "id": "path_3189"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00490 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.498,
+        "final_score": 0.498
+      },
+      "nodes": [
+        {
+          "id": "Buspirone",
+          "type": "Compound"
+        },
+        {
+          "id": "Dysosmia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clarithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buspirone",
+          "target": "Dysosmia",
+          "label": "causes"
+        },
+        {
+          "source": "Dysosmia",
+          "target": "Clarithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clarithromycin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buspirone,Clarithromycin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_21946"
+    }
+  ]
+}

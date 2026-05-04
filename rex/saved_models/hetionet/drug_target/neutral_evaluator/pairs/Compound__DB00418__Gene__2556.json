@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00418 - Gene::2556",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6536,
+        "final_score": 0.6536
+      },
+      "nodes": [
+        {
+          "id": "Secobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra4",
+          "type": "Gene"
+        },
+        {
+          "id": "Hexobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Secobarbital",
+          "target": "Gabra4",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra4",
+          "target": "Hexobarbital",
+          "label": "is bound by"
+        },
+        {
+          "source": "Hexobarbital",
+          "target": "Gabra3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Secobarbital,Hexobarbital": [
+          "Barbiturate",
+          "Barbiturates"
+        ]
+      },
+      "id": "path_5674"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5537,
+        "final_score": 0.5537
+      },
+      "nodes": [
+        {
+          "id": "Secobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Anaemia Megaloblastic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Secobarbital",
+          "target": "Anaemia Megaloblastic",
+          "label": "causes"
+        },
+        {
+          "source": "Anaemia Megaloblastic",
+          "target": "Amobarbital",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amobarbital",
+          "target": "Gabra3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Secobarbital,Amobarbital": [
+          "Barbiturate",
+          "Barbiturates"
+        ]
+      },
+      "id": "path_5675"
+    }
+  ]
+}

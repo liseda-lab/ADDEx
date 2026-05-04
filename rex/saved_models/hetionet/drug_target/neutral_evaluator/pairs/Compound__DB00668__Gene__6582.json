@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00668 - Gene::6582",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6698,
+        "final_score": 0.6698
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Dopamine",
+          "label": "includes"
+        },
+        {
+          "source": "Dopamine",
+          "target": "Slc22a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Epinephrine,Dopamine": [
+          "Catecholamine",
+          "Catecholamine"
+        ],
+        "Catecholamines,Dopamine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_7727"
+    }
+  ]
+}

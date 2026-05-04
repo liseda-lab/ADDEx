@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB00316 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6878,
+        "final_score": 0.6878
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nat2",
+          "type": "Gene"
+        },
+        {
+          "id": "Arylamine Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Nat2",
+          "label": "binds"
+        },
+        {
+          "source": "Nat2",
+          "target": "Arylamine Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Arylamine Metabolism",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19116"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4784,
+        "final_score": 0.4784
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephrosis Lower Nephron",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenylpropanolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Nephrosis Lower Nephron",
+          "label": "causes"
+        },
+        {
+          "source": "Nephrosis Lower Nephron",
+          "target": "Phenylpropanolamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenylpropanolamine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetaminophen,Phenylpropanolamine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_19117"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4775,
+        "final_score": 0.4775
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Anaemia Postoperative",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bupivacaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Anaemia Postoperative",
+          "label": "causes"
+        },
+        {
+          "source": "Anaemia Postoperative",
+          "target": "Bupivacaine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bupivacaine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetaminophen,Bupivacaine": [
+          "Agent Affecting Nervous System",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_19118"
+    }
+  ]
+}

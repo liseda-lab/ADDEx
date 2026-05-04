@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00945 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.422,
+        "final_score": 0.422
+      },
+      "nodes": [
+        {
+          "id": "Acetylsalicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Reye's Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetylsalicylic Acid",
+          "target": "Reye's Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Reye's Syndrome",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetylsalicylic Acid,Ibuprofen": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_23542"
+    }
+  ]
+}

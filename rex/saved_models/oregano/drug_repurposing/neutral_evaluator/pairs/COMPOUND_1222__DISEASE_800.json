@@ -1,0 +1,56 @@
+{
+  "id": "COMPOUND:1222 - DISEASE:800",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5276,
+        "final_score": 0.5276
+      },
+      "nodes": [
+        {
+          "id": "clomipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Anticholinergic syndrome",
+          "type": "Side_effect"
+        },
+        {
+          "id": "paroxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "adenosine A2b receptor pseudogene 1",
+          "type": "Gene"
+        },
+        {
+          "id": "Denture stomatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "clomipramine",
+          "target": "Anticholinergic syndrome",
+          "label": "has side effect"
+        },
+        {
+          "source": "Anticholinergic syndrome",
+          "target": "paroxetine",
+          "label": "is side effect of"
+        },
+        {
+          "source": "paroxetine",
+          "target": "adenosine A2b receptor pseudogene 1",
+          "label": "is affecting"
+        },
+        {
+          "source": "adenosine A2b receptor pseudogene 1",
+          "target": "Denture stomatitis",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_227"
+    }
+  ]
+}

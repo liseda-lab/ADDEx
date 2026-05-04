@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00860 - Disease::DOID:4481",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5123,
+        "final_score": 0.5123
+      },
+      "nodes": [
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Myocardial Rupture",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisolone",
+          "target": "Myocardial Rupture",
+          "label": "causes"
+        },
+        {
+          "source": "Myocardial Rupture",
+          "target": "Betamethasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Betamethasone",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisolone,Betamethasone": [
+          "20-Oxo Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_122"
+    }
+  ]
+}

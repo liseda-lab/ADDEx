@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00441 - Gene::5422",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5009,
+        "final_score": 0.5009
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pulmonary Toxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fludarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pola1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Pulmonary Toxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Pulmonary Toxicity",
+          "target": "Fludarabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fludarabine",
+          "target": "Pola1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Fludarabine": [
+          "Antimetabolite"
+        ]
+      },
+      "id": "path_2430"
+    }
+  ]
+}

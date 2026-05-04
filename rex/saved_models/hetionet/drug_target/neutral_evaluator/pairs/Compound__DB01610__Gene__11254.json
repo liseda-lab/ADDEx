@@ -1,0 +1,89 @@
+{
+  "id": "Compound::DB01610 - Gene::11254",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7329,
+        "final_score": 0.7329
+      },
+      "nodes": [
+        {
+          "id": "Valganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a14",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valganciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Valaciclovir",
+          "label": "includes"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc6a14",
+          "label": "binds"
+        }
+      ],
+      "id": "path_12226"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5814,
+        "final_score": 0.5814
+      },
+      "nodes": [
+        {
+          "id": "Valganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytomegalovirus Infection",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a14",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valganciclovir",
+          "target": "Cytomegalovirus Infection",
+          "label": "causes"
+        },
+        {
+          "source": "Cytomegalovirus Infection",
+          "target": "Valaciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc6a14",
+          "label": "binds"
+        }
+      ],
+      "id": "path_12227"
+    }
+  ]
+}

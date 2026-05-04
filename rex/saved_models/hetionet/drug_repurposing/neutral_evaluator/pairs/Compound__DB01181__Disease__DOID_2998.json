@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01181 - Disease::DOID:2998",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.527,
+        "final_score": 0.527
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Haematotoxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Haematotoxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Haematotoxicity",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Etoposide": [
+          "Antineoplastic Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_4143"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00184 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3943,
+        "final_score": 0.3943
+      },
+      "nodes": [
+        {
+          "id": "Nicotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Change In Blood Pressure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dapagliflozin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicotine",
+          "target": "Change In Blood Pressure",
+          "label": "causes"
+        },
+        {
+          "source": "Change In Blood Pressure",
+          "target": "Dapagliflozin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dapagliflozin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicotine,Dapagliflozin": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_8527"
+    }
+  ]
+}

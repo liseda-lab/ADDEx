@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01200 - Gene::1815",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5344,
+        "final_score": 0.5344
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Parkinson's Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Apomorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Parkinson's Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Parkinson's Disease",
+          "target": "Apomorphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Apomorphine",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromocriptine,Apomorphine": [
+          "Dopamine Agonist",
+          "Alkaloid"
+        ]
+      },
+      "id": "path_19396"
+    }
+  ]
+}

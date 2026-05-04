@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00853 - Disease::DOID:1909",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.477,
+        "final_score": 0.477
+      },
+      "nodes": [
+        {
+          "id": "Temozolomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Radiation Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Melanoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temozolomide",
+          "target": "Radiation Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Radiation Injury",
+          "target": "Dactinomycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dactinomycin",
+          "target": "Melanoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temozolomide,Dactinomycin": [
+          "Dna Binding Agent",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_935"
+    }
+  ]
+}

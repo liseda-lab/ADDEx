@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00830 - Gene::6531",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6749,
+        "final_score": 0.6749
+      },
+      "nodes": [
+        {
+          "id": "Phenmetrazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phendimetrazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fencamfamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenmetrazine",
+          "target": "Phendimetrazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Phendimetrazine",
+          "target": "Fencamfamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Fencamfamine",
+          "target": "Slc6a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenmetrazine,Phendimetrazine": [
+          "Morpholines",
+          "Cns Stimulant"
+        ],
+        "Phenmetrazine,Fencamfamine": [
+          "Organic Molecular Entity"
+        ],
+        "Phendimetrazine,Fencamfamine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_5317"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6328,
+        "final_score": 0.6328
+      },
+      "nodes": [
+        {
+          "id": "Phenmetrazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Diethylpropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenmetrazine",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Diethylpropion",
+          "label": "is bound by"
+        },
+        {
+          "source": "Diethylpropion",
+          "target": "Slc6a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenmetrazine,Diethylpropion": [
+          "Organic Molecule",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_5318"
+    }
+  ]
+}

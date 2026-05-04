@@ -1,0 +1,112 @@
+{
+  "id": "Compound::DB00829 - Gene::706",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7073,
+        "final_score": 0.7073
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Tspo",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Clorazepate",
+          "label": "includes"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Tspo",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Diazepam,Clorazepate": [
+          "1,4-Benzodiazepinone"
+        ],
+        "Benzodiazepines,Clorazepate": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_3685"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4686,
+        "final_score": 0.4686
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cloxazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Tspo",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Cloxazolam",
+          "label": "resembles"
+        },
+        {
+          "source": "Cloxazolam",
+          "target": "Clorazepate",
+          "label": "resembles"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Tspo",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Cloxazolam": [
+          "Antianxiety Agent",
+          "Organonitrogen Compound"
+        ],
+        "Diazepam,Clorazepate": [
+          "1,4-Benzodiazepinone"
+        ],
+        "Cloxazolam,Clorazepate": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_3686"
+    }
+  ]
+}

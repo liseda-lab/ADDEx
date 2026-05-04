@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00367 - Gene::1588",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5207,
+        "final_score": 0.5207
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Corpus Luteum Cyst",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Corpus Luteum Cyst",
+          "label": "causes"
+        },
+        {
+          "source": "Corpus Luteum Cyst",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Clomifene": [
+          "Therapeutic Hormone",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_15337"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4942,
+        "final_score": 0.4942
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Nandrolone Phenpropionate",
+          "type": "Compound"
+        },
+        {
+          "id": "Nandrolone Decanoate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Nandrolone Phenpropionate",
+          "label": "resembles"
+        },
+        {
+          "source": "Nandrolone Phenpropionate",
+          "target": "Nandrolone Decanoate",
+          "label": "resembles"
+        },
+        {
+          "source": "Nandrolone Decanoate",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Nandrolone Phenpropionate": [
+          "Carbonyl Compound",
+          "Therapeutic Steroid Hormone"
+        ],
+        "Levonorgestrel,Nandrolone Decanoate": [
+          "Steroid",
+          "Therapeutic Steroid Hormone"
+        ],
+        "Nandrolone Phenpropionate,Nandrolone Decanoate": [
+          "Organic Molecule",
+          "Therapeutic Androgen"
+        ]
+      },
+      "id": "path_15338"
+    }
+  ]
+}

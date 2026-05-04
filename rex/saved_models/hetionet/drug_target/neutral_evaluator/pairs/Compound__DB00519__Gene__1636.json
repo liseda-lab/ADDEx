@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00519 - Gene::1636",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5541,
+        "final_score": 0.5541
+      },
+      "nodes": [
+        {
+          "id": "Trandolapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Pulmonary Eosinophilia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Benazepril",
+          "type": "Compound"
+        },
+        {
+          "id": "Ace",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trandolapril",
+          "target": "Pulmonary Eosinophilia",
+          "label": "causes"
+        },
+        {
+          "source": "Pulmonary Eosinophilia",
+          "target": "Benazepril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Benazepril",
+          "target": "Ace",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trandolapril,Benazepril": [
+          "Ace Inhibitor",
+          "Dicarboxylic Acid Monoester"
+        ]
+      },
+      "id": "path_13097"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5449,
+        "final_score": 0.5449
+      },
+      "nodes": [
+        {
+          "id": "Trandolapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Moexipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Benazepril",
+          "type": "Compound"
+        },
+        {
+          "id": "Ace",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trandolapril",
+          "target": "Moexipril",
+          "label": "resembles"
+        },
+        {
+          "source": "Moexipril",
+          "target": "Benazepril",
+          "label": "resembles"
+        },
+        {
+          "source": "Benazepril",
+          "target": "Ace",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trandolapril,Moexipril": [
+          "Ace Inhibitor",
+          "Peptide"
+        ],
+        "Trandolapril,Benazepril": [
+          "Ace Inhibitor",
+          "Dicarboxylic Acid Monoester"
+        ],
+        "Moexipril,Benazepril": [
+          "Ace Inhibitor",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_13098"
+    }
+  ]
+}

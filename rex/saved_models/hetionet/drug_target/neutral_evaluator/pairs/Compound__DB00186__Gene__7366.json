@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00186 - Gene::7366",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6884,
+        "final_score": 0.6884
+      },
+      "nodes": [
+        {
+          "id": "Lorazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b15",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lorazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Oxazepam",
+          "label": "includes"
+        },
+        {
+          "source": "Oxazepam",
+          "target": "Ugt2b15",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lorazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Lorazepam,Oxazepam": [
+          "1,4-Benzodiazepinone",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Oxazepam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_6259"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5968,
+        "final_score": 0.5968
+      },
+      "nodes": [
+        {
+          "id": "Lorazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Amnesia Transient",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b15",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lorazepam",
+          "target": "Amnesia Transient",
+          "label": "causes"
+        },
+        {
+          "source": "Amnesia Transient",
+          "target": "Oxazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxazepam",
+          "target": "Ugt2b15",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lorazepam,Oxazepam": [
+          "1,4-Benzodiazepinone",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_6260"
+    }
+  ]
+}

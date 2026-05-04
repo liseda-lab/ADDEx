@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB01132 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6967,
+        "final_score": 0.6967
+      },
+      "nodes": [
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pioglitazone",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8007"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6583,
+        "final_score": 0.6583
+      },
+      "nodes": [
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ppar Alpha",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fenofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pioglitazone",
+          "target": "Ppar Alpha",
+          "label": "is included in"
+        },
+        {
+          "source": "Ppar Alpha",
+          "target": "Fenofibrate",
+          "label": "includes"
+        },
+        {
+          "source": "Fenofibrate",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pioglitazone,Fenofibrate": [
+          "Aromatic Ether",
+          "Agent Affecting Digestive System Or Metabolism"
+        ]
+      },
+      "id": "path_8008"
+    }
+  ]
+}

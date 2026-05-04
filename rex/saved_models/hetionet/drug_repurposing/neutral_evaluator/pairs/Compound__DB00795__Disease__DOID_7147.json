@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00795 - Disease::DOID:7147",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4024,
+        "final_score": 0.4024
+      },
+      "nodes": [
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Rheumatoid Arthritis",
+          "type": "Disease"
+        },
+        {
+          "id": "Vertebral Bone 2",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Ankylosing Spondylitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfasalazine",
+          "target": "Rheumatoid Arthritis",
+          "label": "treats"
+        },
+        {
+          "source": "Rheumatoid Arthritis",
+          "target": "Vertebral Bone 2",
+          "label": "localizes"
+        },
+        {
+          "source": "Vertebral Bone 2",
+          "target": "Ankylosing Spondylitis",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rheumatoid Arthritis,Ankylosing Spondylitis": [
+          "Arthritis"
+        ]
+      },
+      "id": "path_2717"
+    }
+  ]
+}

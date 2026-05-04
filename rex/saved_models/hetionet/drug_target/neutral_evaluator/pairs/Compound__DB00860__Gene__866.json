@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00860 - Gene::866",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6242,
+        "final_score": 0.6242
+      },
+      "nodes": [
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Anterior Uveitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Medrysone",
+          "type": "Compound"
+        },
+        {
+          "id": "Serpina6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisolone",
+          "target": "Anterior Uveitis",
+          "label": "causes"
+        },
+        {
+          "source": "Anterior Uveitis",
+          "target": "Medrysone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Medrysone",
+          "target": "Serpina6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisolone,Medrysone": [
+          "Therapeutic Glucocorticoid",
+          "Corticosteroid Hormone"
+        ]
+      },
+      "id": "path_20079"
+    }
+  ]
+}

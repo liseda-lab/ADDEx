@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB01325 - Gene::6557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8,
+        "final_score": 0.8
+      },
+      "nodes": [
+        {
+          "id": "Quinethazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Sodium:potassium:chloride Symporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinethazone",
+          "target": "Slc12a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc12a2",
+          "target": "Sodium:potassium:chloride Symporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Sodium:potassium:chloride Symporter Activity",
+          "target": "Slc12a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12563"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5745,
+        "final_score": 0.5745
+      },
+      "nodes": [
+        {
+          "id": "Quinethazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Methyclothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinethazone",
+          "target": "Cyclothiazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclothiazide",
+          "target": "Methyclothiazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Methyclothiazide",
+          "target": "Slc12a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinethazone,Cyclothiazide": [
+          "Thiazide Diuretic",
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Quinethazone,Methyclothiazide": [
+          "Thiazide Diuretic",
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Cyclothiazide,Methyclothiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ]
+      },
+      "id": "path_12564"
+    }
+  ]
+}

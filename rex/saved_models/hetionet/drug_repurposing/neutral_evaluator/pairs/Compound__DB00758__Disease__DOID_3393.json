@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00758 - Disease::DOID:3393",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5472,
+        "final_score": 0.5472
+      },
+      "nodes": [
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Atherothrombosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Niacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clopidogrel",
+          "target": "Atherothrombosis",
+          "label": "causes"
+        },
+        {
+          "source": "Atherothrombosis",
+          "target": "Niacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Niacin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clopidogrel,Niacin": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_1708"
+    }
+  ]
+}

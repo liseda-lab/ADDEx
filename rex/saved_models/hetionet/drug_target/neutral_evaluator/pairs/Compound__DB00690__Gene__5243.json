@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00690 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.55,
+        "final_score": 0.55
+      },
+      "nodes": [
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clobazam",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flurazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Clobazam",
+          "label": "includes"
+        },
+        {
+          "source": "Clobazam",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flurazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Flurazepam,Clobazam": [
+          "Antianxiety Agent",
+          "1,4-Benzodiazepinone"
+        ],
+        "Benzodiazepines,Clobazam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_7305"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4785,
+        "final_score": 0.4785
+      },
+      "nodes": [
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Talkativeness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flurazepam",
+          "target": "Talkativeness",
+          "label": "causes"
+        },
+        {
+          "source": "Talkativeness",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flurazepam,Carbamazepine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_7306"
+    }
+  ]
+}

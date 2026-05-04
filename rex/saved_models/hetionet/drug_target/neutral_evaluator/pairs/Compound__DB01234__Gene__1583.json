@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01234 - Gene::1583",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4924,
+        "final_score": 0.4924
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Growth Retardation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mitotane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Growth Retardation",
+          "label": "causes"
+        },
+        {
+          "source": "Growth Retardation",
+          "target": "Mitotane",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mitotane",
+          "target": "Cyp11a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Mitotane": [
+          "Organic Cyclic Compound",
+          "Hormone Therapy Agent"
+        ]
+      },
+      "id": "path_656"
+    }
+  ]
+}

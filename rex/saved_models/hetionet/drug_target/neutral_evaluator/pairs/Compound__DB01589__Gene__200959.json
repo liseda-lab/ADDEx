@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB01589 - Gene::200959",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7073,
+        "final_score": 0.7073
+      },
+      "nodes": [
+        {
+          "id": "Quazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrr3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Temazepam",
+          "label": "includes"
+        },
+        {
+          "source": "Temazepam",
+          "target": "Gabrr3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Quazepam,Temazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Temazepam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_428"
+    }
+  ]
+}

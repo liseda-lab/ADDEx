@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01261 - Gene::1803",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8076,
+        "final_score": 0.8076
+      },
+      "nodes": [
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dipeptidyl Peptidase 4 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Linagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dpp4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sitagliptin",
+          "target": "Dipeptidyl Peptidase 4 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dipeptidyl Peptidase 4 Inhibitors",
+          "target": "Linagliptin",
+          "label": "includes"
+        },
+        {
+          "source": "Linagliptin",
+          "target": "Dpp4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sitagliptin,Linagliptin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Dipeptidyl Peptidase-4 Inhibitor"
+        ]
+      },
+      "id": "path_14251"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5612,
+        "final_score": 0.5612
+      },
+      "nodes": [
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Blood Glucose Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vildagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dpp4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sitagliptin",
+          "target": "Blood Glucose Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Blood Glucose Decreased",
+          "target": "Vildagliptin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vildagliptin",
+          "target": "Dpp4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sitagliptin,Vildagliptin": [
+          "Organonitrogen Compound",
+          "Dipeptidyl Peptidase-4 Inhibitor"
+        ]
+      },
+      "id": "path_14252"
+    }
+  ]
+}

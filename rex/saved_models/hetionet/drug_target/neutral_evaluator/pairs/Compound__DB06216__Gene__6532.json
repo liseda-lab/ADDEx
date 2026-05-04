@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB06216 - Gene::6532",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4381,
+        "final_score": 0.4381
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "High Cholesterol",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "High Cholesterol",
+          "label": "causes"
+        },
+        {
+          "source": "High Cholesterol",
+          "target": "Mirtazapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mirtazapine",
+          "target": "Slc6a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asenapine,Mirtazapine": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8188"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00904 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4756,
+        "final_score": 0.4756
+      },
+      "nodes": [
+        {
+          "id": "Ondansetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Burning Rectal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ondansetron",
+          "target": "Burning Rectal",
+          "label": "causes"
+        },
+        {
+          "source": "Burning Rectal",
+          "target": "Diazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diazepam",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ondansetron,Diazepam": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_21893"
+    },
+    {
+      "score": {
+        "ic_mean": 0.407,
+        "final_score": 0.407
+      },
+      "nodes": [
+        {
+          "id": "Ondansetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Wound",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ondansetron",
+          "target": "Wound",
+          "label": "causes"
+        },
+        {
+          "source": "Wound",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ondansetron,Cyclophosphamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_21894"
+    }
+  ]
+}

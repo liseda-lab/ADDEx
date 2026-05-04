@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00788 - Gene::7364",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5423,
+        "final_score": 0.5423
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuritis Retrobulbar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Neuritis Retrobulbar",
+          "label": "causes"
+        },
+        {
+          "source": "Neuritis Retrobulbar",
+          "target": "Flurbiprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurbiprofen",
+          "target": "Ugt2b7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Flurbiprofen": [
+          "Monocarboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_23360"
+    }
+  ]
+}

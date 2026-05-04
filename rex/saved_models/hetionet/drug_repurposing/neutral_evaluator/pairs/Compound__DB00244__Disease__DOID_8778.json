@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00244 - Disease::DOID:8778",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5008,
+        "final_score": 0.5008
+      },
+      "nodes": [
+        {
+          "id": "Mesalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Steatorrhoea",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Crohn's Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mesalazine",
+          "target": "Steatorrhoea",
+          "label": "causes"
+        },
+        {
+          "source": "Steatorrhoea",
+          "target": "Azathioprine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Crohn's Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mesalazine,Azathioprine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_4137"
+    }
+  ]
+}

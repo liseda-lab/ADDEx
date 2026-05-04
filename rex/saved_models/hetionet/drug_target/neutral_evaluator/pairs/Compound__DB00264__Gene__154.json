@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00264 - Gene::154",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5,
+        "final_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Metoprolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Purpura Non-thrombocytopenic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Betaxolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metoprolol",
+          "target": "Purpura Non-thrombocytopenic",
+          "label": "causes"
+        },
+        {
+          "source": "Purpura Non-thrombocytopenic",
+          "target": "Betaxolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Betaxolol",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metoprolol,Betaxolol": [
+          "Beta-Adrenergic Antagonist",
+          "Propanolamine"
+        ]
+      },
+      "id": "path_23780"
+    }
+  ]
+}

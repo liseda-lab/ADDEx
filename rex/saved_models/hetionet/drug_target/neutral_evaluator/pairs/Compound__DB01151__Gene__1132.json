@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB01151 - Gene::1132",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6002,
+        "final_score": 0.6002
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Adenitis",
+          "label": "causes"
+        },
+        {
+          "source": "Adenitis",
+          "target": "Maprotiline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Maprotiline",
+          "target": "Chrm4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Maprotiline": [
+          "Tricyclic Antidepressant",
+          "Organic Tricyclic Compound"
+        ]
+      },
+      "id": "path_8938"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3719,
+        "final_score": 0.3719
+      },
+      "nodes": [
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Demexiptiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desipramine",
+          "target": "Demexiptiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Demexiptiline",
+          "target": "Maprotiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Maprotiline",
+          "target": "Chrm4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desipramine,Demexiptiline": [
+          "Organic Cyclic Compound",
+          "Tricyclic Antidepressant"
+        ],
+        "Desipramine,Maprotiline": [
+          "Tricyclic Antidepressant",
+          "Organic Tricyclic Compound"
+        ],
+        "Demexiptiline,Maprotiline": [
+          "Tricyclic Antidepressant",
+          "Benzenoid Aromatic Compound"
+        ]
+      },
+      "id": "path_8939"
+    }
+  ]
+}

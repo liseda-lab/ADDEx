@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:5041",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4547,
+        "final_score": 0.4547
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Spinal Cord Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Spinal Cord Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Spinal Cord Disorder",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Cisplatin": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_3963"
+    }
+  ]
+}

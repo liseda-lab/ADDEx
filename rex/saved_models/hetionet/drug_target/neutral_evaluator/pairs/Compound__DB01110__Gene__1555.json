@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB01110 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4547,
+        "final_score": 0.4547
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Vulvovaginal Burning Sensation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Vulvovaginal Burning Sensation",
+          "label": "causes"
+        },
+        {
+          "source": "Vulvovaginal Burning Sensation",
+          "target": "Ethinyl Estradiol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Ethinyl Estradiol": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_20661"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4394,
+        "final_score": 0.4394
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Itraconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Itraconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Itraconazole",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Azoles": [
+          "Azole"
+        ],
+        "Miconazole,Itraconazole": [
+          "Antifungal Agent",
+          "Conazole Antifungal Drug"
+        ],
+        "Azoles,Itraconazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_20662"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:1290 - PROTEIN:1030",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6176,
+        "final_score": 0.6176
+      },
+      "nodes": [
+        {
+          "id": "cefotetan",
+          "type": "Compound"
+        },
+        {
+          "id": "Superinfection",
+          "type": "Side_effect"
+        },
+        {
+          "id": "cefaclor",
+          "type": "Compound"
+        },
+        {
+          "id": "Penicillin-binding protein 3",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "cefotetan",
+          "target": "Superinfection",
+          "label": "has side effect"
+        },
+        {
+          "source": "Superinfection",
+          "target": "cefaclor",
+          "label": "is side effect of"
+        },
+        {
+          "source": "cefaclor",
+          "target": "Penicillin-binding protein 3",
+          "label": "has target"
+        }
+      ],
+      "id": "path_297929"
+    }
+  ]
+}

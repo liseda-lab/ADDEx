@@ -1,0 +1,142 @@
+{
+  "id": "Compound::DB00281 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7487,
+        "final_score": 0.7487
+      },
+      "nodes": [
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lidocaine",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12452"
+    },
+    {
+      "score": {
+        "ic_mean": 0.517,
+        "final_score": 0.517
+      },
+      "nodes": [
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Myocardial Depression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lidocaine",
+          "target": "Myocardial Depression",
+          "label": "causes"
+        },
+        {
+          "source": "Myocardial Depression",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lidocaine,Ifosfamide": [
+          "Primary Amide"
+        ]
+      },
+      "id": "path_12453"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4624,
+        "final_score": 0.4624
+      },
+      "nodes": [
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pain Worsened",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lidocaine",
+          "target": "Pain Worsened",
+          "label": "causes"
+        },
+        {
+          "source": "Pain Worsened",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lidocaine,Morphine": [
+          "Agent Affecting Nervous System",
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_12454"
+    }
+  ]
+}

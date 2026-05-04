@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00850 - Gene::3350",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7062,
+        "final_score": 0.7062
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Mesoridazine",
+          "label": "includes"
+        },
+        {
+          "source": "Mesoridazine",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Perphenazine,Mesoridazine": [
+          "Tertiary Amino Compound",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Mesoridazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_23217"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5834,
+        "final_score": 0.5834
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Motor Restlessness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Molindone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Motor Restlessness",
+          "label": "causes"
+        },
+        {
+          "source": "Motor Restlessness",
+          "target": "Molindone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Molindone",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Molindone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_23218"
+    }
+  ]
+}

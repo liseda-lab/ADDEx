@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB06290 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5621,
+        "final_score": 0.5621
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Infection Mixed",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rilpivirine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "Infection Mixed",
+          "label": "causes"
+        },
+        {
+          "source": "Infection Mixed",
+          "target": "Rilpivirine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rilpivirine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Rilpivirine": [
+          "Enzyme Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10141"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4091,
+        "final_score": 0.4091
+      },
+      "nodes": [
+        {
+          "id": "Simeprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Organic Anion Transporting Polypeptide 1b1 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Eltrombopag",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simeprevir",
+          "target": "Organic Anion Transporting Polypeptide 1b1 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Organic Anion Transporting Polypeptide 1b1 Inhibitors",
+          "target": "Eltrombopag",
+          "label": "includes"
+        },
+        {
+          "source": "Eltrombopag",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simeprevir,Eltrombopag": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10142"
+    }
+  ]
+}

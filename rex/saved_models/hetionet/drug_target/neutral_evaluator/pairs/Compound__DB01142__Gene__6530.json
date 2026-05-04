@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01142 - Gene::6530",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4956,
+        "final_score": 0.4956
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cardiac Death",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylphenidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Cardiac Death",
+          "label": "causes"
+        },
+        {
+          "source": "Cardiac Death",
+          "target": "Methylphenidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylphenidate",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxepin,Methylphenidate": [
+          "Agent Affecting Nervous System",
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_19115"
+    }
+  ]
+}

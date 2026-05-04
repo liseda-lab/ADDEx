@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00321 - Gene::3351",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6238,
+        "final_score": 0.6238
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Amoxapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amoxapine",
+          "target": "Htr1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Amoxapine": [
+          "Tricyclic Antidepressant",
+          "Organic Tricyclic Compound"
+        ]
+      },
+      "id": "path_20186"
+    }
+  ]
+}

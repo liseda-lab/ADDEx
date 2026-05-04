@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00244 - Gene::5743",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4883,
+        "final_score": 0.4883
+      },
+      "nodes": [
+        {
+          "id": "Mesalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Discomfort Rectal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mesalazine",
+          "target": "Discomfort Rectal",
+          "label": "causes"
+        },
+        {
+          "source": "Discomfort Rectal",
+          "target": "Flurbiprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurbiprofen",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mesalazine,Flurbiprofen": [
+          "Monocarboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_8041"
+    }
+  ]
+}

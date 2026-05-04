@@ -1,0 +1,55 @@
+{
+  "id": "Compound::DB01083 - Disease::DOID:9352",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4871,
+        "final_score": 0.4871
+      },
+      "nodes": [
+        {
+          "id": "Orlistat",
+          "type": "Compound"
+        },
+        {
+          "id": "Vein Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gliclazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Orlistat",
+          "target": "Vein Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Vein Disorder",
+          "target": "Gliclazide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gliclazide",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Orlistat,Gliclazide": [
+          "Primary Amide"
+        ],
+        "Vein Disorder,Type 2 Diabetes Mellitus": [
+          "Non-Neoplastic Disorder By Site"
+        ]
+      },
+      "id": "path_3049"
+    }
+  ]
+}

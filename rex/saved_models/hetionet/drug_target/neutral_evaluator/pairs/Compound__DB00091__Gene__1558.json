@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00091 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.447,
+        "final_score": 0.447
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyperamylasaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ritonavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Hyperamylasaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Hyperamylasaemia",
+          "target": "Ritonavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ritonavir",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Ritonavir": [
+          "Carboxamide"
+        ]
+      },
+      "id": "path_20330"
+    }
+  ]
+}

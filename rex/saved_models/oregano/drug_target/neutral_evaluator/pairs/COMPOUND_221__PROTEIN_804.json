@@ -1,0 +1,89 @@
+{
+  "id": "COMPOUND:221 - PROTEIN:804",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5774,
+        "final_score": 0.5774
+      },
+      "nodes": [
+        {
+          "id": "temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Hangover",
+          "type": "Side_effect"
+        },
+        {
+          "id": "flunitrazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Amine oxidase [flavin-containing] A",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "temazepam",
+          "target": "Hangover",
+          "label": "has side effect"
+        },
+        {
+          "source": "Hangover",
+          "target": "flunitrazepam",
+          "label": "is side effect of"
+        },
+        {
+          "source": "flunitrazepam",
+          "target": "Amine oxidase [flavin-containing] A",
+          "label": "has target"
+        }
+      ],
+      "id": "path_392998"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5638,
+        "final_score": 0.5638
+      },
+      "nodes": [
+        {
+          "id": "temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Disinhibition",
+          "type": "Side_effect"
+        },
+        {
+          "id": "midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Amine oxidase [flavin-containing] A",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "temazepam",
+          "target": "Disinhibition",
+          "label": "has side effect"
+        },
+        {
+          "source": "Disinhibition",
+          "target": "midazolam",
+          "label": "is side effect of"
+        },
+        {
+          "source": "midazolam",
+          "target": "Amine oxidase [flavin-containing] A",
+          "label": "has target"
+        }
+      ],
+      "id": "path_392999"
+    }
+  ]
+}

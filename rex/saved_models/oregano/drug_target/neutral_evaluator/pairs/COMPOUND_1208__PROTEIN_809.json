@@ -1,0 +1,89 @@
+{
+  "id": "COMPOUND:1208 - PROTEIN:809",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6611,
+        "final_score": 0.6611
+      },
+      "nodes": [
+        {
+          "id": "encainide",
+          "type": "Compound"
+        },
+        {
+          "id": "bisoprolol",
+          "type": "Compound"
+        },
+        {
+          "id": "ajmaline",
+          "type": "Compound"
+        },
+        {
+          "id": "NMDA receptor",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "encainide",
+          "target": "bisoprolol",
+          "label": "increases efficacy"
+        },
+        {
+          "source": "bisoprolol",
+          "target": "ajmaline",
+          "label": "increases efficacy"
+        },
+        {
+          "source": "ajmaline",
+          "target": "NMDA receptor",
+          "label": "has target"
+        }
+      ],
+      "id": "path_100908"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6396,
+        "final_score": 0.6396
+      },
+      "nodes": [
+        {
+          "id": "encainide",
+          "type": "Compound"
+        },
+        {
+          "id": " the arrhythmogenic activities",
+          "type": "Activity"
+        },
+        {
+          "id": "ajmaline",
+          "type": "Compound"
+        },
+        {
+          "id": "NMDA receptor",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "encainide",
+          "target": " the arrhythmogenic activities",
+          "label": "has activity"
+        },
+        {
+          "source": " the arrhythmogenic activities",
+          "target": "ajmaline",
+          "label": "has activity increased by"
+        },
+        {
+          "source": "ajmaline",
+          "target": "NMDA receptor",
+          "label": "has target"
+        }
+      ],
+      "id": "path_100909"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB01036 - Gene::1132",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6939,
+        "final_score": 0.6939
+      },
+      "nodes": [
+        {
+          "id": "Tolterodine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        },
+        {
+          "id": "Muscarinic Acetylcholine Receptors",
+          "type": "Pathway"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tolterodine",
+          "target": "Chrm3",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm3",
+          "target": "Muscarinic Acetylcholine Receptors",
+          "label": "participates"
+        },
+        {
+          "source": "Muscarinic Acetylcholine Receptors",
+          "target": "Chrm4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_21109"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6884,
+        "final_score": 0.6884
+      },
+      "nodes": [
+        {
+          "id": "Tolterodine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cholinergic Muscarinic Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Atropine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tolterodine",
+          "target": "Cholinergic Muscarinic Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Cholinergic Muscarinic Antagonists",
+          "target": "Atropine",
+          "label": "includes"
+        },
+        {
+          "source": "Atropine",
+          "target": "Chrm4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tolterodine,Atropine": [
+          "Organonitrogen Compound",
+          "Antimuscarinic Agent"
+        ]
+      },
+      "id": "path_21110"
+    }
+  ]
+}

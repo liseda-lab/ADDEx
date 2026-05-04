@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01579 - Gene::148",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5444,
+        "final_score": 0.5444
+      },
+      "nodes": [
+        {
+          "id": "Phendimetrazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Psychotic Episode",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phendimetrazine",
+          "target": "Psychotic Episode",
+          "label": "causes"
+        },
+        {
+          "source": "Psychotic Episode",
+          "target": "Dextroamphetamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dextroamphetamine",
+          "target": "Adra1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phendimetrazine,Dextroamphetamine": [
+          "Organonitrogen Compound",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_16763"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5374,
+        "final_score": 0.5374
+      },
+      "nodes": [
+        {
+          "id": "Phendimetrazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phendimetrazine",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Dextroamphetamine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Dextroamphetamine",
+          "target": "Adra1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phendimetrazine,Dextroamphetamine": [
+          "Organonitrogen Compound",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_16764"
+    }
+  ]
+}

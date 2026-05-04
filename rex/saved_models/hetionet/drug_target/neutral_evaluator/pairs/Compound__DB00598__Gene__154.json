@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00598 - Gene::154",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5485,
+        "final_score": 0.5485
+      },
+      "nodes": [
+        {
+          "id": "Labetalol",
+          "type": "Compound"
+        },
+        {
+          "id": "Thyrotoxicosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Betaxolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Labetalol",
+          "target": "Thyrotoxicosis",
+          "label": "causes"
+        },
+        {
+          "source": "Thyrotoxicosis",
+          "target": "Betaxolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Betaxolol",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Labetalol,Betaxolol": [
+          "Adrenergic Antagonist",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_4778"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4603,
+        "final_score": 0.4603
+      },
+      "nodes": [
+        {
+          "id": "Labetalol",
+          "type": "Compound"
+        },
+        {
+          "id": "Dobutamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Labetalol",
+          "target": "Dobutamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dobutamine",
+          "target": "Fenoterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenoterol",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Labetalol,Dobutamine": [
+          "Secondary Amino Compound",
+          "Adrenergic Agent"
+        ],
+        "Labetalol,Fenoterol": [
+          "Secondary Amino Compound",
+          "Adrenergic Agent"
+        ],
+        "Dobutamine,Fenoterol": [
+          "Beta-Adrenergic Agonist",
+          "Secondary Amino Compound"
+        ]
+      },
+      "id": "path_4779"
+    }
+  ]
+}

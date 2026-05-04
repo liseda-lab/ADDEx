@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00526 - Gene::4502",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7926,
+        "final_score": 0.7926
+      },
+      "nodes": [
+        {
+          "id": "Oxaliplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Mt2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxaliplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Cisplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Mt2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxaliplatin,Cisplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_10115"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6236,
+        "final_score": 0.6236
+      },
+      "nodes": [
+        {
+          "id": "Oxaliplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Gstt1",
+          "type": "Gene"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Mt2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxaliplatin",
+          "target": "Gstt1",
+          "label": "binds"
+        },
+        {
+          "source": "Gstt1",
+          "target": "Cisplatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Mt2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxaliplatin,Cisplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_10116"
+    }
+  ]
+}

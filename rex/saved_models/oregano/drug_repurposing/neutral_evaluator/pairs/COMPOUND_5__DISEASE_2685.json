@@ -1,0 +1,56 @@
+{
+  "id": "COMPOUND:5 - DISEASE:2685",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6365,
+        "final_score": 0.6365
+      },
+      "nodes": [
+        {
+          "id": "etanercept",
+          "type": "Compound"
+        },
+        {
+          "id": "WASP family member 2",
+          "type": "Gene"
+        },
+        {
+          "id": "Arthritis, Experimental",
+          "type": "Disease"
+        },
+        {
+          "id": "sphingosine kinase 1",
+          "type": "Gene"
+        },
+        {
+          "id": "Protozoan Infections",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "etanercept",
+          "target": "WASP family member 2",
+          "label": "is affecting"
+        },
+        {
+          "source": "WASP family member 2",
+          "target": "Arthritis, Experimental",
+          "label": "causes condition"
+        },
+        {
+          "source": "Arthritis, Experimental",
+          "target": "sphingosine kinase 1",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "sphingosine kinase 1",
+          "target": "Protozoan Infections",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_210"
+    }
+  ]
+}

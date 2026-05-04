@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00290 - Disease::DOID:2998",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5293,
+        "final_score": 0.5293
+      },
+      "nodes": [
+        {
+          "id": "Bleomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Fibrosis Interstitial",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bleomycin",
+          "target": "Lung Fibrosis Interstitial",
+          "label": "causes"
+        },
+        {
+          "source": "Lung Fibrosis Interstitial",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bleomycin,Ifosfamide": [
+          "Dna Binding Agent",
+          "Primary Amide"
+        ]
+      },
+      "id": "path_2089"
+    }
+  ]
+}

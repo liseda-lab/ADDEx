@@ -1,0 +1,105 @@
+{
+  "id": "Compound::DB00668 - Gene::146",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6775,
+        "final_score": 0.6775
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Norepinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adra1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Epinephrine,Norepinephrine": [
+          "Catecholamine"
+        ],
+        "Catecholamines,Norepinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_1550"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4854,
+        "final_score": 0.4854
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertensive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Hypertensive",
+          "label": "causes"
+        },
+        {
+          "source": "Hypertensive",
+          "target": "Doxazosin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxazosin",
+          "target": "Adra1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Doxazosin": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_1551"
+    }
+  ]
+}

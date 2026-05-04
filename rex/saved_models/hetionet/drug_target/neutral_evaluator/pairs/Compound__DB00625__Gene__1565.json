@@ -1,0 +1,99 @@
+{
+  "id": "Compound::DB00625 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4563,
+        "final_score": 0.4563
+      },
+      "nodes": [
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c19 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Efavirenz",
+          "target": "Cytochrome P450 2c19 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c19 Inhibitors",
+          "target": "Omeprazole",
+          "label": "includes"
+        },
+        {
+          "source": "Omeprazole",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Efavirenz,Omeprazole": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_22267"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3968,
+        "final_score": 0.3968
+      },
+      "nodes": [
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephrogenic Diabetes Insipidus",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Efavirenz",
+          "target": "Nephrogenic Diabetes Insipidus",
+          "label": "causes"
+        },
+        {
+          "source": "Nephrogenic Diabetes Insipidus",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Efavirenz,Cyclophosphamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_22268"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01137 - Gene::9356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3693,
+        "final_score": 0.3693
+      },
+      "nodes": [
+        {
+          "id": "Levofloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Foot Edema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levofloxacin",
+          "target": "Foot Edema",
+          "label": "causes"
+        },
+        {
+          "source": "Foot Edema",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levofloxacin,Ibuprofen": [
+          "Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_10143"
+    }
+  ]
+}

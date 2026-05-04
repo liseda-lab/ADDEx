@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00338 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4895,
+        "final_score": 0.4895
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Colitis Microscopic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ticlopidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Colitis Microscopic",
+          "label": "causes"
+        },
+        {
+          "source": "Colitis Microscopic",
+          "target": "Ticlopidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ticlopidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Ticlopidine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_7017"
+    }
+  ]
+}

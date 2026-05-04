@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00958 - Gene::1317",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8144,
+        "final_score": 0.8144
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oxaliplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc31a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Oxaliplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Oxaliplatin",
+          "target": "Slc31a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Oxaliplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_545"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6754,
+        "final_score": 0.6754
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Gstt1",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxaliplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc31a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Gstt1",
+          "label": "binds"
+        },
+        {
+          "source": "Gstt1",
+          "target": "Oxaliplatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Oxaliplatin",
+          "target": "Slc31a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Oxaliplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_546"
+    }
+  ]
+}

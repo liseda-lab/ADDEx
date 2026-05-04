@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00586 - Gene::4363",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5239,
+        "final_score": 0.5239
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Toxic Shock Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mifepristone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Toxic Shock Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Toxic Shock Syndrome",
+          "target": "Mifepristone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mifepristone",
+          "target": "Abcc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Mifepristone": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_14035"
+    }
+  ]
+}

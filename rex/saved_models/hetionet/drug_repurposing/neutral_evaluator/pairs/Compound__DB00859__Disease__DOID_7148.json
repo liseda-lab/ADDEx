@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00859 - Disease::DOID:7148",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3891,
+        "final_score": 0.3891
+      },
+      "nodes": [
+        {
+          "id": "Penicillamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Toxic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Rheumatoid Arthritis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Penicillamine",
+          "target": "Hepatitis Toxic",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Toxic",
+          "target": "Azathioprine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Rheumatoid Arthritis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Penicillamine,Azathioprine": [
+          "Antineoplastic Agent",
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_38"
+    }
+  ]
+}

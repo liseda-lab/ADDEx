@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB01149 - Gene::3356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4394,
+        "final_score": 0.4394
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Seeking Behavior",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Drug Seeking Behavior",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Seeking Behavior",
+          "target": "Mirtazapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mirtazapine",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nefazodone,Mirtazapine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_7261"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3677,
+        "final_score": 0.3677
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Meclizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluspirilene",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Meclizine",
+          "label": "resembles"
+        },
+        {
+          "source": "Meclizine",
+          "target": "Fluspirilene",
+          "label": "resembles"
+        },
+        {
+          "source": "Fluspirilene",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nefazodone,Meclizine": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ],
+        "Nefazodone,Fluspirilene": [
+          "Agent Affecting Nervous System"
+        ],
+        "Meclizine,Fluspirilene": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_7262"
+    }
+  ]
+}

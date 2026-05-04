@@ -1,0 +1,56 @@
+{
+  "id": "Compound::DB00985 - Disease::DOID:4481",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6001,
+        "final_score": 0.6001
+      },
+      "nodes": [
+        {
+          "id": "Dimenhydrinate",
+          "type": "Compound"
+        },
+        {
+          "id": "Labyrinthitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dimenhydrinate",
+          "target": "Labyrinthitis",
+          "label": "causes"
+        },
+        {
+          "source": "Labyrinthitis",
+          "target": "Diphenhydramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diphenhydramine",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dimenhydrinate,Diphenhydramine": [
+          "Molecular Entity",
+          "Antiemetic Agent"
+        ],
+        "Labyrinthitis,Allergic Rhinitis": [
+          "Non-Neoplastic Head And Neck Disorder"
+        ]
+      },
+      "id": "path_3976"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB04572 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4453,
+        "final_score": 0.4453
+      },
+      "nodes": [
+        {
+          "id": "Thiotepa",
+          "type": "Compound"
+        },
+        {
+          "id": "Chemical Cystitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thiotepa",
+          "target": "Chemical Cystitis",
+          "label": "causes"
+        },
+        {
+          "source": "Chemical Cystitis",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thiotepa,Cyclophosphamide": [
+          "Organonitrogen Compound",
+          "Antineoplastic Alkylating Agent"
+        ]
+      },
+      "id": "path_10990"
+    }
+  ]
+}

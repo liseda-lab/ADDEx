@@ -1,0 +1,105 @@
+{
+  "id": "Compound::DB00368 - Gene::151",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6954,
+        "final_score": 0.6954
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Epinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Epinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norepinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Norepinephrine,Epinephrine": [
+          "Catecholamine"
+        ],
+        "Catecholamines,Epinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_21423"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5933,
+        "final_score": 0.5933
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Violent",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Violent",
+          "label": "causes"
+        },
+        {
+          "source": "Violent",
+          "target": "Lisuride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norepinephrine,Lisuride": [
+          "Oxygen Molecular Entity"
+        ]
+      },
+      "id": "path_21424"
+    }
+  ]
+}

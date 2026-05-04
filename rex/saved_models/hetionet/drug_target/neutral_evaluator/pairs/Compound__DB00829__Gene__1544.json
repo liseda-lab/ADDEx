@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00829 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4638,
+        "final_score": 0.4638
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Bromazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromazepam",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Bromazepam": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_7417"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4493,
+        "final_score": 0.4493
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Zolpidem",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zolpidem",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Zolpidem": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_7418"
+    }
+  ]
+}

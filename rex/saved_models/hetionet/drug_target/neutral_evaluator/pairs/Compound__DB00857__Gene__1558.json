@@ -1,0 +1,94 @@
+{
+  "id": "Compound::DB00857 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6967,
+        "final_score": 0.6967
+      },
+      "nodes": [
+        {
+          "id": "Terbinafine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Terbinafine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3964"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4363,
+        "final_score": 0.4363
+      },
+      "nodes": [
+        {
+          "id": "Terbinafine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypogeusia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vismodegib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Terbinafine",
+          "target": "Hypogeusia",
+          "label": "causes"
+        },
+        {
+          "source": "Hypogeusia",
+          "target": "Vismodegib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vismodegib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Terbinafine,Vismodegib": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_3965"
+    }
+  ]
+}

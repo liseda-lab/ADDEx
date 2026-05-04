@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB00321 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4128,
+        "final_score": 0.4128
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Abnormal Involuntary Movements",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Abnormal Involuntary Movements",
+          "label": "causes"
+        },
+        {
+          "source": "Abnormal Involuntary Movements",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Amiodarone": [
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_2840"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3788,
+        "final_score": 0.3788
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Loratadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Loratadine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Azatadine": [
+          "Tertiary Amine"
+        ],
+        "Amitriptyline,Loratadine": [
+          "Organic Tricyclic Compound"
+        ],
+        "Azatadine,Loratadine": [
+          "Benzocycloheptapyridine",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_2841"
+    }
+  ]
+}

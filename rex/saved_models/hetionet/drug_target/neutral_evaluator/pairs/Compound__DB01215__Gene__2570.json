@@ -1,0 +1,157 @@
+{
+  "id": "Compound::DB01215 - Gene::2570",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8497,
+        "final_score": 0.8497
+      },
+      "nodes": [
+        {
+          "id": "Estazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrr1",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba A (rho) Receptor Activation",
+          "type": "Pathway"
+        },
+        {
+          "id": "Gabrr2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estazolam",
+          "target": "Gabrr1",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrr1",
+          "target": "Gaba A (rho) Receptor Activation",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba A (rho) Receptor Activation",
+          "target": "Gabrr2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9770"
+    },
+    {
+      "score": {
+        "ic_mean": 0.699,
+        "final_score": 0.699
+      },
+      "nodes": [
+        {
+          "id": "Estazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrr2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estazolam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Oxazepam",
+          "label": "includes"
+        },
+        {
+          "source": "Oxazepam",
+          "target": "Gabrr2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estazolam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Estazolam,Oxazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Oxazepam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_9771"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4491,
+        "final_score": 0.4491
+      },
+      "nodes": [
+        {
+          "id": "Estazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Delorazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrr2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estazolam",
+          "target": "Delorazepam",
+          "label": "resembles"
+        },
+        {
+          "source": "Delorazepam",
+          "target": "Oxazepam",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxazepam",
+          "target": "Gabrr2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estazolam,Delorazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Estazolam,Oxazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Delorazepam,Oxazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_9772"
+    }
+  ]
+}

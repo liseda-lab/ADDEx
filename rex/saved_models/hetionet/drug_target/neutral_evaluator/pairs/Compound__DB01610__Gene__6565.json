@@ -1,0 +1,131 @@
+{
+  "id": "Compound::DB01610 - Gene::6565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7851,
+        "final_score": 0.7851
+      },
+      "nodes": [
+        {
+          "id": "Valganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Proton/oligonucleotide Cotransporters",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valganciclovir",
+          "target": "Slc15a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc15a1",
+          "target": "Proton/oligonucleotide Cotransporters",
+          "label": "participates"
+        },
+        {
+          "source": "Proton/oligonucleotide Cotransporters",
+          "target": "Slc15a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14413"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6772,
+        "final_score": 0.6772
+      },
+      "nodes": [
+        {
+          "id": "Valganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valganciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Valaciclovir",
+          "label": "includes"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc15a2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_14414"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5257,
+        "final_score": 0.5257
+      },
+      "nodes": [
+        {
+          "id": "Valganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytomegalovirus Infection",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valganciclovir",
+          "target": "Cytomegalovirus Infection",
+          "label": "causes"
+        },
+        {
+          "source": "Cytomegalovirus Infection",
+          "target": "Valaciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc15a2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_14415"
+    }
+  ]
+}

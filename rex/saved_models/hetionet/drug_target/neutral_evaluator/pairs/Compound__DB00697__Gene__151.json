@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00697 - Gene::151",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6208,
+        "final_score": 0.6208
+      },
+      "nodes": [
+        {
+          "id": "Tizanidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenergic Alpha2-agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tizanidine",
+          "target": "Adrenergic Alpha2-agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Adrenergic Alpha2-agonists",
+          "target": "Dexmedetomidine",
+          "label": "includes"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tizanidine,Dexmedetomidine": [
+          "Imidazoles",
+          "Alpha-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_20673"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4872,
+        "final_score": 0.4872
+      },
+      "nodes": [
+        {
+          "id": "Tizanidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Respiratory Acidosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tizanidine",
+          "target": "Respiratory Acidosis",
+          "label": "causes"
+        },
+        {
+          "source": "Respiratory Acidosis",
+          "target": "Dexmedetomidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tizanidine,Dexmedetomidine": [
+          "Imidazoles",
+          "Alpha-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_20674"
+    }
+  ]
+}

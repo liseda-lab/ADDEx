@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB01194 - Gene::768",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7917,
+        "final_score": 0.7917
+      },
+      "nodes": [
+        {
+          "id": "Brinzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        },
+        {
+          "id": "Reversible Hydration Of Carbon Dioxide",
+          "type": "Pathway"
+        },
+        {
+          "id": "Ca9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Brinzolamide",
+          "target": "Ca5a",
+          "label": "binds"
+        },
+        {
+          "source": "Ca5a",
+          "target": "Reversible Hydration Of Carbon Dioxide",
+          "label": "participates"
+        },
+        {
+          "source": "Reversible Hydration Of Carbon Dioxide",
+          "target": "Ca9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_21984"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5366,
+        "final_score": 0.5366
+      },
+      "nodes": [
+        {
+          "id": "Brinzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypoaesthesia Eye",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dorzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Brinzolamide",
+          "target": "Hypoaesthesia Eye",
+          "label": "causes"
+        },
+        {
+          "source": "Hypoaesthesia Eye",
+          "target": "Dorzolamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dorzolamide",
+          "target": "Ca9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Brinzolamide,Dorzolamide": [
+          "Carbonic Anhydrase Inhibitor",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_21985"
+    }
+  ]
+}

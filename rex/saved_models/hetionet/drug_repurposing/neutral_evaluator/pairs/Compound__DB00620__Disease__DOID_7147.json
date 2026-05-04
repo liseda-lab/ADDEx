@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00620 - Disease::DOID:7147",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4892,
+        "final_score": 0.4892
+      },
+      "nodes": [
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Bladder Dysfunction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ankylosing Spondylitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triamcinolone",
+          "target": "Bladder Dysfunction",
+          "label": "causes"
+        },
+        {
+          "source": "Bladder Dysfunction",
+          "target": "Betamethasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Betamethasone",
+          "target": "Ankylosing Spondylitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Triamcinolone,Betamethasone": [
+          "20-Oxo Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_1709"
+    }
+  ]
+}

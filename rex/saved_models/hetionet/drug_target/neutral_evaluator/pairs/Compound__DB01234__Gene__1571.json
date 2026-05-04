@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01234 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3595,
+        "final_score": 0.3595
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Vitreous Floaters",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Vitreous Floaters",
+          "label": "causes"
+        },
+        {
+          "source": "Vitreous Floaters",
+          "target": "Sildenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sildenafil",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Sildenafil": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_21266"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "Compound::DB00481 - Disease::DOID:11476",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3961,
+        "final_score": 0.3961
+      },
+      "nodes": [
+        {
+          "id": "Raloxifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Rib",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Osteoporosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Raloxifene",
+          "target": "Breast Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Breast Cancer",
+          "target": "Rib",
+          "label": "localizes"
+        },
+        {
+          "source": "Rib",
+          "target": "Osteoporosis",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Raloxifene,Rib": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_2888"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3717,
+        "final_score": 0.3717
+      },
+      "nodes": [
+        {
+          "id": "Raloxifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Musculoskeletal Pain",
+          "type": "Symptom"
+        },
+        {
+          "id": "Osteoporosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Raloxifene",
+          "target": "Breast Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Breast Cancer",
+          "target": "Musculoskeletal Pain",
+          "label": "presents"
+        },
+        {
+          "source": "Musculoskeletal Pain",
+          "target": "Osteoporosis",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_2889"
+    }
+  ]
+}

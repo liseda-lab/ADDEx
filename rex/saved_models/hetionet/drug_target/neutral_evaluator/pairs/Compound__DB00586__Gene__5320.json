@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00586 - Gene::5320",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5472,
+        "final_score": 0.5472
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Secondary Anemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Pla2g2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Secondary Anemia",
+          "label": "causes"
+        },
+        {
+          "source": "Secondary Anemia",
+          "target": "Indomethacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indomethacin",
+          "target": "Pla2g2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Indomethacin": [
+          "Chlorobenzenes",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_8154"
+    }
+  ]
+}

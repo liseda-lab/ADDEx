@@ -1,0 +1,94 @@
+{
+  "id": "Compound::DB01015 - Gene::54600",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7331,
+        "final_score": 0.7331
+      },
+      "nodes": [
+        {
+          "id": "Sulfamethoxazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Nat2",
+          "type": "Gene"
+        },
+        {
+          "id": "Arylamine Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Ugt1a9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfamethoxazole",
+          "target": "Nat2",
+          "label": "binds"
+        },
+        {
+          "source": "Nat2",
+          "target": "Arylamine Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Arylamine Metabolism",
+          "target": "Ugt1a9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13162"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6696,
+        "final_score": 0.6696
+      },
+      "nodes": [
+        {
+          "id": "Sulfamethoxazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Nat2",
+          "type": "Gene"
+        },
+        {
+          "id": "Ezogabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfamethoxazole",
+          "target": "Nat2",
+          "label": "binds"
+        },
+        {
+          "source": "Nat2",
+          "target": "Ezogabine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ezogabine",
+          "target": "Ugt1a9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sulfamethoxazole,Ezogabine": [
+          "Substituted Aniline"
+        ]
+      },
+      "id": "path_13163"
+    }
+  ]
+}

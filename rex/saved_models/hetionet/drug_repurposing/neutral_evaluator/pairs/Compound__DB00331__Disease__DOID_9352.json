@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00331 - Disease::DOID:9352",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5271,
+        "final_score": 0.5271
+      },
+      "nodes": [
+        {
+          "id": "Metformin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ketonuria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metformin",
+          "target": "Ketonuria",
+          "label": "causes"
+        },
+        {
+          "source": "Ketonuria",
+          "target": "Rosiglitazone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rosiglitazone",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metformin,Rosiglitazone": [
+          "Anti-Diabetic Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_1898"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01558 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5074,
+        "final_score": 0.5074
+      },
+      "nodes": [
+        {
+          "id": "Bromazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nitrazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromazepam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Nitrazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nitrazepam",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromazepam,Nitrazepam": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_21421"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4711,
+        "final_score": 0.4711
+      },
+      "nodes": [
+        {
+          "id": "Bromazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromazepam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Diazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diazepam",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromazepam,Diazepam": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_21422"
+    }
+  ]
+}

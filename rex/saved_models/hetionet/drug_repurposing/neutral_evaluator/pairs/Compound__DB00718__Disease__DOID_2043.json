@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00718 - Disease::DOID:2043",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7059,
+        "final_score": 0.7059
+      },
+      "nodes": [
+        {
+          "id": "Adefovir Dipivoxil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis B E Antigen Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Entecavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis B",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Adefovir Dipivoxil",
+          "target": "Hepatitis B E Antigen Positive",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis B E Antigen Positive",
+          "target": "Entecavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Entecavir",
+          "target": "Hepatitis B",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Adefovir Dipivoxil,Entecavir": [
+          "Nucleoside Reverse Transcriptase Inhibitor",
+          "Aminopurine"
+        ]
+      },
+      "id": "path_1829"
+    }
+  ]
+}

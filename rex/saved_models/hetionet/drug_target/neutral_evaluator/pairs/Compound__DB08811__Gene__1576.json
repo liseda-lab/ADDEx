@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB08811 - Gene::1576",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6236,
+        "final_score": 0.6236
+      },
+      "nodes": [
+        {
+          "id": "Tofisopam",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde10a",
+          "type": "Gene"
+        },
+        {
+          "id": "Vardenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tofisopam",
+          "target": "Pde10a",
+          "label": "binds"
+        },
+        {
+          "source": "Pde10a",
+          "target": "Vardenafil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Vardenafil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tofisopam,Vardenafil": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_21513"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4641,
+        "final_score": 0.4641
+      },
+      "nodes": [
+        {
+          "id": "Tofisopam",
+          "type": "Compound"
+        },
+        {
+          "id": "Papaverine",
+          "type": "Compound"
+        },
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tofisopam",
+          "target": "Papaverine",
+          "label": "resembles"
+        },
+        {
+          "source": "Papaverine",
+          "target": "Verapamil",
+          "label": "resembles"
+        },
+        {
+          "source": "Verapamil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tofisopam,Papaverine": [
+          "Organic Molecular Entity"
+        ],
+        "Tofisopam,Verapamil": [
+          "Organic Molecular Entity"
+        ],
+        "Papaverine,Verapamil": [
+          "Agent Affecting Cardiovascular System",
+          "Aromatic Ether"
+        ]
+      },
+      "id": "path_21514"
+    }
+  ]
+}

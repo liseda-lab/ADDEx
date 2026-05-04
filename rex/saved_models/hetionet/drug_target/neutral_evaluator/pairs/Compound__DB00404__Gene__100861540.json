@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00404 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4402,
+        "final_score": 0.4402
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Withdrawal Seizures",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Withdrawal Seizures",
+          "label": "causes"
+        },
+        {
+          "source": "Withdrawal Seizures",
+          "target": "Midazolam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Midazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_16285"
+    }
+  ]
+}

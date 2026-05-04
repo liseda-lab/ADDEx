@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01050 - Gene::54600",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5183,
+        "final_score": 0.5183
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Glomerular Filtration Rate Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Canagliflozin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Glomerular Filtration Rate Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Glomerular Filtration Rate Decreased",
+          "target": "Canagliflozin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Canagliflozin",
+          "target": "Ugt1a9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Canagliflozin": [
+          "Enzyme Inhibitor",
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_23715"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4948,
+        "final_score": 0.4948
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Papillary Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etodolac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Renal Papillary Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Papillary Necrosis",
+          "target": "Etodolac",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etodolac",
+          "target": "Ugt1a9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Etodolac": [
+          "Monocarboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_23716"
+    }
+  ]
+}

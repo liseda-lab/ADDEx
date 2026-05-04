@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00396 - Gene::1543",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.422,
+        "final_score": 0.422
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Patent Ductus Arteriosus",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Patent Ductus Arteriosus",
+          "label": "causes"
+        },
+        {
+          "source": "Patent Ductus Arteriosus",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Clomifene": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_2668"
+    }
+  ]
+}

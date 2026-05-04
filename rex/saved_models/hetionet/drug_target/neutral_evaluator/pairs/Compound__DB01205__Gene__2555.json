@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB01205 - Gene::2555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7754,
+        "final_score": 0.7754
+      },
+      "nodes": [
+        {
+          "id": "Flumazenil",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra3",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba A Receptor Activation",
+          "type": "Pathway"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flumazenil",
+          "target": "Gabra3",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra3",
+          "target": "Gaba A Receptor Activation",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba A Receptor Activation",
+          "target": "Gabra2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19048"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6803,
+        "final_score": 0.6803
+      },
+      "nodes": [
+        {
+          "id": "Flumazenil",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra3",
+          "type": "Gene"
+        },
+        {
+          "id": "Amobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flumazenil",
+          "target": "Gabra3",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra3",
+          "target": "Amobarbital",
+          "label": "is bound by"
+        },
+        {
+          "source": "Amobarbital",
+          "target": "Gabra2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flumazenil,Amobarbital": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_19049"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4819,
+        "final_score": 0.4819
+      },
+      "nodes": [
+        {
+          "id": "Flumazenil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypopnoea",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flumazenil",
+          "target": "Hypopnoea",
+          "label": "causes"
+        },
+        {
+          "source": "Hypopnoea",
+          "target": "Midazolam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Gabra2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flumazenil,Midazolam": [
+          "Imidazobenzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_19050"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "Compound::DB01023 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6052,
+        "final_score": 0.6052
+      },
+      "nodes": [
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felodipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Amlodipine",
+          "label": "includes"
+        },
+        {
+          "source": "Amlodipine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Felodipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Felodipine,Amlodipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Amlodipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_4667"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5465,
+        "final_score": 0.5465
+      },
+      "nodes": [
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felodipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Amlodipine",
+          "label": "includes"
+        },
+        {
+          "source": "Amlodipine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Felodipine,Amlodipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_4668"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4135,
+        "final_score": 0.4135
+      },
+      "nodes": [
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyperplasia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felodipine",
+          "target": "Hyperplasia",
+          "label": "causes"
+        },
+        {
+          "source": "Hyperplasia",
+          "target": "Phenytoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenytoin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Felodipine,Phenytoin": [
+          "Cation Channel Blocker",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4669"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01200 - Gene::147",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4874,
+        "final_score": 0.4874
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Malignant Syndrome Nos",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Malignant Syndrome Nos",
+          "label": "causes"
+        },
+        {
+          "source": "Malignant Syndrome Nos",
+          "target": "Nefazodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nefazodone",
+          "target": "Adra1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromocriptine,Nefazodone": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_20566"
+    }
+  ]
+}

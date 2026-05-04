@@ -1,0 +1,99 @@
+{
+  "id": "Compound::DB00593 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6425,
+        "final_score": 0.6425
+      },
+      "nodes": [
+        {
+          "id": "Ethosuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethosuximide",
+          "target": "Cyp3a43",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a43",
+          "target": "Rifampicin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethosuximide,Rifampicin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_827"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5155,
+        "final_score": 0.5155
+      },
+      "nodes": [
+        {
+          "id": "Ethosuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gingival Hypertrophy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lercanidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethosuximide",
+          "target": "Gingival Hypertrophy",
+          "label": "causes"
+        },
+        {
+          "source": "Gingival Hypertrophy",
+          "target": "Lercanidipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lercanidipine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethosuximide,Lercanidipine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_828"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01229 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4452,
+        "final_score": 0.4452
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Infusion Site Inflammation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Infusion Site Inflammation",
+          "label": "causes"
+        },
+        {
+          "source": "Infusion Site Inflammation",
+          "target": "Caffeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Caffeine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_16935"
+    }
+  ]
+}

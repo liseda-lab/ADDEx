@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01248 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3978,
+        "final_score": 0.3978
+      },
+      "nodes": [
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Onychomadesis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Docetaxel",
+          "target": "Onychomadesis",
+          "label": "causes"
+        },
+        {
+          "source": "Onychomadesis",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Docetaxel,Carbamazepine": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_23021"
+    }
+  ]
+}

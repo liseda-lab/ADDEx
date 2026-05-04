@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00783 - Gene::28231",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5542,
+        "final_score": 0.5542
+      },
+      "nodes": [
+        {
+          "id": "Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Vaginismus",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco4a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estradiol",
+          "target": "Vaginismus",
+          "label": "causes"
+        },
+        {
+          "source": "Vaginismus",
+          "target": "Dinoprostone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprostone",
+          "target": "Slco4a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estradiol,Dinoprostone": [
+          "Organic Hydroxy Compound",
+          "Physiology-Regulatory Factor"
+        ]
+      },
+      "id": "path_19718"
+    }
+  ]
+}

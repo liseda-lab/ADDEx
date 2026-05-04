@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00512 - Gene::9356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5521,
+        "final_score": 0.5521
+      },
+      "nodes": [
+        {
+          "id": "Vancomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ototoxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Streptomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vancomycin",
+          "target": "Ototoxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Ototoxicity",
+          "target": "Streptomycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Streptomycin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vancomycin,Streptomycin": [
+          "Organic Cation",
+          "Antibiotic"
+        ]
+      },
+      "id": "path_4495"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4808,
+        "final_score": 0.4808
+      },
+      "nodes": [
+        {
+          "id": "Vancomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Deafness Permanent",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vancomycin",
+          "target": "Deafness Permanent",
+          "label": "causes"
+        },
+        {
+          "source": "Deafness Permanent",
+          "target": "Furosemide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Furosemide",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vancomycin,Furosemide": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_4496"
+    }
+  ]
+}

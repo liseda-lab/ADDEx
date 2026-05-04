@@ -1,0 +1,160 @@
+{
+  "id": "Compound::DB00683 - Gene::2554",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6709,
+        "final_score": 0.6709
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Clorazepate",
+          "label": "includes"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Gabra1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midazolam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Midazolam,Clorazepate": [
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Clorazepate": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_14454"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6708,
+        "final_score": 0.6708
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Oversedation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lorazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Oversedation",
+          "label": "causes"
+        },
+        {
+          "source": "Oversedation",
+          "target": "Lorazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lorazepam",
+          "target": "Gabra1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midazolam,Lorazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_14455"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4691,
+        "final_score": 0.4691
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ethyl Loflazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Ethyl Loflazepate",
+          "label": "resembles"
+        },
+        {
+          "source": "Ethyl Loflazepate",
+          "target": "Clorazepate",
+          "label": "resembles"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Gabra1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midazolam,Ethyl Loflazepate": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ],
+        "Midazolam,Clorazepate": [
+          "Benzodiazepine"
+        ],
+        "Ethyl Loflazepate,Clorazepate": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_14456"
+    }
+  ]
+}

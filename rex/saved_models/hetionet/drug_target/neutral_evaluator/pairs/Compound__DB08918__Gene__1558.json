@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB08918 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6861,
+        "final_score": 0.6861
+      },
+      "nodes": [
+        {
+          "id": "Levomilnacipran",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levomilnacipran",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13930"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4115,
+        "final_score": 0.4115
+      },
+      "nodes": [
+        {
+          "id": "Levomilnacipran",
+          "type": "Compound"
+        },
+        {
+          "id": "Urethral Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levomilnacipran",
+          "target": "Urethral Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Urethral Pain",
+          "target": "Fosphenytoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fosphenytoin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levomilnacipran,Fosphenytoin": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_13931"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01120 - Gene::6833",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6394,
+        "final_score": 0.6394
+      },
+      "nodes": [
+        {
+          "id": "Gliclazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Porphyria Hepatic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Glipizide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gliclazide",
+          "target": "Porphyria Hepatic",
+          "label": "causes"
+        },
+        {
+          "source": "Porphyria Hepatic",
+          "target": "Glipizide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Glipizide",
+          "target": "Abcc8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gliclazide,Glipizide": [
+          "N-Sulfonylurea",
+          "Sulfonylurea Antidiabetic Agent"
+        ]
+      },
+      "id": "path_4910"
+    }
+  ]
+}

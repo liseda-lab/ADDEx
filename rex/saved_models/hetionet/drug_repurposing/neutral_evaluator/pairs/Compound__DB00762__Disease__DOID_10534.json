@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00762 - Disease::DOID:10534",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4105,
+        "final_score": 0.4105
+      },
+      "nodes": [
+        {
+          "id": "Irinotecan",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Celiac Nerve Plexus",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irinotecan",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Pancreatic Cancer",
+          "target": "Celiac Nerve Plexus",
+          "label": "localizes"
+        },
+        {
+          "source": "Celiac Nerve Plexus",
+          "target": "Stomach Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pancreatic Cancer,Stomach Cancer": [
+          "Mcode Neoplastic Disease/Finding"
+        ]
+      },
+      "id": "path_1348"
+    }
+  ]
+}

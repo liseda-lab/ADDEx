@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00497 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5037,
+        "final_score": 0.5037
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Spasm Biliary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Spasm Biliary",
+          "label": "causes"
+        },
+        {
+          "source": "Spasm Biliary",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Codeine": [
+          "Opioid Receptor Agonist",
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_13113"
+    }
+  ]
+}

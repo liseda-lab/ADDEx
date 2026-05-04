@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01241 - Gene::10599",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6516,
+        "final_score": 0.6516
+      },
+      "nodes": [
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Ppar Alpha",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemfibrozil",
+          "target": "Ppar Alpha",
+          "label": "is included in"
+        },
+        {
+          "source": "Ppar Alpha",
+          "target": "Pioglitazone",
+          "label": "includes"
+        },
+        {
+          "source": "Pioglitazone",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemfibrozil,Pioglitazone": [
+          "Aromatic Ether",
+          "Agent Affecting Digestive System Or Metabolism"
+        ]
+      },
+      "id": "path_9630"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4984,
+        "final_score": 0.4984
+      },
+      "nodes": [
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Synovitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Penicillamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemfibrozil",
+          "target": "Synovitis",
+          "label": "causes"
+        },
+        {
+          "source": "Synovitis",
+          "target": "Penicillamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Penicillamine",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemfibrozil,Penicillamine": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_9631"
+    }
+  ]
+}

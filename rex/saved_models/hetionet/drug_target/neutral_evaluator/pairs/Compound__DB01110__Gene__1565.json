@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB01110 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4187,
+        "final_score": 0.4187
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Itraconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Itraconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Itraconazole",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Azoles": [
+          "Azole"
+        ],
+        "Miconazole,Itraconazole": [
+          "Antifungal Agent",
+          "Conazole Antifungal Drug"
+        ],
+        "Azoles,Itraconazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_695"
+    }
+  ]
+}

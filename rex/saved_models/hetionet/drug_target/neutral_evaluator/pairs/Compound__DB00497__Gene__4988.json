@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00497 - Gene::4988",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6174,
+        "final_score": 0.6174
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Spasm Biliary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Levorphanol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Spasm Biliary",
+          "label": "causes"
+        },
+        {
+          "source": "Spasm Biliary",
+          "target": "Levorphanol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Levorphanol",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Levorphanol": [
+          "Opioid Receptor Agonist",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_3003"
+    }
+  ]
+}

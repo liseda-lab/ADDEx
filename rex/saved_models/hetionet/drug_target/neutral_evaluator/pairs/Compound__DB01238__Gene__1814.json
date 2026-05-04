@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01238 - Gene::1814",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4704,
+        "final_score": 0.4704
+      },
+      "nodes": [
+        {
+          "id": "Aripiprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aripiprazole",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "causes"
+        },
+        {
+          "source": "Type 2 Diabetes Mellitus",
+          "target": "Bromocriptine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aripiprazole,Bromocriptine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_34"
+    }
+  ]
+}

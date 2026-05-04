@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00289 - Gene::3356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4441,
+        "final_score": 0.4441
+      },
+      "nodes": [
+        {
+          "id": "Atomoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Menstruation Delayed",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atomoxetine",
+          "target": "Menstruation Delayed",
+          "label": "causes"
+        },
+        {
+          "source": "Menstruation Delayed",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atomoxetine,Paliperidone": [
+          "Agent Affecting Nervous System",
+          "Halide"
+        ]
+      },
+      "id": "path_11167"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3369,
+        "final_score": 0.3369
+      },
+      "nodes": [
+        {
+          "id": "Atomoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Demexiptiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atomoxetine",
+          "target": "Demexiptiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Demexiptiline",
+          "target": "Maprotiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Maprotiline",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atomoxetine,Demexiptiline": [
+          "Antidepressant Agent",
+          "Benzenoid Aromatic Compound"
+        ],
+        "Atomoxetine,Maprotiline": [
+          "Antidepressant Agent",
+          "Benzenoid Aromatic Compound"
+        ],
+        "Demexiptiline,Maprotiline": [
+          "Tricyclic Antidepressant",
+          "Benzenoid Aromatic Compound"
+        ]
+      },
+      "id": "path_11168"
+    }
+  ]
+}

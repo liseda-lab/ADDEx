@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB01567 - Gene::2569",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8346,
+        "final_score": 0.8346
+      },
+      "nodes": [
+        {
+          "id": "Fludiazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrr2",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba A (rho) Receptor Activation",
+          "type": "Pathway"
+        },
+        {
+          "id": "Gabrr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fludiazepam",
+          "target": "Gabrr2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrr2",
+          "target": "Gaba A (rho) Receptor Activation",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba A (rho) Receptor Activation",
+          "target": "Gabrr1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_21187"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4666,
+        "final_score": 0.4666
+      },
+      "nodes": [
+        {
+          "id": "Fludiazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ethyl Loflazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fludiazepam",
+          "target": "Ethyl Loflazepate",
+          "label": "resembles"
+        },
+        {
+          "source": "Ethyl Loflazepate",
+          "target": "Flurazepam",
+          "label": "resembles"
+        },
+        {
+          "source": "Flurazepam",
+          "target": "Gabrr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fludiazepam,Ethyl Loflazepate": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ],
+        "Fludiazepam,Flurazepam": [
+          "1,4-Benzodiazepinone",
+          "Benzodiazepine"
+        ],
+        "Ethyl Loflazepate,Flurazepam": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_21188"
+    }
+  ]
+}

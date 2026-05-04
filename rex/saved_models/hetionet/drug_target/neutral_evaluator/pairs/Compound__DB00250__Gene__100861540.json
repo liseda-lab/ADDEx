@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00250 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4967,
+        "final_score": 0.4967
+      },
+      "nodes": [
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Infertility Male",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapsone",
+          "target": "Infertility Male",
+          "label": "causes"
+        },
+        {
+          "source": "Infertility Male",
+          "target": "Finasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dapsone,Finasteride": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_9632"
+    }
+  ]
+}

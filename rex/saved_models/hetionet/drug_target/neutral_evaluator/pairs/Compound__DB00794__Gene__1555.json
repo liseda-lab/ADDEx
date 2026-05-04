@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00794 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6946,
+        "final_score": 0.6946
+      },
+      "nodes": [
+        {
+          "id": "Primidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Primidone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2b6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_669"
+    },
+    {
+      "score": {
+        "ic_mean": 0.435,
+        "final_score": 0.435
+      },
+      "nodes": [
+        {
+          "id": "Primidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Glutethimide",
+          "type": "Compound"
+        },
+        {
+          "id": "Methylphenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Primidone",
+          "target": "Glutethimide",
+          "label": "resembles"
+        },
+        {
+          "source": "Glutethimide",
+          "target": "Methylphenobarbital",
+          "label": "resembles"
+        },
+        {
+          "source": "Methylphenobarbital",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Primidone,Glutethimide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sedative And Hypnotic"
+        ],
+        "Primidone,Methylphenobarbital": [
+          "Barbiturate",
+          "Pyrimidone"
+        ],
+        "Glutethimide,Methylphenobarbital": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_670"
+    }
+  ]
+}

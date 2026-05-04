@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01050 - Gene::5468",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5135,
+        "final_score": 0.5135
+      },
+      "nodes": [
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Necrotising Fasciitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Pparg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ibuprofen",
+          "target": "Necrotising Fasciitis",
+          "label": "causes"
+        },
+        {
+          "source": "Necrotising Fasciitis",
+          "target": "Indomethacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indomethacin",
+          "target": "Pparg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ibuprofen,Indomethacin": [
+          "Carboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_691"
+    }
+  ]
+}

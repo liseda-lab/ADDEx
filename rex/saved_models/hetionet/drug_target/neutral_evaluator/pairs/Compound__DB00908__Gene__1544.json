@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00908 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4469,
+        "final_score": 0.4469
+      },
+      "nodes": [
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Interstitial Nephritis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinidine",
+          "target": "Acute Interstitial Nephritis",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Interstitial Nephritis",
+          "target": "Ranitidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinidine,Ranitidine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_16328"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4098,
+        "final_score": 0.4098
+      },
+      "nodes": [
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Telithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinidine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Telithromycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Telithromycin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinidine,Telithromycin": [
+          "Anti-Infective Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_16329"
+    }
+  ]
+}

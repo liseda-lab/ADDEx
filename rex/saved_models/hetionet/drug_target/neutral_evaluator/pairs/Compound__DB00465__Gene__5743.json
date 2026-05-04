@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00465 - Gene::5743",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6079,
+        "final_score": 0.6079
+      },
+      "nodes": [
+        {
+          "id": "Ketorolac",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nepafenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketorolac",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Nepafenac",
+          "label": "includes"
+        },
+        {
+          "source": "Nepafenac",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketorolac,Nepafenac": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_22726"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5171,
+        "final_score": 0.5171
+      },
+      "nodes": [
+        {
+          "id": "Ketorolac",
+          "type": "Compound"
+        },
+        {
+          "id": "Infertility Female",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tenoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketorolac",
+          "target": "Infertility Female",
+          "label": "causes"
+        },
+        {
+          "source": "Infertility Female",
+          "target": "Tenoxicam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tenoxicam",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketorolac,Tenoxicam": [
+          "Organonitrogen Heterocyclic Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_22727"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00633 - Gene::147",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5694,
+        "final_score": 0.5694
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenergic Alpha2-agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "Adrenergic Alpha2-agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Adrenergic Alpha2-agonists",
+          "target": "Clonidine",
+          "label": "includes"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Adra1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexmedetomidine,Clonidine": [
+          "Alpha-Adrenergic Agonist",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_3822"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4737,
+        "final_score": 0.4737
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Electrocardiogram T Wave Inversion",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenoldopam",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "Electrocardiogram T Wave Inversion",
+          "label": "causes"
+        },
+        {
+          "source": "Electrocardiogram T Wave Inversion",
+          "target": "Fenoldopam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenoldopam",
+          "target": "Adra1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexmedetomidine,Fenoldopam": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3823"
+    }
+  ]
+}

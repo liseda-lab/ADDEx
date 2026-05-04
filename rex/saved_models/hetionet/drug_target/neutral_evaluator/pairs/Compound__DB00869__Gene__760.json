@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00869 - Gene::760",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5716,
+        "final_score": 0.5716
+      },
+      "nodes": [
+        {
+          "id": "Dorzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Myopia Transient",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Acetazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dorzolamide",
+          "target": "Myopia Transient",
+          "label": "causes"
+        },
+        {
+          "source": "Myopia Transient",
+          "target": "Acetazolamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Acetazolamide",
+          "target": "Ca2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dorzolamide,Acetazolamide": [
+          "Carbonic Anhydrase Inhibitor",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_20659"
+    }
+  ]
+}

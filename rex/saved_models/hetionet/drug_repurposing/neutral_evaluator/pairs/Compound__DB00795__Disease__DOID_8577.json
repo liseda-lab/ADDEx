@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00795 - Disease::DOID:8577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7114,
+        "final_score": 0.7114
+      },
+      "nodes": [
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aminosalicylic Acids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ulcerative Colitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfasalazine",
+          "target": "Aminosalicylic Acids",
+          "label": "is included in"
+        },
+        {
+          "source": "Aminosalicylic Acids",
+          "target": "Balsalazide",
+          "label": "includes"
+        },
+        {
+          "source": "Balsalazide",
+          "target": "Ulcerative Colitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sulfasalazine,Balsalazide": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Benzenes"
+        ]
+      },
+      "id": "path_3340"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5456,
+        "final_score": 0.5456
+      },
+      "nodes": [
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Olsalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ulcerative Colitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfasalazine",
+          "target": "Olsalazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Olsalazine",
+          "target": "Balsalazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Balsalazide",
+          "target": "Ulcerative Colitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sulfasalazine,Olsalazine": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Azobenzenes"
+        ],
+        "Sulfasalazine,Balsalazide": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Benzenes"
+        ],
+        "Olsalazine,Balsalazide": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Dicarboxylic Acid Dianion"
+        ]
+      },
+      "id": "path_3341"
+    }
+  ]
+}

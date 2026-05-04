@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00544 - Disease::DOID:4159",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3713,
+        "final_score": 0.3713
+      },
+      "nodes": [
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Onychomadesis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluorouracil",
+          "target": "Onychomadesis",
+          "label": "causes"
+        },
+        {
+          "source": "Onychomadesis",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Skin Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluorouracil,Docetaxel": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_1856"
+    }
+  ]
+}

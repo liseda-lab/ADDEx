@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00515 - Disease::DOID:5041",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.8333
+      },
+      "nodes": [
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Carboplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Carboplatin",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cisplatin,Carboplatin": [
+          "Platinum Coordination Entity",
+          "Platinum Compound"
+        ]
+      },
+      "id": "path_1434"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4328,
+        "final_score": 0.4328
+      },
+      "nodes": [
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Spinal Cord Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisplatin",
+          "target": "Spinal Cord Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Spinal Cord Disorder",
+          "target": "Methotrexate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cisplatin,Methotrexate": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_1435"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00997 - Disease::DOID:263",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5062,
+        "final_score": 0.5062
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Caecitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Kidney Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Caecitis",
+          "label": "causes"
+        },
+        {
+          "source": "Caecitis",
+          "target": "Paclitaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paclitaxel",
+          "target": "Kidney Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Paclitaxel": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_629"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "id": "Compound::DB00829 - Gene::2560",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6923,
+        "final_score": 0.6923
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Midazolam",
+          "label": "includes"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Gabrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Diazepam,Midazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Midazolam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_9204"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5282,
+        "final_score": 0.5282
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Midazolam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Gabrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Midazolam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_9205"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5105,
+        "final_score": 0.5105
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ethyl Loflazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Halazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Ethyl Loflazepate",
+          "label": "resembles"
+        },
+        {
+          "source": "Ethyl Loflazepate",
+          "target": "Halazepam",
+          "label": "resembles"
+        },
+        {
+          "source": "Halazepam",
+          "target": "Gabrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Ethyl Loflazepate": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ],
+        "Diazepam,Halazepam": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ],
+        "Ethyl Loflazepate,Halazepam": [
+          "Organic Molecular Entity",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_9206"
+    }
+  ]
+}

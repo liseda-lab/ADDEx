@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01267 - Gene::3351",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5305,
+        "final_score": 0.5305
+      },
+      "nodes": [
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Myotonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propranolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paliperidone",
+          "target": "Myotonia",
+          "label": "causes"
+        },
+        {
+          "source": "Myotonia",
+          "target": "Propranolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propranolol",
+          "target": "Htr1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paliperidone,Propranolol": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_19763"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00675 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5105,
+        "final_score": 0.5105
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer Male",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Breast Cancer Male",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Cancer Male",
+          "target": "Finasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Finasteride": [
+          "Organic Cyclic Compound",
+          "Chemopreventive Agent"
+        ]
+      },
+      "id": "path_2773"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4425,
+        "final_score": 0.4425
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Sarcoma",
+          "label": "causes"
+        },
+        {
+          "source": "Sarcoma",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Cyclophosphamide": [
+          "Organonitrogen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_2774"
+    }
+  ]
+}

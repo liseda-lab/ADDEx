@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01104 - Gene::6532",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.506,
+        "final_score": 0.506
+      },
+      "nodes": [
+        {
+          "id": "Sertraline",
+          "type": "Compound"
+        },
+        {
+          "id": "Benign Neoplasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dexmethylphenidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sertraline",
+          "target": "Benign Neoplasm",
+          "label": "causes"
+        },
+        {
+          "source": "Benign Neoplasm",
+          "target": "Dexmethylphenidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dexmethylphenidate",
+          "target": "Slc6a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sertraline,Dexmethylphenidate": [
+          "Agent Affecting Nervous System",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1313"
+    }
+  ]
+}

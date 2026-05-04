@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00388 - Gene::146",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.576,
+        "final_score": 0.576
+      },
+      "nodes": [
+        {
+          "id": "Phenylephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Reflex Bradycardia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Midodrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenylephrine",
+          "target": "Reflex Bradycardia",
+          "label": "causes"
+        },
+        {
+          "source": "Reflex Bradycardia",
+          "target": "Midodrine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Midodrine",
+          "target": "Adra1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenylephrine,Midodrine": [
+          "Ammonium Ion Derivative",
+          "Alpha-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_6433"
+    }
+  ]
+}

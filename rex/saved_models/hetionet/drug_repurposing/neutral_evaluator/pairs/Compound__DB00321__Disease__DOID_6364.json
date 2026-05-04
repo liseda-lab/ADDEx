@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00321 - Disease::DOID:6364",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4681,
+        "final_score": 0.4681
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Mental Status Changes",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Migraine",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Mental Status Changes",
+          "label": "causes"
+        },
+        {
+          "source": "Mental Status Changes",
+          "target": "Valproic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valproic Acid",
+          "target": "Migraine",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Valproic Acid": [
+          "Agent Affecting Nervous System",
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_3319"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB06209 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.575,
+        "final_score": 0.575
+      },
+      "nodes": [
+        {
+          "id": "Prasugrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Decreased Platelet Aggregation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ticlopidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prasugrel",
+          "target": "Decreased Platelet Aggregation",
+          "label": "is included in"
+        },
+        {
+          "source": "Decreased Platelet Aggregation",
+          "target": "Ticlopidine",
+          "label": "includes"
+        },
+        {
+          "source": "Ticlopidine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prasugrel,Ticlopidine": [
+          "Thienopyridine",
+          "Thienopyridine Antiplatelet Agent"
+        ]
+      },
+      "id": "path_13526"
+    }
+  ]
+}

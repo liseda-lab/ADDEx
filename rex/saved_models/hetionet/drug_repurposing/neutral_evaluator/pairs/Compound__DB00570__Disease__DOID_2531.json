@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00570 - Disease::DOID:2531",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5383,
+        "final_score": 0.5383
+      },
+      "nodes": [
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cdc42bpb",
+          "type": "Gene"
+        },
+        {
+          "id": "Nilotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinblastine",
+          "target": "Cdc42bpb",
+          "label": "upregulates"
+        },
+        {
+          "source": "Cdc42bpb",
+          "target": "Nilotinib",
+          "label": "is bound by"
+        },
+        {
+          "source": "Nilotinib",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vinblastine,Nilotinib": [
+          "Antineoplastic Agent",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_105"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3424,
+        "final_score": 0.3424
+      },
+      "nodes": [
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Subclavian Vein",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinblastine",
+          "target": "Breast Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Breast Cancer",
+          "target": "Subclavian Vein",
+          "label": "localizes"
+        },
+        {
+          "source": "Subclavian Vein",
+          "target": "Hematologic Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_106"
+    }
+  ]
+}

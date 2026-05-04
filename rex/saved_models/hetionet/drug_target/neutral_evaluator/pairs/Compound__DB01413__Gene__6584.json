@@ -1,0 +1,155 @@
+{
+  "id": "Compound::DB01413 - Gene::6584",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.736,
+        "final_score": 0.736
+      },
+      "nodes": [
+        {
+          "id": "Cefepime",
+          "type": "Compound"
+        },
+        {
+          "id": "Cephalosporins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cefdinir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cefepime",
+          "target": "Cephalosporins",
+          "label": "is included in"
+        },
+        {
+          "source": "Cephalosporins",
+          "target": "Cefdinir",
+          "label": "includes"
+        },
+        {
+          "source": "Cefdinir",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cefepime,Cephalosporins": [
+          "Cephalosporin"
+        ],
+        "Cefepime,Cefdinir": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cephalosporins,Cefdinir": [
+          "Cephalosporin"
+        ]
+      },
+      "id": "path_7243"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5509,
+        "final_score": 0.5509
+      },
+      "nodes": [
+        {
+          "id": "Cefepime",
+          "type": "Compound"
+        },
+        {
+          "id": "Pneumonia Streptococcal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cefixime",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cefepime",
+          "target": "Pneumonia Streptococcal",
+          "label": "causes"
+        },
+        {
+          "source": "Pneumonia Streptococcal",
+          "target": "Cefixime",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cefixime",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cefepime,Cefixime": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ]
+      },
+      "id": "path_7244"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5377,
+        "final_score": 0.5377
+      },
+      "nodes": [
+        {
+          "id": "Cefepime",
+          "type": "Compound"
+        },
+        {
+          "id": "Disability",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cefdinir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cefepime",
+          "target": "Disability",
+          "label": "causes"
+        },
+        {
+          "source": "Disability",
+          "target": "Cefdinir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cefdinir",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cefepime,Cefdinir": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ]
+      },
+      "id": "path_7245"
+    }
+  ]
+}

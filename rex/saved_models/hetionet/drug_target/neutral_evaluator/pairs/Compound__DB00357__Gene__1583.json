@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00357 - Gene::1583",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.535,
+        "final_score": 0.535
+      },
+      "nodes": [
+        {
+          "id": "Aminoglutethimide",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenal Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mitotane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aminoglutethimide",
+          "target": "Adrenal Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Adrenal Insufficiency",
+          "target": "Mitotane",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mitotane",
+          "target": "Cyp11a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aminoglutethimide,Mitotane": [
+          "Anti-Adrenal",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_301"
+    }
+  ]
+}

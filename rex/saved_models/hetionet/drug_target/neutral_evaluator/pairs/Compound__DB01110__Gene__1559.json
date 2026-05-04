@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01110 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.427,
+        "final_score": 0.427
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Oral Discomfort",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nicotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Oral Discomfort",
+          "label": "causes"
+        },
+        {
+          "source": "Oral Discomfort",
+          "target": "Nicotine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nicotine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Nicotine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_19925"
+    }
+  ]
+}

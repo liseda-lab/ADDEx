@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00813 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.489,
+        "final_score": 0.489
+      },
+      "nodes": [
+        {
+          "id": "Fentanyl",
+          "type": "Compound"
+        },
+        {
+          "id": "Accidental Overdose",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fentanyl",
+          "target": "Accidental Overdose",
+          "label": "causes"
+        },
+        {
+          "source": "Accidental Overdose",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fentanyl,Oxycodone": [
+          "Opioid Receptor Agonist",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3409"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3472,
+        "final_score": 0.3472
+      },
+      "nodes": [
+        {
+          "id": "Fentanyl",
+          "type": "Compound"
+        },
+        {
+          "id": "Anileridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Astemizole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fentanyl",
+          "target": "Anileridine",
+          "label": "resembles"
+        },
+        {
+          "source": "Anileridine",
+          "target": "Astemizole",
+          "label": "resembles"
+        },
+        {
+          "source": "Astemizole",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fentanyl,Anileridine": [
+          "Agent Affecting Nervous System",
+          "Piperidines"
+        ],
+        "Fentanyl,Astemizole": [
+          "Piperidines"
+        ],
+        "Anileridine,Astemizole": [
+          "Piperidines"
+        ]
+      },
+      "id": "path_3410"
+    }
+  ]
+}

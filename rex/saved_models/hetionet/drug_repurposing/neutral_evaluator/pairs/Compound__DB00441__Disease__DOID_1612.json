@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00441 - Disease::DOID:1612",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3795,
+        "final_score": 0.3795
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Disease Progression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Disease Progression",
+          "label": "causes"
+        },
+        {
+          "source": "Disease Progression",
+          "target": "Tamoxifen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tamoxifen",
+          "target": "Breast Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Tamoxifen": [
+          "Antineoplastic Agent",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_2646"
+    }
+  ]
+}

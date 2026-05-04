@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00672 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4677,
+        "final_score": 0.4677
+      },
+      "nodes": [
+        {
+          "id": "Chlorpropamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Porphyria Hepatic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpropamide",
+          "target": "Porphyria Hepatic",
+          "label": "causes"
+        },
+        {
+          "source": "Porphyria Hepatic",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpropamide,Carbamazepine": [
+          "Ureas"
+        ]
+      },
+      "id": "path_20684"
+    }
+  ]
+}

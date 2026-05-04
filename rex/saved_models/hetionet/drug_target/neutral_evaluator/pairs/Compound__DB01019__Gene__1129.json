@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01019 - Gene::1129",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6826,
+        "final_score": 0.6826
+      },
+      "nodes": [
+        {
+          "id": "Bethanechol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cholinergic Muscarinic Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Pilocarpine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bethanechol",
+          "target": "Cholinergic Muscarinic Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Cholinergic Muscarinic Agonists",
+          "target": "Pilocarpine",
+          "label": "includes"
+        },
+        {
+          "source": "Pilocarpine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bethanechol,Pilocarpine": [
+          "Agent Affecting Nervous System",
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_14385"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5122,
+        "final_score": 0.5122
+      },
+      "nodes": [
+        {
+          "id": "Bethanechol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gastrointestinal Sounds Abnormal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hyoscyamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bethanechol",
+          "target": "Gastrointestinal Sounds Abnormal",
+          "label": "causes"
+        },
+        {
+          "source": "Gastrointestinal Sounds Abnormal",
+          "target": "Hyoscyamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hyoscyamine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bethanechol,Hyoscyamine": [
+          "Nitrogen Molecular Entity",
+          "Antimuscarinic Agent"
+        ]
+      },
+      "id": "path_14386"
+    }
+  ]
+}

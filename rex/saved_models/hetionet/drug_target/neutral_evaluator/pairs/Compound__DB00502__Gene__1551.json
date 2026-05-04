@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00502 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4722,
+        "final_score": 0.4722
+      },
+      "nodes": [
+        {
+          "id": "Haloperidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Vermiculation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pimozide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Haloperidol",
+          "target": "Vermiculation",
+          "label": "causes"
+        },
+        {
+          "source": "Vermiculation",
+          "target": "Pimozide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pimozide",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Haloperidol,Pimozide": [
+          "Agent Affecting Nervous System",
+          "Piperidines"
+        ]
+      },
+      "id": "path_6762"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3841,
+        "final_score": 0.3841
+      },
+      "nodes": [
+        {
+          "id": "Haloperidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Anileridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Astemizole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Haloperidol",
+          "target": "Anileridine",
+          "label": "resembles"
+        },
+        {
+          "source": "Anileridine",
+          "target": "Astemizole",
+          "label": "resembles"
+        },
+        {
+          "source": "Astemizole",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Haloperidol,Anileridine": [
+          "Agent Affecting Nervous System",
+          "Piperidines"
+        ],
+        "Haloperidol,Astemizole": [
+          "Piperidines"
+        ],
+        "Anileridine,Astemizole": [
+          "Piperidines"
+        ]
+      },
+      "id": "path_6763"
+    }
+  ]
+}

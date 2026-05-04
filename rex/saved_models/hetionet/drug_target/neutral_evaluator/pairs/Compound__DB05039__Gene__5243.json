@@ -1,0 +1,94 @@
+{
+  "id": "Compound::DB05039 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6357,
+        "final_score": 0.6357
+      },
+      "nodes": [
+        {
+          "id": "Indacaterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Codeine And Morphine Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indacaterol",
+          "target": "Ugt1a1",
+          "label": "binds"
+        },
+        {
+          "source": "Ugt1a1",
+          "target": "Codeine And Morphine Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Codeine And Morphine Metabolism",
+          "target": "Abcb1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7787"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4382,
+        "final_score": 0.4382
+      },
+      "nodes": [
+        {
+          "id": "Indacaterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Exacerbation Of Asthma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Estrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indacaterol",
+          "target": "Exacerbation Of Asthma",
+          "label": "causes"
+        },
+        {
+          "source": "Exacerbation Of Asthma",
+          "target": "Estrone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Estrone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indacaterol,Estrone": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_7788"
+    }
+  ]
+}

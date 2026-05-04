@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00997 - Disease::DOID:1793",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3961,
+        "final_score": 0.3961
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Caecitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Irinotecan",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Caecitis",
+          "label": "causes"
+        },
+        {
+          "source": "Caecitis",
+          "target": "Irinotecan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Irinotecan",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Irinotecan": [
+          "Ammonium Ion Derivative",
+          "Topoisomerase Inhibitor"
+        ]
+      },
+      "id": "path_3416"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3566,
+        "final_score": 0.3566
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Effusion",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Effusion",
+          "label": "causes"
+        },
+        {
+          "source": "Effusion",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Docetaxel": [
+          "Alpha-Hydroxy Ketone"
+        ],
+        "Effusion,Pancreatic Cancer": [
+          "Finding"
+        ]
+      },
+      "id": "path_3417"
+    }
+  ]
+}

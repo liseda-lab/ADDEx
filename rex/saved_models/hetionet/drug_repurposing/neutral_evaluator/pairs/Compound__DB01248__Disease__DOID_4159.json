@@ -1,0 +1,99 @@
+{
+  "id": "Compound::DB01248 - Disease::DOID:4159",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4207,
+        "final_score": 0.4207
+      },
+      "nodes": [
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Radiation Pneumonitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bleomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Docetaxel",
+          "target": "Radiation Pneumonitis",
+          "label": "causes"
+        },
+        {
+          "source": "Radiation Pneumonitis",
+          "target": "Bleomycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bleomycin",
+          "target": "Skin Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Docetaxel,Bleomycin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_4321"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3868,
+        "final_score": 0.3868
+      },
+      "nodes": [
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Toxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bleomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Docetaxel",
+          "target": "Skin Toxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Toxicity",
+          "target": "Bleomycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bleomycin",
+          "target": "Skin Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Docetaxel,Bleomycin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_4322"
+    }
+  ]
+}

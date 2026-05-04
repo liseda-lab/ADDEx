@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00695 - Gene::213",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6743,
+        "final_score": 0.6743
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis At Loop Of Henle",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ethacrynic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Increased Diuresis At Loop Of Henle",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis At Loop Of Henle",
+          "target": "Ethacrynic Acid",
+          "label": "includes"
+        },
+        {
+          "source": "Ethacrynic Acid",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Furosemide,Ethacrynic Acid": [
+          "Organochlorine Compound",
+          "Loop Diuretic"
+        ]
+      },
+      "id": "path_1572"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5099,
+        "final_score": 0.5099
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Metabolic Alkalosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sodium Lauryl Sulfate",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Metabolic Alkalosis",
+          "label": "causes"
+        },
+        {
+          "source": "Metabolic Alkalosis",
+          "target": "Sodium Lauryl Sulfate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sodium Lauryl Sulfate",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Furosemide,Sodium Lauryl Sulfate": [
+          "S-Block Molecular Entity"
+        ]
+      },
+      "id": "path_1573"
+    }
+  ]
+}

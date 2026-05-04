@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00586 - Gene::7364",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4807,
+        "final_score": 0.4807
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Oesophageal Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt2b7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Oesophageal Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Oesophageal Disorder",
+          "target": "Flurbiprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurbiprofen",
+          "target": "Ugt2b7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Flurbiprofen": [
+          "Monocarboxylic Acid",
+          "Cyclooxygenase Inhibitor"
+        ]
+      },
+      "id": "path_8243"
+    }
+  ]
+}

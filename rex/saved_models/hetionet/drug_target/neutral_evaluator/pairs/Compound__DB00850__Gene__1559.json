@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00850 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.434,
+        "final_score": 0.434
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Obstipation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Obstipation",
+          "label": "causes"
+        },
+        {
+          "source": "Obstipation",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Cyclophosphamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_18006"
+    }
+  ]
+}

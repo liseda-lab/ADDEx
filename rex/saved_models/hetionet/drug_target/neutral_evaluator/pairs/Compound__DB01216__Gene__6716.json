@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01216 - Gene::6716",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6356,
+        "final_score": 0.6356
+      },
+      "nodes": [
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer Male",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dutasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Srd5a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Finasteride",
+          "target": "Breast Cancer Male",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Cancer Male",
+          "target": "Dutasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dutasteride",
+          "target": "Srd5a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Finasteride,Dutasteride": [
+          "Delta-Lactam",
+          "5 Alpha-Reductase Inhibitor"
+        ]
+      },
+      "id": "path_9918"
+    }
+  ]
+}

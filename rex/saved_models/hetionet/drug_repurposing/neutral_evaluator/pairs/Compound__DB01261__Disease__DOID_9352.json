@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01261 - Disease::DOID:9352",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4607,
+        "final_score": 0.4607
+      },
+      "nodes": [
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Viral Diarrhoea",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Metformin",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sitagliptin",
+          "target": "Viral Diarrhoea",
+          "label": "causes"
+        },
+        {
+          "source": "Viral Diarrhoea",
+          "target": "Metformin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Metformin",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sitagliptin,Metformin": [
+          "Anti-Diabetic Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2292"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4485,
+        "final_score": 0.4485
+      },
+      "nodes": [
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Sinus Headache",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Metformin",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sitagliptin",
+          "target": "Sinus Headache",
+          "label": "causes"
+        },
+        {
+          "source": "Sinus Headache",
+          "target": "Metformin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Metformin",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sitagliptin,Metformin": [
+          "Anti-Diabetic Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2293"
+    }
+  ]
+}

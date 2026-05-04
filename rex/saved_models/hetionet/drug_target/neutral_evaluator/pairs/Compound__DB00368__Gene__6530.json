@@ -1,0 +1,105 @@
+{
+  "id": "Compound::DB00368 - Gene::6530",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.731,
+        "final_score": 0.731
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Blood Pressure",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Droxidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Increased Blood Pressure",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Blood Pressure",
+          "target": "Droxidopa",
+          "label": "includes"
+        },
+        {
+          "source": "Droxidopa",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norepinephrine,Droxidopa": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_17960"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6306,
+        "final_score": 0.6306
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Droxidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Droxidopa",
+          "label": "includes"
+        },
+        {
+          "source": "Droxidopa",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norepinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Norepinephrine,Droxidopa": [
+          "Organonitrogen Compound"
+        ],
+        "Catecholamines,Droxidopa": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_17961"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "Compound::DB00201 - Gene::5142",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7004,
+        "final_score": 0.7004
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Theophylline",
+          "label": "includes"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Pde4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Xanthines": [
+          "Purines"
+        ],
+        "Caffeine,Theophylline": [
+          "Methylxanthine"
+        ],
+        "Xanthines,Theophylline": [
+          "Purines"
+        ]
+      },
+      "id": "path_8030"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5791,
+        "final_score": 0.5791
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenethylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Dyphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Fenethylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenethylline",
+          "target": "Dyphylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Dyphylline",
+          "target": "Pde4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Fenethylline": [
+          "Purines",
+          "Cns Stimulant"
+        ],
+        "Caffeine,Dyphylline": [
+          "Purines"
+        ],
+        "Fenethylline,Dyphylline": [
+          "Oxopurine"
+        ]
+      },
+      "id": "path_8031"
+    }
+  ]
+}

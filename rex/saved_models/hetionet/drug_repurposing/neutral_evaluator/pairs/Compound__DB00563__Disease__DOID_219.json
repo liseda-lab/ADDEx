@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:219",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4746,
+        "final_score": 0.4746
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatic Fibrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Colon Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Hepatic Fibrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatic Fibrosis",
+          "target": "Capecitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Colon Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Capecitabine": [
+          "Antimetabolite",
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_1488"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4546,
+        "final_score": 0.4546
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cranial Nerve Paralysis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Colon Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Cranial Nerve Paralysis",
+          "label": "causes"
+        },
+        {
+          "source": "Cranial Nerve Paralysis",
+          "target": "Vincristine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vincristine",
+          "target": "Colon Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Vincristine": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_1489"
+    }
+  ]
+}

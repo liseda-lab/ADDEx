@@ -98,12 +98,25 @@ export const getPairsDir = (
 // Convert "COMPOUND:699 - PROTEIN:921" to a filesystem-safe filename:
 // "COMPOUND_699__PROTEIN_921.json". Colons and the " - " separator are
 // flattened to underscores so the name is portable across OSes.
+//
+// For pair IDs that produce a name longer than the filesystem's per-component
+// limit (typically 255 bytes), fall back to a deterministic hash so the file
+// can still be read/written. Without this fallback, pairs with long IDs
+// (e.g., PrimeKG drug-disease pairs whose disease is a concatenation of
+// many MONDO group IDs) hit ENAMETOOLONG and could never be cached, forcing
+// a fresh REx run on every request.
+const PAIR_FILENAME_LIMIT = 220;
 export function pairIdToFilename(pairId: string): string {
   const safe = pairId
     .split(" - ")
     .map((part) => part.replace(/[:\s]/g, "_"))
     .join("__");
-  return `${safe}.json`;
+  if (safe.length + 5 <= PAIR_FILENAME_LIMIT) {
+    return `${safe}.json`;
+  }
+  const prefix = safe.slice(0, 60);
+  const hash = crypto.createHash("sha256").update(pairId).digest("hex").slice(0, 16);
+  return `${prefix}__h_${hash}.json`;
 }
 
 export const getPairFilePath = (

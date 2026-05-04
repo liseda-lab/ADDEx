@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:429 - PROTEIN:903",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.621,
+        "final_score": 0.621
+      },
+      "nodes": [
+        {
+          "id": "gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Metastatic disease",
+          "type": "Side_effect"
+        },
+        {
+          "id": "hydroxyurea",
+          "type": "Compound"
+        },
+        {
+          "id": "Ribonucleoside-diphosphate reductase subunit M2",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "gemcitabine",
+          "target": "Metastatic disease",
+          "label": "has side effect"
+        },
+        {
+          "source": "Metastatic disease",
+          "target": "hydroxyurea",
+          "label": "is side effect of"
+        },
+        {
+          "source": "hydroxyurea",
+          "target": "Ribonucleoside-diphosphate reductase subunit M2",
+          "label": "has target"
+        }
+      ],
+      "id": "path_6795"
+    }
+  ]
+}

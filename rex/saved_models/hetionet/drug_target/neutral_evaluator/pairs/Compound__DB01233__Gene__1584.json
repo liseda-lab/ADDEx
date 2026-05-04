@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01233 - Gene::1584",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5835,
+        "final_score": 0.5835
+      },
+      "nodes": [
+        {
+          "id": "Metoclopramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Upper Airway Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metoclopramide",
+          "target": "Upper Airway Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Upper Airway Obstruction",
+          "target": "Etomidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Cyp11b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metoclopramide,Etomidate": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_21745"
+    }
+  ]
+}

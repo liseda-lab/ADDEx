@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB01026 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4452,
+        "final_score": 0.4452
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Impetigo",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zalcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Impetigo",
+          "label": "causes"
+        },
+        {
+          "source": "Impetigo",
+          "target": "Zalcitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zalcitabine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Zalcitabine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_16164"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4083,
+        "final_score": 0.4083
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clotrimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Clotrimazole",
+          "label": "includes"
+        },
+        {
+          "source": "Clotrimazole",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Azoles": [
+          "Azole"
+        ],
+        "Ketoconazole,Clotrimazole": [
+          "Imidazole Antifungal Drug",
+          "Anti-Infective Agent"
+        ],
+        "Azoles,Clotrimazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_16165"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00772 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4067,
+        "final_score": 0.4067
+      },
+      "nodes": [
+        {
+          "id": "Malathion",
+          "type": "Compound"
+        },
+        {
+          "id": "Sensitisation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Malathion",
+          "target": "Sensitisation",
+          "label": "causes"
+        },
+        {
+          "source": "Sensitisation",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Malathion,Clonidine": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_6139"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00295 - Gene::4986",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5703,
+        "final_score": 0.5703
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Diuretic Effect",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Diuretic Effect",
+          "label": "causes"
+        },
+        {
+          "source": "Diuretic Effect",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Codeine": [
+          "Opiate",
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_12874"
+    }
+  ]
+}

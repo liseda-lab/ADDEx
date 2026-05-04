@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01224 - Gene::3363",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4673,
+        "final_score": 0.4673
+      },
+      "nodes": [
+        {
+          "id": "Quetiapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catatonic Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Eletriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quetiapine",
+          "target": "Catatonic Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Catatonic Reaction",
+          "target": "Eletriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Eletriptan",
+          "target": "Htr7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quetiapine,Eletriptan": [
+          "Agent Affecting Nervous System",
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_10603"
+    }
+  ]
+}

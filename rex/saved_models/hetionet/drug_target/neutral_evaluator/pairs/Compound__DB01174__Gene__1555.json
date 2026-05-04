@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB01174 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7341,
+        "final_score": 0.7341
+      },
+      "nodes": [
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenobarbital",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2b6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4350"
+    },
+    {
+      "score": {
+        "ic_mean": 0.435,
+        "final_score": 0.435
+      },
+      "nodes": [
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Glutethimide",
+          "type": "Compound"
+        },
+        {
+          "id": "Methylphenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenobarbital",
+          "target": "Glutethimide",
+          "label": "resembles"
+        },
+        {
+          "source": "Glutethimide",
+          "target": "Methylphenobarbital",
+          "label": "resembles"
+        },
+        {
+          "source": "Methylphenobarbital",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenobarbital,Glutethimide": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sedative And Hypnotic"
+        ],
+        "Phenobarbital,Methylphenobarbital": [
+          "Barbiturate",
+          "Barbiturates"
+        ],
+        "Glutethimide,Methylphenobarbital": [
+          "Organonitrogen Heterocyclic Compound",
+          "Sedative And Hypnotic"
+        ]
+      },
+      "id": "path_4351"
+    }
+  ]
+}

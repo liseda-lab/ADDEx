@@ -1,0 +1,94 @@
+{
+  "id": "Compound::DB00617 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.656,
+        "final_score": 0.656
+      },
+      "nodes": [
+        {
+          "id": "Paramethadione",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Felbamate Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paramethadione",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Felbamate Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Felbamate Metabolism",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1356"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4144,
+        "final_score": 0.4144
+      },
+      "nodes": [
+        {
+          "id": "Paramethadione",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Diethylstilbestrol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paramethadione",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Diethylstilbestrol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Diethylstilbestrol",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paramethadione,Diethylstilbestrol": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_1357"
+    }
+  ]
+}

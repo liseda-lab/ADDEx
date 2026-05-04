@@ -1,0 +1,141 @@
+{
+  "id": "Compound::DB00338 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7637,
+        "final_score": 0.7637
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20931"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4963,
+        "final_score": 0.4963
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Colitis Microscopic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ticlopidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Colitis Microscopic",
+          "label": "causes"
+        },
+        {
+          "source": "Colitis Microscopic",
+          "target": "Ticlopidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ticlopidine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Ticlopidine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_20932"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4943,
+        "final_score": 0.4943
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Colitis Microscopic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Colitis Microscopic",
+          "label": "causes"
+        },
+        {
+          "source": "Colitis Microscopic",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Clopidogrel": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_20933"
+    }
+  ]
+}

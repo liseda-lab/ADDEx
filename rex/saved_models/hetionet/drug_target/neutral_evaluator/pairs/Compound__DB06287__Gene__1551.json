@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB06287 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4064,
+        "final_score": 0.4064
+      },
+      "nodes": [
+        {
+          "id": "Temsirolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Glucose Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temsirolimus",
+          "target": "Glucose Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Glucose Increased",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temsirolimus,Indinavir": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_17358"
+    }
+  ]
+}

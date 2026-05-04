@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01029 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6486,
+        "final_score": 0.6486
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Angiotensin 2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Angiotensin 2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Angiotensin 2 Receptor Antagonists",
+          "target": "Losartan",
+          "label": "includes"
+        },
+        {
+          "source": "Losartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irbesartan,Losartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ]
+      },
+      "id": "path_10789"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4581,
+        "final_score": 0.4581
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Essential Hypertension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Essential Hypertension",
+          "label": "causes"
+        },
+        {
+          "source": "Essential Hypertension",
+          "target": "Losartan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Losartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irbesartan,Losartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ]
+      },
+      "id": "path_10790"
+    }
+  ]
+}

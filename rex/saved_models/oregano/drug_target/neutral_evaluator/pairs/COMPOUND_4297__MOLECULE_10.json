@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:4297 - MOLECULE:10",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5583,
+        "final_score": 0.5583
+      },
+      "nodes": [
+        {
+          "id": "thiotepa",
+          "type": "Compound"
+        },
+        {
+          "id": "Ototoxicity",
+          "type": "Side_effect"
+        },
+        {
+          "id": "carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "DNA",
+          "type": "Molecule"
+        }
+      ],
+      "edges": [
+        {
+          "source": "thiotepa",
+          "target": "Ototoxicity",
+          "label": "has side effect"
+        },
+        {
+          "source": "Ototoxicity",
+          "target": "carboplatin",
+          "label": "is side effect of"
+        },
+        {
+          "source": "carboplatin",
+          "target": "DNA",
+          "label": "has target"
+        }
+      ],
+      "id": "path_398155"
+    }
+  ]
+}

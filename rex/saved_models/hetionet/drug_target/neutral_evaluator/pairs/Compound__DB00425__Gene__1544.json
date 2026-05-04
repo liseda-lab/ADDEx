@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00425 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4198,
+        "final_score": 0.4198
+      },
+      "nodes": [
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Binge Eating",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rotigotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zolpidem",
+          "target": "Binge Eating",
+          "label": "causes"
+        },
+        {
+          "source": "Binge Eating",
+          "target": "Rotigotine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rotigotine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zolpidem,Rotigotine": [
+          "Agent Affecting Nervous System",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_19608"
+    },
+    {
+      "score": {
+        "ic_mean": 0.417,
+        "final_score": 0.417
+      },
+      "nodes": [
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Stress Symptoms",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zolpidem",
+          "target": "Stress Symptoms",
+          "label": "causes"
+        },
+        {
+          "source": "Stress Symptoms",
+          "target": "Melatonin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Melatonin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zolpidem,Melatonin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_19609"
+    }
+  ]
+}

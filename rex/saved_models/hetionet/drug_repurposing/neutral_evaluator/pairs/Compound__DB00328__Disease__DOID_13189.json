@@ -1,0 +1,56 @@
+{
+  "id": "Compound::DB00328 - Disease::DOID:13189",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5101,
+        "final_score": 0.5101
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephritic Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Gout",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Nephritic Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Nephritic Syndrome",
+          "target": "Naproxen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Naproxen",
+          "target": "Gout",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Naproxen": [
+          "Aromatic Ether",
+          "Cyclooxygenase Inhibitor"
+        ],
+        "Nephritic Syndrome,Gout": [
+          "Non-Neoplastic Disorder By Site"
+        ]
+      },
+      "id": "path_2587"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00497 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5017,
+        "final_score": 0.5017
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cutis Anserina",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Cutis Anserina",
+          "label": "causes"
+        },
+        {
+          "source": "Cutis Anserina",
+          "target": "Methadone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methadone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Methadone": [
+          "Opioid Receptor Agonist",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_16641"
+    }
+  ]
+}

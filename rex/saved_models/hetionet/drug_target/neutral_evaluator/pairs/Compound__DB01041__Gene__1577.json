@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01041 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4626,
+        "final_score": 0.4626
+      },
+      "nodes": [
+        {
+          "id": "Thalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "White Blood Cell Count Low",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clarithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thalidomide",
+          "target": "White Blood Cell Count Low",
+          "label": "causes"
+        },
+        {
+          "source": "White Blood Cell Count Low",
+          "target": "Clarithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clarithromycin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thalidomide,Clarithromycin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_11022"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4254,
+        "final_score": 0.4254
+      },
+      "nodes": [
+        {
+          "id": "Thalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Myxoedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thalidomide",
+          "target": "Myxoedema",
+          "label": "causes"
+        },
+        {
+          "source": "Myxoedema",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thalidomide,Cyclophosphamide": [
+          "Organonitrogen Compound",
+          "Immunosuppressant"
+        ]
+      },
+      "id": "path_11023"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "COMPOUND:5832 - PROTEIN:1479",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6944,
+        "final_score": 0.6935
+      },
+      "nodes": [
+        {
+          "id": "Gallium citrate Ga-67",
+          "type": "Compound"
+        },
+        {
+          "id": " orthostatic hypotension",
+          "type": "Effect"
+        },
+        {
+          "id": "sulfanilamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sodium channel subunit beta-2",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gallium citrate Ga-67",
+          "target": " orthostatic hypotension",
+          "label": "increases effect"
+        },
+        {
+          "source": " orthostatic hypotension",
+          "target": "sulfanilamide",
+          "label": "has effect increased by"
+        },
+        {
+          "source": "sulfanilamide",
+          "target": "Sodium channel subunit beta-2",
+          "label": "has target"
+        }
+      ],
+      "id": "path_101128"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5535,
+        "final_score": 0.5535
+      },
+      "nodes": [
+        {
+          "id": "Gallium citrate Ga-67",
+          "type": "Compound"
+        },
+        {
+          "id": "combinations of sulfonamides",
+          "type": "ATC"
+        },
+        {
+          "id": "sulfanilamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sodium channel subunit beta-2",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gallium citrate Ga-67",
+          "target": "combinations of sulfonamides",
+          "label": "has code"
+        },
+        {
+          "source": "combinations of sulfonamides",
+          "target": "sulfanilamide",
+          "label": "is code of"
+        },
+        {
+          "source": "sulfanilamide",
+          "target": "Sodium channel subunit beta-2",
+          "label": "has target"
+        }
+      ],
+      "id": "path_101129"
+    }
+  ]
+}

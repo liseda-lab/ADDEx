@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00280 - Gene::6331",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6015,
+        "final_score": 0.6015
+      },
+      "nodes": [
+        {
+          "id": "Disopyramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Orm1",
+          "type": "Gene"
+        },
+        {
+          "id": "Ajmaline",
+          "type": "Compound"
+        },
+        {
+          "id": "Scn5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disopyramide",
+          "target": "Orm1",
+          "label": "binds"
+        },
+        {
+          "source": "Orm1",
+          "target": "Ajmaline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ajmaline",
+          "target": "Scn5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disopyramide,Ajmaline": [
+          "Oxygen Molecular Entity",
+          "Antiarrhythmic Agent"
+        ]
+      },
+      "id": "path_3004"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5964,
+        "final_score": 0.5964
+      },
+      "nodes": [
+        {
+          "id": "Disopyramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Proarrhythmic Effect",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ranolazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Scn5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disopyramide",
+          "target": "Proarrhythmic Effect",
+          "label": "causes"
+        },
+        {
+          "source": "Proarrhythmic Effect",
+          "target": "Ranolazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ranolazine",
+          "target": "Scn5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disopyramide,Ranolazine": [
+          "Tertiary Amino Compound",
+          "Agent Affecting Cardiovascular System"
+        ]
+      },
+      "id": "path_3005"
+    }
+  ]
+}

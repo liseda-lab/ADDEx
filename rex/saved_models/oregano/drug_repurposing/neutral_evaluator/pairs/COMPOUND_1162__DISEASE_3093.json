@@ -1,0 +1,56 @@
+{
+  "id": "COMPOUND:1162 - DISEASE:3093",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5965,
+        "final_score": 0.5965
+      },
+      "nodes": [
+        {
+          "id": "propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Chronic atrial fibrillation",
+          "type": "Indication"
+        },
+        {
+          "id": "digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "AFAP1 antisense RNA 1",
+          "type": "Gene"
+        },
+        {
+          "id": "Supranuclear Palsy, Progressive",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "propafenone",
+          "target": "Chronic atrial fibrillation",
+          "label": "has indication"
+        },
+        {
+          "source": "Chronic atrial fibrillation",
+          "target": "digoxin",
+          "label": "is indication of"
+        },
+        {
+          "source": "digoxin",
+          "target": "AFAP1 antisense RNA 1",
+          "label": "is affecting"
+        },
+        {
+          "source": "AFAP1 antisense RNA 1",
+          "target": "Supranuclear Palsy, Progressive",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_31"
+    }
+  ]
+}

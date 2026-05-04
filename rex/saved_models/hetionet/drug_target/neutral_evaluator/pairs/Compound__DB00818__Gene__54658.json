@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00818 - Gene::54658",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4823,
+        "final_score": 0.4823
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cardiac Failure Right",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Cardiac Failure Right",
+          "label": "causes"
+        },
+        {
+          "source": "Cardiac Failure Right",
+          "target": "Flurbiprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurbiprofen",
+          "target": "Ugt1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Flurbiprofen": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_13111"
+    }
+  ]
+}

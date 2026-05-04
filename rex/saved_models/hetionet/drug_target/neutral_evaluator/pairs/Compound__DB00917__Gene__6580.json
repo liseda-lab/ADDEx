@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00917 - Gene::6580",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.763,
+        "final_score": 0.763
+      },
+      "nodes": [
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostaglandins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Latanoprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dinoprostone",
+          "target": "Prostaglandins",
+          "label": "is included in"
+        },
+        {
+          "source": "Prostaglandins",
+          "target": "Latanoprost",
+          "label": "includes"
+        },
+        {
+          "source": "Latanoprost",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dinoprostone,Prostaglandins": [
+          "Prostaglandin"
+        ],
+        "Dinoprostone,Latanoprost": [
+          "Prostaglandin",
+          "Prostaglandin Analogue"
+        ],
+        "Prostaglandins,Latanoprost": [
+          "Prostaglandin"
+        ]
+      },
+      "id": "path_1503"
+    }
+  ]
+}

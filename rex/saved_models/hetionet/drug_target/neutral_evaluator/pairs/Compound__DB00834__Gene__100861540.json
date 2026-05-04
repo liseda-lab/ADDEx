@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00834 - Gene::100861540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.439,
+        "final_score": 0.439
+      },
+      "nodes": [
+        {
+          "id": "Mifepristone",
+          "type": "Compound"
+        },
+        {
+          "id": "Thyroid Function Test Abnormal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mifepristone",
+          "target": "Thyroid Function Test Abnormal",
+          "label": "causes"
+        },
+        {
+          "source": "Thyroid Function Test Abnormal",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mifepristone,Amiodarone": [
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_14600"
+    }
+  ]
+}

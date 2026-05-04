@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:610 - PROTEIN:774",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5222,
+        "final_score": 0.5222
+      },
+      "nodes": [
+        {
+          "id": "testosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Virilism",
+          "type": "Side_effect"
+        },
+        {
+          "id": "fluoxymesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Synaptic vesicular amine transporter",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "testosterone",
+          "target": "Virilism",
+          "label": "has side effect"
+        },
+        {
+          "source": "Virilism",
+          "target": "fluoxymesterone",
+          "label": "is side effect of"
+        },
+        {
+          "source": "fluoxymesterone",
+          "target": "Synaptic vesicular amine transporter",
+          "label": "has target"
+        }
+      ],
+      "id": "path_236909"
+    }
+  ]
+}

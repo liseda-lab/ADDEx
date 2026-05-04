@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01234 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4015,
+        "final_score": 0.4015
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Tuberculosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Tuberculosis",
+          "label": "causes"
+        },
+        {
+          "source": "Tuberculosis",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Cyclophosphamide": [
+          "Immunosuppressant",
+          "Organohalogen Compound"
+        ]
+      },
+      "id": "path_19959"
+    }
+  ]
+}

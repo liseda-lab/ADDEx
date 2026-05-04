@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01320 - Gene::213",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5667,
+        "final_score": 0.5667
+      },
+      "nodes": [
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Decreased Central Nervous System Disorganized Electrical Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oxcarbazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fosphenytoin",
+          "target": "Decreased Central Nervous System Disorganized Electrical Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Decreased Central Nervous System Disorganized Electrical Activity",
+          "target": "Oxcarbazepine",
+          "label": "includes"
+        },
+        {
+          "source": "Oxcarbazepine",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fosphenytoin,Oxcarbazepine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anticonvulsant Agent"
+        ]
+      },
+      "id": "path_20420"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4842,
+        "final_score": 0.4842
+      },
+      "nodes": [
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkalosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sodium Lauryl Sulfate",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fosphenytoin",
+          "target": "Alkalosis",
+          "label": "causes"
+        },
+        {
+          "source": "Alkalosis",
+          "target": "Sodium Lauryl Sulfate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sodium Lauryl Sulfate",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fosphenytoin,Sodium Lauryl Sulfate": [
+          "Polyatomic Entity"
+        ]
+      },
+      "id": "path_20421"
+    }
+  ]
+}

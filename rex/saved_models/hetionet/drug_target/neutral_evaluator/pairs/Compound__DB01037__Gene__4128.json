@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01037 - Gene::4128",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5524,
+        "final_score": 0.5524
+      },
+      "nodes": [
+        {
+          "id": "Selegiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Delirium Toxic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenelzine",
+          "type": "Compound"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Selegiline",
+          "target": "Delirium Toxic",
+          "label": "causes"
+        },
+        {
+          "source": "Delirium Toxic",
+          "target": "Phenelzine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenelzine",
+          "target": "Maoa",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Selegiline,Phenelzine": [
+          "Monoamine Oxidase Inhibitor",
+          "Amine"
+        ]
+      },
+      "id": "path_5399"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00806 - Gene::134",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6656,
+        "final_score": 0.6656
+      },
+      "nodes": [
+        {
+          "id": "Pentoxifylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora2a",
+          "type": "Gene"
+        },
+        {
+          "id": "Adenosine P1 Receptors",
+          "type": "Pathway"
+        },
+        {
+          "id": "Adora1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pentoxifylline",
+          "target": "Adora2a",
+          "label": "binds"
+        },
+        {
+          "source": "Adora2a",
+          "target": "Adenosine P1 Receptors",
+          "label": "participates"
+        },
+        {
+          "source": "Adenosine P1 Receptors",
+          "target": "Adora1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13731"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6201,
+        "final_score": 0.6201
+      },
+      "nodes": [
+        {
+          "id": "Pentoxifylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenethylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Dyphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pentoxifylline",
+          "target": "Fenethylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenethylline",
+          "target": "Dyphylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Dyphylline",
+          "target": "Adora1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pentoxifylline,Fenethylline": [
+          "Oxopurine"
+        ],
+        "Pentoxifylline,Dyphylline": [
+          "Phosphodiesterase Inhibitor",
+          "Oxopurine"
+        ],
+        "Fenethylline,Dyphylline": [
+          "Oxopurine"
+        ]
+      },
+      "id": "path_13732"
+    }
+  ]
+}

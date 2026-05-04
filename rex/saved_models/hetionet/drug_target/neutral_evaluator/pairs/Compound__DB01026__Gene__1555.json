@@ -1,0 +1,149 @@
+{
+  "id": "Compound::DB01026 - Gene::1555",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.493,
+        "final_score": 0.493
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Nail Discolouration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Roxithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Nail Discolouration",
+          "label": "causes"
+        },
+        {
+          "source": "Nail Discolouration",
+          "target": "Roxithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Roxithromycin",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Roxithromycin": [
+          "Oxacycle",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_1279"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4697,
+        "final_score": 0.4697
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "P-glycoprotein Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Lopinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "P-glycoprotein Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "P-glycoprotein Inhibitors",
+          "target": "Lopinavir",
+          "label": "includes"
+        },
+        {
+          "source": "Lopinavir",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Lopinavir": [
+          "Organooxygen Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_1280"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3959,
+        "final_score": 0.3959
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 3a4 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Amprenavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cytochrome P450 3a4 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 3a4 Inhibitors",
+          "target": "Amprenavir",
+          "label": "includes"
+        },
+        {
+          "source": "Amprenavir",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Amprenavir": [
+          "Organic Heteromonocyclic Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_1281"
+    }
+  ]
+}

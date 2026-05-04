@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB08871 - Gene::203068",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7752,
+        "final_score": 0.7752
+      },
+      "nodes": [
+        {
+          "id": "Eribulin",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb8",
+          "type": "Gene"
+        },
+        {
+          "id": "Vinorelbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Eribulin",
+          "target": "Tubb8",
+          "label": "binds"
+        },
+        {
+          "source": "Tubb8",
+          "target": "Vinorelbine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Vinorelbine",
+          "target": "Tubb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Eribulin,Vinorelbine": [
+          "Vinca-Domain Binding Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2893"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7105,
+        "final_score": 0.7105
+      },
+      "nodes": [
+        {
+          "id": "Eribulin",
+          "type": "Compound"
+        },
+        {
+          "id": "Microtubule Inhibition",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Eribulin",
+          "target": "Microtubule Inhibition",
+          "label": "is included in"
+        },
+        {
+          "source": "Microtubule Inhibition",
+          "target": "Docetaxel",
+          "label": "includes"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Tubb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Eribulin,Docetaxel": [
+          "Ketone"
+        ]
+      },
+      "id": "path_2894"
+    }
+  ]
+}

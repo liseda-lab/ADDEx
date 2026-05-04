@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB01216 - Gene::6715",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7283,
+        "final_score": 0.7283
+      },
+      "nodes": [
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Srd5a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Enone Reductase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Srd5a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Finasteride",
+          "target": "Srd5a2",
+          "label": "binds"
+        },
+        {
+          "source": "Srd5a2",
+          "target": "Enone Reductase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Enone Reductase Activity",
+          "target": "Srd5a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_17388"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6506,
+        "final_score": 0.6506
+      },
+      "nodes": [
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer Male",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dutasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Srd5a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Finasteride",
+          "target": "Breast Cancer Male",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Cancer Male",
+          "target": "Dutasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dutasteride",
+          "target": "Srd5a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Finasteride,Dutasteride": [
+          "Delta-Lactam",
+          "5 Alpha-Reductase Inhibitor"
+        ]
+      },
+      "id": "path_17389"
+    }
+  ]
+}

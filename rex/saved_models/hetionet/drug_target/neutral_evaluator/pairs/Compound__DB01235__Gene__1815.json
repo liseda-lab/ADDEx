@@ -1,0 +1,99 @@
+{
+  "id": "Compound::DB01235 - Gene::1815",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7914,
+        "final_score": 0.7914
+      },
+      "nodes": [
+        {
+          "id": "L-dopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Dopa Decarboxylase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-dopa",
+          "target": "Dopa Decarboxylase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dopa Decarboxylase Inhibitors",
+          "target": "Dopamine",
+          "label": "includes"
+        },
+        {
+          "source": "Dopamine",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "L-dopa,Dopamine": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_2491"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5567,
+        "final_score": 0.5567
+      },
+      "nodes": [
+        {
+          "id": "L-dopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Excessive Daytime Sleepiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-dopa",
+          "target": "Excessive Daytime Sleepiness",
+          "label": "causes"
+        },
+        {
+          "source": "Excessive Daytime Sleepiness",
+          "target": "Bromocriptine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Drd4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "L-dopa,Bromocriptine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2492"
+    }
+  ]
+}

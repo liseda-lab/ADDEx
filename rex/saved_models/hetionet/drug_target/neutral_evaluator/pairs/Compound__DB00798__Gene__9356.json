@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00798 - Gene::9356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6733,
+        "final_score": 0.6733
+      },
+      "nodes": [
+        {
+          "id": "Gentamicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Aminoglycosides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Streptomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gentamicin",
+          "target": "Aminoglycosides",
+          "label": "is included in"
+        },
+        {
+          "source": "Aminoglycosides",
+          "target": "Streptomycin",
+          "label": "includes"
+        },
+        {
+          "source": "Streptomycin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gentamicin,Aminoglycosides": [
+          "Aminoglycoside"
+        ],
+        "Gentamicin,Streptomycin": [
+          "Aminoglycoside Antibiotic",
+          "Organic Cation"
+        ],
+        "Aminoglycosides,Streptomycin": [
+          "Aminoglycoside"
+        ]
+      },
+      "id": "path_10090"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5158,
+        "final_score": 0.5158
+      },
+      "nodes": [
+        {
+          "id": "Gentamicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Myasthenic Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gentamicin",
+          "target": "Myasthenic Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Myasthenic Syndrome",
+          "target": "Ganciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ganciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gentamicin,Ganciclovir": [
+          "Anti-Infective Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_10091"
+    }
+  ]
+}

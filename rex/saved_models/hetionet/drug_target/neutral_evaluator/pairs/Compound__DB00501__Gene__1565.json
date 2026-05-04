@@ -1,0 +1,147 @@
+{
+  "id": "Compound::DB00501 - Gene::1565",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6618,
+        "final_score": 0.6618
+      },
+      "nodes": [
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cimetidine",
+          "target": "Histamine H2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H2 Receptor Antagonists",
+          "target": "Ranitidine",
+          "label": "includes"
+        },
+        {
+          "source": "Ranitidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cimetidine,Ranitidine": [
+          "Organonitrogen Compound",
+          "Histamine-2 Receptor Antagonist"
+        ]
+      },
+      "id": "path_18293"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4284,
+        "final_score": 0.4284
+      },
+      "nodes": [
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatic Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amsacrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cimetidine",
+          "target": "Hepatic Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatic Insufficiency",
+          "target": "Amsacrine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amsacrine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cimetidine,Amsacrine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_18294"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4084,
+        "final_score": 0.4084
+      },
+      "nodes": [
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cimetidine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Cyclophosphamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cimetidine,Cyclophosphamide": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_18295"
+    }
+  ]
+}

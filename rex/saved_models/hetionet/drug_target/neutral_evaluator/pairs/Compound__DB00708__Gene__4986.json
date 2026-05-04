@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00708 - Gene::4986",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5522,
+        "final_score": 0.5522
+      },
+      "nodes": [
+        {
+          "id": "Sufentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypopnoea",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Butorphanol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sufentanil",
+          "target": "Hypopnoea",
+          "label": "causes"
+        },
+        {
+          "source": "Hypopnoea",
+          "target": "Butorphanol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Butorphanol",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sufentanil,Butorphanol": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_9422"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4814,
+        "final_score": 0.4814
+      },
+      "nodes": [
+        {
+          "id": "Sufentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Anileridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alvimopan",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sufentanil",
+          "target": "Anileridine",
+          "label": "resembles"
+        },
+        {
+          "source": "Anileridine",
+          "target": "Alvimopan",
+          "label": "resembles"
+        },
+        {
+          "source": "Alvimopan",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sufentanil,Anileridine": [
+          "Agent Affecting Nervous System",
+          "Piperidines"
+        ],
+        "Sufentanil,Alvimopan": [
+          "Agent Affecting Nervous System",
+          "Organooxygen Compound"
+        ],
+        "Anileridine,Alvimopan": [
+          "Agent Affecting Nervous System",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_9423"
+    }
+  ]
+}

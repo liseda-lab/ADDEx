@@ -1,0 +1,56 @@
+{
+  "id": "COMPOUND:1218 - DISEASE:2692",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5552,
+        "final_score": 0.5552
+      },
+      "nodes": [
+        {
+          "id": "aripiprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Autistic Disorder",
+          "type": "Indication"
+        },
+        {
+          "id": "risperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "immunity related GTPase M",
+          "type": "Gene"
+        },
+        {
+          "id": "Pseudohermaphroditism",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "aripiprazole",
+          "target": "Autistic Disorder",
+          "label": "has indication"
+        },
+        {
+          "source": "Autistic Disorder",
+          "target": "risperidone",
+          "label": "is indication of"
+        },
+        {
+          "source": "risperidone",
+          "target": "immunity related GTPase M",
+          "label": "is affecting"
+        },
+        {
+          "source": "immunity related GTPase M",
+          "target": "Pseudohermaphroditism",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_2665"
+    }
+  ]
+}

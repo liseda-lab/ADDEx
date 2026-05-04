@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB06694 - Gene::152",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.717,
+        "final_score": 0.717
+      },
+      "nodes": [
+        {
+          "id": "Xylometazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Xylometazoline",
+          "target": "Adra1d",
+          "label": "binds"
+        },
+        {
+          "source": "Adra1d",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9762"
+    },
+    {
+      "score": {
+        "ic_mean": 0.617,
+        "final_score": 0.617
+      },
+      "nodes": [
+        {
+          "id": "Xylometazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Tymazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Tolazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Xylometazoline",
+          "target": "Tymazoline",
+          "label": "resembles"
+        },
+        {
+          "source": "Tymazoline",
+          "target": "Tolazoline",
+          "label": "resembles"
+        },
+        {
+          "source": "Tolazoline",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Xylometazoline,Tymazoline": [
+          "Organic Molecular Entity",
+          "Adrenergic Agent"
+        ],
+        "Xylometazoline,Tolazoline": [
+          "Adrenergic Agent",
+          "Organic Aromatic Compound"
+        ],
+        "Tymazoline,Tolazoline": [
+          "Organic Molecular Entity",
+          "Alpha-Adrenergic Antagonist"
+        ]
+      },
+      "id": "path_9763"
+    }
+  ]
+}

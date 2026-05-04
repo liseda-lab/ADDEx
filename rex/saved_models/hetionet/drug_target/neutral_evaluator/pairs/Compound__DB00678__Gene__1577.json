@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00678 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4376,
+        "final_score": 0.4376
+      },
+      "nodes": [
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Coxalgia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Losartan",
+          "target": "Coxalgia",
+          "label": "causes"
+        },
+        {
+          "source": "Coxalgia",
+          "target": "Felodipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Losartan,Felodipine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antihypertensive Agent"
+        ]
+      },
+      "id": "path_972"
+    }
+  ]
+}

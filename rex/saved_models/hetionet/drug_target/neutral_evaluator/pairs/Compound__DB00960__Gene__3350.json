@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00960 - Gene::3350",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5327,
+        "final_score": 0.5327
+      },
+      "nodes": [
+        {
+          "id": "Pindolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Claudication",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nebivolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pindolol",
+          "target": "Claudication",
+          "label": "causes"
+        },
+        {
+          "source": "Claudication",
+          "target": "Nebivolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nebivolol",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pindolol,Nebivolol": [
+          "Beta-Adrenergic Antagonist",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_12617"
+    }
+  ]
+}

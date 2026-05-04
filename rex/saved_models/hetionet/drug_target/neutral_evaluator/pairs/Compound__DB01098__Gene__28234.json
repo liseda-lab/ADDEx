@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01098 - Gene::28234",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5844,
+        "final_score": 0.5844
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Swelling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Muscle Swelling",
+          "label": "causes"
+        },
+        {
+          "source": "Muscle Swelling",
+          "target": "Fluvastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Slco1b3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosuvastatin,Fluvastatin": [
+          "Statin (Synthetic)",
+          "Hmg-Coa Reductase Inhibitor"
+        ]
+      },
+      "id": "path_18008"
+    }
+  ]
+}

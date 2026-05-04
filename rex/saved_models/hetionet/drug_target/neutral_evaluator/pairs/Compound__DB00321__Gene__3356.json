@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00321 - Gene::3356",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5808,
+        "final_score": 0.5808
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Trazodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trazodone",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Trazodone": [
+          "Tertiary Amino Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_12351"
+    },
+    {
+      "score": {
+        "ic_mean": 0.348,
+        "final_score": 0.348
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Indecainide",
+          "type": "Compound"
+        },
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Indecainide",
+          "label": "resembles"
+        },
+        {
+          "source": "Indecainide",
+          "target": "Maprotiline",
+          "label": "resembles"
+        },
+        {
+          "source": "Maprotiline",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Indecainide": [
+          "Carbotricyclic Compound"
+        ],
+        "Amitriptyline,Maprotiline": [
+          "Tricyclic Antidepressant",
+          "Carbotricyclic Compound"
+        ],
+        "Indecainide,Maprotiline": [
+          "Carbotricyclic Compound"
+        ]
+      },
+      "id": "path_12352"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01280 - Gene::5422",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6553,
+        "final_score": 0.6553
+      },
+      "nodes": [
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cytarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pola1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nelarabine",
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Cytarabine",
+          "label": "includes"
+        },
+        {
+          "source": "Cytarabine",
+          "target": "Pola1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nelarabine,Cytarabine": [
+          "Antimetabolite",
+          "Nucleoside"
+        ]
+      },
+      "id": "path_22381"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5381,
+        "final_score": 0.5381
+      },
+      "nodes": [
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Progressive Multifocal Leukoencephalopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fludarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pola1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nelarabine",
+          "target": "Progressive Multifocal Leukoencephalopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Progressive Multifocal Leukoencephalopathy",
+          "target": "Fludarabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fludarabine",
+          "target": "Pola1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nelarabine,Fludarabine": [
+          "Purine Antagonist"
+        ]
+      },
+      "id": "path_22382"
+    }
+  ]
+}

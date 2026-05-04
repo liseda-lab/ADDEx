@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00211 - Gene::6564",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5429,
+        "final_score": 0.5429
+      },
+      "nodes": [
+        {
+          "id": "Midodrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Excitability",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ceftazidime",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midodrine",
+          "target": "Excitability",
+          "label": "causes"
+        },
+        {
+          "source": "Excitability",
+          "target": "Ceftazidime",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ceftazidime",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midodrine,Ceftazidime": [
+          "Carboxamide"
+        ]
+      },
+      "id": "path_20955"
+    }
+  ]
+}

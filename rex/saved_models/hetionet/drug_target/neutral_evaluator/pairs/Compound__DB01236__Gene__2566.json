@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01236 - Gene::2566",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7189,
+        "final_score": 0.7189
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Etomidate",
+          "label": "includes"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Etomidate": [
+          "Anesthetic Agent",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_1779"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6625,
+        "final_score": 0.6625
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrp",
+          "type": "Gene"
+        },
+        {
+          "id": "Halazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabrp",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrp",
+          "target": "Halazepam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Halazepam",
+          "target": "Gabrg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Halazepam": [
+          "Agent Affecting Nervous System",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_1780"
+    }
+  ]
+}

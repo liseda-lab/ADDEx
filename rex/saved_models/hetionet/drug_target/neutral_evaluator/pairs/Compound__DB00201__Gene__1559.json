@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB00201 - Gene::1559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.629,
+        "final_score": 0.629
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Theophylline",
+          "label": "includes"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Xanthines": [
+          "Purines"
+        ],
+        "Caffeine,Theophylline": [
+          "Methylxanthine"
+        ],
+        "Xanthines,Theophylline": [
+          "Purines"
+        ]
+      },
+      "id": "path_14866"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5249,
+        "final_score": 0.5249
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Nervous System Stimulation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Modafinil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Central Nervous System Stimulation",
+          "label": "is included in"
+        },
+        {
+          "source": "Central Nervous System Stimulation",
+          "target": "Modafinil",
+          "label": "includes"
+        },
+        {
+          "source": "Modafinil",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Modafinil": [
+          "Organonitrogen Compound",
+          "Cns Stimulant"
+        ]
+      },
+      "id": "path_14867"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00184 - Gene::6584",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5103,
+        "final_score": 0.5103
+      },
+      "nodes": [
+        {
+          "id": "Nicotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicotine",
+          "target": "Prostration",
+          "label": "causes"
+        },
+        {
+          "source": "Prostration",
+          "target": "Benzylpenicillin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Benzylpenicillin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicotine,Benzylpenicillin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1002"
+    }
+  ]
+}

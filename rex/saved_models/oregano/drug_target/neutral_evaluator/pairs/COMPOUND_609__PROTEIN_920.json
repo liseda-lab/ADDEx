@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:609 - PROTEIN:920",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6267,
+        "final_score": 0.6267
+      },
+      "nodes": [
+        {
+          "id": "fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side_effect"
+        },
+        {
+          "id": "thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Dopamine D3 receptor",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "fluphenazine",
+          "target": "Pseudoparkinsonism",
+          "label": "has side effect"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "thiothixene",
+          "label": "is side effect of"
+        },
+        {
+          "source": "thiothixene",
+          "target": "Dopamine D3 receptor",
+          "label": "has target"
+        }
+      ],
+      "id": "path_68509"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00180 - Disease::DOID:4481",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4706,
+        "final_score": 0.4706
+      },
+      "nodes": [
+        {
+          "id": "Flunisolide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyperadrenocorticism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flunisolide",
+          "target": "Hyperadrenocorticism",
+          "label": "causes"
+        },
+        {
+          "source": "Hyperadrenocorticism",
+          "target": "Prednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flunisolide,Prednisolone": [
+          "20-Oxo Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_2651"
+    }
+  ]
+}

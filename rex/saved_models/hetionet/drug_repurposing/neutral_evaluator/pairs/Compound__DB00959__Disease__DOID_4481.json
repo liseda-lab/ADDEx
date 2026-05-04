@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00959 - Disease::DOID:4481",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5043,
+        "final_score": 0.5043
+      },
+      "nodes": [
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Steroid Withdrawal Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylprednisolone",
+          "target": "Steroid Withdrawal Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Steroid Withdrawal Syndrome",
+          "target": "Betamethasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Betamethasone",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylprednisolone,Betamethasone": [
+          "20-Oxo Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_1169"
+    }
+  ]
+}

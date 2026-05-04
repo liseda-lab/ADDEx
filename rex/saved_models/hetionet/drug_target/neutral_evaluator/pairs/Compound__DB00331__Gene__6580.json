@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00331 - Gene::6580",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4833,
+        "final_score": 0.4833
+      },
+      "nodes": [
+        {
+          "id": "Metformin",
+          "type": "Compound"
+        },
+        {
+          "id": "Oedema Aggravated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Imatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metformin",
+          "target": "Oedema Aggravated",
+          "label": "causes"
+        },
+        {
+          "source": "Oedema Aggravated",
+          "target": "Imatinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Imatinib",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metformin,Imatinib": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_5673"
+    }
+  ]
+}

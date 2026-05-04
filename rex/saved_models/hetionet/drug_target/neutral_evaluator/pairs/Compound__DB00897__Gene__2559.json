@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00897 - Gene::2559",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7073,
+        "final_score": 0.7073
+      },
+      "nodes": [
+        {
+          "id": "Triazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triazolam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Temazepam",
+          "label": "includes"
+        },
+        {
+          "source": "Temazepam",
+          "target": "Gabra6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Triazolam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Triazolam,Temazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Temazepam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_5534"
+    }
+  ]
+}

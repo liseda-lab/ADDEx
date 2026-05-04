@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00321 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4145,
+        "final_score": 0.4145
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Abnormal Involuntary Movements",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Abnormal Involuntary Movements",
+          "label": "causes"
+        },
+        {
+          "source": "Abnormal Involuntary Movements",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Amiodarone": [
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_3181"
+    }
+  ]
+}

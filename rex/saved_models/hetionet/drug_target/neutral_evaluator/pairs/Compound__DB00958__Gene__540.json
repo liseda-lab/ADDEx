@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00958 - Gene::540",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8183,
+        "final_score": 0.8183
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atp7b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Cisplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Atp7b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Cisplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_2913"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6832,
+        "final_score": 0.6832
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Gstt1",
+          "type": "Gene"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atp7b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Gstt1",
+          "label": "binds"
+        },
+        {
+          "source": "Gstt1",
+          "target": "Cisplatin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Atp7b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Cisplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_2914"
+    }
+  ]
+}

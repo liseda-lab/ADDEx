@@ -1,0 +1,58 @@
+{
+  "id": "Compound::DB00277 - Gene::1543",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6567,
+        "final_score": 0.6567
+      },
+      "nodes": [
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theophylline",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Caffeine",
+          "label": "includes"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theophylline,Xanthines": [
+          "Purines"
+        ],
+        "Theophylline,Caffeine": [
+          "Methylxanthine"
+        ],
+        "Xanthines,Caffeine": [
+          "Purines"
+        ]
+      },
+      "id": "path_14554"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00877 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3973,
+        "final_score": 0.3973
+      },
+      "nodes": [
+        {
+          "id": "Sirolimus",
+          "type": "Compound"
+        },
+        {
+          "id": "Uremia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sirolimus",
+          "target": "Uremia",
+          "label": "causes"
+        },
+        {
+          "source": "Uremia",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sirolimus,Oxycodone": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_17734"
+    }
+  ]
+}

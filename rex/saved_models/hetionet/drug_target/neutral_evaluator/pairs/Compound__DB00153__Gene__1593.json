@@ -1,0 +1,149 @@
+{
+  "id": "Compound::DB00153 - Gene::1593",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8038,
+        "final_score": 0.8038
+      },
+      "nodes": [
+        {
+          "id": "Ergocalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2r1",
+          "type": "Gene"
+        },
+        {
+          "id": "Cholecalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp27a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergocalciferol",
+          "target": "Cyp2r1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2r1",
+          "target": "Cholecalciferol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cholecalciferol",
+          "target": "Cyp27a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ergocalciferol,Cholecalciferol": [
+          "Vitamin D",
+          "D Vitamin"
+        ]
+      },
+      "id": "path_9703"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7191,
+        "final_score": 0.7191
+      },
+      "nodes": [
+        {
+          "id": "Ergocalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2r1",
+          "type": "Gene"
+        },
+        {
+          "id": "Vitamin D Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp27a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergocalciferol",
+          "target": "Cyp2r1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2r1",
+          "target": "Vitamin D Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Vitamin D Metabolism",
+          "target": "Cyp27a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9704"
+    },
+    {
+      "score": {
+        "ic_mean": 0.501,
+        "final_score": 0.501
+      },
+      "nodes": [
+        {
+          "id": "Ergocalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrotachysterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cholecalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp27a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergocalciferol",
+          "target": "Dihydrotachysterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Dihydrotachysterol",
+          "target": "Cholecalciferol",
+          "label": "resembles"
+        },
+        {
+          "source": "Cholecalciferol",
+          "target": "Cyp27a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ergocalciferol,Dihydrotachysterol": [
+          "Vitamin D"
+        ],
+        "Ergocalciferol,Cholecalciferol": [
+          "Vitamin D",
+          "D Vitamin"
+        ],
+        "Dihydrotachysterol,Cholecalciferol": [
+          "Vitamin D"
+        ]
+      },
+      "id": "path_9705"
+    }
+  ]
+}

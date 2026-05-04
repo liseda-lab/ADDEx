@@ -1,0 +1,148 @@
+{
+  "id": "Compound::DB00682 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7117,
+        "final_score": 0.7117
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18023"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4525,
+        "final_score": 0.4525
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Fosphenytoin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Fosphenytoin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Fosphenytoin": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_18024"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2883,
+        "final_score": 0.2883
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenindione",
+          "type": "Compound"
+        },
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Phenindione",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenindione",
+          "target": "Fosphenytoin",
+          "label": "resembles"
+        },
+        {
+          "source": "Fosphenytoin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Warfarin,Phenindione": [
+          "Ketone",
+          "Anticoagulant Agent"
+        ],
+        "Warfarin,Fosphenytoin": [
+          "Organic Heterocyclic Compound"
+        ],
+        "Phenindione,Fosphenytoin": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_18025"
+    }
+  ]
+}

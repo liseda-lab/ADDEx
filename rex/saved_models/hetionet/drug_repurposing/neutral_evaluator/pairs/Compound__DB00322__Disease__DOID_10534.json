@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00322 - Disease::DOID:10534",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4697,
+        "final_score": 0.4697
+      },
+      "nodes": [
+        {
+          "id": "Floxuridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Biliary Fibrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Floxuridine",
+          "target": "Biliary Fibrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Biliary Fibrosis",
+          "target": "Fluorouracil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluorouracil",
+          "target": "Stomach Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Floxuridine,Fluorouracil": [
+          "Organic Cyclic Compound",
+          "Pyrimidine Antagonist"
+        ]
+      },
+      "id": "path_2487"
+    }
+  ]
+}

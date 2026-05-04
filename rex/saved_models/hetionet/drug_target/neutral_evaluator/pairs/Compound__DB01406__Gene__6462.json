@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB01406 - Gene::6462",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5385,
+        "final_score": 0.5385
+      },
+      "nodes": [
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatic Neoplasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etonogestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Shbg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Danazol",
+          "target": "Hepatic Neoplasm",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatic Neoplasm",
+          "target": "Etonogestrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etonogestrel",
+          "target": "Shbg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Danazol,Etonogestrel": [
+          "17Beta-Hydroxy Steroid",
+          "Therapeutic Steroid Hormone"
+        ]
+      },
+      "id": "path_797"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5189,
+        "final_score": 0.5189
+      },
+      "nodes": [
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Mestranol",
+          "type": "Compound"
+        },
+        {
+          "id": "Etonogestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Shbg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Danazol",
+          "target": "Mestranol",
+          "label": "resembles"
+        },
+        {
+          "source": "Mestranol",
+          "target": "Etonogestrel",
+          "label": "resembles"
+        },
+        {
+          "source": "Etonogestrel",
+          "target": "Shbg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Danazol,Mestranol": [
+          "17Beta-Hydroxy Steroid",
+          "Therapeutic Steroid Hormone"
+        ],
+        "Danazol,Etonogestrel": [
+          "17Beta-Hydroxy Steroid",
+          "Therapeutic Steroid Hormone"
+        ],
+        "Mestranol,Etonogestrel": [
+          "17Beta-Hydroxy Steroid",
+          "Therapeutic Steroid Hormone"
+        ]
+      },
+      "id": "path_798"
+    }
+  ]
+}

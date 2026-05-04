@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00850 - Gene::1557",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5277,
+        "final_score": 0.5277
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis A",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Hepatitis A",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis A",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Clopidogrel": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12665"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3336,
+        "final_score": 0.3336
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Desipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Desipramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Desipramine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Clocapramine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ],
+        "Perphenazine,Desipramine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Clocapramine,Desipramine": [
+          "Organic Heterotricyclic Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_12666"
+    }
+  ]
+}

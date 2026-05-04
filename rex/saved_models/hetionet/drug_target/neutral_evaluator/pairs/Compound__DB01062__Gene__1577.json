@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB01062 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4869,
+        "final_score": 0.4869
+      },
+      "nodes": [
+        {
+          "id": "Oxybutynin",
+          "type": "Compound"
+        },
+        {
+          "id": "Macule",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxybutynin",
+          "target": "Macule",
+          "label": "causes"
+        },
+        {
+          "source": "Macule",
+          "target": "Verapamil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Verapamil",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxybutynin,Verapamil": [
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_16149"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "Compound::DB00977 - Disease::DOID:11476",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.637,
+        "final_score": 0.637
+      },
+      "nodes": [
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Estrogen Receptor Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Osteoporosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Estrogen Receptor Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Estrogen Receptor Agonists",
+          "target": "Conjugated Estrogens",
+          "label": "includes"
+        },
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Osteoporosis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethinyl Estradiol,Conjugated Estrogens": [
+          "Steroidal Estrogen"
+        ]
+      },
+      "id": "path_1602"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5594,
+        "final_score": 0.5594
+      },
+      "nodes": [
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Ectropion Of Cervix",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Osteoporosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Ectropion Of Cervix",
+          "label": "causes"
+        },
+        {
+          "source": "Ectropion Of Cervix",
+          "target": "Conjugated Estrogens",
+          "label": "is caused by"
+        },
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Osteoporosis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethinyl Estradiol,Conjugated Estrogens": [
+          "Steroidal Estrogen"
+        ]
+      },
+      "id": "path_1603"
+    }
+  ]
+}

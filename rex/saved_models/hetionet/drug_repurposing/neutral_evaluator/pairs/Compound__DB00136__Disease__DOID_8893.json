@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB00136 - Disease::DOID:8893",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5005,
+        "final_score": 0.5005
+      },
+      "nodes": [
+        {
+          "id": "Calcitriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcidiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcipotriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Calcitriol",
+          "target": "Calcidiol",
+          "label": "resembles"
+        },
+        {
+          "source": "Calcidiol",
+          "target": "Calcipotriol",
+          "label": "resembles"
+        },
+        {
+          "source": "Calcipotriol",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Calcitriol,Calcidiol": [
+          "Vitamin D Analog",
+          "D3 Vitamins"
+        ],
+        "Calcitriol,Calcipotriol": [
+          "Hydroxy Seco-Steroid"
+        ],
+        "Calcidiol,Calcipotriol": [
+          "Hydroxy Seco-Steroid"
+        ]
+      },
+      "id": "path_3158"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4652,
+        "final_score": 0.4652
+      },
+      "nodes": [
+        {
+          "id": "Calcitriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Plaque Psoriasis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Calcitriol",
+          "target": "Plaque Psoriasis",
+          "label": "causes"
+        },
+        {
+          "source": "Plaque Psoriasis",
+          "target": "Cyclosporine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclosporine",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Calcitriol,Cyclosporine": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_3159"
+    }
+  ]
+}

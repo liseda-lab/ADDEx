@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00586 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4282,
+        "final_score": 0.4282
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Lack Of Drug Effect",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxybutynin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Lack Of Drug Effect",
+          "label": "causes"
+        },
+        {
+          "source": "Lack Of Drug Effect",
+          "target": "Oxybutynin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxybutynin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Oxybutynin": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_1522"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4271,
+        "final_score": 0.4271
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatorenal Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mefenamic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Hepatorenal Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatorenal Syndrome",
+          "target": "Mefenamic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mefenamic Acid",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Mefenamic Acid": [
+          "Amino Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_1523"
+    }
+  ]
+}

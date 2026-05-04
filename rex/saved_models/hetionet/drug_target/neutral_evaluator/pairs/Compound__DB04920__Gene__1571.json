@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB04920 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5842,
+        "final_score": 0.5842
+      },
+      "nodes": [
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clevidipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Nifedipine",
+          "label": "includes"
+        },
+        {
+          "source": "Nifedipine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clevidipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Clevidipine,Nifedipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Nifedipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_12313"
+    }
+  ]
+}

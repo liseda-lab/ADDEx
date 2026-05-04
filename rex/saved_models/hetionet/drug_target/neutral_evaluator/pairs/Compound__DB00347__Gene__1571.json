@@ -1,0 +1,52 @@
+{
+  "id": "Compound::DB00347 - Gene::1571",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5015,
+        "final_score": 0.5015
+      },
+      "nodes": [
+        {
+          "id": "Trimethadione",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sulfadiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimethadione",
+          "target": "Nephrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Nephrosis",
+          "target": "Sulfadiazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sulfadiazine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trimethadione,Sulfadiazine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_15500"
+    }
+  ]
+}

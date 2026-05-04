@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01076 - Gene::1551",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4797,
+        "final_score": 0.4797
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Ritonavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Ritonavir",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ritonavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Ritonavir": [
+          "Enzyme Inhibitor",
+          "Azole"
+        ]
+      },
+      "id": "path_7598"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4157,
+        "final_score": 0.4157
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Propranolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Propranolol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Propranolol",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Propranolol": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_7599"
+    }
+  ]
+}

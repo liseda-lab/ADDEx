@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB01047 - Disease::DOID:8893",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5481,
+        "final_score": 0.5481
+      },
+      "nodes": [
+        {
+          "id": "Fluocinonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Itch Burning",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluocinolone Acetonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluocinonide",
+          "target": "Itch Burning",
+          "label": "causes"
+        },
+        {
+          "source": "Itch Burning",
+          "target": "Fluocinolone Acetonide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluocinolone Acetonide",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluocinonide,Fluocinolone Acetonide": [
+          "Therapeutic Glucocorticoid",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_3338"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4228,
+        "final_score": 0.4228
+      },
+      "nodes": [
+        {
+          "id": "Fluocinonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluprednidene Acetate",
+          "type": "Compound"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluocinonide",
+          "target": "Fluprednidene Acetate",
+          "label": "resembles"
+        },
+        {
+          "source": "Fluprednidene Acetate",
+          "target": "Hydrocortisone",
+          "label": "resembles"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluocinonide,Fluprednidene Acetate": [
+          "Organic Molecular Entity"
+        ],
+        "Fluocinonide,Hydrocortisone": [
+          "Organic Molecular Entity"
+        ],
+        "Fluprednidene Acetate,Hydrocortisone": [
+          "Corticosteroid Hormone"
+        ]
+      },
+      "id": "path_3339"
+    }
+  ]
+}

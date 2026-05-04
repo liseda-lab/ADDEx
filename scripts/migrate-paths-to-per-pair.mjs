@@ -16,6 +16,7 @@
  * file into a single string.
  */
 
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -32,12 +33,21 @@ const flags = new Set(process.argv.slice(2));
 const DRY_RUN = flags.has("--dry-run");
 const DELETE_SOURCE = flags.has("--delete-source");
 
+// Must match `pairIdToFilename` in src/app/api/_lib/rexSearch.ts so the
+// runtime can read pair files written by this migration. See the comment
+// there for why long IDs fall back to a hashed name.
+const PAIR_FILENAME_LIMIT = 220;
 function pairIdToFilename(pairId) {
   const safe = pairId
     .split(" - ")
     .map((part) => part.replace(/[:\s]/g, "_"))
     .join("__");
-  return `${safe}.json`;
+  if (safe.length + 5 <= PAIR_FILENAME_LIMIT) {
+    return `${safe}.json`;
+  }
+  const prefix = safe.slice(0, 60);
+  const hash = crypto.createHash("sha256").update(pairId).digest("hex").slice(0, 16);
+  return `${prefix}__h_${hash}.json`;
 }
 
 function findPathsJsonFiles(root) {

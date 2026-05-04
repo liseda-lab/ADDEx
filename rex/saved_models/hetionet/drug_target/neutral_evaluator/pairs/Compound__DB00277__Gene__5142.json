@@ -1,0 +1,58 @@
+{
+  "id": "Compound::DB00277 - Gene::5142",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7004,
+        "final_score": 0.7004
+      },
+      "nodes": [
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theophylline",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Caffeine",
+          "label": "includes"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Pde4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theophylline,Xanthines": [
+          "Purines"
+        ],
+        "Theophylline,Caffeine": [
+          "Methylxanthine"
+        ],
+        "Xanthines,Caffeine": [
+          "Purines"
+        ]
+      },
+      "id": "path_12506"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00401 - Gene::5243",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5293,
+        "final_score": 0.5293
+      },
+      "nodes": [
+        {
+          "id": "Nisoldipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nisoldipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Felodipine",
+          "label": "includes"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nisoldipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nisoldipine,Felodipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Felodipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_13579"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3965,
+        "final_score": 0.3965
+      },
+      "nodes": [
+        {
+          "id": "Nisoldipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nisoldipine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Amiodarone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nisoldipine,Amiodarone": [
+          "Organonitrogen Compound",
+          "Agent Affecting Cardiovascular System"
+        ]
+      },
+      "id": "path_13580"
+    }
+  ]
+}

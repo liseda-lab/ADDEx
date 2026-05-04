@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00515 - Disease::DOID:1192",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.515,
+        "final_score": 0.515
+      },
+      "nodes": [
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Spinal Cord Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tretinoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisplatin",
+          "target": "Spinal Cord Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Spinal Cord Disorder",
+          "target": "Tretinoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tretinoin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cisplatin,Tretinoin": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_1547"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4651,
+        "final_score": 0.4651
+      },
+      "nodes": [
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Blindness Cortical",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisplatin",
+          "target": "Blindness Cortical",
+          "label": "causes"
+        },
+        {
+          "source": "Blindness Cortical",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cisplatin,Etoposide": [
+          "Antineoplastic Agent",
+          "Polyatomic Entity"
+        ]
+      },
+      "id": "path_1548"
+    }
+  ]
+}

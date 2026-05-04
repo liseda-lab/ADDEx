@@ -1,0 +1,147 @@
+{
+  "id": "Compound::DB01149 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4838,
+        "final_score": 0.4838
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Cilostazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Cilostazol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cilostazol",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nefazodone,Cilostazol": [
+          "Azole"
+        ]
+      },
+      "id": "path_5747"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4085,
+        "final_score": 0.4085
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Tolerance",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Drug Tolerance",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Tolerance",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nefazodone,Oxycodone": [
+          "Agent Affecting Nervous System",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5748"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3824,
+        "final_score": 0.3824
+      },
+      "nodes": [
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Keratoconjunctivitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nisoldipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nefazodone",
+          "target": "Keratoconjunctivitis",
+          "label": "causes"
+        },
+        {
+          "source": "Keratoconjunctivitis",
+          "target": "Nisoldipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nisoldipine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nefazodone,Nisoldipine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5749"
+    }
+  ]
+}

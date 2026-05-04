@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00398 - Gene::1544",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4608,
+        "final_score": 0.4608
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug-induced Hepatitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dapagliflozin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Drug-induced Hepatitis",
+          "label": "causes"
+        },
+        {
+          "source": "Drug-induced Hepatitis",
+          "target": "Dapagliflozin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dapagliflozin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Dapagliflozin": [
+          "Enzyme Inhibitor",
+          "Monochlorobenzenes"
+        ]
+      },
+      "id": "path_1686"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4263,
+        "final_score": 0.4263
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Tumour Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Tumour Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Tumour Pain",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Pazopanib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_1687"
+    }
+  ]
+}

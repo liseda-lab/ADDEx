@@ -1,0 +1,103 @@
+{
+  "id": "Compound::DB00821 - Gene::5743",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7069,
+        "final_score": 0.7069
+      },
+      "nodes": [
+        {
+          "id": "Carprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Prostaglandin-endoperoxide Synthase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carprofen",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Prostaglandin-endoperoxide Synthase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Prostaglandin-endoperoxide Synthase Activity",
+          "target": "Ptgs2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10514"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4593,
+        "final_score": 0.4593
+      },
+      "nodes": [
+        {
+          "id": "Carprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Suprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenbufen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carprofen",
+          "target": "Suprofen",
+          "label": "resembles"
+        },
+        {
+          "source": "Suprofen",
+          "target": "Fenbufen",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenbufen",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carprofen,Suprofen": [
+          "Organic Heterocyclic Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Carprofen,Fenbufen": [
+          "Organic Cyclic Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Suprofen,Fenbufen": [
+          "Monocarboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_10515"
+    }
+  ]
+}

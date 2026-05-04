@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00790 - Gene::590",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4972,
+        "final_score": 0.4972
+      },
+      "nodes": [
+        {
+          "id": "Perindopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Pemphigoid",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Bche",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perindopril",
+          "target": "Pemphigoid",
+          "label": "causes"
+        },
+        {
+          "source": "Pemphigoid",
+          "target": "Ramipril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ramipril",
+          "target": "Bche",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perindopril,Ramipril": [
+          "Ace Inhibitor",
+          "Dicarboxylic Acid Monoester"
+        ]
+      },
+      "id": "path_14982"
+    }
+  ]
+}

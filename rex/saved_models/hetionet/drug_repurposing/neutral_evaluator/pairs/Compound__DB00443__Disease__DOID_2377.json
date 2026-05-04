@@ -1,0 +1,56 @@
+{
+  "id": "Compound::DB00443 - Disease::DOID:2377",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3935,
+        "final_score": 0.3935
+      },
+      "nodes": [
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Tuberculosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Multiple Sclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Betamethasone",
+          "target": "Tuberculosis",
+          "label": "causes"
+        },
+        {
+          "source": "Tuberculosis",
+          "target": "Dexamethasone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dexamethasone",
+          "target": "Multiple Sclerosis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Betamethasone,Dexamethasone": [
+          "20-Oxo Steroid",
+          "Therapeutic Glucocorticoid"
+        ],
+        "Tuberculosis,Multiple Sclerosis": [
+          "Non-Neoplastic Disorder By Special Category"
+        ]
+      },
+      "id": "path_2505"
+    }
+  ]
+}

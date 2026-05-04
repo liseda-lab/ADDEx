@@ -1,0 +1,58 @@
+{
+  "id": "Compound::DB00668 - Gene::154",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6872,
+        "final_score": 0.6872
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Norepinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Epinephrine,Norepinephrine": [
+          "Catecholamine"
+        ],
+        "Catecholamines,Norepinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_1165"
+    }
+  ]
+}

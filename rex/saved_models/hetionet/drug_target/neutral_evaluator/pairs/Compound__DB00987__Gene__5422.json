@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00987 - Gene::5422",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7197,
+        "final_score": 0.7197
+      },
+      "nodes": [
+        {
+          "id": "Cytarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphatic System Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Fludarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pola1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cytarabine",
+          "target": "Lymphatic System Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Lymphatic System Cancer",
+          "target": "Fludarabine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Fludarabine",
+          "target": "Pola1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cytarabine,Fludarabine": [
+          "Antimetabolite"
+        ]
+      },
+      "id": "path_8929"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6636,
+        "final_score": 0.6636
+      },
+      "nodes": [
+        {
+          "id": "Cytarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pola1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cytarabine",
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Nelarabine",
+          "label": "includes"
+        },
+        {
+          "source": "Nelarabine",
+          "target": "Pola1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cytarabine,Nelarabine": [
+          "Antimetabolite",
+          "Nucleoside"
+        ]
+      },
+      "id": "path_8930"
+    }
+  ]
+}

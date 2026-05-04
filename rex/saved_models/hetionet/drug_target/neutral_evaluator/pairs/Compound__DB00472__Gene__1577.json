@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00472 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4579,
+        "final_score": 0.4579
+      },
+      "nodes": [
+        {
+          "id": "Fluoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Excitation Cerebral",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxetine",
+          "target": "Excitation Cerebral",
+          "label": "causes"
+        },
+        {
+          "source": "Excitation Cerebral",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluoxetine,Codeine": [
+          "Agent Affecting Nervous System",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_168"
+    }
+  ]
+}

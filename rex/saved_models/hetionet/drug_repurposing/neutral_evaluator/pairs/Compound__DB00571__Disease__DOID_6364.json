@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00571 - Disease::DOID:6364",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.432,
+        "final_score": 0.432
+      },
+      "nodes": [
+        {
+          "id": "Propranolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Indecainide",
+          "type": "Compound"
+        },
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Migraine",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propranolol",
+          "target": "Indecainide",
+          "label": "resembles"
+        },
+        {
+          "source": "Indecainide",
+          "target": "Amitriptyline",
+          "label": "resembles"
+        },
+        {
+          "source": "Amitriptyline",
+          "target": "Migraine",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propranolol,Indecainide": [
+          "Carbopolycyclic Compound"
+        ],
+        "Propranolol,Amitriptyline": [
+          "Agent Affecting Nervous System",
+          "Carbopolycyclic Compound"
+        ],
+        "Indecainide,Amitriptyline": [
+          "Carbotricyclic Compound"
+        ]
+      },
+      "id": "path_1714"
+    }
+  ]
+}

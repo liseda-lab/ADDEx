@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB08901 - Gene::2261",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6069,
+        "final_score": 0.6069
+      },
+      "nodes": [
+        {
+          "id": "Ponatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Glucose Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Fgfr3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ponatinib",
+          "target": "Glucose Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Glucose Decreased",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Fgfr3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ponatinib,Pazopanib": [
+          "Fgfr Inhibitor",
+          "Organic Cation"
+        ]
+      },
+      "id": "path_2144"
+    }
+  ]
+}

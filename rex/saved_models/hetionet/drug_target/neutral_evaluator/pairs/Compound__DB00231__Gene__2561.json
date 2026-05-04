@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00231 - Gene::2561",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6865,
+        "final_score": 0.6865
+      },
+      "nodes": [
+        {
+          "id": "Temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Chlordiazepoxide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Chlordiazepoxide",
+          "label": "includes"
+        },
+        {
+          "source": "Chlordiazepoxide",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Temazepam,Chlordiazepoxide": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Chlordiazepoxide": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_16105"
+    }
+  ]
+}

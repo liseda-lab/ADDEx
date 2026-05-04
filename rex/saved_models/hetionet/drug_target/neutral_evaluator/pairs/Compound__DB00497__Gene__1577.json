@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00497 - Gene::1577",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5178,
+        "final_score": 0.5178
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Spasm Biliary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Spasm Biliary",
+          "label": "causes"
+        },
+        {
+          "source": "Spasm Biliary",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Codeine": [
+          "Opioid Receptor Agonist",
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_19143"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4844,
+        "final_score": 0.4844
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cutis Anserina",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Cutis Anserina",
+          "label": "causes"
+        },
+        {
+          "source": "Cutis Anserina",
+          "target": "Methadone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methadone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Methadone": [
+          "Opioid Receptor Agonist",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_19144"
+    }
+  ]
+}

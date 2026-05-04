@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00501 - Gene::1558",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5778,
+        "final_score": 0.5778
+      },
+      "nodes": [
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Plasma Creatinine Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cimetidine",
+          "target": "Plasma Creatinine Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Plasma Creatinine Increased",
+          "target": "Fenofibrate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenofibrate",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cimetidine,Fenofibrate": [
+          "Organic Aromatic Compound",
+          "Agent Affecting Digestive System Or Metabolism"
+        ]
+      },
+      "id": "path_18417"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5257,
+        "final_score": 0.5257
+      },
+      "nodes": [
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "White Blood Cell Count Low",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Metronidazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cimetidine",
+          "target": "White Blood Cell Count Low",
+          "label": "causes"
+        },
+        {
+          "source": "White Blood Cell Count Low",
+          "target": "Metronidazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Metronidazole",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cimetidine,Metronidazole": [
+          "Imidazoles"
+        ]
+      },
+      "id": "path_18418"
+    }
+  ]
+}

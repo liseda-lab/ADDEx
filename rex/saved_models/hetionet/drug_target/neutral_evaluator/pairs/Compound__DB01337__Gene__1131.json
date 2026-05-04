@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB01337 - Gene::1131",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6637,
+        "final_score": 0.6637
+      },
+      "nodes": [
+        {
+          "id": "Pancuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Rocuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Pipecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pancuronium",
+          "target": "Rocuronium",
+          "label": "resembles"
+        },
+        {
+          "source": "Rocuronium",
+          "target": "Pipecuronium",
+          "label": "resembles"
+        },
+        {
+          "source": "Pipecuronium",
+          "target": "Chrm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pancuronium,Rocuronium": [
+          "Steroid"
+        ],
+        "Pancuronium,Pipecuronium": [
+          "Steroid Ester"
+        ],
+        "Rocuronium,Pipecuronium": [
+          "Nicotinic Antagonist",
+          "Steroid"
+        ]
+      },
+      "id": "path_3926"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4776,
+        "final_score": 0.4776
+      },
+      "nodes": [
+        {
+          "id": "Pancuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Salivation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbachol",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pancuronium",
+          "target": "Salivation",
+          "label": "causes"
+        },
+        {
+          "source": "Salivation",
+          "target": "Carbachol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbachol",
+          "target": "Chrm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pancuronium,Carbachol": [
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_3927"
+    }
+  ]
+}
