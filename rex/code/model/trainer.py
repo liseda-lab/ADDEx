@@ -1137,7 +1137,62 @@ if __name__ == '__main__':
     # Make the threshold logic in Episode use this step
     Episode.set_training_step(best_step)
 
+    # Test-time LLM threshold:
+    #   * In-loop scoring (default, --external_rerank=0): use the model's
+    #     curriculum threshold at best_step. Faithful to training.
+    #   * External rerank (--external_rerank=1): floor at 0.65 so the
+    #     post-test batched rerank stays cheap on long test sets.
+    curriculum_threshold = threshold_for_step(best_step)
+    if options.get('external_rerank'):
+        test_threshold = max(0.65, curriculum_threshold)
+        logger.info(f"[TEST] external_rerank=1; LLM threshold floored to {test_threshold:.2f} "
+                    f"(curriculum was {curriculum_threshold:.2f})")
+    else:
+        test_threshold = curriculum_threshold
+        logger.info(f"[TEST] in-loop scoring; using curriculum threshold {test_threshold:.2f} "
+                    f"at best_step={best_step} (no floor applied)")
+    Episode.set_test_threshold_override(test_threshold)
+
     trainer.test(beam = True, print_paths = True, save_model = False)
+
+    # External rerank: when --external_rerank=1 (and persona scoring is on),
+    # run the post-test batched LLM rerank on the saved paths.json. ADDEx's
+    # default code path (viz_mode=1, pair-by-pair queries) does not exercise
+    # this branch; it is here so ADDEx/rex stays in sync with REx_PyTorch.
+    if options.get('external_rerank') and options.get('agentic_ai_enabled'):
+        try:
+            from score_external import score_paths_external, get_call_llm, apply_failure_fallback
+            json_path = trainer.path_logger_file_ + ".json"
+            test_data_file = os.path.join(options['data_input_dir'], 'test.txt')
+            caller = get_call_llm()
+            if caller is None:
+                logger.warning("[RERANK] No LLM backend available; skipping post-test rerank.")
+            elif not os.path.exists(json_path):
+                logger.warning(f"[RERANK] paths.json not found at {json_path}; skipping.")
+            else:
+                rerank_alpha = float(options.get('rerank_alpha', 0.5))
+                logger.info(f"[RERANK] Starting post-test LLM rerank on {json_path} "
+                            f"(threshold={test_threshold:.2f}, alpha={rerank_alpha}, "
+                            f"backend={os.getenv('RERANK_BACKEND', 'local')})")
+                score_paths_external(
+                    json_path=json_path,
+                    persona_path=options['persona_path'],
+                    threshold=float(test_threshold),
+                    alpha=rerank_alpha,
+                    call_llm=caller,
+                    test_data_path=test_data_file if os.path.exists(test_data_file) else None,
+                    logger=logger,
+                )
+                fallback_strategy = os.getenv('RERANK_FALLBACK_STRATEGY', 'mean')
+                logger.info(f"[FALLBACK] Applying post-rerank failure fallback (strategy={fallback_strategy})")
+                apply_failure_fallback(
+                    json_path=json_path,
+                    alpha=rerank_alpha,
+                    strategy=fallback_strategy,
+                    logger=logger,
+                )
+        except Exception as e:
+            logger.exception(f"[RERANK] Post-test rerank failed: {e}")
 
     # Erase empty folders in path_logger_file
     if os.path.isdir(path_logger_file):

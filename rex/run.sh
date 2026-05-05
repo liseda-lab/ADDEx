@@ -82,6 +82,10 @@ cmd=(python -u code/model/trainer.py
     --agentic_ai_enabled "$agentic_ai_enabled" --persona_path "$persona_path"
     --viz_mode "${viz_mode:-0}"
     --skip_lca "${skip_lca:-0}"
+    --no_llm_rerank "${no_llm_rerank:-0}"
+    --external_rerank "${external_rerank:-0}"
+    --rerank_alpha "${rerank_alpha:-0.5}"
+    --local_model "${local_model:-Qwen/Qwen3.5-9B}"
 )
 
 if [ -n "$job_id" ]; then
