@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:181 - PROTEIN:781",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7058,
+        "final_score": 0.6446,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "phentermine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pulmonary arterial hypertension",
+          "type": "Side_effect"
+        },
+        {
+          "id": "diethylpropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Alpha adrenergic receptor",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "phentermine",
+          "target": "Pulmonary arterial hypertension",
+          "label": "has side effect"
+        },
+        {
+          "source": "Pulmonary arterial hypertension",
+          "target": "diethylpropion",
+          "label": "is side effect of"
+        },
+        {
+          "source": "diethylpropion",
+          "target": "Alpha adrenergic receptor",
+          "label": "has target"
+        }
+      ],
+      "id": "path_324933"
+    }
+  ]
+}

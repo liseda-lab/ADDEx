@@ -1,0 +1,101 @@
+{
+  "id": "COMPOUND:1275 - PROTEIN:835",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7494,
+        "final_score": 0.5414,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxtriphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "combinations of xanthines",
+          "type": "ATC"
+        },
+        {
+          "id": "Dyphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Phosphodiesterase enzymes",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxtriphylline",
+          "target": "combinations of xanthines",
+          "label": "has code"
+        },
+        {
+          "source": "combinations of xanthines",
+          "target": "Dyphylline",
+          "label": "is code of"
+        },
+        {
+          "source": "Dyphylline",
+          "target": "Phosphodiesterase enzymes",
+          "label": "has target"
+        }
+      ],
+      "id": "path_359659"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7195,
+        "final_score": 0.5264,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxtriphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Thymidine kinase",
+          "type": "Protein"
+        },
+        {
+          "id": "1-Methyl-4-oxo-1,4-dihydropyridine-2-carbonitrile",
+          "type": "Compound"
+        },
+        {
+          "id": "Phosphodiesterase enzymes",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxtriphylline",
+          "target": "Thymidine kinase",
+          "label": "has target"
+        },
+        {
+          "source": "Thymidine kinase",
+          "target": "1-Methyl-4-oxo-1,4-dihydropyridine-2-carbonitrile",
+          "label": "is target of"
+        },
+        {
+          "source": "1-Methyl-4-oxo-1,4-dihydropyridine-2-carbonitrile",
+          "target": "Phosphodiesterase enzymes",
+          "label": "has target"
+        }
+      ],
+      "id": "path_359660"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:5413 - PROTEIN:811",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6819,
+        "final_score": 0.6326,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Sulfathiazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Vascular Headaches",
+          "type": "Indication"
+        },
+        {
+          "id": "ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alpha-2 adrenergic receptors",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfathiazole",
+          "target": "Vascular Headaches",
+          "label": "has indication"
+        },
+        {
+          "source": "Vascular Headaches",
+          "target": "ergotamine",
+          "label": "is indication of"
+        },
+        {
+          "source": "ergotamine",
+          "target": "Alpha-2 adrenergic receptors",
+          "label": "has target"
+        }
+      ],
+      "id": "path_395101"
+    }
+  ]
+}

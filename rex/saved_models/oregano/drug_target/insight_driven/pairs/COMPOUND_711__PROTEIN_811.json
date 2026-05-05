@@ -1,0 +1,101 @@
+{
+  "id": "COMPOUND:711 - PROTEIN:811",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7673,
+        "final_score": 0.6753,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sigma non-opioid intracellular receptor 1",
+          "type": "Protein"
+        },
+        {
+          "id": "trazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Alpha-2 adrenergic receptors",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "trimipramine",
+          "target": "Sigma non-opioid intracellular receptor 1",
+          "label": "has target"
+        },
+        {
+          "source": "Sigma non-opioid intracellular receptor 1",
+          "target": "trazodone",
+          "label": "is target of"
+        },
+        {
+          "source": "trazodone",
+          "target": "Alpha-2 adrenergic receptors",
+          "label": "has target"
+        }
+      ],
+      "id": "path_263101"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6925,
+        "final_score": 0.6379,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Meningitis, Fungal",
+          "type": "Disease"
+        },
+        {
+          "id": "insulin receptor substrate 1",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-2 adrenergic receptors",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "trimipramine",
+          "target": "Meningitis, Fungal",
+          "label": "is substance that treats"
+        },
+        {
+          "source": "Meningitis, Fungal",
+          "target": "insulin receptor substrate 1",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "insulin receptor substrate 1",
+          "target": "Alpha-2 adrenergic receptors",
+          "label": "is gene product of"
+        }
+      ],
+      "id": "path_263102"
+    }
+  ]
+}

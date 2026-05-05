@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:181 - PROTEIN:778",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7169,
+        "final_score": 0.3584,
+        "agentic_score": 0.0,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 1.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "phentermine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pulmonary arterial hypertension",
+          "type": "Side_effect"
+        },
+        {
+          "id": "diethylpropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Monoamine oxidase",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "phentermine",
+          "target": "Pulmonary arterial hypertension",
+          "label": "has side effect"
+        },
+        {
+          "source": "Pulmonary arterial hypertension",
+          "target": "diethylpropion",
+          "label": "is side effect of"
+        },
+        {
+          "source": "diethylpropion",
+          "target": "Monoamine oxidase",
+          "label": "has target"
+        }
+      ],
+      "id": "path_101891"
+    }
+  ]
+}

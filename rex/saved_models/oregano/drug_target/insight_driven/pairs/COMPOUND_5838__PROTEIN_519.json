@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:5838 - PROTEIN:519",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6992,
+        "final_score": 0.5163,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Lanreotide",
+          "type": "Compound"
+        },
+        {
+          "id": "Corneal scar",
+          "type": "Side_effect"
+        },
+        {
+          "id": "bromfenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Protein-arginine deiminase type-3",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lanreotide",
+          "target": "Corneal scar",
+          "label": "has side effect"
+        },
+        {
+          "source": "Corneal scar",
+          "target": "bromfenac",
+          "label": "is side effect of"
+        },
+        {
+          "source": "bromfenac",
+          "target": "Protein-arginine deiminase type-3",
+          "label": "has target"
+        }
+      ],
+      "id": "path_187715"
+    }
+  ]
+}

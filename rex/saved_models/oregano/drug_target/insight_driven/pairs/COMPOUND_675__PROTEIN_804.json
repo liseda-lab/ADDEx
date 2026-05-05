@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:675 - PROTEIN:804",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8853,
+        "final_score": 0.6093,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Early Awakening",
+          "type": "Indication"
+        },
+        {
+          "id": "temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Amine oxidase [flavin-containing] A",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "flurazepam",
+          "target": "Early Awakening",
+          "label": "has indication"
+        },
+        {
+          "source": "Early Awakening",
+          "target": "temazepam",
+          "label": "is indication of"
+        },
+        {
+          "source": "temazepam",
+          "target": "Amine oxidase [flavin-containing] A",
+          "label": "has target"
+        }
+      ],
+      "id": "path_193797"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:718 - PROTEIN:922",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.665,
+        "final_score": 0.4992,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "risperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Social withdrawal",
+          "type": "Indication"
+        },
+        {
+          "id": "Senicapoc",
+          "type": "Compound"
+        },
+        {
+          "id": "5-hydroxytryptamine receptor 1E",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "risperidone",
+          "target": "Social withdrawal",
+          "label": "has indication"
+        },
+        {
+          "source": "Social withdrawal",
+          "target": "Senicapoc",
+          "label": "is indication of"
+        },
+        {
+          "source": "Senicapoc",
+          "target": "5-hydroxytryptamine receptor 1E",
+          "label": "has target"
+        }
+      ],
+      "id": "path_455927"
+    }
+  ]
+}
