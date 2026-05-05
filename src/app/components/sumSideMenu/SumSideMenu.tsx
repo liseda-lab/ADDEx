@@ -43,6 +43,21 @@ export default function SumSideMenu({
     "idle" | "loading" | "ready" | "failed"
   >("idle");
   const [explanationError, setExplanationError] = useState("");
+  // FIFO QUEUE IMPLEMENTATION
+  // Message rendered while the verb job is in flight. Defaults to the
+  // existing helper copy and gets overridden with queue-position copy from
+  // the API ("Generating explanations for N other users.") when others
+  // are ahead in the FIFO line.
+  const DEFAULT_VERB_LOADING_MESSAGE =
+    "Generating an integrated explanation from the visible graph paths...";
+  const [verbLoadingMessage, setVerbLoadingMessage] = useState(
+    DEFAULT_VERB_LOADING_MESSAGE
+  );
+  // FIFO QUEUE IMPLEMENTATION
+  // Holds the in-flight verb jobId so the polling effect knows what to
+  // chase, and the timeout handle so we can cancel polling on pair change.
+  const verbJobIdRef = useRef<string | null>(null);
+  const verbPollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   // Remembers the last pair id we auto-fetched a verbalization for, so we
   // don't re-trigger on every path-toggle, only once per pair.
   const autoFetchedPairIdRef = useRef<string | null>(null);
@@ -126,6 +141,107 @@ export default function SumSideMenu({
     return hasAllPaths && hasAllLcas;
   }, [allLcaNames, pair, visibleLCAs, visiblePaths]);
 
+  // FIFO QUEUE IMPLEMENTATION
+  // Cancel any in-flight verb polling. Called whenever we kick off a new
+  // generation or when the pair changes so a stale poll doesn't write into
+  // the new pair's UI. Pure client-side: stops the timeout, clears the ref,
+  // does NOT tell the server to stop. Use abortVerbJob for that.
+  const cancelVerbPolling = useCallback(() => {
+    if (verbPollTimeoutRef.current) {
+      clearTimeout(verbPollTimeoutRef.current);
+      verbPollTimeoutRef.current = null;
+    }
+    verbJobIdRef.current = null;
+  }, []);
+
+  // FIFO QUEUE IMPLEMENTATION
+  // Tell the server to abort the verb subprocess too, on top of stopping
+  // the local poll. Called when the user navigates away mid-generation so
+  // the host doesn't keep burning CPU on a verbalization nobody is waiting
+  // for. Fire-and-forget: we don't await the response because the user has
+  // already moved on.
+  const abortVerbJob = useCallback(() => {
+    const jobId = verbJobIdRef.current;
+    cancelVerbPolling();
+    if (!jobId) return;
+    void fetch(`/api/global-explanation?jobId=${encodeURIComponent(jobId)}`, {
+      method: "DELETE",
+      keepalive: true,
+    }).catch((err) => {
+      // Best-effort: a failed DELETE is fine, the reaper will eventually
+      // clean up the orphan once polling stops touching it.
+      console.warn("Failed to abort verb job:", err);
+    });
+  }, [cancelVerbPolling]);
+
+  // FIFO QUEUE IMPLEMENTATION
+  // Poll backoff for verb jobs. Verb work is short relative to REx, so we
+  // start fast (1s) and cap at 4s.
+  const verbPollDelay = (attempt: number) => {
+    return Math.min(1000 * Math.pow(1.4, attempt), 4000);
+  };
+
+  // FIFO QUEUE IMPLEMENTATION
+  // Recursive poll: GETs the verb job by id, updates state for each
+  // queued/running tick, finalises on completed/failed.
+  const pollVerbJob = useCallback(
+    async (jobId: string, attempt: number) => {
+      // If the user navigated away, abort.
+      if (verbJobIdRef.current !== jobId) return;
+
+      try {
+        const response = await fetch(
+          `/api/global-explanation?jobId=${encodeURIComponent(jobId)}`,
+          { method: "GET" }
+        );
+        const json = (await response.json()) as {
+          status?: "queued" | "running" | "completed" | "failed" | "missing";
+          jobId?: string;
+          message?: string;
+          explanation?: string;
+          error?: string;
+        };
+
+        if (verbJobIdRef.current !== jobId) return;
+
+        if (json.status === "completed" && json.explanation) {
+          setGlobalExplanation(json.explanation);
+          setExplanationStatus("ready");
+          onVerbalizationGenerated?.(json.explanation);
+          cancelVerbPolling();
+          return;
+        }
+
+        if (json.status === "failed" || json.status === "missing") {
+          setExplanationStatus("failed");
+          setExplanationError(
+            json.error ?? "Failed to generate the global explanation."
+          );
+          cancelVerbPolling();
+          return;
+        }
+
+        if (json.message) {
+          setVerbLoadingMessage(json.message);
+        }
+        verbPollTimeoutRef.current = setTimeout(() => {
+          void pollVerbJob(jobId, attempt + 1);
+        }, verbPollDelay(attempt));
+      } catch (error) {
+        console.error("Failed to poll verb job:", error);
+        if (verbJobIdRef.current !== jobId) return;
+        setExplanationStatus("failed");
+        setExplanationError(
+          error instanceof Error
+            ? error.message
+            : "Failed while waiting for the verbalization to finish."
+        );
+        cancelVerbPolling();
+      }
+    },
+    [cancelVerbPolling, onVerbalizationGenerated]
+  );
+
   const fetchGlobalExplanation = useCallback(async (forceRefresh = false) => {
     if (!pair || visiblePaths.size === 0) {
       setGlobalExplanation("");
@@ -140,9 +256,15 @@ export default function SumSideMenu({
       return;
     }
 
+    // FIFO QUEUE IMPLEMENTATION: kill any prior server-side verb job before
+    // kicking off a new one (e.g., user toggled paths and clicked Refresh
+    // again before the previous regeneration finished).
+    abortVerbJob();
+
     try {
       setExplanationStatus("loading");
       setExplanationError("");
+      setVerbLoadingMessage(DEFAULT_VERB_LOADING_MESSAGE);
 
       const response = await fetch("/api/global-explanation", {
         method: "POST",
@@ -161,13 +283,41 @@ export default function SumSideMenu({
         }),
       });
 
-      const json = (await response.json()) as { explanation?: string; error?: string };
-      if (!response.ok || !json.explanation) {
+      const json = (await response.json()) as {
+        status?: "completed" | "queued" | "running" | "failed";
+        jobId?: string;
+        message?: string;
+        explanation?: string;
+        error?: string;
+      };
+
+      if (!response.ok) {
         throw new Error(json.error ?? `HTTP ${response.status}`);
       }
-      setGlobalExplanation(json.explanation);
-      setExplanationStatus("ready");
-      onVerbalizationGenerated?.(json.explanation);
+
+      // FIFO QUEUE IMPLEMENTATION
+      // Cache hit: server returned the saved verbalization inline.
+      if (json.status === "completed" && json.explanation) {
+        setGlobalExplanation(json.explanation);
+        setExplanationStatus("ready");
+        onVerbalizationGenerated?.(json.explanation);
+        return;
+      }
+
+      // FIFO QUEUE IMPLEMENTATION
+      // Cache miss / forceRefresh: server enqueued the work and gave us a
+      // jobId. Start polling until completion. Show the API's message while
+      // we wait (queue-aware: "Generating explanations for N other users.").
+      if ((json.status === "queued" || json.status === "running") && json.jobId) {
+        verbJobIdRef.current = json.jobId;
+        if (json.message) {
+          setVerbLoadingMessage(json.message);
+        }
+        void pollVerbJob(json.jobId, 0);
+        return;
+      }
+
+      throw new Error(json.error ?? "Verbalization request returned no result.");
     } catch (error) {
       console.error("Failed to generate global explanation:", error);
       setExplanationStatus("failed");
@@ -176,10 +326,28 @@ export default function SumSideMenu({
           ? error.message
           : "Failed to generate the global explanation."
       );
+      cancelVerbPolling();
     }
-  }, [pair, selectedContext.dataset, selectedContext.persona, selectedContext.task, visibleLCAs, visiblePaths]);
+  }, [
+    pair,
+    selectedContext.dataset,
+    selectedContext.persona,
+    selectedContext.task,
+    visibleLCAs,
+    visiblePaths,
+    cancelVerbPolling,
+    abortVerbJob,
+    onVerbalizationGenerated,
+    pollVerbJob,
+  ]);
 
   useEffect(() => {
+    // FIFO QUEUE IMPLEMENTATION: tell the server to stop generating the
+    // previous pair's verbalization too, since the user has navigated away.
+    // Saves CPU on the constrained host and prevents the queue from showing
+    // stale "1 other user" messages to the next request.
+    abortVerbJob();
+
     const savedVerbalization = pair?.verbalization?.trim();
     if (pair && savedVerbalization) {
       setGlobalExplanation(savedVerbalization);
@@ -191,7 +359,16 @@ export default function SumSideMenu({
     setGlobalExplanation("");
     setExplanationStatus("idle");
     setExplanationError("");
-  }, [pair?.id, pair?.verbalization]);
+  }, [pair?.id, pair?.verbalization, abortVerbJob]);
+
+  // FIFO QUEUE IMPLEMENTATION
+  // Abort any in-flight verb job when the component unmounts (route change,
+  // page close): same reasoning as the pair-change effect above.
+  useEffect(() => {
+    return () => {
+      abortVerbJob();
+    };
+  }, [abortVerbJob]);
 
   useEffect(() => {
     if (!pair) {
@@ -370,7 +547,12 @@ export default function SumSideMenu({
 
               {explanationStatus === "loading" && !globalExplanation && (
                 <p style={styles.helperText}>
-                  Generating an integrated explanation from the visible graph paths...
+                  {/* FIFO QUEUE IMPLEMENTATION:
+                      Render the API-supplied loading message so queue-position
+                      copy ("Generating explanations for N other users.") shows
+                      up while the user waits behind others. Falls back to the
+                      original helper text when no message has arrived yet. */}
+                  {verbLoadingMessage}
                 </p>
               )}
 

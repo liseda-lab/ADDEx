@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
   cancelJob,
+  describeRexJobMessage,
   loadSavedPair,
   NO_VALID_PATHS_WARNING,
   readJob,
   startExplanationJob,
 } from "../_lib/rexSearch";
+// FIFO QUEUE IMPLEMENTATION
+import { cancelQueuedJob, touchJob } from "../_lib/heavyQueue";
 
 export const runtime = "nodejs";
 
@@ -71,10 +74,13 @@ export async function POST(req: NextRequest) {
       });
     }
 
+    // FIFO QUEUE IMPLEMENTATION
+    // Override the message with queue-position info if there are other jobs
+    // ahead so the UI can show "Generating explanations for N other users."
     return NextResponse.json({
       status: result.job.status,
       jobId: result.job.jobId,
-      message: result.job.message,
+      message: describeRexJobMessage(result.job.jobId, result.job.message),
     });
   } catch (error) {
     console.error("Failed to start explanation search:", error);
@@ -128,6 +134,11 @@ export async function GET(req: NextRequest) {
     });
   }
 
+  // FIFO QUEUE IMPLEMENTATION
+  // Refresh the polling-touch timestamp so the reaper knows this caller is
+  // still listening (and won't drop the job as orphaned).
+  touchJob(jobId);
+
   if (job.status === "completed") {
     return NextResponse.json({
       status: "failed",
@@ -140,7 +151,8 @@ export async function GET(req: NextRequest) {
   return NextResponse.json({
     status: job.status,
     jobId: job.jobId,
-    message: job.message,
+    // FIFO QUEUE IMPLEMENTATION: prefer queue-position message when applicable.
+    message: describeRexJobMessage(job.jobId, job.message),
     completedAt: job.completedAt ?? null,
   });
 }
@@ -154,6 +166,11 @@ export async function DELETE(req: NextRequest) {
     );
   }
 
+  // FIFO QUEUE IMPLEMENTATION
+  // Cancel the queued slot too (if the job is still waiting). Running jobs
+  // are not safely cancellable mid-flight, but cancelJob below also kills
+  // the child process when one exists.
+  cancelQueuedJob(jobId);
   const result = cancelJob(jobId);
   return NextResponse.json(result, { status: result.ok ? 200 : 404 });
 }

@@ -2,6 +2,8 @@ import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 import { spawn, spawnSync, type ChildProcess } from "child_process";
+// FIFO QUEUE IMPLEMENTATION
+import { enqueueJob, queuePosition } from "./heavyQueue";
 
 export type SavedPath = {
   id: string;
@@ -568,7 +570,14 @@ function updateJob(
   writeJob(next);
 }
 
-function runRexJob(job: ExplanationJob) {
+// FIFO QUEUE IMPLEMENTATION
+// Returns a Promise that resolves when the REx subprocess reaches a terminal
+// state (success, error, no-paths, or cancellation). The returned Promise is
+// what the heavy-job queue awaits to know its single slot is free again. The
+// "running" status update happens here (not in startExplanationJob) so the
+// file-based status accurately reflects "queued" while the queue holds this
+// job behind others.
+async function runRexJob(job: ExplanationJob): Promise<void> {
   if (jobRegistry.has(job.jobId)) {
     return;
   }
@@ -584,7 +593,7 @@ function runRexJob(job: ExplanationJob) {
   const stderrPath = path.join(path.dirname(job.logPath), "run.stderr.log");
   const stderrFd = fs.openSync(stderrPath, "a");
 
-  let child;
+  let child: ChildProcess;
   try {
     child =
       process.platform === "win32"
@@ -630,20 +639,26 @@ function runRexJob(job: ExplanationJob) {
 
   childProcessRegistry.set(job.jobId, child);
 
-  child.on("error", (error) => {
-    updateJob(job.jobId, {
-      status: "failed",
-      message: `Failed to start REx job: ${error.message}`,
-      completedAt: new Date().toISOString(),
+  // FIFO QUEUE IMPLEMENTATION
+  // Resolve the outer Promise only after the subprocess actually terminates,
+  // so the queue holds its slot for the full lifetime of this REx run.
+  await new Promise<void>((resolve) => {
+    const childRef = child;
+    childRef.on("error", (error) => {
+      updateJob(job.jobId, {
+        status: "failed",
+        message: `Failed to start REx job: ${error.message}`,
+        completedAt: new Date().toISOString(),
+      });
+      jobRegistry.delete(job.jobId);
+      childProcessRegistry.delete(job.jobId);
+      fs.closeSync(stdoutFd);
+      fs.closeSync(stderrFd);
+      removeDirIfInsideRoot(getJobPaths(job.jobId).jobDir, JOB_ROOT);
+      resolve();
     });
-    jobRegistry.delete(job.jobId);
-    childProcessRegistry.delete(job.jobId);
-    fs.closeSync(stdoutFd);
-    fs.closeSync(stderrFd);
-    removeDirIfInsideRoot(getJobPaths(job.jobId).jobDir, JOB_ROOT);
-  });
 
-  child.on("exit", (code) => {
+    childRef.on("exit", (code) => {
     const completedAt = new Date().toISOString();
     const { jobDir } = getJobPaths(job.jobId);
     let outputDirToCleanup: string | null = null;
@@ -730,7 +745,11 @@ function runRexJob(job: ExplanationJob) {
       cancelledJobs.delete(job.jobId);
       fs.closeSync(stdoutFd);
       fs.closeSync(stderrFd);
+      // FIFO QUEUE IMPLEMENTATION
+      // Release the queue slot once the subprocess (and its cleanup) is fully done.
+      resolve();
     }
+    });
   });
 }
 
@@ -965,7 +984,26 @@ export function startExplanationJob(
 
   writeJob(job);
   fs.writeFileSync(scriptPath, "", "utf-8");
-  runRexJob(job);
+  // FIFO QUEUE IMPLEMENTATION
+  // Hand the spawn off to the global heavy-job queue so two cache misses don't
+  // run REx subprocesses in parallel and OOM the host. The queue dedups by
+  // jobId, so concurrent callers for the same pair share one run.
+  void enqueueJob(jobId, "rex", () => runRexJob(job));
 
   return { kind: "running" as const, job };
+}
+
+// FIFO QUEUE IMPLEMENTATION
+// Resolve the user-facing message for a queued/running REx job. When the
+// job is sitting behind others in the FIFO line we override the default
+// "first time someone is running this pair" with a queue-position message
+// so the UI tells the user how many people are ahead. Returns the original
+// message untouched for any other state.
+export function describeRexJobMessage(jobId: string, defaultMessage: string): string {
+  const position = queuePosition(jobId);
+  if (position >= 1) {
+    const noun = position === 1 ? "user" : "users";
+    return `Generating explanations for ${position} other ${noun}. Yours is next in line.`;
+  }
+  return defaultMessage;
 }
