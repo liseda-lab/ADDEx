@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:311 - PROTEIN:1042",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.846,
+        "final_score": 0.673,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2,
+          "completeness_conv": 5,
+          "relevance": 2
+        }
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Endogenous depression",
+          "type": "Indication"
+        },
+        {
+          "id": "trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Potassium voltage-gated channel subfamily KQT member 3",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Endogenous depression",
+          "label": "has indication"
+        },
+        {
+          "source": "Endogenous depression",
+          "target": "trimipramine",
+          "label": "is indication of"
+        },
+        {
+          "source": "trimipramine",
+          "target": "Potassium voltage-gated channel subfamily KQT member 3",
+          "label": "has target"
+        }
+      ],
+      "id": "path_247900"
+    }
+  ]
+}

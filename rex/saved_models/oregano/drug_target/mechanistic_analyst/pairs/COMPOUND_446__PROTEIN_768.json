@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:446 - PROTEIN:768",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7846,
+        "final_score": 0.4756,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1,
+          "completeness_conv": 3,
+          "relevance": 1
+        }
+      },
+      "nodes": [
+        {
+          "id": "imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Endogenous depression",
+          "type": "Indication"
+        },
+        {
+          "id": "trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sex hormone-binding globulin",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "imipramine",
+          "target": "Endogenous depression",
+          "label": "has indication"
+        },
+        {
+          "source": "Endogenous depression",
+          "target": "trimipramine",
+          "label": "is indication of"
+        },
+        {
+          "source": "trimipramine",
+          "target": "Sex hormone-binding globulin",
+          "label": "has target"
+        }
+      ],
+      "id": "path_444613"
+    }
+  ]
+}

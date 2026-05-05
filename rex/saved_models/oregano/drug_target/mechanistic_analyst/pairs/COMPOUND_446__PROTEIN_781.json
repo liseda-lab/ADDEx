@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:446 - PROTEIN:781",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7872,
+        "final_score": 0.5603,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2,
+          "completeness_conv": 3,
+          "relevance": 2
+        }
+      },
+      "nodes": [
+        {
+          "id": "imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Endogenous depression",
+          "type": "Indication"
+        },
+        {
+          "id": "trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alpha adrenergic receptor",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "imipramine",
+          "target": "Endogenous depression",
+          "label": "has indication"
+        },
+        {
+          "source": "Endogenous depression",
+          "target": "trimipramine",
+          "label": "is indication of"
+        },
+        {
+          "source": "trimipramine",
+          "target": "Alpha adrenergic receptor",
+          "label": "has target"
+        }
+      ],
+      "id": "path_271117"
+    }
+  ]
+}

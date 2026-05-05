@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:1522 - PROTEIN:1762",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6726,
+        "final_score": 0.4613,
+        "agentic_score": 0.25,
+        "llm_dimensions": {
+          "validity": 2,
+          "completeness_conv": 3,
+          "relevance": 1
+        }
+      },
+      "nodes": [
+        {
+          "id": "Zinc",
+          "type": "Compound"
+        },
+        {
+          "id": "zinc preparations",
+          "type": "ATC"
+        },
+        {
+          "id": "Selgantolimod",
+          "type": "Compound"
+        },
+        {
+          "id": "C4b-binding protein beta chain",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zinc",
+          "target": "zinc preparations",
+          "label": "has code"
+        },
+        {
+          "source": "zinc preparations",
+          "target": "Selgantolimod",
+          "label": "is code of"
+        },
+        {
+          "source": "Selgantolimod",
+          "target": "C4b-binding protein beta chain",
+          "label": "has target"
+        }
+      ],
+      "id": "path_227135"
+    }
+  ]
+}

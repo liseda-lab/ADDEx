@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:608 - PROTEIN:4886",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4057,
+        "final_score": 0.4057
+      },
+      "nodes": [
+        {
+          "id": "nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Electrocardiogram ST segment depression",
+          "type": "Side_effect"
+        },
+        {
+          "id": "digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Serine/threonine-protein kinase ATR",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "nicardipine",
+          "target": "Electrocardiogram ST segment depression",
+          "label": "has side effect"
+        },
+        {
+          "source": "Electrocardiogram ST segment depression",
+          "target": "digoxin",
+          "label": "is side effect of"
+        },
+        {
+          "source": "digoxin",
+          "target": "Serine/threonine-protein kinase ATR",
+          "label": "has target"
+        }
+      ],
+      "id": "path_324822"
+    }
+  ]
+}

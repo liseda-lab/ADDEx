@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:892 - PROTEIN:809",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5476,
+        "final_score": 0.5476
+      },
+      "nodes": [
+        {
+          "id": "zonisamide",
+          "type": "Compound"
+        },
+        {
+          "id": "CNS depression NOS",
+          "type": "Side_effect"
+        },
+        {
+          "id": "benzonatate",
+          "type": "Compound"
+        },
+        {
+          "id": "NMDA receptor",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "zonisamide",
+          "target": "CNS depression NOS",
+          "label": "has side effect"
+        },
+        {
+          "source": "CNS depression NOS",
+          "target": "benzonatate",
+          "label": "is side effect of"
+        },
+        {
+          "source": "benzonatate",
+          "target": "NMDA receptor",
+          "label": "has target"
+        }
+      ],
+      "id": "path_461828"
+    }
+  ]
+}

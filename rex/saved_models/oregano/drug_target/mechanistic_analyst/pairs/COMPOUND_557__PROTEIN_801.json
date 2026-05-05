@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:557 - PROTEIN:801",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.747,
+        "final_score": 0.6652,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2,
+          "completeness_conv": 5,
+          "relevance": 3
+        }
+      },
+      "nodes": [
+        {
+          "id": "propranolol",
+          "type": "Compound"
+        },
+        {
+          "id": " the bronchoconstrictory activities",
+          "type": "Activity"
+        },
+        {
+          "id": "degarelix",
+          "type": "Compound"
+        },
+        {
+          "id": "GABA(A) Receptor Benzodiazepine Binding Site",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "propranolol",
+          "target": " the bronchoconstrictory activities",
+          "label": "has activity"
+        },
+        {
+          "source": " the bronchoconstrictory activities",
+          "target": "degarelix",
+          "label": "has activity from"
+        },
+        {
+          "source": "degarelix",
+          "target": "GABA(A) Receptor Benzodiazepine Binding Site",
+          "label": "has target"
+        }
+      ],
+      "id": "path_64454"
+    }
+  ]
+}

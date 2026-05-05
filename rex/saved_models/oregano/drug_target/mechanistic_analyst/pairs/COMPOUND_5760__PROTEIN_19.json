@@ -1,0 +1,101 @@
+{
+  "id": "COMPOUND:5760 - PROTEIN:19",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.837,
+        "final_score": 0.6685,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2,
+          "completeness_conv": 5,
+          "relevance": 2
+        }
+      },
+      "nodes": [
+        {
+          "id": "Methacholine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nidogen-1",
+          "type": "Protein"
+        },
+        {
+          "id": "cetrorelix",
+          "type": "Compound"
+        },
+        {
+          "id": "Gonadotropin-releasing hormone receptor",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methacholine",
+          "target": "Nidogen-1",
+          "label": "has target"
+        },
+        {
+          "source": "Nidogen-1",
+          "target": "cetrorelix",
+          "label": "is target of"
+        },
+        {
+          "source": "cetrorelix",
+          "target": "Gonadotropin-releasing hormone receptor",
+          "label": "has target"
+        }
+      ],
+      "id": "path_439957"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6521,
+        "final_score": 0.6594,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3,
+          "completeness_conv": 5,
+          "relevance": 3
+        }
+      },
+      "nodes": [
+        {
+          "id": "Methacholine",
+          "type": "Compound"
+        },
+        {
+          "id": "Endometriosis",
+          "type": "Indication"
+        },
+        {
+          "id": "nafarelin",
+          "type": "Compound"
+        },
+        {
+          "id": "Gonadotropin-releasing hormone receptor",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methacholine",
+          "target": "Endometriosis",
+          "label": "has indication"
+        },
+        {
+          "source": "Endometriosis",
+          "target": "nafarelin",
+          "label": "is indication of"
+        },
+        {
+          "source": "nafarelin",
+          "target": "Gonadotropin-releasing hormone receptor",
+          "label": "has target"
+        }
+      ],
+      "id": "path_439958"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:608 - PROTEIN:6236",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4186,
+        "final_score": 0.4186
+      },
+      "nodes": [
+        {
+          "id": "nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Electrocardiogram ST segment depression",
+          "type": "Side_effect"
+        },
+        {
+          "id": "digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dynamin-1",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "nicardipine",
+          "target": "Electrocardiogram ST segment depression",
+          "label": "has side effect"
+        },
+        {
+          "source": "Electrocardiogram ST segment depression",
+          "target": "digoxin",
+          "label": "is side effect of"
+        },
+        {
+          "source": "digoxin",
+          "target": "Dynamin-1",
+          "label": "has target"
+        }
+      ],
+      "id": "path_218104"
+    }
+  ]
+}

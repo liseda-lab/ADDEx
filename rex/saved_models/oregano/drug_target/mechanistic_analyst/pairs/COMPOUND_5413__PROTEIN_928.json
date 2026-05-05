@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:5413 - PROTEIN:928",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6945,
+        "final_score": 0.5139,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2,
+          "completeness_conv": 3,
+          "relevance": 2
+        }
+      },
+      "nodes": [
+        {
+          "id": "Sulfathiazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Vascular Headaches",
+          "type": "Indication"
+        },
+        {
+          "id": "ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscarinic acetylcholine receptor M4",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfathiazole",
+          "target": "Vascular Headaches",
+          "label": "has indication"
+        },
+        {
+          "source": "Vascular Headaches",
+          "target": "ergotamine",
+          "label": "is indication of"
+        },
+        {
+          "source": "ergotamine",
+          "target": "Muscarinic acetylcholine receptor M4",
+          "label": "has target"
+        }
+      ],
+      "id": "path_162157"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "COMPOUND:608 - PROTEIN:706",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4315,
+        "final_score": 0.4315
+      },
+      "nodes": [
+        {
+          "id": "nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Electrocardiogram ST segment depression",
+          "type": "Side_effect"
+        },
+        {
+          "id": "digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Casein kinase II subunit beta",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "nicardipine",
+          "target": "Electrocardiogram ST segment depression",
+          "label": "has side effect"
+        },
+        {
+          "source": "Electrocardiogram ST segment depression",
+          "target": "digoxin",
+          "label": "is side effect of"
+        },
+        {
+          "source": "digoxin",
+          "target": "Casein kinase II subunit beta",
+          "label": "has target"
+        }
+      ],
+      "id": "path_331786"
+    }
+  ]
+}

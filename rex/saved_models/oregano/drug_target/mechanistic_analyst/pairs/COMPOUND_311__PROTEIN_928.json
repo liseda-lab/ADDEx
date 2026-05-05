@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:311 - PROTEIN:928",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8132,
+        "final_score": 0.5733,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 1,
+          "completeness_conv": 5,
+          "relevance": 1
+        }
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Endogenous depression",
+          "type": "Indication"
+        },
+        {
+          "id": "trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscarinic acetylcholine receptor M4",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Endogenous depression",
+          "label": "has indication"
+        },
+        {
+          "source": "Endogenous depression",
+          "target": "trimipramine",
+          "label": "is indication of"
+        },
+        {
+          "source": "trimipramine",
+          "target": "Muscarinic acetylcholine receptor M4",
+          "label": "has target"
+        }
+      ],
+      "id": "path_402966"
+    }
+  ]
+}

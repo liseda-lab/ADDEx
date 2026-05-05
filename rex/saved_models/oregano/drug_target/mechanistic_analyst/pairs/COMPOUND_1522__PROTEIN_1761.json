@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:1522 - PROTEIN:1761",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6699,
+        "final_score": 0.4183,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1,
+          "completeness_conv": 3,
+          "relevance": 1
+        }
+      },
+      "nodes": [
+        {
+          "id": "Zinc",
+          "type": "Compound"
+        },
+        {
+          "id": "zinc preparations",
+          "type": "ATC"
+        },
+        {
+          "id": "Magnesium levulinate",
+          "type": "Compound"
+        },
+        {
+          "id": "C4b-binding protein alpha chain",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zinc",
+          "target": "zinc preparations",
+          "label": "has code"
+        },
+        {
+          "source": "zinc preparations",
+          "target": "Magnesium levulinate",
+          "label": "is code of"
+        },
+        {
+          "source": "Magnesium levulinate",
+          "target": "C4b-binding protein alpha chain",
+          "label": "has target"
+        }
+      ],
+      "id": "path_432517"
+    }
+  ]
+}

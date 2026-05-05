@@ -1,0 +1,53 @@
+{
+  "id": "COMPOUND:443 - PROTEIN:1959",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7344,
+        "final_score": 0.5339,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2,
+          "completeness_conv": 3,
+          "relevance": 2
+        }
+      },
+      "nodes": [
+        {
+          "id": "loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Watery eyes",
+          "type": "Indication"
+        },
+        {
+          "id": "fexofenadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tyrosine--tRNA ligase",
+          "type": "Protein"
+        }
+      ],
+      "edges": [
+        {
+          "source": "loratadine",
+          "target": "Watery eyes",
+          "label": "has indication"
+        },
+        {
+          "source": "Watery eyes",
+          "target": "fexofenadine",
+          "label": "is indication of"
+        },
+        {
+          "source": "fexofenadine",
+          "target": "Tyrosine--tRNA ligase",
+          "label": "has target"
+        }
+      ],
+      "id": "path_35348"
+    }
+  ]
+}
