@@ -133,10 +133,16 @@ is auto-detected at startup.
 
 ```bash
 npm install                 # frontend deps
+cd rex && uv sync && cd ..  # (recommended) pre-install Python deps
 npm run dev
 ```
 
 Open http://localhost:3000.
+
+The `uv sync` step is technically optional — `uv run` auto-syncs on first
+invocation, so the very first REx or verbalization request would do the
+install on demand. Running `uv sync` upfront just shifts that 2-5 minute
+install cost out of the user-visible "first request" path.
 
 The dev server uses Turbopack and supports hot reload. To produce a production
 build:

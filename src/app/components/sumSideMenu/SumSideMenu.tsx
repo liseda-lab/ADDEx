@@ -660,7 +660,7 @@ export default function SumSideMenu({
                   </div>
                   <p
                     style={{
-                      textAlign: "justify",
+                      textAlign: "left",
                       lineHeight: 1.55,
                       margin: 0,
                       width: "100%",
