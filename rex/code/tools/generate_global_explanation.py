@@ -20,6 +20,22 @@ if REX_ROOT not in sys.path:
 
 from code.model import environment as rex_environment
 
+# ----------------------------------------------------------------------------
+# Verbalization backend toggle.
+#
+# USE_GGUF = True  -> use llama.cpp + GGUF q4 quantized weights (fast on CPU,
+#                     small footprint). Auto-falls back to transformers if
+#                     llama-cpp-python is missing or the GGUF file isn't found.
+# USE_GGUF = False -> use transformers + fp16 weights (the original path).
+#
+# REx is unaffected by this flag: REx runs in a separate subprocess that
+# never imports this file.
+# ----------------------------------------------------------------------------
+USE_GGUF = True
+GGUF_REPO_ID = "unsloth/Qwen3-1.7B-GGUF"
+GGUF_FILENAME = "Qwen3-1.7B-Q4_K_M.gguf"
+GGUF_PATH = os.path.join(REX_ROOT, "models", GGUF_FILENAME)
+
 
 def _memory_snapshot() -> str:
     try:
@@ -61,6 +77,58 @@ def _read_payload() -> dict[str, Any]:
         raise RuntimeError(f"Failed to read request payload: {exc}") from exc
 
 
+def _ensure_gguf_downloaded() -> bool:
+    """Download the GGUF model from HuggingFace if it isn't already cached
+    locally. Returns True on success (file is present after this call),
+    False on any failure (network, HF unreachable, etc.)."""
+    if os.path.isfile(GGUF_PATH):
+        return True
+    print(
+        f"[GlobalExplanationPy] GGUF model not found at {GGUF_PATH}; "
+        f"downloading {GGUF_FILENAME} from {GGUF_REPO_ID} (~1 GB, one-time)...",
+        file=sys.stderr,
+    )
+    try:
+        from huggingface_hub import hf_hub_download
+        os.makedirs(os.path.dirname(GGUF_PATH), exist_ok=True)
+        hf_hub_download(
+            repo_id=GGUF_REPO_ID,
+            filename=GGUF_FILENAME,
+            local_dir=os.path.dirname(GGUF_PATH),
+        )
+        print(f"[GlobalExplanationPy] GGUF download complete.", file=sys.stderr)
+        return os.path.isfile(GGUF_PATH)
+    except Exception as exc:
+        print(
+            f"[GlobalExplanationPy] GGUF download failed ({exc}); "
+            f"falling back to transformers.",
+            file=sys.stderr,
+        )
+        return False
+
+
+def _try_configure_gguf() -> bool:
+    """Attempt to bind the GGUF backend. Returns True on success, False if
+    anything is missing (library not installed, download failed, etc.). On
+    False the caller should fall back to the transformers backend."""
+    if not USE_GGUF:
+        return False
+    try:
+        import importlib.util
+        if importlib.util.find_spec("llama_cpp") is None:
+            print("[GlobalExplanationPy] GGUF requested but llama-cpp-python is not installed; falling back to transformers.", file=sys.stderr)
+            return False
+        if not _ensure_gguf_downloaded():
+            return False
+        rex_environment._local_gguf_path = GGUF_PATH
+        rex_environment._call_llm = rex_environment._call_llm_local_gguf
+        print(f"[GlobalExplanationPy] GGUF backend bound (path={GGUF_PATH})", file=sys.stderr)
+        return True
+    except Exception as exc:
+        print(f"[GlobalExplanationPy] GGUF setup failed ({exc}); falling back to transformers.", file=sys.stderr)
+        return False
+
+
 def _configure_llm(payload: dict[str, Any]) -> None:
     llm_api = bool(payload.get("llm_api", False))
     llm_model = str(payload.get("llm_model", "qwen") or "qwen")
@@ -72,11 +140,14 @@ def _configure_llm(payload: dict[str, Any]) -> None:
             rex_environment._call_llm = rex_environment._call_llm_gpt_api
         else:
             rex_environment._call_llm = rex_environment._call_llm_qwen_api
+    elif _try_configure_gguf():
+        # Bound to _call_llm_local_gguf inside _try_configure_gguf().
+        pass
     else:
         rex_environment._call_llm = rex_environment._call_llm_local
     print(
         "[GlobalExplanationPy] LLM configured "
-        f"(llm_api={llm_api}, llm_model={llm_model}, local_model={local_model})",
+        f"(llm_api={llm_api}, llm_model={llm_model}, local_model={local_model}, use_gguf={USE_GGUF})",
         file=sys.stderr,
     )
     print(f"[GlobalExplanationPy] Memory snapshot after config: {_memory_snapshot()}", file=sys.stderr)
@@ -100,7 +171,12 @@ def _generate_with_llm(messages: list[dict[str, str]], payload: dict[str, Any]) 
     print(f"[GlobalExplanationPy] Trying local model: {rex_environment._local_model_name}", file=sys.stderr)
     print(f"[GlobalExplanationPy] Memory before model call: {_memory_snapshot()}", file=sys.stderr)
     with contextlib.redirect_stdout(redirected):
-        _, raw_text = rex_environment._call_llm(messages, temperature=0.2)
+        # max_new_tokens=512 caps verbalization output regardless of which
+        # local backend is bound (GGUF or transformers). Verifies that the
+        # transformers fallback path doesn't re-introduce the 15-min worst
+        # case if GGUF setup ever fails. 1-3 paragraph verbs fit comfortably
+        # in 512 tokens; verified empirically.
+        _, raw_text = rex_environment._call_llm(messages, temperature=0.2, max_new_tokens=512)
     redirected_output = redirected.getvalue().strip()
     if redirected_output:
         print(redirected_output, file=sys.stderr)

@@ -132,7 +132,7 @@ is auto-detected at startup.
 ### Run the web app
 
 ```bash
-npm install
+npm install                 # frontend deps
 npm run dev
 ```
 
@@ -145,6 +145,35 @@ build:
 npm run build
 npm run start
 ```
+
+### Verbalization model (auto-downloaded on first use)
+
+Verbalization runs on a quantized 1.7B Qwen model via `llama.cpp`. The model
+file (~1 GB) is downloaded automatically from HuggingFace into
+`rex/models/Qwen3-1.7B-Q4_K_M.gguf` the first time a verbalization is
+requested. No manual setup needed; subsequent runs use the cached file.
+
+If the download fails (no network, HF unreachable) or the `llama-cpp-python`
+package isn't installed, ADDEx falls back to the original transformers
+backend automatically. To disable the GGUF backend explicitly, set
+`USE_GGUF = False` at the top of `rex/code/tools/generate_global_explanation.py`.
+
+### Optional: hardware-accelerated builds for verbalization
+
+The default `uv sync` installs the CPU-optimized `llama-cpp-python` wheel,
+which is what most deployments need. To use GPU/Metal acceleration where
+available, rebuild that one package with the appropriate flag:
+
+```bash
+# NVIDIA GPU (Linux/Windows)
+cd rex && CMAKE_ARGS="-DGGML_CUDA=on" uv sync --reinstall-package llama-cpp-python
+
+# Apple Silicon (Metal)
+cd rex && CMAKE_ARGS="-DGGML_METAL=on" uv sync --reinstall-package llama-cpp-python
+```
+
+REx training and inference paths are unaffected by this; the GGUF backend
+only powers the verbalization step.
 
 ## Data sources
 

@@ -17,6 +17,7 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 import json
+import re
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -45,6 +46,12 @@ try:
     _llm_tokenizer = None
     _llm_device = None
     _local_model_name = "Qwen/Qwen3.5-9B"  # default, overridden by --local_model
+
+    # GGUF backend (verbalization-only, opt-in via generate_global_explanation.py).
+    # Lives in parallel to the transformers path; never invoked unless the verb
+    # subprocess explicitly selects it.
+    _llm_model_gguf = None
+    _local_gguf_path = ""
 
     def _init_llm():
         global _llm_model, _llm_tokenizer, _llm_device
@@ -75,7 +82,7 @@ try:
         )
         print(f"[LLM] Ready on {_llm_device}")
 
-    def _call_llm_local(messages, temperature=0):
+    def _call_llm_local(messages, temperature=0, max_new_tokens=3072):
         _init_llm()
         try:
             prompt = _llm_tokenizer.apply_chat_template(
@@ -92,7 +99,7 @@ try:
             with torch.no_grad():
                 try:
                     outputs = _llm_model.generate(
-                        **inputs, max_new_tokens=3072,
+                        **inputs, max_new_tokens=max_new_tokens,
                         **gen_kwargs,
                         pad_token_id=_llm_tokenizer.pad_token_id,
                     )
@@ -116,6 +123,76 @@ try:
             return _extract_json_response(response)
         except Exception as e:
             print(f"[LLM LOCAL ERROR] {e}")
+            return "", ""
+
+    # ---------------------------------------------------------------------
+    # GGUF backend (llama.cpp). Verbalization-only path used when the verb
+    # subprocess sets _local_gguf_path and binds _call_llm to this function.
+    # REx never reaches this code (REx subprocess uses _call_llm_local).
+    # ---------------------------------------------------------------------
+    def _init_llm_gguf(model_path: str):
+        global _llm_model_gguf
+        if _llm_model_gguf is not None:
+            return
+        from llama_cpp import Llama
+        print(f"[LLM GGUF] Loading {model_path}...")
+        # n_ctx=2048: verb prompt (~1500 tokens incl. paths/persona) + output
+        # (~300 tokens) fits comfortably. Smaller context = less RAM, slightly
+        # faster prefill. Tune up if longer prompts (more visible paths) start
+        # truncating.
+        _llm_model_gguf = Llama(
+            model_path=model_path,
+            n_ctx=2048,
+            n_threads=os.cpu_count(),
+            verbose=False,
+        )
+        print(f"[LLM GGUF] Loaded.")
+
+        # llama-cpp-python 0.3.x has a known destructor-time bug: Llama.__del__
+        # runs after Python's module shutdown has cleared some C-level refs,
+        # producing a noisy "TypeError: 'NoneType' object is not callable"
+        # traceback at exit. Closing the model via atexit (before shutdown GC)
+        # avoids the race.
+        import atexit
+        def _close_gguf():
+            global _llm_model_gguf
+            if _llm_model_gguf is not None:
+                try:
+                    _llm_model_gguf.close()
+                except Exception:
+                    pass
+                _llm_model_gguf = None
+        atexit.register(_close_gguf)
+
+    def _call_llm_local_gguf(messages, temperature=0, max_new_tokens=512):
+        try:
+            if _llm_model_gguf is None:
+                _init_llm_gguf(_local_gguf_path)
+            # Qwen3 ships a "thinking" mode that emits a <think>...</think>
+            # reasoning prefix before the actual answer. The transformers path
+            # disables it via enable_thinking=False on the chat template, but
+            # llama-cpp-python (0.3.x) doesn't accept chat_template_kwargs, so
+            # we use Qwen3's in-prompt directive /no_think instead. Without
+            # this, generation wastes 5-10s of CPU on internal reasoning that
+            # then crowds out the real answer at low max_tokens caps.
+            msgs = list(messages)
+            if msgs and msgs[0].get("role") == "system":
+                msgs[0] = {**msgs[0], "content": msgs[0]["content"] + " /no_think"}
+            else:
+                msgs.insert(0, {"role": "system", "content": "/no_think"})
+            response = _llm_model_gguf.create_chat_completion(
+                messages=msgs,
+                temperature=max(temperature, 0.01) if temperature > 0 else 0.0,
+                max_tokens=max_new_tokens,
+            )
+            text = response["choices"][0]["message"]["content"].strip()
+            # Strip any residual (usually empty) <think>...</think> blocks the
+            # model still emits even when /no_think is set.
+            text = re.sub(r"<think>.*?</think>\s*", "", text, flags=re.DOTALL).strip()
+            print(f"[LLM GGUF] Call successful")
+            return _extract_json_response(text)
+        except Exception as e:
+            print(f"[LLM GGUF ERROR] {e}")
             return "", ""
 
     # Qwen via HuggingFace API (--llm_api 1 --llm_model qwen).

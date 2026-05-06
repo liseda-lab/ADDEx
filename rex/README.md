@@ -71,6 +71,31 @@ The parameter viz_mode changes the default mode to `Qwen/Qwen3-4B` and only save
 
 No account or token is needed as the models are open source and download freely. Training was done using an RTX 5090 GPU. For API-based LLM calls, execution can be achieved on any system, even without a GPU.
 
+### Verbalization (separate from REx LLM scoring)
+
+The ADDEx verbalization step (the natural-language summary of selected paths)
+runs in its own subprocess (`code/tools/generate_global_explanation.py`) and
+has its own backend selector, independent of REx's `--llm_api` / `--local_model`
+flags. It defaults to a `q4_K_M`-quantized **Qwen 3 (1.7B) GGUF** model loaded
+through `llama.cpp`, which is significantly faster on CPU than the transformers
+fp16 path.
+
+The toggle lives at the top of `code/tools/generate_global_explanation.py`:
+
+```python
+USE_GGUF = True            # set False to fall back to transformers + fp16
+GGUF_REPO_ID = "unsloth/Qwen3-1.7B-GGUF"
+GGUF_FILENAME = "Qwen3-1.7B-Q4_K_M.gguf"
+```
+
+The GGUF file is downloaded automatically from HuggingFace on the first
+verbalization request (~1 GB, one-time). If the download fails or the
+`llama-cpp-python` package is missing, the verbalization automatically falls
+back to the transformers path so the system keeps working.
+
+REx itself is not affected by this toggle. REx training and inference still
+use transformers + the model selected by `--local_model`.
+
 
 ### Authors
 - __Diogo Venes__
