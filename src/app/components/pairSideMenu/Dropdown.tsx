@@ -400,6 +400,10 @@ export function Dropdown({
                     position: "fixed",
                     top: menuPosition.top,
                     left: menuPosition.left,
+                    // Menu width matches the trigger input. Long entity
+                    // names are truncated with ellipsis on each option;
+                    // the option button has a `title` attribute so the
+                    // full name appears as a native browser tooltip on hover.
                     width: menuWidth,
                     maxHeight: menuPosition.maxHeight,
                     overflowY: "auto" as const,
@@ -450,6 +454,10 @@ export function Dropdown({
                             cursor: "pointer",
                             fontSize: "0.84rem",
                             whiteSpace: "nowrap" as const,
+                            // Truncate ultra-long names with ellipsis instead
+                            // of letting them spill out of the capped menu.
+                            overflow: "hidden" as const,
+                            textOverflow: "ellipsis" as const,
                             lineHeight: 1.35,
                             width: "100%",
                           }}
@@ -460,6 +468,53 @@ export function Dropdown({
                     })}
                   </div>
                 </div>,
+                document.body
+              )}
+
+            {/* Instant tooltip showing the full text of the highlighted
+                option. Driven by highlightedIndex, so it works for BOTH
+                mouse hover (onMouseEnter sets it) and keyboard arrow-key
+                navigation. Replaces the native `title` tooltip, which has
+                a ~500ms-1s OS-controlled delay we can't override. */}
+            {portalReady &&
+              isOpen &&
+              menuPosition &&
+              highlightedIndex >= 0 &&
+              filteredOptions[highlightedIndex] !== undefined &&
+              createPortal(
+                (() => {
+                  const opt = filteredOptions[highlightedIndex];
+                  const text = displayFor ? displayFor(opt) : opt;
+                  const rowTop =
+                    menuPosition.top + highlightedIndex * OPTION_ROW_HEIGHT - scrollTop;
+                  const tipLeft = menuPosition.left + menuWidth + 6;
+                  const viewportRightLimit =
+                    window.innerWidth - 8 - tipLeft;
+                  return (
+                    <div
+                      style={{
+                        position: "fixed",
+                        top: Math.max(8, Math.min(rowTop, window.innerHeight - 60)),
+                        left: tipLeft,
+                        maxWidth: Math.max(180, Math.min(380, viewportRightLimit)),
+                        padding: "6px 10px",
+                        backgroundColor: colors.darkblue,
+                        color: colors.white,
+                        border: `1px solid ${colors.white}40`,
+                        borderRadius: 6,
+                        fontSize: "0.82rem",
+                        lineHeight: 1.35,
+                        whiteSpace: "normal" as const,
+                        wordBreak: "break-word" as const,
+                        boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
+                        zIndex: 2147483647,
+                        pointerEvents: "none" as const,
+                      }}
+                    >
+                      {text}
+                    </div>
+                  );
+                })(),
                 document.body
               )}
           </>
