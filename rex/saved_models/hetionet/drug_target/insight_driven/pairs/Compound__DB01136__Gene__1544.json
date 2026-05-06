@@ -1,0 +1,142 @@
+{
+  "id": "Compound::DB01136 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6485,
+        "final_score": 0.6485
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8317"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4427,
+        "final_score": 0.4427
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Convulsions Generalised",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aminophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Convulsions Generalised",
+          "label": "causes"
+        },
+        {
+          "source": "Convulsions Generalised",
+          "target": "Aminophylline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aminophylline",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carvedilol,Aminophylline": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_8318"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4235,
+        "final_score": 0.4235
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Convulsions Generalised",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Convulsions Generalised",
+          "label": "causes"
+        },
+        {
+          "source": "Convulsions Generalised",
+          "target": "Theophylline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carvedilol,Theophylline": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8319"
+    }
+  ]
+}

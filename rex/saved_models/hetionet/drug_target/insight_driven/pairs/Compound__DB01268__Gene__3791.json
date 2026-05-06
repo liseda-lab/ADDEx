@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01268 - Gene::3791",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5497,
+        "final_score": 0.5497
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Fistula",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Regorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Kdr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Fistula",
+          "label": "causes"
+        },
+        {
+          "source": "Fistula",
+          "target": "Regorafenib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Regorafenib",
+          "target": "Kdr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Regorafenib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Vegfr Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_22052"
+    }
+  ]
+}

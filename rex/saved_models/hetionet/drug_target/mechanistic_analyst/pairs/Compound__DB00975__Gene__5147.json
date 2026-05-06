@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00975 - Gene::5147",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7155,
+        "final_score": 0.6911,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dipyridamole",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde7a",
+          "type": "Gene"
+        },
+        {
+          "id": "Cyclic-nucleotide Phosphodiesterase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Pde6d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dipyridamole",
+          "target": "Pde7a",
+          "label": "binds"
+        },
+        {
+          "source": "Pde7a",
+          "target": "Cyclic-nucleotide Phosphodiesterase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Cyclic-nucleotide Phosphodiesterase Activity",
+          "target": "Pde6d",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11254"
+    }
+  ]
+}

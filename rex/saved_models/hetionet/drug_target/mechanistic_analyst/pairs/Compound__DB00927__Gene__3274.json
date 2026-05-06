@@ -1,0 +1,114 @@
+{
+  "id": "Compound::DB00927 - Gene::3274",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7282,
+        "final_score": 0.6558,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Famotidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nizatidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Famotidine",
+          "target": "Histamine H2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H2 Receptor Antagonists",
+          "target": "Nizatidine",
+          "label": "includes"
+        },
+        {
+          "source": "Nizatidine",
+          "target": "Hrh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Famotidine,Nizatidine": [
+          "1,3-Thiazoles",
+          "Histamine-2 Receptor Antagonist"
+        ]
+      },
+      "id": "path_3734"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6968,
+        "final_score": 0.6401,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Famotidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Famotidine",
+          "target": "Histamine H2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H2 Receptor Antagonists",
+          "target": "Cimetidine",
+          "label": "includes"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Hrh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Famotidine,Cimetidine": [
+          "Azole",
+          "Histamine-2 Receptor Antagonist"
+        ]
+      },
+      "id": "path_3735"
+    }
+  ]
+}

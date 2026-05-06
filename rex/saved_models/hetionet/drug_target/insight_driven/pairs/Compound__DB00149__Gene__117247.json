@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB00149 - Gene::117247",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7511,
+        "final_score": 0.7089,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "L-leucine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc16a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Thyroid Hormone Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc16a10",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-leucine",
+          "target": "Slc16a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc16a2",
+          "target": "Thyroid Hormone Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Thyroid Hormone Transmembrane Transporter Activity",
+          "target": "Slc16a10",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13345"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6283,
+        "final_score": 0.6283
+      },
+      "nodes": [
+        {
+          "id": "L-leucine",
+          "type": "Compound"
+        },
+        {
+          "id": "L-threonine",
+          "type": "Compound"
+        },
+        {
+          "id": "L-isoleucine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc16a10",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-leucine",
+          "target": "L-threonine",
+          "label": "resembles"
+        },
+        {
+          "source": "L-threonine",
+          "target": "L-isoleucine",
+          "label": "resembles"
+        },
+        {
+          "source": "L-isoleucine",
+          "target": "Slc16a10",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "L-leucine,L-threonine": [
+          "Amino Acid Zwitterion",
+          "Dietary Amino Acid"
+        ],
+        "L-leucine,L-isoleucine": [
+          "Amino Acid Zwitterion",
+          "Dietary Amino Acid"
+        ],
+        "L-threonine,L-isoleucine": [
+          "Amino Acid Zwitterion",
+          "Dietary Amino Acid"
+        ]
+      },
+      "id": "path_13346"
+    }
+  ]
+}

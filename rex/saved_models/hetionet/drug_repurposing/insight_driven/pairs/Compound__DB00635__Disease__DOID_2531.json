@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00635 - Disease::DOID:2531",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4526,
+        "final_score": 0.4526
+      },
+      "nodes": [
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Dry Scalp",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Alitretinoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisone",
+          "target": "Dry Scalp",
+          "label": "causes"
+        },
+        {
+          "source": "Dry Scalp",
+          "target": "Alitretinoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Alitretinoin",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisone,Alitretinoin": [
+          "Immunotherapeutic Agent",
+          "Hydroxides"
+        ]
+      },
+      "id": "path_2184"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4255,
+        "final_score": 0.4255
+      },
+      "nodes": [
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Dry Scalp",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisone",
+          "target": "Dry Scalp",
+          "label": "causes"
+        },
+        {
+          "source": "Dry Scalp",
+          "target": "Prednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisone,Prednisolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_2185"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB01167 - MONDO_5706",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7651,
+        "final_score": 0.7159,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Itraconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Fusariosis",
+          "type": "Disease"
+        },
+        {
+          "id": "Posaconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Coccidioidomycosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Itraconazole",
+          "target": "Fusariosis",
+          "label": "indication"
+        },
+        {
+          "source": "Fusariosis",
+          "target": "Posaconazole",
+          "label": "indication"
+        },
+        {
+          "source": "Posaconazole",
+          "target": "Coccidioidomycosis",
+          "label": "indication"
+        }
+      ],
+      "id": "path_21430"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5612,
+        "final_score": 0.5612
+      },
+      "nodes": [
+        {
+          "id": "Itraconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Candidemia",
+          "type": "Disease"
+        },
+        {
+          "id": "Amphotericin B",
+          "type": "Drug"
+        },
+        {
+          "id": "Coccidioidomycosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Itraconazole",
+          "target": "Candidemia",
+          "label": "indication"
+        },
+        {
+          "source": "Candidemia",
+          "target": "Amphotericin B",
+          "label": "indication"
+        },
+        {
+          "source": "Amphotericin B",
+          "target": "Coccidioidomycosis",
+          "label": "indication"
+        }
+      ],
+      "id": "path_21431"
+    }
+  ]
+}

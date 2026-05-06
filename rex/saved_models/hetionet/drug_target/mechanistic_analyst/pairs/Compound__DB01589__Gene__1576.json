@@ -1,0 +1,149 @@
+{
+  "id": "Compound::DB01589 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6666,
+        "final_score": 0.6666,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Quazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quazepam",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20770"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5813,
+        "final_score": 0.5813
+      },
+      "nodes": [
+        {
+          "id": "Quazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Clorazepate",
+          "label": "includes"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Quazepam,Clorazepate": [
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Clorazepate": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_20771"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5505,
+        "final_score": 0.5505
+      },
+      "nodes": [
+        {
+          "id": "Quazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quazepam",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20772"
+    }
+  ]
+}

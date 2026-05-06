@@ -1,0 +1,57 @@
+{
+  "id": "Compound::DB00959 - Disease::DOID:2377",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4345,
+        "final_score": 0.4345
+      },
+      "nodes": [
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Betamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Multiple Sclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylprednisolone",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        },
+        {
+          "source": "Allergic Rhinitis",
+          "target": "Betamethasone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Betamethasone",
+          "target": "Multiple Sclerosis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylprednisolone,Betamethasone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ],
+        "Allergic Rhinitis,Multiple Sclerosis": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_1846"
+    }
+  ]
+}

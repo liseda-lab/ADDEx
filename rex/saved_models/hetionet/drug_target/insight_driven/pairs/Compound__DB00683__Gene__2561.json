@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00683 - Gene::2561",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5745,
+        "final_score": 0.5745
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Upper Airway Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Upper Airway Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Upper Airway Obstruction",
+          "target": "Etomidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midazolam,Etomidate": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6121"
+    }
+  ]
+}

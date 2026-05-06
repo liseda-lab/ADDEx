@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00726 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5689,
+        "final_score": 0.5689
+      },
+      "nodes": [
+        {
+          "id": "Trimipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Taste Peculiar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Protriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimipramine",
+          "target": "Taste Peculiar",
+          "label": "causes"
+        },
+        {
+          "source": "Taste Peculiar",
+          "target": "Protriptyline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Protriptyline",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trimipramine,Protriptyline": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_11222"
+    }
+  ]
+}

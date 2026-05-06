@@ -1,0 +1,154 @@
+{
+  "id": "Compound::DB00983 - Gene::1548",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6796,
+        "final_score": 0.6731,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Formoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenergic Beta2-agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Arformoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Formoterol",
+          "target": "Adrenergic Beta2-agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Adrenergic Beta2-agonists",
+          "target": "Arformoterol",
+          "label": "includes"
+        },
+        {
+          "source": "Arformoterol",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Formoterol,Arformoterol": [
+          "Beta-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_11813"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6504,
+        "final_score": 0.6585,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Formoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Formoterol",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Arachidonic Acid Epoxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Epoxygenase Activity",
+          "target": "Cyp2a6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11814"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5104,
+        "final_score": 0.5104
+      },
+      "nodes": [
+        {
+          "id": "Formoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Digitalis Intoxication (nos)",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Arformoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Formoterol",
+          "target": "Digitalis Intoxication (nos)",
+          "label": "causes"
+        },
+        {
+          "source": "Digitalis Intoxication (nos)",
+          "target": "Arformoterol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Arformoterol",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Formoterol,Arformoterol": [
+          "Beta-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_11815"
+    }
+  ]
+}

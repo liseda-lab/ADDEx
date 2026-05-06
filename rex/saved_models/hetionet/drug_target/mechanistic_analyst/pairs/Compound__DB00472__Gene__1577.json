@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00472 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4579,
+        "final_score": 0.4579
+      },
+      "nodes": [
+        {
+          "id": "Fluoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Excitation Cerebral",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxetine",
+          "target": "Excitation Cerebral",
+          "label": "causes"
+        },
+        {
+          "source": "Excitation Cerebral",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluoxetine,Codeine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_175"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3896,
+        "final_score": 0.3896
+      },
+      "nodes": [
+        {
+          "id": "Fluoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyperplasia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxetine",
+          "target": "Hyperplasia",
+          "label": "causes"
+        },
+        {
+          "source": "Hyperplasia",
+          "target": "Felodipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Felodipine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluoxetine,Felodipine": [
+          "Benzenes"
+        ]
+      },
+      "id": "path_176"
+    }
+  ]
+}

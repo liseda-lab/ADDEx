@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01346 - Gene::2554",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7073,
+        "final_score": 0.687,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Quinidine Barbiturate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinidine Barbiturate",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Gaba Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba Receptor Activity",
+          "target": "Gabra1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1131"
+    },
+    {
+      "score": {
+        "ic_mean": 0.505,
+        "final_score": 0.505
+      },
+      "nodes": [
+        {
+          "id": "Quinidine Barbiturate",
+          "type": "Compound"
+        },
+        {
+          "id": "Arthritic Pains",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinidine Barbiturate",
+          "target": "Arthritic Pains",
+          "label": "causes"
+        },
+        {
+          "source": "Arthritic Pains",
+          "target": "Phenobarbital",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenobarbital",
+          "target": "Gabra1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinidine Barbiturate,Phenobarbital": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_1132"
+    }
+  ]
+}

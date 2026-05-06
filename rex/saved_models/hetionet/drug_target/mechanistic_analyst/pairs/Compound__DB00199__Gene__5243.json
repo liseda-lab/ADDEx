@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00199 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.643,
+        "final_score": 0.643
+      },
+      "nodes": [
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Macrolides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fidaxomicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Erythromycin",
+          "target": "Macrolides",
+          "label": "is included in"
+        },
+        {
+          "source": "Macrolides",
+          "target": "Fidaxomicin",
+          "label": "includes"
+        },
+        {
+          "source": "Fidaxomicin",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Erythromycin,Macrolides": [
+          "Macrolide"
+        ],
+        "Erythromycin,Fidaxomicin": [
+          "Macrolide Antibiotic",
+          "Macrolide Antibiotic"
+        ],
+        "Macrolides,Fidaxomicin": [
+          "Macrolide"
+        ]
+      },
+      "id": "path_20583"
+    }
+  ]
+}

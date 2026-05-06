@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00373 - Disease::DOID:6364",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5813,
+        "final_score": 0.5813
+      },
+      "nodes": [
+        {
+          "id": "Timolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Arterial Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propranolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Migraine",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Timolol",
+          "target": "Arterial Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Arterial Insufficiency",
+          "target": "Propranolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propranolol",
+          "target": "Migraine",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Timolol,Propranolol": [
+          "Beta-Adrenergic Antagonist",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_4438"
+    }
+  ]
+}

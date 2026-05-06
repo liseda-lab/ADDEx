@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB01069 - Gene::808",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7082,
+        "final_score": 0.5208,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Fluphenazine",
+          "label": "includes"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Calm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Promethazine,Fluphenazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ],
+        "Phenothiazines,Fluphenazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_6959"
+    }
+  ]
+}

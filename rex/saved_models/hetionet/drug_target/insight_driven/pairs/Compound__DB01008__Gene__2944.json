@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01008 - Gene::2944",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5361,
+        "final_score": 0.5361
+      },
+      "nodes": [
+        {
+          "id": "Busulfan",
+          "type": "Compound"
+        },
+        {
+          "id": "Venoocclusive Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gstm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Busulfan",
+          "target": "Venoocclusive Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Venoocclusive Disease",
+          "target": "Azathioprine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Gstm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Busulfan,Azathioprine": [
+          "Organosulfur Compound",
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_21291"
+    }
+  ]
+}

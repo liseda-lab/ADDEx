@@ -1,0 +1,65 @@
+{
+  "id": "Compound::DB00829 - Gene::706",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7073,
+        "final_score": 0.687,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clorazepate",
+          "type": "Compound"
+        },
+        {
+          "id": "Tspo",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Clorazepate",
+          "label": "includes"
+        },
+        {
+          "source": "Clorazepate",
+          "target": "Tspo",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Diazepam,Clorazepate": [
+          "1,4-Benzodiazepinone"
+        ],
+        "Benzodiazepines,Clorazepate": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_3687"
+    }
+  ]
+}

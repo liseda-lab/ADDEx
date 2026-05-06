@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01069 - Gene::148",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6478,
+        "final_score": 0.6478
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Trifluoperazine",
+          "label": "includes"
+        },
+        {
+          "source": "Trifluoperazine",
+          "target": "Adra1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Promethazine,Trifluoperazine": [
+          "Phenothiazine",
+          "Phenothiazines"
+        ],
+        "Phenothiazines,Trifluoperazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_3127"
+    }
+  ]
+}

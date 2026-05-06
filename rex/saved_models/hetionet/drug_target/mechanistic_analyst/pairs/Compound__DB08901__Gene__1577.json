@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB08901 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3862,
+        "final_score": 0.3862
+      },
+      "nodes": [
+        {
+          "id": "Ponatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Blood Amylase Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nelfinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ponatinib",
+          "target": "Blood Amylase Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Blood Amylase Increased",
+          "target": "Nelfinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nelfinavir",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ponatinib,Nelfinavir": [
+          "Organic Heterobicyclic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_7570"
+    }
+  ]
+}

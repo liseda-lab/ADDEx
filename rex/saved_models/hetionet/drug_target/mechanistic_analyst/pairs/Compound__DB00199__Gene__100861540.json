@@ -1,0 +1,62 @@
+{
+  "id": "Compound::DB00199 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4682,
+        "final_score": 0.4682
+      },
+      "nodes": [
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dirithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Telithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Erythromycin",
+          "target": "Dirithromycin",
+          "label": "resembles"
+        },
+        {
+          "source": "Dirithromycin",
+          "target": "Telithromycin",
+          "label": "resembles"
+        },
+        {
+          "source": "Telithromycin",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Erythromycin,Dirithromycin": [
+          "Macrolide Antibiotic",
+          "Macrolide Antibiotic"
+        ],
+        "Erythromycin,Telithromycin": [
+          "Organooxygen Compound",
+          "Macrolide Antibiotic"
+        ],
+        "Dirithromycin,Telithromycin": [
+          "Organooxygen Compound",
+          "Macrolide Antibiotic"
+        ]
+      },
+      "id": "path_13362"
+    }
+  ]
+}

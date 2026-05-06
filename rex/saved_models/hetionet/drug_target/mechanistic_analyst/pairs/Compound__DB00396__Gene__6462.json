@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00396 - Gene::6462",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5646,
+        "final_score": 0.5646
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Pelvic Venous Thrombosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Estriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Shbg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Pelvic Venous Thrombosis",
+          "label": "causes"
+        },
+        {
+          "source": "Pelvic Venous Thrombosis",
+          "target": "Estriol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Estriol",
+          "target": "Shbg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Estriol": [
+          "Steroid"
+        ]
+      },
+      "id": "path_6267"
+    }
+  ]
+}

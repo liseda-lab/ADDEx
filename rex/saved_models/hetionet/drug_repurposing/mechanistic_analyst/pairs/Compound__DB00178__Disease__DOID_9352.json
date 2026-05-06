@@ -1,0 +1,146 @@
+{
+  "id": "Compound::DB00178 - Disease::DOID:9352",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5348,
+        "final_score": 0.5348
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Albuminuria",
+          "type": "Symptom"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Albuminuria",
+          "label": "presents"
+        },
+        {
+          "source": "Albuminuria",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_2046"
+    },
+    {
+      "score": {
+        "ic_mean": 0.528,
+        "final_score": 0.528
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Perindopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Perindopril",
+          "label": "resembles"
+        },
+        {
+          "source": "Perindopril",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        },
+        {
+          "source": "Coronary Artery Disease",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "resembles"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ramipril,Perindopril": [
+          "Dicarboxylic Acid Monoester",
+          "Ace Inhibitor"
+        ],
+        "Coronary Artery Disease,Type 2 Diabetes Mellitus": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_2047"
+    },
+    {
+      "score": {
+        "ic_mean": 0.441,
+        "final_score": 0.441
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Overweight",
+          "type": "Symptom"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Overweight",
+          "label": "presents"
+        },
+        {
+          "source": "Overweight",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hypertension (disease),Overweight": [
+          "Finding"
+        ]
+      },
+      "id": "path_2048"
+    }
+  ]
+}

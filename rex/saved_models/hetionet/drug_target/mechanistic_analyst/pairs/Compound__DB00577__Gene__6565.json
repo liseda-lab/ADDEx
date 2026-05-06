@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00577 - Gene::6565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6923,
+        "final_score": 0.6795,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Valganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valaciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Valganciclovir",
+          "label": "includes"
+        },
+        {
+          "source": "Valganciclovir",
+          "target": "Slc15a2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_20887"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5407,
+        "final_score": 0.5407
+      },
+      "nodes": [
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytomegalovirus Infection",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valaciclovir",
+          "target": "Cytomegalovirus Infection",
+          "label": "causes"
+        },
+        {
+          "source": "Cytomegalovirus Infection",
+          "target": "Valganciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valganciclovir",
+          "target": "Slc15a2",
+          "label": "binds"
+        }
+      ],
+      "id": "path_20888"
+    }
+  ]
+}

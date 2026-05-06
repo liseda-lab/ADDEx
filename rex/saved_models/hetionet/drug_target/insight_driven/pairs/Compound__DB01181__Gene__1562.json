@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01181 - Gene::1562",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.532,
+        "final_score": 0.532
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Myocardial Depression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Myocardial Depression",
+          "label": "causes"
+        },
+        {
+          "source": "Myocardial Depression",
+          "target": "Lidocaine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Cyp2c18",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Lidocaine": [
+          "Primary Amide"
+        ]
+      },
+      "id": "path_18132"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5221,
+        "final_score": 0.5221
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Myocardial Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Myocardial Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Myocardial Haemorrhage",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c18",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Cyclophosphamide": [
+          "Nitrogen Mustard Compound",
+          "Nitrogen Mustard"
+        ]
+      },
+      "id": "path_18133"
+    }
+  ]
+}

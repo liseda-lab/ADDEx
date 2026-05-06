@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00206 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6713,
+        "final_score": 0.669,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Reserpine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Drug Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Reserpine",
+          "target": "Slc18a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc18a1",
+          "target": "Drug Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Drug Transmembrane Transporter Activity",
+          "target": "Abcb1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_840"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5456,
+        "final_score": 0.5456
+      },
+      "nodes": [
+        {
+          "id": "Reserpine",
+          "type": "Compound"
+        },
+        {
+          "id": "Deserpidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Voacamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Reserpine",
+          "target": "Deserpidine",
+          "label": "resembles"
+        },
+        {
+          "source": "Deserpidine",
+          "target": "Voacamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Voacamine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Reserpine,Deserpidine": [
+          "Yohimban Alkaloid"
+        ],
+        "Reserpine,Voacamine": [
+          "Chemical Entity"
+        ],
+        "Deserpidine,Voacamine": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_841"
+    }
+  ]
+}

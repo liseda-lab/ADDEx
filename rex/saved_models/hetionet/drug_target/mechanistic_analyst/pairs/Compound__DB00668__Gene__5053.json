@@ -1,0 +1,74 @@
+{
+  "id": "Compound::DB00668 - Gene::5053",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7492,
+        "final_score": 0.7079,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Droxidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Pah",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Droxidopa",
+          "label": "includes"
+        },
+        {
+          "source": "Droxidopa",
+          "target": "Pah",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Epinephrine,Droxidopa": [
+          "Catechols"
+        ],
+        "Epinephrine,Pah": [
+          "Organic Aromatic Compound"
+        ],
+        "Catecholamines,Droxidopa": [
+          "Catechols"
+        ],
+        "Catecholamines,Pah": [
+          "Organic Aromatic Compound"
+        ],
+        "Droxidopa,Pah": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_17944"
+    }
+  ]
+}

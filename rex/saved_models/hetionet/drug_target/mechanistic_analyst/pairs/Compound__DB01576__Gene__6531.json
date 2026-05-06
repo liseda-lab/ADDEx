@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01576 - Gene::6531",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6609,
+        "final_score": 0.4971,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Nervous System Stimulation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Lisdexamfetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextroamphetamine",
+          "target": "Central Nervous System Stimulation",
+          "label": "is included in"
+        },
+        {
+          "source": "Central Nervous System Stimulation",
+          "target": "Lisdexamfetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Lisdexamfetamine",
+          "target": "Slc6a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextroamphetamine,Lisdexamfetamine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_7315"
+    }
+  ]
+}

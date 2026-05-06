@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00834 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4447,
+        "final_score": 0.4447
+      },
+      "nodes": [
+        {
+          "id": "Mifepristone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Clotrimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mifepristone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Clotrimazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Clotrimazole",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mifepristone,Clotrimazole": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_3221"
+    }
+  ]
+}

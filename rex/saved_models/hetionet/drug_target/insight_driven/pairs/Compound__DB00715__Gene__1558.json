@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00715 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4194,
+        "final_score": 0.4194
+      },
+      "nodes": [
+        {
+          "id": "Paroxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ketosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fosphenytoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paroxetine",
+          "target": "Ketosis",
+          "label": "causes"
+        },
+        {
+          "source": "Ketosis",
+          "target": "Fosphenytoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fosphenytoin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paroxetine,Fosphenytoin": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_10429"
+    }
+  ]
+}

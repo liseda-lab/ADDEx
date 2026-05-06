@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00331 - Gene::4537",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.732,
+        "final_score": 0.616,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Metformin",
+          "type": "Compound"
+        },
+        {
+          "id": "Nd5",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidative Phosphorylation",
+          "type": "Pathway"
+        },
+        {
+          "id": "Nd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metformin",
+          "target": "Nd5",
+          "label": "binds"
+        },
+        {
+          "source": "Nd5",
+          "target": "Oxidative Phosphorylation",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidative Phosphorylation",
+          "target": "Nd3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2069"
+    }
+  ]
+}

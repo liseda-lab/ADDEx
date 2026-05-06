@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00633 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4692,
+        "final_score": 0.4692
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Diastolic Hypertension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoricoxib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "Diastolic Hypertension",
+          "label": "causes"
+        },
+        {
+          "source": "Diastolic Hypertension",
+          "target": "Etoricoxib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoricoxib",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexmedetomidine,Etoricoxib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_12632"
+    }
+  ]
+}

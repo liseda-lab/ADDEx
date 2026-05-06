@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB00878 - MONDO_2508",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7981,
+        "final_score": 0.5657,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Chlorhexidine",
+          "type": "Drug"
+        },
+        {
+          "id": "Denture Stomatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Stomatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Gingivitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorhexidine",
+          "target": "Denture Stomatitis",
+          "label": "off-label use"
+        },
+        {
+          "source": "Denture Stomatitis",
+          "target": "Stomatitis",
+          "label": "parent-child"
+        },
+        {
+          "source": "Stomatitis",
+          "target": "Gingivitis",
+          "label": "parent-child"
+        }
+      ],
+      "id": "path_32796"
+    }
+  ]
+}

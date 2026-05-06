@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01076 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3727,
+        "final_score": 0.3727
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Ketoconazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ketoconazole",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Ketoconazole": [
+          "Benzenes",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_15511"
+    }
+  ]
+}

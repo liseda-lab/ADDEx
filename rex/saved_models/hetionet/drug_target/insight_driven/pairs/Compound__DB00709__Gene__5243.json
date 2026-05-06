@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00709 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4645,
+        "final_score": 0.4645
+      },
+      "nodes": [
+        {
+          "id": "Lamivudine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chronic Hepatitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lamivudine",
+          "target": "Chronic Hepatitis",
+          "label": "causes"
+        },
+        {
+          "source": "Chronic Hepatitis",
+          "target": "Methadone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methadone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lamivudine,Methadone": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_14967"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "Compound::DB00458 - Gene::3356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6455,
+        "final_score": 0.6455
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Receptor Activity",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12100"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6096,
+        "final_score": 0.6096
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abdominal Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Maprotiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Abdominal Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Abdominal Disorder",
+          "target": "Maprotiline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Maprotiline",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imipramine,Maprotiline": [
+          "Organic Tricyclic Compound",
+          "Tricyclic Antidepressant"
+        ]
+      },
+      "id": "path_12101"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4088,
+        "final_score": 0.4088
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Thioproperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Thioproperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Thioproperazine",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imipramine,Clocapramine": [
+          "Antidepressant Agent",
+          "Organic Heterotricyclic Compound"
+        ],
+        "Imipramine,Thioproperazine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ],
+        "Clocapramine,Thioproperazine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_12102"
+    }
+  ]
+}

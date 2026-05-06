@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00468 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5214,
+        "final_score": 0.5214
+      },
+      "nodes": [
+        {
+          "id": "Quinine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blackwater Fever",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinine",
+          "target": "Blackwater Fever",
+          "label": "causes"
+        },
+        {
+          "source": "Blackwater Fever",
+          "target": "Quinidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Quinidine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinine,Quinidine": [
+          "Antimalarial Agent",
+          "Cinchona Alkaloid"
+        ]
+      },
+      "id": "path_8010"
+    }
+  ]
+}

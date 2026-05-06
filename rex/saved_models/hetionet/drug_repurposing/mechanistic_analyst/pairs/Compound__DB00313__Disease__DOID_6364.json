@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00313 - Disease::DOID:6364",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5894,
+        "final_score": 0.5894
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Decreased Central Nervous System Disorganized Electrical Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Gabapentin",
+          "type": "Compound"
+        },
+        {
+          "id": "Migraine",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Decreased Central Nervous System Disorganized Electrical Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Decreased Central Nervous System Disorganized Electrical Activity",
+          "target": "Gabapentin",
+          "label": "includes"
+        },
+        {
+          "source": "Gabapentin",
+          "target": "Migraine",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valproic Acid,Gabapentin": [
+          "Carboxylic Acid",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6222"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4896,
+        "final_score": 0.4896
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Epilepsy Syndrome",
+          "type": "Disease"
+        },
+        {
+          "id": "Amnesia, Transient Global",
+          "type": "Symptom"
+        },
+        {
+          "id": "Migraine",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Epilepsy Syndrome",
+          "label": "treats"
+        },
+        {
+          "source": "Epilepsy Syndrome",
+          "target": "Amnesia, Transient Global",
+          "label": "presents"
+        },
+        {
+          "source": "Amnesia, Transient Global",
+          "target": "Migraine",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amnesia, Transient Global,Migraine": [
+          "Disease Or Disorder"
+        ]
+      },
+      "id": "path_6223"
+    }
+  ]
+}

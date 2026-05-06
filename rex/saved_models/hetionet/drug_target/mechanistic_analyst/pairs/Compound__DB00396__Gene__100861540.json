@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00396 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4288,
+        "final_score": 0.4288
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Vaginal Irritation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Vaginal Irritation",
+          "label": "causes"
+        },
+        {
+          "source": "Vaginal Irritation",
+          "target": "Telithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telithromycin",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Telithromycin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_7998"
+    }
+  ]
+}

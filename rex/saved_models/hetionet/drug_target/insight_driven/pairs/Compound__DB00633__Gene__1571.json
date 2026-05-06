@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00633 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.585,
+        "final_score": 0.585
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Sevoflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Sevoflurane",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexmedetomidine,Sevoflurane": [
+          "Agent Affecting Nervous System",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_21786"
+    },
+    {
+      "score": {
+        "ic_mean": 0.489,
+        "final_score": 0.489
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Diastolic Hypertension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoricoxib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "Diastolic Hypertension",
+          "label": "causes"
+        },
+        {
+          "source": "Diastolic Hypertension",
+          "target": "Etoricoxib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoricoxib",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexmedetomidine,Etoricoxib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_21787"
+    }
+  ]
+}

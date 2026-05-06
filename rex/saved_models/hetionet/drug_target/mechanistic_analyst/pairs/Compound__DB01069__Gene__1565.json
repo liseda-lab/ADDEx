@@ -1,0 +1,120 @@
+{
+  "id": "Compound::DB01069 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6618,
+        "final_score": 0.7059,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Mesoridazine",
+          "label": "includes"
+        },
+        {
+          "source": "Mesoridazine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Promethazine,Mesoridazine": [
+          "Agent Affecting Nervous System",
+          "Phenothiazines"
+        ],
+        "Phenothiazines,Mesoridazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_5860"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3352,
+        "final_score": 0.3352
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Methotrimeprazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Methotrimeprazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Methotrimeprazine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Promethazine,Methotrimeprazine": [
+          "Phenothiazine",
+          "Phenothiazines"
+        ],
+        "Dimetotiazine,Methotrimeprazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_5861"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "Compound::DB00863 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6525,
+        "final_score": 0.6596,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nizatidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ranitidine",
+          "target": "Histamine H2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H2 Receptor Antagonists",
+          "target": "Nizatidine",
+          "label": "includes"
+        },
+        {
+          "source": "Nizatidine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ranitidine,Nizatidine": [
+          "C-Nitro Compound",
+          "Histamine-2 Receptor Antagonist"
+        ]
+      },
+      "id": "path_21666"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6211,
+        "final_score": 0.6211
+      },
+      "nodes": [
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ranitidine",
+          "target": "Histamine H2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H2 Receptor Antagonists",
+          "target": "Cimetidine",
+          "label": "includes"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ranitidine,Cimetidine": [
+          "Organic Heterocyclic Compound",
+          "Histamine-2 Receptor Antagonist"
+        ]
+      },
+      "id": "path_21667"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4313,
+        "final_score": 0.4313
+      },
+      "nodes": [
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aplasia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amsacrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ranitidine",
+          "target": "Aplasia",
+          "label": "causes"
+        },
+        {
+          "source": "Aplasia",
+          "target": "Amsacrine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amsacrine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ranitidine,Amsacrine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_21668"
+    }
+  ]
+}

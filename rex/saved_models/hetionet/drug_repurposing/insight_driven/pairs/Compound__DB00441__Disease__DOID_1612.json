@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00441 - Disease::DOID:1612",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4618,
+        "final_score": 0.4618
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Donson",
+          "type": "Gene"
+        },
+        {
+          "id": "Fulvestrant",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Donson",
+          "label": "upregulates"
+        },
+        {
+          "source": "Donson",
+          "target": "Fulvestrant",
+          "label": "is downregulated by"
+        },
+        {
+          "source": "Fulvestrant",
+          "target": "Breast Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Fulvestrant": [
+          "Organic Cyclic Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_3881"
+    }
+  ]
+}

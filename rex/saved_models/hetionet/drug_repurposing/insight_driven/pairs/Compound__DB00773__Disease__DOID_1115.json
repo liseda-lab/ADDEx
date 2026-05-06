@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00773 - Disease::DOID:1115",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5179,
+        "final_score": 0.5179
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Vincristine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Vincristine",
+          "target": "Sarcoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Vincristine": [
+          "Organic Heterotetracyclic Compound",
+          "Antineoplastic Plant Product"
+        ]
+      },
+      "id": "path_2830"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4409,
+        "final_score": 0.4409
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Clavicle Bone",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Sarcoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Clavicle Bone",
+          "label": "localizes"
+        },
+        {
+          "source": "Clavicle Bone",
+          "target": "Sarcoma",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_2831"
+    }
+  ]
+}

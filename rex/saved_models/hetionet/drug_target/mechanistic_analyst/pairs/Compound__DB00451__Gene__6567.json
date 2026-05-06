@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00451 - Gene::6567",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.726,
+        "final_score": 0.5297,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Levothyroxine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco4a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Thyroid Hormone Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc16a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levothyroxine",
+          "target": "Slco4a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco4a1",
+          "target": "Thyroid Hormone Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Thyroid Hormone Transmembrane Transporter Activity",
+          "target": "Slc16a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12754"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB06204 - Gene::6530",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4538,
+        "final_score": 0.4538
+      },
+      "nodes": [
+        {
+          "id": "Tapentadol",
+          "type": "Compound"
+        },
+        {
+          "id": "Illusion",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tapentadol",
+          "target": "Illusion",
+          "label": "causes"
+        },
+        {
+          "source": "Illusion",
+          "target": "Dexmedetomidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dexmedetomidine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tapentadol,Dexmedetomidine": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_21120"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4413,
+        "final_score": 0.4413
+      },
+      "nodes": [
+        {
+          "id": "Tapentadol",
+          "type": "Compound"
+        },
+        {
+          "id": "Metaraminol",
+          "type": "Compound"
+        },
+        {
+          "id": "Droxidopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tapentadol",
+          "target": "Metaraminol",
+          "label": "resembles"
+        },
+        {
+          "source": "Metaraminol",
+          "target": "Droxidopa",
+          "label": "resembles"
+        },
+        {
+          "source": "Droxidopa",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tapentadol,Metaraminol": [
+          "Agent Affecting Nervous System",
+          "Organic Molecular Entity"
+        ],
+        "Tapentadol,Droxidopa": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ],
+        "Metaraminol,Droxidopa": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_21121"
+    }
+  ]
+}

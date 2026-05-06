@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB01261 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6733,
+        "final_score": 0.67,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sitagliptin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18640"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6033,
+        "final_score": 0.6033
+      },
+      "nodes": [
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sitagliptin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18641"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4568,
+        "final_score": 0.4568
+      },
+      "nodes": [
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Tooth Infection",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Montelukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sitagliptin",
+          "target": "Tooth Infection",
+          "label": "causes"
+        },
+        {
+          "source": "Tooth Infection",
+          "target": "Montelukast",
+          "label": "is caused by"
+        },
+        {
+          "source": "Montelukast",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sitagliptin,Montelukast": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_18642"
+    }
+  ]
+}

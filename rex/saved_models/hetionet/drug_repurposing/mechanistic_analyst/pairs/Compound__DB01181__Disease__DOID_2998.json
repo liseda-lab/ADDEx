@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB01181 - Disease::DOID:2998",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4898,
+        "final_score": 0.4898
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Fibrosis Interstitial",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chlorambucil",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Lung Fibrosis Interstitial",
+          "label": "causes"
+        },
+        {
+          "source": "Lung Fibrosis Interstitial",
+          "target": "Chlorambucil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chlorambucil",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Chlorambucil": [
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
+        ]
+      },
+      "id": "path_6231"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4605,
+        "final_score": 0.4605
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cns Toxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Cns Toxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Cns Toxicity",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Etoposide": [
+          "Heteroorganic Entity",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_6232"
+    }
+  ]
+}

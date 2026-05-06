@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01059 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4855,
+        "final_score": 0.4855
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hand Swelling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Hand Swelling",
+          "label": "causes"
+        },
+        {
+          "source": "Hand Swelling",
+          "target": "Progesterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Progesterone": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_4961"
+    }
+  ]
+}

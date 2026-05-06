@@ -1,0 +1,162 @@
+{
+  "id": "Compound::DB00921 - Gene::4988",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8973,
+        "final_score": 0.782,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Partial Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Butorphanol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Partial Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Partial Opioid Agonists",
+          "target": "Butorphanol",
+          "label": "includes"
+        },
+        {
+          "source": "Butorphanol",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Butorphanol": [
+          "Morphinane Alkaloid",
+          "Opioid"
+        ]
+      },
+      "id": "path_1318"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8716,
+        "final_score": 0.7691,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Partial Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Pentazocine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Partial Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Partial Opioid Agonists",
+          "target": "Pentazocine",
+          "label": "includes"
+        },
+        {
+          "source": "Pentazocine",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Pentazocine": [
+          "Opioid Receptor Agonist",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_1319"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4973,
+        "final_score": 0.4973
+      },
+      "nodes": [
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Ethylmorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Ethylmorphine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ethylmorphine",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Buprenorphine,Ethylmorphine": [
+          "Opioid Receptor Agonist",
+          "Morphinane Alkaloid"
+        ]
+      },
+      "id": "path_1320"
+    }
+  ]
+}

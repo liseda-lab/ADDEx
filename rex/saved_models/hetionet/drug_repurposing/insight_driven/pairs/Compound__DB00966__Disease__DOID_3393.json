@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00966 - Disease::DOID:3393",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6997,
+        "final_score": 0.5998,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Angiotensin 2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Valsartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Telmisartan",
+          "target": "Angiotensin 2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Angiotensin 2 Receptor Antagonists",
+          "target": "Valsartan",
+          "label": "includes"
+        },
+        {
+          "source": "Valsartan",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Telmisartan,Valsartan": [
+          "Carboxylic Acid",
+          "Angiotensin Ii Receptor Antagonist"
+        ]
+      },
+      "id": "path_3116"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5535,
+        "final_score": 0.5535
+      },
+      "nodes": [
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Raised Serum Uric Acid",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perindopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Telmisartan",
+          "target": "Raised Serum Uric Acid",
+          "label": "causes"
+        },
+        {
+          "source": "Raised Serum Uric Acid",
+          "target": "Perindopril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perindopril",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Telmisartan,Perindopril": [
+          "Antihypertensive Agent",
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_3117"
+    }
+  ]
+}

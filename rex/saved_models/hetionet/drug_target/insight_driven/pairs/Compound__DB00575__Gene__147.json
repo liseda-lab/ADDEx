@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00575 - Gene::147",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6673,
+        "final_score": 0.667,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha-adrenergic Receptor Activity",
+          "target": "Adra1b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18195"
+    },
+    {
+      "score": {
+        "ic_mean": 0.588,
+        "final_score": 0.588
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blanching",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenylephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Blanching",
+          "label": "causes"
+        },
+        {
+          "source": "Blanching",
+          "target": "Phenylephrine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenylephrine",
+          "target": "Adra1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Phenylephrine": [
+          "Alpha-Adrenergic Agonist",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_18196"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01009 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4464,
+        "final_score": 0.4464
+      },
+      "nodes": [
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthmatic Attack",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoprofen",
+          "target": "Asthmatic Attack",
+          "label": "causes"
+        },
+        {
+          "source": "Asthmatic Attack",
+          "target": "Meloxicam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Meloxicam",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoprofen,Meloxicam": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_10185"
+    }
+  ]
+}

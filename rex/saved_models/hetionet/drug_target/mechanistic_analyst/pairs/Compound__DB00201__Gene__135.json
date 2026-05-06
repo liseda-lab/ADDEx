@@ -1,0 +1,124 @@
+{
+  "id": "Compound::DB00201 - Gene::135",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7129,
+        "final_score": 0.6064,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Aminophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Aminophylline",
+          "label": "includes"
+        },
+        {
+          "source": "Aminophylline",
+          "target": "Adora2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Xanthines": [
+          "Purines"
+        ],
+        "Caffeine,Aminophylline": [
+          "Chemical Entity"
+        ],
+        "Xanthines,Aminophylline": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_19840"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6921,
+        "final_score": 0.596,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Theophylline",
+          "label": "includes"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Adora2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Xanthines": [
+          "Purines"
+        ],
+        "Caffeine,Theophylline": [
+          "Methylxanthine"
+        ],
+        "Xanthines,Theophylline": [
+          "Purines"
+        ]
+      },
+      "id": "path_19841"
+    }
+  ]
+}

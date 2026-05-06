@@ -1,0 +1,150 @@
+{
+  "id": "Compound::DB01029 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6486,
+        "final_score": 0.6486
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Angiotensin 2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Angiotensin 2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Angiotensin 2 Receptor Antagonists",
+          "target": "Losartan",
+          "label": "includes"
+        },
+        {
+          "source": "Losartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irbesartan,Losartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ]
+      },
+      "id": "path_10406"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7116,
+        "final_score": 0.5225,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10405"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4581,
+        "final_score": 0.4581
+      },
+      "nodes": [
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Essential Hypertension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irbesartan",
+          "target": "Essential Hypertension",
+          "label": "causes"
+        },
+        {
+          "source": "Essential Hypertension",
+          "target": "Losartan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Losartan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irbesartan,Losartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ]
+      },
+      "id": "path_10407"
+    }
+  ]
+}

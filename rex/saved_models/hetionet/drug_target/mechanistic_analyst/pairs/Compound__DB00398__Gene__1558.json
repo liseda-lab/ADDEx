@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00398 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4567,
+        "final_score": 0.4567
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug-induced Liver Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Drug-induced Liver Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Drug-induced Liver Injury",
+          "target": "Pioglitazone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pioglitazone",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Pioglitazone": [
+          "Pyridines"
+        ]
+      },
+      "id": "path_16691"
+    },
+    {
+      "score": {
+        "ic_mean": 0.433,
+        "final_score": 0.433
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Tumour Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Tumour Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Tumour Pain",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Pazopanib": [
+          "Pdgfr Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_16692"
+    }
+  ]
+}

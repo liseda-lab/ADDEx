@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB01226 - Gene::1140",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6973,
+        "final_score": 0.682,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Mivacurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuromuscular Block Prolonged",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrnb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mivacurium",
+          "target": "Neuromuscular Block Prolonged",
+          "label": "causes"
+        },
+        {
+          "source": "Neuromuscular Block Prolonged",
+          "target": "Vecuronium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vecuronium",
+          "target": "Chrnb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mivacurium,Vecuronium": [
+          "Nitrogen Molecular Entity",
+          "Nicotinic Antagonist"
+        ]
+      },
+      "id": "path_6303"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5829,
+        "final_score": 0.5829
+      },
+      "nodes": [
+        {
+          "id": "Mivacurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "Rocuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrnb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mivacurium",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "Rocuronium",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rocuronium",
+          "target": "Chrnb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mivacurium,Rocuronium": [
+          "Organonitrogen Heterocyclic Compound",
+          "Nicotinic Antagonist"
+        ]
+      },
+      "id": "path_6304"
+    }
+  ]
+}

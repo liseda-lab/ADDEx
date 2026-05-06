@@ -1,0 +1,138 @@
+{
+  "id": "DrugBank_DB00196 - MONDO_44070",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7155,
+        "final_score": 0.5244,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Fluconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Disseminated Candidiasis",
+          "type": "Disease"
+        },
+        {
+          "id": "Voriconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Candidemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluconazole",
+          "target": "Disseminated Candidiasis",
+          "label": "indication"
+        },
+        {
+          "source": "Disseminated Candidiasis",
+          "target": "Voriconazole",
+          "label": "indication"
+        },
+        {
+          "source": "Voriconazole",
+          "target": "Candidemia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_18178"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5176,
+        "final_score": 0.5176
+      },
+      "nodes": [
+        {
+          "id": "Fluconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Acute Hepatic Failure",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Itraconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Candidemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluconazole",
+          "target": "Acute Hepatic Failure",
+          "label": "side effect"
+        },
+        {
+          "source": "Acute Hepatic Failure",
+          "target": "Itraconazole",
+          "label": "side effect"
+        },
+        {
+          "source": "Itraconazole",
+          "target": "Candidemia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_18179"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4932,
+        "final_score": 0.4932
+      },
+      "nodes": [
+        {
+          "id": "Fluconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Acute Hepatic Failure",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Voriconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Candidemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluconazole",
+          "target": "Acute Hepatic Failure",
+          "label": "side effect"
+        },
+        {
+          "source": "Acute Hepatic Failure",
+          "target": "Voriconazole",
+          "label": "side effect"
+        },
+        {
+          "source": "Voriconazole",
+          "target": "Candidemia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_18180"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01156 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4046,
+        "final_score": 0.4046
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Stress Symptoms",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Stress Symptoms",
+          "label": "causes"
+        },
+        {
+          "source": "Stress Symptoms",
+          "target": "Melatonin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Melatonin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Melatonin": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_9618"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3998,
+        "final_score": 0.3998
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Vaginal Irritation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Vaginal Irritation",
+          "label": "causes"
+        },
+        {
+          "source": "Vaginal Irritation",
+          "target": "Telithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telithromycin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Telithromycin": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_9619"
+    }
+  ]
+}

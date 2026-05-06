@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB01336 - Gene::1135",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8068,
+        "final_score": 0.7784,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Metocurine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrnb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetylcholine-activated Cation-selective Channel Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrna2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metocurine",
+          "target": "Chrnb1",
+          "label": "binds"
+        },
+        {
+          "source": "Chrnb1",
+          "target": "Acetylcholine-activated Cation-selective Channel Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Acetylcholine-activated Cation-selective Channel Activity",
+          "target": "Chrna2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_440"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8144,
+        "final_score": 0.5739,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Metocurine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrnb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Vecuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metocurine",
+          "target": "Chrnb1",
+          "label": "binds"
+        },
+        {
+          "source": "Chrnb1",
+          "target": "Vecuronium",
+          "label": "is bound by"
+        },
+        {
+          "source": "Vecuronium",
+          "target": "Chrna2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metocurine,Vecuronium": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_439"
+    }
+  ]
+}

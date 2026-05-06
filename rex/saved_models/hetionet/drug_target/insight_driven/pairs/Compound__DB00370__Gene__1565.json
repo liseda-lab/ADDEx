@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00370 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4059,
+        "final_score": 0.4059
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Seeking Behavior",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Drug Seeking Behavior",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Seeking Behavior",
+          "target": "Nefazodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nefazodone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Nefazodone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_18487"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00593 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7712,
+        "final_score": 0.5523,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ethosuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethosuximide",
+          "target": "Cyp3a43",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a43",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_807"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5155,
+        "final_score": 0.5155
+      },
+      "nodes": [
+        {
+          "id": "Ethosuximide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gingival Hypertrophy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lercanidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethosuximide",
+          "target": "Gingival Hypertrophy",
+          "label": "causes"
+        },
+        {
+          "source": "Gingival Hypertrophy",
+          "target": "Lercanidipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lercanidipine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethosuximide,Lercanidipine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_808"
+    }
+  ]
+}

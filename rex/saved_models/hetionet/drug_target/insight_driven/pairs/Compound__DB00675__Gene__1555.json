@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00675 - Gene::1555",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4893,
+        "final_score": 0.4893
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Peliosis Hepatis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methyltestosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Peliosis Hepatis",
+          "label": "causes"
+        },
+        {
+          "source": "Peliosis Hepatis",
+          "target": "Methyltestosterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methyltestosterone",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Methyltestosterone": [
+          "Organic Cyclic Compound",
+          "Therapeutic Hormone"
+        ]
+      },
+      "id": "path_168"
+    }
+  ]
+}

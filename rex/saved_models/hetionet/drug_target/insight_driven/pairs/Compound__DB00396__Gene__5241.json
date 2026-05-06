@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00396 - Gene::5241",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5566,
+        "final_score": 0.5566
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Premenstrual Tension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etonogestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Pgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Premenstrual Tension",
+          "label": "causes"
+        },
+        {
+          "source": "Premenstrual Tension",
+          "target": "Etonogestrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etonogestrel",
+          "target": "Pgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Etonogestrel": [
+          "3-Oxo-Delta(4) Steroid"
+        ]
+      },
+      "id": "path_15037"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "id": "Compound::DB00455 - Disease::DOID:4481",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6272,
+        "final_score": 0.6272
+      },
+      "nodes": [
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        },
+        {
+          "id": "Sneezing",
+          "type": "Symptom"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loratadine",
+          "target": "Asthma",
+          "label": "treats"
+        },
+        {
+          "source": "Asthma",
+          "target": "Sneezing",
+          "label": "presents"
+        },
+        {
+          "source": "Sneezing",
+          "target": "Allergic Rhinitis",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asthma,Allergic Rhinitis": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_2694"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5311,
+        "final_score": 0.5311
+      },
+      "nodes": [
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Neurogenic Inflammation",
+          "type": "Symptom"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loratadine",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        },
+        {
+          "source": "Atopic Dermatitis",
+          "target": "Neurogenic Inflammation",
+          "label": "presents"
+        },
+        {
+          "source": "Neurogenic Inflammation",
+          "target": "Allergic Rhinitis",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_2695"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6507,
+        "final_score": 0.492,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Dimenhydrinate",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loratadine",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        },
+        {
+          "source": "Atopic Dermatitis",
+          "target": "Dimenhydrinate",
+          "label": "is treated by"
+        },
+        {
+          "source": "Dimenhydrinate",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loratadine,Dimenhydrinate": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_2693"
+    },
+    {
+      "score": {
+        "ic_mean": 0.484,
+        "final_score": 0.484
+      },
+      "nodes": [
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loratadine",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        },
+        {
+          "source": "Atopic Dermatitis",
+          "target": "Methylprednisolone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loratadine,Methylprednisolone": [
+          "Heteroatomic Molecular Entity",
+          "Immunotherapeutic Agent"
+        ]
+      },
+      "id": "path_2696"
+    }
+  ]
+}

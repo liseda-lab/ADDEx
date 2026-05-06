@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00178 - Disease::DOID:9352",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4373,
+        "final_score": 0.4373
+      },
+      "nodes": [
+        {
+          "id": "Ramipril",
+          "type": "Compound"
+        },
+        {
+          "id": "Mitiglinide",
+          "type": "Compound"
+        },
+        {
+          "id": "Nateglinide",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ramipril",
+          "target": "Mitiglinide",
+          "label": "resembles"
+        },
+        {
+          "source": "Mitiglinide",
+          "target": "Nateglinide",
+          "label": "resembles"
+        },
+        {
+          "source": "Nateglinide",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ramipril,Mitiglinide": [
+          "Carboxylic Acid"
+        ],
+        "Ramipril,Nateglinide": [
+          "Carboxylic Acid"
+        ],
+        "Mitiglinide,Nateglinide": [
+          "Carboxylic Acid",
+          "Meglitinide Antidiabetic Agent"
+        ]
+      },
+      "id": "path_1743"
+    }
+  ]
+}

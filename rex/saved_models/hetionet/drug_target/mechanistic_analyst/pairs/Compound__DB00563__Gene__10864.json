@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00563 - Gene::10864",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4228,
+        "final_score": 0.4228
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Nail Changes",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Nail Changes",
+          "label": "causes"
+        },
+        {
+          "source": "Nail Changes",
+          "target": "Fluorouracil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluorouracil",
+          "target": "Slc22a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Fluorouracil": [
+          "Heteroorganic Entity",
+          "Antimetabolite"
+        ]
+      },
+      "id": "path_7028"
+    }
+  ]
+}

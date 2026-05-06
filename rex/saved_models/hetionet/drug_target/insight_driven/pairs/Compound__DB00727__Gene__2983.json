@@ -1,0 +1,120 @@
+{
+  "id": "Compound::DB00727 - Gene::2983",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7993,
+        "final_score": 0.733,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nitroglycerin",
+          "type": "Compound"
+        },
+        {
+          "id": "Nitrates",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Isosorbide Mononitrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gucy1b3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nitroglycerin",
+          "target": "Nitrates",
+          "label": "is included in"
+        },
+        {
+          "source": "Nitrates",
+          "target": "Isosorbide Mononitrate",
+          "label": "includes"
+        },
+        {
+          "source": "Isosorbide Mononitrate",
+          "target": "Gucy1b3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nitroglycerin,Nitrates": [
+          "Nitrates"
+        ],
+        "Nitroglycerin,Isosorbide Mononitrate": [
+          "Nitrate Ester",
+          "Vasodilating Agent"
+        ],
+        "Nitrates,Isosorbide Mononitrate": [
+          "Nitrates"
+        ]
+      },
+      "id": "path_5835"
+    },
+    {
+      "score": {
+        "ic_mean": 0.699,
+        "final_score": 0.5162,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nitroglycerin",
+          "type": "Compound"
+        },
+        {
+          "id": "Vasodilation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Isosorbide Mononitrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gucy1b3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nitroglycerin",
+          "target": "Vasodilation",
+          "label": "is included in"
+        },
+        {
+          "source": "Vasodilation",
+          "target": "Isosorbide Mononitrate",
+          "label": "includes"
+        },
+        {
+          "source": "Isosorbide Mononitrate",
+          "target": "Gucy1b3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nitroglycerin,Isosorbide Mononitrate": [
+          "Nitrate Ester",
+          "Vasodilating Agent"
+        ]
+      },
+      "id": "path_5836"
+    }
+  ]
+}

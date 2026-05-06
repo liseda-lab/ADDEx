@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00783 - Gene::28231",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4689,
+        "final_score": 0.4689
+      },
+      "nodes": [
+        {
+          "id": "Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Vaginal Irritation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco4a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estradiol",
+          "target": "Vaginal Irritation",
+          "label": "causes"
+        },
+        {
+          "source": "Vaginal Irritation",
+          "target": "Dinoprostone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprostone",
+          "target": "Slco4a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estradiol,Dinoprostone": [
+          "Physiology-Regulatory Factor",
+          "Lipid"
+        ]
+      },
+      "id": "path_18931"
+    }
+  ]
+}

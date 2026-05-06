@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00401 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5418,
+        "final_score": 0.5418
+      },
+      "nodes": [
+        {
+          "id": "Nisoldipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nisoldipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Clevidipine",
+          "label": "includes"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nisoldipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nisoldipine,Clevidipine": [
+          "Dihydropyridine",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Clevidipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_4423"
+    }
+  ]
+}

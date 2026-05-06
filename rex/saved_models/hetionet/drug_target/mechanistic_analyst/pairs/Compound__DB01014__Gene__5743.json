@@ -1,0 +1,166 @@
+{
+  "id": "Compound::DB01014 - Gene::5743",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7219,
+        "final_score": 0.7776,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Prostaglandin-endoperoxide Synthase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Balsalazide",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Prostaglandin-endoperoxide Synthase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Prostaglandin-endoperoxide Synthase Activity",
+          "target": "Ptgs2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3608"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4688,
+        "final_score": 0.4688
+      },
+      "nodes": [
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Bromfenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Nepafenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Balsalazide",
+          "target": "Bromfenac",
+          "label": "resembles"
+        },
+        {
+          "source": "Bromfenac",
+          "target": "Nepafenac",
+          "label": "resembles"
+        },
+        {
+          "source": "Nepafenac",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Balsalazide,Bromfenac": [
+          "Carboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Balsalazide,Nepafenac": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Bromfenac,Nepafenac": [
+          "Organonitrogen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_3609"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4044,
+        "final_score": 0.4044
+      },
+      "nodes": [
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenbufen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nepafenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Balsalazide",
+          "target": "Fenbufen",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenbufen",
+          "target": "Nepafenac",
+          "label": "resembles"
+        },
+        {
+          "source": "Nepafenac",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Balsalazide,Fenbufen": [
+          "Carboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Balsalazide,Nepafenac": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Fenbufen,Nepafenac": [
+          "Organooxygen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_3610"
+    }
+  ]
+}

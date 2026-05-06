@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB04845 - Gene::347688",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7179,
+        "final_score": 0.7339,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ixabepilone",
+          "type": "Compound"
+        },
+        {
+          "id": "Microtubule Inhibition",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Eribulin",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ixabepilone",
+          "target": "Microtubule Inhibition",
+          "label": "is included in"
+        },
+        {
+          "source": "Microtubule Inhibition",
+          "target": "Eribulin",
+          "label": "includes"
+        },
+        {
+          "source": "Eribulin",
+          "target": "Tubb8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ixabepilone,Eribulin": [
+          "Tubulin Binding Agent",
+          "Ketone"
+        ]
+      },
+      "id": "path_21365"
+    }
+  ]
+}

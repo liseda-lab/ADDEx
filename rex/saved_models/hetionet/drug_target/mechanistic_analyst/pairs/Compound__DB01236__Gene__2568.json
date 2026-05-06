@@ -1,0 +1,204 @@
+{
+  "id": "Compound::DB01236 - Gene::2568",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7316,
+        "final_score": 0.6991,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg3",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrp",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Gabrg3",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrg3",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrp",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12602"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6312,
+        "final_score": 0.6312
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Breath Holding Attack",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrp",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Breath Holding Attack",
+          "label": "causes"
+        },
+        {
+          "source": "Breath Holding Attack",
+          "target": "Desflurane",
+          "label": "is caused by"
+        },
+        {
+          "source": "Desflurane",
+          "target": "Gabrp",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Desflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_12604"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6312,
+        "final_score": 0.6312
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Breath Holding",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrp",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Breath Holding",
+          "label": "causes"
+        },
+        {
+          "source": "Breath Holding",
+          "target": "Desflurane",
+          "label": "is caused by"
+        },
+        {
+          "source": "Desflurane",
+          "target": "Gabrp",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Desflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_12605"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7175,
+        "final_score": 0.5254,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrp",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Desflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Desflurane",
+          "target": "Gabrp",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Desflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_12603"
+    }
+  ]
+}

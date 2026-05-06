@@ -1,0 +1,201 @@
+{
+  "id": "Compound::DB01098 - Disease::DOID:1936",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5756,
+        "final_score": 0.5756
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        },
+        {
+          "id": "Angina, Unstable",
+          "type": "Symptom"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        },
+        {
+          "source": "Coronary Artery Disease",
+          "target": "Angina, Unstable",
+          "label": "presents"
+        },
+        {
+          "source": "Angina, Unstable",
+          "target": "Atherosclerosis",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Coronary Artery Disease,Atherosclerosis": [
+          "Non-Neoplastic Cardiovascular Disorder"
+        ]
+      },
+      "id": "path_3040"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5047,
+        "final_score": 0.5047
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        },
+        {
+          "id": "Intermittent Claudication",
+          "type": "Symptom"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        },
+        {
+          "source": "Coronary Artery Disease",
+          "target": "Intermittent Claudication",
+          "label": "presents"
+        },
+        {
+          "source": "Intermittent Claudication",
+          "target": "Atherosclerosis",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Coronary Artery Disease,Atherosclerosis": [
+          "Non-Neoplastic Cardiovascular Disorder"
+        ]
+      },
+      "id": "path_3041"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6741,
+        "final_score": 0.5037,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Immune-mediated Necrotising Myopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ezetimibe",
+          "type": "Compound"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Immune-mediated Necrotising Myopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Immune-mediated Necrotising Myopathy",
+          "target": "Ezetimibe",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ezetimibe",
+          "target": "Atherosclerosis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosuvastatin,Ezetimibe": [
+          "Antilipidemic Agent",
+          "Organofluorine Compound"
+        ]
+      },
+      "id": "path_3039"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4013,
+        "final_score": 0.4013
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        },
+        {
+          "id": "Subclavian Artery",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        },
+        {
+          "source": "Coronary Artery Disease",
+          "target": "Subclavian Artery",
+          "label": "localizes"
+        },
+        {
+          "source": "Subclavian Artery",
+          "target": "Atherosclerosis",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Coronary Artery Disease,Atherosclerosis": [
+          "Non-Neoplastic Cardiovascular Disorder"
+        ]
+      },
+      "id": "path_3042"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB00264 - MONDO_6716",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6767,
+        "final_score": 0.505,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Metoprolol",
+          "type": "Drug"
+        },
+        {
+          "id": "Mvp1",
+          "type": "Disease"
+        },
+        {
+          "id": "Atenolol",
+          "type": "Drug"
+        },
+        {
+          "id": "Coronary Thrombosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metoprolol",
+          "target": "Mvp1",
+          "label": "off-label use"
+        },
+        {
+          "source": "Mvp1",
+          "target": "Atenolol",
+          "label": "off-label use"
+        },
+        {
+          "source": "Atenolol",
+          "target": "Coronary Thrombosis",
+          "label": "indication"
+        }
+      ],
+      "id": "path_45876"
+    },
+    {
+      "score": {
+        "ic_mean": 0.403,
+        "final_score": 0.403
+      },
+      "nodes": [
+        {
+          "id": "Metoprolol",
+          "type": "Drug"
+        },
+        {
+          "id": "Insulin Argine",
+          "type": "Drug"
+        },
+        {
+          "id": "Atenolol",
+          "type": "Drug"
+        },
+        {
+          "id": "Coronary Thrombosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metoprolol",
+          "target": "Insulin Argine",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Insulin Argine",
+          "target": "Atenolol",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Atenolol",
+          "target": "Coronary Thrombosis",
+          "label": "indication"
+        }
+      ],
+      "id": "path_45877"
+    }
+  ]
+}

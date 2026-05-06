@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00421 - Gene::2908",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5491,
+        "final_score": 0.5491
+      },
+      "nodes": [
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Dydrogesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cortisone Acetate",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Spironolactone",
+          "target": "Dydrogesterone",
+          "label": "resembles"
+        },
+        {
+          "source": "Dydrogesterone",
+          "target": "Cortisone Acetate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cortisone Acetate",
+          "target": "Nr3c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Spironolactone,Dydrogesterone": [
+          "3-Oxo-Delta(4) Steroid"
+        ],
+        "Spironolactone,Cortisone Acetate": [
+          "Steroid"
+        ],
+        "Dydrogesterone,Cortisone Acetate": [
+          "Therapeutic Steroid Hormone",
+          "Steroid"
+        ]
+      },
+      "id": "path_919"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5431,
+        "final_score": 0.5431
+      },
+      "nodes": [
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Gastric Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nr3c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Spironolactone",
+          "target": "Gastric Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Gastric Haemorrhage",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Nr3c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Spironolactone,Methylprednisolone": [
+          "3-Oxo-Delta(4) Steroid"
+        ]
+      },
+      "id": "path_920"
+    }
+  ]
+}

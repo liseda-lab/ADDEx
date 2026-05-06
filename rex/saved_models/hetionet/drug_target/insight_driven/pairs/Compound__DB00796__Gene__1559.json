@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00796 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5249,
+        "final_score": 0.5249
+      },
+      "nodes": [
+        {
+          "id": "Candesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Forasartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Irbesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Candesartan",
+          "target": "Forasartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Forasartan",
+          "target": "Irbesartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Irbesartan",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Candesartan,Forasartan": [
+          "Tetrazoles",
+          "Angiotensin Ii Receptor Antagonist"
+        ],
+        "Candesartan,Irbesartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ],
+        "Forasartan,Irbesartan": [
+          "Tetrazoles",
+          "Angiotensin Ii Receptor Antagonist"
+        ]
+      },
+      "id": "path_4354"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5183,
+        "final_score": 0.5183
+      },
+      "nodes": [
+        {
+          "id": "Candesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis A",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Candesartan",
+          "target": "Hepatitis A",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis A",
+          "target": "Perphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Candesartan,Perphenazine": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_4355"
+    }
+  ]
+}

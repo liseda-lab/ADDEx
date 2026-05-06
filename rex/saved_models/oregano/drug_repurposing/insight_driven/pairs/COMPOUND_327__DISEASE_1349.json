@@ -1,0 +1,147 @@
+{
+  "id": "COMPOUND:327 - DISEASE:1349",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6296,
+        "final_score": 0.6296
+      },
+      "nodes": [
+        {
+          "id": "omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 2-3",
+          "type": "Gene"
+        },
+        {
+          "id": "Oral Hemorrhage",
+          "type": "Disease"
+        },
+        {
+          "id": "keratin associated protein 2-3",
+          "type": "Gene"
+        },
+        {
+          "id": "heart rate",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "omeprazole",
+          "target": "keratin associated protein 2-3",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 2-3",
+          "target": "Oral Hemorrhage",
+          "label": "causes condition"
+        },
+        {
+          "source": "Oral Hemorrhage",
+          "target": "keratin associated protein 2-3",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "keratin associated protein 2-3",
+          "target": "heart rate",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_524"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6083,
+        "final_score": 0.6083
+      },
+      "nodes": [
+        {
+          "id": "omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 2-3",
+          "type": "Gene"
+        },
+        {
+          "id": "heart rate",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "omeprazole",
+          "target": "keratin associated protein 2-3",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 2-3",
+          "target": "heart rate",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_525"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8042,
+        "final_score": 0.5688,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "omeprazole",
+          "type": "ATC"
+        },
+        {
+          "id": "omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 2-3",
+          "type": "Gene"
+        },
+        {
+          "id": "heart rate",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "omeprazole",
+          "target": "omeprazole",
+          "label": "has code"
+        },
+        {
+          "source": "omeprazole",
+          "target": "omeprazole",
+          "label": "is code of"
+        },
+        {
+          "source": "omeprazole",
+          "target": "keratin associated protein 2-3",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 2-3",
+          "target": "heart rate",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_523"
+    }
+  ]
+}

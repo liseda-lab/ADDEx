@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB01136 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5893,
+        "final_score": 0.5893
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Arachidonic Acid Epoxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Epoxygenase Activity",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9858"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4567,
+        "final_score": 0.4567
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Convulsions Generalised",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aminophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Convulsions Generalised",
+          "label": "causes"
+        },
+        {
+          "source": "Convulsions Generalised",
+          "target": "Aminophylline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aminophylline",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carvedilol,Aminophylline": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_9859"
+    }
+  ]
+}

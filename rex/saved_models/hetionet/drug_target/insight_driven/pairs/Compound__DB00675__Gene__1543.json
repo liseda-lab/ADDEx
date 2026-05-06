@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00675 - Gene::1543",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4764,
+        "final_score": 0.4764
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nettle Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Nettle Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Nettle Rash",
+          "target": "Gefitinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gefitinib",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Gefitinib": [
+          "Protein Kinase Inhibitor",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_7848"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB01234 - Disease::DOID:2531",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.2955,
+        "final_score": 0.2955
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        },
+        {
+          "source": "Atopic Dermatitis",
+          "target": "Prednisolone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Prednisolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_3519"
+    },
+    {
+      "score": {
+        "ic_mean": 0.2955,
+        "final_score": 0.2955
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        },
+        {
+          "source": "Atopic Dermatitis",
+          "target": "Triamcinolone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Triamcinolone",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Triamcinolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_3520"
+    }
+  ]
+}

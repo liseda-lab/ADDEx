@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00590 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4589,
+        "final_score": 0.4589
+      },
+      "nodes": [
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertensive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tranylcypromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxazosin",
+          "target": "Hypertensive",
+          "label": "causes"
+        },
+        {
+          "source": "Hypertensive",
+          "target": "Tranylcypromine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tranylcypromine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxazosin,Tranylcypromine": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_22016"
+    }
+  ]
+}

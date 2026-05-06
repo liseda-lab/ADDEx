@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00196 - Gene::1584",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6035,
+        "final_score": 0.6035
+      },
+      "nodes": [
+        {
+          "id": "Fluconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Opportunistic Mycosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mitotane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluconazole",
+          "target": "Opportunistic Mycosis",
+          "label": "causes"
+        },
+        {
+          "source": "Opportunistic Mycosis",
+          "target": "Mitotane",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mitotane",
+          "target": "Cyp11b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluconazole,Mitotane": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_22897"
+    }
+  ]
+}

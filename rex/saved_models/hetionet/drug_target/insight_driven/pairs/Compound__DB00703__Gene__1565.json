@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00703 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6317,
+        "final_score": 0.6317
+      },
+      "nodes": [
+        {
+          "id": "Methazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methazolamide",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_981"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5219,
+        "final_score": 0.5219
+      },
+      "nodes": [
+        {
+          "id": "Methazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca6",
+          "type": "Gene"
+        },
+        {
+          "id": "Sulfanilamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methazolamide",
+          "target": "Ca6",
+          "label": "binds"
+        },
+        {
+          "source": "Ca6",
+          "target": "Sulfanilamide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Sulfanilamide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methazolamide,Sulfanilamide": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_982"
+    }
+  ]
+}

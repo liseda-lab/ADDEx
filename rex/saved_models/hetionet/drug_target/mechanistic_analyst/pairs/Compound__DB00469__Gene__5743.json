@@ -1,0 +1,158 @@
+{
+  "id": "Compound::DB00469 - Gene::5743",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6962,
+        "final_score": 0.6814,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 3.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tenoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Prostaglandin-endoperoxide Synthase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tenoxicam",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Prostaglandin-endoperoxide Synthase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Prostaglandin-endoperoxide Synthase Activity",
+          "target": "Ptgs2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_16459"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5859,
+        "final_score": 0.5859
+      },
+      "nodes": [
+        {
+          "id": "Tenoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Piroxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Lornoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tenoxicam",
+          "target": "Piroxicam",
+          "label": "resembles"
+        },
+        {
+          "source": "Piroxicam",
+          "target": "Lornoxicam",
+          "label": "resembles"
+        },
+        {
+          "source": "Lornoxicam",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tenoxicam,Piroxicam": [
+          "Pyridines",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Tenoxicam,Lornoxicam": [
+          "Thienothiazine",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Piroxicam,Lornoxicam": [
+          "Pyridines",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_16460"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5684,
+        "final_score": 0.5684
+      },
+      "nodes": [
+        {
+          "id": "Tenoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Infertility Female",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ketorolac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tenoxicam",
+          "target": "Infertility Female",
+          "label": "causes"
+        },
+        {
+          "source": "Infertility Female",
+          "target": "Ketorolac",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ketorolac",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tenoxicam,Ketorolac": [
+          "Organonitrogen Heterocyclic Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_16461"
+    }
+  ]
+}

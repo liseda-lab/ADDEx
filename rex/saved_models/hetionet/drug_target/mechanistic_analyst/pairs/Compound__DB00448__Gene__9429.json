@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00448 - Gene::9429",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4965,
+        "final_score": 0.4965
+      },
+      "nodes": [
+        {
+          "id": "Lansoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Fundic Gland Polyp",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lansoprazole",
+          "target": "Fundic Gland Polyp",
+          "label": "causes"
+        },
+        {
+          "source": "Fundic Gland Polyp",
+          "target": "Omeprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Omeprazole",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lansoprazole,Omeprazole": [
+          "Proton Pump Inhibitor",
+          "Benzimidazoles"
+        ]
+      },
+      "id": "path_11836"
+    }
+  ]
+}

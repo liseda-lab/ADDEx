@@ -1,0 +1,165 @@
+{
+  "id": "Compound::DB00993 - Disease::DOID:8778",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8369,
+        "final_score": 0.5851,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adenine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mercaptopurine",
+          "type": "Compound"
+        },
+        {
+          "id": "Crohn's Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azathioprine",
+          "target": "Adenine",
+          "label": "resembles"
+        },
+        {
+          "source": "Adenine",
+          "target": "Mercaptopurine",
+          "label": "resembles"
+        },
+        {
+          "source": "Mercaptopurine",
+          "target": "Crohn's Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azathioprine,Adenine": [
+          "Purines"
+        ],
+        "Azathioprine,Mercaptopurine": [
+          "Purines"
+        ],
+        "Adenine,Mercaptopurine": [
+          "Purines"
+        ]
+      },
+      "id": "path_3285"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5841,
+        "final_score": 0.5841
+      },
+      "nodes": [
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Steatorrhoea",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mesalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Crohn's Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azathioprine",
+          "target": "Steatorrhoea",
+          "label": "causes"
+        },
+        {
+          "source": "Steatorrhoea",
+          "target": "Mesalazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mesalazine",
+          "target": "Crohn's Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azathioprine,Mesalazine": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_3287"
+    },
+    {
+      "score": {
+        "ic_mean": 0.689,
+        "final_score": 0.5112,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatosplenic T-cell Lymphoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mercaptopurine",
+          "type": "Compound"
+        },
+        {
+          "id": "Crohn's Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azathioprine",
+          "target": "Hepatosplenic T-cell Lymphoma",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatosplenic T-cell Lymphoma",
+          "target": "Mercaptopurine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mercaptopurine",
+          "target": "Crohn's Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azathioprine,Mercaptopurine": [
+          "Purines"
+        ]
+      },
+      "id": "path_3286"
+    }
+  ]
+}

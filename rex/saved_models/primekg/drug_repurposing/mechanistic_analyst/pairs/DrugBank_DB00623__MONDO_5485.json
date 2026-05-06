@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB00623 - MONDO_5485",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7326,
+        "final_score": 0.533,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Drug"
+        },
+        {
+          "id": "Schizoaffective Disorder",
+          "type": "Disease"
+        },
+        {
+          "id": "Clopenthixol",
+          "type": "Drug"
+        },
+        {
+          "id": "Psychotic Disorder",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Schizoaffective Disorder",
+          "label": "indication"
+        },
+        {
+          "source": "Schizoaffective Disorder",
+          "target": "Clopenthixol",
+          "label": "indication"
+        },
+        {
+          "source": "Clopenthixol",
+          "target": "Psychotic Disorder",
+          "label": "indication"
+        }
+      ],
+      "id": "path_37099"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5232,
+        "final_score": 0.5232
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Drug"
+        },
+        {
+          "id": "Oculogyric Crisis",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Clopenthixol",
+          "type": "Drug"
+        },
+        {
+          "id": "Psychotic Disorder",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Oculogyric Crisis",
+          "label": "side effect"
+        },
+        {
+          "source": "Oculogyric Crisis",
+          "target": "Clopenthixol",
+          "label": "side effect"
+        },
+        {
+          "source": "Clopenthixol",
+          "target": "Psychotic Disorder",
+          "label": "indication"
+        }
+      ],
+      "id": "path_37100"
+    }
+  ]
+}

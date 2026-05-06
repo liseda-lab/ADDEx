@@ -1,0 +1,158 @@
+{
+  "id": "Compound::DB00814 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.659,
+        "final_score": 0.6628,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meloxicam",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20977"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5258,
+        "final_score": 0.5258
+      },
+      "nodes": [
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Acetylsalicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meloxicam",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Acetylsalicylic Acid",
+          "label": "includes"
+        },
+        {
+          "source": "Acetylsalicylic Acid",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meloxicam,Acetylsalicylic Acid": [
+          "Cyclooxygenase Inhibitor",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_20978"
+    },
+    {
+      "score": {
+        "ic_mean": 0.523,
+        "final_score": 0.523
+      },
+      "nodes": [
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Piroxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Lornoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meloxicam",
+          "target": "Piroxicam",
+          "label": "resembles"
+        },
+        {
+          "source": "Piroxicam",
+          "target": "Lornoxicam",
+          "label": "resembles"
+        },
+        {
+          "source": "Lornoxicam",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meloxicam,Piroxicam": [
+          "Cyclooxygenase Inhibitor",
+          "Benzothiazine"
+        ],
+        "Meloxicam,Lornoxicam": [
+          "Organonitrogen Heterocyclic Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Piroxicam,Lornoxicam": [
+          "Pyridines",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_20979"
+    }
+  ]
+}

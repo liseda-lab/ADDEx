@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01238 - Gene::153",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5411,
+        "final_score": 0.5411
+      },
+      "nodes": [
+        {
+          "id": "Aripiprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyperinsulinism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sotalol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aripiprazole",
+          "target": "Hyperinsulinism",
+          "label": "causes"
+        },
+        {
+          "source": "Hyperinsulinism",
+          "target": "Sotalol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sotalol",
+          "target": "Adrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aripiprazole,Sotalol": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_20874"
+    }
+  ]
+}

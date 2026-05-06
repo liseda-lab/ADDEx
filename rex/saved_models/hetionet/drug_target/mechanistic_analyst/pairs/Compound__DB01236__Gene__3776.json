@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB01236 - Gene::3776",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6419,
+        "final_score": 0.6419
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Breath Holding Attack",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnk2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Breath Holding Attack",
+          "label": "causes"
+        },
+        {
+          "source": "Breath Holding Attack",
+          "target": "Desflurane",
+          "label": "is caused by"
+        },
+        {
+          "source": "Desflurane",
+          "target": "Kcnk2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Desflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_21541"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7596,
+        "final_score": 0.5465,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnk2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Enflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Enflurane",
+          "target": "Kcnk2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Enflurane": [
+          "Anesthetic Agent",
+          "Ether"
+        ]
+      },
+      "id": "path_21540"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "DrugBank_DB01060 - MONDO_41879",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.575,
+        "final_score": 0.575
+      },
+      "nodes": [
+        {
+          "id": "Amoxicillin",
+          "type": "Drug"
+        },
+        {
+          "id": "Purulent Otitis Media",
+          "type": "Disease"
+        },
+        {
+          "id": "Clavulanic Acid",
+          "type": "Drug"
+        },
+        {
+          "id": "Staphylococcus Aureus Pneumonia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxicillin",
+          "target": "Purulent Otitis Media",
+          "label": "off-label use"
+        },
+        {
+          "source": "Purulent Otitis Media",
+          "target": "Clavulanic Acid",
+          "label": "off-label use"
+        },
+        {
+          "source": "Clavulanic Acid",
+          "target": "Staphylococcus Aureus Pneumonia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_11678"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4596,
+        "final_score": 0.4596
+      },
+      "nodes": [
+        {
+          "id": "Amoxicillin",
+          "type": "Drug"
+        },
+        {
+          "id": "Staphylococcal Infection",
+          "type": "Disease"
+        },
+        {
+          "id": "Clavulanic Acid",
+          "type": "Drug"
+        },
+        {
+          "id": "Staphylococcus Aureus Pneumonia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxicillin",
+          "target": "Staphylococcal Infection",
+          "label": "indication"
+        },
+        {
+          "source": "Staphylococcal Infection",
+          "target": "Clavulanic Acid",
+          "label": "indication"
+        },
+        {
+          "source": "Clavulanic Acid",
+          "target": "Staphylococcus Aureus Pneumonia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_11679"
+    }
+  ]
+}

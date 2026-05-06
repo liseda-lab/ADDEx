@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00905 - Gene::5731",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8226,
+        "final_score": 0.578,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Bimatoprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostaglandins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Carboprost Tromethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptger1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bimatoprost",
+          "target": "Prostaglandins",
+          "label": "is included in"
+        },
+        {
+          "source": "Prostaglandins",
+          "target": "Carboprost Tromethamine",
+          "label": "includes"
+        },
+        {
+          "source": "Carboprost Tromethamine",
+          "target": "Ptger1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bimatoprost,Prostaglandins": [
+          "Organic Molecular Entity"
+        ],
+        "Bimatoprost,Carboprost Tromethamine": [
+          "Nitrogen Molecular Entity",
+          "Prostaglandin Analogue"
+        ],
+        "Prostaglandins,Carboprost Tromethamine": [
+          "P-Block Molecular Entity"
+        ]
+      },
+      "id": "path_15079"
+    }
+  ]
+}

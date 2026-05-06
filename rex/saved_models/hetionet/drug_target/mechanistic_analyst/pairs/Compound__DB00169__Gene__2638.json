@@ -1,0 +1,162 @@
+{
+  "id": "Compound::DB00169 - Gene::2638",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7508,
+        "final_score": 0.7504,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cholecalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2r1",
+          "type": "Gene"
+        },
+        {
+          "id": "Vitamin D (calciferol) Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Gc",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cholecalciferol",
+          "target": "Cyp2r1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2r1",
+          "target": "Vitamin D (calciferol) Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Vitamin D (calciferol) Metabolism",
+          "target": "Gc",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1119"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5456,
+        "final_score": 0.5456
+      },
+      "nodes": [
+        {
+          "id": "Cholecalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrotachysterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Alfacalcidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gc",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cholecalciferol",
+          "target": "Dihydrotachysterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Dihydrotachysterol",
+          "target": "Alfacalcidol",
+          "label": "resembles"
+        },
+        {
+          "source": "Alfacalcidol",
+          "target": "Gc",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cholecalciferol,Dihydrotachysterol": [
+          "Vitamin D"
+        ],
+        "Cholecalciferol,Alfacalcidol": [
+          "D3 Vitamins"
+        ],
+        "Dihydrotachysterol,Alfacalcidol": [
+          "Vitamin D",
+          "Vitamin D Analog"
+        ]
+      },
+      "id": "path_1120"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5456,
+        "final_score": 0.5456
+      },
+      "nodes": [
+        {
+          "id": "Cholecalciferol",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcidiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Alfacalcidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gc",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cholecalciferol",
+          "target": "Calcidiol",
+          "label": "resembles"
+        },
+        {
+          "source": "Calcidiol",
+          "target": "Alfacalcidol",
+          "label": "resembles"
+        },
+        {
+          "source": "Alfacalcidol",
+          "target": "Gc",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cholecalciferol,Calcidiol": [
+          "D3 Vitamins"
+        ],
+        "Cholecalciferol,Alfacalcidol": [
+          "D3 Vitamins"
+        ],
+        "Calcidiol,Alfacalcidol": [
+          "D3 Vitamins",
+          "Vitamin D Analog"
+        ]
+      },
+      "id": "path_1121"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00788 - Gene::6579",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4543,
+        "final_score": 0.4543
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Carcinoma Breast",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Carcinoma Breast",
+          "label": "causes"
+        },
+        {
+          "source": "Carcinoma Breast",
+          "target": "Spironolactone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Spironolactone",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Spironolactone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6882"
+    }
+  ]
+}

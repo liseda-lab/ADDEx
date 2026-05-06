@@ -1,0 +1,65 @@
+{
+  "id": "Compound::DB00368 - Gene::6584",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6675,
+        "final_score": 0.5004,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Epinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Epinephrine",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norepinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Norepinephrine,Epinephrine": [
+          "Catecholamine"
+        ],
+        "Catecholamines,Epinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_5150"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01303 - Gene::5143",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7005,
+        "final_score": 0.6836,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxtriphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4d",
+          "type": "Gene"
+        },
+        {
+          "id": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Pde4c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxtriphylline",
+          "target": "Pde4d",
+          "label": "binds"
+        },
+        {
+          "source": "Pde4d",
+          "target": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "target": "Pde4c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5944"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5632,
+        "final_score": 0.5632
+      },
+      "nodes": [
+        {
+          "id": "Oxtriphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxtriphylline",
+          "target": "Slc22a7",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a7",
+          "target": "Theophylline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Pde4c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxtriphylline,Theophylline": [
+          "Bronchodilator"
+        ]
+      },
+      "id": "path_5945"
+    }
+  ]
+}

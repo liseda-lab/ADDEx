@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB01216 - MONDO_10811",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6897,
+        "final_score": 0.5115,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Finasteride",
+          "type": "Drug"
+        },
+        {
+          "id": "Prostate Neoplasm",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Abnormal Prostate Morphology",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Benign Prostatic Hyperplasia (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Finasteride",
+          "target": "Prostate Neoplasm",
+          "label": "side effect"
+        },
+        {
+          "source": "Prostate Neoplasm",
+          "target": "Abnormal Prostate Morphology",
+          "label": "parent-child"
+        },
+        {
+          "source": "Abnormal Prostate Morphology",
+          "target": "Benign Prostatic Hyperplasia (disease)",
+          "label": "phenotype present"
+        }
+      ],
+      "id": "path_7212"
+    }
+  ]
+}

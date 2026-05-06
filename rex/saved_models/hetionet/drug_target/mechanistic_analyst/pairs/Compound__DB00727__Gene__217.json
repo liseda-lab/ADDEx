@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00727 - Gene::217",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6828,
+        "final_score": 0.5081,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nitroglycerin",
+          "type": "Compound"
+        },
+        {
+          "id": "Vasodilation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nitric Oxide",
+          "type": "Compound"
+        },
+        {
+          "id": "Aldh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nitroglycerin",
+          "target": "Vasodilation",
+          "label": "is included in"
+        },
+        {
+          "source": "Vasodilation",
+          "target": "Nitric Oxide",
+          "label": "includes"
+        },
+        {
+          "source": "Nitric Oxide",
+          "target": "Aldh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nitroglycerin,Nitric Oxide": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_9641"
+    }
+  ]
+}

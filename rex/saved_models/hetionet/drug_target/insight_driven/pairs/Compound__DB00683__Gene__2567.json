@@ -1,0 +1,150 @@
+{
+  "id": "Compound::DB00683 - Gene::2567",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7049,
+        "final_score": 0.7691,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrd",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrg3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Gabrd",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrd",
+          "target": "Gaba Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba Receptor Activity",
+          "target": "Gabrg3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5328"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6987,
+        "final_score": 0.766,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrg3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Gabrq",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrq",
+          "target": "Gaba Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba Receptor Activity",
+          "target": "Gabrg3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5329"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5611,
+        "final_score": 0.5611
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Bromazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromazepam",
+          "target": "Gabrg3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midazolam,Bromazepam": [
+          "Benzodiazepine",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_5330"
+    }
+  ]
+}

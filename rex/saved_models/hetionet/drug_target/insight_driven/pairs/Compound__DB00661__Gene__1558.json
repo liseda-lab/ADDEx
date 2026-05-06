@@ -1,0 +1,142 @@
+{
+  "id": "Compound::DB00661 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6326,
+        "final_score": 0.6326
+      },
+      "nodes": [
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Verapamil",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6563"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5259,
+        "final_score": 0.5259
+      },
+      "nodes": [
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Macule",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxybutynin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Verapamil",
+          "target": "Macule",
+          "label": "causes"
+        },
+        {
+          "source": "Macule",
+          "target": "Oxybutynin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxybutynin",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Verapamil,Oxybutynin": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_6564"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4496,
+        "final_score": 0.4496
+      },
+      "nodes": [
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Shakiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Almotriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Verapamil",
+          "target": "Shakiness",
+          "label": "causes"
+        },
+        {
+          "source": "Shakiness",
+          "target": "Almotriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Almotriptan",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Verapamil,Almotriptan": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_6565"
+    }
+  ]
+}

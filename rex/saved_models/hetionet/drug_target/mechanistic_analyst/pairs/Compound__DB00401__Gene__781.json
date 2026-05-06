@@ -1,0 +1,114 @@
+{
+  "id": "Compound::DB00401 - Gene::781",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6721,
+        "final_score": 0.6694,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nisoldipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Isradipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna2d1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nisoldipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Isradipine",
+          "label": "includes"
+        },
+        {
+          "source": "Isradipine",
+          "target": "Cacna2d1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nisoldipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nisoldipine,Isradipine": [
+          "Methyl Ester",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Isradipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_21085"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6134,
+        "final_score": 0.6134
+      },
+      "nodes": [
+        {
+          "id": "Nisoldipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Isradipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna2d1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nisoldipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Isradipine",
+          "label": "includes"
+        },
+        {
+          "source": "Isradipine",
+          "target": "Cacna2d1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nisoldipine,Isradipine": [
+          "Methyl Ester",
+          "Calcium Channel Blocker"
+        ]
+      },
+      "id": "path_21086"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00796 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4537,
+        "final_score": 0.4537
+      },
+      "nodes": [
+        {
+          "id": "Candesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Bilirubin Total Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ivacaftor",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Candesartan",
+          "target": "Bilirubin Total Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Bilirubin Total Increased",
+          "target": "Ivacaftor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ivacaftor",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Candesartan,Ivacaftor": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4931"
+    }
+  ]
+}

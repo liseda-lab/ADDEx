@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00143 - Gene::2946",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7049,
+        "final_score": 0.6858,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Glutathione",
+          "type": "Compound"
+        },
+        {
+          "id": "Gsta5",
+          "type": "Gene"
+        },
+        {
+          "id": "Glutathione Transferase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gstm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glutathione",
+          "target": "Gsta5",
+          "label": "binds"
+        },
+        {
+          "source": "Gsta5",
+          "target": "Glutathione Transferase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Glutathione Transferase Activity",
+          "target": "Gstm2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20832"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6987,
+        "final_score": 0.516,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Glutathione",
+          "type": "Compound"
+        },
+        {
+          "id": "Gstm4",
+          "type": "Gene"
+        },
+        {
+          "id": "Glutathione Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gstm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glutathione",
+          "target": "Gstm4",
+          "label": "binds"
+        },
+        {
+          "source": "Gstm4",
+          "target": "Glutathione Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Glutathione Binding",
+          "target": "Gstm2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20833"
+    }
+  ]
+}

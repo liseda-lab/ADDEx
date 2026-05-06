@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00742 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4583,
+        "final_score": 0.4583
+      },
+      "nodes": [
+        {
+          "id": "Mannitol",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluid And Electrolyte Imbalance",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mannitol",
+          "target": "Fluid And Electrolyte Imbalance",
+          "label": "causes"
+        },
+        {
+          "source": "Fluid And Electrolyte Imbalance",
+          "target": "Hydrocortisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mannitol,Hydrocortisone": [
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_17356"
+    }
+  ]
+}

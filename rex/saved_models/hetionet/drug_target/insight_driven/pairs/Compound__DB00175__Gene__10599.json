@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00175 - Gene::10599",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5209,
+        "final_score": 0.5209
+      },
+      "nodes": [
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dermatomyositis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Penicillamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pravastatin",
+          "target": "Dermatomyositis",
+          "label": "causes"
+        },
+        {
+          "source": "Dermatomyositis",
+          "target": "Penicillamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Penicillamine",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pravastatin,Penicillamine": [
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_1250"
+    }
+  ]
+}

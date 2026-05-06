@@ -1,0 +1,167 @@
+{
+  "id": "Compound::DB01014 - Disease::DOID:8577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6588,
+        "final_score": 0.6627,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Aminosalicylic Acids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ulcerative Colitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Balsalazide",
+          "target": "Aminosalicylic Acids",
+          "label": "is included in"
+        },
+        {
+          "source": "Aminosalicylic Acids",
+          "target": "Sulfasalazine",
+          "label": "includes"
+        },
+        {
+          "source": "Sulfasalazine",
+          "target": "Ulcerative Colitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Balsalazide,Sulfasalazine": [
+          "Heteroatomic Molecular Entity",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_5175"
+    },
+    {
+      "score": {
+        "ic_mean": 0.493,
+        "final_score": 0.493
+      },
+      "nodes": [
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Olsalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ulcerative Colitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Balsalazide",
+          "target": "Olsalazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Olsalazine",
+          "target": "Sulfasalazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfasalazine",
+          "target": "Ulcerative Colitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Balsalazide,Olsalazine": [
+          "Dicarboxylic Acid Dianion",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Balsalazide,Sulfasalazine": [
+          "Heteroatomic Molecular Entity",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Olsalazine,Sulfasalazine": [
+          "Heteroatomic Molecular Entity",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_5176"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4529,
+        "final_score": 0.4529
+      },
+      "nodes": [
+        {
+          "id": "Balsalazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ankylosing Spondylitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Ulcerative Colitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Balsalazide",
+          "target": "Sulfasalazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfasalazine",
+          "target": "Ankylosing Spondylitis",
+          "label": "treats"
+        },
+        {
+          "source": "Ankylosing Spondylitis",
+          "target": "Ulcerative Colitis",
+          "label": "resembles"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Balsalazide,Sulfasalazine": [
+          "Heteroatomic Molecular Entity",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Ankylosing Spondylitis,Ulcerative Colitis": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_5177"
+    }
+  ]
+}

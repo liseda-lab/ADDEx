@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00908 - Gene::3775",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7079,
+        "final_score": 0.5206,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blackwater Fever",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Quinidine Barbiturate",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinidine",
+          "target": "Blackwater Fever",
+          "label": "causes"
+        },
+        {
+          "source": "Blackwater Fever",
+          "target": "Quinidine Barbiturate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Quinidine Barbiturate",
+          "target": "Kcnk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinidine,Quinidine Barbiturate": [
+          "Cinchona Alkaloid"
+        ]
+      },
+      "id": "path_22575"
+    }
+  ]
+}

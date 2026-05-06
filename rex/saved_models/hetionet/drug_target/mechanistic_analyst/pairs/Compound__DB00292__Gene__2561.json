@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00292 - Gene::2561",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6968,
+        "final_score": 0.5151,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etomidate",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Desflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Desflurane",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etomidate,Desflurane": [
+          "Anesthetic Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_22330"
+    }
+  ]
+}

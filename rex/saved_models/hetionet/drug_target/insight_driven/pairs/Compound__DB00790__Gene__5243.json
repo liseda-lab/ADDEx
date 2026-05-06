@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00790 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.527,
+        "final_score": 0.527
+      },
+      "nodes": [
+        {
+          "id": "Perindopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Raised Serum Uric Acid",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telaprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perindopril",
+          "target": "Raised Serum Uric Acid",
+          "label": "causes"
+        },
+        {
+          "source": "Raised Serum Uric Acid",
+          "target": "Telaprevir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telaprevir",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perindopril,Telaprevir": [
+          "Organic Heterobicyclic Compound",
+          "Protease Inhibitor"
+        ]
+      },
+      "id": "path_1699"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4453,
+        "final_score": 0.4453
+      },
+      "nodes": [
+        {
+          "id": "Perindopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug Intolerance",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Domperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perindopril",
+          "target": "Drug Intolerance",
+          "label": "causes"
+        },
+        {
+          "source": "Drug Intolerance",
+          "target": "Domperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Domperidone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perindopril,Domperidone": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_1700"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00970 - Disease::DOID:363",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5049,
+        "final_score": 0.5049
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Radiation Recall Reaction (dermatologic)",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Radiation Recall Reaction (dermatologic)",
+          "label": "causes"
+        },
+        {
+          "source": "Radiation Recall Reaction (dermatologic)",
+          "target": "Etoposide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Etoposide": [
+          "Organooxygen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_2426"
+    },
+    {
+      "score": {
+        "ic_mean": 0.496,
+        "final_score": 0.496
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Etoposide",
+          "label": "is treated by"
+        },
+        {
+          "source": "Etoposide",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Etoposide": [
+          "Organooxygen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_2427"
+    }
+  ]
+}

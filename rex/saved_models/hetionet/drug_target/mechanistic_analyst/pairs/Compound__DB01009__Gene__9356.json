@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB01009 - Gene::9356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7586,
+        "final_score": 0.7126,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Organic Anion Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoprofen",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Organic Anion Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Organic Anion Transport",
+          "target": "Slc22a6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4962"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6476,
+        "final_score": 0.6476
+      },
+      "nodes": [
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoprofen",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "target": "Slc22a6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4963"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5739,
+        "final_score": 0.5739
+      },
+      "nodes": [
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tolmetin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoprofen",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Tolmetin",
+          "label": "includes"
+        },
+        {
+          "source": "Tolmetin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoprofen,Tolmetin": [
+          "Monocarboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_4964"
+    }
+  ]
+}

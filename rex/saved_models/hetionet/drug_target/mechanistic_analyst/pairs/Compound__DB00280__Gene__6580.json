@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00280 - Gene::6580",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5219,
+        "final_score": 0.5219
+      },
+      "nodes": [
+        {
+          "id": "Disopyramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Rash Morbilliform",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Caspofungin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disopyramide",
+          "target": "Rash Morbilliform",
+          "label": "causes"
+        },
+        {
+          "source": "Rash Morbilliform",
+          "target": "Caspofungin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Caspofungin",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disopyramide,Caspofungin": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_1533"
+    }
+  ]
+}

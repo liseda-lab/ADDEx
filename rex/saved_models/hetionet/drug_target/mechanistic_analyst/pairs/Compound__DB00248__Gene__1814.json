@@ -1,0 +1,156 @@
+{
+  "id": "Compound::DB00248 - Gene::1814",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7819,
+        "final_score": 0.6826,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Ergolines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabergoline",
+          "target": "Ergolines",
+          "label": "is included in"
+        },
+        {
+          "source": "Ergolines",
+          "target": "Bromocriptine",
+          "label": "includes"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabergoline,Bromocriptine": [
+          "Nitrogen Molecular Entity",
+          "Dopamine Agonist"
+        ]
+      },
+      "id": "path_23167"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7493,
+        "final_score": 0.6663,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd5",
+          "type": "Gene"
+        },
+        {
+          "id": "Dopamine Receptors",
+          "type": "Pathway"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabergoline",
+          "target": "Drd5",
+          "label": "binds"
+        },
+        {
+          "source": "Drd5",
+          "target": "Dopamine Receptors",
+          "label": "participates"
+        },
+        {
+          "source": "Dopamine Receptors",
+          "target": "Drd3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_23168"
+    },
+    {
+      "score": {
+        "ic_mean": 0.567,
+        "final_score": 0.567
+      },
+      "nodes": [
+        {
+          "id": "Cabergoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pericarditis Constrictive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabergoline",
+          "target": "Pericarditis Constrictive",
+          "label": "causes"
+        },
+        {
+          "source": "Pericarditis Constrictive",
+          "target": "Bromocriptine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Drd3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabergoline,Bromocriptine": [
+          "Nitrogen Molecular Entity",
+          "Dopamine Agonist"
+        ]
+      },
+      "id": "path_23169"
+    }
+  ]
+}

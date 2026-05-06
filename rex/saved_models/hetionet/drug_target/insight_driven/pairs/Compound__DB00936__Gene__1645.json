@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00936 - Gene::1645",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.908,
+        "final_score": 0.7873,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Salicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Decreased Prostaglandin Production",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Acetylsalicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Akr1c1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Salicylic Acid",
+          "target": "Decreased Prostaglandin Production",
+          "label": "is included in"
+        },
+        {
+          "source": "Decreased Prostaglandin Production",
+          "target": "Acetylsalicylic Acid",
+          "label": "includes"
+        },
+        {
+          "source": "Acetylsalicylic Acid",
+          "target": "Akr1c1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Salicylic Acid,Acetylsalicylic Acid": [
+          "Benzoic Acids",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_20274"
+    }
+  ]
+}

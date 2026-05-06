@@ -1,0 +1,162 @@
+{
+  "id": "Compound::DB00350 - Disease::DOID:10763",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7459,
+        "final_score": 0.7063,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Minoxidil",
+          "type": "Compound"
+        },
+        {
+          "id": "Arteriolar Vasodilation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Hydralazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minoxidil",
+          "target": "Arteriolar Vasodilation",
+          "label": "is included in"
+        },
+        {
+          "source": "Arteriolar Vasodilation",
+          "target": "Hydralazine",
+          "label": "includes"
+        },
+        {
+          "source": "Hydralazine",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minoxidil,Hydralazine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antihypertensive Agent"
+        ]
+      },
+      "id": "path_2558"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5187,
+        "final_score": 0.5187
+      },
+      "nodes": [
+        {
+          "id": "Minoxidil",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnj11",
+          "type": "Gene"
+        },
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minoxidil",
+          "target": "Kcnj11",
+          "label": "binds"
+        },
+        {
+          "source": "Kcnj11",
+          "target": "Verapamil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Verapamil",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minoxidil,Verapamil": [
+          "Antihypertensive Agent",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_2560"
+    },
+    {
+      "score": {
+        "ic_mean": 0.658,
+        "final_score": 0.4957,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Minoxidil",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnj11",
+          "type": "Gene"
+        },
+        {
+          "id": "Diazoxide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minoxidil",
+          "target": "Kcnj11",
+          "label": "binds"
+        },
+        {
+          "source": "Kcnj11",
+          "target": "Diazoxide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Diazoxide",
+          "target": "Hypertension (disease)",
+          "label": "palliates"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minoxidil,Diazoxide": [
+          "Heteroatomic Molecular Entity",
+          "Vasodilating Agent"
+        ]
+      },
+      "id": "path_2559"
+    }
+  ]
+}

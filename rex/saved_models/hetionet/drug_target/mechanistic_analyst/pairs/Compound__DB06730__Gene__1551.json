@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB06730 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6576,
+        "final_score": 0.6621,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Gestodene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gestodene",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13798"
+    }
+  ]
+}

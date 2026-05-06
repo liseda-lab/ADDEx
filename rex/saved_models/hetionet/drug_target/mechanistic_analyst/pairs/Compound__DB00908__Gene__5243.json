@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00908 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5224,
+        "final_score": 0.5224
+      },
+      "nodes": [
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sudden Visual Loss",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amantadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Quinidine",
+          "target": "Sudden Visual Loss",
+          "label": "causes"
+        },
+        {
+          "source": "Sudden Visual Loss",
+          "target": "Amantadine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amantadine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Quinidine,Amantadine": [
+          "Organonitrogen Compound",
+          "Cation Channel Blocker"
+        ]
+      },
+      "id": "path_17101"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB00537 - MONDO_5825",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6679,
+        "final_score": 0.6673,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ciprofloxacin",
+          "type": "Drug"
+        },
+        {
+          "id": "Invasive Non-typhoidal Salmonellosis",
+          "type": "Disease"
+        },
+        {
+          "id": "Ceftriaxone",
+          "type": "Drug"
+        },
+        {
+          "id": "Leptospirosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ciprofloxacin",
+          "target": "Invasive Non-typhoidal Salmonellosis",
+          "label": "off-label use"
+        },
+        {
+          "source": "Invasive Non-typhoidal Salmonellosis",
+          "target": "Ceftriaxone",
+          "label": "indication"
+        },
+        {
+          "source": "Ceftriaxone",
+          "target": "Leptospirosis",
+          "label": "indication"
+        }
+      ],
+      "id": "path_43092"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4698,
+        "final_score": 0.4698
+      },
+      "nodes": [
+        {
+          "id": "Ciprofloxacin",
+          "type": "Drug"
+        },
+        {
+          "id": "Yaws",
+          "type": "Disease"
+        },
+        {
+          "id": "Ceftriaxone",
+          "type": "Drug"
+        },
+        {
+          "id": "Leptospirosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ciprofloxacin",
+          "target": "Yaws",
+          "label": "indication"
+        },
+        {
+          "source": "Yaws",
+          "target": "Ceftriaxone",
+          "label": "indication"
+        },
+        {
+          "source": "Ceftriaxone",
+          "target": "Leptospirosis",
+          "label": "indication"
+        }
+      ],
+      "id": "path_43093"
+    }
+  ]
+}

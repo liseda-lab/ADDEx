@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00824 - Gene::135",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6988,
+        "final_score": 0.6827,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Enprofylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Theobromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dyphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Enprofylline",
+          "target": "Theobromine",
+          "label": "resembles"
+        },
+        {
+          "source": "Theobromine",
+          "target": "Dyphylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Dyphylline",
+          "target": "Adora2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Enprofylline,Theobromine": [
+          "Purines"
+        ],
+        "Enprofylline,Dyphylline": [
+          "Oxopurine"
+        ],
+        "Theobromine,Dyphylline": [
+          "Bronchodilator",
+          "Purines"
+        ]
+      },
+      "id": "path_21023"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00986 - Gene::1133",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.746,
+        "final_score": 0.7063,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Glycopyrrolate",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glycopyrrolate",
+          "target": "Chrm1",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm1",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
+          "target": "Chrm5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5398"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6288,
+        "final_score": 0.6288
+      },
+      "nodes": [
+        {
+          "id": "Glycopyrrolate",
+          "type": "Compound"
+        },
+        {
+          "id": "Bloated Feeling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylscopolamine Bromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glycopyrrolate",
+          "target": "Bloated Feeling",
+          "label": "causes"
+        },
+        {
+          "source": "Bloated Feeling",
+          "target": "Methylscopolamine Bromide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylscopolamine Bromide",
+          "target": "Chrm5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glycopyrrolate,Methylscopolamine Bromide": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_5399"
+    }
+  ]
+}

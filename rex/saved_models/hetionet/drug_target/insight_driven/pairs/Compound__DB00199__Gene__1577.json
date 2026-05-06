@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00199 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5756,
+        "final_score": 0.5756
+      },
+      "nodes": [
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Macrolides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clarithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Erythromycin",
+          "target": "Macrolides",
+          "label": "is included in"
+        },
+        {
+          "source": "Macrolides",
+          "target": "Clarithromycin",
+          "label": "includes"
+        },
+        {
+          "source": "Clarithromycin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Erythromycin,Macrolides": [
+          "Macrolide"
+        ],
+        "Erythromycin,Clarithromycin": [
+          "Macrolide Antibiotic",
+          "Macrolide Antibiotic"
+        ],
+        "Macrolides,Clarithromycin": [
+          "Macrolide"
+        ]
+      },
+      "id": "path_571"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4563,
+        "final_score": 0.4563
+      },
+      "nodes": [
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Telithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Erythromycin",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Telithromycin",
+          "label": "is bound by"
+        },
+        {
+          "source": "Telithromycin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Erythromycin,Telithromycin": [
+          "Organooxygen Compound",
+          "Macrolide Antibiotic"
+        ]
+      },
+      "id": "path_572"
+    }
+  ]
+}

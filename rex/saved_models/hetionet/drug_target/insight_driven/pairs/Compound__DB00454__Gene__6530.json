@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00454 - Gene::6530",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4588,
+        "final_score": 0.4588
+      },
+      "nodes": [
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hallucinations, Mixed",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pethidine",
+          "target": "Hallucinations, Mixed",
+          "label": "causes"
+        },
+        {
+          "source": "Hallucinations, Mixed",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pethidine,Clonidine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_17126"
+    }
+  ]
+}

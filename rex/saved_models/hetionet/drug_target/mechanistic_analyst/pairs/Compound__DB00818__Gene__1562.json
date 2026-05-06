@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00818 - Gene::1562",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6949,
+        "final_score": 0.6391,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Diclofenac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Diclofenac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Diclofenac Metabolic Pathway",
+          "target": "Cyp2c18",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8110"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6391,
+        "final_score": 0.6391
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Arachidonic Acid Epoxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Epoxygenase Activity",
+          "target": "Cyp2c18",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8111"
+    }
+  ]
+}

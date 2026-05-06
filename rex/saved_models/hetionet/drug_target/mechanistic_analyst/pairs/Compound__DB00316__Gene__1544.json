@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00316 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4775,
+        "final_score": 0.4775
+      },
+      "nodes": [
+        {
+          "id": "Acetaminophen",
+          "type": "Compound"
+        },
+        {
+          "id": "Anaemia Postoperative",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bupivacaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acetaminophen",
+          "target": "Anaemia Postoperative",
+          "label": "causes"
+        },
+        {
+          "source": "Anaemia Postoperative",
+          "target": "Bupivacaine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bupivacaine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acetaminophen,Bupivacaine": [
+          "Chemical Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_18696"
+    }
+  ]
+}

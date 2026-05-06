@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01182 - Gene::153",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6034,
+        "final_score": 0.6034
+      },
+      "nodes": [
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Proarrhythmia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sotalol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propafenone",
+          "target": "Proarrhythmia",
+          "label": "causes"
+        },
+        {
+          "source": "Proarrhythmia",
+          "target": "Sotalol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sotalol",
+          "target": "Adrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propafenone,Sotalol": [
+          "Secondary Alcohol",
+          "Cation Channel Blocker"
+        ]
+      },
+      "id": "path_2605"
+    }
+  ]
+}

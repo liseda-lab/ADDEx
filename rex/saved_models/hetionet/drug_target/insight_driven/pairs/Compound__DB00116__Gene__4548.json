@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00116 - Gene::4548",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6744,
+        "final_score": 0.7122,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tetrahydrofolic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Mtfmt",
+          "type": "Gene"
+        },
+        {
+          "id": "One Carbon Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Mtr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tetrahydrofolic Acid",
+          "target": "Mtfmt",
+          "label": "binds"
+        },
+        {
+          "source": "Mtfmt",
+          "target": "One Carbon Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "One Carbon Metabolism",
+          "target": "Mtr",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1192"
+    }
+  ]
+}

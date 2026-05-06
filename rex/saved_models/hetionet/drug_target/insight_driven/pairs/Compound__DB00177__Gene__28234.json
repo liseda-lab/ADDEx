@@ -1,0 +1,116 @@
+{
+  "id": "Compound::DB00177 - Gene::28234",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7282,
+        "final_score": 0.6974,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Valsartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Angiotensin 2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valsartan",
+          "target": "Angiotensin 2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Angiotensin 2 Receptor Antagonists",
+          "target": "Telmisartan",
+          "label": "includes"
+        },
+        {
+          "source": "Telmisartan",
+          "target": "Slco1b3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valsartan,Telmisartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_1276"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5956,
+        "final_score": 0.5956
+      },
+      "nodes": [
+        {
+          "id": "Valsartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Forasartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Olmesartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valsartan",
+          "target": "Forasartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Forasartan",
+          "target": "Olmesartan",
+          "label": "resembles"
+        },
+        {
+          "source": "Olmesartan",
+          "target": "Slco1b3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valsartan,Forasartan": [
+          "Tetrazoles",
+          "Angiotensin Ii Receptor Antagonist"
+        ],
+        "Valsartan,Olmesartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Biphenylyltetrazole"
+        ],
+        "Forasartan,Olmesartan": [
+          "Tetrazoles",
+          "Angiotensin Ii Receptor Antagonist"
+        ]
+      },
+      "id": "path_1277"
+    }
+  ]
+}

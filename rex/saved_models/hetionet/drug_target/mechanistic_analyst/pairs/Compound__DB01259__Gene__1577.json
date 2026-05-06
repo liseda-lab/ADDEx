@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB01259 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5645,
+        "final_score": 0.5645
+      },
+      "nodes": [
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lapatinib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_23120"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4589,
+        "final_score": 0.4589
+      },
+      "nodes": [
+        {
+          "id": "Lapatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Metastatic Neoplasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lapatinib",
+          "target": "Metastatic Neoplasm",
+          "label": "causes"
+        },
+        {
+          "source": "Metastatic Neoplasm",
+          "target": "Flutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flutamide",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lapatinib,Flutamide": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_23121"
+    }
+  ]
+}

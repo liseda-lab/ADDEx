@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00821 - Gene::5743",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7069,
+        "final_score": 0.7701,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Carprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Prostaglandin-endoperoxide Synthase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carprofen",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Prostaglandin-endoperoxide Synthase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Prostaglandin-endoperoxide Synthase Activity",
+          "target": "Ptgs2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10140"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5419,
+        "final_score": 0.5419
+      },
+      "nodes": [
+        {
+          "id": "Carprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Lornoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carprofen",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Lornoxicam",
+          "label": "is bound by"
+        },
+        {
+          "source": "Lornoxicam",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carprofen,Lornoxicam": [
+          "Organonitrogen Heterocyclic Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_10141"
+    }
+  ]
+}

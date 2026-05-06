@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00472 - Gene::3356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4939,
+        "final_score": 0.4939
+      },
+      "nodes": [
+        {
+          "id": "Fluoxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Violent",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxetine",
+          "target": "Violent",
+          "label": "causes"
+        },
+        {
+          "source": "Violent",
+          "target": "Lisuride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lisuride",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluoxetine,Lisuride": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_7524"
+    }
+  ]
+}

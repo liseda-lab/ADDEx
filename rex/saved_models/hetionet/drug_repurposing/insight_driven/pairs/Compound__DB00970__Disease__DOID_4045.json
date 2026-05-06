@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00970 - Disease::DOID:4045",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4871,
+        "final_score": 0.4871
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Vincristine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Vincristine",
+          "target": "Muscle Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Vincristine": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_3432"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4871,
+        "final_score": 0.4871
+      },
+      "nodes": [
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dactinomycin",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Germ Cell Cancer",
+          "target": "Methotrexate",
+          "label": "is treated by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Muscle Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dactinomycin,Methotrexate": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_3433"
+    }
+  ]
+}

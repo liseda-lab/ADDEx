@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00290 - Disease::DOID:1909",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3496,
+        "final_score": 0.3496
+      },
+      "nodes": [
+        {
+          "id": "Bleomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Temozolomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Melanoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bleomycin",
+          "target": "Skin Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Skin Cancer",
+          "target": "Temozolomide",
+          "label": "is treated by"
+        },
+        {
+          "source": "Temozolomide",
+          "target": "Melanoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bleomycin,Temozolomide": [
+          "Dna Binding Agent",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_2436"
+    }
+  ]
+}

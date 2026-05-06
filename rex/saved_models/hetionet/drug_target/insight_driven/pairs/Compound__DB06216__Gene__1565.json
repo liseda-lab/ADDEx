@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB06216 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4744,
+        "final_score": 0.4744
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Schizophrenia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxprenolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Schizophrenia",
+          "label": "causes"
+        },
+        {
+          "source": "Schizophrenia",
+          "target": "Oxprenolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxprenolol",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asenapine,Oxprenolol": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_22898"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4279,
+        "final_score": 0.4279
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Depressive Symptom",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rimonabant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Depressive Symptom",
+          "label": "causes"
+        },
+        {
+          "source": "Depressive Symptom",
+          "target": "Rimonabant",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rimonabant",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asenapine,Rimonabant": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_22899"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00570 - Gene::10381",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6608,
+        "final_score": 0.6637,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Voacamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Vinorelbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinblastine",
+          "target": "Voacamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Voacamine",
+          "target": "Vinorelbine",
+          "label": "resembles"
+        },
+        {
+          "source": "Vinorelbine",
+          "target": "Tubb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vinblastine,Voacamine": [
+          "Chemical Entity"
+        ],
+        "Vinblastine,Vinorelbine": [
+          "Vinca Alkaloid Compound",
+          "Vinca Alkaloid"
+        ],
+        "Voacamine,Vinorelbine": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_1773"
+    }
+  ]
+}

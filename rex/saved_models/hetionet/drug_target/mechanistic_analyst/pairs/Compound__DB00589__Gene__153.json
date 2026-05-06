@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00589 - Gene::153",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7162,
+        "final_score": 0.6914,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Epinephrine Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisuride",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Epinephrine Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Epinephrine Binding",
+          "target": "Adrb1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20013"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5532,
+        "final_score": 0.5532
+      },
+      "nodes": [
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Retroperitoneal Fibrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sotalol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisuride",
+          "target": "Retroperitoneal Fibrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Retroperitoneal Fibrosis",
+          "target": "Sotalol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sotalol",
+          "target": "Adrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lisuride,Sotalol": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_20014"
+    }
+  ]
+}

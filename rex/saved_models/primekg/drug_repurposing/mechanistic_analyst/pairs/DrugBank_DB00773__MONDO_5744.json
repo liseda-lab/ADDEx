@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB00773 - MONDO_5744",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.592,
+        "final_score": 0.592
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Drug"
+        },
+        {
+          "id": "Kaposi's Sarcoma (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Vinblastine",
+          "type": "Drug"
+        },
+        {
+          "id": "Yolk Sac Tumor",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Kaposi's Sarcoma (disease)",
+          "label": "off-label use"
+        },
+        {
+          "source": "Kaposi's Sarcoma (disease)",
+          "target": "Vinblastine",
+          "label": "indication"
+        },
+        {
+          "source": "Vinblastine",
+          "target": "Yolk Sac Tumor",
+          "label": "indication"
+        }
+      ],
+      "id": "path_13481"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7273,
+        "final_score": 0.5303,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Drug"
+        },
+        {
+          "id": "Testicular Seminoma",
+          "type": "Disease"
+        },
+        {
+          "id": "Plicamycin",
+          "type": "Drug"
+        },
+        {
+          "id": "Yolk Sac Tumor",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Testicular Seminoma",
+          "label": "indication"
+        },
+        {
+          "source": "Testicular Seminoma",
+          "target": "Plicamycin",
+          "label": "indication"
+        },
+        {
+          "source": "Plicamycin",
+          "target": "Yolk Sac Tumor",
+          "label": "indication"
+        }
+      ],
+      "id": "path_13480"
+    }
+  ]
+}

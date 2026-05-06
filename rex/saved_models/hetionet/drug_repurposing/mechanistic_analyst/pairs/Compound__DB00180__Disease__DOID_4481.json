@@ -1,0 +1,120 @@
+{
+  "id": "Compound::DB00180 - Disease::DOID:4481",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7225,
+        "final_score": 0.5279,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Flunisolide",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluticasone Furoate",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flunisolide",
+          "target": "Fluticasone Furoate",
+          "label": "resembles"
+        },
+        {
+          "source": "Fluticasone Furoate",
+          "target": "Asthma",
+          "label": "treats"
+        },
+        {
+          "source": "Asthma",
+          "target": "Allergic Rhinitis",
+          "label": "resembles"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flunisolide,Fluticasone Furoate": [
+          "Therapeutic Glucocorticoid",
+          "11Beta-Hydroxy Steroid"
+        ],
+        "Asthma,Allergic Rhinitis": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_4652"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7072,
+        "final_score": 0.5203,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Flunisolide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ciclesonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flunisolide",
+          "target": "Ciclesonide",
+          "label": "resembles"
+        },
+        {
+          "source": "Ciclesonide",
+          "target": "Asthma",
+          "label": "treats"
+        },
+        {
+          "source": "Asthma",
+          "target": "Allergic Rhinitis",
+          "label": "resembles"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flunisolide,Ciclesonide": [
+          "Therapeutic Glucocorticoid",
+          "Organic Molecular Entity"
+        ],
+        "Asthma,Allergic Rhinitis": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_4653"
+    }
+  ]
+}

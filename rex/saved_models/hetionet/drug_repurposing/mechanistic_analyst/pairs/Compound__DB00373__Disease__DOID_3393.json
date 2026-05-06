@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB00373 - Disease::DOID:3393",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6035,
+        "final_score": 0.6035
+      },
+      "nodes": [
+        {
+          "id": "Timolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Bupranolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Timolol",
+          "target": "Bupranolol",
+          "label": "resembles"
+        },
+        {
+          "source": "Bupranolol",
+          "target": "Gemfibrozil",
+          "label": "resembles"
+        },
+        {
+          "source": "Gemfibrozil",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Timolol,Bupranolol": [
+          "Organic Cyclic Compound",
+          "Beta-Adrenergic Antagonist"
+        ],
+        "Timolol,Gemfibrozil": [
+          "Organic Cyclic Compound"
+        ],
+        "Bupranolol,Gemfibrozil": [
+          "Aromatic Ether"
+        ]
+      },
+      "id": "path_3121"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5058,
+        "final_score": 0.5058
+      },
+      "nodes": [
+        {
+          "id": "Timolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Serositis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perindopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Timolol",
+          "target": "Serositis",
+          "label": "causes"
+        },
+        {
+          "source": "Serositis",
+          "target": "Perindopril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perindopril",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Timolol,Perindopril": [
+          "Heteroatomic Molecular Entity"
+        ],
+        "Serositis,Coronary Artery Disease": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_3122"
+    }
+  ]
+}

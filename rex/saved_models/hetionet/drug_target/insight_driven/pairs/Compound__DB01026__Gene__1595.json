@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01026 - Gene::1595",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.536,
+        "final_score": 0.536
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Econazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp51a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Econazole",
+          "label": "includes"
+        },
+        {
+          "source": "Econazole",
+          "target": "Cyp51a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Azoles": [
+          "Azole"
+        ],
+        "Ketoconazole,Econazole": [
+          "Imidazole Antifungal Drug",
+          "Anti-Infective Agent"
+        ],
+        "Azoles,Econazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_4176"
+    }
+  ]
+}

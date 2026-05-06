@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01200 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4511,
+        "final_score": 0.4511
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gastric Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Gastric Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Gastric Haemorrhage",
+          "target": "Spironolactone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Spironolactone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromocriptine,Spironolactone": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_2925"
+    }
+  ]
+}

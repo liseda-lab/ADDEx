@@ -1,0 +1,138 @@
+{
+  "id": "Compound::DB00851 - Disease::DOID:1192",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5089,
+        "final_score": 0.5089
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Melphalan",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Melphalan",
+          "label": "includes"
+        },
+        {
+          "source": "Melphalan",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dacarbazine,Melphalan": [
+          "Antineoplastic Alkylating Agent",
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_6183"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3845,
+        "final_score": 0.3845
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Paraparesis",
+          "type": "Symptom"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Skin Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Skin Cancer",
+          "target": "Paraparesis",
+          "label": "presents"
+        },
+        {
+          "source": "Paraparesis",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_6184"
+    },
+    {
+      "score": {
+        "ic_mean": 0.374,
+        "final_score": 0.374
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Sheath Of Schwann",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Skin Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Skin Cancer",
+          "target": "Sheath Of Schwann",
+          "label": "localizes"
+        },
+        {
+          "source": "Sheath Of Schwann",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_6185"
+    }
+  ]
+}

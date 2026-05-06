@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01037 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4071,
+        "final_score": 0.4071
+      },
+      "nodes": [
+        {
+          "id": "Selegiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Oral Discomfort",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Selegiline",
+          "target": "Oral Discomfort",
+          "label": "causes"
+        },
+        {
+          "source": "Oral Discomfort",
+          "target": "Miconazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Miconazole",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Selegiline,Miconazole": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_23170"
+    }
+  ]
+}

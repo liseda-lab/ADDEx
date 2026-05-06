@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00979 - Gene::1131",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7329,
+        "final_score": 0.6998,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cyclopentolate",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm1",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclopentolate",
+          "target": "Chrm1",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm1",
+          "target": "G-protein Coupled Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Acetylcholine Receptor Activity",
+          "target": "Chrm3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10087"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5045,
+        "final_score": 0.5045
+      },
+      "nodes": [
+        {
+          "id": "Cyclopentolate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclandelate",
+          "type": "Compound"
+        },
+        {
+          "id": "Homatropine Methylbromide",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclopentolate",
+          "target": "Cyclandelate",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclandelate",
+          "target": "Homatropine Methylbromide",
+          "label": "resembles"
+        },
+        {
+          "source": "Homatropine Methylbromide",
+          "target": "Chrm3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclopentolate,Cyclandelate": [
+          "Carboxylic Ester"
+        ],
+        "Cyclopentolate,Homatropine Methylbromide": [
+          "Organic Molecule",
+          "Antimuscarinic Agent"
+        ],
+        "Cyclandelate,Homatropine Methylbromide": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_10088"
+    }
+  ]
+}

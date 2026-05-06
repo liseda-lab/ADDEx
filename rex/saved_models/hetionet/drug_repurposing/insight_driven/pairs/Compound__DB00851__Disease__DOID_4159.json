@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00851 - Disease::DOID:4159",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4357,
+        "final_score": 0.4357
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Temozolomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Temozolomide",
+          "label": "includes"
+        },
+        {
+          "source": "Temozolomide",
+          "target": "Skin Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dacarbazine,Temozolomide": [
+          "Triazene Compound",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4262"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4165,
+        "final_score": 0.4165
+      },
+      "nodes": [
+        {
+          "id": "Dacarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        },
+        {
+          "id": "Sheath Of Schwann",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dacarbazine",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        },
+        {
+          "source": "Peripheral Nervous System Neoplasm",
+          "target": "Sheath Of Schwann",
+          "label": "localizes"
+        },
+        {
+          "source": "Sheath Of Schwann",
+          "target": "Skin Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_4263"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB01353 - Gene::2557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7259,
+        "final_score": 0.6963,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Butethal",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra2",
+          "type": "Gene"
+        },
+        {
+          "id": "Benzodiazepine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabra4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Butethal",
+          "target": "Gabra2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabra2",
+          "target": "Benzodiazepine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Benzodiazepine Receptor Activity",
+          "target": "Gabra4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_16457"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6026,
+        "final_score": 0.6026
+      },
+      "nodes": [
+        {
+          "id": "Butethal",
+          "type": "Compound"
+        },
+        {
+          "id": "Aprobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Secobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Butethal",
+          "target": "Aprobarbital",
+          "label": "resembles"
+        },
+        {
+          "source": "Aprobarbital",
+          "target": "Secobarbital",
+          "label": "resembles"
+        },
+        {
+          "source": "Secobarbital",
+          "target": "Gabra4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Butethal,Aprobarbital": [
+          "Barbiturates",
+          "Barbiturate"
+        ],
+        "Butethal,Secobarbital": [
+          "Barbiturates",
+          "Barbiturate"
+        ],
+        "Aprobarbital,Secobarbital": [
+          "Barbiturates",
+          "Barbiturate"
+        ]
+      },
+      "id": "path_16458"
+    }
+  ]
+}

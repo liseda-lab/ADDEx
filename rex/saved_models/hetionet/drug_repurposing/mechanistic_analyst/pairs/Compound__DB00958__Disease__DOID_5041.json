@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00958 - Disease::DOID:5041",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.875,
+        "agentic_score": 0.9167,
+        "llm_dimensions": {
+          "validity": 5.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Cisplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Cisplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_5948"
+    }
+  ]
+}

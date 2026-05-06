@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB01283 - Gene::5743",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7069,
+        "final_score": 0.6868,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Lumiracoxib",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        },
+        {
+          "id": "Prostaglandin-endoperoxide Synthase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lumiracoxib",
+          "target": "Ptgs1",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs1",
+          "target": "Prostaglandin-endoperoxide Synthase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Prostaglandin-endoperoxide Synthase Activity",
+          "target": "Ptgs2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2286"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4714,
+        "final_score": 0.4714
+      },
+      "nodes": [
+        {
+          "id": "Lumiracoxib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Antipyrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lumiracoxib",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Antipyrine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Antipyrine",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lumiracoxib,Antipyrine": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_2287"
+    }
+  ]
+}

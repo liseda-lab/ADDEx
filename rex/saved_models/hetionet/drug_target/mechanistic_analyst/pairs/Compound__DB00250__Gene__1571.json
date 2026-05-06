@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00250 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6234,
+        "final_score": 0.6234
+      },
+      "nodes": [
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapsone",
+          "target": "Cyp2c19",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c19",
+          "target": "Arachidonic Acid Epoxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Epoxygenase Activity",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13811"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5297,
+        "final_score": 0.5297
+      },
+      "nodes": [
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Tonic Clonic Movements",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapsone",
+          "target": "Tonic Clonic Movements",
+          "label": "causes"
+        },
+        {
+          "source": "Tonic Clonic Movements",
+          "target": "Sevoflurane",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sevoflurane",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dapsone,Sevoflurane": [
+          "Organochalcogen Compound"
+        ]
+      },
+      "id": "path_13812"
+    }
+  ]
+}

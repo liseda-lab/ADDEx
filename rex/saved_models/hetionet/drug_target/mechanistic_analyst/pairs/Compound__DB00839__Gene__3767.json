@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00839 - Gene::3767",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8076,
+        "final_score": 0.6955,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tolazamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfonylurea Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Glimepiride",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnj11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tolazamide",
+          "target": "Sulfonylurea Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Sulfonylurea Compounds",
+          "target": "Glimepiride",
+          "label": "includes"
+        },
+        {
+          "source": "Glimepiride",
+          "target": "Kcnj11",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tolazamide,Glimepiride": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
+        ]
+      },
+      "id": "path_12808"
+    }
+  ]
+}

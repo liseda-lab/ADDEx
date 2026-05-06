@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00531 - Gene::1548",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7122,
+        "final_score": 0.5228,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2a6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19151"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4517,
+        "final_score": 0.4517
+      },
+      "nodes": [
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Premature Labour",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclophosphamide",
+          "target": "Premature Labour",
+          "label": "causes"
+        },
+        {
+          "source": "Premature Labour",
+          "target": "Progesterone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Progesterone",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclophosphamide,Progesterone": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_19152"
+    }
+  ]
+}

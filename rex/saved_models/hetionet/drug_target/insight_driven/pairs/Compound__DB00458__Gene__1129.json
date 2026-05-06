@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB00458 - Gene::1129",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6422,
+        "final_score": 0.6422
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm3",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetylcholine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Chrm3",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm3",
+          "target": "Acetylcholine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Acetylcholine Receptor Activity",
+          "target": "Chrm2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7113"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4052,
+        "final_score": 0.4052
+      },
+      "nodes": [
+        {
+          "id": "Imipramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Prochlorperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Imipramine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Prochlorperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Prochlorperazine",
+          "target": "Chrm2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Imipramine,Clocapramine": [
+          "Organic Heterotricyclic Compound",
+          "Antidepressant Agent"
+        ],
+        "Imipramine,Prochlorperazine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Clocapramine,Prochlorperazine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_7114"
+    }
+  ]
+}

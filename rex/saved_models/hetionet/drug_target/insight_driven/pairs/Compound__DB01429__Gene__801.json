@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB01429 - Gene::801",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7407,
+        "final_score": 0.7037,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Aprindine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm3",
+          "type": "Gene"
+        },
+        {
+          "id": "Type 3 Metabotropic Glutamate Receptor Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Calm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aprindine",
+          "target": "Calm3",
+          "label": "binds"
+        },
+        {
+          "source": "Calm3",
+          "target": "Type 3 Metabotropic Glutamate Receptor Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Type 3 Metabotropic Glutamate Receptor Binding",
+          "target": "Calm1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19339"
+    },
+    {
+      "score": {
+        "ic_mean": 0.394,
+        "final_score": 0.394
+      },
+      "nodes": [
+        {
+          "id": "Aprindine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alverine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenoxybenzamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aprindine",
+          "target": "Alverine",
+          "label": "resembles"
+        },
+        {
+          "source": "Alverine",
+          "target": "Phenoxybenzamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenoxybenzamine",
+          "target": "Calm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aprindine,Alverine": [
+          "Organic Molecular Entity"
+        ],
+        "Aprindine,Phenoxybenzamine": [
+          "Organic Cyclic Compound"
+        ],
+        "Alverine,Phenoxybenzamine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_19340"
+    }
+  ]
+}

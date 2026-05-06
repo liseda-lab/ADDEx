@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB08882 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7112,
+        "final_score": 0.5223,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Linagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dipeptidyl Peptidase 4 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Linagliptin",
+          "target": "Dipeptidyl Peptidase 4 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dipeptidyl Peptidase 4 Inhibitors",
+          "target": "Sitagliptin",
+          "label": "includes"
+        },
+        {
+          "source": "Sitagliptin",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Linagliptin,Sitagliptin": [
+          "Dipeptidyl Peptidase-4 Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_13252"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3968,
+        "final_score": 0.3968
+      },
+      "nodes": [
+        {
+          "id": "Linagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Alfentanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Linagliptin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Alfentanil",
+          "label": "is bound by"
+        },
+        {
+          "source": "Alfentanil",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Linagliptin,Alfentanil": [
+          "Piperidines"
+        ]
+      },
+      "id": "path_13253"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB04845 - Gene::10383",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6848,
+        "final_score": 0.6757,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ixabepilone",
+          "type": "Compound"
+        },
+        {
+          "id": "Microtubule Inhibition",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ixabepilone",
+          "target": "Microtubule Inhibition",
+          "label": "is included in"
+        },
+        {
+          "source": "Microtubule Inhibition",
+          "target": "Docetaxel",
+          "label": "includes"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Tubb4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ixabepilone,Docetaxel": [
+          "Ketone"
+        ]
+      },
+      "id": "path_5035"
+    }
+  ]
+}

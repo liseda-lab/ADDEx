@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00328 - Gene::10864",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6049,
+        "final_score": 0.6049
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Salicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Salicylic Acid",
+          "label": "includes"
+        },
+        {
+          "source": "Salicylic Acid",
+          "target": "Slc22a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Salicylic Acid": [
+          "Carboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_18490"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5963,
+        "final_score": 0.5963
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "target": "Slc22a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18491"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:165 - DISEASE:690",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8468,
+        "final_score": 0.5901,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "ADAM metallopeptidase with thrombospondin type 1 motif 19",
+          "type": "Gene"
+        },
+        {
+          "id": "D54 cell line",
+          "type": "Protein"
+        },
+        {
+          "id": "ADAM metallopeptidase with thrombospondin type 1 motif 19",
+          "type": "Gene"
+        },
+        {
+          "id": "Corneal edema NOS",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "pravastatin",
+          "target": "ADAM metallopeptidase with thrombospondin type 1 motif 19",
+          "label": "is affecting"
+        },
+        {
+          "source": "ADAM metallopeptidase with thrombospondin type 1 motif 19",
+          "target": "D54 cell line",
+          "label": "is gene product of"
+        },
+        {
+          "source": "D54 cell line",
+          "target": "ADAM metallopeptidase with thrombospondin type 1 motif 19",
+          "label": "gene product of"
+        },
+        {
+          "source": "ADAM metallopeptidase with thrombospondin type 1 motif 19",
+          "target": "Corneal edema NOS",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_27"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01190 - Disease::DOID:12365",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5434,
+        "final_score": 0.5434
+      },
+      "nodes": [
+        {
+          "id": "Clindamycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Application Site Dryness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dapsone",
+          "type": "Compound"
+        },
+        {
+          "id": "Malaria",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clindamycin",
+          "target": "Application Site Dryness",
+          "label": "causes"
+        },
+        {
+          "source": "Application Site Dryness",
+          "target": "Dapsone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dapsone",
+          "target": "Malaria",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clindamycin,Dapsone": [
+          "Anti-Infective Agent",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_2982"
+    }
+  ]
+}

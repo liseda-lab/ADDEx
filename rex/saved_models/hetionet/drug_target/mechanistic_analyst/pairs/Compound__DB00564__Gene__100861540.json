@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00564 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4906,
+        "final_score": 0.4906
+      },
+      "nodes": [
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c9 Inducers",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbamazepine",
+          "target": "Cytochrome P450 2c9 Inducers",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c9 Inducers",
+          "target": "Aprepitant",
+          "label": "includes"
+        },
+        {
+          "source": "Aprepitant",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbamazepine,Aprepitant": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8446"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4821,
+        "final_score": 0.4821
+      },
+      "nodes": [
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Talkativeness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbamazepine",
+          "target": "Talkativeness",
+          "label": "causes"
+        },
+        {
+          "source": "Talkativeness",
+          "target": "Alprazolam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Alprazolam",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbamazepine,Alprazolam": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_8447"
+    }
+  ]
+}

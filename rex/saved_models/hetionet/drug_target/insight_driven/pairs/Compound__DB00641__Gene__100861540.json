@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00641 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.426,
+        "final_score": 0.426
+      },
+      "nodes": [
+        {
+          "id": "Simvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ophthalmoplegia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ritonavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simvastatin",
+          "target": "Ophthalmoplegia",
+          "label": "causes"
+        },
+        {
+          "source": "Ophthalmoplegia",
+          "target": "Ritonavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ritonavir",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Simvastatin,Ritonavir": [
+          "Enzyme Inhibitor",
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_4271"
+    }
+  ]
+}

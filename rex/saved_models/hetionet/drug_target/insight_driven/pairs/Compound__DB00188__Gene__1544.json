@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00188 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4231,
+        "final_score": 0.4231
+      },
+      "nodes": [
+        {
+          "id": "Bortezomib",
+          "type": "Compound"
+        },
+        {
+          "id": "Change Of Bowel Habit",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Frovatriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bortezomib",
+          "target": "Change Of Bowel Habit",
+          "label": "causes"
+        },
+        {
+          "source": "Change Of Bowel Habit",
+          "target": "Frovatriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Frovatriptan",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bortezomib,Frovatriptan": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_12419"
+    }
+  ]
+}

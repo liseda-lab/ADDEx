@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00300 - Gene::10257",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5221,
+        "final_score": 0.5221
+      },
+      "nodes": [
+        {
+          "id": "Tenofovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Fanconi Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Adefovir Dipivoxil",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tenofovir",
+          "target": "Fanconi Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Fanconi Syndrome",
+          "target": "Adefovir Dipivoxil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Adefovir Dipivoxil",
+          "target": "Abcc4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tenofovir,Adefovir Dipivoxil": [
+          "Organonitrogen Compound",
+          "Nucleoside Reverse Transcriptase Inhibitor"
+        ]
+      },
+      "id": "path_7103"
+    }
+  ]
+}

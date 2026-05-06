@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00672 - Gene::6564",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7388,
+        "final_score": 0.7027,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Chlorpropamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfonylurea Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpropamide",
+          "target": "Sulfonylurea Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Sulfonylurea Compounds",
+          "target": "Glyburide",
+          "label": "includes"
+        },
+        {
+          "source": "Glyburide",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpropamide,Glyburide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
+        ]
+      },
+      "id": "path_10495"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6255,
+        "final_score": 0.6255
+      },
+      "nodes": [
+        {
+          "id": "Chlorpropamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Disulfiram Like Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ceftazidime",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpropamide",
+          "target": "Disulfiram Like Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Disulfiram Like Reaction",
+          "target": "Ceftazidime",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ceftazidime",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpropamide,Ceftazidime": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_10496"
+    }
+  ]
+}

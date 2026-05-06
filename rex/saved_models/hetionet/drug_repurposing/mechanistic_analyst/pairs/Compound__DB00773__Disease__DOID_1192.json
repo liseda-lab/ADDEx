@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB00773 - Disease::DOID:1192",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4825,
+        "final_score": 0.4825
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Hearing Loss, High-frequency",
+          "type": "Symptom"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Hearing Loss, High-frequency",
+          "label": "presents"
+        },
+        {
+          "source": "Hearing Loss, High-frequency",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_4214"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4653,
+        "final_score": 0.4653
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Uterine Cancer",
+          "target": "Dactinomycin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Dactinomycin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Dactinomycin": [
+          "Organooxygen Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_4215"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4344,
+        "final_score": 0.4344
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Blindness Cortical",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Blindness Cortical",
+          "label": "causes"
+        },
+        {
+          "source": "Blindness Cortical",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Cisplatin": [
+          "Antineoplastic Agent",
+          "Polyatomic Entity"
+        ]
+      },
+      "id": "path_4216"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB00794 - Gene::1137",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7361,
+        "final_score": 0.7014,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Primidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna7",
+          "type": "Gene"
+        },
+        {
+          "id": "Acetylcholine-activated Cation-selective Channel Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Chrna4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Primidone",
+          "target": "Chrna7",
+          "label": "binds"
+        },
+        {
+          "source": "Chrna7",
+          "target": "Acetylcholine-activated Cation-selective Channel Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Acetylcholine-activated Cation-selective Channel Activity",
+          "target": "Chrna4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5493"
+    },
+    {
+      "score": {
+        "ic_mean": 0.542,
+        "final_score": 0.542
+      },
+      "nodes": [
+        {
+          "id": "Primidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Glutethimide",
+          "type": "Compound"
+        },
+        {
+          "id": "Methylphenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Primidone",
+          "target": "Glutethimide",
+          "label": "resembles"
+        },
+        {
+          "source": "Glutethimide",
+          "target": "Methylphenobarbital",
+          "label": "resembles"
+        },
+        {
+          "source": "Methylphenobarbital",
+          "target": "Chrna4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Primidone,Glutethimide": [
+          "Sedative And Hypnotic",
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Primidone,Methylphenobarbital": [
+          "Pyrimidone",
+          "Barbiturate"
+        ],
+        "Glutethimide,Methylphenobarbital": [
+          "Sedative And Hypnotic",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5494"
+    }
+  ]
+}

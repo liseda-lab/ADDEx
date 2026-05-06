@@ -1,0 +1,102 @@
+{
+  "id": "COMPOUND:5 - DISEASE:3016",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8888,
+        "final_score": 0.6111,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "etanercept",
+          "type": "Compound"
+        },
+        {
+          "id": "WASP family member 3",
+          "type": "Gene"
+        },
+        {
+          "id": "Vitamin D-binding protein",
+          "type": "Protein"
+        },
+        {
+          "id": "WASP family member 3",
+          "type": "Gene"
+        },
+        {
+          "id": "Spinal cord compression NOS",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "etanercept",
+          "target": "WASP family member 3",
+          "label": "is affecting"
+        },
+        {
+          "source": "WASP family member 3",
+          "target": "Vitamin D-binding protein",
+          "label": "is gene product of"
+        },
+        {
+          "source": "Vitamin D-binding protein",
+          "target": "WASP family member 3",
+          "label": "gene product of"
+        },
+        {
+          "source": "WASP family member 3",
+          "target": "Spinal cord compression NOS",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_685"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7777,
+        "final_score": 0.5555,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "etanercept",
+          "type": "Compound"
+        },
+        {
+          "id": "WASP family member 3",
+          "type": "Gene"
+        },
+        {
+          "id": "Spinal cord compression NOS",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "etanercept",
+          "target": "WASP family member 3",
+          "label": "is affecting"
+        },
+        {
+          "source": "WASP family member 3",
+          "target": "Spinal cord compression NOS",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_686"
+    }
+  ]
+}

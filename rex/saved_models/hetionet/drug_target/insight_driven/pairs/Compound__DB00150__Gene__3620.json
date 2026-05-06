@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00150 - Gene::3620",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.763,
+        "final_score": 0.6732,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "L-tryptophan",
+          "type": "Compound"
+        },
+        {
+          "id": "Tdo2",
+          "type": "Gene"
+        },
+        {
+          "id": "Tryptophan 2,3-dioxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ido1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-tryptophan",
+          "target": "Tdo2",
+          "label": "binds"
+        },
+        {
+          "source": "Tdo2",
+          "target": "Tryptophan 2,3-dioxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Tryptophan 2,3-dioxygenase Activity",
+          "target": "Ido1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8369"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5988,
+        "final_score": 0.5988
+      },
+      "nodes": [
+        {
+          "id": "L-tryptophan",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxitriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ido1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-tryptophan",
+          "target": "Oxitriptan",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxitriptan",
+          "target": "Melatonin",
+          "label": "resembles"
+        },
+        {
+          "source": "Melatonin",
+          "target": "Ido1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "L-tryptophan,Oxitriptan": [
+          "L-Alpha-Amino Acid"
+        ],
+        "L-tryptophan,Melatonin": [
+          "Indoles"
+        ],
+        "Oxitriptan,Melatonin": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_8370"
+    }
+  ]
+}

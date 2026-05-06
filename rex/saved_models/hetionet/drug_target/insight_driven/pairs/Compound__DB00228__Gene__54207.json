@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00228 - Gene::54207",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8068,
+        "final_score": 0.7367,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 3.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnk2",
+          "type": "Gene"
+        },
+        {
+          "id": "Twik Related Potassium Channel (trek)",
+          "type": "Pathway"
+        },
+        {
+          "id": "Kcnk10",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Enflurane",
+          "target": "Kcnk2",
+          "label": "binds"
+        },
+        {
+          "source": "Kcnk2",
+          "target": "Twik Related Potassium Channel (trek)",
+          "label": "participates"
+        },
+        {
+          "source": "Twik Related Potassium Channel (trek)",
+          "target": "Kcnk10",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6034"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7639,
+        "final_score": 0.7153,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Isoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnk10",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Enflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Isoflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Isoflurane",
+          "target": "Kcnk10",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Enflurane,Isoflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_6035"
+    }
+  ]
+}

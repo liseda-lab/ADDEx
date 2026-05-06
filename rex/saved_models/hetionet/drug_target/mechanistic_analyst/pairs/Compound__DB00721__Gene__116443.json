@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00721 - Gene::116443",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.64,
+        "final_score": 0.64
+      },
+      "nodes": [
+        {
+          "id": "Procaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudocholinesterase Deficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chloroprocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Procaine",
+          "target": "Pseudocholinesterase Deficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudocholinesterase Deficiency",
+          "target": "Chloroprocaine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chloroprocaine",
+          "target": "Grin3a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Procaine,Chloroprocaine": [
+          "Anesthetic Agent",
+          "Benzoate Ester"
+        ]
+      },
+      "id": "path_5239"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4754,
+        "final_score": 0.4754
+      },
+      "nodes": [
+        {
+          "id": "Procaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxybuprocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chloroprocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Grin3a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Procaine",
+          "target": "Oxybuprocaine",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxybuprocaine",
+          "target": "Chloroprocaine",
+          "label": "resembles"
+        },
+        {
+          "source": "Chloroprocaine",
+          "target": "Grin3a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Procaine,Oxybuprocaine": [
+          "Benzoate Ester"
+        ],
+        "Procaine,Chloroprocaine": [
+          "Anesthetic Agent",
+          "Benzoate Ester"
+        ],
+        "Oxybuprocaine,Chloroprocaine": [
+          "Benzoate Ester"
+        ]
+      },
+      "id": "path_5240"
+    }
+  ]
+}

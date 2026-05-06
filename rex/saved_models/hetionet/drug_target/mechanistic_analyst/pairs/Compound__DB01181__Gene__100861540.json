@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01181 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4757,
+        "final_score": 0.4757
+      },
+      "nodes": [
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Myocardial Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ifosfamide",
+          "target": "Myocardial Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Myocardial Haemorrhage",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ifosfamide,Cyclophosphamide": [
+          "Phosphorodiamide",
+          "Nitrogen Mustard Compound"
+        ]
+      },
+      "id": "path_4378"
+    }
+  ]
+}

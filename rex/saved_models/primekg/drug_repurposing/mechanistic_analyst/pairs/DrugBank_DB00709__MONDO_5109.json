@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB00709 - MONDO_5109",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6722,
+        "final_score": 0.5028,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Lamivudine",
+          "type": "Drug"
+        },
+        {
+          "id": "Nme2",
+          "type": "Gene/Protein"
+        },
+        {
+          "id": "Tenofovir Disoproxil",
+          "type": "Drug"
+        },
+        {
+          "id": "Hiv Infectious Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lamivudine",
+          "target": "Nme2",
+          "label": "enzyme"
+        },
+        {
+          "source": "Nme2",
+          "target": "Tenofovir Disoproxil",
+          "label": "enzyme"
+        },
+        {
+          "source": "Tenofovir Disoproxil",
+          "target": "Hiv Infectious Disease",
+          "label": "indication"
+        }
+      ],
+      "id": "path_21044"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4062,
+        "final_score": 0.4062
+      },
+      "nodes": [
+        {
+          "id": "Lamivudine",
+          "type": "Drug"
+        },
+        {
+          "id": "Abnormal Breath Sound",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Abacavir",
+          "type": "Drug"
+        },
+        {
+          "id": "Hiv Infectious Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lamivudine",
+          "target": "Abnormal Breath Sound",
+          "label": "side effect"
+        },
+        {
+          "source": "Abnormal Breath Sound",
+          "target": "Abacavir",
+          "label": "side effect"
+        },
+        {
+          "source": "Abacavir",
+          "target": "Hiv Infectious Disease",
+          "label": "indication"
+        }
+      ],
+      "id": "path_21045"
+    }
+  ]
+}

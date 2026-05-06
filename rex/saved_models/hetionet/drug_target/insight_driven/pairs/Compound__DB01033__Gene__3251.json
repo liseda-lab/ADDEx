@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB01033 - Gene::3251",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6573,
+        "final_score": 0.662,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Mercaptopurine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatosplenic T-cell Lymphoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hprt1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mercaptopurine",
+          "target": "Hepatosplenic T-cell Lymphoma",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatosplenic T-cell Lymphoma",
+          "target": "Azathioprine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Hprt1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mercaptopurine,Azathioprine": [
+          "Purines"
+        ]
+      },
+      "id": "path_19538"
+    }
+  ]
+}

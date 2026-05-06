@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00454 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5172,
+        "final_score": 0.5172
+      },
+      "nodes": [
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pethidine",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Methadone",
+          "label": "includes"
+        },
+        {
+          "source": "Methadone",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pethidine,Methadone": [
+          "Opioid Receptor Agonist",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_5291"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4614,
+        "final_score": 0.4614
+      },
+      "nodes": [
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cardiovascular Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pethidine",
+          "target": "Cardiovascular Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Cardiovascular Insufficiency",
+          "target": "Methadone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methadone",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pethidine,Methadone": [
+          "Opioid Receptor Agonist",
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_5292"
+    }
+  ]
+}

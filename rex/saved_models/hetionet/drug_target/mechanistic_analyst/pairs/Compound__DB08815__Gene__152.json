@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB08815 - Gene::152",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7329,
+        "final_score": 0.7414,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Lurasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2a",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha2-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lurasidone",
+          "target": "Adra2a",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2a",
+          "target": "Alpha2-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha2-adrenergic Receptor Activity",
+          "target": "Adra2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6519"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5457,
+        "final_score": 0.5457
+      },
+      "nodes": [
+        {
+          "id": "Lurasidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oromandibular Dystonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lurasidone",
+          "target": "Oromandibular Dystonia",
+          "label": "causes"
+        },
+        {
+          "source": "Oromandibular Dystonia",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Adra2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lurasidone,Paliperidone": [
+          "Dopamine Antagonist",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6520"
+    }
+  ]
+}

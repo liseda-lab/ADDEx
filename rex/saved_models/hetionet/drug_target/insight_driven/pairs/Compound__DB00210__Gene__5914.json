@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00210 - Gene::5914",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8183,
+        "final_score": 0.7425,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Adapalene",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinoids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Rara",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Adapalene",
+          "target": "Retinoids",
+          "label": "is included in"
+        },
+        {
+          "source": "Retinoids",
+          "target": "Acitretin",
+          "label": "includes"
+        },
+        {
+          "source": "Acitretin",
+          "target": "Rara",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Adapalene,Retinoids": [
+          "Organic Molecular Entity"
+        ],
+        "Adapalene,Acitretin": [
+          "Monocarboxylic Acid",
+          "Retinoic Acid Agent"
+        ],
+        "Retinoids,Acitretin": [
+          "Retinoid"
+        ]
+      },
+      "id": "path_11768"
+    }
+  ]
+}

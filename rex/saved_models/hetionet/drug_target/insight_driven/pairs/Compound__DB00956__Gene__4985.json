@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00956 - Gene::4985",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6107,
+        "final_score": 0.6107
+      },
+      "nodes": [
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ureteral Spasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxymorphone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydrocodone",
+          "target": "Ureteral Spasm",
+          "label": "causes"
+        },
+        {
+          "source": "Ureteral Spasm",
+          "target": "Oxymorphone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxymorphone",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hydrocodone,Oxymorphone": [
+          "Opioid Receptor Agonist",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_14713"
+    }
+  ]
+}

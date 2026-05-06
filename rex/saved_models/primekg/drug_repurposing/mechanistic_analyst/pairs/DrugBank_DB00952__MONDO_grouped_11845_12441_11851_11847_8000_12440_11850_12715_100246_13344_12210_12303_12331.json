@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB00952 - MONDO_grouped_11845_12441_11851_11847_8000_12440_11850_12715_100246_13344_12210_12303_12331",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7607,
+        "final_score": 0.4637,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 3.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Naratriptan",
+          "type": "Drug"
+        },
+        {
+          "id": "Phonophobia",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Migraine, Familial Typical, Susceptibility To, 2",
+          "type": "Disease"
+        },
+        {
+          "id": "Migraine With Or Without Aura, Susceptibility To",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naratriptan",
+          "target": "Phonophobia",
+          "label": "side effect"
+        },
+        {
+          "source": "Phonophobia",
+          "target": "Migraine, Familial Typical, Susceptibility To, 2",
+          "label": "phenotype present"
+        },
+        {
+          "source": "Migraine, Familial Typical, Susceptibility To, 2",
+          "target": "Migraine With Or Without Aura, Susceptibility To",
+          "label": "parent-child"
+        }
+      ],
+      "id": "path_15280"
+    }
+  ]
+}

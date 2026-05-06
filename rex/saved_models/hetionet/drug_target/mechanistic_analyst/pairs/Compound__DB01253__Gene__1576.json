@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01253 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.443,
+        "final_score": 0.443
+      },
+      "nodes": [
+        {
+          "id": "Ergonovine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pleural Fibrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Boceprevir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergonovine",
+          "target": "Pleural Fibrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Pleural Fibrosis",
+          "target": "Boceprevir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Boceprevir",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ergonovine,Boceprevir": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_7610"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3977,
+        "final_score": 0.3977
+      },
+      "nodes": [
+        {
+          "id": "Ergonovine",
+          "type": "Compound"
+        },
+        {
+          "id": "Water Intoxication",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Carbamazepine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ergonovine",
+          "target": "Water Intoxication",
+          "label": "causes"
+        },
+        {
+          "source": "Water Intoxication",
+          "target": "Carbamazepine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Carbamazepine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ergonovine,Carbamazepine": [
+          "Agent Affecting Nervous System",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_7611"
+    }
+  ]
+}

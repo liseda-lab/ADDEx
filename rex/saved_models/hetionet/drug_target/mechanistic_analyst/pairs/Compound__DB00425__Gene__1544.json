@@ -1,0 +1,149 @@
+{
+  "id": "Compound::DB00425 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7116,
+        "final_score": 0.5225,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zolpidem",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19080"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6748,
+        "final_score": 0.5041,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zolpidem",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19081"
+    },
+    {
+      "score": {
+        "ic_mean": 0.417,
+        "final_score": 0.417
+      },
+      "nodes": [
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Stress Symptoms",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zolpidem",
+          "target": "Stress Symptoms",
+          "label": "causes"
+        },
+        {
+          "source": "Stress Symptoms",
+          "target": "Melatonin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Melatonin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zolpidem,Melatonin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_19082"
+    }
+  ]
+}

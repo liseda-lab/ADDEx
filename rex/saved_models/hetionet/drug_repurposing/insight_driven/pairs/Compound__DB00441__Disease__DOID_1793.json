@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00441 - Disease::DOID:1793",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5099,
+        "final_score": 0.5099
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Microangiopathic Haemolytic Anaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Erlotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Microangiopathic Haemolytic Anaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Microangiopathic Haemolytic Anaemia",
+          "target": "Erlotinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Erlotinib",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Erlotinib": [
+          "Enzyme Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4306"
+    }
+  ]
+}

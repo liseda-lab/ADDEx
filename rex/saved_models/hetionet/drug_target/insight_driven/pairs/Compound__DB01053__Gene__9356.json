@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB01053 - Gene::9356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6154,
+        "final_score": 0.6154
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Penicillins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nafcillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "Penicillins",
+          "label": "is included in"
+        },
+        {
+          "source": "Penicillins",
+          "target": "Nafcillin",
+          "label": "includes"
+        },
+        {
+          "source": "Nafcillin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzylpenicillin,Penicillins": [
+          "Penicillin"
+        ],
+        "Benzylpenicillin,Nafcillin": [
+          "Penicillin Allergen",
+          "Beta-Lactam Antibiotic"
+        ],
+        "Penicillins,Nafcillin": [
+          "Penicillin"
+        ]
+      },
+      "id": "path_21502"
+    },
+    {
+      "score": {
+        "ic_mean": 0.466,
+        "final_score": 0.466
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hallucinations, Mixed",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "Hallucinations, Mixed",
+          "label": "causes"
+        },
+        {
+          "source": "Hallucinations, Mixed",
+          "target": "Valaciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_21503"
+    },
+    {
+      "score": {
+        "ic_mean": 0.466,
+        "final_score": 0.466
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Auditory And Visual Hallucinations",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "Auditory And Visual Hallucinations",
+          "label": "causes"
+        },
+        {
+          "source": "Auditory And Visual Hallucinations",
+          "target": "Valaciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_21504"
+    }
+  ]
+}

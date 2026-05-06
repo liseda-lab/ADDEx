@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00795 - Disease::DOID:7147",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5137,
+        "final_score": 0.5137
+      },
+      "nodes": [
+        {
+          "id": "Sulfasalazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfapyridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Piroxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ankylosing Spondylitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sulfasalazine",
+          "target": "Sulfapyridine",
+          "label": "resembles"
+        },
+        {
+          "source": "Sulfapyridine",
+          "target": "Piroxicam",
+          "label": "resembles"
+        },
+        {
+          "source": "Piroxicam",
+          "target": "Ankylosing Spondylitis",
+          "label": "palliates"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sulfasalazine,Sulfapyridine": [
+          "Benzenes"
+        ],
+        "Sulfasalazine,Piroxicam": [
+          "Pyridines",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Sulfapyridine,Piroxicam": [
+          "Pyridines"
+        ]
+      },
+      "id": "path_3943"
+    }
+  ]
+}

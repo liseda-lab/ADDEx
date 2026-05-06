@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB06616 - Gene::6093",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6763,
+        "final_score": 0.5048,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Bosutinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Protein Kinase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ruxolitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Rock1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bosutinib",
+          "target": "Protein Kinase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Protein Kinase Inhibitors",
+          "target": "Ruxolitinib",
+          "label": "includes"
+        },
+        {
+          "source": "Ruxolitinib",
+          "target": "Rock1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bosutinib,Ruxolitinib": [
+          "Antineoplastic Enzyme Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_1804"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01035 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5199,
+        "final_score": 0.5199
+      },
+      "nodes": [
+        {
+          "id": "Procainamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Defect Conduction Intraventricular",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Procainamide",
+          "target": "Defect Conduction Intraventricular",
+          "label": "causes"
+        },
+        {
+          "source": "Defect Conduction Intraventricular",
+          "target": "Propafenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Propafenone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Procainamide,Propafenone": [
+          "Organonitrogen Compound",
+          "Antiarrhythmic Agent"
+        ]
+      },
+      "id": "path_13435"
+    }
+  ]
+}

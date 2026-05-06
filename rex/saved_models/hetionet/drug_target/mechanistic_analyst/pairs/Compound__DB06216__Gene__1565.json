@@ -1,0 +1,142 @@
+{
+  "id": "Compound::DB06216 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5565,
+        "final_score": 0.5565
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_23057"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4744,
+        "final_score": 0.4744
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Schizophrenia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxprenolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Schizophrenia",
+          "label": "causes"
+        },
+        {
+          "source": "Schizophrenia",
+          "target": "Oxprenolol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxprenolol",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asenapine,Oxprenolol": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_23058"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4542,
+        "final_score": 0.4542
+      },
+      "nodes": [
+        {
+          "id": "Asenapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Prolactin Level",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paliperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Asenapine",
+          "target": "Increased Prolactin Level",
+          "label": "causes"
+        },
+        {
+          "source": "Increased Prolactin Level",
+          "target": "Paliperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paliperidone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Asenapine,Paliperidone": [
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_23059"
+    }
+  ]
+}

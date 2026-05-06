@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01229 - Disease::DOID:1324",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4104,
+        "final_score": 0.4104
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Radiation Pneumonitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Radiation Pneumonitis",
+          "label": "causes"
+        },
+        {
+          "source": "Radiation Pneumonitis",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Lung Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Docetaxel": [
+          "Tetracyclic Diterpenoid"
+        ]
+      },
+      "id": "path_4946"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3724,
+        "final_score": 0.3724
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Leukoencephalopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Leukoencephalopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Leukoencephalopathy",
+          "target": "Methotrexate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Lung Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Methotrexate": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_4947"
+    }
+  ]
+}

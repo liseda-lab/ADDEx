@@ -1,0 +1,174 @@
+{
+  "id": "Compound::DB01060 - Gene::6564",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6444,
+        "final_score": 0.6444
+      },
+      "nodes": [
+        {
+          "id": "Amoxicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Antibiotic Associated Colitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxicillin",
+          "target": "Antibiotic Associated Colitis",
+          "label": "causes"
+        },
+        {
+          "source": "Antibiotic Associated Colitis",
+          "target": "Oxacillin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxacillin",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxicillin,Oxacillin": [
+          "Penicillin Antibiotic",
+          "Penicillin"
+        ]
+      },
+      "id": "path_3133"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6782,
+        "final_score": 0.5058,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Amoxicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Penicillins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oxacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxicillin",
+          "target": "Penicillins",
+          "label": "is included in"
+        },
+        {
+          "source": "Penicillins",
+          "target": "Oxacillin",
+          "label": "includes"
+        },
+        {
+          "source": "Oxacillin",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxicillin,Penicillins": [
+          "Penicillin"
+        ],
+        "Amoxicillin,Oxacillin": [
+          "Penicillin Antibiotic",
+          "Penicillin"
+        ],
+        "Penicillins,Oxacillin": [
+          "Penicillin"
+        ]
+      },
+      "id": "path_3131"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6525,
+        "final_score": 0.4929,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Amoxicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Penicillins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dicloxacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amoxicillin",
+          "target": "Penicillins",
+          "label": "is included in"
+        },
+        {
+          "source": "Penicillins",
+          "target": "Dicloxacillin",
+          "label": "includes"
+        },
+        {
+          "source": "Dicloxacillin",
+          "target": "Slc15a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amoxicillin,Penicillins": [
+          "Penicillin"
+        ],
+        "Amoxicillin,Dicloxacillin": [
+          "Penicillin Antibiotic",
+          "Penicillin"
+        ],
+        "Penicillins,Dicloxacillin": [
+          "Penicillin"
+        ]
+      },
+      "id": "path_3132"
+    }
+  ]
+}

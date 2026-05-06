@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01171 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4712,
+        "final_score": 0.4712
+      },
+      "nodes": [
+        {
+          "id": "Moclobemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Fullness Abdominal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Moclobemide",
+          "target": "Fullness Abdominal",
+          "label": "causes"
+        },
+        {
+          "source": "Fullness Abdominal",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Moclobemide,Oxycodone": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_16995"
+    }
+  ]
+}

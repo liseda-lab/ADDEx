@@ -1,0 +1,212 @@
+{
+  "id": "Compound::DB00627 - Disease::DOID:3393",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5472,
+        "final_score": 0.5472
+      },
+      "nodes": [
+        {
+          "id": "Niacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atherothrombosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Niacin",
+          "target": "Atherothrombosis",
+          "label": "causes"
+        },
+        {
+          "source": "Atherothrombosis",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Niacin,Clopidogrel": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_3859"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7472,
+        "final_score": 0.5403,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Niacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        },
+        {
+          "id": "Simvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Niacin",
+          "target": "Atherosclerosis",
+          "label": "treats"
+        },
+        {
+          "source": "Atherosclerosis",
+          "target": "Simvastatin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Simvastatin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Niacin,Simvastatin": [
+          "Carbonyl Compound"
+        ],
+        "Atherosclerosis,Coronary Artery Disease": [
+          "Non-Neoplastic Cardiovascular Disorder"
+        ]
+      },
+      "id": "path_3857"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7472,
+        "final_score": 0.5403,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Niacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        },
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Niacin",
+          "target": "Atherosclerosis",
+          "label": "treats"
+        },
+        {
+          "source": "Atherosclerosis",
+          "target": "Rosuvastatin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Rosuvastatin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Niacin,Rosuvastatin": [
+          "Monocarboxylic Acid"
+        ],
+        "Atherosclerosis,Coronary Artery Disease": [
+          "Non-Neoplastic Cardiovascular Disorder"
+        ]
+      },
+      "id": "path_3858"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5373,
+        "final_score": 0.5373
+      },
+      "nodes": [
+        {
+          "id": "Niacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        },
+        {
+          "id": "Axillary Artery",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Niacin",
+          "target": "Atherosclerosis",
+          "label": "treats"
+        },
+        {
+          "source": "Atherosclerosis",
+          "target": "Axillary Artery",
+          "label": "localizes"
+        },
+        {
+          "source": "Axillary Artery",
+          "target": "Coronary Artery Disease",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atherosclerosis,Coronary Artery Disease": [
+          "Non-Neoplastic Cardiovascular Disorder"
+        ]
+      },
+      "id": "path_3860"
+    }
+  ]
+}

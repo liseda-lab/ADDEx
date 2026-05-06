@@ -1,0 +1,114 @@
+{
+  "id": "Compound::DB01201 - Gene::64816",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7232,
+        "final_score": 0.6949,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Rifamycins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifapentine",
+          "target": "Rifamycins",
+          "label": "is included in"
+        },
+        {
+          "source": "Rifamycins",
+          "target": "Rifampicin",
+          "label": "includes"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a43",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifapentine,Rifamycins": [
+          "Rifamycins"
+        ],
+        "Rifapentine,Rifampicin": [
+          "Antitubercular Agent",
+          "N-Iminopiperazine"
+        ],
+        "Rifamycins,Rifampicin": [
+          "Rifamycins"
+        ]
+      },
+      "id": "path_8452"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5526,
+        "final_score": 0.5526
+      },
+      "nodes": [
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Praziquantel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifapentine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Praziquantel",
+          "label": "is bound by"
+        },
+        {
+          "source": "Praziquantel",
+          "target": "Cyp3a43",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifapentine,Praziquantel": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_8453"
+    }
+  ]
+}

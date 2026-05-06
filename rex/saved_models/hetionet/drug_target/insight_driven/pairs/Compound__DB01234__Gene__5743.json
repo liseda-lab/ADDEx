@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01234 - Gene::5743",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5299,
+        "final_score": 0.5299
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Spinal Compression Fracture",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Triamcinolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Spinal Compression Fracture",
+          "label": "causes"
+        },
+        {
+          "source": "Spinal Compression Fracture",
+          "target": "Triamcinolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Triamcinolone",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Triamcinolone": [
+          "Fluorinated Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_11284"
+    }
+  ]
+}

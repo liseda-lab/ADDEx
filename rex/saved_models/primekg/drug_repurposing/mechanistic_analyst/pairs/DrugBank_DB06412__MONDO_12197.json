@@ -1,0 +1,102 @@
+{
+  "id": "DrugBank_DB06412 - MONDO_12197",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.87,
+        "final_score": 0.6017,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxymetholone",
+          "type": "Drug"
+        },
+        {
+          "id": "Aplastic Anemia",
+          "type": "Disease"
+        },
+        {
+          "id": "Romiplostim",
+          "type": "Drug"
+        },
+        {
+          "id": "Idiopathic Aplastic Anemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxymetholone",
+          "target": "Aplastic Anemia",
+          "label": "indication"
+        },
+        {
+          "source": "Aplastic Anemia",
+          "target": "Romiplostim",
+          "label": "indication"
+        },
+        {
+          "source": "Romiplostim",
+          "target": "Idiopathic Aplastic Anemia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_8262"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7979,
+        "final_score": 0.5656,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxymetholone",
+          "type": "Drug"
+        },
+        {
+          "id": "Aplastic Anemia",
+          "type": "Disease"
+        },
+        {
+          "id": "Acquired Aplastic Anemia",
+          "type": "Disease"
+        },
+        {
+          "id": "Idiopathic Aplastic Anemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxymetholone",
+          "target": "Aplastic Anemia",
+          "label": "indication"
+        },
+        {
+          "source": "Aplastic Anemia",
+          "target": "Acquired Aplastic Anemia",
+          "label": "parent-child"
+        },
+        {
+          "source": "Acquired Aplastic Anemia",
+          "target": "Idiopathic Aplastic Anemia",
+          "label": "parent-child"
+        }
+      ],
+      "id": "path_8263"
+    }
+  ]
+}

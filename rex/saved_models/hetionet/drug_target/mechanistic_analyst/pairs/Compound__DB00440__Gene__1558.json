@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00440 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5159,
+        "final_score": 0.5159
+      },
+      "nodes": [
+        {
+          "id": "Trimethoprim",
+          "type": "Compound"
+        },
+        {
+          "id": "Trimethobenzamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cisapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimethoprim",
+          "target": "Trimethobenzamide",
+          "label": "resembles"
+        },
+        {
+          "source": "Trimethobenzamide",
+          "target": "Cisapride",
+          "label": "resembles"
+        },
+        {
+          "source": "Cisapride",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trimethoprim,Trimethobenzamide": [
+          "Organic Aromatic Compound"
+        ],
+        "Trimethoprim,Cisapride": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Trimethobenzamide,Cisapride": [
+          "Benzamides",
+          "Antiemetic Agent"
+        ]
+      },
+      "id": "path_21403"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4935,
+        "final_score": 0.4935
+      },
+      "nodes": [
+        {
+          "id": "Trimethoprim",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c8 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trimethoprim",
+          "target": "Cytochrome P450 2c8 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c8 Inhibitors",
+          "target": "Pazopanib",
+          "label": "includes"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trimethoprim,Pazopanib": [
+          "Aminopyrimidine"
+        ]
+      },
+      "id": "path_21404"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "id": "Compound::DB00295 - Gene::4985",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7669,
+        "final_score": 0.8001,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprl1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Oprl1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprl1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13313"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6918,
+        "final_score": 0.7626,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Oprk1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprk1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13314"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6076,
+        "final_score": 0.6076
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Spasm Biliary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Levorphanol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Spasm Biliary",
+          "label": "causes"
+        },
+        {
+          "source": "Spasm Biliary",
+          "target": "Levorphanol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Levorphanol",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Levorphanol": [
+          "Opioid",
+          "Morphinane Alkaloid"
+        ]
+      },
+      "id": "path_13315"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5951,
+        "final_score": 0.5951
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ureteral Spasm",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Ureteral Spasm",
+          "label": "causes"
+        },
+        {
+          "source": "Ureteral Spasm",
+          "target": "Hydrocodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocodone",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Hydrocodone": [
+          "Opioid",
+          "Organic Heteropentacyclic Compound"
+        ]
+      },
+      "id": "path_13316"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5622,
+        "final_score": 0.5622
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Heroin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Heroin",
+          "label": "resembles"
+        },
+        {
+          "source": "Heroin",
+          "target": "Hydrocodone",
+          "label": "resembles"
+        },
+        {
+          "source": "Hydrocodone",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Heroin": [
+          "Opiate",
+          "Morphinane Alkaloid"
+        ],
+        "Morphine,Hydrocodone": [
+          "Opioid",
+          "Organic Heteropentacyclic Compound"
+        ],
+        "Heroin,Hydrocodone": [
+          "Opioid",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_13317"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5383,
+        "final_score": 0.5383
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Tone Flaccid",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydromorphone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Muscle Tone Flaccid",
+          "label": "causes"
+        },
+        {
+          "source": "Muscle Tone Flaccid",
+          "target": "Hydromorphone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydromorphone",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Hydromorphone": [
+          "Opioid",
+          "Organic Heteropentacyclic Compound"
+        ]
+      },
+      "id": "path_13318"
+    }
+  ]
+}

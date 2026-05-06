@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB08860 - Disease::DOID:3393",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5496,
+        "final_score": 0.5496
+      },
+      "nodes": [
+        {
+          "id": "Pitavastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Myoglobinuria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pitavastatin",
+          "target": "Myoglobinuria",
+          "label": "causes"
+        },
+        {
+          "source": "Myoglobinuria",
+          "target": "Rosuvastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rosuvastatin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pitavastatin,Rosuvastatin": [
+          "Dihydroxy Monocarboxylic Acid",
+          "Hmg-Coa Reductase Inhibitor"
+        ]
+      },
+      "id": "path_3326"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5252,
+        "final_score": 0.5252
+      },
+      "nodes": [
+        {
+          "id": "Pitavastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Myoglobinuria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pitavastatin",
+          "target": "Myoglobinuria",
+          "label": "causes"
+        },
+        {
+          "source": "Myoglobinuria",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pitavastatin,Pravastatin": [
+          "Hydroxy Monocarboxylic Acid",
+          "Hmg-Coa Reductase Inhibitor"
+        ]
+      },
+      "id": "path_3327"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "Compound::DB00967 - Disease::DOID:4481",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7421,
+        "final_score": 0.7044,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Desloratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H1 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Diphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desloratadine",
+          "target": "Histamine H1 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H1 Receptor Antagonists",
+          "target": "Diphenhydramine",
+          "label": "includes"
+        },
+        {
+          "source": "Diphenhydramine",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desloratadine,Diphenhydramine": [
+          "Histamine-1 Receptor Antagonist",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_4569"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5445,
+        "final_score": 0.5445
+      },
+      "nodes": [
+        {
+          "id": "Desloratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Azatadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desloratadine",
+          "target": "Azatadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Azatadine",
+          "target": "Loratadine",
+          "label": "resembles"
+        },
+        {
+          "source": "Loratadine",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desloratadine,Azatadine": [
+          "Histamine-1 Receptor Antagonist",
+          "Benzocycloheptapyridine"
+        ],
+        "Desloratadine,Loratadine": [
+          "Histamine-1 Receptor Antagonist",
+          "Benzocycloheptapyridine"
+        ],
+        "Azatadine,Loratadine": [
+          "Histamine-1 Receptor Antagonist",
+          "Benzocycloheptapyridine"
+        ]
+      },
+      "id": "path_4570"
+    }
+  ]
+}

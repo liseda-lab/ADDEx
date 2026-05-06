@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00589 - Gene::3358",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5639,
+        "final_score": 0.5639
+      },
+      "nodes": [
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Erythromelalgia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisuride",
+          "target": "Erythromelalgia",
+          "label": "causes"
+        },
+        {
+          "source": "Erythromelalgia",
+          "target": "Bromocriptine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromocriptine",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lisuride,Bromocriptine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_9562"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7127,
+        "final_score": 0.523,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Lisuride",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        },
+        {
+          "id": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisuride",
+          "target": "Htr2a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr2a",
+          "target": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
+          "label": "participates"
+        },
+        {
+          "source": "1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine Binding",
+          "target": "Htr2c",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9561"
+    }
+  ]
+}

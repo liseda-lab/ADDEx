@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00997 - Disease::DOID:1793",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4381,
+        "final_score": 0.4381
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hand And Foot Syndrome Secondary To Sickle Cell Anaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Irinotecan",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Hand And Foot Syndrome Secondary To Sickle Cell Anaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Hand And Foot Syndrome Secondary To Sickle Cell Anaemia",
+          "target": "Irinotecan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Irinotecan",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Irinotecan": [
+          "Topoisomerase Inhibitor",
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_5424"
+    }
+  ]
+}

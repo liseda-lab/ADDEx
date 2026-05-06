@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB06714 - Gene::6571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7182,
+        "final_score": 0.5258,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Propylhexedrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Taar1",
+          "type": "Gene"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propylhexedrine",
+          "target": "Taar1",
+          "label": "binds"
+        },
+        {
+          "source": "Taar1",
+          "target": "Methamphetamine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc18a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propylhexedrine,Methamphetamine": [
+          "Secondary Amino Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9752"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01087 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6371,
+        "final_score": 0.6371
+      },
+      "nodes": [
+        {
+          "id": "Primaquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Sulindac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Primaquine",
+          "target": "Cyp1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1b1",
+          "target": "Sulindac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Sulindac Metabolic Pathway",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4082"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5069,
+        "final_score": 0.5069
+      },
+      "nodes": [
+        {
+          "id": "Primaquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Epigastric Distress",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Primaquine",
+          "target": "Epigastric Distress",
+          "label": "causes"
+        },
+        {
+          "source": "Epigastric Distress",
+          "target": "Isoniazid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Isoniazid",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Primaquine,Isoniazid": [
+          "Anti-Infective Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_4083"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00232 - Gene::6557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8823,
+        "final_score": 0.7745,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Methyclothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Thiazides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Hydroflumethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methyclothiazide",
+          "target": "Thiazides",
+          "label": "is included in"
+        },
+        {
+          "source": "Thiazides",
+          "target": "Hydroflumethiazide",
+          "label": "includes"
+        },
+        {
+          "source": "Hydroflumethiazide",
+          "target": "Slc12a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methyclothiazide,Thiazides": [
+          "Thiazide"
+        ],
+        "Methyclothiazide,Hydroflumethiazide": [
+          "Benzothiadiazine",
+          "Thiazide Diuretic"
+        ],
+        "Thiazides,Hydroflumethiazide": [
+          "Thiazide"
+        ]
+      },
+      "id": "path_18011"
+    }
+  ]
+}

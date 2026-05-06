@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00205 - Gene::1719",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7896,
+        "final_score": 0.7281,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Pyrimethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrofolate Reductase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Proguanil",
+          "type": "Compound"
+        },
+        {
+          "id": "Dhfr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pyrimethamine",
+          "target": "Dihydrofolate Reductase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydrofolate Reductase Inhibitors",
+          "target": "Proguanil",
+          "label": "includes"
+        },
+        {
+          "source": "Proguanil",
+          "target": "Dhfr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pyrimethamine,Proguanil": [
+          "Monochlorobenzenes",
+          "Dihydrofolate Reductase Inhibitor"
+        ]
+      },
+      "id": "path_3735"
+    }
+  ]
+}

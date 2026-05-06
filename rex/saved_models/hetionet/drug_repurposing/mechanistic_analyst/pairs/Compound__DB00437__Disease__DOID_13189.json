@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00437 - Disease::DOID:13189",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4738,
+        "final_score": 0.4738
+      },
+      "nodes": [
+        {
+          "id": "Allopurinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Steatorrhoea",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Colchicine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gout",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Allopurinol",
+          "target": "Steatorrhoea",
+          "label": "causes"
+        },
+        {
+          "source": "Steatorrhoea",
+          "target": "Colchicine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Colchicine",
+          "target": "Gout",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Allopurinol,Colchicine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_5909"
+    }
+  ]
+}

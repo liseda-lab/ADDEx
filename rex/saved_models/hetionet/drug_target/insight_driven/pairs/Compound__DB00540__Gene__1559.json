@@ -1,0 +1,138 @@
+{
+  "id": "Compound::DB00540 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6276,
+        "final_score": 0.6276
+      },
+      "nodes": [
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nortriptyline",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_17848"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6207,
+        "final_score": 0.6207
+      },
+      "nodes": [
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nortriptyline",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_17849"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4991,
+        "final_score": 0.4991
+      },
+      "nodes": [
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Parotid Swelling",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nortriptyline",
+          "target": "Parotid Swelling",
+          "label": "causes"
+        },
+        {
+          "source": "Parotid Swelling",
+          "target": "Perphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nortriptyline,Perphenazine": [
+          "Organic Tricyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_17850"
+    }
+  ]
+}

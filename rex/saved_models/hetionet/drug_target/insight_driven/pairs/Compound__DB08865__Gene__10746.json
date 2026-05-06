@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB08865 - Gene::10746",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5043,
+        "final_score": 0.5043
+      },
+      "nodes": [
+        {
+          "id": "Crizotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Drug-induced Liver Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pazopanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Map3k2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Crizotinib",
+          "target": "Drug-induced Liver Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Drug-induced Liver Injury",
+          "target": "Pazopanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pazopanib",
+          "target": "Map3k2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Crizotinib,Pazopanib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_14598"
+    }
+  ]
+}

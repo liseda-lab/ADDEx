@@ -1,0 +1,155 @@
+{
+  "id": "Compound::DB00863 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6655,
+        "final_score": 0.6661,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Famotidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ranitidine",
+          "target": "Histamine H2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H2 Receptor Antagonists",
+          "target": "Famotidine",
+          "label": "includes"
+        },
+        {
+          "source": "Famotidine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ranitidine,Famotidine": [
+          "Histamine-2 Receptor Antagonist",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5745"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6536,
+        "final_score": 0.5768,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ranitidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2c19",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5746"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4482,
+        "final_score": 0.4482
+      },
+      "nodes": [
+        {
+          "id": "Ranitidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aplasia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Primidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ranitidine",
+          "target": "Aplasia",
+          "label": "causes"
+        },
+        {
+          "source": "Aplasia",
+          "target": "Primidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Primidone",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ranitidine,Primidone": [
+          "Organic Heteromonocyclic Compound"
+        ]
+      },
+      "id": "path_5747"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00508 - Gene::1812",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6517,
+        "final_score": 0.6592,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Triflupromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triflupromazine",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10986"
+    },
+    {
+      "score": {
+        "ic_mean": 0.428,
+        "final_score": 0.428
+      },
+      "nodes": [
+        {
+          "id": "Triflupromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Propiomazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triflupromazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Propiomazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Propiomazine",
+          "target": "Drd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Triflupromazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Triflupromazine,Propiomazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Dimetotiazine,Propiomazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_10987"
+    }
+  ]
+}

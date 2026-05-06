@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00623 - Gene::3358",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6689,
+        "final_score": 0.6678,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluphenazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Trifluoperazine",
+          "label": "includes"
+        },
+        {
+          "source": "Trifluoperazine",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluphenazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Fluphenazine,Trifluoperazine": [
+          "Organofluorine Compound",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Trifluoperazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_5123"
+    }
+  ]
+}

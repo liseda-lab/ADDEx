@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00425 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6492,
+        "final_score": 0.6492
+      },
+      "nodes": [
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zolpidem",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11031"
+    },
+    {
+      "score": {
+        "ic_mean": 0.448,
+        "final_score": 0.448
+      },
+      "nodes": [
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemoglobinaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zalcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zolpidem",
+          "target": "Haemoglobinaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Haemoglobinaemia",
+          "target": "Zalcitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zalcitabine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zolpidem,Zalcitabine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_11032"
+    }
+  ]
+}

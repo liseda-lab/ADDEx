@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00180 - Disease::DOID:4481",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4844,
+        "final_score": 0.4844
+      },
+      "nodes": [
+        {
+          "id": "Flunisolide",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyperadrenocorticism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flunisolide",
+          "target": "Hyperadrenocorticism",
+          "label": "causes"
+        },
+        {
+          "source": "Hyperadrenocorticism",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flunisolide,Methylprednisolone": [
+          "21-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_3888"
+    }
+  ]
+}

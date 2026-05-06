@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB06772 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5628,
+        "final_score": 0.5628
+      },
+      "nodes": [
+        {
+          "id": "Cabazitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Microtubule Inhibition",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabazitaxel",
+          "target": "Microtubule Inhibition",
+          "label": "is included in"
+        },
+        {
+          "source": "Microtubule Inhibition",
+          "target": "Docetaxel",
+          "label": "includes"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabazitaxel,Docetaxel": [
+          "Tetracyclic Diterpenoid"
+        ]
+      },
+      "id": "path_20368"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4227,
+        "final_score": 0.4227
+      },
+      "nodes": [
+        {
+          "id": "Cabazitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Ureteric Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amsacrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabazitaxel",
+          "target": "Ureteric Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Ureteric Obstruction",
+          "target": "Amsacrine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amsacrine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabazitaxel,Amsacrine": [
+          "Organic Molecular Entity",
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_20369"
+    }
+  ]
+}

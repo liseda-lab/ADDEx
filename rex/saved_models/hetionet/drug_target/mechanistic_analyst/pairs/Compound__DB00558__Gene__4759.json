@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00558 - Gene::4759",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8226,
+        "final_score": 0.6613,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Zanamivir",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuraminidase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oseltamivir",
+          "type": "Compound"
+        },
+        {
+          "id": "Neu2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zanamivir",
+          "target": "Neuraminidase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Neuraminidase Inhibitors",
+          "target": "Oseltamivir",
+          "label": "includes"
+        },
+        {
+          "source": "Oseltamivir",
+          "target": "Neu2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zanamivir,Oseltamivir": [
+          "Organonitrogen Compound",
+          "Antiviral Agent"
+        ]
+      },
+      "id": "path_7218"
+    }
+  ]
+}

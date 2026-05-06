@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00118 - Gene::4144",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.863,
+        "final_score": 0.8065,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "S-adenosylmethionine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mat1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Methionine Adenosyltransferase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Mat2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "S-adenosylmethionine",
+          "target": "Mat1a",
+          "label": "binds"
+        },
+        {
+          "source": "Mat1a",
+          "target": "Methionine Adenosyltransferase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Methionine Adenosyltransferase Activity",
+          "target": "Mat2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1076"
+    }
+  ]
+}

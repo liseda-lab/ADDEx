@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00404 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4798,
+        "final_score": 0.4798
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Fear",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Buspirone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Fear",
+          "label": "causes"
+        },
+        {
+          "source": "Fear",
+          "target": "Buspirone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Buspirone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Buspirone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antianxiety Agent"
+        ]
+      },
+      "id": "path_1197"
+    }
+  ]
+}

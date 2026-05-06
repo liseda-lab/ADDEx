@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01156 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4095,
+        "final_score": 0.4095
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Hyperchlorhydria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Hyperchlorhydria",
+          "label": "causes"
+        },
+        {
+          "source": "Hyperchlorhydria",
+          "target": "Iloperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Iloperidone",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Iloperidone": [
+          "Agent Affecting Nervous System",
+          "Aromatic Ketone"
+        ]
+      },
+      "id": "path_22083"
+    }
+  ]
+}

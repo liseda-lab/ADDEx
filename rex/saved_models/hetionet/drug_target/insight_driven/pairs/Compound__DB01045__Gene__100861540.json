@@ -1,0 +1,162 @@
+{
+  "id": "Compound::DB01045 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6579,
+        "final_score": 0.6623,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Rifamycins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Rifamycins",
+          "label": "is included in"
+        },
+        {
+          "source": "Rifamycins",
+          "target": "Rifapentine",
+          "label": "includes"
+        },
+        {
+          "source": "Rifapentine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Rifamycins": [
+          "Rifamycins"
+        ],
+        "Rifampicin,Rifapentine": [
+          "Antitubercular Agent",
+          "N-Iminopiperazine"
+        ],
+        "Rifamycins,Rifapentine": [
+          "Rifamycins"
+        ]
+      },
+      "id": "path_7997"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6179,
+        "final_score": 0.6179
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        },
+        {
+          "id": "Praziquantel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a43",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a43",
+          "target": "Praziquantel",
+          "label": "is bound by"
+        },
+        {
+          "source": "Praziquantel",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Praziquantel": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_7998"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5966,
+        "final_score": 0.5966
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a43",
+          "type": "Gene"
+        },
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a43",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a43",
+          "target": "Rifapentine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Rifapentine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Rifapentine": [
+          "Antitubercular Agent",
+          "N-Iminopiperazine"
+        ]
+      },
+      "id": "path_7999"
+    }
+  ]
+}

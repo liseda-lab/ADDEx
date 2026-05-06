@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00586 - Gene::1555",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4955,
+        "final_score": 0.4955
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Toxic Shock Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Thiotepa",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Toxic Shock Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Toxic Shock Syndrome",
+          "target": "Thiotepa",
+          "label": "is caused by"
+        },
+        {
+          "source": "Thiotepa",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Thiotepa": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_11106"
+    }
+  ]
+}

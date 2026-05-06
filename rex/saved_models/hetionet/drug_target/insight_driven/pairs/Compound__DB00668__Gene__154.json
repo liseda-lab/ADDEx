@@ -1,0 +1,155 @@
+{
+  "id": "Compound::DB00668 - Gene::154",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6872,
+        "final_score": 0.6769,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Norepinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Norepinephrine",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Epinephrine,Norepinephrine": [
+          "Catecholamine"
+        ],
+        "Catecholamines,Norepinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_1128"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6663,
+        "final_score": 0.6665,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        },
+        {
+          "id": "Epinephrine Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Adra2b",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2b",
+          "target": "Epinephrine Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Epinephrine Binding",
+          "target": "Adrb2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1129"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6307,
+        "final_score": 0.6307
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Epinephrine Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Adrb1",
+          "label": "binds"
+        },
+        {
+          "source": "Adrb1",
+          "target": "Epinephrine Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Epinephrine Binding",
+          "target": "Adrb2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1130"
+    }
+  ]
+}

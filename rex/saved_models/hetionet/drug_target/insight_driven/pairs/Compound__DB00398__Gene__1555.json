@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00398 - Gene::1555",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4457,
+        "final_score": 0.4457
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Leukoencephalopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ifosfamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Leukoencephalopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Leukoencephalopathy",
+          "target": "Ifosfamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ifosfamide",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Ifosfamide": [
+          "Antineoplastic Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_13271"
+    }
+  ]
+}

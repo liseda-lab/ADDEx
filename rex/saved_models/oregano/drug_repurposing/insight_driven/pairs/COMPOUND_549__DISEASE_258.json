@@ -1,0 +1,114 @@
+{
+  "id": "COMPOUND:549 - DISEASE:258",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6227,
+        "final_score": 0.6227
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "oligodendrocyte transcription factor 2",
+          "type": "Gene"
+        },
+        {
+          "id": "Methemoglobinemia",
+          "type": "Disease"
+        },
+        {
+          "id": "oligodendrocyte transcription factor 2",
+          "type": "Gene"
+        },
+        {
+          "id": "Arthritis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "oligodendrocyte transcription factor 2",
+          "label": "is affecting"
+        },
+        {
+          "source": "oligodendrocyte transcription factor 2",
+          "target": "Methemoglobinemia",
+          "label": "causes condition"
+        },
+        {
+          "source": "Methemoglobinemia",
+          "target": "oligodendrocyte transcription factor 2",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "oligodendrocyte transcription factor 2",
+          "target": "Arthritis",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_222"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8565,
+        "final_score": 0.5116,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 3.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein) pseudogene 5",
+          "type": "Gene"
+        },
+        {
+          "id": "Large neutral amino acids transporter small subunit 2",
+          "type": "Protein"
+        },
+        {
+          "id": "suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein) pseudogene 5",
+          "type": "Gene"
+        },
+        {
+          "id": "Arthritis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein) pseudogene 5",
+          "label": "is affecting"
+        },
+        {
+          "source": "suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein) pseudogene 5",
+          "target": "Large neutral amino acids transporter small subunit 2",
+          "label": "is gene product of"
+        },
+        {
+          "source": "Large neutral amino acids transporter small subunit 2",
+          "target": "suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein) pseudogene 5",
+          "label": "gene product of"
+        },
+        {
+          "source": "suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein) pseudogene 5",
+          "target": "Arthritis",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_221"
+    }
+  ]
+}

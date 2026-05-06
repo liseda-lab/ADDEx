@@ -1,0 +1,102 @@
+{
+  "id": "DrugBank_DB00107 - MONDO_41526",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6967,
+        "final_score": 0.515,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxytocin",
+          "type": "Drug"
+        },
+        {
+          "id": "Placenta Praevia",
+          "type": "Disease"
+        },
+        {
+          "id": "Dinoprost",
+          "type": "Drug"
+        },
+        {
+          "id": "Pregnancy Disorder With Abortive Outcome",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxytocin",
+          "target": "Placenta Praevia",
+          "label": "contraindication"
+        },
+        {
+          "source": "Placenta Praevia",
+          "target": "Dinoprost",
+          "label": "contraindication"
+        },
+        {
+          "source": "Dinoprost",
+          "target": "Pregnancy Disorder With Abortive Outcome",
+          "label": "indication"
+        }
+      ],
+      "id": "path_20818"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6572,
+        "final_score": 0.4953,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxytocin",
+          "type": "Drug"
+        },
+        {
+          "id": "Carboprost Tromethamine",
+          "type": "Drug"
+        },
+        {
+          "id": "Dinoprost",
+          "type": "Drug"
+        },
+        {
+          "id": "Pregnancy Disorder With Abortive Outcome",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxytocin",
+          "target": "Carboprost Tromethamine",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Carboprost Tromethamine",
+          "target": "Dinoprost",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Dinoprost",
+          "target": "Pregnancy Disorder With Abortive Outcome",
+          "label": "indication"
+        }
+      ],
+      "id": "path_20819"
+    }
+  ]
+}

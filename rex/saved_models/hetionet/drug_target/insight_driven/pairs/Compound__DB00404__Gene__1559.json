@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00404 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4481,
+        "final_score": 0.4481
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Clumsiness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nortriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Clumsiness",
+          "label": "causes"
+        },
+        {
+          "source": "Clumsiness",
+          "target": "Nortriptyline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nortriptyline",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Nortriptyline": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2046"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4479,
+        "final_score": 0.4479
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Choking Sensation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Eletriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Choking Sensation",
+          "label": "causes"
+        },
+        {
+          "source": "Choking Sensation",
+          "target": "Eletriptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Eletriptan",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Eletriptan": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_2047"
+    }
+  ]
+}

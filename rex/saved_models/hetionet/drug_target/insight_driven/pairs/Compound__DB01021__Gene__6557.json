@@ -1,0 +1,158 @@
+{
+  "id": "Compound::DB01021 - Gene::6557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.775,
+        "final_score": 0.7208,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Trichlormethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a3",
+          "type": "Gene"
+        },
+        {
+          "id": "Cation-coupled Chloride Cotransporters",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trichlormethiazide",
+          "target": "Slc12a3",
+          "label": "binds"
+        },
+        {
+          "source": "Slc12a3",
+          "target": "Cation-coupled Chloride Cotransporters",
+          "label": "participates"
+        },
+        {
+          "source": "Cation-coupled Chloride Cotransporters",
+          "target": "Slc12a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7037"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7233,
+        "final_score": 0.695,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Trichlormethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a3",
+          "type": "Gene"
+        },
+        {
+          "id": "Cation:chloride Symporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trichlormethiazide",
+          "target": "Slc12a3",
+          "label": "binds"
+        },
+        {
+          "source": "Slc12a3",
+          "target": "Cation:chloride Symporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Cation:chloride Symporter Activity",
+          "target": "Slc12a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7038"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5745,
+        "final_score": 0.5745
+      },
+      "nodes": [
+        {
+          "id": "Trichlormethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclothiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Quinethazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trichlormethiazide",
+          "target": "Cyclothiazide",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyclothiazide",
+          "target": "Quinethazone",
+          "label": "resembles"
+        },
+        {
+          "source": "Quinethazone",
+          "target": "Slc12a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trichlormethiazide,Cyclothiazide": [
+          "Thiazide Diuretic",
+          "Benzothiadiazine"
+        ],
+        "Trichlormethiazide,Quinethazone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ],
+        "Cyclothiazide,Quinethazone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_7039"
+    }
+  ]
+}

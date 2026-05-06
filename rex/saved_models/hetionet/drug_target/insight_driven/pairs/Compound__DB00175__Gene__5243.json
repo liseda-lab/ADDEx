@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00175 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4223,
+        "final_score": 0.4223
+      },
+      "nodes": [
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Polymyalgia Rheumatica",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pravastatin",
+          "target": "Polymyalgia Rheumatica",
+          "label": "causes"
+        },
+        {
+          "source": "Polymyalgia Rheumatica",
+          "target": "Doxazosin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxazosin",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pravastatin,Doxazosin": [
+          "Polycyclic Compound"
+        ]
+      },
+      "id": "path_22051"
+    }
+  ]
+}

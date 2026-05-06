@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01101 - Disease::DOID:10283",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3845,
+        "final_score": 0.3845
+      },
+      "nodes": [
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hand And Foot Syndrome Secondary To Sickle Cell Anaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostate Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Capecitabine",
+          "target": "Hand And Foot Syndrome Secondary To Sickle Cell Anaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Hand And Foot Syndrome Secondary To Sickle Cell Anaemia",
+          "target": "Epirubicin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Epirubicin",
+          "target": "Prostate Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Capecitabine,Epirubicin": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_4606"
+    }
+  ]
+}

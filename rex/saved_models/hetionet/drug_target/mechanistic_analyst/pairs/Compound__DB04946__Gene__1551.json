@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB04946 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6426,
+        "final_score": 0.6426
+      },
+      "nodes": [
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Iloperidone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6064"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4223,
+        "final_score": 0.4223
+      },
+      "nodes": [
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutrophil Count Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Iloperidone",
+          "target": "Neutrophil Count Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Neutrophil Count Increased",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Iloperidone,Indinavir": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_6065"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "Compound::DB01327 - Gene::9356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6893,
+        "final_score": 0.5947,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cefazolin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cephalosporins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ceftriaxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cefazolin",
+          "target": "Cephalosporins",
+          "label": "is included in"
+        },
+        {
+          "source": "Cephalosporins",
+          "target": "Ceftriaxone",
+          "label": "includes"
+        },
+        {
+          "source": "Ceftriaxone",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cefazolin,Cephalosporins": [
+          "Cephalosporin"
+        ],
+        "Cefazolin,Ceftriaxone": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cephalosporins,Ceftriaxone": [
+          "Cephalosporin"
+        ]
+      },
+      "id": "path_18209"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5336,
+        "final_score": 0.5336
+      },
+      "nodes": [
+        {
+          "id": "Cefazolin",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Sickness-like Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ceftriaxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cefazolin",
+          "target": "Serum Sickness-like Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Sickness-like Reaction",
+          "target": "Ceftriaxone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ceftriaxone",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cefazolin,Ceftriaxone": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ]
+      },
+      "id": "path_18210"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00203 - Gene::8654",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5962,
+        "final_score": 0.5962
+      },
+      "nodes": [
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinal Vascular Occlusion",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tadalafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sildenafil",
+          "target": "Retinal Vascular Occlusion",
+          "label": "causes"
+        },
+        {
+          "source": "Retinal Vascular Occlusion",
+          "target": "Tadalafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tadalafil",
+          "target": "Pde5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sildenafil,Tadalafil": [
+          "Organic Heterobicyclic Compound",
+          "Cgmp Phosphodiesterase Inhibitor"
+        ]
+      },
+      "id": "path_20252"
+    }
+  ]
+}

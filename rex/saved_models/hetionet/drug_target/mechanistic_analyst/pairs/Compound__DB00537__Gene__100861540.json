@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00537 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4737,
+        "final_score": 0.4737
+      },
+      "nodes": [
+        {
+          "id": "Ciprofloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Antibiotic Associated Colitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Telithromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ciprofloxacin",
+          "target": "Antibiotic Associated Colitis",
+          "label": "causes"
+        },
+        {
+          "source": "Antibiotic Associated Colitis",
+          "target": "Telithromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Telithromycin",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ciprofloxacin,Telithromycin": [
+          "Organooxygen Compound",
+          "Antibiotic"
+        ]
+      },
+      "id": "path_22106"
+    }
+  ]
+}

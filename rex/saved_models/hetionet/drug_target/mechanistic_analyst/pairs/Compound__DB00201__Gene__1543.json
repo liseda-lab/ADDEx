@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00201 - Gene::1543",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6567,
+        "final_score": 0.6617,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Theophylline",
+          "label": "includes"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Caffeine,Xanthines": [
+          "Purines"
+        ],
+        "Caffeine,Theophylline": [
+          "Methylxanthine"
+        ],
+        "Xanthines,Theophylline": [
+          "Purines"
+        ]
+      },
+      "id": "path_18810"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6142,
+        "final_score": 0.6142
+      },
+      "nodes": [
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Caffeine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp1a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18811"
+    }
+  ]
+}

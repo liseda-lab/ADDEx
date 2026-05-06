@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01033 - Gene::64078",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.813,
+        "final_score": 0.7815,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Mercaptopurine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc28a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Nucleoside:sodium Symporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc28a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mercaptopurine",
+          "target": "Slc28a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc28a2",
+          "target": "Nucleoside:sodium Symporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Nucleoside:sodium Symporter Activity",
+          "target": "Slc28a3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_21290"
+    }
+  ]
+}

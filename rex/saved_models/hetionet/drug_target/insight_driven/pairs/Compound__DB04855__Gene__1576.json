@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB04855 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4782,
+        "final_score": 0.4782
+      },
+      "nodes": [
+        {
+          "id": "Dronedarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Pulmonary Toxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lomustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronedarone",
+          "target": "Pulmonary Toxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Pulmonary Toxicity",
+          "target": "Lomustine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lomustine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronedarone,Lomustine": [
+          "Primary Amide"
+        ]
+      },
+      "id": "path_8508"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3994,
+        "final_score": 0.3994
+      },
+      "nodes": [
+        {
+          "id": "Dronedarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Hepatic Failure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dronedarone",
+          "target": "Acute Hepatic Failure",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Hepatic Failure",
+          "target": "Fluconazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluconazole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dronedarone,Fluconazole": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_8509"
+    }
+  ]
+}

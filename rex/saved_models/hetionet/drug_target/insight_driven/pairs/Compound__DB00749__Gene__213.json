@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00749 - Gene::213",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5111,
+        "final_score": 0.5111
+      },
+      "nodes": [
+        {
+          "id": "Etodolac",
+          "type": "Compound"
+        },
+        {
+          "id": "Renal Papillary Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etodolac",
+          "target": "Renal Papillary Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Renal Papillary Necrosis",
+          "target": "Fenoprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenoprofen",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etodolac,Fenoprofen": [
+          "Monocarboxylic Acid",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_316"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00728 - Gene::1134",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.874,
+        "final_score": 0.7703,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Rocuronium",
+          "type": "Compound"
+        },
+        {
+          "id": "Neuromuscular Nondepolarizing Blockade",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Atracurium",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrna1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rocuronium",
+          "target": "Neuromuscular Nondepolarizing Blockade",
+          "label": "is included in"
+        },
+        {
+          "source": "Neuromuscular Nondepolarizing Blockade",
+          "target": "Atracurium",
+          "label": "includes"
+        },
+        {
+          "source": "Atracurium",
+          "target": "Chrna1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rocuronium,Atracurium": [
+          "Nicotinic Antagonist",
+          "Quaternary Ammonium Ion"
+        ]
+      },
+      "id": "path_152"
+    }
+  ]
+}

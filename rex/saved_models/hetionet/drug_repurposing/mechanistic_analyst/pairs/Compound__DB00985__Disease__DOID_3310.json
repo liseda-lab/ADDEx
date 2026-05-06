@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00985 - Disease::DOID:3310",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6676,
+        "final_score": 0.5005,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dimenhydrinate",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dimenhydrinate",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        },
+        {
+          "source": "Allergic Rhinitis",
+          "target": "Loratadine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Loratadine",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dimenhydrinate,Loratadine": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_3598"
+    }
+  ]
+}

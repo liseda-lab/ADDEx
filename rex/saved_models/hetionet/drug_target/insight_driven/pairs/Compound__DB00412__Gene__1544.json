@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00412 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4909,
+        "final_score": 0.4909
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ketonuria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Streptozocin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Ketonuria",
+          "label": "causes"
+        },
+        {
+          "source": "Ketonuria",
+          "target": "Streptozocin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Streptozocin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Streptozocin": [
+          "Nitrogen Molecular Entity",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_14611"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00352 - Gene::3251",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6713,
+        "final_score": 0.419,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 3.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tioguanine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nodular Regenerative Hyperplasia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hprt1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tioguanine",
+          "target": "Nodular Regenerative Hyperplasia",
+          "label": "causes"
+        },
+        {
+          "source": "Nodular Regenerative Hyperplasia",
+          "target": "Azathioprine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Azathioprine",
+          "target": "Hprt1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tioguanine,Azathioprine": [
+          "Purines"
+        ]
+      },
+      "id": "path_6145"
+    }
+  ]
+}

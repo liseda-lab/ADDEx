@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB00882 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6559,
+        "final_score": 0.5779,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clomifene",
+          "target": "Cyp19a1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp19a1",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13011"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5702,
+        "final_score": 0.5702
+      },
+      "nodes": [
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clomifene",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13012"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4865,
+        "final_score": 0.4865
+      },
+      "nodes": [
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Dermoid Cyst",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Delavirdine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clomifene",
+          "target": "Dermoid Cyst",
+          "label": "causes"
+        },
+        {
+          "source": "Dermoid Cyst",
+          "target": "Delavirdine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Delavirdine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clomifene,Delavirdine": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_13013"
+    }
+  ]
+}

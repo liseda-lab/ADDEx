@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00988 - Gene::153",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6872,
+        "final_score": 0.6769,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Catecholamines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Catecholamines",
+          "label": "is included in"
+        },
+        {
+          "source": "Catecholamines",
+          "target": "Epinephrine",
+          "label": "includes"
+        },
+        {
+          "source": "Epinephrine",
+          "target": "Adrb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dopamine,Catecholamines": [
+          "Catecholamine"
+        ],
+        "Dopamine,Epinephrine": [
+          "Catecholamine",
+          "Catecholamine"
+        ],
+        "Catecholamines,Epinephrine": [
+          "Catecholamine"
+        ]
+      },
+      "id": "path_10761"
+    }
+  ]
+}

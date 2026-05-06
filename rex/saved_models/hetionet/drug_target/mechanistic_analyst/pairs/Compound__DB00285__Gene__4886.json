@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00285 - Gene::4886",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5486,
+        "final_score": 0.5486
+      },
+      "nodes": [
+        {
+          "id": "Venlafaxine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blood Pressure Diastolic Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Duloxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Npy1r",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Venlafaxine",
+          "target": "Blood Pressure Diastolic Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Blood Pressure Diastolic Increased",
+          "target": "Duloxetine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Duloxetine",
+          "target": "Npy1r",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Venlafaxine,Duloxetine": [
+          "Antidepressant Agent",
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_18881"
+    }
+  ]
+}

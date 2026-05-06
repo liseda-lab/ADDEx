@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00459 - Gene::5915",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8483,
+        "final_score": 0.7575,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinoids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Rarb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acitretin",
+          "target": "Retinoids",
+          "label": "is included in"
+        },
+        {
+          "source": "Retinoids",
+          "target": "Tazarotene",
+          "label": "includes"
+        },
+        {
+          "source": "Tazarotene",
+          "target": "Rarb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acitretin,Retinoids": [
+          "Retinoid"
+        ],
+        "Acitretin,Tazarotene": [
+          "Retinoic Acid Agent",
+          "Carbonyl Compound"
+        ],
+        "Retinoids,Tazarotene": [
+          "Retinoid"
+        ]
+      },
+      "id": "path_22535"
+    }
+  ]
+}

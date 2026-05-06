@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00951 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4985,
+        "final_score": 0.4985
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Symptom",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Hepatitis Symptom",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Symptom",
+          "target": "Erythromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Erythromycin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoniazid,Erythromycin": [
+          "Nitrogen Molecular Entity",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_18425"
+    }
+  ]
+}

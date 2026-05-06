@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01041 - Gene::7124",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.505,
+        "final_score": 0.505
+      },
+      "nodes": [
+        {
+          "id": "Thalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Pneumocystis Jirovecii Pneumonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pomalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Tnf",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thalidomide",
+          "target": "Pneumocystis Jirovecii Pneumonia",
+          "label": "causes"
+        },
+        {
+          "source": "Pneumocystis Jirovecii Pneumonia",
+          "target": "Pomalidomide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pomalidomide",
+          "target": "Tnf",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thalidomide,Pomalidomide": [
+          "Indole Compound",
+          "Isoindoles"
+        ]
+      },
+      "id": "path_551"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB01262 - Gene::1633",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6379,
+        "final_score": 0.6379
+      },
+      "nodes": [
+        {
+          "id": "Decitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dck",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Decitabine",
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Nelarabine",
+          "label": "includes"
+        },
+        {
+          "source": "Nelarabine",
+          "target": "Dck",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Decitabine,Nelarabine": [
+          "Nucleoside"
+        ]
+      },
+      "id": "path_5201"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5928,
+        "final_score": 0.5928
+      },
+      "nodes": [
+        {
+          "id": "Decitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oral Mucosal Petechiae",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clofarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dck",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Decitabine",
+          "target": "Oral Mucosal Petechiae",
+          "label": "causes"
+        },
+        {
+          "source": "Oral Mucosal Petechiae",
+          "target": "Clofarabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clofarabine",
+          "target": "Dck",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Decitabine,Clofarabine": [
+          "Nucleoside"
+        ]
+      },
+      "id": "path_5202"
+    }
+  ]
+}

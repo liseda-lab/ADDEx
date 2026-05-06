@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00331 - Disease::DOID:9352",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5271,
+        "final_score": 0.5271
+      },
+      "nodes": [
+        {
+          "id": "Metformin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ketonuria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metformin",
+          "target": "Ketonuria",
+          "label": "causes"
+        },
+        {
+          "source": "Ketonuria",
+          "target": "Rosiglitazone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rosiglitazone",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metformin,Rosiglitazone": [
+          "Organonitrogen Compound",
+          "Anti-Diabetic Agent"
+        ]
+      },
+      "id": "path_3844"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4607,
+        "final_score": 0.4607
+      },
+      "nodes": [
+        {
+          "id": "Metformin",
+          "type": "Compound"
+        },
+        {
+          "id": "Viral Diarrhoea",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Sitagliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Type 2 Diabetes Mellitus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Metformin",
+          "target": "Viral Diarrhoea",
+          "label": "causes"
+        },
+        {
+          "source": "Viral Diarrhoea",
+          "target": "Sitagliptin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Sitagliptin",
+          "target": "Type 2 Diabetes Mellitus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Metformin,Sitagliptin": [
+          "Organonitrogen Compound",
+          "Anti-Diabetic Agent"
+        ]
+      },
+      "id": "path_3845"
+    }
+  ]
+}

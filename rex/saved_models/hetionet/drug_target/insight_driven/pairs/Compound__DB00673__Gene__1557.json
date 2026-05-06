@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00673 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5327,
+        "final_score": 0.5327
+      },
+      "nodes": [
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "Blood Creatine Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aprepitant",
+          "target": "Blood Creatine Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Blood Creatine Increased",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aprepitant,Clopidogrel": [
+          "Benzenes"
+        ]
+      },
+      "id": "path_20887"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4443,
+        "final_score": 0.4443
+      },
+      "nodes": [
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "Obstipation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aprepitant",
+          "target": "Obstipation",
+          "label": "causes"
+        },
+        {
+          "source": "Obstipation",
+          "target": "Perphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aprepitant,Perphenazine": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_20888"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "COMPOUND:516 - DISEASE:472",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.615,
+        "final_score": 0.615
+      },
+      "nodes": [
+        {
+          "id": "erlotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "microRNA 496",
+          "type": "Gene"
+        },
+        {
+          "id": "Deafness, autosomal recessive 26",
+          "type": "Disease"
+        },
+        {
+          "id": "microRNA 496",
+          "type": "Gene"
+        },
+        {
+          "id": "Carcinoma, Large Cell",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "erlotinib",
+          "target": "microRNA 496",
+          "label": "is affecting"
+        },
+        {
+          "source": "microRNA 496",
+          "target": "Deafness, autosomal recessive 26",
+          "label": "causes condition"
+        },
+        {
+          "source": "Deafness, autosomal recessive 26",
+          "target": "microRNA 496",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "microRNA 496",
+          "target": "Carcinoma, Large Cell",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_329"
+    }
+  ]
+}

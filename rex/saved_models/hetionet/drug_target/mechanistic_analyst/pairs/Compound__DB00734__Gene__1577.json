@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00734 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5001,
+        "final_score": 0.5001
+      },
+      "nodes": [
+        {
+          "id": "Risperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Prolactin Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Domperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Risperidone",
+          "target": "Serum Prolactin Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Prolactin Increased",
+          "target": "Domperidone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Domperidone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Risperidone,Domperidone": [
+          "Antipsychotic Agent",
+          "Heteroarylpiperidine"
+        ]
+      },
+      "id": "path_11176"
+    }
+  ]
+}

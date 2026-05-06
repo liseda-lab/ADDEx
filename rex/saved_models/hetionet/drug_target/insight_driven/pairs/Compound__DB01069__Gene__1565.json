@@ -1,0 +1,160 @@
+{
+  "id": "Compound::DB01069 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6618,
+        "final_score": 0.6642,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Mesoridazine",
+          "label": "includes"
+        },
+        {
+          "source": "Mesoridazine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Promethazine,Mesoridazine": [
+          "Phenothiazines",
+          "Agent Affecting Nervous System"
+        ],
+        "Phenothiazines,Mesoridazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_5774"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4578,
+        "final_score": 0.4578
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Convulsive Seizure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Convulsive Seizure",
+          "label": "causes"
+        },
+        {
+          "source": "Convulsive Seizure",
+          "target": "Chloroquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chloroquine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Chloroquine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5775"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4554,
+        "final_score": 0.4554
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hysteria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Chlorphenamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Hysteria",
+          "label": "causes"
+        },
+        {
+          "source": "Hysteria",
+          "target": "Chlorphenamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Chlorphenamine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Chlorphenamine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5776"
+    }
+  ]
+}

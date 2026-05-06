@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB01607 - MONDO_20920",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6916,
+        "final_score": 0.5125,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ticarcillin",
+          "type": "Drug"
+        },
+        {
+          "id": "Lung Abscess (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Cefoxitin",
+          "type": "Drug"
+        },
+        {
+          "id": "Escherichia Coli Infection",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ticarcillin",
+          "target": "Lung Abscess (disease)",
+          "label": "indication"
+        },
+        {
+          "source": "Lung Abscess (disease)",
+          "target": "Cefoxitin",
+          "label": "indication"
+        },
+        {
+          "source": "Cefoxitin",
+          "target": "Escherichia Coli Infection",
+          "label": "indication"
+        }
+      ],
+      "id": "path_12900"
+    }
+  ]
+}

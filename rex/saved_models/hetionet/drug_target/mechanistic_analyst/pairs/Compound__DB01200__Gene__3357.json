@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01200 - Gene::3357",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5305,
+        "final_score": 0.5305
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Parkinson's Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Apomorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Parkinson's Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Parkinson's Disease",
+          "target": "Apomorphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Apomorphine",
+          "target": "Htr2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromocriptine,Apomorphine": [
+          "Alkaloid",
+          "Dopamine Agonist"
+        ]
+      },
+      "id": "path_4932"
+    }
+  ]
+}

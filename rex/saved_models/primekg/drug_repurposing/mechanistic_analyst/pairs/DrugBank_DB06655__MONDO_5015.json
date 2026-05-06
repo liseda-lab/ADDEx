@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB06655 - MONDO_5015",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.865,
+        "final_score": 0.4742,
+        "agentic_score": 0.0833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 1.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Liraglutide",
+          "type": "Drug"
+        },
+        {
+          "id": "Mme",
+          "type": "Gene/Protein"
+        },
+        {
+          "id": "Semaglutide",
+          "type": "Drug"
+        },
+        {
+          "id": "Diabetes Mellitus (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Liraglutide",
+          "target": "Mme",
+          "label": "enzyme"
+        },
+        {
+          "source": "Mme",
+          "target": "Semaglutide",
+          "label": "enzyme"
+        },
+        {
+          "source": "Semaglutide",
+          "target": "Diabetes Mellitus (disease)",
+          "label": "indication"
+        }
+      ],
+      "id": "path_10129"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4545,
+        "final_score": 0.4545
+      },
+      "nodes": [
+        {
+          "id": "Liraglutide",
+          "type": "Drug"
+        },
+        {
+          "id": "Insulin Argine",
+          "type": "Drug"
+        },
+        {
+          "id": "Vildagliptin",
+          "type": "Drug"
+        },
+        {
+          "id": "Diabetes Mellitus (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Liraglutide",
+          "target": "Insulin Argine",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Insulin Argine",
+          "target": "Vildagliptin",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Vildagliptin",
+          "target": "Diabetes Mellitus (disease)",
+          "label": "indication"
+        }
+      ],
+      "id": "path_10130"
+    }
+  ]
+}

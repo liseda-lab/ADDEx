@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00669 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4649,
+        "final_score": 0.4649
+      },
+      "nodes": [
+        {
+          "id": "Sumatriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemorrhage Subcutaneous",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ticagrelor",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sumatriptan",
+          "target": "Haemorrhage Subcutaneous",
+          "label": "causes"
+        },
+        {
+          "source": "Haemorrhage Subcutaneous",
+          "target": "Ticagrelor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ticagrelor",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sumatriptan,Ticagrelor": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5238"
+    }
+  ]
+}

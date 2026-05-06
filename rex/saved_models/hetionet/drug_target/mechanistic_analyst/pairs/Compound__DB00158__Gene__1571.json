@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00158 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5699,
+        "final_score": 0.5699
+      },
+      "nodes": [
+        {
+          "id": "Folic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Overactivity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pilocarpine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Folic Acid",
+          "target": "Overactivity",
+          "label": "causes"
+        },
+        {
+          "source": "Overactivity",
+          "target": "Pilocarpine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pilocarpine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Folic Acid,Pilocarpine": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_305"
+    }
+  ]
+}

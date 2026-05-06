@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB06772 - Gene::10383",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6848,
+        "final_score": 0.6757,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cabazitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Microtubule Inhibition",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabazitaxel",
+          "target": "Microtubule Inhibition",
+          "label": "is included in"
+        },
+        {
+          "source": "Microtubule Inhibition",
+          "target": "Docetaxel",
+          "label": "includes"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Tubb4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabazitaxel,Docetaxel": [
+          "Tetracyclic Diterpenoid"
+        ]
+      },
+      "id": "path_857"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5368,
+        "final_score": 0.5368
+      },
+      "nodes": [
+        {
+          "id": "Cabazitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Enterocolitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabazitaxel",
+          "target": "Neutropenic Enterocolitis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Enterocolitis",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Tubb4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabazitaxel,Docetaxel": [
+          "Tetracyclic Diterpenoid"
+        ]
+      },
+      "id": "path_858"
+    }
+  ]
+}

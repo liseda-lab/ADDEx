@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00857 - Gene::6713",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8483,
+        "final_score": 0.7575,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Terbinafine",
+          "type": "Compound"
+        },
+        {
+          "id": "Allylamine",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Naftifine",
+          "type": "Compound"
+        },
+        {
+          "id": "Sqle",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Terbinafine",
+          "target": "Allylamine",
+          "label": "is included in"
+        },
+        {
+          "source": "Allylamine",
+          "target": "Naftifine",
+          "label": "includes"
+        },
+        {
+          "source": "Naftifine",
+          "target": "Sqle",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Terbinafine,Allylamine": [
+          "Amine"
+        ],
+        "Terbinafine,Naftifine": [
+          "Naphthalenes",
+          "Antifungal Agent"
+        ],
+        "Allylamine,Naftifine": [
+          "Amine"
+        ]
+      },
+      "id": "path_20870"
+    }
+  ]
+}

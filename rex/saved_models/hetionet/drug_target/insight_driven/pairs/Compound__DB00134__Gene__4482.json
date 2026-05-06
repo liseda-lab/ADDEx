@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00134 - Gene::4482",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8284,
+        "final_score": 0.6642,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "L-methionine",
+          "type": "Compound"
+        },
+        {
+          "id": "Msrb2",
+          "type": "Gene"
+        },
+        {
+          "id": "Sulindac Metabolic Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Msra",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-methionine",
+          "target": "Msrb2",
+          "label": "binds"
+        },
+        {
+          "source": "Msrb2",
+          "target": "Sulindac Metabolic Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Sulindac Metabolic Pathway",
+          "target": "Msra",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2670"
+    }
+  ]
+}

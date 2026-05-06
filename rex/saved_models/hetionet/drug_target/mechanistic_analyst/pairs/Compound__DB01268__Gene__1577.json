@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01268 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4675,
+        "final_score": 0.4675
+      },
+      "nodes": [
+        {
+          "id": "Sunitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Metastasis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flutamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sunitinib",
+          "target": "Metastasis",
+          "label": "causes"
+        },
+        {
+          "source": "Metastasis",
+          "target": "Flutamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flutamide",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sunitinib,Flutamide": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_3295"
+    }
+  ]
+}

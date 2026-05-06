@@ -1,0 +1,138 @@
+{
+  "id": "Compound::DB01236 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6425,
+        "final_score": 0.6425
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Felbamate Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Felbamate Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Felbamate Metabolism",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9652"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5973,
+        "final_score": 0.5973
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Propofol",
+          "label": "includes"
+        },
+        {
+          "source": "Propofol",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Propofol": [
+          "Organic Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_9653"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5507,
+        "final_score": 0.5507
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Steroid Hydroxylase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Steroid Hydroxylase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid Hydroxylase Activity",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9654"
+    }
+  ]
+}

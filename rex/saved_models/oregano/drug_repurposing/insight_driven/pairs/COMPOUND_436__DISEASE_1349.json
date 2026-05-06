@@ -1,0 +1,90 @@
+{
+  "id": "COMPOUND:436 - DISEASE:1349",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6419,
+        "final_score": 0.6419
+      },
+      "nodes": [
+        {
+          "id": "lansoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 2-3",
+          "type": "Gene"
+        },
+        {
+          "id": "Oral Hemorrhage",
+          "type": "Disease"
+        },
+        {
+          "id": "keratin associated protein 2-3",
+          "type": "Gene"
+        },
+        {
+          "id": "heart rate",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "lansoprazole",
+          "target": "keratin associated protein 2-3",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 2-3",
+          "target": "Oral Hemorrhage",
+          "label": "causes condition"
+        },
+        {
+          "source": "Oral Hemorrhage",
+          "target": "keratin associated protein 2-3",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "keratin associated protein 2-3",
+          "target": "heart rate",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_1356"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6329,
+        "final_score": 0.6329
+      },
+      "nodes": [
+        {
+          "id": "lansoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 2-3",
+          "type": "Gene"
+        },
+        {
+          "id": "heart rate",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "lansoprazole",
+          "target": "keratin associated protein 2-3",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 2-3",
+          "target": "heart rate",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_1357"
+    }
+  ]
+}

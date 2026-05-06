@@ -1,0 +1,156 @@
+{
+  "id": "Compound::DB01064 - Gene::154",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7057,
+        "final_score": 0.7695,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Isoprenaline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Beta-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoprenaline",
+          "target": "Adrb1",
+          "label": "binds"
+        },
+        {
+          "source": "Adrb1",
+          "target": "Beta-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Beta-adrenergic Receptor Activity",
+          "target": "Adrb2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4844"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5271,
+        "final_score": 0.5271
+      },
+      "nodes": [
+        {
+          "id": "Isoprenaline",
+          "type": "Compound"
+        },
+        {
+          "id": "Isoetarine",
+          "type": "Compound"
+        },
+        {
+          "id": "Orciprenaline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoprenaline",
+          "target": "Isoetarine",
+          "label": "resembles"
+        },
+        {
+          "source": "Isoetarine",
+          "target": "Orciprenaline",
+          "label": "resembles"
+        },
+        {
+          "source": "Orciprenaline",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoprenaline,Orciprenaline": [
+          "Bronchodilator",
+          "Secondary Alcohol"
+        ]
+      },
+      "id": "path_4845"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4853,
+        "final_score": 0.4853
+      },
+      "nodes": [
+        {
+          "id": "Isoprenaline",
+          "type": "Compound"
+        },
+        {
+          "id": "Masoprocol",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoprenaline",
+          "target": "Masoprocol",
+          "label": "resembles"
+        },
+        {
+          "source": "Masoprocol",
+          "target": "Fenoterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenoterol",
+          "target": "Adrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoprenaline,Masoprocol": [
+          "Catechols"
+        ],
+        "Isoprenaline,Fenoterol": [
+          "Bronchodilator",
+          "Secondary Alcohol"
+        ],
+        "Masoprocol,Fenoterol": [
+          "Benzenediols"
+        ]
+      },
+      "id": "path_4846"
+    }
+  ]
+}

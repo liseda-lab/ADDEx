@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00206 - Gene::6580",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7019,
+        "final_score": 0.6426,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Reserpine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Monoamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Reserpine",
+          "target": "Slc18a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc18a1",
+          "target": "Monoamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Monoamine Transmembrane Transporter Activity",
+          "target": "Slc22a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6154"
+    }
+  ]
+}

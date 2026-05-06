@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00513 - Gene::5340",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.874,
+        "final_score": 0.687,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Aminocaproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Decreased Fibrinolysis",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tranexamic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Plg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aminocaproic Acid",
+          "target": "Decreased Fibrinolysis",
+          "label": "is included in"
+        },
+        {
+          "source": "Decreased Fibrinolysis",
+          "target": "Tranexamic Acid",
+          "label": "includes"
+        },
+        {
+          "source": "Tranexamic Acid",
+          "target": "Plg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aminocaproic Acid,Tranexamic Acid": [
+          "Hemostatic Agent",
+          "Monocarboxylic Acid"
+        ],
+        "Aminocaproic Acid,Plg": [
+          "Nitrogen Molecular Entity"
+        ],
+        "Tranexamic Acid,Plg": [
+          "P-Block Molecular Entity"
+        ]
+      },
+      "id": "path_16131"
+    }
+  ]
+}

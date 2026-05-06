@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00993 - Disease::DOID:9074",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4467,
+        "final_score": 0.4467
+      },
+      "nodes": [
+        {
+          "id": "Azathioprine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nitrogen Balance Negative",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Systemic Lupus Erythematosus",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Azathioprine",
+          "target": "Nitrogen Balance Negative",
+          "label": "causes"
+        },
+        {
+          "source": "Nitrogen Balance Negative",
+          "target": "Hydrocortisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Systemic Lupus Erythematosus",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Azathioprine,Hydrocortisone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_3025"
+    }
+  ]
+}

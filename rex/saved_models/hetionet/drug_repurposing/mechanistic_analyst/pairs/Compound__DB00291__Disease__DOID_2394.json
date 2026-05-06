@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB00291 - Disease::DOID:2394",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5466,
+        "final_score": 0.5466
+      },
+      "nodes": [
+        {
+          "id": "Chlorambucil",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Hirsutism",
+          "type": "Symptom"
+        },
+        {
+          "id": "Ovarian Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorambucil",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Hirsutism",
+          "label": "presents"
+        },
+        {
+          "source": "Hirsutism",
+          "target": "Ovarian Cancer",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_4443"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5308,
+        "final_score": 0.5308
+      },
+      "nodes": [
+        {
+          "id": "Chlorambucil",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Altretamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorambucil",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Altretamine",
+          "label": "includes"
+        },
+        {
+          "source": "Altretamine",
+          "target": "Ovarian Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorambucil,Altretamine": [
+          "Antineoplastic Alkylating Agent",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_4444"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4782,
+        "final_score": 0.4782
+      },
+      "nodes": [
+        {
+          "id": "Chlorambucil",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Melphalan",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorambucil",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Melphalan",
+          "label": "includes"
+        },
+        {
+          "source": "Melphalan",
+          "target": "Ovarian Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorambucil,Melphalan": [
+          "Nitrogen Mustard",
+          "Nitrogen Mustard Compound"
+        ]
+      },
+      "id": "path_4445"
+    }
+  ]
+}

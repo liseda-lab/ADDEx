@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB00829 - Gene::2567",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7436,
+        "final_score": 0.7051,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabre",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrg3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Gabre",
+          "label": "binds"
+        },
+        {
+          "source": "Gabre",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrg3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_3048"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4559,
+        "final_score": 0.4559
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cloxazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Cloxazolam",
+          "label": "resembles"
+        },
+        {
+          "source": "Cloxazolam",
+          "target": "Oxazepam",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxazepam",
+          "target": "Gabrg3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Cloxazolam": [
+          "Antianxiety Agent",
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Diazepam,Oxazepam": [
+          "Benzodiazepine",
+          "1,4-Benzodiazepinone"
+        ],
+        "Cloxazolam,Oxazepam": [
+          "Antianxiety Agent",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_3049"
+    }
+  ]
+}

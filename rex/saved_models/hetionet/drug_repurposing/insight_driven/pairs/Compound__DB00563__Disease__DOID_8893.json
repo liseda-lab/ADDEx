@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:8893",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4089,
+        "final_score": 0.4089
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "X-linked Lymphoproliferative Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "X-linked Lymphoproliferative Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "X-linked Lymphoproliferative Syndrome",
+          "target": "Cyclosporine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclosporine",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Cyclosporine": [
+          "Carboxamide"
+        ],
+        "X-linked Lymphoproliferative Syndrome,Psoriasis": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_2299"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3801,
+        "final_score": 0.3801
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Diplegia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Psoriasis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Diplegia",
+          "label": "causes"
+        },
+        {
+          "source": "Diplegia",
+          "target": "Hydrocortisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Psoriasis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Hydrocortisone": [
+          "Hydroxides"
+        ],
+        "Diplegia,Psoriasis": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_2300"
+    }
+  ]
+}

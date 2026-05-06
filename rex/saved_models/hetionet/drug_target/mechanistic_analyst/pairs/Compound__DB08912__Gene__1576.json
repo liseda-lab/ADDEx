@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB08912 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3978,
+        "final_score": 0.3978
+      },
+      "nodes": [
+        {
+          "id": "Dabrafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphoedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Anastrozole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dabrafenib",
+          "target": "Lymphoedema",
+          "label": "causes"
+        },
+        {
+          "source": "Lymphoedema",
+          "target": "Anastrozole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Anastrozole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dabrafenib,Anastrozole": [
+          "Azole",
+          "Antineoplastic Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_10734"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3547,
+        "final_score": 0.3547
+      },
+      "nodes": [
+        {
+          "id": "Dabrafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Disease Progression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dabrafenib",
+          "target": "Disease Progression",
+          "label": "causes"
+        },
+        {
+          "source": "Disease Progression",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dabrafenib,Morphine": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10735"
+    }
+  ]
+}

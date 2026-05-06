@@ -1,0 +1,65 @@
+{
+  "id": "Compound::DB00282 - Gene::2224",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.874,
+        "final_score": 0.7703,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Pamidronate",
+          "type": "Compound"
+        },
+        {
+          "id": "Diphosphonates",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ibandronate",
+          "type": "Compound"
+        },
+        {
+          "id": "Fdps",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pamidronate",
+          "target": "Diphosphonates",
+          "label": "is included in"
+        },
+        {
+          "source": "Diphosphonates",
+          "target": "Ibandronate",
+          "label": "includes"
+        },
+        {
+          "source": "Ibandronate",
+          "target": "Fdps",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pamidronate,Diphosphonates": [
+          "Phosphonic Acids"
+        ],
+        "Pamidronate,Ibandronate": [
+          "Phosphonic Acids"
+        ],
+        "Diphosphonates,Ibandronate": [
+          "1,1-Bis(Phosphonic Acid)"
+        ]
+      },
+      "id": "path_12512"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01026 - Gene::1594",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.728,
+        "final_score": 0.614,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp26a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Vitamins",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp27b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp26a1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp26a1",
+          "target": "Vitamins",
+          "label": "participates"
+        },
+        {
+          "source": "Vitamins",
+          "target": "Cyp27b1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11972"
+    }
+  ]
+}

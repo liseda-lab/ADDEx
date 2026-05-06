@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00317 - Disease::DOID:1324",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5143,
+        "final_score": 0.5143
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Vandetanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Thyroid Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Vandetanib",
+          "label": "resembles"
+        },
+        {
+          "source": "Vandetanib",
+          "target": "Thyroid Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Thyroid Cancer",
+          "target": "Lung Cancer",
+          "label": "resembles"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Vandetanib": [
+          "Organofluorine Compound",
+          "Epidermal Growth Factor Receptor Tyrosine Kinase Inhibitor"
+        ]
+      },
+      "id": "path_3353"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4408,
+        "final_score": 0.4408
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cancer Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Cancer Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Cancer Pain",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Lung Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Docetaxel": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_3354"
+    }
+  ]
+}

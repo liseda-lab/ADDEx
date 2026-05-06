@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01623 - Gene::3362",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.557,
+        "final_score": 0.557
+      },
+      "nodes": [
+        {
+          "id": "Thiothixene",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudoparkinsonism",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thiothixene",
+          "target": "Pseudoparkinsonism",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudoparkinsonism",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thiothixene,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_22175"
+    }
+  ]
+}

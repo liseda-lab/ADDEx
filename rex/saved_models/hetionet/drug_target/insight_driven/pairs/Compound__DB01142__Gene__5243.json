@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01142 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.453,
+        "final_score": 0.453
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Elevated Mood",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amantadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Elevated Mood",
+          "label": "causes"
+        },
+        {
+          "source": "Elevated Mood",
+          "target": "Amantadine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amantadine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxepin,Amantadine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_8219"
+    }
+  ]
+}

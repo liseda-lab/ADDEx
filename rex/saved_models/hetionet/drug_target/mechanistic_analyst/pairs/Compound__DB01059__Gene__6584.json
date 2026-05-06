@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB01059 - Gene::6584",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5387,
+        "final_score": 0.5387
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Candiduria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lomefloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Candiduria",
+          "label": "causes"
+        },
+        {
+          "source": "Candiduria",
+          "target": "Lomefloxacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lomefloxacin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Lomefloxacin": [
+          "Quinolone Antibiotic",
+          "Quinolone Antibiotic"
+        ]
+      },
+      "id": "path_12110"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4843,
+        "final_score": 0.4843
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Besifloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Lomefloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Besifloxacin",
+          "label": "resembles"
+        },
+        {
+          "source": "Besifloxacin",
+          "target": "Lomefloxacin",
+          "label": "resembles"
+        },
+        {
+          "source": "Lomefloxacin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Besifloxacin": [
+          "Quinolines",
+          "Quinolone Antibiotic"
+        ],
+        "Norfloxacin,Lomefloxacin": [
+          "Quinolone Antibiotic",
+          "Quinolone Antibiotic"
+        ],
+        "Besifloxacin,Lomefloxacin": [
+          "Quinolines",
+          "Quinolone Antibiotic"
+        ]
+      },
+      "id": "path_12111"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00130 - Gene::883",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7875,
+        "final_score": 0.7688,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "L-glutamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Gfpt2",
+          "type": "Gene"
+        },
+        {
+          "id": "L-glutamine Aminotransferase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ccbl1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "L-glutamine",
+          "target": "Gfpt2",
+          "label": "binds"
+        },
+        {
+          "source": "Gfpt2",
+          "target": "L-glutamine Aminotransferase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "L-glutamine Aminotransferase Activity",
+          "target": "Ccbl1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_22547"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB08893 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6285,
+        "final_score": 0.6285
+      },
+      "nodes": [
+        {
+          "id": "Mirabegron",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirabegron",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7869"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4169,
+        "final_score": 0.4169
+      },
+      "nodes": [
+        {
+          "id": "Mirabegron",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2d6 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Quinidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirabegron",
+          "target": "Cytochrome P450 2d6 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2d6 Inhibitors",
+          "target": "Quinidine",
+          "label": "includes"
+        },
+        {
+          "source": "Quinidine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirabegron,Quinidine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_7870"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "id": "Compound::DB00829 - Gene::2562",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7373,
+        "final_score": 0.5353,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabre",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Gabre",
+          "label": "binds"
+        },
+        {
+          "source": "Gabre",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabrb3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2075"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6759,
+        "final_score": 0.5046,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Quazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Quazepam",
+          "label": "includes"
+        },
+        {
+          "source": "Quazepam",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Diazepam,Quazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Quazepam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_2076"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4352,
+        "final_score": 0.4352
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cloxazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Cloxazolam",
+          "label": "resembles"
+        },
+        {
+          "source": "Cloxazolam",
+          "target": "Oxazepam",
+          "label": "resembles"
+        },
+        {
+          "source": "Oxazepam",
+          "target": "Gabrb3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Cloxazolam": [
+          "Antianxiety Agent",
+          "Organic Heteropolycyclic Compound"
+        ],
+        "Diazepam,Oxazepam": [
+          "Benzodiazepine",
+          "1,4-Benzodiazepinone"
+        ],
+        "Cloxazolam,Oxazepam": [
+          "Antianxiety Agent",
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_2077"
+    }
+  ]
+}

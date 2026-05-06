@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB01195 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6524,
+        "final_score": 0.6595,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Flecainide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flecainide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11782"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4328,
+        "final_score": 0.4328
+      },
+      "nodes": [
+        {
+          "id": "Flecainide",
+          "type": "Compound"
+        },
+        {
+          "id": "Spots Before Eyes",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Donepezil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flecainide",
+          "target": "Spots Before Eyes",
+          "label": "causes"
+        },
+        {
+          "source": "Spots Before Eyes",
+          "target": "Donepezil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Donepezil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_11783"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4216,
+        "final_score": 0.4216
+      },
+      "nodes": [
+        {
+          "id": "Flecainide",
+          "type": "Compound"
+        },
+        {
+          "id": "Corneal Deposits",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydroxychloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flecainide",
+          "target": "Corneal Deposits",
+          "label": "causes"
+        },
+        {
+          "source": "Corneal Deposits",
+          "target": "Hydroxychloroquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydroxychloroquine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flecainide,Hydroxychloroquine": [
+          "Organic Cation"
+        ]
+      },
+      "id": "path_11784"
+    }
+  ]
+}

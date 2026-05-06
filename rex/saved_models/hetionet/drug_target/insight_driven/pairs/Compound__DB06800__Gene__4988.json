@@ -1,0 +1,116 @@
+{
+  "id": "Compound::DB06800 - Gene::4988",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8321,
+        "final_score": 0.8327,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Methylnaltrexone",
+          "type": "Compound"
+        },
+        {
+          "id": "Opioid Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Naloxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylnaltrexone",
+          "target": "Opioid Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Opioid Antagonists",
+          "target": "Naloxone",
+          "label": "includes"
+        },
+        {
+          "source": "Naloxone",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylnaltrexone,Naloxone": [
+          "Polycyclic Compound",
+          "Opiate Antagonist"
+        ]
+      },
+      "id": "path_7859"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6116,
+        "final_score": 0.6116
+      },
+      "nodes": [
+        {
+          "id": "Methylnaltrexone",
+          "type": "Compound"
+        },
+        {
+          "id": "Nalbuphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrocodeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylnaltrexone",
+          "target": "Nalbuphine",
+          "label": "resembles"
+        },
+        {
+          "source": "Nalbuphine",
+          "target": "Dihydrocodeine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dihydrocodeine",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylnaltrexone,Nalbuphine": [
+          "Polycyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Methylnaltrexone,Dihydrocodeine": [
+          "Agent Affecting Nervous System",
+          "Organic Molecular Entity"
+        ],
+        "Nalbuphine,Dihydrocodeine": [
+          "Opioid Receptor Agonist",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_7860"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "Compound::DB00231 - Gene::2561",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6865,
+        "final_score": 0.6766,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Chlordiazepoxide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Chlordiazepoxide",
+          "label": "includes"
+        },
+        {
+          "source": "Chlordiazepoxide",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Temazepam,Chlordiazepoxide": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Chlordiazepoxide": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_15409"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5751,
+        "final_score": 0.5751
+      },
+      "nodes": [
+        {
+          "id": "Temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Disinhibition",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temazepam",
+          "target": "Disinhibition",
+          "label": "causes"
+        },
+        {
+          "source": "Disinhibition",
+          "target": "Etomidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temazepam,Etomidate": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_15410"
+    }
+  ]
+}

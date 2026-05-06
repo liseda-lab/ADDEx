@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:1015 - DISEASE:2242",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6538,
+        "final_score": 0.4936,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "mercaptopurine",
+          "type": "Compound"
+        },
+        {
+          "id": "purinergic receptor P2Y12",
+          "type": "Gene"
+        },
+        {
+          "id": "Myopathy, congenital, nonprogressive",
+          "type": "Disease"
+        },
+        {
+          "id": "purinergic receptor P2Y12",
+          "type": "Gene"
+        },
+        {
+          "id": "Neurofibromatosis 1",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "mercaptopurine",
+          "target": "purinergic receptor P2Y12",
+          "label": "is affecting"
+        },
+        {
+          "source": "purinergic receptor P2Y12",
+          "target": "Myopathy, congenital, nonprogressive",
+          "label": "causes condition"
+        },
+        {
+          "source": "Myopathy, congenital, nonprogressive",
+          "target": "purinergic receptor P2Y12",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "purinergic receptor P2Y12",
+          "target": "Neurofibromatosis 1",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_1115"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00988 - Gene::1812",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8389,
+        "final_score": 0.5861,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dopamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dopa Decarboxylase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "L-dopa",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dopamine",
+          "target": "Dopa Decarboxylase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dopa Decarboxylase Inhibitors",
+          "target": "L-dopa",
+          "label": "includes"
+        },
+        {
+          "source": "L-dopa",
+          "target": "Drd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dopamine,L-dopa": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_8657"
+    }
+  ]
+}

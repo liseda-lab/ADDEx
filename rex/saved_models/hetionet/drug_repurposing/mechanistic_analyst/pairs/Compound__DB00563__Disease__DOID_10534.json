@@ -1,0 +1,105 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:10534",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4871,
+        "final_score": 0.4871
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Esophageal Cancer",
+          "target": "Capecitabine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Stomach Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Capecitabine": [
+          "Heteroatomic Molecular Entity",
+          "Antimetabolite"
+        ]
+      },
+      "id": "path_5425"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3729,
+        "final_score": 0.3729
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Nail Changes",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Nail Changes",
+          "label": "causes"
+        },
+        {
+          "source": "Nail Changes",
+          "target": "Capecitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Stomach Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Capecitabine": [
+          "Heteroatomic Molecular Entity",
+          "Antimetabolite"
+        ],
+        "Nail Changes,Stomach Cancer": [
+          "Finding"
+        ]
+      },
+      "id": "path_5426"
+    }
+  ]
+}

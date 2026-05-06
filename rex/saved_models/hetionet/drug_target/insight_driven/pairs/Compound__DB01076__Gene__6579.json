@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01076 - Gene::6579",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6029,
+        "final_score": 0.6029
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Bile Acid Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Slco1b1",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1b1",
+          "target": "Bile Acid Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Bile Acid Transmembrane Transporter Activity",
+          "target": "Slco1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_677"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4134,
+        "final_score": 0.4134
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Ketoconazole",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ketoconazole",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Ketoconazole": [
+          "Benzenes",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_678"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB04840 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6113,
+        "final_score": 0.6113
+      },
+      "nodes": [
+        {
+          "id": "Debrisoquin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Codeine And Morphine Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Debrisoquin",
+          "target": "Abcb1",
+          "label": "binds"
+        },
+        {
+          "source": "Abcb1",
+          "target": "Codeine And Morphine Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Codeine And Morphine Metabolism",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_21128"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4227,
+        "final_score": 0.4227
+      },
+      "nodes": [
+        {
+          "id": "Debrisoquin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        },
+        {
+          "id": "Buspirone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Debrisoquin",
+          "target": "Abcb1",
+          "label": "binds"
+        },
+        {
+          "source": "Abcb1",
+          "target": "Buspirone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Buspirone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Debrisoquin,Buspirone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_21129"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00750 - Gene::6331",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6409,
+        "final_score": 0.6409
+      },
+      "nodes": [
+        {
+          "id": "Prilocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Amides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Scn5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prilocaine",
+          "target": "Amides",
+          "label": "is included in"
+        },
+        {
+          "source": "Amides",
+          "target": "Lidocaine",
+          "label": "includes"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Scn5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prilocaine,Amides": [
+          "Amide"
+        ],
+        "Prilocaine,Lidocaine": [
+          "Anesthetic Agent",
+          "Monocarboxylic Acid Amide"
+        ],
+        "Amides,Lidocaine": [
+          "Amide"
+        ]
+      },
+      "id": "path_9932"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5581,
+        "final_score": 0.5581
+      },
+      "nodes": [
+        {
+          "id": "Prilocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Myocardial Depression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Scn5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prilocaine",
+          "target": "Myocardial Depression",
+          "label": "causes"
+        },
+        {
+          "source": "Myocardial Depression",
+          "target": "Lidocaine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Scn5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prilocaine,Lidocaine": [
+          "Anesthetic Agent",
+          "Monocarboxylic Acid Amide"
+        ]
+      },
+      "id": "path_9933"
+    }
+  ]
+}

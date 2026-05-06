@@ -1,0 +1,105 @@
+{
+  "id": "Compound::DB00788 - Disease::DOID:13189",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6288,
+        "final_score": 0.6288
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Gout",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Indomethacin",
+          "label": "includes"
+        },
+        {
+          "source": "Indomethacin",
+          "target": "Gout",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Indomethacin": [
+          "Cyclooxygenase Inhibitor",
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_3915"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5101,
+        "final_score": 0.5101
+      },
+      "nodes": [
+        {
+          "id": "Naproxen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nephritic Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Gout",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naproxen",
+          "target": "Nephritic Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Nephritic Syndrome",
+          "target": "Indomethacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indomethacin",
+          "target": "Gout",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naproxen,Indomethacin": [
+          "Cyclooxygenase Inhibitor",
+          "Carboxylic Acid"
+        ],
+        "Nephritic Syndrome,Gout": [
+          "Disorder By Site"
+        ]
+      },
+      "id": "path_3916"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00445 - Disease::DOID:1793",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3479,
+        "final_score": 0.3479
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ocular Toxicity",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Ocular Toxicity",
+          "label": "causes"
+        },
+        {
+          "source": "Ocular Toxicity",
+          "target": "Fluorouracil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluorouracil",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epirubicin,Fluorouracil": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_6019"
+    }
+  ]
+}

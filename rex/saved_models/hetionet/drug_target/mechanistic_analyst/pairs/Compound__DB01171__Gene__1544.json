@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB01171 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6354,
+        "final_score": 0.6354
+      },
+      "nodes": [
+        {
+          "id": "Moclobemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Moclobemide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp1a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4439"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4579,
+        "final_score": 0.4579
+      },
+      "nodes": [
+        {
+          "id": "Moclobemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Skin Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Moclobemide",
+          "target": "Allergic Skin Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Allergic Skin Reaction",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Moclobemide,Fluphenazine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4440"
+    }
+  ]
+}

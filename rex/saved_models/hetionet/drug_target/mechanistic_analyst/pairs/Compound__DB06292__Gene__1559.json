@@ -1,0 +1,150 @@
+{
+  "id": "Compound::DB06292 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6866,
+        "final_score": 0.6766,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dapagliflozin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapagliflozin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4441"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6625,
+        "final_score": 0.6646,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dapagliflozin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Epoxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapagliflozin",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Arachidonic Acid Epoxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Epoxygenase Activity",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4442"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4167,
+        "final_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Dapagliflozin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypoglycemic Reaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Glimepiride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dapagliflozin",
+          "target": "Hypoglycemic Reaction",
+          "label": "causes"
+        },
+        {
+          "source": "Hypoglycemic Reaction",
+          "target": "Glimepiride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Glimepiride",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dapagliflozin,Glimepiride": [
+          "Organochalcogen Compound",
+          "Anti-Diabetic Agent"
+        ]
+      },
+      "id": "path_4443"
+    }
+  ]
+}

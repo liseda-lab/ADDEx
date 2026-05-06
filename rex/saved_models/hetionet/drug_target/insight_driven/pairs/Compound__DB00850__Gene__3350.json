@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00850 - Gene::3350",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7062,
+        "final_score": 0.6864,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Mesoridazine",
+          "label": "includes"
+        },
+        {
+          "source": "Mesoridazine",
+          "target": "Htr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Perphenazine,Mesoridazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Mesoridazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_22606"
+    }
+  ]
+}

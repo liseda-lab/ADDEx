@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00519 - Gene::6565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5229,
+        "final_score": 0.5229
+      },
+      "nodes": [
+        {
+          "id": "Trandolapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Potassium Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cefepime",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trandolapril",
+          "target": "Potassium Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Potassium Increased",
+          "target": "Cefepime",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cefepime",
+          "target": "Slc15a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trandolapril,Cefepime": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_8177"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4325,
+        "final_score": 0.4325
+      },
+      "nodes": [
+        {
+          "id": "Trandolapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Mitiglinide",
+          "type": "Compound"
+        },
+        {
+          "id": "Nateglinide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc15a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trandolapril",
+          "target": "Mitiglinide",
+          "label": "resembles"
+        },
+        {
+          "source": "Mitiglinide",
+          "target": "Nateglinide",
+          "label": "resembles"
+        },
+        {
+          "source": "Nateglinide",
+          "target": "Slc15a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trandolapril,Mitiglinide": [
+          "Carboxylic Acid"
+        ],
+        "Trandolapril,Nateglinide": [
+          "Carboxylic Acid"
+        ],
+        "Mitiglinide,Nateglinide": [
+          "Carboxylic Acid",
+          "Meglitinide Antidiabetic Agent"
+        ]
+      },
+      "id": "path_8178"
+    }
+  ]
+}

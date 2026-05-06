@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00227 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.433,
+        "final_score": 0.433
+      },
+      "nodes": [
+        {
+          "id": "Lovastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Polymyalgia Rheumatica",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lovastatin",
+          "target": "Polymyalgia Rheumatica",
+          "label": "causes"
+        },
+        {
+          "source": "Polymyalgia Rheumatica",
+          "target": "Doxazosin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxazosin",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lovastatin,Doxazosin": [
+          "Bicyclic Compound"
+        ]
+      },
+      "id": "path_22671"
+    }
+  ]
+}

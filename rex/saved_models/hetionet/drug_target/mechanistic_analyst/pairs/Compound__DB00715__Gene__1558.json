@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00715 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3971,
+        "final_score": 0.3971
+      },
+      "nodes": [
+        {
+          "id": "Paroxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Homicidal Ideation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Levomilnacipran",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paroxetine",
+          "target": "Homicidal Ideation",
+          "label": "causes"
+        },
+        {
+          "source": "Homicidal Ideation",
+          "target": "Levomilnacipran",
+          "label": "is caused by"
+        },
+        {
+          "source": "Levomilnacipran",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paroxetine,Levomilnacipran": [
+          "Antidepressant Agent",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_10721"
+    }
+  ]
+}

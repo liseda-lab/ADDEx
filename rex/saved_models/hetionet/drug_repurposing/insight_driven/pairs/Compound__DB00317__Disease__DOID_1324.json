@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00317 - Disease::DOID:1324",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6396,
+        "final_score": 0.6396
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cancer Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fentanyl",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Cancer Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Cancer Pain",
+          "target": "Fentanyl",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fentanyl",
+          "target": "Lung Cancer",
+          "label": "palliates"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Fentanyl": [
+          "Benzenes"
+        ]
+      },
+      "id": "path_2777"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4408,
+        "final_score": 0.4408
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cancer Pain",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Cancer Pain",
+          "label": "causes"
+        },
+        {
+          "source": "Cancer Pain",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Lung Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Docetaxel": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_2778"
+    }
+  ]
+}

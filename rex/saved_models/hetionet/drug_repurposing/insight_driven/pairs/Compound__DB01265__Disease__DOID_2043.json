@@ -1,0 +1,57 @@
+{
+  "id": "Compound::DB01265 - Disease::DOID:2043",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6054,
+        "final_score": 0.6054
+      },
+      "nodes": [
+        {
+          "id": "Telbivudine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis B",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Entecavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis B",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Telbivudine",
+          "target": "Hepatitis B",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis B",
+          "target": "Entecavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Entecavir",
+          "target": "Hepatitis B",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Telbivudine,Entecavir": [
+          "Nucleoside Reverse Transcriptase Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Hepatitis B,Hepatitis B": [
+          "Hepatitis B Infection"
+        ]
+      },
+      "id": "path_5149"
+    }
+  ]
+}

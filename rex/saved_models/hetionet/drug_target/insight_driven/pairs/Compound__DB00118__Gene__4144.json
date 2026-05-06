@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00118 - Gene::4144",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.863,
+        "final_score": 0.7648,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "S-adenosylmethionine",
+          "type": "Compound"
+        },
+        {
+          "id": "Mat1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Methionine Adenosyltransferase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Mat2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "S-adenosylmethionine",
+          "target": "Mat1a",
+          "label": "binds"
+        },
+        {
+          "source": "Mat1a",
+          "target": "Methionine Adenosyltransferase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Methionine Adenosyltransferase Activity",
+          "target": "Mat2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1043"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6885,
+        "final_score": 0.5942,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "S-adenosylmethionine",
+          "type": "Compound"
+        },
+        {
+          "id": "Loc102724560",
+          "type": "Gene"
+        },
+        {
+          "id": "Trans-sulfuration And One Carbon Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Mat2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "S-adenosylmethionine",
+          "target": "Loc102724560",
+          "label": "binds"
+        },
+        {
+          "source": "Loc102724560",
+          "target": "Trans-sulfuration And One Carbon Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Trans-sulfuration And One Carbon Metabolism",
+          "target": "Mat2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1044"
+    }
+  ]
+}

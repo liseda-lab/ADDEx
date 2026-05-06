@@ -1,0 +1,109 @@
+{
+  "id": "Compound::DB00812 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5485,
+        "final_score": 0.5485
+      },
+      "nodes": [
+        {
+          "id": "Phenylbutazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Tetracycline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenylbutazone",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Tetracycline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Tetracycline",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenylbutazone,Tetracycline": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_300"
+    },
+    {
+      "score": {
+        "ic_mean": 0.254,
+        "final_score": 0.254
+      },
+      "nodes": [
+        {
+          "id": "Phenylbutazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Alverine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenoxybenzamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenylbutazone",
+          "target": "Alverine",
+          "label": "resembles"
+        },
+        {
+          "source": "Alverine",
+          "target": "Phenoxybenzamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenoxybenzamine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenylbutazone,Alverine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ],
+        "Phenylbutazone,Phenoxybenzamine": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ],
+        "Alverine,Phenoxybenzamine": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_301"
+    }
+  ]
+}

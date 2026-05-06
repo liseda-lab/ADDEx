@@ -1,0 +1,148 @@
+{
+  "id": "Compound::DB00338 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7122,
+        "final_score": 0.6894,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20256"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4963,
+        "final_score": 0.4963
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Colitis Microscopic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ticlopidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Colitis Microscopic",
+          "label": "causes"
+        },
+        {
+          "source": "Colitis Microscopic",
+          "target": "Ticlopidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ticlopidine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Ticlopidine": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_20257"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4943,
+        "final_score": 0.4943
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Colitis Microscopic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Colitis Microscopic",
+          "label": "causes"
+        },
+        {
+          "source": "Colitis Microscopic",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Clopidogrel": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_20258"
+    }
+  ]
+}

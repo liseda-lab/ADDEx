@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00635 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5477,
+        "final_score": 0.5477
+      },
+      "nodes": [
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Serous Retinopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisone",
+          "target": "Central Serous Retinopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Central Serous Retinopathy",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisone,Methylprednisolone": [
+          "Therapeutic Glucocorticoid",
+          "3-Oxo-Delta(1),Delta(4)-Steroid"
+        ]
+      },
+      "id": "path_21565"
+    }
+  ]
+}

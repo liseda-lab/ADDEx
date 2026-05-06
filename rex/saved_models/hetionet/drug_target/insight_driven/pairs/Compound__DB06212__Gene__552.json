@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB06212 - Gene::552",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7203,
+        "final_score": 0.5268,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tolvaptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Osmotic Demyelination Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Conivaptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Avpr1a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tolvaptan",
+          "target": "Osmotic Demyelination Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Osmotic Demyelination Syndrome",
+          "target": "Conivaptan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Conivaptan",
+          "target": "Avpr1a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tolvaptan,Conivaptan": [
+          "Vasopressin Antagonist",
+          "Benzazepine"
+        ]
+      },
+      "id": "path_13196"
+    }
+  ]
+}

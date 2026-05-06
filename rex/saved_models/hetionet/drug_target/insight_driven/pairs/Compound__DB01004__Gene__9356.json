@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB01004 - Gene::9356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6326,
+        "final_score": 0.6326
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Valaciclovir",
+          "label": "includes"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_20590"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5975,
+        "final_score": 0.5975
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Foscarnet",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Foscarnet",
+          "label": "includes"
+        },
+        {
+          "source": "Foscarnet",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ganciclovir,Foscarnet": [
+          "Enzyme Inhibitor",
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_20591"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4901,
+        "final_score": 0.4901
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Myasthenic Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gentamicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Myasthenic Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Myasthenic Syndrome",
+          "target": "Gentamicin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gentamicin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ganciclovir,Gentamicin": [
+          "Nitrogen Molecular Entity",
+          "Anti-Infective Agent"
+        ]
+      },
+      "id": "path_20592"
+    }
+  ]
+}

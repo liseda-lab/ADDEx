@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB00549 - Disease::DOID:2841",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5273,
+        "final_score": 0.5273
+      },
+      "nodes": [
+        {
+          "id": "Zafirlukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Eosinophilic Pneumonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cromoglicic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zafirlukast",
+          "target": "Eosinophilic Pneumonia",
+          "label": "causes"
+        },
+        {
+          "source": "Eosinophilic Pneumonia",
+          "target": "Cromoglicic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cromoglicic Acid",
+          "target": "Asthma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zafirlukast,Cromoglicic Acid": [
+          "Anti-Asthmatic Agent",
+          "Carbonyl Compound"
+        ],
+        "Eosinophilic Pneumonia,Asthma": [
+          "Non-Neoplastic Lung Disorder"
+        ]
+      },
+      "id": "path_2956"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4321,
+        "final_score": 0.4321
+      },
+      "nodes": [
+        {
+          "id": "Zafirlukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Tendency To Bruise",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zafirlukast",
+          "target": "Increased Tendency To Bruise",
+          "label": "causes"
+        },
+        {
+          "source": "Increased Tendency To Bruise",
+          "target": "Methylprednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Asthma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zafirlukast,Methylprednisolone": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_2957"
+    }
+  ]
+}

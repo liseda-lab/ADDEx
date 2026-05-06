@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB08871 - Gene::84617",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7223,
+        "final_score": 0.6945,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Eribulin",
+          "type": "Compound"
+        },
+        {
+          "id": "Microtubule Inhibition",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cabazitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Tubb6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Eribulin",
+          "target": "Microtubule Inhibition",
+          "label": "is included in"
+        },
+        {
+          "source": "Microtubule Inhibition",
+          "target": "Cabazitaxel",
+          "label": "includes"
+        },
+        {
+          "source": "Cabazitaxel",
+          "target": "Tubb6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Eribulin,Cabazitaxel": [
+          "Tubulin Binding Agent",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_22351"
+    }
+  ]
+}

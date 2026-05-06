@@ -1,0 +1,116 @@
+{
+  "id": "Compound::DB01110 - Gene::1588",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5577,
+        "final_score": 0.5577
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Isoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Tioconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Isoconazole",
+          "label": "resembles"
+        },
+        {
+          "source": "Isoconazole",
+          "target": "Tioconazole",
+          "label": "resembles"
+        },
+        {
+          "source": "Tioconazole",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Isoconazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Miconazole,Tioconazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Isoconazole,Tioconazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ]
+      },
+      "id": "path_4206"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5559,
+        "final_score": 0.5559
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tioconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Tioconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Tioconazole",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Azoles": [
+          "Azole"
+        ],
+        "Miconazole,Tioconazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Azoles,Tioconazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_4207"
+    }
+  ]
+}

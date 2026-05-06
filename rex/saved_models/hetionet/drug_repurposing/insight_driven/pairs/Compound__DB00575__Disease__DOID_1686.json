@@ -1,0 +1,164 @@
+{
+  "id": "Compound::DB00575 - Disease::DOID:1686",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6738,
+        "final_score": 0.6702,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lofexidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Apraclonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Glaucoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Lofexidine",
+          "label": "resembles"
+        },
+        {
+          "source": "Lofexidine",
+          "target": "Apraclonidine",
+          "label": "resembles"
+        },
+        {
+          "source": "Apraclonidine",
+          "target": "Glaucoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Lofexidine": [
+          "Dichlorobenzene",
+          "Alpha-Adrenergic Agonist"
+        ],
+        "Clonidine,Apraclonidine": [
+          "Dichlorobenzene",
+          "Alpha-Adrenergic Agonist"
+        ],
+        "Lofexidine,Apraclonidine": [
+          "Dichlorobenzene",
+          "Alpha-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_3265"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6159,
+        "final_score": 0.6159
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blanching",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Apraclonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Glaucoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Blanching",
+          "label": "causes"
+        },
+        {
+          "source": "Blanching",
+          "target": "Apraclonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Apraclonidine",
+          "target": "Glaucoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Apraclonidine": [
+          "Dichlorobenzene",
+          "Alpha-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_3266"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6021,
+        "final_score": 0.6021
+      },
+      "nodes": [
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blanching",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Brimonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Glaucoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clonidine",
+          "target": "Blanching",
+          "label": "causes"
+        },
+        {
+          "source": "Blanching",
+          "target": "Brimonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Brimonidine",
+          "target": "Glaucoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clonidine,Brimonidine": [
+          "Alpha-Adrenergic Agonist",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_3267"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00656 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5067,
+        "final_score": 0.5067
+      },
+      "nodes": [
+        {
+          "id": "Trazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Wakefulness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trazodone",
+          "target": "Wakefulness",
+          "label": "causes"
+        },
+        {
+          "source": "Wakefulness",
+          "target": "Buprenorphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trazodone,Buprenorphine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_211"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4575,
+        "final_score": 0.4575
+      },
+      "nodes": [
+        {
+          "id": "Trazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Orgasm Abnormal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trazodone",
+          "target": "Orgasm Abnormal",
+          "label": "causes"
+        },
+        {
+          "source": "Orgasm Abnormal",
+          "target": "Finasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trazodone,Finasteride": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_212"
+    }
+  ]
+}

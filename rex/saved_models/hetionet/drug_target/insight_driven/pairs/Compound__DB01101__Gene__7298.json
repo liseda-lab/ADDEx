@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01101 - Gene::7298",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4995,
+        "final_score": 0.4995
+      },
+      "nodes": [
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Metastases To Liver",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pemetrexed",
+          "type": "Compound"
+        },
+        {
+          "id": "Tyms",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Capecitabine",
+          "target": "Metastases To Liver",
+          "label": "causes"
+        },
+        {
+          "source": "Metastases To Liver",
+          "target": "Pemetrexed",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pemetrexed",
+          "target": "Tyms",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Capecitabine,Pemetrexed": [
+          "Carbonyl Compound",
+          "Antimetabolite"
+        ]
+      },
+      "id": "path_18525"
+    }
+  ]
+}

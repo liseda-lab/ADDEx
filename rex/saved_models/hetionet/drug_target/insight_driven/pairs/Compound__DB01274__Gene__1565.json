@@ -1,0 +1,149 @@
+{
+  "id": "Compound::DB01274 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6794,
+        "final_score": 0.5064,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Arformoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Arformoterol",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_13985"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4365,
+        "final_score": 0.4365
+      },
+      "nodes": [
+        {
+          "id": "Arformoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Viral Upper Respiratory Tract Infection",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ciclesonide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Arformoterol",
+          "target": "Viral Upper Respiratory Tract Infection",
+          "label": "causes"
+        },
+        {
+          "source": "Viral Upper Respiratory Tract Infection",
+          "target": "Ciclesonide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ciclesonide",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Arformoterol,Ciclesonide": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_13986"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4206,
+        "final_score": 0.4206
+      },
+      "nodes": [
+        {
+          "id": "Arformoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Tendinous Contracture",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Arformoterol",
+          "target": "Tendinous Contracture",
+          "label": "causes"
+        },
+        {
+          "source": "Tendinous Contracture",
+          "target": "Nefazodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nefazodone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Arformoterol,Nefazodone": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_13987"
+    }
+  ]
+}

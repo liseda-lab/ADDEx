@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01246 - Gene::3269",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7395,
+        "final_score": 0.6198,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Alimemazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Sensitisation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Mepyramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alimemazine",
+          "target": "Skin Sensitisation",
+          "label": "causes"
+        },
+        {
+          "source": "Skin Sensitisation",
+          "target": "Mepyramine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Mepyramine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alimemazine,Mepyramine": [
+          "Organic Cyclic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_1019"
+    }
+  ]
+}

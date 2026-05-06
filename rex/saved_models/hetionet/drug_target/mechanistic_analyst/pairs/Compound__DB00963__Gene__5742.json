@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00963 - Gene::5742",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7008,
+        "final_score": 0.7254,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Bromfenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyclooxygenase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nepafenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromfenac",
+          "target": "Cyclooxygenase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cyclooxygenase Inhibitors",
+          "target": "Nepafenac",
+          "label": "includes"
+        },
+        {
+          "source": "Nepafenac",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromfenac,Nepafenac": [
+          "Organonitrogen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_6759"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6108,
+        "final_score": 0.6108
+      },
+      "nodes": [
+        {
+          "id": "Bromfenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Corneal Scar",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nepafenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromfenac",
+          "target": "Corneal Scar",
+          "label": "causes"
+        },
+        {
+          "source": "Corneal Scar",
+          "target": "Nepafenac",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nepafenac",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromfenac,Nepafenac": [
+          "Organonitrogen Compound",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_6760"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00829 - Gene::2567",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5602,
+        "final_score": 0.5602
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Bromazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromazepam",
+          "target": "Gabrg3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Bromazepam": [
+          "Benzodiazepine",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_2998"
+    }
+  ]
+}

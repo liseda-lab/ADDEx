@@ -1,0 +1,122 @@
+{
+  "id": "Compound::DB00798 - Gene::9356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6733,
+        "final_score": 0.67,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Gentamicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Aminoglycosides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Streptomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gentamicin",
+          "target": "Aminoglycosides",
+          "label": "is included in"
+        },
+        {
+          "source": "Aminoglycosides",
+          "target": "Streptomycin",
+          "label": "includes"
+        },
+        {
+          "source": "Streptomycin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gentamicin,Aminoglycosides": [
+          "Aminoglycoside"
+        ],
+        "Gentamicin,Streptomycin": [
+          "Aminoglycoside Antibiotic",
+          "Aminoglycoside Antibiotic"
+        ],
+        "Aminoglycosides,Streptomycin": [
+          "Aminoglycoside"
+        ]
+      },
+      "id": "path_9996"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6314,
+        "final_score": 0.6314
+      },
+      "nodes": [
+        {
+          "id": "Gentamicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Kanamycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Streptomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gentamicin",
+          "target": "Kanamycin",
+          "label": "resembles"
+        },
+        {
+          "source": "Kanamycin",
+          "target": "Streptomycin",
+          "label": "resembles"
+        },
+        {
+          "source": "Streptomycin",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gentamicin,Kanamycin": [
+          "Aminoglycoside Antibiotic",
+          "Aminoglycoside Antibiotic"
+        ],
+        "Gentamicin,Streptomycin": [
+          "Aminoglycoside Antibiotic",
+          "Aminoglycoside Antibiotic"
+        ],
+        "Kanamycin,Streptomycin": [
+          "Aminoglycoside Antibiotic",
+          "Aminoglycoside Antibiotic"
+        ]
+      },
+      "id": "path_9997"
+    }
+  ]
+}

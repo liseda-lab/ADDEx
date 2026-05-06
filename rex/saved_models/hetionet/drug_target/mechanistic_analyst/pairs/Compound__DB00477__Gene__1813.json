@@ -1,0 +1,120 @@
+{
+  "id": "Compound::DB00477 - Gene::1813",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6912,
+        "final_score": 0.5123,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Promethazine",
+          "label": "includes"
+        },
+        {
+          "source": "Promethazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Chlorpromazine,Promethazine": [
+          "Phenothiazine",
+          "Phenothiazines"
+        ],
+        "Phenothiazines,Promethazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_15808"
+    },
+    {
+      "score": {
+        "ic_mean": 0.365,
+        "final_score": 0.365
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Thioproperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Thioproperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Thioproperazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Chlorpromazine,Thioproperazine": [
+          "Antipsychotic Agent",
+          "Phenothiazines"
+        ],
+        "Dimetotiazine,Thioproperazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_15809"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00396 - Gene::1543",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4469,
+        "final_score": 0.4469
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Hyperstimulation Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Ovarian Hyperstimulation Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Ovarian Hyperstimulation Syndrome",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Clomifene": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_2758"
+    }
+  ]
+}

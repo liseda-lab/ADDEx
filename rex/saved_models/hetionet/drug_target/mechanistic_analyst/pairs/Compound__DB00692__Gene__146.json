@@ -1,0 +1,68 @@
+{
+  "id": "Compound::DB00692 - Gene::146",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6673,
+        "final_score": 0.667,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Phentolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tymazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Xylometazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phentolamine",
+          "target": "Tymazoline",
+          "label": "resembles"
+        },
+        {
+          "source": "Tymazoline",
+          "target": "Xylometazoline",
+          "label": "resembles"
+        },
+        {
+          "source": "Xylometazoline",
+          "target": "Adra1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phentolamine,Tymazoline": [
+          "Organic Molecular Entity",
+          "Alpha-Adrenergic Antagonist"
+        ],
+        "Phentolamine,Xylometazoline": [
+          "Adrenergic Agent",
+          "Benzenes"
+        ],
+        "Tymazoline,Xylometazoline": [
+          "Organic Molecular Entity",
+          "Adrenergic Agent"
+        ]
+      },
+      "id": "path_19897"
+    }
+  ]
+}

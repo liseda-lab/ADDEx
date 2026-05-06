@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB01004 - Gene::6580",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6627,
+        "final_score": 0.498,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Aciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Aciclovir",
+          "label": "includes"
+        },
+        {
+          "source": "Aciclovir",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ganciclovir,Aciclovir": [
+          "Dna Polymerase Inhibitor",
+          "2-Aminopurines"
+        ]
+      },
+      "id": "path_429"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4688,
+        "final_score": 0.4688
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Injection Site Phlebitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Injection Site Phlebitis",
+          "label": "causes"
+        },
+        {
+          "source": "Injection Site Phlebitis",
+          "target": "Aciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aciclovir",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ganciclovir,Aciclovir": [
+          "Dna Polymerase Inhibitor",
+          "2-Aminopurines"
+        ]
+      },
+      "id": "path_430"
+    }
+  ]
+}

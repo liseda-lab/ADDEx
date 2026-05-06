@@ -1,0 +1,150 @@
+{
+  "id": "Compound::DB06605 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7191,
+        "final_score": 0.6929,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Apixaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Apixaban",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1242"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5871,
+        "final_score": 0.5871
+      },
+      "nodes": [
+        {
+          "id": "Apixaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Vessel Puncture Site Haematoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prasugrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Apixaban",
+          "target": "Vessel Puncture Site Haematoma",
+          "label": "causes"
+        },
+        {
+          "source": "Vessel Puncture Site Haematoma",
+          "target": "Prasugrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prasugrel",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Apixaban,Prasugrel": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Blood Or Body Fluid"
+        ]
+      },
+      "id": "path_1243"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5547,
+        "final_score": 0.5547
+      },
+      "nodes": [
+        {
+          "id": "Apixaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Traumatic Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ticlopidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Apixaban",
+          "target": "Traumatic Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Traumatic Haemorrhage",
+          "target": "Ticlopidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ticlopidine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Apixaban,Ticlopidine": [
+          "Organic Heterobicyclic Compound",
+          "Agent Affecting Blood Or Body Fluid"
+        ]
+      },
+      "id": "path_1244"
+    }
+  ]
+}

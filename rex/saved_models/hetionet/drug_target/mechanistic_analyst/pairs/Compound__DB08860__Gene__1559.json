@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB08860 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4776,
+        "final_score": 0.4776
+      },
+      "nodes": [
+        {
+          "id": "Pitavastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Immune-mediated Necrotising Myopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pitavastatin",
+          "target": "Immune-mediated Necrotising Myopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Immune-mediated Necrotising Myopathy",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pitavastatin,Pravastatin": [
+          "Hydroxy Monocarboxylic Acid",
+          "Hmg-Coa Reductase Inhibitor"
+        ]
+      },
+      "id": "path_8458"
+    }
+  ]
+}

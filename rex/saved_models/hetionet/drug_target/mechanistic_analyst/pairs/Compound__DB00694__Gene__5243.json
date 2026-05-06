@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00694 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.435,
+        "final_score": 0.435
+      },
+      "nodes": [
+        {
+          "id": "Daunorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cardiac Tamponade",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ticagrelor",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Daunorubicin",
+          "target": "Cardiac Tamponade",
+          "label": "causes"
+        },
+        {
+          "source": "Cardiac Tamponade",
+          "target": "Ticagrelor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ticagrelor",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Daunorubicin,Ticagrelor": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_9861"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00582 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4331,
+        "final_score": 0.4331
+      },
+      "nodes": [
+        {
+          "id": "Voriconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Duodenal Ulcer Perforation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Voriconazole",
+          "target": "Duodenal Ulcer Perforation",
+          "label": "causes"
+        },
+        {
+          "source": "Duodenal Ulcer Perforation",
+          "target": "Aprepitant",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aprepitant",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Voriconazole,Aprepitant": [
+          "Triazoles"
+        ]
+      },
+      "id": "path_12689"
+    }
+  ]
+}

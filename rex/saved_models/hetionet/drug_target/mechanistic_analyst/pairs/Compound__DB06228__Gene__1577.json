@@ -1,0 +1,150 @@
+{
+  "id": "Compound::DB06228 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7562,
+        "final_score": 0.6698,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2j2",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Cyp2j2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2j2",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_14240"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4935,
+        "final_score": 0.4935
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Epidural Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cilostazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Epidural Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Epidural Haemorrhage",
+          "target": "Cilostazol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cilostazol",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Cilostazol": [
+          "Lactam",
+          "Agent Affecting Blood Or Body Fluid"
+        ]
+      },
+      "id": "path_14241"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4669,
+        "final_score": 0.4669
+      },
+      "nodes": [
+        {
+          "id": "Rivaroxaban",
+          "type": "Compound"
+        },
+        {
+          "id": "Retroperitoneal Haemorrhage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Argatroban",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rivaroxaban",
+          "target": "Retroperitoneal Haemorrhage",
+          "label": "causes"
+        },
+        {
+          "source": "Retroperitoneal Haemorrhage",
+          "target": "Argatroban",
+          "label": "is caused by"
+        },
+        {
+          "source": "Argatroban",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rivaroxaban,Argatroban": [
+          "Organonitrogen Heterocyclic Compound",
+          "Anticoagulant Agent"
+        ]
+      },
+      "id": "path_14242"
+    }
+  ]
+}

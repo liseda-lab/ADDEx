@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00959 - Disease::DOID:13189",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3838,
+        "final_score": 0.3838
+      },
+      "nodes": [
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Hydrocortisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Gout",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methylprednisolone",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        },
+        {
+          "source": "Atopic Dermatitis",
+          "target": "Hydrocortisone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Hydrocortisone",
+          "target": "Gout",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methylprednisolone,Hydrocortisone": [
+          "17Alpha-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_3071"
+    }
+  ]
+}

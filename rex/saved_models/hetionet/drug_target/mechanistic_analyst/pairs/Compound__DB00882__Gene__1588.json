@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00882 - Gene::1588",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5227,
+        "final_score": 0.5227
+      },
+      "nodes": [
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Death Neonatal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clomifene",
+          "target": "Death Neonatal",
+          "label": "causes"
+        },
+        {
+          "source": "Death Neonatal",
+          "target": "Dinoprostone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprostone",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clomifene,Dinoprostone": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_11770"
+    }
+  ]
+}

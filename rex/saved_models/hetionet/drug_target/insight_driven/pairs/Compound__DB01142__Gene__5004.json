@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01142 - Gene::5004",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5869,
+        "final_score": 0.5869
+      },
+      "nodes": [
+        {
+          "id": "Doxepin",
+          "type": "Compound"
+        },
+        {
+          "id": "Appetite Exaggerated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amoxapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Orm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxepin",
+          "target": "Appetite Exaggerated",
+          "label": "causes"
+        },
+        {
+          "source": "Appetite Exaggerated",
+          "target": "Amoxapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amoxapine",
+          "target": "Orm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxepin,Amoxapine": [
+          "Tricyclic Antidepressant",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_18643"
+    }
+  ]
+}

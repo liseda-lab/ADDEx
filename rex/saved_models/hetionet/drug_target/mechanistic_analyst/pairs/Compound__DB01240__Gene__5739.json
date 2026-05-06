@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB01240 - Gene::5739",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.715,
+        "final_score": 0.5242,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Epoprostenol",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostaglandins I",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Iloprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgir",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epoprostenol",
+          "target": "Prostaglandins I",
+          "label": "is included in"
+        },
+        {
+          "source": "Prostaglandins I",
+          "target": "Iloprost",
+          "label": "includes"
+        },
+        {
+          "source": "Iloprost",
+          "target": "Ptgir",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epoprostenol,Prostaglandins I": [
+          "Prostaglandins I"
+        ],
+        "Epoprostenol,Iloprost": [
+          "Organic Cyclic Compound",
+          "Prostaglandin Analogue"
+        ],
+        "Prostaglandins I,Iloprost": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_18645"
+    }
+  ]
+}

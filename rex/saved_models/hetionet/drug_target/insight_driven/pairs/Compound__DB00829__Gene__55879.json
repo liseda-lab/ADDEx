@@ -1,0 +1,210 @@
+{
+  "id": "Compound::DB00829 - Gene::55879",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6987,
+        "final_score": 0.766,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabre",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Gabre",
+          "label": "binds"
+        },
+        {
+          "source": "Gabre",
+          "target": "Gaba Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba Receptor Activity",
+          "target": "Gabrq",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6219"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6884,
+        "final_score": 0.5942,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Oxazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Oxazepam",
+          "label": "includes"
+        },
+        {
+          "source": "Oxazepam",
+          "target": "Gabrq",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Diazepam,Oxazepam": [
+          "1,4-Benzodiazepinone",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Oxazepam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_6220"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5602,
+        "final_score": 0.5602
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Bromazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromazepam",
+          "target": "Gabrq",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Bromazepam": [
+          "Benzodiazepine",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_6221"
+    },
+    {
+      "score": {
+        "ic_mean": 0.553,
+        "final_score": 0.553
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Rage",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nitrazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrq",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Rage",
+          "label": "causes"
+        },
+        {
+          "source": "Rage",
+          "target": "Nitrazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nitrazepam",
+          "target": "Gabrq",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Nitrazepam": [
+          "1,4-Benzodiazepinone",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_6222"
+    }
+  ]
+}

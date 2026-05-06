@@ -1,0 +1,167 @@
+{
+  "id": "Compound::DB04894 - Gene::6752",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8973,
+        "final_score": 0.782,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Vapreotide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sstr5",
+          "type": "Gene"
+        },
+        {
+          "id": "Pasireotide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sstr2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vapreotide",
+          "target": "Sstr5",
+          "label": "binds"
+        },
+        {
+          "source": "Sstr5",
+          "target": "Pasireotide",
+          "label": "is bound by"
+        },
+        {
+          "source": "Pasireotide",
+          "target": "Sstr2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vapreotide,Pasireotide": [
+          "Somatostatin Receptor Agonist"
+        ]
+      },
+      "id": "path_15817"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8263,
+        "final_score": 0.7465,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Vapreotide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sstr5",
+          "type": "Gene"
+        },
+        {
+          "id": "Somatostatin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Sstr2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vapreotide",
+          "target": "Sstr5",
+          "label": "binds"
+        },
+        {
+          "source": "Sstr5",
+          "target": "Somatostatin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Somatostatin Receptor Activity",
+          "target": "Sstr2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15818"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6711,
+        "final_score": 0.6689,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Vapreotide",
+          "type": "Compound"
+        },
+        {
+          "id": "Felypressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Pasireotide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sstr2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vapreotide",
+          "target": "Felypressin",
+          "label": "resembles"
+        },
+        {
+          "source": "Felypressin",
+          "target": "Pasireotide",
+          "label": "resembles"
+        },
+        {
+          "source": "Pasireotide",
+          "target": "Sstr2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vapreotide,Felypressin": [
+          "Therapeutic Hormone"
+        ],
+        "Vapreotide,Pasireotide": [
+          "Somatostatin Receptor Agonist"
+        ],
+        "Felypressin,Pasireotide": [
+          "Cyclic Peptide",
+          "Therapeutic Hormone"
+        ]
+      },
+      "id": "path_15819"
+    }
+  ]
+}

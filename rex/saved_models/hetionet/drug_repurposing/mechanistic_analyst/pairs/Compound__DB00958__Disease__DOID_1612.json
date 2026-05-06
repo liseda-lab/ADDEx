@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00958 - Disease::DOID:1612",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4871,
+        "final_score": 0.4871
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Esophageal Cancer",
+          "target": "Capecitabine",
+          "label": "is treated by"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Breast Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Capecitabine": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_5695"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4315,
+        "final_score": 0.4315
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Postoperative Nausea And Vomiting",
+          "type": "Symptom"
+        },
+        {
+          "id": "Breast Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Uterine Cancer",
+          "target": "Postoperative Nausea And Vomiting",
+          "label": "presents"
+        },
+        {
+          "source": "Postoperative Nausea And Vomiting",
+          "target": "Breast Cancer",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_5696"
+    }
+  ]
+}

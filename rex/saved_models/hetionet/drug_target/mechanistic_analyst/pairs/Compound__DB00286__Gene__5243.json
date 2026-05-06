@@ -1,0 +1,148 @@
+{
+  "id": "Compound::DB00286 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.709,
+        "final_score": 0.6045,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc51a",
+          "type": "Gene"
+        },
+        {
+          "id": "Drug Induction Of Bile Acid Pathway",
+          "type": "Pathway"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Slc51a",
+          "label": "binds"
+        },
+        {
+          "source": "Slc51a",
+          "target": "Drug Induction Of Bile Acid Pathway",
+          "label": "participates"
+        },
+        {
+          "source": "Drug Induction Of Bile Acid Pathway",
+          "target": "Abcb1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15866"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5767,
+        "final_score": 0.5767
+      },
+      "nodes": [
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Estrogen Receptor Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Estrogen Receptor Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Estrogen Receptor Agonists",
+          "target": "Ethinyl Estradiol",
+          "label": "includes"
+        },
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Conjugated Estrogens,Ethinyl Estradiol": [
+          "Steroidal Estrogen"
+        ]
+      },
+      "id": "path_15867"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5159,
+        "final_score": 0.5159
+      },
+      "nodes": [
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Endometrial Hypertrophy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Toremifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Endometrial Hypertrophy",
+          "label": "causes"
+        },
+        {
+          "source": "Endometrial Hypertrophy",
+          "target": "Toremifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Toremifene",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Conjugated Estrogens,Toremifene": [
+          "Therapeutic Estrogen"
+        ]
+      },
+      "id": "path_15868"
+    }
+  ]
+}

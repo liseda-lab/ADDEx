@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB00958 - Disease::DOID:184",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.875,
+        "agentic_score": 0.9167,
+        "llm_dimensions": {
+          "validity": 5.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Cisplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Bone Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Cisplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_5692"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5147,
+        "final_score": 0.5147
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ocular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Frontal Sinus",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Ocular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Ocular Cancer",
+          "target": "Frontal Sinus",
+          "label": "localizes"
+        },
+        {
+          "source": "Frontal Sinus",
+          "target": "Bone Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_5693"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5092,
+        "final_score": 0.5092
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ocular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Eye Pain",
+          "type": "Symptom"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Ocular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Ocular Cancer",
+          "target": "Eye Pain",
+          "label": "presents"
+        },
+        {
+          "source": "Eye Pain",
+          "target": "Bone Cancer",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_5694"
+    }
+  ]
+}

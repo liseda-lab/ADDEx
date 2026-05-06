@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00806 - Gene::5142",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6842,
+        "final_score": 0.6338,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Pentoxifylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4a",
+          "type": "Gene"
+        },
+        {
+          "id": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Pde4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pentoxifylline",
+          "target": "Pde4a",
+          "label": "binds"
+        },
+        {
+          "source": "Pde4a",
+          "target": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "target": "Pde4b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8242"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5944,
+        "final_score": 0.5944
+      },
+      "nodes": [
+        {
+          "id": "Pentoxifylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Fenethylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Dyphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pentoxifylline",
+          "target": "Fenethylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Fenethylline",
+          "target": "Dyphylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Dyphylline",
+          "target": "Pde4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pentoxifylline,Fenethylline": [
+          "Oxopurine"
+        ],
+        "Pentoxifylline,Dyphylline": [
+          "Phosphodiesterase Inhibitor",
+          "Oxopurine"
+        ],
+        "Fenethylline,Dyphylline": [
+          "Oxopurine"
+        ]
+      },
+      "id": "path_8243"
+    }
+  ]
+}

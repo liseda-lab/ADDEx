@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00585 - Gene::3274",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6968,
+        "final_score": 0.5567,
+        "agentic_score": 0.4167,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nizatidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nizatidine",
+          "target": "Histamine H2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H2 Receptor Antagonists",
+          "target": "Cimetidine",
+          "label": "includes"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Hrh2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nizatidine,Cimetidine": [
+          "Azole",
+          "Histamine-2 Receptor Antagonist"
+        ]
+      },
+      "id": "path_8291"
+    }
+  ]
+}

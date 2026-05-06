@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00459 - Gene::1592",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6113,
+        "final_score": 0.6113
+      },
+      "nodes": [
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Pyogenic Granuloma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp26a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Acitretin",
+          "target": "Pyogenic Granuloma",
+          "label": "causes"
+        },
+        {
+          "source": "Pyogenic Granuloma",
+          "target": "Ketoconazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp26a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Acitretin,Ketoconazole": [
+          "Targeted Therapy Agent",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_1186"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00977 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5767,
+        "final_score": 0.5767
+      },
+      "nodes": [
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Estrogen Receptor Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Conjugated Estrogens",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Estrogen Receptor Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Estrogen Receptor Agonists",
+          "target": "Conjugated Estrogens",
+          "label": "includes"
+        },
+        {
+          "source": "Conjugated Estrogens",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethinyl Estradiol,Conjugated Estrogens": [
+          "Steroidal Estrogen"
+        ]
+      },
+      "id": "path_17707"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4636,
+        "final_score": 0.4636
+      },
+      "nodes": [
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Mass",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ivacaftor",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Breast Mass",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Mass",
+          "target": "Ivacaftor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ivacaftor",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethinyl Estradiol,Ivacaftor": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_17708"
+    }
+  ]
+}

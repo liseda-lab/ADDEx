@@ -1,0 +1,196 @@
+{
+  "id": "Compound::DB00822 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6892,
+        "final_score": 0.6779,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Disulfiram",
+          "type": "Compound"
+        },
+        {
+          "id": "Aldh2",
+          "type": "Gene"
+        },
+        {
+          "id": "Fatty Acid Omega Oxidation",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disulfiram",
+          "target": "Aldh2",
+          "label": "binds"
+        },
+        {
+          "source": "Aldh2",
+          "target": "Fatty Acid Omega Oxidation",
+          "label": "participates"
+        },
+        {
+          "source": "Fatty Acid Omega Oxidation",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12112"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4806,
+        "final_score": 0.4806
+      },
+      "nodes": [
+        {
+          "id": "Disulfiram",
+          "type": "Compound"
+        },
+        {
+          "id": "Polyneuritis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydralazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disulfiram",
+          "target": "Polyneuritis",
+          "label": "causes"
+        },
+        {
+          "source": "Polyneuritis",
+          "target": "Hydralazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydralazine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disulfiram,Hydralazine": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_12113"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4332,
+        "final_score": 0.4332
+      },
+      "nodes": [
+        {
+          "id": "Disulfiram",
+          "type": "Compound"
+        },
+        {
+          "id": "Stress",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disulfiram",
+          "target": "Stress",
+          "label": "causes"
+        },
+        {
+          "source": "Stress",
+          "target": "Prednisolone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disulfiram,Prednisolone": [
+          "Organochalcogen Compound"
+        ]
+      },
+      "id": "path_12114"
+    },
+    {
+      "score": {
+        "ic_mean": 0.416,
+        "final_score": 0.416
+      },
+      "nodes": [
+        {
+          "id": "Disulfiram",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Sensorimotor Neuropathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vandetanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disulfiram",
+          "target": "Peripheral Sensorimotor Neuropathy",
+          "label": "causes"
+        },
+        {
+          "source": "Peripheral Sensorimotor Neuropathy",
+          "target": "Vandetanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vandetanib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disulfiram,Vandetanib": [
+          "Enzyme Inhibitor",
+          "Organochalcogen Compound"
+        ]
+      },
+      "id": "path_12115"
+    }
+  ]
+}

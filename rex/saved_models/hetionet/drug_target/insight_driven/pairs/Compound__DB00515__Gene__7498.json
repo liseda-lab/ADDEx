@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00515 - Gene::7498",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7819,
+        "final_score": 0.641,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Xdh",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cisplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Carboplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Carboplatin",
+          "target": "Xdh",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cisplatin,Carboplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_5006"
+    }
+  ]
+}

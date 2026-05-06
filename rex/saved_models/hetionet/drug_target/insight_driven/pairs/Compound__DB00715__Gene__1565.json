@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00715 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3784,
+        "final_score": 0.3784
+      },
+      "nodes": [
+        {
+          "id": "Paroxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Corneal Lesion",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dexmethylphenidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paroxetine",
+          "target": "Corneal Lesion",
+          "label": "causes"
+        },
+        {
+          "source": "Corneal Lesion",
+          "target": "Dexmethylphenidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dexmethylphenidate",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paroxetine,Dexmethylphenidate": [
+          "Piperidines",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_16664"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "COMPOUND:308 - DISEASE:2373",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5907,
+        "final_score": 0.5907
+      },
+      "nodes": [
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "lysine demethylase 5B",
+          "type": "Gene"
+        },
+        {
+          "id": "Ovarian Failure, Premature",
+          "type": "Disease"
+        },
+        {
+          "id": "tRNA methyltransferase 5",
+          "type": "Gene"
+        },
+        {
+          "id": "Otosclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Codeine",
+          "target": "lysine demethylase 5B",
+          "label": "is affecting"
+        },
+        {
+          "source": "lysine demethylase 5B",
+          "target": "Ovarian Failure, Premature",
+          "label": "causes condition"
+        },
+        {
+          "source": "Ovarian Failure, Premature",
+          "target": "tRNA methyltransferase 5",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "tRNA methyltransferase 5",
+          "target": "Otosclerosis",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_687"
+    }
+  ]
+}

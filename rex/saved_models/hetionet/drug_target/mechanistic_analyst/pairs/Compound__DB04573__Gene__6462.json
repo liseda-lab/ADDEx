@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB04573 - Gene::6462",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5141,
+        "final_score": 0.5141
+      },
+      "nodes": [
+        {
+          "id": "Estriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Discomfort",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Shbg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estriol",
+          "target": "Breast Discomfort",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Discomfort",
+          "target": "Ethinyl Estradiol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Shbg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estriol,Ethinyl Estradiol": [
+          "17-Hydroxy Steroid",
+          "Steroidal Estrogen"
+        ]
+      },
+      "id": "path_14875"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5064,
+        "final_score": 0.5064
+      },
+      "nodes": [
+        {
+          "id": "Estriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Equilin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Shbg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estriol",
+          "target": "Equilin",
+          "label": "resembles"
+        },
+        {
+          "source": "Equilin",
+          "target": "Ethinyl Estradiol",
+          "label": "resembles"
+        },
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Shbg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estriol,Equilin": [
+          "3-Hydroxy Steroid"
+        ],
+        "Estriol,Ethinyl Estradiol": [
+          "17-Hydroxy Steroid",
+          "Steroidal Estrogen"
+        ],
+        "Equilin,Ethinyl Estradiol": [
+          "3-Hydroxy Steroid"
+        ]
+      },
+      "id": "path_14876"
+    }
+  ]
+}

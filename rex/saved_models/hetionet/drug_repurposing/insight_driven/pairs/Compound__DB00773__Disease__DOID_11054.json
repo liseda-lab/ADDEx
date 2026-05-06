@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00773 - Disease::DOID:11054",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4871,
+        "final_score": 0.4871
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Urinary Bladder Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Uterine Cancer",
+          "target": "Carboplatin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Carboplatin",
+          "target": "Urinary Bladder Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Carboplatin": [
+          "Organic Cyclic Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_4492"
+    }
+  ]
+}

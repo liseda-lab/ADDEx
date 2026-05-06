@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00412 - Gene::10599",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6516,
+        "final_score": 0.6591,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Rosiglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ppar Gamma",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosiglitazone",
+          "target": "Ppar Gamma",
+          "label": "is included in"
+        },
+        {
+          "source": "Ppar Gamma",
+          "target": "Pioglitazone",
+          "label": "includes"
+        },
+        {
+          "source": "Pioglitazone",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rosiglitazone,Pioglitazone": [
+          "Thiazolidinedione Antidiabetic Agent",
+          "Thiazolidinediones"
+        ]
+      },
+      "id": "path_19658"
+    }
+  ]
+}

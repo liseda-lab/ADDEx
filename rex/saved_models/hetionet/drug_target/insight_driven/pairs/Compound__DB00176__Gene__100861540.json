@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00176 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4153,
+        "final_score": 0.4153
+      },
+      "nodes": [
+        {
+          "id": "Fluvoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Menstruation Delayed",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Norethindrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvoxamine",
+          "target": "Menstruation Delayed",
+          "label": "causes"
+        },
+        {
+          "source": "Menstruation Delayed",
+          "target": "Norethindrone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Norethindrone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluvoxamine,Norethindrone": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_13425"
+    }
+  ]
+}

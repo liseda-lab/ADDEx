@@ -1,0 +1,114 @@
+{
+  "id": "Compound::DB00159 - Gene::3992",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7631,
+        "final_score": 0.7149,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Icosapent",
+          "type": "Compound"
+        },
+        {
+          "id": "Fabp7",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha-linolenic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Fads1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Icosapent",
+          "target": "Fabp7",
+          "label": "binds"
+        },
+        {
+          "source": "Fabp7",
+          "target": "Alpha-linolenic Acid",
+          "label": "is bound by"
+        },
+        {
+          "source": "Alpha-linolenic Acid",
+          "target": "Fads1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Icosapent,Alpha-linolenic Acid": [
+          "Omega-3 Fatty Acid",
+          "Straight-Chain Fatty Acid"
+        ]
+      },
+      "id": "path_2624"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6531,
+        "final_score": 0.4099,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 3.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Icosapent",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemorrhagic Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Alpha-linolenic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Fads1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Icosapent",
+          "target": "Haemorrhagic Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Haemorrhagic Disorder",
+          "target": "Alpha-linolenic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Alpha-linolenic Acid",
+          "target": "Fads1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Icosapent,Alpha-linolenic Acid": [
+          "Omega-3 Fatty Acid",
+          "Straight-Chain Fatty Acid"
+        ]
+      },
+      "id": "path_2625"
+    }
+  ]
+}

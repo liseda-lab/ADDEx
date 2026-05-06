@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01004 - Gene::9356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6326,
+        "final_score": 0.6326
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Valaciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Valaciclovir",
+          "label": "includes"
+        },
+        {
+          "source": "Valaciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "id": "path_20796"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5975,
+        "final_score": 0.5975
+      },
+      "nodes": [
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Dna Polymerase Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Foscarnet",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ganciclovir",
+          "target": "Dna Polymerase Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Dna Polymerase Inhibitors",
+          "target": "Foscarnet",
+          "label": "includes"
+        },
+        {
+          "source": "Foscarnet",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ganciclovir,Foscarnet": [
+          "Organic Molecule",
+          "Antiviral Agent"
+        ]
+      },
+      "id": "path_20797"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "DrugBank_DB00571 - MONDO_5044",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5982,
+        "final_score": 0.5982
+      },
+      "nodes": [
+        {
+          "id": "Propranolol",
+          "type": "Drug"
+        },
+        {
+          "id": "Mitral Valve Prolapse (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Timolol",
+          "type": "Drug"
+        },
+        {
+          "id": "Hypertensive Disorder",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propranolol",
+          "target": "Mitral Valve Prolapse (disease)",
+          "label": "off-label use"
+        },
+        {
+          "source": "Mitral Valve Prolapse (disease)",
+          "target": "Timolol",
+          "label": "off-label use"
+        },
+        {
+          "source": "Timolol",
+          "target": "Hypertensive Disorder",
+          "label": "indication"
+        }
+      ],
+      "id": "path_23828"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4101,
+        "final_score": 0.4101
+      },
+      "nodes": [
+        {
+          "id": "Propranolol",
+          "type": "Drug"
+        },
+        {
+          "id": "Second Degree Atrioventricular Block",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Losartan",
+          "type": "Drug"
+        },
+        {
+          "id": "Hypertensive Disorder",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propranolol",
+          "target": "Second Degree Atrioventricular Block",
+          "label": "side effect"
+        },
+        {
+          "source": "Second Degree Atrioventricular Block",
+          "target": "Losartan",
+          "label": "side effect"
+        },
+        {
+          "source": "Losartan",
+          "target": "Hypertensive Disorder",
+          "label": "indication"
+        }
+      ],
+      "id": "path_23829"
+    }
+  ]
+}

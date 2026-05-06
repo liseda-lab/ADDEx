@@ -1,0 +1,153 @@
+{
+  "id": "Compound::DB00758 - Disease::DOID:3393",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6678,
+        "final_score": 0.6672,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Decreased Platelet Aggregation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dipyridamole",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clopidogrel",
+          "target": "Decreased Platelet Aggregation",
+          "label": "is included in"
+        },
+        {
+          "source": "Decreased Platelet Aggregation",
+          "target": "Dipyridamole",
+          "label": "includes"
+        },
+        {
+          "source": "Dipyridamole",
+          "target": "Coronary Artery Disease",
+          "label": "palliates"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clopidogrel,Dipyridamole": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3026"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5472,
+        "final_score": 0.5472
+      },
+      "nodes": [
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Atherothrombosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Niacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clopidogrel",
+          "target": "Atherothrombosis",
+          "label": "causes"
+        },
+        {
+          "source": "Atherothrombosis",
+          "target": "Niacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Niacin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clopidogrel,Niacin": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_3027"
+    },
+    {
+      "score": {
+        "ic_mean": 0.517,
+        "final_score": 0.517
+      },
+      "nodes": [
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Non-cardiogenic Pulmonary Oedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clopidogrel",
+          "target": "Non-cardiogenic Pulmonary Oedema",
+          "label": "causes"
+        },
+        {
+          "source": "Non-cardiogenic Pulmonary Oedema",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Coronary Artery Disease",
+          "label": "palliates"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clopidogrel,Morphine": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_3028"
+    }
+  ]
+}

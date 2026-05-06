@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00544 - Disease::DOID:219",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.575,
+        "final_score": 0.575
+      },
+      "nodes": [
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Colon Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluorouracil",
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Capecitabine",
+          "label": "includes"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Colon Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluorouracil,Capecitabine": [
+          "Pyrimidine Antagonist",
+          "Organofluorine Compound"
+        ]
+      },
+      "id": "path_5354"
+    }
+  ]
+}

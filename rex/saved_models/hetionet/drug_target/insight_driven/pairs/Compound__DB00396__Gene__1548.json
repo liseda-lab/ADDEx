@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00396 - Gene::1548",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4667,
+        "final_score": 0.4667
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Premature Labour",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Premature Labour",
+          "label": "causes"
+        },
+        {
+          "source": "Premature Labour",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Cyclophosphamide": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_17446"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4524,
+        "final_score": 0.4524
+      },
+      "nodes": [
+        {
+          "id": "Progesterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Vaginal Irritation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Letrozole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Progesterone",
+          "target": "Vaginal Irritation",
+          "label": "causes"
+        },
+        {
+          "source": "Vaginal Irritation",
+          "target": "Letrozole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Letrozole",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Progesterone,Letrozole": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_17447"
+    }
+  ]
+}

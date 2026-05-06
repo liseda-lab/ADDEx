@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00333 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6492,
+        "final_score": 0.6492
+      },
+      "nodes": [
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methadone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19187"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5101,
+        "final_score": 0.5101
+      },
+      "nodes": [
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cutis Anserina",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methadone",
+          "target": "Cutis Anserina",
+          "label": "causes"
+        },
+        {
+          "source": "Cutis Anserina",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methadone,Oxycodone": [
+          "Chemical Entity",
+          "Opioid"
+        ]
+      },
+      "id": "path_19188"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "Compound::DB00800 - Disease::DOID:10763",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3962,
+        "final_score": 0.3962
+      },
+      "nodes": [
+        {
+          "id": "Fenoldopam",
+          "type": "Compound"
+        },
+        {
+          "id": "Oliguria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Captopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fenoldopam",
+          "target": "Oliguria",
+          "label": "causes"
+        },
+        {
+          "source": "Oliguria",
+          "target": "Captopril",
+          "label": "is caused by"
+        },
+        {
+          "source": "Captopril",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fenoldopam,Captopril": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Oliguria,Hypertension (disease)": [
+          "Finding By Site Or System"
+        ]
+      },
+      "id": "path_4494"
+    }
+  ]
+}

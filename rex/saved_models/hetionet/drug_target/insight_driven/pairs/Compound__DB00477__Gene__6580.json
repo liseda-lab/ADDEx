@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00477 - Gene::6580",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5174,
+        "final_score": 0.5174
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Keratopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Latanoprost",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Keratopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Keratopathy",
+          "target": "Latanoprost",
+          "label": "is caused by"
+        },
+        {
+          "source": "Latanoprost",
+          "target": "Slc22a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Latanoprost": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_22616"
+    }
+  ]
+}

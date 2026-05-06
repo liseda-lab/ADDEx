@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00773 - Disease::DOID:363",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5089,
+        "final_score": 0.5089
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Urinary Bladder Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Urinary Bladder Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Urinary Bladder Cancer",
+          "target": "Carboplatin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Carboplatin",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Carboplatin": [
+          "Organic Cyclic Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_3813"
+    },
+    {
+      "score": {
+        "ic_mean": 0.474,
+        "final_score": 0.474
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Testicular Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Serous Membrane",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Testicular Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Testicular Cancer",
+          "target": "Serous Membrane",
+          "label": "localizes"
+        },
+        {
+          "source": "Serous Membrane",
+          "target": "Uterine Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_3814"
+    }
+  ]
+}

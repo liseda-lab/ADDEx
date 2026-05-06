@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01104 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.403,
+        "final_score": 0.403
+      },
+      "nodes": [
+        {
+          "id": "Sertraline",
+          "type": "Compound"
+        },
+        {
+          "id": "Female Sexual Dysfunction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sertraline",
+          "target": "Female Sexual Dysfunction",
+          "label": "causes"
+        },
+        {
+          "source": "Female Sexual Dysfunction",
+          "target": "Fluconazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluconazole",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sertraline,Fluconazole": [
+          "Benzenes"
+        ]
+      },
+      "id": "path_11553"
+    }
+  ]
+}

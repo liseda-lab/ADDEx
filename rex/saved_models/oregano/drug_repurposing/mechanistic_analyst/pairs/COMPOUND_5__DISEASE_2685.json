@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:5 - DISEASE:2685",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8622,
+        "final_score": 0.5978,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "etanercept",
+          "type": "Compound"
+        },
+        {
+          "id": "cilia and flagella associated protein 47",
+          "type": "Gene"
+        },
+        {
+          "id": "Proline-rich protein 23D2",
+          "type": "Protein"
+        },
+        {
+          "id": "cilia and flagella associated protein 47",
+          "type": "Gene"
+        },
+        {
+          "id": "Protozoan Infections",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "etanercept",
+          "target": "cilia and flagella associated protein 47",
+          "label": "is affecting"
+        },
+        {
+          "source": "cilia and flagella associated protein 47",
+          "target": "Proline-rich protein 23D2",
+          "label": "is gene product of"
+        },
+        {
+          "source": "Proline-rich protein 23D2",
+          "target": "cilia and flagella associated protein 47",
+          "label": "gene product of"
+        },
+        {
+          "source": "cilia and flagella associated protein 47",
+          "target": "Protozoan Infections",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_134"
+    }
+  ]
+}

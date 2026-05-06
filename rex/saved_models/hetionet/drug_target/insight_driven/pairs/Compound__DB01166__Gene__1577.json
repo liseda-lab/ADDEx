@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01166 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4895,
+        "final_score": 0.4895
+      },
+      "nodes": [
+        {
+          "id": "Cilostazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Bradyarrhythmia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cilostazol",
+          "target": "Bradyarrhythmia",
+          "label": "causes"
+        },
+        {
+          "source": "Bradyarrhythmia",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cilostazol,Clonidine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_12607"
+    }
+  ]
+}

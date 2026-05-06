@@ -1,0 +1,153 @@
+{
+  "id": "Compound::DB00544 - Disease::DOID:10534",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5748,
+        "final_score": 0.5748
+      },
+      "nodes": [
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Biliary Fibrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Floxuridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluorouracil",
+          "target": "Biliary Fibrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Biliary Fibrosis",
+          "target": "Floxuridine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Floxuridine",
+          "target": "Stomach Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluorouracil,Floxuridine": [
+          "Pyrimidine Antagonist",
+          "Organofluorine Compound"
+        ]
+      },
+      "id": "path_5047"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5224,
+        "final_score": 0.5224
+      },
+      "nodes": [
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluorouracil",
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Capecitabine",
+          "label": "includes"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Stomach Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluorouracil,Capecitabine": [
+          "Pyrimidine Antagonist",
+          "Organofluorine Compound"
+        ]
+      },
+      "id": "path_5048"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3859,
+        "final_score": 0.3859
+      },
+      "nodes": [
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Nail Changes",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluorouracil",
+          "target": "Nail Changes",
+          "label": "causes"
+        },
+        {
+          "source": "Nail Changes",
+          "target": "Capecitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Stomach Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluorouracil,Capecitabine": [
+          "Pyrimidine Antagonist",
+          "Organofluorine Compound"
+        ],
+        "Nail Changes,Stomach Cancer": [
+          "Finding"
+        ]
+      },
+      "id": "path_5049"
+    }
+  ]
+}

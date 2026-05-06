@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB01167 - MONDO_44070",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8375,
+        "final_score": 0.5854,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Itraconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Fusariosis",
+          "type": "Disease"
+        },
+        {
+          "id": "Voriconazole",
+          "type": "Drug"
+        },
+        {
+          "id": "Candidemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Itraconazole",
+          "target": "Fusariosis",
+          "label": "indication"
+        },
+        {
+          "source": "Fusariosis",
+          "target": "Voriconazole",
+          "label": "indication"
+        },
+        {
+          "source": "Voriconazole",
+          "target": "Candidemia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_16582"
+    }
+  ]
+}

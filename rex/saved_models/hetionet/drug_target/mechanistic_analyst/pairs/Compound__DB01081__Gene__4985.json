@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB01081 - Gene::4985",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6972,
+        "final_score": 0.6403,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diphenoxylate",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diphenoxylate",
+          "target": "Oprm1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprm1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprd1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8248"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4276,
+        "final_score": 0.4276
+      },
+      "nodes": [
+        {
+          "id": "Diphenoxylate",
+          "type": "Compound"
+        },
+        {
+          "id": "Anileridine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alvimopan",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diphenoxylate",
+          "target": "Anileridine",
+          "label": "resembles"
+        },
+        {
+          "source": "Anileridine",
+          "target": "Alvimopan",
+          "label": "resembles"
+        },
+        {
+          "source": "Alvimopan",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diphenoxylate,Anileridine": [
+          "Ethyl Ester"
+        ],
+        "Diphenoxylate,Alvimopan": [
+          "Organic Amino Compound"
+        ],
+        "Anileridine,Alvimopan": [
+          "Agent Affecting Nervous System",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_8249"
+    }
+  ]
+}

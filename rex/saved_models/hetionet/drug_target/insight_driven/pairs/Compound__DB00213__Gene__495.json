@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00213 - Gene::495",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7983,
+        "final_score": 0.7325,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Pantoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Atp4b",
+          "type": "Gene"
+        },
+        {
+          "id": "Hydrogen:potassium-exchanging Atpase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Atp4a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pantoprazole",
+          "target": "Atp4b",
+          "label": "binds"
+        },
+        {
+          "source": "Atp4b",
+          "target": "Hydrogen:potassium-exchanging Atpase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Hydrogen:potassium-exchanging Atpase Activity",
+          "target": "Atp4a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5805"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6026,
+        "final_score": 0.6026
+      },
+      "nodes": [
+        {
+          "id": "Pantoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Anterior Ischemic Optic Neuropathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Esomeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Atp4a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pantoprazole",
+          "target": "Anterior Ischemic Optic Neuropathy",
+          "label": "causes"
+        },
+        {
+          "source": "Anterior Ischemic Optic Neuropathy",
+          "target": "Esomeprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Esomeprazole",
+          "target": "Atp4a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pantoprazole,Esomeprazole": [
+          "Benzimidazoles",
+          "Proton Pump Inhibitor"
+        ]
+      },
+      "id": "path_5806"
+    }
+  ]
+}

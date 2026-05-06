@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00722 - Disease::DOID:12930",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4578,
+        "final_score": 0.4578
+      },
+      "nodes": [
+        {
+          "id": "Lisinopril",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Heart Murmurs",
+          "type": "Symptom"
+        },
+        {
+          "id": "Dilated Cardiomyopathy",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisinopril",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Heart Murmurs",
+          "label": "presents"
+        },
+        {
+          "source": "Heart Murmurs",
+          "target": "Dilated Cardiomyopathy",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hypertension (disease),Heart Murmurs": [
+          "Cardiovascular System Finding"
+        ]
+      },
+      "id": "path_6437"
+    }
+  ]
+}

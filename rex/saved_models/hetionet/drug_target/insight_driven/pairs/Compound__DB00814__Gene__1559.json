@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00814 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.659,
+        "final_score": 0.6628,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meloxicam",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20746"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4275,
+        "final_score": 0.4275
+      },
+      "nodes": [
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Asthmatic Attack",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ketoprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meloxicam",
+          "target": "Asthmatic Attack",
+          "label": "causes"
+        },
+        {
+          "source": "Asthmatic Attack",
+          "target": "Ketoprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ketoprofen",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meloxicam,Ketoprofen": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Organooxygen Compound"
+        ]
+      },
+      "id": "path_20747"
+    }
+  ]
+}

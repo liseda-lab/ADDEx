@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB01466 - Gene::4988",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5963,
+        "final_score": 0.5963
+      },
+      "nodes": [
+        {
+          "id": "Ethylmorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Heroin",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrocodeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethylmorphine",
+          "target": "Heroin",
+          "label": "resembles"
+        },
+        {
+          "source": "Heroin",
+          "target": "Dihydrocodeine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dihydrocodeine",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethylmorphine,Heroin": [
+          "Opioid Receptor Agonist",
+          "Morphinane Alkaloid"
+        ],
+        "Ethylmorphine,Dihydrocodeine": [
+          "Opioid Receptor Agonist",
+          "Morphinane Alkaloid"
+        ],
+        "Heroin,Dihydrocodeine": [
+          "Opioid Receptor Agonist",
+          "Morphinane Alkaloid"
+        ]
+      },
+      "id": "path_20212"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5056,
+        "final_score": 0.5056
+      },
+      "nodes": [
+        {
+          "id": "Ethylmorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Ondansetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethylmorphine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Ondansetron",
+          "label": "is bound by"
+        },
+        {
+          "source": "Ondansetron",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethylmorphine,Ondansetron": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_20213"
+    }
+  ]
+}

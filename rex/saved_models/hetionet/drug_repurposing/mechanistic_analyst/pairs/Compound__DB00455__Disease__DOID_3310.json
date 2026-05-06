@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00455 - Disease::DOID:3310",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.548,
+        "final_score": 0.548
+      },
+      "nodes": [
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Neurogenic Inflammation",
+          "type": "Symptom"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loratadine",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        },
+        {
+          "source": "Allergic Rhinitis",
+          "target": "Neurogenic Inflammation",
+          "label": "presents"
+        },
+        {
+          "source": "Neurogenic Inflammation",
+          "target": "Atopic Dermatitis",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_2774"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6676,
+        "final_score": 0.5005,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Loratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Dimenhydrinate",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Loratadine",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        },
+        {
+          "source": "Allergic Rhinitis",
+          "target": "Dimenhydrinate",
+          "label": "is treated by"
+        },
+        {
+          "source": "Dimenhydrinate",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Loratadine,Dimenhydrinate": [
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_2773"
+    }
+  ]
+}

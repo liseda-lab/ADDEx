@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00860 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5057,
+        "final_score": 0.5057
+      },
+      "nodes": [
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Dry Scalp",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Prednisolone",
+          "target": "Dry Scalp",
+          "label": "causes"
+        },
+        {
+          "source": "Dry Scalp",
+          "target": "Prednisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisone",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Prednisolone,Prednisone": [
+          "Therapeutic Glucocorticoid",
+          "3-Oxo-Delta(1),Delta(4)-Steroid"
+        ]
+      },
+      "id": "path_3794"
+    }
+  ]
+}

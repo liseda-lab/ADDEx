@@ -1,0 +1,120 @@
+{
+  "id": "Compound::DB00014 - Gene::3973",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8158,
+        "final_score": 0.5746,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Goserelin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ceruletide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cetrorelix",
+          "type": "Compound"
+        },
+        {
+          "id": "Lhcgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Goserelin",
+          "target": "Ceruletide",
+          "label": "resembles"
+        },
+        {
+          "source": "Ceruletide",
+          "target": "Cetrorelix",
+          "label": "resembles"
+        },
+        {
+          "source": "Cetrorelix",
+          "target": "Lhcgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Goserelin,Ceruletide": [
+          "Organic Molecular Entity"
+        ],
+        "Goserelin,Cetrorelix": [
+          "Hormone Therapy Agent",
+          "Organic Molecular Entity"
+        ],
+        "Ceruletide,Cetrorelix": [
+          "Oligopeptide"
+        ]
+      },
+      "id": "path_11177"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6761,
+        "final_score": 0.5047,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Goserelin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Hyperstimulation Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cetrorelix",
+          "type": "Compound"
+        },
+        {
+          "id": "Lhcgr",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Goserelin",
+          "target": "Ovarian Hyperstimulation Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Ovarian Hyperstimulation Syndrome",
+          "target": "Cetrorelix",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cetrorelix",
+          "target": "Lhcgr",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Goserelin,Cetrorelix": [
+          "Hormone Therapy Agent",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_11178"
+    }
+  ]
+}

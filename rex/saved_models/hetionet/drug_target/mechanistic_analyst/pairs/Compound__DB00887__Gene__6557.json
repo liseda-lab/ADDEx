@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00887 - Gene::6557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7489,
+        "final_score": 0.6244,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis At Loop Of Henle",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Torasemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Increased Diuresis At Loop Of Henle",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis At Loop Of Henle",
+          "target": "Torasemide",
+          "label": "includes"
+        },
+        {
+          "source": "Torasemide",
+          "target": "Slc12a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bumetanide,Torasemide": [
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_7956"
+    }
+  ]
+}

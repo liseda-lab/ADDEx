@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00814 - Gene::10257",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5205,
+        "final_score": 0.5205
+      },
+      "nodes": [
+        {
+          "id": "Meloxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytopenia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tioguanine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meloxicam",
+          "target": "Cytopenia",
+          "label": "causes"
+        },
+        {
+          "source": "Cytopenia",
+          "target": "Tioguanine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tioguanine",
+          "target": "Abcc4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Meloxicam,Tioguanine": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_6881"
+    }
+  ]
+}

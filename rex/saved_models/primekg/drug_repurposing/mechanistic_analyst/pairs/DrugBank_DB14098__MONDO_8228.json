@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB14098 - MONDO_8228",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7938,
+        "final_score": 0.5636,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cobalamin",
+          "type": "Drug"
+        },
+        {
+          "id": "Methylmalonic Acidemia",
+          "type": "Disease"
+        },
+        {
+          "id": "Cyanocobalamin",
+          "type": "Drug"
+        },
+        {
+          "id": "Pernicious Anemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cobalamin",
+          "target": "Methylmalonic Acidemia",
+          "label": "off-label use"
+        },
+        {
+          "source": "Methylmalonic Acidemia",
+          "target": "Cyanocobalamin",
+          "label": "off-label use"
+        },
+        {
+          "source": "Cyanocobalamin",
+          "target": "Pernicious Anemia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_31806"
+    }
+  ]
+}

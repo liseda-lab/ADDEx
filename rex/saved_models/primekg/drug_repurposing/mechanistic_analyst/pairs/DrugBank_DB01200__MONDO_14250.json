@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB01200 - MONDO_14250",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5329,
+        "final_score": 0.5329
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Drug"
+        },
+        {
+          "id": "Alizapride",
+          "type": "Drug"
+        },
+        {
+          "id": "Cabergoline",
+          "type": "Drug"
+        },
+        {
+          "id": "Familial Hyperprolactinemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Alizapride",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Alizapride",
+          "target": "Cabergoline",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Cabergoline",
+          "target": "Familial Hyperprolactinemia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_32117"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6762,
+        "final_score": 0.5048,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Drug"
+        },
+        {
+          "id": "Retroperitoneal Fibrosis",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Cabergoline",
+          "type": "Drug"
+        },
+        {
+          "id": "Familial Hyperprolactinemia",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Retroperitoneal Fibrosis",
+          "label": "side effect"
+        },
+        {
+          "source": "Retroperitoneal Fibrosis",
+          "target": "Cabergoline",
+          "label": "side effect"
+        },
+        {
+          "source": "Cabergoline",
+          "target": "Familial Hyperprolactinemia",
+          "label": "indication"
+        }
+      ],
+      "id": "path_32116"
+    }
+  ]
+}

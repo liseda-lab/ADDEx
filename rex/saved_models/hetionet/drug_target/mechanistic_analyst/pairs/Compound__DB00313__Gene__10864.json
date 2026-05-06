@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB00313 - Gene::10864",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6841,
+        "final_score": 0.6337,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Organic Anion Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Organic Anion Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Organic Anion Transport",
+          "target": "Slc22a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8339"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5813,
+        "final_score": 0.5813
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Slc22a6",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a6",
+          "target": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "target": "Slc22a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_8340"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4812,
+        "final_score": 0.4812
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Liver Function Test Normal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Liver Function Test Normal",
+          "label": "causes"
+        },
+        {
+          "source": "Liver Function Test Normal",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Slc22a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valproic Acid,Docetaxel": [
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_8341"
+    }
+  ]
+}

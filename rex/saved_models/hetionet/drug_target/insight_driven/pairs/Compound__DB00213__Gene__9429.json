@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00213 - Gene::9429",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5049,
+        "final_score": 0.5049
+      },
+      "nodes": [
+        {
+          "id": "Pantoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Anterior Ischemic Optic Neuropathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pantoprazole",
+          "target": "Anterior Ischemic Optic Neuropathy",
+          "label": "causes"
+        },
+        {
+          "source": "Anterior Ischemic Optic Neuropathy",
+          "target": "Omeprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Omeprazole",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pantoprazole,Omeprazole": [
+          "Benzimidazoles",
+          "Proton Pump Inhibitor"
+        ]
+      },
+      "id": "path_19848"
+    }
+  ]
+}

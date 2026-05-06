@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:5 - DISEASE:719",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7143,
+        "final_score": 0.5238,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "etanercept",
+          "type": "Compound"
+        },
+        {
+          "id": "WASP family member 2",
+          "type": "Gene"
+        },
+        {
+          "id": "Marburg acute multiple sclerosis",
+          "type": "Disease"
+        },
+        {
+          "id": "WASP family member 2",
+          "type": "Gene"
+        },
+        {
+          "id": "creatine kinase",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "etanercept",
+          "target": "WASP family member 2",
+          "label": "is affecting"
+        },
+        {
+          "source": "WASP family member 2",
+          "target": "Marburg acute multiple sclerosis",
+          "label": "causes condition"
+        },
+        {
+          "source": "Marburg acute multiple sclerosis",
+          "target": "WASP family member 2",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "WASP family member 2",
+          "target": "creatine kinase",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_690"
+    }
+  ]
+}

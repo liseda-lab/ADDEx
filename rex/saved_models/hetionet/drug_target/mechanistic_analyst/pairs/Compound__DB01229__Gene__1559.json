@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01229 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5242,
+        "final_score": 0.5242
+      },
+      "nodes": [
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Anemic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trabectedin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paclitaxel",
+          "target": "Anemic",
+          "label": "causes"
+        },
+        {
+          "source": "Anemic",
+          "target": "Trabectedin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trabectedin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paclitaxel,Trabectedin": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_16608"
+    }
+  ]
+}

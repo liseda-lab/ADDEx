@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00370 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5622,
+        "final_score": 0.5622
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18768"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3646,
+        "final_score": 0.3646
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Ankle Edema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Ankle Edema",
+          "label": "causes"
+        },
+        {
+          "source": "Ankle Edema",
+          "target": "Verapamil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Verapamil",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Verapamil": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_18769"
+    }
+  ]
+}

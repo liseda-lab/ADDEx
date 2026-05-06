@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB01324 - Gene::6559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.9487,
+        "final_score": 0.8077,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Polythiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Thiazides",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Bendroflumethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Polythiazide",
+          "target": "Thiazides",
+          "label": "is included in"
+        },
+        {
+          "source": "Thiazides",
+          "target": "Bendroflumethiazide",
+          "label": "includes"
+        },
+        {
+          "source": "Bendroflumethiazide",
+          "target": "Slc12a3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Polythiazide,Thiazides": [
+          "Thiazide"
+        ],
+        "Polythiazide,Bendroflumethiazide": [
+          "Benzothiadiazine",
+          "Thiazide Diuretic"
+        ],
+        "Thiazides,Bendroflumethiazide": [
+          "Thiazide"
+        ]
+      },
+      "id": "path_10694"
+    }
+  ]
+}

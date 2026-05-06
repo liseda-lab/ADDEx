@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00712 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4451,
+        "final_score": 0.4451
+      },
+      "nodes": [
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Bleeding Tendency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Montelukast",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flurbiprofen",
+          "target": "Bleeding Tendency",
+          "label": "causes"
+        },
+        {
+          "source": "Bleeding Tendency",
+          "target": "Montelukast",
+          "label": "is caused by"
+        },
+        {
+          "source": "Montelukast",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flurbiprofen,Montelukast": [
+          "Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_5114"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4218,
+        "final_score": 0.4218
+      },
+      "nodes": [
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Oesophageal Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flurbiprofen",
+          "target": "Oesophageal Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Oesophageal Disorder",
+          "target": "Omeprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Omeprazole",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flurbiprofen,Omeprazole": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_5115"
+    }
+  ]
+}

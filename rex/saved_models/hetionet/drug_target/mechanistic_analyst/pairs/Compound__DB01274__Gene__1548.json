@@ -1,0 +1,106 @@
+{
+  "id": "Compound::DB01274 - Gene::1548",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6796,
+        "final_score": 0.6731,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Arformoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenergic Beta2-agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Formoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Arformoterol",
+          "target": "Adrenergic Beta2-agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Adrenergic Beta2-agonists",
+          "target": "Formoterol",
+          "label": "includes"
+        },
+        {
+          "source": "Formoterol",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Arformoterol,Formoterol": [
+          "Beta-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_11089"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5104,
+        "final_score": 0.5104
+      },
+      "nodes": [
+        {
+          "id": "Arformoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Digitalis Intoxication (nos)",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Formoterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Arformoterol",
+          "target": "Digitalis Intoxication (nos)",
+          "label": "causes"
+        },
+        {
+          "source": "Digitalis Intoxication (nos)",
+          "target": "Formoterol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Formoterol",
+          "target": "Cyp2a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Arformoterol,Formoterol": [
+          "Beta-Adrenergic Agonist"
+        ]
+      },
+      "id": "path_11090"
+    }
+  ]
+}

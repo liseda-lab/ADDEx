@@ -1,0 +1,155 @@
+{
+  "id": "Compound::DB00797 - Gene::3269",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7587,
+        "final_score": 0.7127,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tolazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh2",
+          "type": "Gene"
+        },
+        {
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tolazoline",
+          "target": "Hrh2",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh2",
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptor Activity",
+          "target": "Hrh1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20253"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7252,
+        "final_score": 0.6959,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tolazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh2",
+          "type": "Gene"
+        },
+        {
+          "id": "Histamine Receptors",
+          "type": "Pathway"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tolazoline",
+          "target": "Hrh2",
+          "label": "binds"
+        },
+        {
+          "source": "Hrh2",
+          "target": "Histamine Receptors",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptors",
+          "target": "Hrh1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20254"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4118,
+        "final_score": 0.4118
+      },
+      "nodes": [
+        {
+          "id": "Tolazoline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pargyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Tripelennamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tolazoline",
+          "target": "Pargyline",
+          "label": "resembles"
+        },
+        {
+          "source": "Pargyline",
+          "target": "Tripelennamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Tripelennamine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tolazoline,Pargyline": [
+          "Organonitrogen Compound"
+        ],
+        "Tolazoline,Tripelennamine": [
+          "Organonitrogen Compound"
+        ],
+        "Pargyline,Tripelennamine": [
+          "Aromatic Amine"
+        ]
+      },
+      "id": "path_20255"
+    }
+  ]
+}

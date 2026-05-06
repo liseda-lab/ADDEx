@@ -1,0 +1,218 @@
+{
+  "id": "Compound::DB00850 - Gene::3269",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.748,
+        "final_score": 0.7073,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Histamine Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Histamine Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Histamine Receptor Activity",
+          "target": "Hrh1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1410"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6768,
+        "final_score": 0.6717,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Fluphenazine",
+          "label": "includes"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Perphenazine,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Fluphenazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_1411"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5326,
+        "final_score": 0.5326
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bizarre Dreams",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Bizarre Dreams",
+          "label": "causes"
+        },
+        {
+          "source": "Bizarre Dreams",
+          "target": "Fluphenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ]
+      },
+      "id": "path_1412"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4159,
+        "final_score": 0.4159
+      },
+      "nodes": [
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Perphenazine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Fluphenazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Hrh1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Perphenazine,Clocapramine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ],
+        "Perphenazine,Fluphenazine": [
+          "N-Alkylpiperazine",
+          "Antipsychotic Agent"
+        ],
+        "Clocapramine,Fluphenazine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_1413"
+    }
+  ]
+}

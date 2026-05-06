@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB08860 - Gene::9429",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5244,
+        "final_score": 0.5244
+      },
+      "nodes": [
+        {
+          "id": "Pitavastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Myoglobin Urine Present",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pitavastatin",
+          "target": "Myoglobin Urine Present",
+          "label": "causes"
+        },
+        {
+          "source": "Myoglobin Urine Present",
+          "target": "Rosuvastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Rosuvastatin",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pitavastatin,Rosuvastatin": [
+          "Monofluorobenzenes",
+          "Hmg-Coa Reductase Inhibitor"
+        ]
+      },
+      "id": "path_2002"
+    }
+  ]
+}

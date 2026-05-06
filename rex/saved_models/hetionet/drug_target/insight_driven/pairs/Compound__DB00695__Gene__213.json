@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00695 - Gene::213",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6743,
+        "final_score": 0.5872,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis At Loop Of Henle",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ethacrynic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Increased Diuresis At Loop Of Henle",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis At Loop Of Henle",
+          "target": "Ethacrynic Acid",
+          "label": "includes"
+        },
+        {
+          "source": "Ethacrynic Acid",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Furosemide,Ethacrynic Acid": [
+          "Carboxylic Acid",
+          "Loop Diuretic"
+        ]
+      },
+      "id": "path_1555"
+    }
+  ]
+}

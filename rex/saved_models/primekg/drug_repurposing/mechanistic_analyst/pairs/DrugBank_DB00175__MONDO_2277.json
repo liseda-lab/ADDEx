@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB00175 - MONDO_2277",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.721,
+        "final_score": 0.6938,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Pravastatin",
+          "type": "Drug"
+        },
+        {
+          "id": "Hyperlipidemia, Familial Combined, Lpl Related",
+          "type": "Disease"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Drug"
+        },
+        {
+          "id": "Arteriosclerosis Disorder",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pravastatin",
+          "target": "Hyperlipidemia, Familial Combined, Lpl Related",
+          "label": "indication"
+        },
+        {
+          "source": "Hyperlipidemia, Familial Combined, Lpl Related",
+          "target": "Fluvastatin",
+          "label": "indication"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Arteriosclerosis Disorder",
+          "label": "indication"
+        }
+      ],
+      "id": "path_22935"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6475,
+        "final_score": 0.6475
+      },
+      "nodes": [
+        {
+          "id": "Pravastatin",
+          "type": "Drug"
+        },
+        {
+          "id": "Facial Paralysis",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Fluvastatin",
+          "type": "Drug"
+        },
+        {
+          "id": "Arteriosclerosis Disorder",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pravastatin",
+          "target": "Facial Paralysis",
+          "label": "side effect"
+        },
+        {
+          "source": "Facial Paralysis",
+          "target": "Fluvastatin",
+          "label": "side effect"
+        },
+        {
+          "source": "Fluvastatin",
+          "target": "Arteriosclerosis Disorder",
+          "label": "indication"
+        }
+      ],
+      "id": "path_22936"
+    }
+  ]
+}

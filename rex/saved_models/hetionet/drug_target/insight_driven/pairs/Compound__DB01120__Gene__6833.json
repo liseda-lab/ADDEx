@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01120 - Gene::6833",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5807,
+        "final_score": 0.5807
+      },
+      "nodes": [
+        {
+          "id": "Gliclazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Epigastric Fullness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gliclazide",
+          "target": "Epigastric Fullness",
+          "label": "causes"
+        },
+        {
+          "source": "Epigastric Fullness",
+          "target": "Glyburide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Glyburide",
+          "target": "Abcc8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gliclazide,Glyburide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "N-Sulfonylurea"
+        ]
+      },
+      "id": "path_4887"
+    }
+  ]
+}

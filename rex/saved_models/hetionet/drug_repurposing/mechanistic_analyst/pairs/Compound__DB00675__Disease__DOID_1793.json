@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00675 - Disease::DOID:1793",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3417,
+        "final_score": 0.3417
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Optic Nerve Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fluorouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Optic Nerve Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Optic Nerve Disorder",
+          "target": "Fluorouracil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fluorouracil",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Fluorouracil": [
+          "Organic Cyclic Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_2398"
+    }
+  ]
+}

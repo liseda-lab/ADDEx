@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB01406 - Gene::2099",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5485,
+        "final_score": 0.5485
+      },
+      "nodes": [
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Norelgestromin",
+          "type": "Compound"
+        },
+        {
+          "id": "Norgestimate",
+          "type": "Compound"
+        },
+        {
+          "id": "Esr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Danazol",
+          "target": "Norelgestromin",
+          "label": "resembles"
+        },
+        {
+          "source": "Norelgestromin",
+          "target": "Norgestimate",
+          "label": "resembles"
+        },
+        {
+          "source": "Norgestimate",
+          "target": "Esr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Danazol,Norelgestromin": [
+          "Therapeutic Steroid Hormone",
+          "Steroid"
+        ],
+        "Danazol,Norgestimate": [
+          "Therapeutic Steroid Hormone",
+          "Steroid"
+        ],
+        "Norelgestromin,Norgestimate": [
+          "Steroid",
+          "Progestin"
+        ]
+      },
+      "id": "path_13377"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5378,
+        "final_score": 0.5378
+      },
+      "nodes": [
+        {
+          "id": "Danazol",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatic Adenoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Esr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Danazol",
+          "target": "Hepatic Adenoma",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatic Adenoma",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Esr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Danazol,Clomifene": [
+          "Organic Molecular Entity",
+          "Hormone Antagonist"
+        ]
+      },
+      "id": "path_13378"
+    }
+  ]
+}

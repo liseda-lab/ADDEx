@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00717 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4448,
+        "final_score": 0.4448
+      },
+      "nodes": [
+        {
+          "id": "Norethindrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Carbohydrate Tolerance Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Prednisone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norethindrone",
+          "target": "Carbohydrate Tolerance Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Carbohydrate Tolerance Decreased",
+          "target": "Prednisone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Prednisone",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norethindrone,Prednisone": [
+          "Therapeutic Steroid Hormone",
+          "3-Oxo-Delta(4) Steroid"
+        ]
+      },
+      "id": "path_5097"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4163,
+        "final_score": 0.4163
+      },
+      "nodes": [
+        {
+          "id": "Norethindrone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norethindrone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Buprenorphine",
+          "label": "is bound by"
+        },
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norethindrone,Buprenorphine": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_5098"
+    }
+  ]
+}

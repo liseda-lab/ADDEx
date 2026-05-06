@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00582 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4124,
+        "final_score": 0.4124
+      },
+      "nodes": [
+        {
+          "id": "Voriconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Immunocompromised",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Voriconazole",
+          "target": "Immunocompromised",
+          "label": "causes"
+        },
+        {
+          "source": "Immunocompromised",
+          "target": "Cimetidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Voriconazole,Cimetidine": [
+          "Azole"
+        ]
+      },
+      "id": "path_20243"
+    }
+  ]
+}

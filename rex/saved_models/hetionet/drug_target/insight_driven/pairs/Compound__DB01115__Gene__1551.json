@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01115 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6052,
+        "final_score": 0.6052
+      },
+      "nodes": [
+        {
+          "id": "Nifedipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Amlodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nifedipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Amlodipine",
+          "label": "includes"
+        },
+        {
+          "source": "Amlodipine",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nifedipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Nifedipine,Amlodipine": [
+          "Methyl Ester",
+          "Calcium Channel Blocker"
+        ],
+        "Dihydropyridines,Amlodipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_5592"
+    }
+  ]
+}

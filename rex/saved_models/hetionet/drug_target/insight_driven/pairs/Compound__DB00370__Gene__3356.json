@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00370 - Gene::3356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6493,
+        "final_score": 0.6493
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr3a",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Htr3a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr3a",
+          "target": "Serotonin Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Binding",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_21710"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3927,
+        "final_score": 0.3927
+      },
+      "nodes": [
+        {
+          "id": "Mirtazapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenindamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Epinastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mirtazapine",
+          "target": "Phenindamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Phenindamine",
+          "target": "Epinastine",
+          "label": "resembles"
+        },
+        {
+          "source": "Epinastine",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mirtazapine,Phenindamine": [
+          "Polycyclic Compound"
+        ],
+        "Mirtazapine,Epinastine": [
+          "Benzazepine"
+        ],
+        "Phenindamine,Epinastine": [
+          "Polycyclic Compound",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_21711"
+    }
+  ]
+}

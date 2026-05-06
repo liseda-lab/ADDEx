@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00444 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.388,
+        "final_score": 0.388
+      },
+      "nodes": [
+        {
+          "id": "Teniposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Leukaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Felbamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Teniposide",
+          "target": "Leukaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Leukaemia",
+          "target": "Felbamate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Felbamate",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Teniposide,Felbamate": [
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_12028"
+    }
+  ]
+}

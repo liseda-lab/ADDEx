@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB00997 - Disease::DOID:1324",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4408,
+        "final_score": 0.4408
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Thyroid Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Subclavian Vein",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Thyroid Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Thyroid Cancer",
+          "target": "Subclavian Vein",
+          "label": "localizes"
+        },
+        {
+          "source": "Subclavian Vein",
+          "target": "Lung Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_2534"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3831,
+        "final_score": 0.3831
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Pneumocystis Jirovecii Pneumonia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Pneumocystis Jirovecii Pneumonia",
+          "label": "causes"
+        },
+        {
+          "source": "Pneumocystis Jirovecii Pneumonia",
+          "target": "Methotrexate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Lung Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Methotrexate": [
+          "Hydroxides",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_2535"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3738,
+        "final_score": 0.3738
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cryptococcosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Cryptococcosis",
+          "label": "causes"
+        },
+        {
+          "source": "Cryptococcosis",
+          "target": "Methotrexate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Lung Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Methotrexate": [
+          "Hydroxides",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_2536"
+    }
+  ]
+}

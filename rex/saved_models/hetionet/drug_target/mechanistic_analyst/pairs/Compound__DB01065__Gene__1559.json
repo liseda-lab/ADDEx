@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01065 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6716,
+        "final_score": 0.6275,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Melatonin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp1a2",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18075"
+    },
+    {
+      "score": {
+        "ic_mean": 0.457,
+        "final_score": 0.457
+      },
+      "nodes": [
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Stress Symptoms",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Zolpidem",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Melatonin",
+          "target": "Stress Symptoms",
+          "label": "causes"
+        },
+        {
+          "source": "Stress Symptoms",
+          "target": "Zolpidem",
+          "label": "is caused by"
+        },
+        {
+          "source": "Zolpidem",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Melatonin,Zolpidem": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_18076"
+    }
+  ]
+}

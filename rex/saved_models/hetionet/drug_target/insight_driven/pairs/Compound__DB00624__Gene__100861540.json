@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00624 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.467,
+        "final_score": 0.467
+      },
+      "nodes": [
+        {
+          "id": "Testosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Neoplasm Prostate",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Testosterone",
+          "target": "Neoplasm Prostate",
+          "label": "causes"
+        },
+        {
+          "source": "Neoplasm Prostate",
+          "target": "Finasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Testosterone,Finasteride": [
+          "3-Oxo Steroid"
+        ]
+      },
+      "id": "path_7193"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4356,
+        "final_score": 0.4356
+      },
+      "nodes": [
+        {
+          "id": "Testosterone",
+          "type": "Compound"
+        },
+        {
+          "id": "Venous Insufficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nisoldipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Testosterone",
+          "target": "Venous Insufficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Venous Insufficiency",
+          "target": "Nisoldipine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nisoldipine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Testosterone,Nisoldipine": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_7194"
+    }
+  ]
+}

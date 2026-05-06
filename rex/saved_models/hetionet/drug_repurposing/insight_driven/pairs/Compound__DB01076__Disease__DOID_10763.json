@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB01076 - Disease::DOID:10763",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7042,
+        "final_score": 0.5188,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Atorvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Conivaptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Avpr2",
+          "type": "Gene"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Atorvastatin",
+          "target": "Conivaptan",
+          "label": "resembles"
+        },
+        {
+          "source": "Conivaptan",
+          "target": "Avpr2",
+          "label": "binds"
+        },
+        {
+          "source": "Avpr2",
+          "target": "Hypertension (disease)",
+          "label": "is associated by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Atorvastatin,Conivaptan": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4676"
+    }
+  ]
+}

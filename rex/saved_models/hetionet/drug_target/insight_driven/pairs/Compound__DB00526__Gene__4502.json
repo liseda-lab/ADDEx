@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00526 - Gene::4502",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7926,
+        "final_score": 0.813,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxaliplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Mt2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxaliplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Cisplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Mt2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxaliplatin,Cisplatin": [
+          "Platinum Compound",
+          "Platinum Coordination Entity"
+        ]
+      },
+      "id": "path_9755"
+    }
+  ]
+}

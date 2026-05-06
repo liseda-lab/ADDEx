@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00321 - Disease::DOID:6364",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4998,
+        "final_score": 0.4998
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Paresthesia Of Limbs",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ergotamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Migraine",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Paresthesia Of Limbs",
+          "label": "causes"
+        },
+        {
+          "source": "Paresthesia Of Limbs",
+          "target": "Ergotamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ergotamine",
+          "target": "Migraine",
+          "label": "palliates"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Ergotamine": [
+          "Organonitrogen Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_4466"
+    }
+  ]
+}

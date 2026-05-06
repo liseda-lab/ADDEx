@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00177 - Gene::185",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7489,
+        "final_score": 0.7078,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 3.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Valsartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Angiotensin 2 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Telmisartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Agtr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valsartan",
+          "target": "Angiotensin 2 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Angiotensin 2 Receptor Antagonists",
+          "target": "Telmisartan",
+          "label": "includes"
+        },
+        {
+          "source": "Telmisartan",
+          "target": "Agtr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valsartan,Telmisartan": [
+          "Angiotensin Ii Receptor Antagonist",
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_11605"
+    }
+  ]
+}

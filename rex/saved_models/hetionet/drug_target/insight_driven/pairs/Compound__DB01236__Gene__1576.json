@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01236 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5973,
+        "final_score": 0.5973
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Propofol",
+          "label": "includes"
+        },
+        {
+          "source": "Propofol",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Propofol": [
+          "Agent Affecting Nervous System",
+          "Oxygen Molecular Entity"
+        ]
+      },
+      "id": "path_9452"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5236,
+        "final_score": 0.5236
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Nad(p)h As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Nad(p)h As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Paired Donors, With Incorporation Or Reduction Of Molecular Oxygen, Nad(p)h As One Donor, And Incorporation Of One Atom Of Oxygen",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9453"
+    }
+  ]
+}

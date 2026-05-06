@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00712 - Gene::5743",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6079,
+        "final_score": 0.6079
+      },
+      "nodes": [
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nonsteroidal Anti-inflammatory Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nabumetone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flurbiprofen",
+          "target": "Nonsteroidal Anti-inflammatory Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Nonsteroidal Anti-inflammatory Compounds",
+          "target": "Nabumetone",
+          "label": "includes"
+        },
+        {
+          "source": "Nabumetone",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flurbiprofen,Nabumetone": [
+          "Nonsteroidal Antiinflammatory Drug",
+          "Benzenoid Aromatic Compound"
+        ]
+      },
+      "id": "path_8096"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5019,
+        "final_score": 0.5019
+      },
+      "nodes": [
+        {
+          "id": "Flurbiprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Inflammatory Bowel Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Risedronate",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flurbiprofen",
+          "target": "Inflammatory Bowel Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Inflammatory Bowel Disease",
+          "target": "Risedronate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Risedronate",
+          "target": "Ptgs2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flurbiprofen,Risedronate": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_8097"
+    }
+  ]
+}

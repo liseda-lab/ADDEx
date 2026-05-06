@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00224 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4537,
+        "final_score": 0.4537
+      },
+      "nodes": [
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Triglycerides Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Eplerenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indinavir",
+          "target": "Serum Triglycerides Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Triglycerides Increased",
+          "target": "Eplerenone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Eplerenone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indinavir,Eplerenone": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_5596"
+    }
+  ]
+}

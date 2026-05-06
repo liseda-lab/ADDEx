@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB01095 - Gene::1555",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6265,
+        "final_score": 0.6265
+      },
+      "nodes": [
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvastatin",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2b6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12746"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4873,
+        "final_score": 0.4873
+      },
+      "nodes": [
+        {
+          "id": "Fluvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypersensitive Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nevirapine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvastatin",
+          "target": "Hypersensitive Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Hypersensitive Syndrome",
+          "target": "Nevirapine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nevirapine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluvastatin,Nevirapine": [
+          "Enzyme Inhibitor",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_12747"
+    }
+  ]
+}

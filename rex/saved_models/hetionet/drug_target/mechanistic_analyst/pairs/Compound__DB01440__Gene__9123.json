@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01440 - Gene::9123",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7353,
+        "final_score": 0.6177,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Gamma Hydroxybutyric Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc16a1",
+          "type": "Gene"
+        },
+        {
+          "id": "Proton-coupled Monocarboxylate Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc16a3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gamma Hydroxybutyric Acid",
+          "target": "Slc16a1",
+          "label": "binds"
+        },
+        {
+          "source": "Slc16a1",
+          "target": "Proton-coupled Monocarboxylate Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Proton-coupled Monocarboxylate Transport",
+          "target": "Slc16a3",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9260"
+    }
+  ]
+}

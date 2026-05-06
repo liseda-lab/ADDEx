@@ -1,0 +1,113 @@
+{
+  "id": "Compound::DB00277 - Gene::5142",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7018,
+        "final_score": 0.6842,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4c",
+          "type": "Gene"
+        },
+        {
+          "id": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Pde4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theophylline",
+          "target": "Pde4c",
+          "label": "binds"
+        },
+        {
+          "source": "Pde4c",
+          "target": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "3',5'-cyclic-amp Phosphodiesterase Activity",
+          "target": "Pde4b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12208"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7004,
+        "final_score": 0.6835,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Caffeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde4b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theophylline",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Caffeine",
+          "label": "includes"
+        },
+        {
+          "source": "Caffeine",
+          "target": "Pde4b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theophylline,Xanthines": [
+          "Purines"
+        ],
+        "Theophylline,Caffeine": [
+          "Methylxanthine"
+        ],
+        "Xanthines,Caffeine": [
+          "Purines"
+        ]
+      },
+      "id": "path_12209"
+    }
+  ]
+}

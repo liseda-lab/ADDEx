@@ -1,0 +1,114 @@
+{
+  "id": "COMPOUND:425 - DISEASE:892",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6412,
+        "final_score": 0.6412
+      },
+      "nodes": [
+        {
+          "id": "allopurinol",
+          "type": "Compound"
+        },
+        {
+          "id": "dehydrogenase/reductase 7C",
+          "type": "Gene"
+        },
+        {
+          "id": "Acquired immune deficiency syndrome-related complex",
+          "type": "Disease"
+        },
+        {
+          "id": "dehydrogenase/reductase 7C",
+          "type": "Gene"
+        },
+        {
+          "id": "drug discontinued - patient fear/risk",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "allopurinol",
+          "target": "dehydrogenase/reductase 7C",
+          "label": "is affecting"
+        },
+        {
+          "source": "dehydrogenase/reductase 7C",
+          "target": "Acquired immune deficiency syndrome-related complex",
+          "label": "causes condition"
+        },
+        {
+          "source": "Acquired immune deficiency syndrome-related complex",
+          "target": "dehydrogenase/reductase 7C",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "dehydrogenase/reductase 7C",
+          "target": "drug discontinued - patient fear/risk",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_728"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7231,
+        "final_score": 0.4449,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 3.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "allopurinol",
+          "type": "Compound"
+        },
+        {
+          "id": "DnaJ heat shock protein family (Hsp40) member B6",
+          "type": "Gene"
+        },
+        {
+          "id": "Seborrhea NOS",
+          "type": "Disease"
+        },
+        {
+          "id": "dehydrogenase/reductase 7C",
+          "type": "Gene"
+        },
+        {
+          "id": "drug discontinued - patient fear/risk",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "allopurinol",
+          "target": "DnaJ heat shock protein family (Hsp40) member B6",
+          "label": "is affecting"
+        },
+        {
+          "source": "DnaJ heat shock protein family (Hsp40) member B6",
+          "target": "Seborrhea NOS",
+          "label": "causes condition"
+        },
+        {
+          "source": "Seborrhea NOS",
+          "target": "dehydrogenase/reductase 7C",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "dehydrogenase/reductase 7C",
+          "target": "drug discontinued - patient fear/risk",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_727"
+    }
+  ]
+}

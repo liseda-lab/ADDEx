@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00541 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4895,
+        "final_score": 0.4895
+      },
+      "nodes": [
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Colonic Pseudo-obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vincristine",
+          "target": "Colonic Pseudo-obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Colonic Pseudo-obstruction",
+          "target": "Clonidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vincristine,Clonidine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_21916"
+    }
+  ]
+}

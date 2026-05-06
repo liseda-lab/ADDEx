@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00951 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7201,
+        "final_score": 0.6934,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2c19",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_275"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5576,
+        "final_score": 0.5576
+      },
+      "nodes": [
+        {
+          "id": "Isoniazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Cisapride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoniazid",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Cisapride",
+          "label": "is bound by"
+        },
+        {
+          "source": "Cisapride",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoniazid,Cisapride": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_276"
+    }
+  ]
+}

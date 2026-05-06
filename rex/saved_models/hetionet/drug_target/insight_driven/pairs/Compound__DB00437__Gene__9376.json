@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00437 - Gene::9376",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4859,
+        "final_score": 0.4859
+      },
+      "nodes": [
+        {
+          "id": "Allopurinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gout Attack",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Allopurinol",
+          "target": "Gout Attack",
+          "label": "causes"
+        },
+        {
+          "source": "Gout Attack",
+          "target": "Furosemide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Furosemide",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Allopurinol,Furosemide": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_7806"
+    }
+  ]
+}

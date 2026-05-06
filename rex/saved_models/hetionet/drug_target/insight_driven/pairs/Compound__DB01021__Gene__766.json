@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01021 - Gene::766",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7689,
+        "final_score": 0.6344,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Trichlormethiazide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc12a3",
+          "type": "Gene"
+        },
+        {
+          "id": "Metolazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trichlormethiazide",
+          "target": "Slc12a3",
+          "label": "binds"
+        },
+        {
+          "source": "Slc12a3",
+          "target": "Metolazone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Metolazone",
+          "target": "Ca7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trichlormethiazide,Metolazone": [
+          "Organonitrogen Heterocyclic Compound",
+          "Thiazide Diuretic"
+        ]
+      },
+      "id": "path_22456"
+    }
+  ]
+}

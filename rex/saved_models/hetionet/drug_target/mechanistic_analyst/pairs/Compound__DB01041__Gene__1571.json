@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01041 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4539,
+        "final_score": 0.4539
+      },
+      "nodes": [
+        {
+          "id": "Thalidomide",
+          "type": "Compound"
+        },
+        {
+          "id": "White Blood Cell Count Low",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cimetidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thalidomide",
+          "target": "White Blood Cell Count Low",
+          "label": "causes"
+        },
+        {
+          "source": "White Blood Cell Count Low",
+          "target": "Cimetidine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cimetidine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Thalidomide,Cimetidine": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_19501"
+    }
+  ]
+}

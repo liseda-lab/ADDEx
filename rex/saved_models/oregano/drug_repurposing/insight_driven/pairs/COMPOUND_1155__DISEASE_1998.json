@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:1155 - DISEASE:1998",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6615,
+        "final_score": 0.3307,
+        "agentic_score": 0.0,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 1.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "escitalopram",
+          "type": "Compound"
+        },
+        {
+          "id": "insulin receptor substrate 1",
+          "type": "Gene"
+        },
+        {
+          "id": "Neuroectodermal Tumors",
+          "type": "Disease"
+        },
+        {
+          "id": "insulin receptor substrate 1",
+          "type": "Gene"
+        },
+        {
+          "id": "Meningitis, Fungal",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "escitalopram",
+          "target": "insulin receptor substrate 1",
+          "label": "is affecting"
+        },
+        {
+          "source": "insulin receptor substrate 1",
+          "target": "Neuroectodermal Tumors",
+          "label": "causes condition"
+        },
+        {
+          "source": "Neuroectodermal Tumors",
+          "target": "insulin receptor substrate 1",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "insulin receptor substrate 1",
+          "target": "Meningitis, Fungal",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_584"
+    }
+  ]
+}

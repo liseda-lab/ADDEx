@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01238 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4938,
+        "final_score": 0.4938
+      },
+      "nodes": [
+        {
+          "id": "Aripiprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Pharyngeal Erythema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ivacaftor",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aripiprazole",
+          "target": "Pharyngeal Erythema",
+          "label": "causes"
+        },
+        {
+          "source": "Pharyngeal Erythema",
+          "target": "Ivacaftor",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ivacaftor",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aripiprazole,Ivacaftor": [
+          "Quinolone"
+        ]
+      },
+      "id": "path_2932"
+    }
+  ]
+}

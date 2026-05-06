@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00987 - Gene::5422",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6636,
+        "final_score": 0.6651,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cytarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pola1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cytarabine",
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Nelarabine",
+          "label": "includes"
+        },
+        {
+          "source": "Nelarabine",
+          "target": "Pola1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cytarabine,Nelarabine": [
+          "Beta-D-Arabinoside",
+          "Antimetabolite"
+        ]
+      },
+      "id": "path_8665"
+    }
+  ]
+}

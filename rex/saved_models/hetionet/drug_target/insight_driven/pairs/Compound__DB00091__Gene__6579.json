@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00091 - Gene::6579",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4817,
+        "final_score": 0.4817
+      },
+      "nodes": [
+        {
+          "id": "Cyclosporine",
+          "type": "Compound"
+        },
+        {
+          "id": "Uraemic Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Quinine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cyclosporine",
+          "target": "Uraemic Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Uraemic Syndrome",
+          "target": "Quinine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Quinine",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cyclosporine,Quinine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_20726"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "Compound::DB01026 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6227,
+        "final_score": 0.6227
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2386"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4713,
+        "final_score": 0.4713
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Hair Discoloration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Leflunomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Hair Discoloration",
+          "label": "causes"
+        },
+        {
+          "source": "Hair Discoloration",
+          "target": "Leflunomide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Leflunomide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Leflunomide": [
+          "Azole",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_2387"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3819,
+        "final_score": 0.3819
+      },
+      "nodes": [
+        {
+          "id": "Ketoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ketoconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Miconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Miconazole",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ketoconazole,Azoles": [
+          "Azole"
+        ],
+        "Ketoconazole,Miconazole": [
+          "Imidazole Antifungal Drug",
+          "Anti-Infective Agent"
+        ],
+        "Azoles,Miconazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_2388"
+    }
+  ]
+}

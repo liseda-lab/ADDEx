@@ -1,0 +1,114 @@
+{
+  "id": "Compound::DB00595 - Gene::10864",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8454,
+        "final_score": 0.8394,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxytetracycline",
+          "type": "Compound"
+        },
+        {
+          "id": "Tetracyclines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Minocycline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxytetracycline",
+          "target": "Tetracyclines",
+          "label": "is included in"
+        },
+        {
+          "source": "Tetracyclines",
+          "target": "Minocycline",
+          "label": "includes"
+        },
+        {
+          "source": "Minocycline",
+          "target": "Slc22a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxytetracycline,Tetracyclines": [
+          "Tetracyclines"
+        ],
+        "Oxytetracycline,Minocycline": [
+          "Tetracycline Antibiotic",
+          "Zwitterion"
+        ],
+        "Tetracyclines,Minocycline": [
+          "Tetracyclines"
+        ]
+      },
+      "id": "path_9753"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7844,
+        "final_score": 0.8089,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxytetracycline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Organic Anion Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxytetracycline",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Organic Anion Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Organic Anion Transport",
+          "target": "Slc22a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9754"
+    }
+  ]
+}

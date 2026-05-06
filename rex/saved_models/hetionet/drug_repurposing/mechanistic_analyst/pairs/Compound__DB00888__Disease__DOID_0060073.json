@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00888 - Disease::DOID:0060073",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5447,
+        "final_score": 0.5447
+      },
+      "nodes": [
+        {
+          "id": "Mechlorethamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Aplasia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fludarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphatic System Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mechlorethamine",
+          "target": "Aplasia",
+          "label": "causes"
+        },
+        {
+          "source": "Aplasia",
+          "target": "Fludarabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fludarabine",
+          "target": "Lymphatic System Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mechlorethamine,Fludarabine": [
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_3328"
+    }
+  ]
+}

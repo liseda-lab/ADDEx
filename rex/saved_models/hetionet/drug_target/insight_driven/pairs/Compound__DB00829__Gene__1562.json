@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00829 - Gene::1562",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6125,
+        "final_score": 0.6125
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clobazam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Clobazam",
+          "label": "includes"
+        },
+        {
+          "source": "Clobazam",
+          "target": "Cyp2c18",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Diazepam,Clobazam": [
+          "1,4-Benzodiazepinone",
+          "Antianxiety Agent"
+        ],
+        "Benzodiazepines,Clobazam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_22207"
+    }
+  ]
+}

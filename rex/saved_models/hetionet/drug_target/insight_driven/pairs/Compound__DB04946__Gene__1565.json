@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB04946 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6583,
+        "final_score": 0.5792,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Iloperidone",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1627"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4289,
+        "final_score": 0.4289
+      },
+      "nodes": [
+        {
+          "id": "Iloperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Obsessive-compulsive Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tetrabenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Iloperidone",
+          "target": "Obsessive-compulsive Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Obsessive-compulsive Disorder",
+          "target": "Tetrabenazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tetrabenazine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Iloperidone,Tetrabenazine": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_1628"
+    }
+  ]
+}

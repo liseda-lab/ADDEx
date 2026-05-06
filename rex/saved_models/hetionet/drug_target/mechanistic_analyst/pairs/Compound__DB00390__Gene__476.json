@@ -1,0 +1,68 @@
+{
+  "id": "Compound::DB00390 - Gene::476",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7417,
+        "final_score": 0.7042,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Digoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Deslanoside",
+          "type": "Compound"
+        },
+        {
+          "id": "Acetyldigitoxin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Digoxin",
+          "target": "Deslanoside",
+          "label": "resembles"
+        },
+        {
+          "source": "Deslanoside",
+          "target": "Acetyldigitoxin",
+          "label": "resembles"
+        },
+        {
+          "source": "Acetyldigitoxin",
+          "target": "Atp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Digoxin,Deslanoside": [
+          "Carbohydrate",
+          "Cardenolide Glycoside"
+        ],
+        "Digoxin,Acetyldigitoxin": [
+          "Carbohydrate",
+          "Cardenolide Glycoside"
+        ],
+        "Deslanoside,Acetyldigitoxin": [
+          "Cardenolide Glycoside",
+          "Glycoside"
+        ]
+      },
+      "id": "path_20416"
+    }
+  ]
+}

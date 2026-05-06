@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00541 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4011,
+        "final_score": 0.4011
+      },
+      "nodes": [
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blindness Cortical",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vincristine",
+          "target": "Blindness Cortical",
+          "label": "causes"
+        },
+        {
+          "source": "Blindness Cortical",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vincristine,Cisplatin": [
+          "Heteroatomic Molecular Entity",
+          "Cytotoxic Chemotherapeutic Agent"
+        ]
+      },
+      "id": "path_1348"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB01037 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4928,
+        "final_score": 0.4928
+      },
+      "nodes": [
+        {
+          "id": "Selegiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Delirium Toxic",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenelzine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Selegiline",
+          "target": "Delirium Toxic",
+          "label": "causes"
+        },
+        {
+          "source": "Delirium Toxic",
+          "target": "Phenelzine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenelzine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Selegiline,Phenelzine": [
+          "Amine",
+          "Monoamine Oxidase Inhibitor"
+        ]
+      },
+      "id": "path_11346"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3917,
+        "final_score": 0.3917
+      },
+      "nodes": [
+        {
+          "id": "Selegiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Compulsions",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Selegiline",
+          "target": "Compulsions",
+          "label": "causes"
+        },
+        {
+          "source": "Compulsions",
+          "target": "Morphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Morphine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Selegiline,Morphine": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_11347"
+    }
+  ]
+}

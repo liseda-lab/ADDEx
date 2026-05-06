@@ -1,0 +1,149 @@
+{
+  "id": "Compound::DB00695 - Gene::9376",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6742,
+        "final_score": 0.6704,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Organic Cation/anion/zwitterion Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Organic Cation/anion/zwitterion Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Organic Cation/anion/zwitterion Transport",
+          "target": "Slc22a8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_16665"
+    },
+    {
+      "score": {
+        "ic_mean": 0.659,
+        "final_score": 0.6628,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "target": "Slc22a8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_16666"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5199,
+        "final_score": 0.5199
+      },
+      "nodes": [
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gout Attack",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Allopurinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Furosemide",
+          "target": "Gout Attack",
+          "label": "causes"
+        },
+        {
+          "source": "Gout Attack",
+          "target": "Allopurinol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Allopurinol",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Furosemide,Allopurinol": [
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_16667"
+    }
+  ]
+}

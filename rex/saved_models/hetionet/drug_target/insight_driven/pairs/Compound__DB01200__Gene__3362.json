@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01200 - Gene::3362",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5209,
+        "final_score": 0.5209
+      },
+      "nodes": [
+        {
+          "id": "Bromocriptine",
+          "type": "Compound"
+        },
+        {
+          "id": "Retroperitoneal Fibrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methysergide",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bromocriptine",
+          "target": "Retroperitoneal Fibrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Retroperitoneal Fibrosis",
+          "target": "Methysergide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methysergide",
+          "target": "Htr6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bromocriptine,Methysergide": [
+          "Indole Alkaloid",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_5193"
+    }
+  ]
+}

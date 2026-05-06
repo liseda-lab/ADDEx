@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00668 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6409,
+        "final_score": 0.6409
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c9",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp3a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11062"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4948,
+        "final_score": 0.4948
+      },
+      "nodes": [
+        {
+          "id": "Epinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hexoprenaline",
+          "type": "Compound"
+        },
+        {
+          "id": "Salmeterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epinephrine",
+          "target": "Hexoprenaline",
+          "label": "resembles"
+        },
+        {
+          "source": "Hexoprenaline",
+          "target": "Salmeterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Salmeterol",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epinephrine,Hexoprenaline": [
+          "Catecholamine"
+        ],
+        "Epinephrine,Salmeterol": [
+          "Phenols"
+        ],
+        "Hexoprenaline,Salmeterol": [
+          "Phenols"
+        ]
+      },
+      "id": "path_11063"
+    }
+  ]
+}

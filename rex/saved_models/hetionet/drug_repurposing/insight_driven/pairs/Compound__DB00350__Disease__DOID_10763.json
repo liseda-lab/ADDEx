@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00350 - Disease::DOID:10763",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7459,
+        "final_score": 0.8313,
+        "agentic_score": 0.9167,
+        "llm_dimensions": {
+          "validity": 5.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Minoxidil",
+          "type": "Compound"
+        },
+        {
+          "id": "Arteriolar Vasodilation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Hydralazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Minoxidil",
+          "target": "Arteriolar Vasodilation",
+          "label": "is included in"
+        },
+        {
+          "source": "Arteriolar Vasodilation",
+          "target": "Hydralazine",
+          "label": "includes"
+        },
+        {
+          "source": "Hydralazine",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Minoxidil,Hydralazine": [
+          "Antihypertensive Agent",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_2160"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01030 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.391,
+        "final_score": 0.391
+      },
+      "nodes": [
+        {
+          "id": "Topotecan",
+          "type": "Compound"
+        },
+        {
+          "id": "Lung Neoplasm Malignant",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Doxazosin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Topotecan",
+          "target": "Lung Neoplasm Malignant",
+          "label": "causes"
+        },
+        {
+          "source": "Lung Neoplasm Malignant",
+          "target": "Doxazosin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Doxazosin",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Topotecan,Doxazosin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3112"
+    }
+  ]
+}

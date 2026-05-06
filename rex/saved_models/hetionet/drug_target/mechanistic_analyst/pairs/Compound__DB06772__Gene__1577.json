@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB06772 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6303,
+        "final_score": 0.6303
+      },
+      "nodes": [
+        {
+          "id": "Cabazitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabazitaxel",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12617"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4471,
+        "final_score": 0.4471
+      },
+      "nodes": [
+        {
+          "id": "Cabazitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Colitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Aprepitant",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cabazitaxel",
+          "target": "Neutropenic Colitis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Colitis",
+          "target": "Aprepitant",
+          "label": "is caused by"
+        },
+        {
+          "source": "Aprepitant",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cabazitaxel,Aprepitant": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_12618"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB04841 - Gene::1548",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6754,
+        "final_score": 0.671,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Flunarizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flunarizine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2a6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19267"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6403,
+        "final_score": 0.6403
+      },
+      "nodes": [
+        {
+          "id": "Flunarizine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Nicotine Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flunarizine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Nicotine Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Nicotine Metabolism",
+          "target": "Cyp2a6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19268"
+    }
+  ]
+}

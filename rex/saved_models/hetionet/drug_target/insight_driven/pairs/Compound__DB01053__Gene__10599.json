@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01053 - Gene::10599",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6343,
+        "final_score": 0.6343
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Penicillins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dicloxacillin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "Penicillins",
+          "label": "is included in"
+        },
+        {
+          "source": "Penicillins",
+          "target": "Dicloxacillin",
+          "label": "includes"
+        },
+        {
+          "source": "Dicloxacillin",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzylpenicillin,Penicillins": [
+          "Penicillin"
+        ],
+        "Benzylpenicillin,Dicloxacillin": [
+          "Penicillin",
+          "Penicillin Antibiotic"
+        ],
+        "Penicillins,Dicloxacillin": [
+          "Penicillin"
+        ]
+      },
+      "id": "path_3951"
+    }
+  ]
+}

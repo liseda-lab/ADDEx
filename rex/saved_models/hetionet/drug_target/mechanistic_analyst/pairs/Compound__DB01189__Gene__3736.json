@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01189 - Gene::3736",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7489,
+        "final_score": 0.5411,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcna1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Enflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Enflurane",
+          "target": "Kcna1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desflurane,Enflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_2052"
+    }
+  ]
+}

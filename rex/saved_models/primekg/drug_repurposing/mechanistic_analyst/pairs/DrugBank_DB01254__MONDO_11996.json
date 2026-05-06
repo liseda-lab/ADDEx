@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB01254 - MONDO_11996",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7136,
+        "final_score": 0.5235,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dasatinib",
+          "type": "Drug"
+        },
+        {
+          "id": "Chronic Myelogenous Leukemia",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Familial Chronic Myelocytic Leukemia-like Syndrome",
+          "type": "Disease"
+        },
+        {
+          "id": "Chronic Myelogenous Leukemia, Bcr-abl1 Positive",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dasatinib",
+          "target": "Chronic Myelogenous Leukemia",
+          "label": "side effect"
+        },
+        {
+          "source": "Chronic Myelogenous Leukemia",
+          "target": "Familial Chronic Myelocytic Leukemia-like Syndrome",
+          "label": "phenotype present"
+        },
+        {
+          "source": "Familial Chronic Myelocytic Leukemia-like Syndrome",
+          "target": "Chronic Myelogenous Leukemia, Bcr-abl1 Positive",
+          "label": "parent-child"
+        }
+      ],
+      "id": "path_20264"
+    }
+  ]
+}

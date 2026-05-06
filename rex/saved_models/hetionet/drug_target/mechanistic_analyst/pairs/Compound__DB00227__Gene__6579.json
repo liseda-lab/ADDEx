@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00227 - Gene::6579",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5183,
+        "final_score": 0.5183
+      },
+      "nodes": [
+        {
+          "id": "Lovastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nerve Palsy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lovastatin",
+          "target": "Peripheral Nerve Palsy",
+          "label": "causes"
+        },
+        {
+          "source": "Peripheral Nerve Palsy",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lovastatin,Pravastatin": [
+          "Hmg-Coa Reductase Inhibitor",
+          "Carboxylic Ester"
+        ]
+      },
+      "id": "path_19340"
+    }
+  ]
+}

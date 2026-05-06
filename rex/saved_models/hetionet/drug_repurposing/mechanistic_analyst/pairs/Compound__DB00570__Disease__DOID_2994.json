@@ -1,0 +1,48 @@
+{
+  "id": "Compound::DB00570 - Disease::DOID:2994",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3952,
+        "final_score": 0.3952
+      },
+      "nodes": [
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Head And Neck Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Cerebrospinal Fluid Leak",
+          "type": "Symptom"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinblastine",
+          "target": "Head And Neck Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Head And Neck Cancer",
+          "target": "Cerebrospinal Fluid Leak",
+          "label": "presents"
+        },
+        {
+          "source": "Cerebrospinal Fluid Leak",
+          "target": "Germ Cell Cancer",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_3722"
+    }
+  ]
+}

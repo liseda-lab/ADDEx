@@ -1,0 +1,156 @@
+{
+  "id": "Compound::DB00958 - Disease::DOID:5041",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.75,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Cisplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Cisplatin": [
+          "Platinum Coordination Entity",
+          "Platinum Compound"
+        ]
+      },
+      "id": "path_4969"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5,
+        "final_score": 0.5
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Bone Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Bone Cancer",
+          "target": "Cisplatin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Cisplatin": [
+          "Platinum Coordination Entity",
+          "Platinum Compound"
+        ]
+      },
+      "id": "path_4970"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4564,
+        "final_score": 0.4564
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Bone Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Bone Cancer",
+          "target": "Methotrexate",
+          "label": "is treated by"
+        },
+        {
+          "source": "Methotrexate",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Methotrexate": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Dicarboxylic Acid Dianion"
+        ]
+      },
+      "id": "path_4971"
+    }
+  ]
+}

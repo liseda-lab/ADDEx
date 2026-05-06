@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00404 - Gene::2554",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7217,
+        "final_score": 0.6525,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrg2",
+          "type": "Gene"
+        },
+        {
+          "id": "Gaba-a Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Gabrg2",
+          "label": "binds"
+        },
+        {
+          "source": "Gabrg2",
+          "target": "Gaba-a Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Gaba-a Receptor Activity",
+          "target": "Gabra1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7886"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5733,
+        "final_score": 0.5733
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Talkativeness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabra1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Talkativeness",
+          "label": "causes"
+        },
+        {
+          "source": "Talkativeness",
+          "target": "Flurazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flurazepam",
+          "target": "Gabra1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Flurazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_7887"
+    }
+  ]
+}

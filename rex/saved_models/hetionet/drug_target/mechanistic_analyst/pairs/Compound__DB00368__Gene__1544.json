@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00368 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5319,
+        "final_score": 0.5319
+      },
+      "nodes": [
+        {
+          "id": "Norepinephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Violent",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Streptozocin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norepinephrine",
+          "target": "Violent",
+          "label": "causes"
+        },
+        {
+          "source": "Violent",
+          "target": "Streptozocin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Streptozocin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norepinephrine,Streptozocin": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_15405"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "DrugBank_DB00682 - MONDO_5279",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.935,
+        "final_score": 0.6342,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Drug"
+        },
+        {
+          "id": "Thrombophilia",
+          "type": "Disease"
+        },
+        {
+          "id": "Acenocoumarol",
+          "type": "Drug"
+        },
+        {
+          "id": "Pulmonary Embolism (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Thrombophilia",
+          "label": "off-label use"
+        },
+        {
+          "source": "Thrombophilia",
+          "target": "Acenocoumarol",
+          "label": "indication"
+        },
+        {
+          "source": "Acenocoumarol",
+          "target": "Pulmonary Embolism (disease)",
+          "label": "indication"
+        }
+      ],
+      "id": "path_43308"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6041,
+        "final_score": 0.6041
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Drug"
+        },
+        {
+          "id": "Olorofim",
+          "type": "Drug"
+        },
+        {
+          "id": "Acenocoumarol",
+          "type": "Drug"
+        },
+        {
+          "id": "Pulmonary Embolism (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Olorofim",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Olorofim",
+          "target": "Acenocoumarol",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Acenocoumarol",
+          "target": "Pulmonary Embolism (disease)",
+          "label": "indication"
+        }
+      ],
+      "id": "path_43309"
+    },
+    {
+      "score": {
+        "ic_mean": 0.521,
+        "final_score": 0.521
+      },
+      "nodes": [
+        {
+          "id": "Warfarin",
+          "type": "Drug"
+        },
+        {
+          "id": "Nigericin",
+          "type": "Drug"
+        },
+        {
+          "id": "Acenocoumarol",
+          "type": "Drug"
+        },
+        {
+          "id": "Pulmonary Embolism (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Warfarin",
+          "target": "Nigericin",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Nigericin",
+          "target": "Acenocoumarol",
+          "label": "synergistic interaction"
+        },
+        {
+          "source": "Acenocoumarol",
+          "target": "Pulmonary Embolism (disease)",
+          "label": "indication"
+        }
+      ],
+      "id": "path_43310"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "Compound::DB00292 - Gene::1585",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8049,
+        "final_score": 0.7358,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Steroid 11-beta-monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp11b2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etomidate",
+          "target": "Cyp11b1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp11b1",
+          "target": "Steroid 11-beta-monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Steroid 11-beta-monooxygenase Activity",
+          "target": "Cyp11b2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9274"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8049,
+        "final_score": 0.7358,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b1",
+          "type": "Gene"
+        },
+        {
+          "id": "Corticosterone 18-monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp11b2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etomidate",
+          "target": "Cyp11b1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp11b1",
+          "target": "Corticosterone 18-monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Corticosterone 18-monooxygenase Activity",
+          "target": "Cyp11b2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_9275"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5942,
+        "final_score": 0.5942
+      },
+      "nodes": [
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Upper Airway Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Metoclopramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etomidate",
+          "target": "Upper Airway Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Upper Airway Obstruction",
+          "target": "Metoclopramide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Metoclopramide",
+          "target": "Cyp11b2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etomidate,Metoclopramide": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_9276"
+    }
+  ]
+}

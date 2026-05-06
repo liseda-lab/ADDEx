@@ -1,0 +1,114 @@
+{
+  "id": "Compound::DB00799 - Gene::5915",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.6666,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Retinoids",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Acitretin",
+          "type": "Compound"
+        },
+        {
+          "id": "Rarb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Retinoids",
+          "label": "is included in"
+        },
+        {
+          "source": "Retinoids",
+          "target": "Acitretin",
+          "label": "includes"
+        },
+        {
+          "source": "Acitretin",
+          "target": "Rarb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tazarotene,Retinoids": [
+          "Retinoid"
+        ],
+        "Tazarotene,Acitretin": [
+          "Retinoic Acid Agent",
+          "Carbonyl Compound"
+        ],
+        "Retinoids,Acitretin": [
+          "Retinoid"
+        ]
+      },
+      "id": "path_22231"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7817,
+        "final_score": 0.6408,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tazarotene",
+          "type": "Compound"
+        },
+        {
+          "id": "Rxrb",
+          "type": "Gene"
+        },
+        {
+          "id": "Retinoic Acid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Rarb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tazarotene",
+          "target": "Rxrb",
+          "label": "binds"
+        },
+        {
+          "source": "Rxrb",
+          "target": "Retinoic Acid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Retinoic Acid Receptor Activity",
+          "target": "Rarb",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_22232"
+    }
+  ]
+}

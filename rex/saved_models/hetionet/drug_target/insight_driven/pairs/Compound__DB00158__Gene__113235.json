@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00158 - Gene::113235",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7505,
+        "final_score": 0.7086,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Folic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc25a32",
+          "type": "Gene"
+        },
+        {
+          "id": "Folic Acid Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc46a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Folic Acid",
+          "target": "Slc25a32",
+          "label": "binds"
+        },
+        {
+          "source": "Slc25a32",
+          "target": "Folic Acid Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Folic Acid Transporter Activity",
+          "target": "Slc46a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10161"
+    }
+  ]
+}

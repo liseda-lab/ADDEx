@@ -1,0 +1,156 @@
+{
+  "id": "Compound::DB00704 - Gene::4986",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7514,
+        "final_score": 0.709,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Naltrexone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naltrexone",
+          "target": "Oprd1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprd1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprk1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6818"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8779,
+        "final_score": 0.6889,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Naltrexone",
+          "type": "Compound"
+        },
+        {
+          "id": "Opioid Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Naloxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naltrexone",
+          "target": "Opioid Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Opioid Antagonists",
+          "target": "Naloxone",
+          "label": "includes"
+        },
+        {
+          "source": "Naloxone",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naltrexone,Naloxone": [
+          "Organic Heteropentacyclic Compound",
+          "Opiate Antagonist"
+        ]
+      },
+      "id": "path_6817"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5694,
+        "final_score": 0.5694
+      },
+      "nodes": [
+        {
+          "id": "Naltrexone",
+          "type": "Compound"
+        },
+        {
+          "id": "Dependence On Opiates",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Naloxone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Naltrexone",
+          "target": "Dependence On Opiates",
+          "label": "causes"
+        },
+        {
+          "source": "Dependence On Opiates",
+          "target": "Naloxone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Naloxone",
+          "target": "Oprk1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Naltrexone,Naloxone": [
+          "Organic Heteropentacyclic Compound",
+          "Opiate Antagonist"
+        ]
+      },
+      "id": "path_6819"
+    }
+  ]
+}

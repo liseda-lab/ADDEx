@@ -1,0 +1,162 @@
+{
+  "id": "Compound::DB01016 - Gene::6833",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.874,
+        "final_score": 0.7703,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Sulfonylurea Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Glipizide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Sulfonylurea Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Sulfonylurea Compounds",
+          "target": "Glipizide",
+          "label": "includes"
+        },
+        {
+          "source": "Glipizide",
+          "target": "Abcc8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glyburide,Glipizide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_19091"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7679,
+        "final_score": 0.7173,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc9",
+          "type": "Gene"
+        },
+        {
+          "id": "Sulfonylurea Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Abcc8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Abcc9",
+          "label": "binds"
+        },
+        {
+          "source": "Abcc9",
+          "target": "Sulfonylurea Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Sulfonylurea Receptor Activity",
+          "target": "Abcc8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_19092"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6283,
+        "final_score": 0.6283
+      },
+      "nodes": [
+        {
+          "id": "Glyburide",
+          "type": "Compound"
+        },
+        {
+          "id": "Gliquidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Glipizide",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Glyburide",
+          "target": "Gliquidone",
+          "label": "resembles"
+        },
+        {
+          "source": "Gliquidone",
+          "target": "Glipizide",
+          "label": "resembles"
+        },
+        {
+          "source": "Glipizide",
+          "target": "Abcc8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Glyburide,Gliquidone": [
+          "Sulfonylurea Antidiabetic Agent"
+        ],
+        "Glyburide,Glipizide": [
+          "Sulfonylurea Antidiabetic Agent",
+          "Organic Aromatic Compound"
+        ],
+        "Gliquidone,Glipizide": [
+          "Sulfonylurea Antidiabetic Agent"
+        ]
+      },
+      "id": "path_19093"
+    }
+  ]
+}

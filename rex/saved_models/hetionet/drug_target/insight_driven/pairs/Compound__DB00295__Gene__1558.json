@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00295 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5094,
+        "final_score": 0.5094
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Non-cardiogenic Pulmonary Oedema",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clopidogrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Non-cardiogenic Pulmonary Oedema",
+          "label": "causes"
+        },
+        {
+          "source": "Non-cardiogenic Pulmonary Oedema",
+          "target": "Clopidogrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clopidogrel",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Clopidogrel": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_16155"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4557,
+        "final_score": 0.4557
+      },
+      "nodes": [
+        {
+          "id": "Morphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pain Worsened",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lidocaine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Morphine",
+          "target": "Pain Worsened",
+          "label": "causes"
+        },
+        {
+          "source": "Pain Worsened",
+          "target": "Lidocaine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lidocaine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Morphine,Lidocaine": [
+          "Agent Affecting Nervous System",
+          "Tertiary Amino Compound"
+        ]
+      },
+      "id": "path_16156"
+    }
+  ]
+}

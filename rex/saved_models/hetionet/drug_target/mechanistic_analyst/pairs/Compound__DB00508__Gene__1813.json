@@ -1,0 +1,162 @@
+{
+  "id": "Compound::DB00508 - Gene::1813",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6598,
+        "final_score": 0.4966,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Triflupromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Chrm2",
+          "type": "Gene"
+        },
+        {
+          "id": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triflupromazine",
+          "target": "Chrm2",
+          "label": "binds"
+        },
+        {
+          "source": "Chrm2",
+          "target": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "G-protein Coupled Neurotransmitter Receptor Activity",
+          "target": "Drd2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5225"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4192,
+        "final_score": 0.4192
+      },
+      "nodes": [
+        {
+          "id": "Triflupromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Acepromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triflupromazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Acepromazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Acepromazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Triflupromazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Triflupromazine,Acepromazine": [
+          "Agent Affecting Nervous System",
+          "Phenothiazines"
+        ],
+        "Dimetotiazine,Acepromazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_5226"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3885,
+        "final_score": 0.3885
+      },
+      "nodes": [
+        {
+          "id": "Triflupromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Thioproperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Drd2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Triflupromazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Thioproperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Thioproperazine",
+          "target": "Drd2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Triflupromazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Triflupromazine,Thioproperazine": [
+          "Antipsychotic Agent",
+          "Phenothiazines"
+        ],
+        "Dimetotiazine,Thioproperazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_5227"
+    }
+  ]
+}

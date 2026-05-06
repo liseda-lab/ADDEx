@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB08865 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4134,
+        "final_score": 0.4134
+      },
+      "nodes": [
+        {
+          "id": "Crizotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Disease Progression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cabazitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Crizotinib",
+          "target": "Disease Progression",
+          "label": "causes"
+        },
+        {
+          "source": "Disease Progression",
+          "target": "Cabazitaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cabazitaxel",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Crizotinib,Cabazitaxel": [
+          "Organic Molecular Entity",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_12991"
+    }
+  ]
+}

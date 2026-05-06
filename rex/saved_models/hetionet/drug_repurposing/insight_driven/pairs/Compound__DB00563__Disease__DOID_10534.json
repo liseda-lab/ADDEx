@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:10534",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.422,
+        "final_score": 0.422
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatic Fibrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Stomach Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Hepatic Fibrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatic Fibrosis",
+          "target": "Capecitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Stomach Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Capecitabine": [
+          "Antimetabolite",
+          "Carbonyl Compound"
+        ]
+      },
+      "id": "path_4548"
+    }
+  ]
+}

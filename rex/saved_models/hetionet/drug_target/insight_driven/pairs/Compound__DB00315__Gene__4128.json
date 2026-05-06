@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00315 - Gene::4128",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5292,
+        "final_score": 0.5292
+      },
+      "nodes": [
+        {
+          "id": "Zolmitriptan",
+          "type": "Compound"
+        },
+        {
+          "id": "Arteriospasm Coronary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenylephrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Zolmitriptan",
+          "target": "Arteriospasm Coronary",
+          "label": "causes"
+        },
+        {
+          "source": "Arteriospasm Coronary",
+          "target": "Phenylephrine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenylephrine",
+          "target": "Maoa",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Zolmitriptan,Phenylephrine": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_2377"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00369 - Gene::9356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4497,
+        "final_score": 0.4497
+      },
+      "nodes": [
+        {
+          "id": "Cidofovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Fanconi Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tenofovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cidofovir",
+          "target": "Fanconi Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Fanconi Syndrome",
+          "target": "Tenofovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tenofovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cidofovir,Tenofovir": [
+          "Enzyme Inhibitor",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_7156"
+    },
+    {
+      "score": {
+        "ic_mean": 0.421,
+        "final_score": 0.421
+      },
+      "nodes": [
+        {
+          "id": "Cidofovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Pseudolymphoma",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Foscarnet",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cidofovir",
+          "target": "Pseudolymphoma",
+          "label": "causes"
+        },
+        {
+          "source": "Pseudolymphoma",
+          "target": "Foscarnet",
+          "label": "is caused by"
+        },
+        {
+          "source": "Foscarnet",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cidofovir,Foscarnet": [
+          "Phosphonic Acids",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_7157"
+    }
+  ]
+}

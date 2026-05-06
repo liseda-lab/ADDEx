@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:436 - DISEASE:1349",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8246,
+        "final_score": 0.4956,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 3.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "lansoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Solute carrier family 12 member 2",
+          "type": "Protein"
+        },
+        {
+          "id": "Rabeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 2-3",
+          "type": "Gene"
+        },
+        {
+          "id": "heart rate",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "lansoprazole",
+          "target": "Solute carrier family 12 member 2",
+          "label": "has target"
+        },
+        {
+          "source": "Solute carrier family 12 member 2",
+          "target": "Rabeprazole",
+          "label": "is target of"
+        },
+        {
+          "source": "Rabeprazole",
+          "target": "keratin associated protein 2-3",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 2-3",
+          "target": "heart rate",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_718"
+    }
+  ]
+}

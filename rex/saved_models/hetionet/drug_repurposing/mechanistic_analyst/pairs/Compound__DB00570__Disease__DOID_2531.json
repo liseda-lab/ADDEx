@@ -1,0 +1,170 @@
+{
+  "id": "Compound::DB00570 - Disease::DOID:2531",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6123,
+        "final_score": 0.6123
+      },
+      "nodes": [
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Voacamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Vinorelbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinblastine",
+          "target": "Voacamine",
+          "label": "resembles"
+        },
+        {
+          "source": "Voacamine",
+          "target": "Vinorelbine",
+          "label": "resembles"
+        },
+        {
+          "source": "Vinorelbine",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vinblastine,Voacamine": [
+          "Chemical Entity"
+        ],
+        "Vinblastine,Vinorelbine": [
+          "Vinca-Domain Binding Agent",
+          "Methyl Ester"
+        ],
+        "Voacamine,Vinorelbine": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_2013"
+    },
+    {
+      "score": {
+        "ic_mean": 0.686,
+        "final_score": 0.5097,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Vindesine",
+          "type": "Compound"
+        },
+        {
+          "id": "Vinorelbine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinblastine",
+          "target": "Vindesine",
+          "label": "resembles"
+        },
+        {
+          "source": "Vindesine",
+          "target": "Vinorelbine",
+          "label": "resembles"
+        },
+        {
+          "source": "Vinorelbine",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vinblastine,Vindesine": [
+          "Vinca-Domain Binding Agent",
+          "Tertiary Alcohol"
+        ],
+        "Vinblastine,Vinorelbine": [
+          "Vinca-Domain Binding Agent",
+          "Methyl Ester"
+        ],
+        "Vindesine,Vinorelbine": [
+          "Vinca-Domain Binding Agent",
+          "Methyl Ester"
+        ]
+      },
+      "id": "path_2012"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4167,
+        "final_score": 0.4167
+      },
+      "nodes": [
+        {
+          "id": "Vinblastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Germ Cell Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vinblastine",
+          "target": "Germ Cell Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Germ Cell Cancer",
+          "target": "Cisplatin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vinblastine,Cisplatin": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_2014"
+    }
+  ]
+}

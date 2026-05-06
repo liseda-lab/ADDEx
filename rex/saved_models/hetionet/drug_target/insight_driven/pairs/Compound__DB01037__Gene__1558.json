@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01037 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4384,
+        "final_score": 0.4384
+      },
+      "nodes": [
+        {
+          "id": "Selegiline",
+          "type": "Compound"
+        },
+        {
+          "id": "Unintended Pregnancy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Selegiline",
+          "target": "Unintended Pregnancy",
+          "label": "causes"
+        },
+        {
+          "source": "Unintended Pregnancy",
+          "target": "Fenofibrate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenofibrate",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Selegiline,Fenofibrate": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_11090"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "id": "Compound::DB01436 - Gene::1594",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7654,
+        "final_score": 0.716,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Alfacalcidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Gc",
+          "type": "Gene"
+        },
+        {
+          "id": "Vitamin D (calciferol) Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp27b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alfacalcidol",
+          "target": "Gc",
+          "label": "binds"
+        },
+        {
+          "source": "Gc",
+          "target": "Vitamin D (calciferol) Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Vitamin D (calciferol) Metabolism",
+          "target": "Cyp27b1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_22587"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5349,
+        "final_score": 0.5349
+      },
+      "nodes": [
+        {
+          "id": "Alfacalcidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydrotachysterol",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcidiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp27b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alfacalcidol",
+          "target": "Dihydrotachysterol",
+          "label": "resembles"
+        },
+        {
+          "source": "Dihydrotachysterol",
+          "target": "Calcidiol",
+          "label": "resembles"
+        },
+        {
+          "source": "Calcidiol",
+          "target": "Cyp27b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alfacalcidol,Dihydrotachysterol": [
+          "Vitamin D",
+          "Vitamin D Analog"
+        ],
+        "Alfacalcidol,Calcidiol": [
+          "D3 Vitamins",
+          "Vitamin D Analog"
+        ],
+        "Dihydrotachysterol,Calcidiol": [
+          "Vitamin D",
+          "Vitamin D Analog"
+        ]
+      },
+      "id": "path_22588"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5349,
+        "final_score": 0.5349
+      },
+      "nodes": [
+        {
+          "id": "Alfacalcidol",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcipotriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcidiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp27b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alfacalcidol",
+          "target": "Calcipotriol",
+          "label": "resembles"
+        },
+        {
+          "source": "Calcipotriol",
+          "target": "Calcidiol",
+          "label": "resembles"
+        },
+        {
+          "source": "Calcidiol",
+          "target": "Cyp27b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alfacalcidol,Calcipotriol": [
+          "Hydroxy Seco-Steroid"
+        ],
+        "Alfacalcidol,Calcidiol": [
+          "D3 Vitamins",
+          "Vitamin D Analog"
+        ],
+        "Calcipotriol,Calcidiol": [
+          "Hydroxy Seco-Steroid"
+        ]
+      },
+      "id": "path_22589"
+    }
+  ]
+}

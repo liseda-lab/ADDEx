@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00641 - Disease::DOID:1936",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5124,
+        "final_score": 0.5124
+      },
+      "nodes": [
+        {
+          "id": "Simvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        },
+        {
+          "id": "Radial Artery",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Simvastatin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        },
+        {
+          "source": "Coronary Artery Disease",
+          "target": "Radial Artery",
+          "label": "localizes"
+        },
+        {
+          "source": "Radial Artery",
+          "target": "Atherosclerosis",
+          "label": "is localized by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Coronary Artery Disease,Atherosclerosis": [
+          "Non-Neoplastic Cardiovascular Disorder"
+        ]
+      },
+      "id": "path_5150"
+    }
+  ]
+}

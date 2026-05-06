@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00622 - Gene::5153",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8036,
+        "final_score": 0.7351,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nicardipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Calmodulin-dependent Cyclic-nucleotide Phosphodiesterase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Pde1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicardipine",
+          "target": "Pde1a",
+          "label": "binds"
+        },
+        {
+          "source": "Pde1a",
+          "target": "Calmodulin-dependent Cyclic-nucleotide Phosphodiesterase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Calmodulin-dependent Cyclic-nucleotide Phosphodiesterase Activity",
+          "target": "Pde1b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_21651"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "Compound::DB00437 - Gene::10864",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7548,
+        "final_score": 0.5441,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Allopurinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        },
+        {
+          "id": "Organic Anion Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Allopurinol",
+          "target": "Slc22a8",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a8",
+          "target": "Organic Anion Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Organic Anion Transport",
+          "target": "Slc22a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5588"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6633,
+        "final_score": 0.4983,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Allopurinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        },
+        {
+          "id": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Allopurinol",
+          "target": "Slc22a8",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a8",
+          "target": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "target": "Slc22a7",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5589"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4681,
+        "final_score": 0.4681
+      },
+      "nodes": [
+        {
+          "id": "Allopurinol",
+          "type": "Compound"
+        },
+        {
+          "id": "Convulsions Generalised",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Allopurinol",
+          "target": "Convulsions Generalised",
+          "label": "causes"
+        },
+        {
+          "source": "Convulsions Generalised",
+          "target": "Theophylline",
+          "label": "is caused by"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Slc22a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Allopurinol,Theophylline": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_5590"
+    }
+  ]
+}

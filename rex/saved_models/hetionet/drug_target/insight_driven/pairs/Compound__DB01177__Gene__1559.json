@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01177 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4492,
+        "final_score": 0.4492
+      },
+      "nodes": [
+        {
+          "id": "Idarubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Radiation Injury",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cyclophosphamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Idarubicin",
+          "target": "Radiation Injury",
+          "label": "causes"
+        },
+        {
+          "source": "Radiation Injury",
+          "target": "Cyclophosphamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cyclophosphamide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Idarubicin,Cyclophosphamide": [
+          "Heteroorganic Entity",
+          "Dna Binding Agent"
+        ]
+      },
+      "id": "path_8245"
+    }
+  ]
+}

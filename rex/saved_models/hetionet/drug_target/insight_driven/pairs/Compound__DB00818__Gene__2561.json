@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00818 - Gene::2561",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7282,
+        "final_score": 0.6974,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Etomidate",
+          "label": "includes"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Etomidate": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_3109"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5745,
+        "final_score": 0.5745
+      },
+      "nodes": [
+        {
+          "id": "Propofol",
+          "type": "Compound"
+        },
+        {
+          "id": "Upper Airway Obstruction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etomidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Gabrb2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propofol",
+          "target": "Upper Airway Obstruction",
+          "label": "causes"
+        },
+        {
+          "source": "Upper Airway Obstruction",
+          "target": "Etomidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etomidate",
+          "target": "Gabrb2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propofol,Etomidate": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_3110"
+    }
+  ]
+}

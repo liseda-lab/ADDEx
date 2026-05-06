@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00887 - Gene::9376",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7668,
+        "final_score": 0.7167,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        },
+        {
+          "id": "Organic Anion Transport",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Slc22a11",
+          "label": "binds"
+        },
+        {
+          "source": "Slc22a11",
+          "target": "Organic Anion Transport",
+          "label": "participates"
+        },
+        {
+          "source": "Organic Anion Transport",
+          "target": "Slc22a8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2790"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6704,
+        "final_score": 0.6685,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis At Loop Of Henle",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Increased Diuresis At Loop Of Henle",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis At Loop Of Henle",
+          "target": "Furosemide",
+          "label": "includes"
+        },
+        {
+          "source": "Furosemide",
+          "target": "Slc22a8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bumetanide,Furosemide": [
+          "Benzoic Acids",
+          "Loop Diuretic"
+        ]
+      },
+      "id": "path_2791"
+    }
+  ]
+}

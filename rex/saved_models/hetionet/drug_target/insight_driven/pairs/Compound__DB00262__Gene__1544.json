@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00262 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5449,
+        "final_score": 0.5449
+      },
+      "nodes": [
+        {
+          "id": "Carmustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Streptozocin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carmustine",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Streptozocin",
+          "label": "includes"
+        },
+        {
+          "source": "Streptozocin",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carmustine,Streptozocin": [
+          "N-Nitrosoureas",
+          "Nitrosourea Compound"
+        ]
+      },
+      "id": "path_4348"
+    },
+    {
+      "score": {
+        "ic_mean": 0.474,
+        "final_score": 0.474
+      },
+      "nodes": [
+        {
+          "id": "Carmustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Brain Abscess",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carmustine",
+          "target": "Brain Abscess",
+          "label": "causes"
+        },
+        {
+          "source": "Brain Abscess",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carmustine,Clomifene": [
+          "Nitrogen Molecular Entity",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_4349"
+    }
+  ]
+}

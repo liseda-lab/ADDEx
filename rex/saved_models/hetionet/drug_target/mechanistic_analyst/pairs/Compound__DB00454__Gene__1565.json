@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00454 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5392,
+        "final_score": 0.5392
+      },
+      "nodes": [
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Full Opioid Agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Dihydrocodeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pethidine",
+          "target": "Full Opioid Agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Full Opioid Agonists",
+          "target": "Dihydrocodeine",
+          "label": "includes"
+        },
+        {
+          "source": "Dihydrocodeine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pethidine,Dihydrocodeine": [
+          "Organonitrogen Compound",
+          "Opioid Receptor Agonist"
+        ]
+      },
+      "id": "path_17444"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4485,
+        "final_score": 0.4485
+      },
+      "nodes": [
+        {
+          "id": "Pethidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Welts",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Histamine Phosphate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pethidine",
+          "target": "Welts",
+          "label": "causes"
+        },
+        {
+          "source": "Welts",
+          "target": "Histamine Phosphate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Histamine Phosphate",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pethidine,Histamine Phosphate": [
+          "Pnictogen Molecular Entity"
+        ]
+      },
+      "id": "path_17445"
+    }
+  ]
+}

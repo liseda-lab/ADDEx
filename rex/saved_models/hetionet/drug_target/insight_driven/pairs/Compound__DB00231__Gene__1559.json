@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB00231 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5995,
+        "final_score": 0.5995
+      },
+      "nodes": [
+        {
+          "id": "Temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Quazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Quazepam",
+          "label": "includes"
+        },
+        {
+          "source": "Quazepam",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Temazepam,Quazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Quazepam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_10325"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4658,
+        "final_score": 0.4658
+      },
+      "nodes": [
+        {
+          "id": "Temazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkaline Phosphatase Serum Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Flecainide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temazepam",
+          "target": "Alkaline Phosphatase Serum Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Alkaline Phosphatase Serum Increased",
+          "target": "Flecainide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Flecainide",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temazepam,Flecainide": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_10326"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00633 - Gene::151",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7397,
+        "final_score": 0.7449,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2c",
+          "type": "Gene"
+        },
+        {
+          "id": "Alpha2-adrenergic Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "Adra2c",
+          "label": "binds"
+        },
+        {
+          "source": "Adra2c",
+          "target": "Alpha2-adrenergic Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Alpha2-adrenergic Receptor Activity",
+          "target": "Adra2b",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_23266"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6314,
+        "final_score": 0.6314
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenergic Alpha2-agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tizanidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adra2b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "Adrenergic Alpha2-agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Adrenergic Alpha2-agonists",
+          "target": "Tizanidine",
+          "label": "includes"
+        },
+        {
+          "source": "Tizanidine",
+          "target": "Adra2b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexmedetomidine,Tizanidine": [
+          "Alpha-Adrenergic Agonist",
+          "Imidazoles"
+        ]
+      },
+      "id": "path_23267"
+    }
+  ]
+}

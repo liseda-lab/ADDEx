@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00404 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5995,
+        "final_score": 0.5995
+      },
+      "nodes": [
+        {
+          "id": "Alprazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Quazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alprazolam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Quazepam",
+          "label": "includes"
+        },
+        {
+          "source": "Quazepam",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alprazolam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Alprazolam,Quazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ],
+        "Benzodiazepines,Quazepam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_2107"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "id": "Compound::DB01234 - Disease::DOID:3310",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5089,
+        "final_score": 0.5089
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Flumethasone Pivalate",
+          "type": "Compound"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Flumethasone Pivalate",
+          "label": "resembles"
+        },
+        {
+          "source": "Flumethasone Pivalate",
+          "target": "Methylprednisolone",
+          "label": "resembles"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Flumethasone Pivalate": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ],
+        "Dexamethasone,Methylprednisolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ],
+        "Flumethasone Pivalate,Methylprednisolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5159"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4176,
+        "final_score": 0.4176
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Multiple Sclerosis",
+          "type": "Disease"
+        },
+        {
+          "id": "Methylprednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Multiple Sclerosis",
+          "label": "treats"
+        },
+        {
+          "source": "Multiple Sclerosis",
+          "target": "Methylprednisolone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Methylprednisolone",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Methylprednisolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5160"
+    },
+    {
+      "score": {
+        "ic_mean": 0.374,
+        "final_score": 0.374
+      },
+      "nodes": [
+        {
+          "id": "Dexamethasone",
+          "type": "Compound"
+        },
+        {
+          "id": "Multiple Sclerosis",
+          "type": "Disease"
+        },
+        {
+          "id": "Prednisolone",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexamethasone",
+          "target": "Multiple Sclerosis",
+          "label": "treats"
+        },
+        {
+          "source": "Multiple Sclerosis",
+          "target": "Prednisolone",
+          "label": "is treated by"
+        },
+        {
+          "source": "Prednisolone",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexamethasone,Prednisolone": [
+          "17Alpha-Hydroxy Steroid",
+          "Therapeutic Glucocorticoid"
+        ]
+      },
+      "id": "path_5161"
+    }
+  ]
+}

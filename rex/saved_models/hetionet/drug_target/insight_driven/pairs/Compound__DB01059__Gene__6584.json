@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01059 - Gene::6584",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5387,
+        "final_score": 0.5387
+      },
+      "nodes": [
+        {
+          "id": "Norfloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Candiduria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lomefloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Norfloxacin",
+          "target": "Candiduria",
+          "label": "causes"
+        },
+        {
+          "source": "Candiduria",
+          "target": "Lomefloxacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lomefloxacin",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Norfloxacin,Lomefloxacin": [
+          "Fluoroquinolone Antibiotic",
+          "Quinolone Antibiotic"
+        ]
+      },
+      "id": "path_11876"
+    }
+  ]
+}

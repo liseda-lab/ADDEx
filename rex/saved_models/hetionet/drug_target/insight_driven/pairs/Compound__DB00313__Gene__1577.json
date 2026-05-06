@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00313 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4511,
+        "final_score": 0.4511
+      },
+      "nodes": [
+        {
+          "id": "Valproic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Pharmacokinetic Interaction",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pravastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Valproic Acid",
+          "target": "Pharmacokinetic Interaction",
+          "label": "causes"
+        },
+        {
+          "source": "Pharmacokinetic Interaction",
+          "target": "Pravastatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pravastatin",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Valproic Acid,Pravastatin": [
+          "Monocarboxylic Acid"
+        ]
+      },
+      "id": "path_12279"
+    }
+  ]
+}

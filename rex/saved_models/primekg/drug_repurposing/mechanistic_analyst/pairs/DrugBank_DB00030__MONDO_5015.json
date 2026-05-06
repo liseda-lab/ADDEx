@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB00030 - MONDO_5015",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5844,
+        "final_score": 0.5844
+      },
+      "nodes": [
+        {
+          "id": "Insulin Human",
+          "type": "Drug"
+        },
+        {
+          "id": "Ketoacidosis",
+          "type": "Effect/Phenotype"
+        },
+        {
+          "id": "Insulin Aspart",
+          "type": "Drug"
+        },
+        {
+          "id": "Diabetes Mellitus (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Insulin Human",
+          "target": "Ketoacidosis",
+          "label": "side effect"
+        },
+        {
+          "source": "Ketoacidosis",
+          "target": "Insulin Aspart",
+          "label": "side effect"
+        },
+        {
+          "source": "Insulin Aspart",
+          "target": "Diabetes Mellitus (disease)",
+          "label": "indication"
+        }
+      ],
+      "id": "path_35647"
+    },
+    {
+      "score": {
+        "ic_mean": 0.8375,
+        "final_score": 0.4604,
+        "agentic_score": 0.0833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 1.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Insulin Human",
+          "type": "Drug"
+        },
+        {
+          "id": "Iddm 1",
+          "type": "Disease"
+        },
+        {
+          "id": "Insulin Glargine",
+          "type": "Drug"
+        },
+        {
+          "id": "Diabetes Mellitus (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Insulin Human",
+          "target": "Iddm 1",
+          "label": "indication"
+        },
+        {
+          "source": "Iddm 1",
+          "target": "Insulin Glargine",
+          "label": "indication"
+        },
+        {
+          "source": "Insulin Glargine",
+          "target": "Diabetes Mellitus (disease)",
+          "label": "indication"
+        }
+      ],
+      "id": "path_35646"
+    }
+  ]
+}

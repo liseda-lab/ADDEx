@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB01185 - MONDO_9047",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.805,
+        "final_score": 0.6108,
+        "agentic_score": 0.4167,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Fluoxymesterone",
+          "type": "Drug"
+        },
+        {
+          "id": "Hypogonadism, Male",
+          "type": "Disease"
+        },
+        {
+          "id": "Testosterone",
+          "type": "Drug"
+        },
+        {
+          "id": "Cryptorchidism (disease)",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluoxymesterone",
+          "target": "Hypogonadism, Male",
+          "label": "indication"
+        },
+        {
+          "source": "Hypogonadism, Male",
+          "target": "Testosterone",
+          "label": "indication"
+        },
+        {
+          "source": "Testosterone",
+          "target": "Cryptorchidism (disease)",
+          "label": "indication"
+        }
+      ],
+      "id": "path_27753"
+    }
+  ]
+}

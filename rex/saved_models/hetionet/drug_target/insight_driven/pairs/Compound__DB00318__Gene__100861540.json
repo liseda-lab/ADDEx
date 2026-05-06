@@ -1,0 +1,62 @@
+{
+  "id": "Compound::DB00318 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5312,
+        "final_score": 0.5312
+      },
+      "nodes": [
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Heroin",
+          "type": "Compound"
+        },
+        {
+          "id": "Ethylmorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Codeine",
+          "target": "Heroin",
+          "label": "resembles"
+        },
+        {
+          "source": "Heroin",
+          "target": "Ethylmorphine",
+          "label": "resembles"
+        },
+        {
+          "source": "Ethylmorphine",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Codeine,Heroin": [
+          "Morphinane Alkaloid",
+          "Opiate"
+        ],
+        "Codeine,Ethylmorphine": [
+          "Opioid Receptor Agonist",
+          "Morphinane Alkaloid"
+        ],
+        "Heroin,Ethylmorphine": [
+          "Opioid Receptor Agonist",
+          "Morphinane Alkaloid"
+        ]
+      },
+      "id": "path_1550"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:718 - DISEASE:2692",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6757,
+        "final_score": 0.5045,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "risperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "microRNA 593",
+          "type": "Gene"
+        },
+        {
+          "id": "Atrophy",
+          "type": "Disease"
+        },
+        {
+          "id": "chondroitin sulfate N-acetylgalactosaminyltransferase 2",
+          "type": "Gene"
+        },
+        {
+          "id": "Pseudohermaphroditism",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "risperidone",
+          "target": "microRNA 593",
+          "label": "is affecting"
+        },
+        {
+          "source": "microRNA 593",
+          "target": "Atrophy",
+          "label": "causes condition"
+        },
+        {
+          "source": "Atrophy",
+          "target": "chondroitin sulfate N-acetylgalactosaminyltransferase 2",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "chondroitin sulfate N-acetylgalactosaminyltransferase 2",
+          "target": "Pseudohermaphroditism",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_1324"
+    }
+  ]
+}

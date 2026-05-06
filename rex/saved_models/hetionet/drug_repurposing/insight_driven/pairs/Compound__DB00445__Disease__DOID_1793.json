@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00445 - Disease::DOID:1793",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4798,
+        "final_score": 0.4798
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Liver Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Hepatic Vein",
+          "type": "Anatomy"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Liver Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Liver Cancer",
+          "target": "Hepatic Vein",
+          "label": "localizes"
+        },
+        {
+          "source": "Hepatic Vein",
+          "target": "Pancreatic Cancer",
+          "label": "is localized by"
+        }
+      ],
+      "id": "path_5025"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3472,
+        "final_score": 0.3472
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Myeloid Leukaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Acute Myeloid Leukaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Myeloid Leukaemia",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epirubicin,Docetaxel": [
+          "Alpha-Hydroxy Ketone"
+        ]
+      },
+      "id": "path_5026"
+    }
+  ]
+}

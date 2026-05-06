@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00398 - Gene::10257",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5005,
+        "final_score": 0.5005
+      },
+      "nodes": [
+        {
+          "id": "Sorafenib",
+          "type": "Compound"
+        },
+        {
+          "id": "Disease Progression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Leucovorin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sorafenib",
+          "target": "Disease Progression",
+          "label": "causes"
+        },
+        {
+          "source": "Disease Progression",
+          "target": "Leucovorin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Leucovorin",
+          "target": "Abcc4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sorafenib,Leucovorin": [
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_19873"
+    }
+  ]
+}

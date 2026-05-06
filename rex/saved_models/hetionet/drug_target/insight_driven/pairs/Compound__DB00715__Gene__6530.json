@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00715 - Gene::6530",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4378,
+        "final_score": 0.4378
+      },
+      "nodes": [
+        {
+          "id": "Paroxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Corneal Lesion",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methylphenidate",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Paroxetine",
+          "target": "Corneal Lesion",
+          "label": "causes"
+        },
+        {
+          "source": "Corneal Lesion",
+          "target": "Methylphenidate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methylphenidate",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Paroxetine,Methylphenidate": [
+          "Nitrogen Molecular Entity",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_6513"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00586 - Gene::9356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4933,
+        "final_score": 0.4933
+      },
+      "nodes": [
+        {
+          "id": "Diclofenac",
+          "type": "Compound"
+        },
+        {
+          "id": "Injection Site Abscess",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ganciclovir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diclofenac",
+          "target": "Injection Site Abscess",
+          "label": "causes"
+        },
+        {
+          "source": "Injection Site Abscess",
+          "target": "Ganciclovir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ganciclovir",
+          "target": "Slc22a6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diclofenac,Ganciclovir": [
+          "Organic Aromatic Compound",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_22551"
+    }
+  ]
+}

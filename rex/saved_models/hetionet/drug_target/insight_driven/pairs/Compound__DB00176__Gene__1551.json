@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00176 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4295,
+        "final_score": 0.4295
+      },
+      "nodes": [
+        {
+          "id": "Fluvoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tendinous Contracture",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nefazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvoxamine",
+          "target": "Tendinous Contracture",
+          "label": "causes"
+        },
+        {
+          "source": "Tendinous Contracture",
+          "target": "Nefazodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nefazodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluvoxamine,Nefazodone": [
+          "Benzenes",
+          "Antidepressant Agent"
+        ]
+      },
+      "id": "path_17350"
+    }
+  ]
+}

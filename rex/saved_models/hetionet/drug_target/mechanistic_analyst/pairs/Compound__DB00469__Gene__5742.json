@@ -1,0 +1,110 @@
+{
+  "id": "Compound::DB00469 - Gene::5742",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7037,
+        "final_score": 0.7685,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Tenoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs2",
+          "type": "Gene"
+        },
+        {
+          "id": "Prostaglandin-endoperoxide Synthase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tenoxicam",
+          "target": "Ptgs2",
+          "label": "binds"
+        },
+        {
+          "source": "Ptgs2",
+          "target": "Prostaglandin-endoperoxide Synthase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Prostaglandin-endoperoxide Synthase Activity",
+          "target": "Ptgs1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15806"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5785,
+        "final_score": 0.5785
+      },
+      "nodes": [
+        {
+          "id": "Tenoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Piroxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Lornoxicam",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tenoxicam",
+          "target": "Piroxicam",
+          "label": "resembles"
+        },
+        {
+          "source": "Piroxicam",
+          "target": "Lornoxicam",
+          "label": "resembles"
+        },
+        {
+          "source": "Lornoxicam",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tenoxicam,Piroxicam": [
+          "Pyridines",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Tenoxicam,Lornoxicam": [
+          "Thienothiazine",
+          "Nonsteroidal Antiinflammatory Drug"
+        ],
+        "Piroxicam,Lornoxicam": [
+          "Pyridines",
+          "Nonsteroidal Antiinflammatory Drug"
+        ]
+      },
+      "id": "path_15807"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "Compound::DB00831 - Gene::3356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6348,
+        "final_score": 0.6348
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr6",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Htr6",
+          "label": "binds"
+        },
+        {
+          "source": "Htr6",
+          "target": "Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Receptor Activity",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_894"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4131,
+        "final_score": 0.4131
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Clocapramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Thioproperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Clocapramine",
+          "label": "resembles"
+        },
+        {
+          "source": "Clocapramine",
+          "target": "Thioproperazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Thioproperazine",
+          "target": "Htr2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Clocapramine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ],
+        "Trifluoperazine,Thioproperazine": [
+          "Antipsychotic Agent",
+          "Phenothiazines"
+        ],
+        "Clocapramine,Thioproperazine": [
+          "Agent Affecting Nervous System",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_895"
+    }
+  ]
+}

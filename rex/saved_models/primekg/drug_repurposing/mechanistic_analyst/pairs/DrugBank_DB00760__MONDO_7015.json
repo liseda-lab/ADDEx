@@ -1,0 +1,96 @@
+{
+  "id": "DrugBank_DB00760 - MONDO_7015",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5751,
+        "final_score": 0.5751
+      },
+      "nodes": [
+        {
+          "id": "Meropenem",
+          "type": "Drug"
+        },
+        {
+          "id": "Meningococcal Infection",
+          "type": "Disease"
+        },
+        {
+          "id": "Cefotaxime",
+          "type": "Drug"
+        },
+        {
+          "id": "Viral Meningitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meropenem",
+          "target": "Meningococcal Infection",
+          "label": "indication"
+        },
+        {
+          "source": "Meningococcal Infection",
+          "target": "Cefotaxime",
+          "label": "indication"
+        },
+        {
+          "source": "Cefotaxime",
+          "target": "Viral Meningitis",
+          "label": "indication"
+        }
+      ],
+      "id": "path_7010"
+    },
+    {
+      "score": {
+        "ic_mean": 0.674,
+        "final_score": 0.4203,
+        "agentic_score": 0.1667,
+        "llm_dimensions": {
+          "validity": 1.0,
+          "completeness_conv": 3.0,
+          "relevance": 1.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Meropenem",
+          "type": "Drug"
+        },
+        {
+          "id": "Pneumonia Caused By Gram Negative Bacteria",
+          "type": "Disease"
+        },
+        {
+          "id": "Amikacin",
+          "type": "Drug"
+        },
+        {
+          "id": "Viral Meningitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Meropenem",
+          "target": "Pneumonia Caused By Gram Negative Bacteria",
+          "label": "off-label use"
+        },
+        {
+          "source": "Pneumonia Caused By Gram Negative Bacteria",
+          "target": "Amikacin",
+          "label": "indication"
+        },
+        {
+          "source": "Amikacin",
+          "target": "Viral Meningitis",
+          "label": "indication"
+        }
+      ],
+      "id": "path_7009"
+    }
+  ]
+}

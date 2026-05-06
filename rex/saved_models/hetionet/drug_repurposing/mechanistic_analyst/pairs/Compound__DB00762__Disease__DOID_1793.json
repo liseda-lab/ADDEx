@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00762 - Disease::DOID:1793",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3809,
+        "final_score": 0.3809
+      },
+      "nodes": [
+        {
+          "id": "Irinotecan",
+          "type": "Compound"
+        },
+        {
+          "id": "Neutropenic Colitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Docetaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Irinotecan",
+          "target": "Neutropenic Colitis",
+          "label": "causes"
+        },
+        {
+          "source": "Neutropenic Colitis",
+          "target": "Docetaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Docetaxel",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Irinotecan,Docetaxel": [
+          "Alcohol"
+        ]
+      },
+      "id": "path_5794"
+    }
+  ]
+}

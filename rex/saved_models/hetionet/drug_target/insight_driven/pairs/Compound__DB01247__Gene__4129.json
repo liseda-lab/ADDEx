@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01247 - Gene::4129",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7594,
+        "final_score": 0.713,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Isocarboxazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        },
+        {
+          "id": "Primary Amine Oxidase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Maob",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isocarboxazid",
+          "target": "Maoa",
+          "label": "binds"
+        },
+        {
+          "source": "Maoa",
+          "target": "Primary Amine Oxidase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Primary Amine Oxidase Activity",
+          "target": "Maob",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_10021"
+    }
+  ]
+}

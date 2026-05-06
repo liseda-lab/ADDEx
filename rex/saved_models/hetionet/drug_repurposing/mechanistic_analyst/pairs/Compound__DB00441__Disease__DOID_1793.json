@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00441 - Disease::DOID:1793",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5099,
+        "final_score": 0.5099
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Microangiopathic Haemolytic Anaemia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Erlotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Microangiopathic Haemolytic Anaemia",
+          "label": "causes"
+        },
+        {
+          "source": "Microangiopathic Haemolytic Anaemia",
+          "target": "Erlotinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Erlotinib",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Erlotinib": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antineoplastic Agent"
+        ]
+      },
+      "id": "path_5145"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4014,
+        "final_score": 0.4014
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Disease Progression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Pancreatic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Disease Progression",
+          "label": "causes"
+        },
+        {
+          "source": "Disease Progression",
+          "target": "Tamoxifen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tamoxifen",
+          "target": "Pancreatic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Tamoxifen": [
+          "Antineoplastic Agent",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_5146"
+    }
+  ]
+}

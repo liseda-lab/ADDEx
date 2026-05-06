@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00584 - Gene::1636",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7329,
+        "final_score": 0.5331,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Enalapril",
+          "type": "Compound"
+        },
+        {
+          "id": "Decreased Blood Pressure",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Benazepril",
+          "type": "Compound"
+        },
+        {
+          "id": "Ace",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Enalapril",
+          "target": "Decreased Blood Pressure",
+          "label": "is included in"
+        },
+        {
+          "source": "Decreased Blood Pressure",
+          "target": "Benazepril",
+          "label": "includes"
+        },
+        {
+          "source": "Benazepril",
+          "target": "Ace",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Enalapril,Benazepril": [
+          "Ace Inhibitor",
+          "Dicarboxylic Acid Monoester"
+        ]
+      },
+      "id": "path_15413"
+    }
+  ]
+}

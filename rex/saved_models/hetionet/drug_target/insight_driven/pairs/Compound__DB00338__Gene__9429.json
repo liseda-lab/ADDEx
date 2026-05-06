@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00338 - Gene::9429",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5155,
+        "final_score": 0.5155
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Anterior Ischemic Optic Neuropathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Pantoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Anterior Ischemic Optic Neuropathy",
+          "label": "causes"
+        },
+        {
+          "source": "Anterior Ischemic Optic Neuropathy",
+          "target": "Pantoprazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Pantoprazole",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Pantoprazole": [
+          "Benzimidazoles",
+          "Proton Pump Inhibitor"
+        ]
+      },
+      "id": "path_12422"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4866,
+        "final_score": 0.4866
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Vitamin B12 Deficiency",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Folic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcg2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Vitamin B12 Deficiency",
+          "label": "causes"
+        },
+        {
+          "source": "Vitamin B12 Deficiency",
+          "target": "Folic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Folic Acid",
+          "target": "Abcg2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Folic Acid": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_12423"
+    }
+  ]
+}

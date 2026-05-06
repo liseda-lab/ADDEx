@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB04844 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4363,
+        "final_score": 0.4363
+      },
+      "nodes": [
+        {
+          "id": "Tetrabenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Laceration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydrocodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tetrabenazine",
+          "target": "Laceration",
+          "label": "causes"
+        },
+        {
+          "source": "Laceration",
+          "target": "Hydrocodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydrocodone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tetrabenazine,Hydrocodone": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_13771"
+    }
+  ]
+}

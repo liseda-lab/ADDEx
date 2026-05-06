@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00969 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5672,
+        "final_score": 0.5672
+      },
+      "nodes": [
+        {
+          "id": "Alosetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Serotonin 3 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ondansetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alosetron",
+          "target": "Serotonin 3 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Serotonin 3 Receptor Antagonists",
+          "target": "Ondansetron",
+          "label": "includes"
+        },
+        {
+          "source": "Ondansetron",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alosetron,Ondansetron": [
+          "5-Ht3 Receptor Antagonist",
+          "Organic Heterotricyclic Compound"
+        ]
+      },
+      "id": "path_22903"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4614,
+        "final_score": 0.4614
+      },
+      "nodes": [
+        {
+          "id": "Alosetron",
+          "type": "Compound"
+        },
+        {
+          "id": "Dysequilibrium",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Buprenorphine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alosetron",
+          "target": "Dysequilibrium",
+          "label": "causes"
+        },
+        {
+          "source": "Dysequilibrium",
+          "target": "Buprenorphine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Buprenorphine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alosetron,Buprenorphine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_22904"
+    }
+  ]
+}

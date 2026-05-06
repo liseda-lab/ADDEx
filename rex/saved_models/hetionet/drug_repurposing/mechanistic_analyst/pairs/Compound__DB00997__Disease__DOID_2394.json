@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00997 - Disease::DOID:2394",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4782,
+        "final_score": 0.4782
+      },
+      "nodes": [
+        {
+          "id": "Doxorubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Tumour Necrosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Doxorubicin",
+          "target": "Tumour Necrosis",
+          "label": "causes"
+        },
+        {
+          "source": "Tumour Necrosis",
+          "target": "Paclitaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paclitaxel",
+          "target": "Ovarian Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Doxorubicin,Paclitaxel": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_4654"
+    }
+  ]
+}

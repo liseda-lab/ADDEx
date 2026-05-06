@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00703 - Gene::763",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6417,
+        "final_score": 0.6417
+      },
+      "nodes": [
+        {
+          "id": "Methazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Myopia Transient",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dorzolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methazolamide",
+          "target": "Myopia Transient",
+          "label": "causes"
+        },
+        {
+          "source": "Myopia Transient",
+          "target": "Dorzolamide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dorzolamide",
+          "target": "Ca5a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methazolamide,Dorzolamide": [
+          "Carbonic Anhydrase Inhibitor",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_5159"
+    },
+    {
+      "score": {
+        "ic_mean": 0.7169,
+        "final_score": 0.5251,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Methazolamide",
+          "type": "Compound"
+        },
+        {
+          "id": "Ca6",
+          "type": "Gene"
+        },
+        {
+          "id": "Carbonate Dehydratase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Ca5a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methazolamide",
+          "target": "Ca6",
+          "label": "binds"
+        },
+        {
+          "source": "Ca6",
+          "target": "Carbonate Dehydratase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Carbonate Dehydratase Activity",
+          "target": "Ca5a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5158"
+    }
+  ]
+}

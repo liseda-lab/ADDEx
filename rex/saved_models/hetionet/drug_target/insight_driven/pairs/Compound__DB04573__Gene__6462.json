@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB04573 - Gene::6462",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5461,
+        "final_score": 0.5461
+      },
+      "nodes": [
+        {
+          "id": "Estriol",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Discomfort",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etonogestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Shbg",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estriol",
+          "target": "Breast Discomfort",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Discomfort",
+          "target": "Etonogestrel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etonogestrel",
+          "target": "Shbg",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estriol,Etonogestrel": [
+          "17Beta-Hydroxy Steroid",
+          "Therapeutic Steroid Hormone"
+        ]
+      },
+      "id": "path_14576"
+    }
+  ]
+}

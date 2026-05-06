@@ -1,0 +1,119 @@
+{
+  "id": "Compound::DB00933 - Gene::3358",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6689,
+        "final_score": 0.5011,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mesoridazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Trifluoperazine",
+          "label": "includes"
+        },
+        {
+          "source": "Trifluoperazine",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mesoridazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Mesoridazine,Trifluoperazine": [
+          "Phenothiazines",
+          "Antipsychotic Agent"
+        ],
+        "Phenothiazines,Trifluoperazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_420"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4708,
+        "final_score": 0.4708
+      },
+      "nodes": [
+        {
+          "id": "Mesoridazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimetotiazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyamemazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr2c",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mesoridazine",
+          "target": "Dimetotiazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimetotiazine",
+          "target": "Cyamemazine",
+          "label": "resembles"
+        },
+        {
+          "source": "Cyamemazine",
+          "target": "Htr2c",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mesoridazine,Dimetotiazine": [
+          "Phenothiazines"
+        ],
+        "Mesoridazine,Cyamemazine": [
+          "Phenothiazines"
+        ],
+        "Dimetotiazine,Cyamemazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_421"
+    }
+  ]
+}

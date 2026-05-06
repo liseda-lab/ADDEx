@@ -1,0 +1,118 @@
+{
+  "id": "Compound::DB00630 - Gene::5802",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8997,
+        "final_score": 0.7832,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Alendronate",
+          "type": "Compound"
+        },
+        {
+          "id": "Diphosphonates",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Etidronic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptprs",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alendronate",
+          "target": "Diphosphonates",
+          "label": "is included in"
+        },
+        {
+          "source": "Diphosphonates",
+          "target": "Etidronic Acid",
+          "label": "includes"
+        },
+        {
+          "source": "Etidronic Acid",
+          "target": "Ptprs",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alendronate,Diphosphonates": [
+          "1,1-Bis(Phosphonic Acid)"
+        ],
+        "Alendronate,Etidronic Acid": [
+          "1,1-Bis(Phosphonic Acid)"
+        ],
+        "Diphosphonates,Etidronic Acid": [
+          "1,1-Bis(Phosphonic Acid)"
+        ]
+      },
+      "id": "path_7725"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6849,
+        "final_score": 0.5091,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Alendronate",
+          "type": "Compound"
+        },
+        {
+          "id": "Osteonecrosis Of Jaw",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Etidronic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptprs",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alendronate",
+          "target": "Osteonecrosis Of Jaw",
+          "label": "causes"
+        },
+        {
+          "source": "Osteonecrosis Of Jaw",
+          "target": "Etidronic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Etidronic Acid",
+          "target": "Ptprs",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alendronate,Etidronic Acid": [
+          "1,1-Bis(Phosphonic Acid)"
+        ]
+      },
+      "id": "path_7726"
+    }
+  ]
+}

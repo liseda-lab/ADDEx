@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00822 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4806,
+        "final_score": 0.4806
+      },
+      "nodes": [
+        {
+          "id": "Disulfiram",
+          "type": "Compound"
+        },
+        {
+          "id": "Polyneuritis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydralazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disulfiram",
+          "target": "Polyneuritis",
+          "label": "causes"
+        },
+        {
+          "source": "Polyneuritis",
+          "target": "Hydralazine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydralazine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disulfiram,Hydralazine": [
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_12380"
+    },
+    {
+      "score": {
+        "ic_mean": 0.416,
+        "final_score": 0.416
+      },
+      "nodes": [
+        {
+          "id": "Disulfiram",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Sensorimotor Neuropathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vandetanib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Disulfiram",
+          "target": "Peripheral Sensorimotor Neuropathy",
+          "label": "causes"
+        },
+        {
+          "source": "Peripheral Sensorimotor Neuropathy",
+          "target": "Vandetanib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vandetanib",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Disulfiram,Vandetanib": [
+          "Organochalcogen Compound",
+          "Angiogenesis Inhibitor"
+        ]
+      },
+      "id": "path_12381"
+    }
+  ]
+}

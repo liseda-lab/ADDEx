@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00328 - Gene::5742",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6325,
+        "final_score": 0.6325
+      },
+      "nodes": [
+        {
+          "id": "Indomethacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Anaphylaxis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Diflunisal",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indomethacin",
+          "target": "Acute Anaphylaxis",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Anaphylaxis",
+          "target": "Diflunisal",
+          "label": "is caused by"
+        },
+        {
+          "source": "Diflunisal",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indomethacin,Diflunisal": [
+          "Cyclooxygenase Inhibitor",
+          "Carboxylic Acid"
+        ]
+      },
+      "id": "path_10176"
+    }
+  ]
+}

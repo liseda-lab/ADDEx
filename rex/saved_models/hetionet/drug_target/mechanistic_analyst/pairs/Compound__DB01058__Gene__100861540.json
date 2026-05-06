@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01058 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5447,
+        "final_score": 0.5447
+      },
+      "nodes": [
+        {
+          "id": "Praziquantel",
+          "type": "Compound"
+        },
+        {
+          "id": "Polyserositis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Amiodarone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Praziquantel",
+          "target": "Polyserositis",
+          "label": "causes"
+        },
+        {
+          "source": "Polyserositis",
+          "target": "Amiodarone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Amiodarone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Praziquantel,Amiodarone": [
+          "Organic Heteropolycyclic Compound"
+        ]
+      },
+      "id": "path_22603"
+    }
+  ]
+}

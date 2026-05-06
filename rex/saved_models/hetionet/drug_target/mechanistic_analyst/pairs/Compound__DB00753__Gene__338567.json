@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00753 - Gene::338567",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7016,
+        "final_score": 0.5175,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Isoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Breath Holding Attack",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Desflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcnk18",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isoflurane",
+          "target": "Breath Holding Attack",
+          "label": "causes"
+        },
+        {
+          "source": "Breath Holding Attack",
+          "target": "Desflurane",
+          "label": "is caused by"
+        },
+        {
+          "source": "Desflurane",
+          "target": "Kcnk18",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isoflurane,Desflurane": [
+          "Organofluorine Compound",
+          "Anesthetic Agent"
+        ]
+      },
+      "id": "path_11755"
+    }
+  ]
+}

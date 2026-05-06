@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01182 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4147,
+        "final_score": 0.4147
+      },
+      "nodes": [
+        {
+          "id": "Propafenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Spleen Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Propafenone",
+          "target": "Spleen Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Spleen Disorder",
+          "target": "Indinavir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Indinavir",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Propafenone,Indinavir": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_6802"
+    }
+  ]
+}

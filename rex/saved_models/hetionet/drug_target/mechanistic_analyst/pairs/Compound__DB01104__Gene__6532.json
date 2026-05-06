@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01104 - Gene::6532",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5022,
+        "final_score": 0.5022
+      },
+      "nodes": [
+        {
+          "id": "Sertraline",
+          "type": "Compound"
+        },
+        {
+          "id": "Hemorrhage Abnormal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vilazodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sertraline",
+          "target": "Hemorrhage Abnormal",
+          "label": "causes"
+        },
+        {
+          "source": "Hemorrhage Abnormal",
+          "target": "Vilazodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vilazodone",
+          "target": "Slc6a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sertraline,Vilazodone": [
+          "Antidepressant Agent",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_1321"
+    }
+  ]
+}

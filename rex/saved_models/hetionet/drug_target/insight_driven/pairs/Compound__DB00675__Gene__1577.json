@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00675 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4962,
+        "final_score": 0.4962
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Breast Cancer Male",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dutasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Breast Cancer Male",
+          "label": "causes"
+        },
+        {
+          "source": "Breast Cancer Male",
+          "target": "Dutasteride",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dutasteride",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Dutasteride": [
+          "Enzyme Inhibitor",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_341"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4577,
+        "final_score": 0.4577
+      },
+      "nodes": [
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Nettle Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tamoxifen",
+          "target": "Nettle Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Nettle Rash",
+          "target": "Gefitinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Gefitinib",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tamoxifen,Gefitinib": [
+          "Protein Kinase Inhibitor",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_342"
+    }
+  ]
+}

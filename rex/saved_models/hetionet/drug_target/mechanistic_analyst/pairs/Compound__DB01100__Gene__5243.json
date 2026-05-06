@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01100 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5143,
+        "final_score": 0.5143
+      },
+      "nodes": [
+        {
+          "id": "Pimozide",
+          "type": "Compound"
+        },
+        {
+          "id": "Vermiculation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Neostigmine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pimozide",
+          "target": "Vermiculation",
+          "label": "causes"
+        },
+        {
+          "source": "Vermiculation",
+          "target": "Neostigmine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Neostigmine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pimozide,Neostigmine": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_9116"
+    }
+  ]
+}

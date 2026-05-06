@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00152 - Gene::27010",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8039,
+        "final_score": 0.777,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Thiamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc19a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Vitamin B1 (thiamin) Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Tpk1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Thiamine",
+          "target": "Slc19a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc19a2",
+          "target": "Vitamin B1 (thiamin) Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Vitamin B1 (thiamin) Metabolism",
+          "target": "Tpk1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_4373"
+    }
+  ]
+}

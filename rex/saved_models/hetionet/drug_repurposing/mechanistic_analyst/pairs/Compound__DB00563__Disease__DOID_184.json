@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB00563 - Disease::DOID:184",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4782,
+        "final_score": 0.4782
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Esophageal Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Esophageal Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Esophageal Cancer",
+          "target": "Carboplatin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Carboplatin",
+          "target": "Bone Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Carboplatin": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Dicarboxylic Acid Dianion"
+        ]
+      },
+      "id": "path_4371"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4343,
+        "final_score": 0.4343
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Leukoencephalopathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Leukoencephalopathy",
+          "label": "causes"
+        },
+        {
+          "source": "Leukoencephalopathy",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Bone Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methotrexate,Cisplatin": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Heteroatomic Molecular Entity"
+        ]
+      },
+      "id": "path_4372"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3559,
+        "final_score": 0.3559
+      },
+      "nodes": [
+        {
+          "id": "Methotrexate",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Larynx Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Bone Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methotrexate",
+          "target": "Muscle Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Muscle Cancer",
+          "target": "Larynx Cancer",
+          "label": "resembles"
+        },
+        {
+          "source": "Larynx Cancer",
+          "target": "Bone Cancer",
+          "label": "resembles"
+        }
+      ],
+      "id": "path_4373"
+    }
+  ]
+}

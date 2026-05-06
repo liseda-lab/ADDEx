@@ -1,0 +1,120 @@
+{
+  "id": "Compound::DB00831 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6525,
+        "final_score": 0.6596,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Promethazine",
+          "label": "includes"
+        },
+        {
+          "source": "Promethazine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Trifluoperazine,Promethazine": [
+          "Phenothiazine",
+          "Phenothiazines"
+        ],
+        "Phenothiazines,Promethazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_15839"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6268,
+        "final_score": 0.6268
+      },
+      "nodes": [
+        {
+          "id": "Trifluoperazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Fluphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Trifluoperazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Fluphenazine",
+          "label": "includes"
+        },
+        {
+          "source": "Fluphenazine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Trifluoperazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Trifluoperazine,Fluphenazine": [
+          "Antipsychotic Agent",
+          "Phenothiazines"
+        ],
+        "Phenothiazines,Fluphenazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_15840"
+    }
+  ]
+}

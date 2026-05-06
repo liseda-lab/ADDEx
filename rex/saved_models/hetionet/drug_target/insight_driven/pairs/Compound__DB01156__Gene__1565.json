@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB01156 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4387,
+        "final_score": 0.4387
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Sore Eye",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Buspirone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Sore Eye",
+          "label": "causes"
+        },
+        {
+          "source": "Sore Eye",
+          "target": "Buspirone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Buspirone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Buspirone": [
+          "Agent Affecting Nervous System",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_16080"
+    },
+    {
+      "score": {
+        "ic_mean": 0.405,
+        "final_score": 0.405
+      },
+      "nodes": [
+        {
+          "id": "Bupropion",
+          "type": "Compound"
+        },
+        {
+          "id": "Epicondylitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Celecoxib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bupropion",
+          "target": "Epicondylitis",
+          "label": "causes"
+        },
+        {
+          "source": "Epicondylitis",
+          "target": "Celecoxib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Celecoxib",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bupropion,Celecoxib": [
+          "Benzenes",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_16081"
+    }
+  ]
+}

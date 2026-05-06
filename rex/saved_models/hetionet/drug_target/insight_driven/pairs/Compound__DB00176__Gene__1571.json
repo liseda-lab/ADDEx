@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00176 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.39,
+        "final_score": 0.39
+      },
+      "nodes": [
+        {
+          "id": "Fluvoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phobia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fluvoxamine",
+          "target": "Phobia",
+          "label": "causes"
+        },
+        {
+          "source": "Phobia",
+          "target": "Phenobarbital",
+          "label": "is caused by"
+        },
+        {
+          "source": "Phenobarbital",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fluvoxamine,Phenobarbital": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_3300"
+    }
+  ]
+}

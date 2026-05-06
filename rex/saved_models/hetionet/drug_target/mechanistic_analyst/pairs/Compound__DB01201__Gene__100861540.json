@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01201 - Gene::100861540",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6429,
+        "final_score": 0.6429
+      },
+      "nodes": [
+        {
+          "id": "Rifapentine",
+          "type": "Compound"
+        },
+        {
+          "id": "Rifamycins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifapentine",
+          "target": "Rifamycins",
+          "label": "is included in"
+        },
+        {
+          "source": "Rifamycins",
+          "target": "Rifampicin",
+          "label": "includes"
+        },
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifapentine,Rifamycins": [
+          "Rifamycins"
+        ],
+        "Rifapentine,Rifampicin": [
+          "Antitubercular Agent",
+          "Rifamycins"
+        ],
+        "Rifamycins,Rifampicin": [
+          "Rifamycins"
+        ]
+      },
+      "id": "path_20910"
+    }
+  ]
+}

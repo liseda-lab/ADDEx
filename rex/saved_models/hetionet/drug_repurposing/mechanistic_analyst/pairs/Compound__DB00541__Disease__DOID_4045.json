@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00541 - Disease::DOID:4045",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5209,
+        "final_score": 0.5209
+      },
+      "nodes": [
+        {
+          "id": "Vincristine",
+          "type": "Compound"
+        },
+        {
+          "id": "Venoocclusive Liver Disease",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dactinomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Muscle Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Vincristine",
+          "target": "Venoocclusive Liver Disease",
+          "label": "causes"
+        },
+        {
+          "source": "Venoocclusive Liver Disease",
+          "target": "Dactinomycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dactinomycin",
+          "target": "Muscle Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Vincristine,Dactinomycin": [
+          "Cytotoxic Chemotherapeutic Agent",
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_3101"
+    }
+  ]
+}

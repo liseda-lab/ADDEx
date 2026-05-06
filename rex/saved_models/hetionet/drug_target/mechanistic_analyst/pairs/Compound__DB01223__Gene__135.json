@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB01223 - Gene::135",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7423,
+        "final_score": 0.7045,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Aminophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Xanthines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Aminophylline",
+          "target": "Xanthines",
+          "label": "is included in"
+        },
+        {
+          "source": "Xanthines",
+          "target": "Theophylline",
+          "label": "includes"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Adora2a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Aminophylline,Xanthines": [
+          "Chemical Entity"
+        ],
+        "Aminophylline,Theophylline": [
+          "Chemical Entity",
+          "Bronchodilator"
+        ],
+        "Xanthines,Theophylline": [
+          "Purines"
+        ]
+      },
+      "id": "path_15623"
+    }
+  ]
+}

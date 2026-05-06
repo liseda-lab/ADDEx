@@ -1,0 +1,192 @@
+{
+  "id": "Compound::DB00497 - Gene::1577",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6354,
+        "final_score": 0.6354
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Cyp2d6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2d6",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18715"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5178,
+        "final_score": 0.5178
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Spasm Biliary",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Spasm Biliary",
+          "label": "causes"
+        },
+        {
+          "source": "Spasm Biliary",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Codeine": [
+          "Opioid",
+          "Organic Heteropentacyclic Compound"
+        ]
+      },
+      "id": "path_18716"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6748,
+        "final_score": 0.5041,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp3a5",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_18714"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4844,
+        "final_score": 0.4844
+      },
+      "nodes": [
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cutis Anserina",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methadone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Oxycodone",
+          "target": "Cutis Anserina",
+          "label": "causes"
+        },
+        {
+          "source": "Cutis Anserina",
+          "target": "Methadone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methadone",
+          "target": "Cyp3a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Oxycodone,Methadone": [
+          "Chemical Entity",
+          "Opioid"
+        ]
+      },
+      "id": "path_18717"
+    }
+  ]
+}

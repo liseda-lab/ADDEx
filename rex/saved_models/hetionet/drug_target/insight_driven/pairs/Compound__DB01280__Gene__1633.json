@@ -1,0 +1,156 @@
+{
+  "id": "Compound::DB01280 - Gene::1633",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8117,
+        "final_score": 0.7392,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dguok",
+          "type": "Gene"
+        },
+        {
+          "id": "Deoxynucleoside Kinase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Dck",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nelarabine",
+          "target": "Dguok",
+          "label": "binds"
+        },
+        {
+          "source": "Dguok",
+          "target": "Deoxynucleoside Kinase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Deoxynucleoside Kinase Activity",
+          "target": "Dck",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_22992"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6229,
+        "final_score": 0.6229
+      },
+      "nodes": [
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pneumonia Fungal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clofarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dck",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nelarabine",
+          "target": "Pneumonia Fungal",
+          "label": "causes"
+        },
+        {
+          "source": "Pneumonia Fungal",
+          "target": "Clofarabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clofarabine",
+          "target": "Dck",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nelarabine,Clofarabine": [
+          "Purine Antagonist",
+          "Purine Nucleoside"
+        ]
+      },
+      "id": "path_22994"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6636,
+        "final_score": 0.4985,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nelarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Nucleic Acid Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clofarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dck",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nelarabine",
+          "target": "Nucleic Acid Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Nucleic Acid Synthesis Inhibitors",
+          "target": "Clofarabine",
+          "label": "includes"
+        },
+        {
+          "source": "Clofarabine",
+          "target": "Dck",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nelarabine,Clofarabine": [
+          "Purine Antagonist",
+          "Purine Nucleoside"
+        ]
+      },
+      "id": "path_22993"
+    }
+  ]
+}

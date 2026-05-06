@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01241 - Gene::10599",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6516,
+        "final_score": 0.4925,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Gemfibrozil",
+          "type": "Compound"
+        },
+        {
+          "id": "Ppar Alpha",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Pioglitazone",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemfibrozil",
+          "target": "Ppar Alpha",
+          "label": "is included in"
+        },
+        {
+          "source": "Ppar Alpha",
+          "target": "Pioglitazone",
+          "label": "includes"
+        },
+        {
+          "source": "Pioglitazone",
+          "target": "Slco1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemfibrozil,Pioglitazone": [
+          "Aromatic Ether",
+          "Agent Affecting Digestive System Or Metabolism"
+        ]
+      },
+      "id": "path_9510"
+    }
+  ]
+}

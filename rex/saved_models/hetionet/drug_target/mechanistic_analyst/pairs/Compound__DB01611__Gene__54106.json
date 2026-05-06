@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01611 - Gene::54106",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8151,
+        "final_score": 0.6992,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Hydroxychloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tlr7",
+          "type": "Gene"
+        },
+        {
+          "id": "Sirna Binding",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Tlr9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Hydroxychloroquine",
+          "target": "Tlr7",
+          "label": "binds"
+        },
+        {
+          "source": "Tlr7",
+          "target": "Sirna Binding",
+          "label": "participates"
+        },
+        {
+          "source": "Sirna Binding",
+          "target": "Tlr9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6471"
+    }
+  ]
+}

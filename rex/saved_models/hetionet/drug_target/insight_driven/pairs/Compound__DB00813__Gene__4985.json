@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00813 - Gene::4985",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.527,
+        "final_score": 0.527
+      },
+      "nodes": [
+        {
+          "id": "Fentanyl",
+          "type": "Compound"
+        },
+        {
+          "id": "Therapy Naive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydromorphone",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprd1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fentanyl",
+          "target": "Therapy Naive",
+          "label": "causes"
+        },
+        {
+          "source": "Therapy Naive",
+          "target": "Hydromorphone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydromorphone",
+          "target": "Oprd1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fentanyl,Hydromorphone": [
+          "Opioid Receptor Agonist",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_8358"
+    }
+  ]
+}

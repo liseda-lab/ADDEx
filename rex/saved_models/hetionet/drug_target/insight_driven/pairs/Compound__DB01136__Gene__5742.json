@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01136 - Gene::5742",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4417,
+        "final_score": 0.4417
+      },
+      "nodes": [
+        {
+          "id": "Carvedilol",
+          "type": "Compound"
+        },
+        {
+          "id": "Respiratory Alkalosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Acetylsalicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Ptgs1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carvedilol",
+          "target": "Respiratory Alkalosis",
+          "label": "causes"
+        },
+        {
+          "source": "Respiratory Alkalosis",
+          "target": "Acetylsalicylic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Acetylsalicylic Acid",
+          "target": "Ptgs1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carvedilol,Acetylsalicylic Acid": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_8218"
+    }
+  ]
+}

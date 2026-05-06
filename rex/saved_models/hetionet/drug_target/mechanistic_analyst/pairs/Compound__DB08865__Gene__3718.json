@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB08865 - Gene::3718",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5194,
+        "final_score": 0.5194
+      },
+      "nodes": [
+        {
+          "id": "Crizotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Disease Progression",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Erlotinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Jak3",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Crizotinib",
+          "target": "Disease Progression",
+          "label": "causes"
+        },
+        {
+          "source": "Disease Progression",
+          "target": "Erlotinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Erlotinib",
+          "target": "Jak3",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Crizotinib,Erlotinib": [
+          "Antineoplastic Enzyme Inhibitor",
+          "Organonitrogen Heterocyclic Compound"
+        ]
+      },
+      "id": "path_4811"
+    }
+  ]
+}

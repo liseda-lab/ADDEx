@@ -1,0 +1,143 @@
+{
+  "id": "Compound::DB00379 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6583,
+        "final_score": 0.6625,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Mexiletine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mexiletine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_666"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6005,
+        "final_score": 0.6005
+      },
+      "nodes": [
+        {
+          "id": "Mexiletine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Fatty Acid Omega Oxidation",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mexiletine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Fatty Acid Omega Oxidation",
+          "label": "participates"
+        },
+        {
+          "source": "Fatty Acid Omega Oxidation",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_667"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4003,
+        "final_score": 0.4003
+      },
+      "nodes": [
+        {
+          "id": "Mexiletine",
+          "type": "Compound"
+        },
+        {
+          "id": "Distress Gastrointestinal",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Codeine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mexiletine",
+          "target": "Distress Gastrointestinal",
+          "label": "causes"
+        },
+        {
+          "source": "Distress Gastrointestinal",
+          "target": "Codeine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Codeine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mexiletine,Codeine": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_668"
+    }
+  ]
+}

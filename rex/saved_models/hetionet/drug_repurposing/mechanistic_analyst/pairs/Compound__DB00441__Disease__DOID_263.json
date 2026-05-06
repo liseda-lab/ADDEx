@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00441 - Disease::DOID:263",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4774,
+        "final_score": 0.4774
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemolytic Uraemic Syndrome",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Kidney Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Haemolytic Uraemic Syndrome",
+          "label": "causes"
+        },
+        {
+          "source": "Haemolytic Uraemic Syndrome",
+          "target": "Paclitaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paclitaxel",
+          "target": "Kidney Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Paclitaxel": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_4587"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4147,
+        "final_score": 0.4147
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Sensory Neuropathy",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Capecitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Kidney Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Peripheral Sensory Neuropathy",
+          "label": "causes"
+        },
+        {
+          "source": "Peripheral Sensory Neuropathy",
+          "target": "Capecitabine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Capecitabine",
+          "target": "Kidney Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Capecitabine": [
+          "Pyrimidine Antagonist",
+          "Organofluorine Compound"
+        ]
+      },
+      "id": "path_4588"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "COMPOUND:70 - DISEASE:261",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6012,
+        "final_score": 0.6012
+      },
+      "nodes": [
+        {
+          "id": "rituximab",
+          "type": "Compound"
+        },
+        {
+          "id": "keratin associated protein 3-2",
+          "type": "Gene"
+        },
+        {
+          "id": "Ludwig's angina",
+          "type": "Disease"
+        },
+        {
+          "id": "ribosomal protein S23 pseudogene 1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arthritis, Infectious",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "rituximab",
+          "target": "keratin associated protein 3-2",
+          "label": "is affecting"
+        },
+        {
+          "source": "keratin associated protein 3-2",
+          "target": "Ludwig's angina",
+          "label": "causes condition"
+        },
+        {
+          "source": "Ludwig's angina",
+          "target": "ribosomal protein S23 pseudogene 1",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "ribosomal protein S23 pseudogene 1",
+          "target": "Arthritis, Infectious",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_754"
+    }
+  ]
+}

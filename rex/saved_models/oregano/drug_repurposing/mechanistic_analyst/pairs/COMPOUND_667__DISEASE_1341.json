@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:667 - DISEASE:1341",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7646,
+        "final_score": 0.549,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "warfarin",
+          "type": "Compound"
+        },
+        {
+          "id": "T cell receptor alpha variable 9-2",
+          "type": "Gene"
+        },
+        {
+          "id": "Hyperglycinemia, lactic acidosis, and seizures",
+          "type": "Disease"
+        },
+        {
+          "id": "T cell receptor alpha variable 9-2",
+          "type": "Gene"
+        },
+        {
+          "id": "Hearing Loss, Sensorineural",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "warfarin",
+          "target": "T cell receptor alpha variable 9-2",
+          "label": "is affecting"
+        },
+        {
+          "source": "T cell receptor alpha variable 9-2",
+          "target": "Hyperglycinemia, lactic acidosis, and seizures",
+          "label": "causes condition"
+        },
+        {
+          "source": "Hyperglycinemia, lactic acidosis, and seizures",
+          "target": "T cell receptor alpha variable 9-2",
+          "label": "is condition caused by"
+        },
+        {
+          "source": "T cell receptor alpha variable 9-2",
+          "target": "Hearing Loss, Sensorineural",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_162"
+    }
+  ]
+}

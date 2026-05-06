@@ -1,0 +1,148 @@
+{
+  "id": "Compound::DB00338 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7042,
+        "final_score": 0.5188,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c18",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Cyp2c18",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c18",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_15109"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5076,
+        "final_score": 0.5076
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 2c19 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Cytochrome P450 2c19 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 2c19 Inhibitors",
+          "target": "Efavirenz",
+          "label": "includes"
+        },
+        {
+          "source": "Efavirenz",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Efavirenz": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_15110"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4781,
+        "final_score": 0.4781
+      },
+      "nodes": [
+        {
+          "id": "Omeprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Constipation Aggravated",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trospium",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Omeprazole",
+          "target": "Constipation Aggravated",
+          "label": "causes"
+        },
+        {
+          "source": "Constipation Aggravated",
+          "target": "Trospium",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trospium",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Omeprazole,Trospium": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_15111"
+    }
+  ]
+}

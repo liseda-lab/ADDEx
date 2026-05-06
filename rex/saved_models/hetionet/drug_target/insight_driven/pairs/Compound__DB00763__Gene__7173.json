@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00763 - Gene::7173",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8333,
+        "final_score": 0.75,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Methimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Thyroid Hormone Synthesis Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Propylthiouracil",
+          "type": "Compound"
+        },
+        {
+          "id": "Tpo",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Methimazole",
+          "target": "Thyroid Hormone Synthesis Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Thyroid Hormone Synthesis Inhibitors",
+          "target": "Propylthiouracil",
+          "label": "includes"
+        },
+        {
+          "source": "Propylthiouracil",
+          "target": "Tpo",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Methimazole,Propylthiouracil": [
+          "Organonitrogen Heterocyclic Compound",
+          "Antithyroid Agent"
+        ]
+      },
+      "id": "path_6396"
+    }
+  ]
+}

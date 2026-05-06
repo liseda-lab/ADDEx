@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00627 - Disease::DOID:1936",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5756,
+        "final_score": 0.5756
+      },
+      "nodes": [
+        {
+          "id": "Niacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Coronary Artery Disease",
+          "type": "Disease"
+        },
+        {
+          "id": "Angina, Unstable",
+          "type": "Symptom"
+        },
+        {
+          "id": "Atherosclerosis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Niacin",
+          "target": "Coronary Artery Disease",
+          "label": "treats"
+        },
+        {
+          "source": "Coronary Artery Disease",
+          "target": "Angina, Unstable",
+          "label": "presents"
+        },
+        {
+          "source": "Angina, Unstable",
+          "target": "Atherosclerosis",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Coronary Artery Disease,Atherosclerosis": [
+          "Non-Neoplastic Cardiovascular Disorder"
+        ]
+      },
+      "id": "path_2428"
+    }
+  ]
+}

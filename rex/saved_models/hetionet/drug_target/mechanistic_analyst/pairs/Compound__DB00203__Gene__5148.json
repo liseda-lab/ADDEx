@@ -1,0 +1,108 @@
+{
+  "id": "Compound::DB00203 - Gene::5148",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6174,
+        "final_score": 0.6174
+      },
+      "nodes": [
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Visual Brightness",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vardenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde6g",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sildenafil",
+          "target": "Visual Brightness",
+          "label": "causes"
+        },
+        {
+          "source": "Visual Brightness",
+          "target": "Vardenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vardenafil",
+          "target": "Pde6g",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sildenafil,Vardenafil": [
+          "Cgmp Phosphodiesterase Inhibitor",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_22114"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6601,
+        "final_score": 0.58,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Sildenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyanopsia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Vardenafil",
+          "type": "Compound"
+        },
+        {
+          "id": "Pde6g",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sildenafil",
+          "target": "Cyanopsia",
+          "label": "causes"
+        },
+        {
+          "source": "Cyanopsia",
+          "target": "Vardenafil",
+          "label": "is caused by"
+        },
+        {
+          "source": "Vardenafil",
+          "target": "Pde6g",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sildenafil,Vardenafil": [
+          "Cgmp Phosphodiesterase Inhibitor",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_22113"
+    }
+  ]
+}

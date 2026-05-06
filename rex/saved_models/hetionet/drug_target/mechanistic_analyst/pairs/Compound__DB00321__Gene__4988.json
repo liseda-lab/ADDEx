@@ -1,0 +1,138 @@
+{
+  "id": "Compound::DB00321 - Gene::4988",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6373,
+        "final_score": 0.6373
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Sigmar1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Sigmar1",
+          "label": "binds"
+        },
+        {
+          "source": "Sigmar1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprm1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5643"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6332,
+        "final_score": 0.6332
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprk1",
+          "type": "Gene"
+        },
+        {
+          "id": "Opioid Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Oprk1",
+          "label": "binds"
+        },
+        {
+          "source": "Oprk1",
+          "target": "Opioid Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Opioid Receptor Activity",
+          "target": "Oprm1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_5644"
+    },
+    {
+      "score": {
+        "ic_mean": 0.536,
+        "final_score": 0.536
+      },
+      "nodes": [
+        {
+          "id": "Amitriptyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Abnormal Involuntary Movements",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Butorphanol",
+          "type": "Compound"
+        },
+        {
+          "id": "Oprm1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Amitriptyline",
+          "target": "Abnormal Involuntary Movements",
+          "label": "causes"
+        },
+        {
+          "source": "Abnormal Involuntary Movements",
+          "target": "Butorphanol",
+          "label": "is caused by"
+        },
+        {
+          "source": "Butorphanol",
+          "target": "Oprm1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Amitriptyline,Butorphanol": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_5645"
+    }
+  ]
+}

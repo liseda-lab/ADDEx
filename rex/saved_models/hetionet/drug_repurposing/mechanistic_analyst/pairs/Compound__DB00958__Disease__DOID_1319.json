@@ -1,0 +1,48 @@
+{
+  "id": "Compound::DB00958 - Disease::DOID:1319",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4258,
+        "final_score": 0.4258
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Uterine Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Postoperative Nausea And Vomiting",
+          "type": "Symptom"
+        },
+        {
+          "id": "Brain Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Uterine Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Uterine Cancer",
+          "target": "Postoperative Nausea And Vomiting",
+          "label": "presents"
+        },
+        {
+          "source": "Postoperative Nausea And Vomiting",
+          "target": "Brain Cancer",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_2186"
+    }
+  ]
+}

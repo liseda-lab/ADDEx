@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00255 - Gene::2099",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6319,
+        "final_score": 0.6319
+      },
+      "nodes": [
+        {
+          "id": "Diethylstilbestrol",
+          "type": "Compound"
+        },
+        {
+          "id": "Esr2",
+          "type": "Gene"
+        },
+        {
+          "id": "Estrogen Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Esr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diethylstilbestrol",
+          "target": "Esr2",
+          "label": "binds"
+        },
+        {
+          "source": "Esr2",
+          "target": "Estrogen Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Estrogen Receptor Activity",
+          "target": "Esr1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11101"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6116,
+        "final_score": 0.6116
+      },
+      "nodes": [
+        {
+          "id": "Diethylstilbestrol",
+          "type": "Compound"
+        },
+        {
+          "id": "Ritodrine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dienestrol",
+          "type": "Compound"
+        },
+        {
+          "id": "Esr1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diethylstilbestrol",
+          "target": "Ritodrine",
+          "label": "resembles"
+        },
+        {
+          "source": "Ritodrine",
+          "target": "Dienestrol",
+          "label": "resembles"
+        },
+        {
+          "source": "Dienestrol",
+          "target": "Esr1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diethylstilbestrol,Ritodrine": [
+          "Chemical Entity"
+        ],
+        "Diethylstilbestrol,Dienestrol": [
+          "Phenols",
+          "Non-Steroidal Estrogen"
+        ],
+        "Ritodrine,Dienestrol": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_11102"
+    }
+  ]
+}

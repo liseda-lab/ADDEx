@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00445 - Disease::DOID:2394",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4537,
+        "final_score": 0.4537
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Caecitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Paclitaxel",
+          "type": "Compound"
+        },
+        {
+          "id": "Ovarian Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Caecitis",
+          "label": "causes"
+        },
+        {
+          "source": "Caecitis",
+          "target": "Paclitaxel",
+          "label": "is caused by"
+        },
+        {
+          "source": "Paclitaxel",
+          "target": "Ovarian Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epirubicin,Paclitaxel": [
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_2528"
+    }
+  ]
+}

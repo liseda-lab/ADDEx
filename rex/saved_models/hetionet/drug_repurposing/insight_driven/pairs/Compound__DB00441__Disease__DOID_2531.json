@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00441 - Disease::DOID:2531",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4481,
+        "final_score": 0.4481
+      },
+      "nodes": [
+        {
+          "id": "Gemcitabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Donson",
+          "type": "Gene"
+        },
+        {
+          "id": "Dasatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gemcitabine",
+          "target": "Donson",
+          "label": "upregulates"
+        },
+        {
+          "source": "Donson",
+          "target": "Dasatinib",
+          "label": "is downregulated by"
+        },
+        {
+          "source": "Dasatinib",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gemcitabine,Dasatinib": [
+          "Pyrimidines",
+          "Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_4631"
+    }
+  ]
+}

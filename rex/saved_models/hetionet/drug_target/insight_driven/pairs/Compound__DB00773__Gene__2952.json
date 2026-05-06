@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00773 - Gene::2952",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4985,
+        "final_score": 0.4985
+      },
+      "nodes": [
+        {
+          "id": "Etoposide",
+          "type": "Compound"
+        },
+        {
+          "id": "Blindness Cortical",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Gstt1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Etoposide",
+          "target": "Blindness Cortical",
+          "label": "causes"
+        },
+        {
+          "source": "Blindness Cortical",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Gstt1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Etoposide,Cisplatin": [
+          "Antineoplastic Agent",
+          "Polyatomic Entity"
+        ]
+      },
+      "id": "path_19994"
+    }
+  ]
+}

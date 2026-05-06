@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00887 - Gene::55867",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7,
+        "final_score": 0.6417,
+        "agentic_score": 0.5833,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Increased Diuresis At Loop Of Henle",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Furosemide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Increased Diuresis At Loop Of Henle",
+          "label": "is included in"
+        },
+        {
+          "source": "Increased Diuresis At Loop Of Henle",
+          "target": "Furosemide",
+          "label": "includes"
+        },
+        {
+          "source": "Furosemide",
+          "target": "Slc22a11",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Bumetanide,Furosemide": [
+          "Loop Diuretic",
+          "Sulfonamide"
+        ]
+      },
+      "id": "path_12809"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6302,
+        "final_score": 0.6302
+      },
+      "nodes": [
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc22a11",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Bumetanide",
+          "target": "Slco1a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slco1a2",
+          "target": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Sodium-independent Organic Anion Transmembrane Transporter Activity",
+          "target": "Slc22a11",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_12810"
+    }
+  ]
+}

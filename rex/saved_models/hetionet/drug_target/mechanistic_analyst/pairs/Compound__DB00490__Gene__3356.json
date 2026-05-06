@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00490 - Gene::3356",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6622,
+        "final_score": 0.7478,
+        "agentic_score": 0.8333,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Buspirone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Receptors",
+          "type": "Pathway"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buspirone",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Serotonin Receptors",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Receptors",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_16508"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6235,
+        "final_score": 0.6235
+      },
+      "nodes": [
+        {
+          "id": "Buspirone",
+          "type": "Compound"
+        },
+        {
+          "id": "Htr1a",
+          "type": "Gene"
+        },
+        {
+          "id": "Serotonin Receptor Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Htr2a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Buspirone",
+          "target": "Htr1a",
+          "label": "binds"
+        },
+        {
+          "source": "Htr1a",
+          "target": "Serotonin Receptor Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Serotonin Receptor Activity",
+          "target": "Htr2a",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_16509"
+    }
+  ]
+}

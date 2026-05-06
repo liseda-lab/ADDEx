@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00509 - Gene::7067",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7407,
+        "final_score": 0.537,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Dextrothyroxine",
+          "type": "Compound"
+        },
+        {
+          "id": "Craniosynostosis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Levothyroxine",
+          "type": "Compound"
+        },
+        {
+          "id": "Thra",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dextrothyroxine",
+          "target": "Craniosynostosis",
+          "label": "causes"
+        },
+        {
+          "source": "Craniosynostosis",
+          "target": "Levothyroxine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Levothyroxine",
+          "target": "Thra",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dextrothyroxine,Levothyroxine": [
+          "Thyroid Agent",
+          "Thyroxine"
+        ]
+      },
+      "id": "path_22015"
+    }
+  ]
+}

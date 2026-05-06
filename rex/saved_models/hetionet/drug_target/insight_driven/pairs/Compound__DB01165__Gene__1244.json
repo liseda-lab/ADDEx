@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01165 - Gene::1244",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5003,
+        "final_score": 0.5003
+      },
+      "nodes": [
+        {
+          "id": "Ofloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Candiduria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Lomefloxacin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ofloxacin",
+          "target": "Candiduria",
+          "label": "causes"
+        },
+        {
+          "source": "Candiduria",
+          "target": "Lomefloxacin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Lomefloxacin",
+          "target": "Abcc2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ofloxacin,Lomefloxacin": [
+          "Fluoroquinolone Antibiotic",
+          "Quinolone Antibiotic"
+        ]
+      },
+      "id": "path_11746"
+    }
+  ]
+}

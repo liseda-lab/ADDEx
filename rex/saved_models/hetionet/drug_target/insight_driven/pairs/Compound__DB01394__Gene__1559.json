@@ -1,0 +1,195 @@
+{
+  "id": "Compound::DB01394 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.659,
+        "final_score": 0.6628,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Colchicine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Colchicine",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "label": "participates"
+        },
+        {
+          "source": "Oxidoreductase Activity, Acting On Ch Or Ch2 Groups, Quinone Or Similar Compound As Acceptor",
+          "target": "Cyp2c9",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11959"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4599,
+        "final_score": 0.4599
+      },
+      "nodes": [
+        {
+          "id": "Colchicine",
+          "type": "Compound"
+        },
+        {
+          "id": "Prostration",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nicotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Colchicine",
+          "target": "Prostration",
+          "label": "causes"
+        },
+        {
+          "source": "Prostration",
+          "target": "Nicotine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nicotine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Colchicine,Nicotine": [
+          "Alkaloid"
+        ]
+      },
+      "id": "path_11960"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4209,
+        "final_score": 0.4209
+      },
+      "nodes": [
+        {
+          "id": "Colchicine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 3a4 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Efavirenz",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Colchicine",
+          "target": "Cytochrome P450 3a4 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 3a4 Inhibitors",
+          "target": "Efavirenz",
+          "label": "includes"
+        },
+        {
+          "source": "Efavirenz",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Colchicine,Efavirenz": [
+          "Carbocyclic Compound"
+        ]
+      },
+      "id": "path_11961"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3487,
+        "final_score": 0.3487
+      },
+      "nodes": [
+        {
+          "id": "Colchicine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytochrome P450 3a4 Inhibitors",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Ritonavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Colchicine",
+          "target": "Cytochrome P450 3a4 Inhibitors",
+          "label": "is included in"
+        },
+        {
+          "source": "Cytochrome P450 3a4 Inhibitors",
+          "target": "Ritonavir",
+          "label": "includes"
+        },
+        {
+          "source": "Ritonavir",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Colchicine,Ritonavir": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_11962"
+    }
+  ]
+}

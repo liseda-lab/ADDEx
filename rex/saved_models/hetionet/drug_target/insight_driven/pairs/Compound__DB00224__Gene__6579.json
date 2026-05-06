@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00224 - Gene::6579",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4794,
+        "final_score": 0.4794
+      },
+      "nodes": [
+        {
+          "id": "Indinavir",
+          "type": "Compound"
+        },
+        {
+          "id": "Serum Amylase Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bumetanide",
+          "type": "Compound"
+        },
+        {
+          "id": "Slco1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Indinavir",
+          "target": "Serum Amylase Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Serum Amylase Increased",
+          "target": "Bumetanide",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bumetanide",
+          "target": "Slco1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Indinavir,Bumetanide": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_1476"
+    }
+  ]
+}

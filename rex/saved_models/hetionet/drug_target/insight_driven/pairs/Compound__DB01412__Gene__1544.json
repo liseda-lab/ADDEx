@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB01412 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6362,
+        "final_score": 0.6362
+      },
+      "nodes": [
+        {
+          "id": "Theobromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Enprofylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Theophylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theobromine",
+          "target": "Enprofylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Enprofylline",
+          "target": "Theophylline",
+          "label": "resembles"
+        },
+        {
+          "source": "Theophylline",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theobromine,Enprofylline": [
+          "Purines"
+        ],
+        "Theobromine,Theophylline": [
+          "Bronchodilator",
+          "Dimethylxanthine"
+        ],
+        "Enprofylline,Theophylline": [
+          "Purines"
+        ]
+      },
+      "id": "path_14874"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5383,
+        "final_score": 0.5383
+      },
+      "nodes": [
+        {
+          "id": "Theobromine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adora2a",
+          "type": "Gene"
+        },
+        {
+          "id": "Oxtriphylline",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Theobromine",
+          "target": "Adora2a",
+          "label": "binds"
+        },
+        {
+          "source": "Adora2a",
+          "target": "Oxtriphylline",
+          "label": "is bound by"
+        },
+        {
+          "source": "Oxtriphylline",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Theobromine,Oxtriphylline": [
+          "Bronchodilator"
+        ]
+      },
+      "id": "path_14875"
+    }
+  ]
+}

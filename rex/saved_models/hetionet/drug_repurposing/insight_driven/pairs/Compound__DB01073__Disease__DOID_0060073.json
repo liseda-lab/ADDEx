@@ -1,0 +1,56 @@
+{
+  "id": "Compound::DB01073 - Disease::DOID:0060073",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4354,
+        "final_score": 0.4354
+      },
+      "nodes": [
+        {
+          "id": "Fludarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "S-adenosylmethionine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cytarabine",
+          "type": "Compound"
+        },
+        {
+          "id": "Lymphatic System Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fludarabine",
+          "target": "S-adenosylmethionine",
+          "label": "resembles"
+        },
+        {
+          "source": "S-adenosylmethionine",
+          "target": "Cytarabine",
+          "label": "resembles"
+        },
+        {
+          "source": "Cytarabine",
+          "target": "Lymphatic System Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fludarabine,Cytarabine": [
+          "Antimetabolite"
+        ],
+        "S-adenosylmethionine,Cytarabine": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_1837"
+    }
+  ]
+}

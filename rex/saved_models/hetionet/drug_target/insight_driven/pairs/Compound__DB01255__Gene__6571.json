@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB01255 - Gene::6571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6387,
+        "final_score": 0.6387
+      },
+      "nodes": [
+        {
+          "id": "Lisdexamfetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        },
+        {
+          "id": "Monoamine Transmembrane Transporter Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisdexamfetamine",
+          "target": "Slc6a2",
+          "label": "binds"
+        },
+        {
+          "source": "Slc6a2",
+          "target": "Monoamine Transmembrane Transporter Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Monoamine Transmembrane Transporter Activity",
+          "target": "Slc18a2",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2694"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6238,
+        "final_score": 0.6238
+      },
+      "nodes": [
+        {
+          "id": "Lisdexamfetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Tourette's Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisdexamfetamine",
+          "target": "Tourette's Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Tourette's Disorder",
+          "target": "Methamphetamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc18a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lisdexamfetamine,Methamphetamine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2695"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5814,
+        "final_score": 0.5814
+      },
+      "nodes": [
+        {
+          "id": "Lisdexamfetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Central Nervous System Stimulation",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Methamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc18a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lisdexamfetamine",
+          "target": "Central Nervous System Stimulation",
+          "label": "is included in"
+        },
+        {
+          "source": "Central Nervous System Stimulation",
+          "target": "Methamphetamine",
+          "label": "includes"
+        },
+        {
+          "source": "Methamphetamine",
+          "target": "Slc18a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lisdexamfetamine,Methamphetamine": [
+          "Agent Affecting Nervous System",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_2696"
+    }
+  ]
+}

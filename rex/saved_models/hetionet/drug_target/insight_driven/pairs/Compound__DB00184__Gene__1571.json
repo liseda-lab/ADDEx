@@ -1,0 +1,144 @@
+{
+  "id": "Compound::DB00184 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6605,
+        "final_score": 0.6636,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Nicotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2a6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicotine",
+          "target": "Cyp2a6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2a6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1384"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6402,
+        "final_score": 0.6402
+      },
+      "nodes": [
+        {
+          "id": "Nicotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicotine",
+          "target": "Cyp2c8",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2c8",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2e1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_1385"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4372,
+        "final_score": 0.4372
+      },
+      "nodes": [
+        {
+          "id": "Nicotine",
+          "type": "Compound"
+        },
+        {
+          "id": "Change In Blood Pressure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Trimethadione",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Nicotine",
+          "target": "Change In Blood Pressure",
+          "label": "causes"
+        },
+        {
+          "source": "Change In Blood Pressure",
+          "target": "Trimethadione",
+          "label": "is caused by"
+        },
+        {
+          "source": "Trimethadione",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Nicotine,Trimethadione": [
+          "Organonitrogen Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_1386"
+    }
+  ]
+}

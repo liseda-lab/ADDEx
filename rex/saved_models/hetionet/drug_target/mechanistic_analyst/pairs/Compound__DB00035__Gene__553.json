@@ -1,0 +1,68 @@
+{
+  "id": "Compound::DB00035 - Gene::553",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7198,
+        "final_score": 0.5266,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Desmopressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Linaclotide",
+          "type": "Compound"
+        },
+        {
+          "id": "Terlipressin",
+          "type": "Compound"
+        },
+        {
+          "id": "Avpr1b",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Desmopressin",
+          "target": "Linaclotide",
+          "label": "resembles"
+        },
+        {
+          "source": "Linaclotide",
+          "target": "Terlipressin",
+          "label": "resembles"
+        },
+        {
+          "source": "Terlipressin",
+          "target": "Avpr1b",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Desmopressin,Linaclotide": [
+          "Heterodetic Cyclic Peptide",
+          "Therapeutic Hormone"
+        ],
+        "Desmopressin,Terlipressin": [
+          "Antidiuretic Hormone Analogue",
+          "Peptide"
+        ],
+        "Linaclotide,Terlipressin": [
+          "Therapeutic Hormone",
+          "Peptide"
+        ]
+      },
+      "id": "path_14958"
+    }
+  ]
+}

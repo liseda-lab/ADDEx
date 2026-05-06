@@ -1,0 +1,63 @@
+{
+  "id": "COMPOUND:1078 - DISEASE:1487",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8309,
+        "final_score": 0.5821,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Rosuvastatin",
+          "type": "Compound"
+        },
+        {
+          "id": "LRRN4 C-terminal like",
+          "type": "Gene"
+        },
+        {
+          "id": "Growth factor receptor-bound protein 14 (GRB14 adapter protein)",
+          "type": "Protein"
+        },
+        {
+          "id": "LRRN4 C-terminal like",
+          "type": "Gene"
+        },
+        {
+          "id": "Hydrophthalmos",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rosuvastatin",
+          "target": "LRRN4 C-terminal like",
+          "label": "is affecting"
+        },
+        {
+          "source": "LRRN4 C-terminal like",
+          "target": "Growth factor receptor-bound protein 14 (GRB14 adapter protein)",
+          "label": "is gene product of"
+        },
+        {
+          "source": "Growth factor receptor-bound protein 14 (GRB14 adapter protein)",
+          "target": "LRRN4 C-terminal like",
+          "label": "gene product of"
+        },
+        {
+          "source": "LRRN4 C-terminal like",
+          "target": "Hydrophthalmos",
+          "label": "causes condition"
+        }
+      ],
+      "id": "path_273"
+    }
+  ]
+}

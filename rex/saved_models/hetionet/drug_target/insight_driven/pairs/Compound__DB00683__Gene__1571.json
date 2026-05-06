@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00683 - Gene::1571",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5029,
+        "final_score": 0.5029
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Retrograde Amnesia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Nitrazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Retrograde Amnesia",
+          "label": "causes"
+        },
+        {
+          "source": "Retrograde Amnesia",
+          "target": "Nitrazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Nitrazepam",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midazolam,Nitrazepam": [
+          "Benzodiazepine",
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_4629"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4787,
+        "final_score": 0.4787
+      },
+      "nodes": [
+        {
+          "id": "Midazolam",
+          "type": "Compound"
+        },
+        {
+          "id": "Alertness Decreased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Bromazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Midazolam",
+          "target": "Alertness Decreased",
+          "label": "causes"
+        },
+        {
+          "source": "Alertness Decreased",
+          "target": "Bromazepam",
+          "label": "is caused by"
+        },
+        {
+          "source": "Bromazepam",
+          "target": "Cyp2e1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Midazolam,Bromazepam": [
+          "Benzodiazepine",
+          "Organic Molecular Entity"
+        ]
+      },
+      "id": "path_4630"
+    }
+  ]
+}

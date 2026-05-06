@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00445 - Disease::DOID:1192",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4505,
+        "final_score": 0.4505
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatosplenomegaly",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tretinoin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Hepatosplenomegaly",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatosplenomegaly",
+          "target": "Tretinoin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tretinoin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epirubicin,Tretinoin": [
+          "Hydroxides"
+        ]
+      },
+      "id": "path_4998"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4194,
+        "final_score": 0.4194
+      },
+      "nodes": [
+        {
+          "id": "Epirubicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Heart Malformation",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Peripheral Nervous System Neoplasm",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Epirubicin",
+          "target": "Heart Malformation",
+          "label": "causes"
+        },
+        {
+          "source": "Heart Malformation",
+          "target": "Cisplatin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Peripheral Nervous System Neoplasm",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Epirubicin,Cisplatin": [
+          "Heteroatomic Molecular Entity",
+          "Dna Binding Agent"
+        ]
+      },
+      "id": "path_4999"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "Compound::DB00567 - Gene::213",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.715,
+        "final_score": 0.6908,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Cephalexin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cephalosporins",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cefotetan",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cephalexin",
+          "target": "Cephalosporins",
+          "label": "is included in"
+        },
+        {
+          "source": "Cephalosporins",
+          "target": "Cefotetan",
+          "label": "includes"
+        },
+        {
+          "source": "Cefotetan",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cephalexin,Cephalosporins": [
+          "Cephalosporin"
+        ],
+        "Cephalexin,Cefotetan": [
+          "Cephem",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cephalosporins,Cefotetan": [
+          "Cephem"
+        ]
+      },
+      "id": "path_11543"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5424,
+        "final_score": 0.5424
+      },
+      "nodes": [
+        {
+          "id": "Cephalexin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cefpiramide",
+          "type": "Compound"
+        },
+        {
+          "id": "Cefotetan",
+          "type": "Compound"
+        },
+        {
+          "id": "Alb",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Cephalexin",
+          "target": "Cefpiramide",
+          "label": "resembles"
+        },
+        {
+          "source": "Cefpiramide",
+          "target": "Cefotetan",
+          "label": "resembles"
+        },
+        {
+          "source": "Cefotetan",
+          "target": "Alb",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Cephalexin,Cefpiramide": [
+          "Cephalosporin",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cephalexin,Cefotetan": [
+          "Cephem",
+          "Cephalosporin Antibiotic"
+        ],
+        "Cefpiramide,Cefotetan": [
+          "Cephem",
+          "Cephalosporin Antibiotic"
+        ]
+      },
+      "id": "path_11544"
+    }
+  ]
+}

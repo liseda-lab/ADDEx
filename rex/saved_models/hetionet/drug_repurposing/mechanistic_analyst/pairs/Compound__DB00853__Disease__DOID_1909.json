@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00853 - Disease::DOID:1909",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3869,
+        "final_score": 0.3869
+      },
+      "nodes": [
+        {
+          "id": "Temozolomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Tinea Pedis",
+          "type": "Symptom"
+        },
+        {
+          "id": "Melanoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temozolomide",
+          "target": "Skin Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Skin Cancer",
+          "target": "Tinea Pedis",
+          "label": "presents"
+        },
+        {
+          "source": "Tinea Pedis",
+          "target": "Melanoma",
+          "label": "is presented by"
+        }
+      ],
+      "id": "path_2850"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3496,
+        "final_score": 0.3496
+      },
+      "nodes": [
+        {
+          "id": "Temozolomide",
+          "type": "Compound"
+        },
+        {
+          "id": "Skin Cancer",
+          "type": "Disease"
+        },
+        {
+          "id": "Bleomycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Melanoma",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Temozolomide",
+          "target": "Skin Cancer",
+          "label": "treats"
+        },
+        {
+          "source": "Skin Cancer",
+          "target": "Bleomycin",
+          "label": "is treated by"
+        },
+        {
+          "source": "Bleomycin",
+          "target": "Melanoma",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Temozolomide,Bleomycin": [
+          "Dna Binding Agent",
+          "Carboxamide"
+        ]
+      },
+      "id": "path_2851"
+    }
+  ]
+}

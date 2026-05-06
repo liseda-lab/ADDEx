@@ -1,0 +1,96 @@
+{
+  "id": "Compound::DB00317 - Gene::1543",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.574,
+        "final_score": 0.574
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a5",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Cyp3a5",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a5",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp1a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_20967"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4993,
+        "final_score": 0.4993
+      },
+      "nodes": [
+        {
+          "id": "Gefitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Nettle Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Tamoxifen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Gefitinib",
+          "target": "Nettle Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Nettle Rash",
+          "target": "Tamoxifen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Tamoxifen",
+          "target": "Cyp1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Gefitinib,Tamoxifen": [
+          "Targeted Therapy Agent",
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_20968"
+    }
+  ]
+}

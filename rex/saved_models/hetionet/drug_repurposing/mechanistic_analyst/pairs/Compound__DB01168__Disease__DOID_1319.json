@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01168 - Disease::DOID:1319",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5615,
+        "final_score": 0.5615
+      },
+      "nodes": [
+        {
+          "id": "Procarbazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Alkylating Activity",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Carmustine",
+          "type": "Compound"
+        },
+        {
+          "id": "Brain Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Procarbazine",
+          "target": "Alkylating Activity",
+          "label": "is included in"
+        },
+        {
+          "source": "Alkylating Activity",
+          "target": "Carmustine",
+          "label": "includes"
+        },
+        {
+          "source": "Carmustine",
+          "target": "Brain Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Procarbazine,Carmustine": [
+          "Antineoplastic Alkylating Agent",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_2983"
+    }
+  ]
+}

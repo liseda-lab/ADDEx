@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01236 - Gene::3736",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7489,
+        "final_score": 0.5411,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Sevoflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "General Anesthesia",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Enflurane",
+          "type": "Compound"
+        },
+        {
+          "id": "Kcna1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Sevoflurane",
+          "target": "General Anesthesia",
+          "label": "is included in"
+        },
+        {
+          "source": "General Anesthesia",
+          "target": "Enflurane",
+          "label": "includes"
+        },
+        {
+          "source": "Enflurane",
+          "target": "Kcna1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Sevoflurane,Enflurane": [
+          "Anesthetic Agent",
+          "Ether"
+        ]
+      },
+      "id": "path_5584"
+    }
+  ]
+}

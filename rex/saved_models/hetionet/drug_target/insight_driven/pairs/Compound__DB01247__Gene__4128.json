@@ -1,0 +1,107 @@
+{
+  "id": "Compound::DB01247 - Gene::4128",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7744,
+        "final_score": 0.7622,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Isocarboxazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Maob",
+          "type": "Gene"
+        },
+        {
+          "id": "Primary Amine Oxidase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isocarboxazid",
+          "target": "Maob",
+          "label": "binds"
+        },
+        {
+          "source": "Maob",
+          "target": "Primary Amine Oxidase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Primary Amine Oxidase Activity",
+          "target": "Maoa",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_16119"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5275,
+        "final_score": 0.5275
+      },
+      "nodes": [
+        {
+          "id": "Isocarboxazid",
+          "type": "Compound"
+        },
+        {
+          "id": "Bethanidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pargyline",
+          "type": "Compound"
+        },
+        {
+          "id": "Maoa",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Isocarboxazid",
+          "target": "Bethanidine",
+          "label": "resembles"
+        },
+        {
+          "source": "Bethanidine",
+          "target": "Pargyline",
+          "label": "resembles"
+        },
+        {
+          "source": "Pargyline",
+          "target": "Maoa",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Isocarboxazid,Bethanidine": [
+          "Agent Affecting Nervous System"
+        ],
+        "Isocarboxazid,Pargyline": [
+          "Monoamine Oxidase Inhibitor"
+        ],
+        "Bethanidine,Pargyline": [
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_16120"
+    }
+  ]
+}

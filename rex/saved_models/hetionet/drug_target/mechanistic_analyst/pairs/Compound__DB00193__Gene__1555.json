@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00193 - Gene::1555",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4689,
+        "final_score": 0.4689
+      },
+      "nodes": [
+        {
+          "id": "Tramadol",
+          "type": "Compound"
+        },
+        {
+          "id": "Bacteriuria",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Itraconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Tramadol",
+          "target": "Bacteriuria",
+          "label": "causes"
+        },
+        {
+          "source": "Bacteriuria",
+          "target": "Itraconazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Itraconazole",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Tramadol,Itraconazole": [
+          "Chemical Entity"
+        ]
+      },
+      "id": "path_15535"
+    }
+  ]
+}

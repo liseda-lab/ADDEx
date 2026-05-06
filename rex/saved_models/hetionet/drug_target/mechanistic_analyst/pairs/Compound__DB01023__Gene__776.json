@@ -1,0 +1,162 @@
+{
+  "id": "Compound::DB01023 - Gene::776",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7319,
+        "final_score": 0.6993,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1s",
+          "type": "Gene"
+        },
+        {
+          "id": "High Voltage-gated Calcium Channel Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felodipine",
+          "target": "Cacna1s",
+          "label": "binds"
+        },
+        {
+          "source": "Cacna1s",
+          "target": "High Voltage-gated Calcium Channel Activity",
+          "label": "participates"
+        },
+        {
+          "source": "High Voltage-gated Calcium Channel Activity",
+          "target": "Cacna1d",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_21038"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6801,
+        "final_score": 0.6734,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dihydropyridines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felodipine",
+          "target": "Dihydropyridines",
+          "label": "is included in"
+        },
+        {
+          "source": "Dihydropyridines",
+          "target": "Clevidipine",
+          "label": "includes"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Felodipine,Dihydropyridines": [
+          "Dihydropyridine"
+        ],
+        "Felodipine,Clevidipine": [
+          "Calcium Channel Blocker",
+          "Dihydropyridine"
+        ],
+        "Dihydropyridines,Clevidipine": [
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_21039"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6214,
+        "final_score": 0.6214
+      },
+      "nodes": [
+        {
+          "id": "Felodipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Calcium Channel Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clevidipine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cacna1d",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Felodipine",
+          "target": "Calcium Channel Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Calcium Channel Antagonists",
+          "target": "Clevidipine",
+          "label": "includes"
+        },
+        {
+          "source": "Clevidipine",
+          "target": "Cacna1d",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Felodipine,Clevidipine": [
+          "Calcium Channel Blocker",
+          "Dihydropyridine"
+        ]
+      },
+      "id": "path_21040"
+    }
+  ]
+}

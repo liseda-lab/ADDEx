@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB01254 - Disease::DOID:2531",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5428,
+        "final_score": 0.5428
+      },
+      "nodes": [
+        {
+          "id": "Dasatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Npepl1",
+          "type": "Gene"
+        },
+        {
+          "id": "Ruxolitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dasatinib",
+          "target": "Npepl1",
+          "label": "upregulates"
+        },
+        {
+          "source": "Npepl1",
+          "target": "Ruxolitinib",
+          "label": "is downregulated by"
+        },
+        {
+          "source": "Ruxolitinib",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dasatinib,Ruxolitinib": [
+          "Azole",
+          "Antineoplastic Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_3720"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4168,
+        "final_score": 0.4168
+      },
+      "nodes": [
+        {
+          "id": "Dasatinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Haemorrhage Intracranial",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ruxolitinib",
+          "type": "Compound"
+        },
+        {
+          "id": "Hematologic Cancer",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dasatinib",
+          "target": "Haemorrhage Intracranial",
+          "label": "causes"
+        },
+        {
+          "source": "Haemorrhage Intracranial",
+          "target": "Ruxolitinib",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ruxolitinib",
+          "target": "Hematologic Cancer",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dasatinib,Ruxolitinib": [
+          "Azole",
+          "Antineoplastic Enzyme Inhibitor"
+        ]
+      },
+      "id": "path_3721"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "Compound::DB00977 - Gene::1558",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6497,
+        "final_score": 0.6497
+      },
+      "nodes": [
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Cyp2b6",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2b6",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2c8",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_6489"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5116,
+        "final_score": 0.5116
+      },
+      "nodes": [
+        {
+          "id": "Ethinyl Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Pelvic Discomfort",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Metronidazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c8",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Ethinyl Estradiol",
+          "target": "Pelvic Discomfort",
+          "label": "causes"
+        },
+        {
+          "source": "Pelvic Discomfort",
+          "target": "Metronidazole",
+          "label": "is caused by"
+        },
+        {
+          "source": "Metronidazole",
+          "target": "Cyp2c8",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Ethinyl Estradiol,Metronidazole": [
+          "Organic Cyclic Compound"
+        ]
+      },
+      "id": "path_6490"
+    }
+  ]
+}

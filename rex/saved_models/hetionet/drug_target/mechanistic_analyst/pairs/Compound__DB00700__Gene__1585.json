@@ -1,0 +1,59 @@
+{
+  "id": "Compound::DB00700 - Gene::1585",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7669,
+        "final_score": 0.7168,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Eplerenone",
+          "type": "Compound"
+        },
+        {
+          "id": "Aldosterone Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp11b2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Eplerenone",
+          "target": "Aldosterone Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Aldosterone Antagonists",
+          "target": "Spironolactone",
+          "label": "includes"
+        },
+        {
+          "source": "Spironolactone",
+          "target": "Cyp11b2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Eplerenone,Spironolactone": [
+          "3-Oxo-Delta(4) Steroid"
+        ]
+      },
+      "id": "path_19238"
+    }
+  ]
+}

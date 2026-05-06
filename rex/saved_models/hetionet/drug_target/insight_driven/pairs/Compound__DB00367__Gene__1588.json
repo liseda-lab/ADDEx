@@ -1,0 +1,101 @@
+{
+  "id": "Compound::DB00367 - Gene::1588",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5207,
+        "final_score": 0.5207
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Corpus Luteum Cyst",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Clomifene",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Corpus Luteum Cyst",
+          "label": "causes"
+        },
+        {
+          "source": "Corpus Luteum Cyst",
+          "target": "Clomifene",
+          "label": "is caused by"
+        },
+        {
+          "source": "Clomifene",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Clomifene": [
+          "Heteroorganic Entity",
+          "Therapeutic Hormone"
+        ]
+      },
+      "id": "path_14678"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4827,
+        "final_score": 0.4827
+      },
+      "nodes": [
+        {
+          "id": "Levonorgestrel",
+          "type": "Compound"
+        },
+        {
+          "id": "Endometritis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dinoprostone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Levonorgestrel",
+          "target": "Endometritis",
+          "label": "causes"
+        },
+        {
+          "source": "Endometritis",
+          "target": "Dinoprostone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dinoprostone",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Levonorgestrel,Dinoprostone": [
+          "Organic Hydroxy Compound"
+        ]
+      },
+      "id": "path_14679"
+    }
+  ]
+}

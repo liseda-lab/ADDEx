@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00912 - Gene::1576",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4899,
+        "final_score": 0.4899
+      },
+      "nodes": [
+        {
+          "id": "Repaglinide",
+          "type": "Compound"
+        },
+        {
+          "id": "Refraction Disorder",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Fenofibrate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Repaglinide",
+          "target": "Refraction Disorder",
+          "label": "causes"
+        },
+        {
+          "source": "Refraction Disorder",
+          "target": "Fenofibrate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Fenofibrate",
+          "target": "Cyp3a4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Repaglinide,Fenofibrate": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Digestive System Or Metabolism"
+        ]
+      },
+      "id": "path_7891"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00122 - Gene::80736",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6566,
+        "final_score": 0.6616,
+        "agentic_score": 0.6667,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Choline",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc44a3",
+          "type": "Gene"
+        },
+        {
+          "id": "Synthesis Of Pc",
+          "type": "Pathway"
+        },
+        {
+          "id": "Slc44a4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Choline",
+          "target": "Slc44a3",
+          "label": "binds"
+        },
+        {
+          "source": "Slc44a3",
+          "target": "Synthesis Of Pc",
+          "label": "participates"
+        },
+        {
+          "source": "Synthesis Of Pc",
+          "target": "Slc44a4",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2337"
+    }
+  ]
+}

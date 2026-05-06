@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00633 - Gene::1544",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5244,
+        "final_score": 0.5244
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Adrenergic Alpha2-agonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clonidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "Adrenergic Alpha2-agonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Adrenergic Alpha2-agonists",
+          "target": "Clonidine",
+          "label": "includes"
+        },
+        {
+          "source": "Clonidine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexmedetomidine,Clonidine": [
+          "Alpha-Adrenergic Agonist",
+          "Organonitrogen Compound"
+        ]
+      },
+      "id": "path_16203"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4566,
+        "final_score": 0.4566
+      },
+      "nodes": [
+        {
+          "id": "Dexmedetomidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Diastolic Hypertension",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Duloxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Dexmedetomidine",
+          "target": "Diastolic Hypertension",
+          "label": "causes"
+        },
+        {
+          "source": "Diastolic Hypertension",
+          "target": "Duloxetine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Duloxetine",
+          "target": "Cyp1a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Dexmedetomidine,Duloxetine": [
+          "Organic Heterocyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_16204"
+    }
+  ]
+}

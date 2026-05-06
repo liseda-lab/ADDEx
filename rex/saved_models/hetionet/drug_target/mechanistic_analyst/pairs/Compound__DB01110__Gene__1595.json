@@ -1,0 +1,116 @@
+{
+  "id": "Compound::DB01110 - Gene::1595",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6156,
+        "final_score": 0.6156
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Econazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp51a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Econazole",
+          "label": "includes"
+        },
+        {
+          "source": "Econazole",
+          "target": "Cyp51a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Azoles": [
+          "Azole"
+        ],
+        "Miconazole,Econazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Azoles,Econazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_6543"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5805,
+        "final_score": 0.5805
+      },
+      "nodes": [
+        {
+          "id": "Miconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Isoconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Econazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp51a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Miconazole",
+          "target": "Isoconazole",
+          "label": "resembles"
+        },
+        {
+          "source": "Isoconazole",
+          "target": "Econazole",
+          "label": "resembles"
+        },
+        {
+          "source": "Econazole",
+          "target": "Cyp51a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Miconazole,Isoconazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Miconazole,Econazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Isoconazole,Econazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ]
+      },
+      "id": "path_6544"
+    }
+  ]
+}

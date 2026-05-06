@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01174 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4753,
+        "final_score": 0.4753
+      },
+      "nodes": [
+        {
+          "id": "Phenobarbital",
+          "type": "Compound"
+        },
+        {
+          "id": "Arthritic Pains",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Acetylsalicylic Acid",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Phenobarbital",
+          "target": "Arthritic Pains",
+          "label": "causes"
+        },
+        {
+          "source": "Arthritic Pains",
+          "target": "Acetylsalicylic Acid",
+          "label": "is caused by"
+        },
+        {
+          "source": "Acetylsalicylic Acid",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Phenobarbital,Acetylsalicylic Acid": [
+          "Organic Cyclic Compound",
+          "Agent Affecting Nervous System"
+        ]
+      },
+      "id": "path_1305"
+    }
+  ]
+}

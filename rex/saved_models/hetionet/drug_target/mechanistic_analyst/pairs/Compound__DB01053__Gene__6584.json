@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB01053 - Gene::6584",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5201,
+        "final_score": 0.5201
+      },
+      "nodes": [
+        {
+          "id": "Benzylpenicillin",
+          "type": "Compound"
+        },
+        {
+          "id": "White Blood Cells Urine Positive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Cefdinir",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc22a5",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Benzylpenicillin",
+          "target": "White Blood Cells Urine Positive",
+          "label": "causes"
+        },
+        {
+          "source": "White Blood Cells Urine Positive",
+          "target": "Cefdinir",
+          "label": "is caused by"
+        },
+        {
+          "source": "Cefdinir",
+          "target": "Slc22a5",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Benzylpenicillin,Cefdinir": [
+          "Beta-Lactam Antibiotic",
+          "Beta-Lactam Antibiotic"
+        ]
+      },
+      "id": "path_15599"
+    }
+  ]
+}

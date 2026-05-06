@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00234 - Gene::6530",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4832,
+        "final_score": 0.4832
+      },
+      "nodes": [
+        {
+          "id": "Reboxetine",
+          "type": "Compound"
+        },
+        {
+          "id": "Blood Pressure Systolic Increased",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dextroamphetamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Slc6a2",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Reboxetine",
+          "target": "Blood Pressure Systolic Increased",
+          "label": "causes"
+        },
+        {
+          "source": "Blood Pressure Systolic Increased",
+          "target": "Dextroamphetamine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dextroamphetamine",
+          "target": "Slc6a2",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Reboxetine,Dextroamphetamine": [
+          "Agent Affecting Nervous System",
+          "Heteroorganic Entity"
+        ]
+      },
+      "id": "path_9910"
+    }
+  ]
+}

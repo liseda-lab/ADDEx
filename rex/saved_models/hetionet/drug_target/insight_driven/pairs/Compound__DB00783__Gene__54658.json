@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00783 - Gene::54658",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4853,
+        "final_score": 0.4853
+      },
+      "nodes": [
+        {
+          "id": "Estradiol",
+          "type": "Compound"
+        },
+        {
+          "id": "Facial Rash",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Losartan",
+          "type": "Compound"
+        },
+        {
+          "id": "Ugt1a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Estradiol",
+          "target": "Facial Rash",
+          "label": "causes"
+        },
+        {
+          "source": "Facial Rash",
+          "target": "Losartan",
+          "label": "is caused by"
+        },
+        {
+          "source": "Losartan",
+          "target": "Ugt1a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Estradiol,Losartan": [
+          "Organic Aromatic Compound"
+        ]
+      },
+      "id": "path_10980"
+    }
+  ]
+}

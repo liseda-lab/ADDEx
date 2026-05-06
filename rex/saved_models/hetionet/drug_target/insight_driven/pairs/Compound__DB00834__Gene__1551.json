@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00834 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4862,
+        "final_score": 0.4862
+      },
+      "nodes": [
+        {
+          "id": "Mifepristone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Finasteride",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Mifepristone",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Finasteride",
+          "label": "is bound by"
+        },
+        {
+          "source": "Finasteride",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Mifepristone,Finasteride": [
+          "Hormone Antagonist",
+          "3-Oxo Steroid"
+        ]
+      },
+      "id": "path_3157"
+    }
+  ]
+}

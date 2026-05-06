@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00448 - Gene::1545",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4575,
+        "final_score": 0.4575
+      },
+      "nodes": [
+        {
+          "id": "Lansoprazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Oral Mucosal Blistering",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Melatonin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp1b1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Lansoprazole",
+          "target": "Oral Mucosal Blistering",
+          "label": "causes"
+        },
+        {
+          "source": "Oral Mucosal Blistering",
+          "target": "Melatonin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Melatonin",
+          "target": "Cyp1b1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Lansoprazole,Melatonin": [
+          "Organic Heterobicyclic Compound"
+        ]
+      },
+      "id": "path_13426"
+    }
+  ]
+}

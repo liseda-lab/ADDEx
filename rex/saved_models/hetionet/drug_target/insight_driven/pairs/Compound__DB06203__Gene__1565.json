@@ -1,0 +1,142 @@
+{
+  "id": "Compound::DB06203 - Gene::1565",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6281,
+        "final_score": 0.6281
+      },
+      "nodes": [
+        {
+          "id": "Alogliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Codeine And Morphine Metabolism",
+          "type": "Pathway"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alogliptin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Codeine And Morphine Metabolism",
+          "label": "participates"
+        },
+        {
+          "source": "Codeine And Morphine Metabolism",
+          "target": "Cyp2d6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_2292"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5132,
+        "final_score": 0.5132
+      },
+      "nodes": [
+        {
+          "id": "Alogliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a4",
+          "type": "Gene"
+        },
+        {
+          "id": "Bisoprolol",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alogliptin",
+          "target": "Cyp3a4",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a4",
+          "target": "Bisoprolol",
+          "label": "is bound by"
+        },
+        {
+          "source": "Bisoprolol",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alogliptin,Bisoprolol": [
+          "Organic Amino Compound"
+        ]
+      },
+      "id": "path_2293"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4555,
+        "final_score": 0.4555
+      },
+      "nodes": [
+        {
+          "id": "Alogliptin",
+          "type": "Compound"
+        },
+        {
+          "id": "Acute Hepatic Failure",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Hydroxychloroquine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2d6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Alogliptin",
+          "target": "Acute Hepatic Failure",
+          "label": "causes"
+        },
+        {
+          "source": "Acute Hepatic Failure",
+          "target": "Hydroxychloroquine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Hydroxychloroquine",
+          "target": "Cyp2d6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Alogliptin,Hydroxychloroquine": [
+          "Organic Cation"
+        ]
+      },
+      "id": "path_2294"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB01045 - Gene::4363",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5162,
+        "final_score": 0.5162
+      },
+      "nodes": [
+        {
+          "id": "Rifampicin",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7-cyp3a51p",
+          "type": "Gene"
+        },
+        {
+          "id": "Mifepristone",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Rifampicin",
+          "target": "Cyp3a7-cyp3a51p",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7-cyp3a51p",
+          "target": "Mifepristone",
+          "label": "is bound by"
+        },
+        {
+          "source": "Mifepristone",
+          "target": "Abcc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Rifampicin,Mifepristone": [
+          "Organic Polycyclic Compound"
+        ]
+      },
+      "id": "path_12040"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00747 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4975,
+        "final_score": 0.4975
+      },
+      "nodes": [
+        {
+          "id": "Scopolamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Procedural Nausea",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Neostigmine",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Scopolamine",
+          "target": "Procedural Nausea",
+          "label": "causes"
+        },
+        {
+          "source": "Procedural Nausea",
+          "target": "Neostigmine",
+          "label": "is caused by"
+        },
+        {
+          "source": "Neostigmine",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Scopolamine,Neostigmine": [
+          "Ammonium Ion Derivative"
+        ]
+      },
+      "id": "path_22023"
+    }
+  ]
+}

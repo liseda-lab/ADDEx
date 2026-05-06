@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00421 - Disease::DOID:12930",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.4578,
+        "final_score": 0.4578
+      },
+      "nodes": [
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Heart Murmurs",
+          "type": "Symptom"
+        },
+        {
+          "id": "Dilated Cardiomyopathy",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Spironolactone",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Heart Murmurs",
+          "label": "presents"
+        },
+        {
+          "source": "Heart Murmurs",
+          "target": "Dilated Cardiomyopathy",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hypertension (disease),Heart Murmurs": [
+          "Cardiovascular System Finding"
+        ]
+      },
+      "id": "path_2210"
+    },
+    {
+      "score": {
+        "ic_mean": 0.4284,
+        "final_score": 0.4284
+      },
+      "nodes": [
+        {
+          "id": "Spironolactone",
+          "type": "Compound"
+        },
+        {
+          "id": "Hypertension (disease)",
+          "type": "Disease"
+        },
+        {
+          "id": "Cardiac Output, Low",
+          "type": "Symptom"
+        },
+        {
+          "id": "Dilated Cardiomyopathy",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Spironolactone",
+          "target": "Hypertension (disease)",
+          "label": "treats"
+        },
+        {
+          "source": "Hypertension (disease)",
+          "target": "Cardiac Output, Low",
+          "label": "presents"
+        },
+        {
+          "source": "Cardiac Output, Low",
+          "target": "Dilated Cardiomyopathy",
+          "label": "is presented by"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Hypertension (disease),Cardiac Output, Low": [
+          "Cardiovascular System Finding"
+        ]
+      },
+      "id": "path_2211"
+    }
+  ]
+}

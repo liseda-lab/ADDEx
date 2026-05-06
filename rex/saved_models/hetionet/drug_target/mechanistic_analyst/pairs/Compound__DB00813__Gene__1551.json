@@ -1,0 +1,54 @@
+{
+  "id": "Compound::DB00813 - Gene::1551",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5139,
+        "final_score": 0.5139
+      },
+      "nodes": [
+        {
+          "id": "Fentanyl",
+          "type": "Compound"
+        },
+        {
+          "id": "Therapy Naive",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Oxycodone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Fentanyl",
+          "target": "Therapy Naive",
+          "label": "causes"
+        },
+        {
+          "source": "Therapy Naive",
+          "target": "Oxycodone",
+          "label": "is caused by"
+        },
+        {
+          "source": "Oxycodone",
+          "target": "Cyp3a7",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Fentanyl,Oxycodone": [
+          "Opioid",
+          "Organic Heterocyclic Compound"
+        ]
+      },
+      "id": "path_3535"
+    }
+  ]
+}

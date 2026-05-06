@@ -1,0 +1,54 @@
+{
+  "id": "DrugBank_DB00829 - MONDO_11918",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7505,
+        "final_score": 0.5419,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diazepam",
+          "type": "Drug"
+        },
+        {
+          "id": "Status Epilepticus",
+          "type": "Disease"
+        },
+        {
+          "id": "Midazolam",
+          "type": "Drug"
+        },
+        {
+          "id": "Anxiety",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diazepam",
+          "target": "Status Epilepticus",
+          "label": "indication"
+        },
+        {
+          "source": "Status Epilepticus",
+          "target": "Midazolam",
+          "label": "off-label use"
+        },
+        {
+          "source": "Midazolam",
+          "target": "Anxiety",
+          "label": "indication"
+        }
+      ],
+      "id": "path_39959"
+    }
+  ]
+}

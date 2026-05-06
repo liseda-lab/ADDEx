@@ -1,0 +1,159 @@
+{
+  "id": "Compound::DB01075 - Disease::DOID:4481",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7421,
+        "final_score": 0.8294,
+        "agentic_score": 0.9167,
+        "llm_dimensions": {
+          "validity": 5.0,
+          "completeness_conv": 5.0,
+          "relevance": 4.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Diphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H1 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Desloratadine",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diphenhydramine",
+          "target": "Histamine H1 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H1 Receptor Antagonists",
+          "target": "Desloratadine",
+          "label": "includes"
+        },
+        {
+          "source": "Desloratadine",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diphenhydramine,Desloratadine": [
+          "Organonitrogen Compound",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_5790"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6001,
+        "final_score": 0.6001
+      },
+      "nodes": [
+        {
+          "id": "Diphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Labyrinthitis",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Dimenhydrinate",
+          "type": "Compound"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diphenhydramine",
+          "target": "Labyrinthitis",
+          "label": "causes"
+        },
+        {
+          "source": "Labyrinthitis",
+          "target": "Dimenhydrinate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Dimenhydrinate",
+          "target": "Allergic Rhinitis",
+          "label": "treats"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diphenhydramine,Dimenhydrinate": [
+          "Molecular Entity",
+          "Antiemetic Agent"
+        ],
+        "Labyrinthitis,Allergic Rhinitis": [
+          "Otolaryngologic Disorder"
+        ]
+      },
+      "id": "path_5791"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5523,
+        "final_score": 0.5523
+      },
+      "nodes": [
+        {
+          "id": "Diphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Dimenhydrinate",
+          "type": "Compound"
+        },
+        {
+          "id": "Atopic Dermatitis",
+          "type": "Disease"
+        },
+        {
+          "id": "Allergic Rhinitis",
+          "type": "Disease"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Diphenhydramine",
+          "target": "Dimenhydrinate",
+          "label": "resembles"
+        },
+        {
+          "source": "Dimenhydrinate",
+          "target": "Atopic Dermatitis",
+          "label": "treats"
+        },
+        {
+          "source": "Atopic Dermatitis",
+          "target": "Allergic Rhinitis",
+          "label": "resembles"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Diphenhydramine,Dimenhydrinate": [
+          "Molecular Entity",
+          "Antiemetic Agent"
+        ]
+      },
+      "id": "path_5792"
+    }
+  ]
+}

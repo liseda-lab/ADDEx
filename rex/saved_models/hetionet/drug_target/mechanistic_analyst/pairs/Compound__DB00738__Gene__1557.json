@@ -1,0 +1,100 @@
+{
+  "id": "Compound::DB00738 - Gene::1557",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.3986,
+        "final_score": 0.3986
+      },
+      "nodes": [
+        {
+          "id": "Pentamidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Pneumonia Bacterial",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Ibuprofen",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pentamidine",
+          "target": "Pneumonia Bacterial",
+          "label": "causes"
+        },
+        {
+          "source": "Pneumonia Bacterial",
+          "target": "Ibuprofen",
+          "label": "is caused by"
+        },
+        {
+          "source": "Ibuprofen",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pentamidine,Ibuprofen": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_22328"
+    },
+    {
+      "score": {
+        "ic_mean": 0.3969,
+        "final_score": 0.3969
+      },
+      "nodes": [
+        {
+          "id": "Pentamidine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hemianopia",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Felbamate",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c19",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Pentamidine",
+          "target": "Hemianopia",
+          "label": "causes"
+        },
+        {
+          "source": "Hemianopia",
+          "target": "Felbamate",
+          "label": "is caused by"
+        },
+        {
+          "source": "Felbamate",
+          "target": "Cyp2c19",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Pentamidine,Felbamate": [
+          "Organic Molecule"
+        ]
+      },
+      "id": "path_22329"
+    }
+  ]
+}

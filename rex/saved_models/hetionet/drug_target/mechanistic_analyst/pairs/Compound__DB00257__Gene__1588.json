@@ -1,0 +1,102 @@
+{
+  "id": "Compound::DB00257 - Gene::1588",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6284,
+        "final_score": 0.6284
+      },
+      "nodes": [
+        {
+          "id": "Clotrimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp3a7",
+          "type": "Gene"
+        },
+        {
+          "id": "Aromatase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clotrimazole",
+          "target": "Cyp3a7",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp3a7",
+          "target": "Aromatase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Aromatase Activity",
+          "target": "Cyp19a1",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_11051"
+    },
+    {
+      "score": {
+        "ic_mean": 0.5559,
+        "final_score": 0.5559
+      },
+      "nodes": [
+        {
+          "id": "Clotrimazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Azoles",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Tioconazole",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp19a1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Clotrimazole",
+          "target": "Azoles",
+          "label": "is included in"
+        },
+        {
+          "source": "Azoles",
+          "target": "Tioconazole",
+          "label": "includes"
+        },
+        {
+          "source": "Tioconazole",
+          "target": "Cyp19a1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Clotrimazole,Azoles": [
+          "Azole"
+        ],
+        "Clotrimazole,Tioconazole": [
+          "Imidazole Antifungal Drug",
+          "Antifungal Agent"
+        ],
+        "Azoles,Tioconazole": [
+          "Azole"
+        ]
+      },
+      "id": "path_11052"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "Compound::DB00477 - Gene::59340",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.7489,
+        "final_score": 0.7494,
+        "agentic_score": 0.75,
+        "llm_dimensions": {
+          "validity": 4.0,
+          "completeness_conv": 5.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Chlorpromazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Hrh4",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Chlorpromazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Promethazine",
+          "label": "includes"
+        },
+        {
+          "source": "Promethazine",
+          "target": "Hrh4",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Chlorpromazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Chlorpromazine,Promethazine": [
+          "Phenothiazines",
+          "Phenothiazine"
+        ],
+        "Phenothiazines,Promethazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_19351"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB01069 - Gene::1559",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.6412,
+        "final_score": 0.6412
+      },
+      "nodes": [
+        {
+          "id": "Promethazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Phenothiazines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Perphenazine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2c9",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Promethazine",
+          "target": "Phenothiazines",
+          "label": "is included in"
+        },
+        {
+          "source": "Phenothiazines",
+          "target": "Perphenazine",
+          "label": "includes"
+        },
+        {
+          "source": "Perphenazine",
+          "target": "Cyp2c9",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Promethazine,Phenothiazines": [
+          "Phenothiazines"
+        ],
+        "Promethazine,Perphenazine": [
+          "Agent Affecting Nervous System",
+          "Phenothiazines"
+        ],
+        "Phenothiazines,Perphenazine": [
+          "Phenothiazines"
+        ]
+      },
+      "id": "path_1035"
+    }
+  ]
+}

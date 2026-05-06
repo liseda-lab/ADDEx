@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00690 - Gene::5243",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.55,
+        "final_score": 0.55
+      },
+      "nodes": [
+        {
+          "id": "Flurazepam",
+          "type": "Compound"
+        },
+        {
+          "id": "Benzodiazepines",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Clobazam",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcb1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Flurazepam",
+          "target": "Benzodiazepines",
+          "label": "is included in"
+        },
+        {
+          "source": "Benzodiazepines",
+          "target": "Clobazam",
+          "label": "includes"
+        },
+        {
+          "source": "Clobazam",
+          "target": "Abcb1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Flurazepam,Benzodiazepines": [
+          "Benzodiazepine"
+        ],
+        "Flurazepam,Clobazam": [
+          "1,4-Benzodiazepinone",
+          "Antianxiety Agent"
+        ],
+        "Benzodiazepines,Clobazam": [
+          "Benzodiazepine"
+        ]
+      },
+      "id": "path_7166"
+    }
+  ]
+}

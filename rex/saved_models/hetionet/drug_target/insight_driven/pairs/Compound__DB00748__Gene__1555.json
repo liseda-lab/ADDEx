@@ -1,0 +1,156 @@
+{
+  "id": "Compound::DB00748 - Gene::1555",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5483,
+        "final_score": 0.5483
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Histamine H1 Receptor Antagonists",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Diphenhydramine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Histamine H1 Receptor Antagonists",
+          "label": "is included in"
+        },
+        {
+          "source": "Histamine H1 Receptor Antagonists",
+          "target": "Diphenhydramine",
+          "label": "includes"
+        },
+        {
+          "source": "Diphenhydramine",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Diphenhydramine": [
+          "Tertiary Amino Compound",
+          "Histamine-1 Receptor Antagonist"
+        ]
+      },
+      "id": "path_7075"
+    },
+    {
+      "score": {
+        "ic_mean": 0.6814,
+        "final_score": 0.5074,
+        "agentic_score": 0.3333,
+        "llm_dimensions": {
+          "validity": 2.0,
+          "completeness_conv": 3.0,
+          "relevance": 2.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2e1",
+          "type": "Gene"
+        },
+        {
+          "id": "Arachidonic Acid Monooxygenase Activity",
+          "type": "Molecular_Function"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Cyp2e1",
+          "label": "binds"
+        },
+        {
+          "source": "Cyp2e1",
+          "target": "Arachidonic Acid Monooxygenase Activity",
+          "label": "participates"
+        },
+        {
+          "source": "Arachidonic Acid Monooxygenase Activity",
+          "target": "Cyp2b6",
+          "label": "is participated by"
+        }
+      ],
+      "id": "path_7074"
+    },
+    {
+      "score": {
+        "ic_mean": 0.369,
+        "final_score": 0.369
+      },
+      "nodes": [
+        {
+          "id": "Carbinoxamine",
+          "type": "Compound"
+        },
+        {
+          "id": "Bepotastine",
+          "type": "Compound"
+        },
+        {
+          "id": "Domperidone",
+          "type": "Compound"
+        },
+        {
+          "id": "Cyp2b6",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carbinoxamine",
+          "target": "Bepotastine",
+          "label": "resembles"
+        },
+        {
+          "source": "Bepotastine",
+          "target": "Domperidone",
+          "label": "resembles"
+        },
+        {
+          "source": "Domperidone",
+          "target": "Cyp2b6",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carbinoxamine,Bepotastine": [
+          "Monochlorobenzenes",
+          "Histamine-1 Receptor Antagonist"
+        ],
+        "Carbinoxamine,Domperidone": [
+          "Organonitrogen Heterocyclic Compound"
+        ],
+        "Bepotastine,Domperidone": [
+          "Piperidines"
+        ]
+      },
+      "id": "path_7076"
+    }
+  ]
+}

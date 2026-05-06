@@ -1,0 +1,53 @@
+{
+  "id": "Compound::DB00661 - Gene::4363",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.5235,
+        "final_score": 0.5235
+      },
+      "nodes": [
+        {
+          "id": "Verapamil",
+          "type": "Compound"
+        },
+        {
+          "id": "Hepatitis Symptom",
+          "type": "Side Effect"
+        },
+        {
+          "id": "Erythromycin",
+          "type": "Compound"
+        },
+        {
+          "id": "Abcc1",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Verapamil",
+          "target": "Hepatitis Symptom",
+          "label": "causes"
+        },
+        {
+          "source": "Hepatitis Symptom",
+          "target": "Erythromycin",
+          "label": "is caused by"
+        },
+        {
+          "source": "Erythromycin",
+          "target": "Abcc1",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Verapamil,Erythromycin": [
+          "Nitrogen Molecular Entity"
+        ]
+      },
+      "id": "path_3187"
+    }
+  ]
+}

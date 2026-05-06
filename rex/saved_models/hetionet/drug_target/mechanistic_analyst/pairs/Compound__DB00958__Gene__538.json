@@ -1,0 +1,60 @@
+{
+  "id": "Compound::DB00958 - Gene::538",
+  "verbalization": "",
+  "paths": [
+    {
+      "score": {
+        "ic_mean": 0.8183,
+        "final_score": 0.6592,
+        "agentic_score": 0.5,
+        "llm_dimensions": {
+          "validity": 3.0,
+          "completeness_conv": 3.0,
+          "relevance": 3.0
+        }
+      },
+      "nodes": [
+        {
+          "id": "Carboplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Platinum-containing Compounds",
+          "type": "Pharmacologic Class"
+        },
+        {
+          "id": "Cisplatin",
+          "type": "Compound"
+        },
+        {
+          "id": "Atp7a",
+          "type": "Gene"
+        }
+      ],
+      "edges": [
+        {
+          "source": "Carboplatin",
+          "target": "Platinum-containing Compounds",
+          "label": "is included in"
+        },
+        {
+          "source": "Platinum-containing Compounds",
+          "target": "Cisplatin",
+          "label": "includes"
+        },
+        {
+          "source": "Cisplatin",
+          "target": "Atp7a",
+          "label": "binds"
+        }
+      ],
+      "lowest_common_ancestors": {
+        "Carboplatin,Cisplatin": [
+          "Platinum Coordination Entity",
+          "Platinum Compound"
+        ]
+      },
+      "id": "path_22824"
+    }
+  ]
+}
