@@ -184,7 +184,29 @@ class Trainer(object):
                 finally:
                     _socket.setdefaulttimeout(_orig_timeout)
 
-                onto_dir = "ontologies"
+                # Try a few candidate ontology locations:
+                #  1. "ontologies/"          - legacy/standalone REx_PyTorch (cwd-relative)
+                #  2. "public/ontologies/"   - ADDEx repo layout (cwd is rex/, so go up one)
+                #  3. <rex_root>/../public/ontologies - same target via __file__
+                _here = os.path.dirname(os.path.abspath(__file__))  # rex/code/model
+                _addex_root = os.path.normpath(os.path.join(_here, "..", "..", ".."))
+                onto_candidates = [
+                    "ontologies",
+                    os.path.join("..", "public", "ontologies"),
+                    os.path.join(_addex_root, "public", "ontologies"),
+                ]
+                onto_dir = next(
+                    (
+                        os.path.normpath(c)
+                        for c in onto_candidates
+                        if os.path.exists(os.path.join(c, "NCIT_HETIONET_DAG.pkl"))
+                    ),
+                    None,
+                )
+                if onto_dir is None:
+                    logger.info("[LCA] Ontology files not found in any candidate location, LCA disabled")
+                    break
+                logger.info(f"[LCA] Using ontology directory: {onto_dir}")
                 ncit_path  = os.path.join(onto_dir, "NCIT_HETIONET_DAG.pkl")
                 chebi_path = os.path.join(onto_dir, "CHEBI_HETIONET_DAG.pkl")
                 onto_labels_path = os.path.join(onto_dir, "onto_labels.json")

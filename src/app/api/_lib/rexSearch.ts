@@ -53,6 +53,46 @@ export type ExplanationJob = {
 
 export const REX_ROOT = path.join(process.cwd(), "rex");
 const JOB_ROOT = path.join(REX_ROOT, "runtime_jobs");
+
+// Debug flag: when true, do NOT delete the per-job runtime_jobs/<jobId>/
+// folder or the per-job output directory after the subprocess exits.
+// Useful for diagnosing fast-failing jobs whose logs would otherwise
+// disappear before you can inspect them. Toggle to true while debugging,
+// back to false for normal use.
+const DEBUG_KEEP_RUNTIME_JOBS = false;
+
+// In normal mode, runtime_jobs/<jobId>/ is removed after a delay rather
+// than immediately, so clients polling the GET status endpoint have time
+// to read the final status.json before it's deleted. Without this delay,
+// a fast-crashing REx subprocess would have its status.json wiped before
+// the next 300ms poll, causing the UI to see "missing" instead of
+// "failed" and bounce silently to the home page.
+const CLEANUP_DELAY_MS = 120_000;
+
+// FIFO QUEUE IMPLEMENTATION
+// Centralised cleanup helper used by every terminal path of runRexJob.
+// Honors DEBUG_KEEP_RUNTIME_JOBS (no-op when set) and otherwise schedules
+// the directory removals after CLEANUP_DELAY_MS so polling clients can
+// observe the final job state.
+function scheduleJobCleanup(
+  jobId: string,
+  jobDir: string,
+  outputDir: string | null,
+  reason: string
+) {
+  if (DEBUG_KEEP_RUNTIME_JOBS) {
+    console.log(`[REx DEBUG] Keeping runtime_jobs/${jobId}/ (${reason}).`);
+    return;
+  }
+  const handle = setTimeout(() => {
+    if (outputDir) {
+      removeDirIfInsideRoot(outputDir, REX_ROOT);
+    }
+    removeDirIfInsideRoot(jobDir, JOB_ROOT);
+  }, CLEANUP_DELAY_MS);
+  // Don't keep the Node event loop alive just for the cleanup timer.
+  handle.unref?.();
+}
 const jobRegistry: Map<string, boolean> =
   (globalThis as { __rexJobRegistry?: Map<string, boolean> }).__rexJobRegistry ??
   new Map<string, boolean>();
@@ -622,18 +662,16 @@ async function runRexJob(job: ExplanationJob): Promise<void> {
             env: { ...process.env, PYTHONUNBUFFERED: "1" },
           });
   } catch (error) {
+    const baseMsg = error instanceof Error ? error.message : "Failed to start REx job.";
     updateJob(job.jobId, {
       status: "failed",
-      message:
-        error instanceof Error
-          ? error.message
-          : "Failed to start REx job.",
+      message: `${baseMsg}\nIf this error persists, please open an issue at https://github.com/liseda-lab/ADDEx/issues.`,
       completedAt: new Date().toISOString(),
     });
     jobRegistry.delete(job.jobId);
     fs.closeSync(stdoutFd);
     fs.closeSync(stderrFd);
-    removeDirIfInsideRoot(getJobPaths(job.jobId).jobDir, JOB_ROOT);
+    scheduleJobCleanup(job.jobId, getJobPaths(job.jobId).jobDir, null, "spawn failure");
     return;
   }
 
@@ -654,7 +692,7 @@ async function runRexJob(job: ExplanationJob): Promise<void> {
       childProcessRegistry.delete(job.jobId);
       fs.closeSync(stdoutFd);
       fs.closeSync(stderrFd);
-      removeDirIfInsideRoot(getJobPaths(job.jobId).jobDir, JOB_ROOT);
+      scheduleJobCleanup(job.jobId, getJobPaths(job.jobId).jobDir, null, "child error");
       resolve();
     });
 
@@ -719,7 +757,7 @@ async function runRexJob(job: ExplanationJob): Promise<void> {
         } else {
           updateJob(job.jobId, {
             status: "failed",
-            message: `REx failed while generating this explanation (exit code ${code ?? "unknown"}).`,
+            message: `REx failed while generating this explanation (exit code ${code ?? "unknown"}).\nIf this error persists, please open an issue at https://github.com/liseda-lab/ADDEx/issues.`,
             completedAt,
           });
         }
@@ -734,11 +772,12 @@ async function runRexJob(job: ExplanationJob): Promise<void> {
         completedAt,
       });
     } finally {
-      if (outputDirToCleanup) {
-        removeDirIfInsideRoot(outputDirToCleanup, REX_ROOT);
-      }
       if (shouldCleanupRuntimeJobDir) {
-        removeDirIfInsideRoot(jobDir, JOB_ROOT);
+        scheduleJobCleanup(job.jobId, jobDir, outputDirToCleanup, "exit handler");
+      } else if (outputDirToCleanup && !DEBUG_KEEP_RUNTIME_JOBS) {
+        // Output dir cleanup only (rare): caller wants to keep runtime_jobs/
+        // but the output dir from the REx subprocess is still safe to drop.
+        setTimeout(() => removeDirIfInsideRoot(outputDirToCleanup!, REX_ROOT), CLEANUP_DELAY_MS);
       }
       jobRegistry.delete(job.jobId);
       childProcessRegistry.delete(job.jobId);

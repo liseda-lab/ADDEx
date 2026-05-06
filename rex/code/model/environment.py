@@ -143,7 +143,10 @@ try:
         _llm_model_gguf = Llama(
             model_path=model_path,
             n_ctx=2048,
-            n_threads=os.cpu_count(),
+            # Leave one core free so the OS / browser / dev server stay
+            # responsive while inference runs. max(1, ...) guards against
+            # single-core machines (would otherwise pass n_threads=0).
+            n_threads=max(1, (os.cpu_count() or 1) - 1),
             verbose=False,
         )
         print(f"[LLM GGUF] Loaded.")
@@ -334,10 +337,15 @@ def threshold_for_step(step: int) -> float:
 
 class Episode(object):
     _training_step = 0
+    _test_threshold_override = None  # if set, replaces threshold_for_step at reward time
 
     @classmethod
     def set_training_step(cls, step):
         cls._training_step = step
+
+    @classmethod
+    def set_test_threshold_override(cls, value):
+        cls._test_threshold_override = value
 
     def __init__(self, graph, data, params):
         self.grapher = graph
@@ -737,7 +745,8 @@ class Episode(object):
             self.reward_kind = np.array(['ic_only'] * B, dtype=object)
             return base
 
-        threshold = threshold_for_step(training_step)
+        override = getattr(Episode, '_test_threshold_override', None)
+        threshold = override if override is not None else threshold_for_step(training_step)
 
         # Three tiers of paths (boundaries match the paper: medium starts at 0.50)
         #   low:    0  < base <  0.5  → 0.10 fixed
