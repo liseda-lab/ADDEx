@@ -8,7 +8,10 @@ import PathList from "../pathList/PathList";
 
 interface SumSideMenuProps {
   collapsed: boolean;
-  setCollapsed: (value: boolean) => void;
+  onSlideLeft?: () => void;
+  onSlideRight?: () => void;
+  expanded?: boolean;
+  leftOffset?: number;
   pair: Pair | null;
   visiblePaths: Set<string>;
   togglePath: (pathId: string) => void;
@@ -22,7 +25,10 @@ interface SumSideMenuProps {
 
 export default function SumSideMenu({
   collapsed,
-  setCollapsed,
+  onSlideLeft,
+  onSlideRight,
+  expanded = false,
+  leftOffset = 0,
   pair,
   visiblePaths,
   togglePath,
@@ -34,6 +40,7 @@ export default function SumSideMenu({
   onVerbalizationGenerated,
 }: SumSideMenuProps) {
   const colors = useTheme();
+  const textScale = collapsed ? 0.75 : expanded ? 1.35 : 1;
   const [activeTab, setActiveTab] = useState<"verbalization" | "paths">(
     "verbalization"
   );
@@ -417,8 +424,12 @@ export default function SumSideMenu({
 
   const styles = {
     aside: {
-      width: collapsed ? 60 : 320,
-      height: "calc(100vh - 60px)",
+      width: collapsed
+        ? 60
+        : expanded
+          ? `calc(100vw - ${leftOffset}px)`
+          : 320,
+      height: "calc(100dvh - 60px)",
       padding: collapsed ? "1rem 0.5rem" : "1.15rem 0.9rem 1.2rem",
       backgroundColor: colors.card,
       borderLeft: `1px solid ${colors.white}15`,
@@ -426,7 +437,7 @@ export default function SumSideMenu({
       color: colors.white,
       fontWeight: 500,
       boxSizing: "border-box" as const,
-      overflowY: "auto" as const,
+      overflow: "hidden" as const,
       position: "fixed" as const,
       top: 60,
       right: 0,
@@ -436,10 +447,28 @@ export default function SumSideMenu({
       flexDirection: "column" as const,
     },
 
-    toggleButton: {
+    slideLeftButton: {
       position: "absolute" as const,
       top: 10,
       left: 10,
+      width: 30,
+      height: 30,
+      borderRadius: 8,
+      border: `1px solid ${colors.white}30`,
+      backgroundColor: colors.darkblue,
+      color: colors.white,
+      fontWeight: 600,
+      fontSize: "0.95rem",
+      cursor: "pointer",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.35)",
+    },
+    slideRightButton: {
+      position: "absolute" as const,
+      top: 10,
+      left: collapsed || expanded ? 10 : 46,
       width: 30,
       height: 30,
       borderRadius: 8,
@@ -483,6 +512,12 @@ export default function SumSideMenu({
       overflowWrap: "break-word" as const,
       wordBreak: "break-word" as const,
     },
+    tabPanel: {
+      flex: 1,
+      minHeight: 0,
+      overflowY: "auto" as const,
+      paddingRight: "0.1rem",
+    },
     footerAction: {
       display: "flex",
       justifyContent: "flex-end",
@@ -513,9 +548,22 @@ export default function SumSideMenu({
 
   return (
     <aside style={styles.aside}>
+      {!collapsed && !expanded && (
+        <button
+          style={styles.slideLeftButton}
+          onClick={() => onSlideLeft?.()}
+          aria-label="Slide left"
+          title="Slide left"
+        >
+          {"<"}
+        </button>
+      )}
+
       <button
-        style={styles.toggleButton}
-        onClick={() => setCollapsed(!collapsed)}
+        style={styles.slideRightButton}
+        onClick={() => onSlideRight?.()}
+        aria-label="Slide right"
+        title="Slide right"
       >
         {collapsed ? "<" : ">"}
       </button>
@@ -538,10 +586,26 @@ export default function SumSideMenu({
           </div>
 
           {activeTab === "verbalization" && pair && (
-            <div style={styles.content}>
+            <div
+              style={{
+                ...styles.tabPanel,
+                display: "flex",
+                flexDirection: "column",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  ...styles.content,
+                  flex: 1,
+                  minHeight: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
               {explanationStatus === "failed" && (
                 <p style={{ ...styles.helperText, color: "#ffb3b3", marginBottom: "0.75rem" }}>
-                  {explanationError || "Failed to generate the global explanation."}
+                  Please reload verbalization.
                 </p>
               )}
 
@@ -658,20 +722,22 @@ export default function SumSideMenu({
                       <Download size={14} />
                     </button>
                   </div>
-                  <p
-                    style={{
-                      textAlign: "left",
-                      lineHeight: 1.55,
-                      margin: 0,
-                      width: "100%",
-                      overflowWrap: "break-word",
-                      wordBreak: "break-word",
-                      whiteSpace: "pre-wrap",
-                      fontSize: verbalizationFontSize,
-                    }}
-                  >
-                    {globalExplanation}
-                  </p>
+                  <div style={{ flex: 1, minHeight: 0, overflowY: "auto" }}>
+                    <p
+                      style={{
+                        textAlign: "justify",
+                        lineHeight: 1.55,
+                        margin: 0,
+                        width: "100%",
+                        overflowWrap: "break-word",
+                        wordBreak: "break-word",
+                        whiteSpace: "pre-wrap",
+                        fontSize: Math.max(10, verbalizationFontSize * textScale),
+                      }}
+                    >
+                      {globalExplanation}
+                    </p>
+                  </div>
                 </>
               )}
 
@@ -682,11 +748,12 @@ export default function SumSideMenu({
                     : "Enable at least one path to generate a verbalization."}
                 </p>
               )}
+              </div>
             </div>
           )}
 
           {activeTab === "paths" && pair && (
-            <>
+            <div style={styles.tabPanel}>
               {/* Discreet disclosure to discover paths that aren't in the
                   visualization. Lives at the top so the "N available"
                   counter is visible the moment users open the tab. Closed
@@ -798,7 +865,7 @@ export default function SumSideMenu({
                 hoveredNodeId={hoveredNodeId}
                 filter="visible"
               />
-            </>
+            </div>
           )}
 
           {activeTab === "verbalization" && pair && (

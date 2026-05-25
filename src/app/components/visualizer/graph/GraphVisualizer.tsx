@@ -12,6 +12,8 @@ import { Rnd } from "react-rnd";
 import ColorPicker from "../legend/ColorPicker";
 import { exportGraphWithLegend, exportGraphAsSVG } from "@/app/hooks/exportPNG";
 import ExportPreviewModal from "../../imgExport/ExportPreviewModal";
+import { getGraphSettings } from "@/app/hooks/graphSettings";
+import { runClusterLayoutByType } from "@/app/hooks/clusterLayout";
 
 let cytoscapeSvgRegistered = false;
 async function ensureCytoscapeSvgRegistered() {
@@ -30,6 +32,7 @@ interface GraphVisualizerProps {
   pair: Pair;
   visiblePaths: Set<string>;
   visibleLCAs: Set<string>;
+  isVisible?: boolean;
   leftCollapsed: boolean;
   rightCollapsed: boolean;
   hoveredPathId: string | null;
@@ -42,6 +45,7 @@ export default function GraphVisualizer({
   pair,
   visiblePaths,
   visibleLCAs,
+  isVisible = true,
   leftCollapsed,
   rightCollapsed,
   hoveredPathId,
@@ -188,6 +192,8 @@ export default function GraphVisualizer({
   const initGraph = useCallback(() => {
     if (!containerRef.current) return;
     setLoading(true);
+    // Re-run centering on every graph rebuild (new pair, reload, etc.).
+    hasInitialCenteringRun.current = false;
 
     if (cyRef.current) cyRef.current.destroy();
 
@@ -198,17 +204,6 @@ export default function GraphVisualizer({
     });
 
     cyRef.current = cy;
-
-    const layout: LayoutOptions = {
-      name: "breadthfirst",
-      directed: true,
-      spacingFactor: 1,
-      avoidOverlap: true,
-      animate: true,
-      direction: "rightward",
-    };
-
-    cy.layout(layout).run();
 
     cy.on("layoutstop", () => {
       if (!hasInitialCenteringRun.current) {
@@ -227,12 +222,82 @@ export default function GraphVisualizer({
     cy.on("mouseout", "node", () => {
       onNodeHoverRef.current?.(null);
     });
-  }, [elements, nodeTypeColors]);
+
+    const savedLayout = getGraphSettings().layoutName ?? "breadthfirst";
+    if (savedLayout === "cluster" || savedLayout === "cose") {
+      runClusterLayoutByType(cy);
+      return;
+    }
+
+    const layout: LayoutOptions =
+      savedLayout === "hierarchical"
+        ? {
+            name: "breadthfirst",
+            directed: false,
+            roots: cy.nodes().filter((node) => String(node.data("type")) === "LCA"),
+            spacingFactor: 1,
+            avoidOverlap: true,
+            animate: true,
+            direction: "downward",
+          }
+        : savedLayout === "hierarchicalClassic"
+        ? {
+            name: "breadthfirst",
+            directed: true,
+            spacingFactor: 1,
+            avoidOverlap: true,
+            animate: true,
+            direction: "downward",
+          }
+        : savedLayout === "breadthfirst"
+        ? {
+            name: "breadthfirst",
+            directed: true,
+            spacingFactor: 1,
+            avoidOverlap: true,
+            animate: true,
+            direction: "rightward",
+          }
+        : savedLayout === "circle"
+            ? {
+                name: "circle",
+                animate: true,
+                fit: true,
+                padding: 24,
+              }
+            : savedLayout === "concentric"
+              ? {
+                  name: "concentric",
+                  animate: true,
+                  fit: true,
+                  padding: 24,
+                }
+              : {
+                  name: "grid",
+                  avoidOverlap: true,
+                  avoidOverlapPadding: 40,
+                  spacingFactor: 1.5,
+                  condense: false,
+                  animate: true,
+                  fit: true,
+                  padding: 24,
+                };
+
+    cy.layout(layout).run();
+  }, [elements]);
 
   useEffect(() => {
     ensureColors(elements.map(el => el.data.type));
     initGraph();
   }, [elements, initGraph, ensureColors]);
+
+  // Apply node/edge color updates without rebuilding Cytoscape so user-moved
+  // node positions are preserved.
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy) return;
+    cy.style(graphStyles(nodeTypeColors, elements));
+  }, [nodeTypeColors, elements]);
 
   useEffect(() => {
     const cy = cyRef.current;
@@ -372,6 +437,20 @@ export default function GraphVisualizer({
     return () => clearTimeout(timeout);
   }, [leftCollapsed, rightCollapsed]);
 
+  // When the graph panel is re-opened after being collapsed/hidden, force a
+  // resize + fit + center once the width transition settles.
+  useEffect(() => {
+    if (!isVisible || !cyRef.current) return;
+    const timeout = setTimeout(() => {
+      const cy = cyRef.current;
+      if (!cy) return;
+      cy.resize();
+      cy.fit();
+      cy.center();
+    }, 280);
+    return () => clearTimeout(timeout);
+  }, [isVisible]);
+
   // --- Initialize legend position after canvas mounts ---
   useEffect(() => {
     if (!legendPos && containerRef.current) {
@@ -471,7 +550,10 @@ export default function GraphVisualizer({
         onExport={handleExport}
         paletteOverride={paletteOverride}
         setPaletteOverride={setPaletteOverride}
-        resetColors={resetColors}
+        resetColors={() => {
+          resetColors();
+          initGraph();
+        }}
       />
 
       {/* Graph + Legend container */}
@@ -620,3 +702,4 @@ export default function GraphVisualizer({
     </div>
   );
 }
+

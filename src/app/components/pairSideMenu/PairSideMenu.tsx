@@ -28,8 +28,9 @@ export interface SelectionState {
 
 interface PairSideMenuProps {
   onSelectFile: (filename: string) => void;
-  onShowGraph: (pair: Pair) => void;
-  onShowSummary?: () => void;
+  onShowGraph: (pair: Pair, show?: boolean) => void;
+  onShowSummary?: (show?: boolean) => void;
+  onOutputModeChange?: (modes: { visualization: boolean; verbalization: boolean }) => void;
   onSetPair?: (pair: Pair) => void;
   onJobStateChange?: (state: ExplanationSearchState) => void;
   onRegisterCancel?: (cancelFn: (() => Promise<void>) | null) => void;
@@ -53,6 +54,7 @@ export default function PairSideMenu({
   onSelectFile,
   onShowGraph,
   onShowSummary,
+  onOutputModeChange,
   onSetPair,
   onJobStateChange,
   onRegisterCancel,
@@ -108,6 +110,10 @@ export default function PairSideMenu({
   });
   const [personaOptions, setPersonaOptions] = useState<PersonaOption[]>([]);
   const [datasetOptions, setDatasetOptions] = useState<DatasetOption[]>([]);
+  const [outputSelection, setOutputSelection] = useState({
+    visualization: true,
+    verbalization: true,
+  });
   const [newSearchOpen, setNewSearchOpen] = useState(false);
   const [hasInitiatedSearch, setHasInitiatedSearch] = useState(false);
   const pollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -181,7 +187,7 @@ export default function PairSideMenu({
       id: personaId,
       name: personaName ?? personaId,
       accentColor,
-      icon: <IconComponent size={28} weight="bold" color={accentColor} />,
+      icon: <IconComponent size={20} weight="bold" color={accentColor} />,
       dataset,
       task,
     };
@@ -334,27 +340,27 @@ export default function PairSideMenu({
       setLabelsByType({});
       return;
     }
-
-    const controller = new AbortController();
+    let isActive = true;
+    const expectedDataset = selectedPersona.dataset;
+    const expectedTask = selectedPersona.task;
 
     const fetchLabels = async () => {
       try {
         const params = new URLSearchParams({
-          dataset: selectedPersona.dataset ?? "",
-          task: selectedPersona.task ?? "",
+          dataset: expectedDataset ?? "",
+          task: expectedTask ?? "",
         });
-        const response = await fetch(`/api/labels?${params.toString()}`, {
-          signal: controller.signal,
-        });
+        const response = await fetch(`/api/labels?${params.toString()}`);
 
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
         }
 
         const json: { labelsByType: LabelsByType } = await response.json();
+        if (!isActive) return;
         setLabelsByType(json.labelsByType ?? {});
       } catch (error) {
-        if ((error as Error).name === "AbortError") return;
+        if (!isActive) return;
         console.error("Failed to load labels:", error);
         setLabelsByType({});
       }
@@ -362,12 +368,18 @@ export default function PairSideMenu({
 
     fetchLabels();
 
-    return () => controller.abort();
+    return () => {
+      isActive = false;
+    };
   }, [selectedPersona?.dataset, selectedPersona?.task]);
 
   useEffect(() => {
     onJobStateChange?.(jobState);
   }, [jobState, onJobStateChange]);
+
+  useEffect(() => {
+    onOutputModeChange?.(outputSelection);
+  }, [onOutputModeChange, outputSelection]);
 
   useEffect(() => {
     return () => {
@@ -458,8 +470,8 @@ export default function PairSideMenu({
   const styles = {
     aside: {
       width: collapsed ? 60 : 270,
-      height: "calc(100vh - 60px)",
-      padding: collapsed ? "1rem 0.5rem" : "1.15rem 0.9rem 1.2rem",
+      height: "calc(100dvh - 60px)",
+      padding: collapsed ? "0.85rem 0.5rem" : "0.95rem 0.82rem 0.95rem",
       backgroundColor: colors.card,
       borderRight: `1px solid ${colors.white}15`,
       boxShadow: "0 8px 22px rgba(0,0,0,0.08)",
@@ -625,9 +637,9 @@ export default function PairSideMenu({
         setJobState({
           status: "idle",
         });
-        onShowGraph(json.pair);
+        onShowGraph(json.pair, outputSelection.visualization);
         onSetPair?.(json.pair);
-        onShowSummary?.();
+        onShowSummary?.(outputSelection.verbalization);
         return;
       }
 
@@ -699,14 +711,18 @@ export default function PairSideMenu({
       </button>
 
       {!collapsed && (
-        <>
+        <div
+          style={{
+            marginTop: "0.675rem",
+          }}
+        >
           {/* Persona */}
           <div
             style={{
               ...styles.userIcon,
               border: `1px solid ${colors.white}28`,
               borderRadius: 14,
-              padding: "0.85rem 0.75rem 0.8rem",
+              padding: "0.75rem 0.68rem 0.7rem",
               // Foreground-tinted overlay so the persona panel reads subtly
               // in both dark and light themes (previously a black overlay
               // that turned into muddy gray on a white card).
@@ -739,7 +755,7 @@ export default function PairSideMenu({
                   flexDirection: "column",
                   gap: "6px",
                   alignItems: "stretch",
-                  marginTop: 8,
+                  marginTop: 6,
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
@@ -761,7 +777,7 @@ export default function PairSideMenu({
                     style={personaSelectStyles(colors.white)}
                   >
                     <option value="" disabled>
-                      Select profile…
+                      Select profile...
                     </option>
                     {personaOptions.map((persona) => (
                       <option key={persona.id} value={persona.id}>
@@ -801,7 +817,7 @@ export default function PairSideMenu({
                     style={personaSelectStyles(colors.white)}
                   >
                     <option value="" disabled>
-                      Select dataset…
+                      Select dataset...
                     </option>
                     {datasetOptions.map((dataset) => (
                       <option key={dataset.name} value={dataset.name}>
@@ -830,7 +846,7 @@ export default function PairSideMenu({
                     style={personaSelectStyles(colors.white)}
                   >
                     <option value="" disabled>
-                      {selectedPersona?.dataset ? "Select task…" : "Choose dataset first"}
+                      {selectedPersona?.dataset ? "Select task..." : "Choose dataset first"}
                     </option>
                     {(currentDatasetOption?.tasks ?? []).map((task) => (
                       <option key={task} value={task}>
@@ -843,10 +859,13 @@ export default function PairSideMenu({
             </div>
           </div>
 
+          {/* Output mode toggles are always visible so users can switch
+              between visualization/verbalization anytime, including after a
+              search has already completed. */}
           {/* Selectors */}
           <div
             style={{
-              marginTop: "0.6rem",
+              marginTop: "0.5rem",
               padding: 0,
             }}
           >
@@ -887,145 +906,224 @@ export default function PairSideMenu({
               />
             ))}
 
-            {source.id && target.id && !hasInitiatedSearch && (
-              <button
-                ref={searchButtonRef}
-                className={searchInProgress ? undefined : "rex-search-ready"}
+            <div
+              style={{
+                marginTop: "0.2rem",
+                marginBottom: "0.25rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.45rem",
+                padding: "0.35rem 0.5rem",
+                borderRadius: 8,
+                border: `1px solid ${colors.white}22`,
+                backgroundColor: `${colors.white}08`,
+                flexWrap: "nowrap",
+                whiteSpace: "nowrap",
+              }}
+            >
+              <span
                 style={{
-                  width: "100%",
-                  marginTop: "0.85rem",
-                  padding: "0.62rem 0.75rem",
-                  borderRadius: 10,
-                  border: `1px solid ${colors.buttons}60`,
-                  backgroundColor: searchInProgress
-                    ? `${colors.buttons}a8`
-                    : colors.buttons,
-                  color: "#FFFFFF",
+                  fontSize: "0.74rem",
+                  color: `${colors.white}d0`,
                   fontWeight: 600,
-                  fontSize: "0.84rem",
-                  cursor: searchInProgress ? "wait" : "pointer",
-                  opacity: searchInProgress ? 0.8 : 1,
-                  boxShadow: searchInProgress
-                    ? "none"
-                    : "0 8px 18px rgba(0,0,0,0.28)",
-                }}
-                type="button"
-                disabled={searchInProgress}
-                aria-keyshortcuts="Enter"
-                title="Press Enter to run the search"
-                onClick={async () => {
-                  if (pollTimeoutRef.current) {
-                    clearTimeout(pollTimeoutRef.current);
-                  }
-
-                  const { sourceCode, targetCode } = printResolvedPairCodes({
-                    dataset: selectedPersona?.dataset,
-                    task: selectedPersona?.task,
-                    source,
-                    target,
-                  });
-
-                  if (
-                    !selectedPersona?.dataset ||
-                    !selectedPersona?.task ||
-                    !selectedPersona?.id ||
-                    !sourceCode ||
-                    !targetCode
-                  ) {
-                    console.warn("Could not resolve saved explanation lookup.");
-                    setJobState({
-                      status: "failed",
-                      message: "Could not resolve the selected pair IDs.",
-                    });
-                    return;
-                  }
-
-                  try {
-                    searchedPairRef.current = { source: source.id, target: target.id };
-                    setHasInitiatedSearch(true);
-                    setJobState({
-                      status: "checking",
-                      message: "Checking whether this explanation already exists...",
-                    });
-                    const response = await fetch("/api/explanation-search", {
-                      method: "POST",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify({
-                        dataset: selectedPersona.dataset,
-                        task: selectedPersona.task,
-                        persona: selectedPersona.id,
-                        source: sourceCode,
-                        target: targetCode,
-                      }),
-                    });
-
-                    if (!response.ok) {
-                      throw new Error(`HTTP ${response.status}`);
-                    }
-
-                    const json:
-                      | { status: "ready"; pair: Pair }
-                      | { status: "queued" | "running"; message?: string; jobId?: string }
-                      | { status: "failed"; error?: string; message?: string } = await response.json();
-
-                    if (json.status === "ready") {
-                      setJobState({
-                        status: "idle",
-                      });
-                      onShowGraph(json.pair);
-                      onSetPair?.(json.pair);
-                      onShowSummary?.();
-                      return;
-                    }
-
-                    if (json.status === "queued" || json.status === "running") {
-                      setJobState({
-                        status: json.status,
-                        message:
-                          json.message ??
-                          "This is the first time someone is running this pair, it may take a few minutes.",
-                        jobId: json.jobId,
-                      });
-
-                      if (json.jobId) {
-                        void pollJobStatus({
-                          dataset: selectedPersona.dataset,
-                          task: selectedPersona.task,
-                          persona: selectedPersona.id,
-                          sourceCode,
-                          targetCode,
-                          jobId: json.jobId,
-                        });
-                      }
-                      return;
-                    }
-
-                    if (json.status === "failed") {
-                      setJobState({
-                        status: "failed",
-                        message:
-                          json.message ??
-                          json.error ??
-                          "Failed to load or generate this explanation.",
-                      });
-                    }
-                  } catch (error) {
-                    console.error("Failed to load saved explanation:", error);
-                    setJobState({
-                      status: "failed",
-                      message: "Failed to load or generate this explanation.",
-                    });
-                  }
                 }}
               >
-                {jobState.status === "checking"
-                  ? "Checking..."
-                  : searchInProgress
-                    ? "Running REx..."
-                    : "Search Explanation"}
-              </button>
+                Show:
+              </span>
+              <label
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                  fontSize: "0.74rem",
+                  color: colors.white,
+                  cursor: "pointer",
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={outputSelection.visualization}
+                  onChange={(e) => {
+                    const next = e.target.checked;
+                    setOutputSelection((prev) => ({
+                      visualization: next,
+                      verbalization: next || prev.verbalization,
+                    }));
+                  }}
+                />
+                Graph
+              </label>
+              <label
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 5,
+                  fontSize: "0.74rem",
+                  color: colors.white,
+                  cursor: "pointer",
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={outputSelection.verbalization}
+                  onChange={(e) => {
+                    const next = e.target.checked;
+                    setOutputSelection((prev) => ({
+                      verbalization: next,
+                      visualization: next || prev.visualization,
+                    }));
+                  }}
+                />
+                Summary
+              </label>
+            </div>
+
+            {source.id && target.id && (
+              <div
+                style={{
+                  marginTop: "0.6rem",
+                }}
+              >
+                {source.id && target.id && !hasInitiatedSearch && (
+                  <button
+                    ref={searchButtonRef}
+                    className={searchInProgress ? undefined : "rex-search-ready"}
+                    style={{
+                      width: "100%",
+                      padding: "0.5rem 0.65rem",
+                      borderRadius: 8,
+                      border: `1px solid ${colors.buttons}60`,
+                      backgroundColor: searchInProgress
+                        ? `${colors.buttons}a8`
+                        : colors.buttons,
+                      color: "#FFFFFF",
+                      fontWeight: 600,
+                      fontSize: "0.78rem",
+                      cursor: searchInProgress ? "wait" : "pointer",
+                      opacity: searchInProgress ? 0.8 : 1,
+                      boxShadow: searchInProgress
+                        ? "none"
+                        : "0 8px 18px rgba(0,0,0,0.28)",
+                    }}
+                    type="button"
+                    disabled={searchInProgress}
+                    aria-keyshortcuts="Enter"
+                    title="Press Enter to run the search"
+                    onClick={async () => {
+                      if (pollTimeoutRef.current) {
+                        clearTimeout(pollTimeoutRef.current);
+                      }
+
+                      const { sourceCode, targetCode } = printResolvedPairCodes({
+                        dataset: selectedPersona?.dataset,
+                        task: selectedPersona?.task,
+                        source,
+                        target,
+                      });
+
+                      if (
+                        !selectedPersona?.dataset ||
+                        !selectedPersona?.task ||
+                        !selectedPersona?.id ||
+                        !sourceCode ||
+                        !targetCode
+                      ) {
+                        console.warn("Could not resolve saved explanation lookup.");
+                        setJobState({
+                          status: "failed",
+                          message: "Could not resolve the selected pair IDs.",
+                        });
+                        return;
+                      }
+
+                      try {
+                        searchedPairRef.current = { source: source.id, target: target.id };
+                        setHasInitiatedSearch(true);
+                        setJobState({
+                          status: "checking",
+                          message: "Checking whether this explanation already exists...",
+                        });
+                        const response = await fetch("/api/explanation-search", {
+                          method: "POST",
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({
+                            dataset: selectedPersona.dataset,
+                            task: selectedPersona.task,
+                            persona: selectedPersona.id,
+                            source: sourceCode,
+                            target: targetCode,
+                          }),
+                        });
+
+                        if (!response.ok) {
+                          throw new Error(`HTTP ${response.status}`);
+                        }
+
+                        const json:
+                          | { status: "ready"; pair: Pair }
+                          | { status: "queued" | "running"; message?: string; jobId?: string }
+                          | { status: "failed"; error?: string; message?: string } = await response.json();
+
+                        if (json.status === "ready") {
+                          setJobState({
+                            status: "idle",
+                          });
+                          onShowGraph(json.pair, outputSelection.visualization);
+                          onSetPair?.(json.pair);
+                          onShowSummary?.(outputSelection.verbalization);
+                          return;
+                        }
+
+                        if (json.status === "queued" || json.status === "running") {
+                          setJobState({
+                            status: json.status,
+                            message:
+                              json.message ??
+                              "This is the first time someone is running this pair, it may take a few minutes.",
+                            jobId: json.jobId,
+                          });
+
+                          if (json.jobId) {
+                            void pollJobStatus({
+                              dataset: selectedPersona.dataset,
+                              task: selectedPersona.task,
+                              persona: selectedPersona.id,
+                              sourceCode,
+                              targetCode,
+                              jobId: json.jobId,
+                            });
+                          }
+                          return;
+                        }
+
+                        if (json.status === "failed") {
+                          setJobState({
+                            status: "failed",
+                            message:
+                              json.message ??
+                              json.error ??
+                              "Failed to load or generate this explanation.",
+                          });
+                        }
+                      } catch (error) {
+                        console.error("Failed to load saved explanation:", error);
+                        setJobState({
+                          status: "failed",
+                          message: "Failed to load or generate this explanation.",
+                        });
+                      }
+                    }}
+                  >
+                    {jobState.status === "checking"
+                      ? "Checking..."
+                      : searchInProgress
+                        ? "Running REx..."
+                        : "Search Explanation"}
+                  </button>
+                )}
+              </div>
             )}
 
             {hasInitiatedSearch && selectedPersona?.id && (
@@ -1156,7 +1254,7 @@ export default function PairSideMenu({
             )}
 
           </div>
-        </>
+        </div>
       )}
     </aside>
   );

@@ -20,22 +20,34 @@ function parsePersona(content: string) {
   };
 }
 
-// Load and parse personas once at module load
-const basePath = path.join(process.cwd(), "public/personas");
-const personaFiles = fs.readdirSync(basePath);
+let cachedPersonas:
+  | Array<{
+      id: string;
+      name: string;
+      tagline: string;
+      profile: string;
+      alsoValues: string;
+    }>
+  | null = null;
 
-const personas = personaFiles.map((file) => {
-  const content = fs.readFileSync(path.join(basePath, file), "utf-8");
-  const parsed = parsePersona(content);
-
-  return {
-    id: file.replace(".txt", ""),
-    ...parsed,
-  };
-});
+function loadPersonas() {
+  const basePath = path.join(process.cwd(), "public/personas");
+  const personaFiles = fs.readdirSync(basePath);
+  return personaFiles.map((file) => {
+    const content = fs.readFileSync(path.join(basePath, file), "utf-8");
+    const parsed = parsePersona(content);
+    return {
+      id: file.replace(".txt", ""),
+      ...parsed,
+    };
+  });
+}
 
 export async function GET() {
-  return new Response(JSON.stringify(personas), {
+  if (!cachedPersonas) {
+    cachedPersonas = loadPersonas();
+  }
+  return new Response(JSON.stringify(cachedPersonas), {
     headers: { "Content-Type": "application/json" },
   });
 }

@@ -12,17 +12,31 @@ interface ColorPickerProps {
 
 export default function ColorPicker({ color, position, onChange, onClose }: ColorPickerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const normalizeHex = (input?: string) => {
+    const raw = (input || FALLBACK_COLOR).trim();
+    const withHash = raw.startsWith("#") ? raw : `#${raw}`;
+    const v = withHash.toLowerCase();
+    if (/^#[0-9a-f]{6}$/.test(v)) return v;
+    if (/^#[0-9a-f]{3}$/.test(v)) {
+      return `#${v[1]}${v[1]}${v[2]}${v[2]}${v[3]}${v[3]}`;
+    }
+    return FALLBACK_COLOR;
+  };
 
   // Ensure all states start with safe defaults
-  const [tempColor, setTempColor] = useState(color || FALLBACK_COLOR);
-  const [hex, setHex] = useState(color || FALLBACK_COLOR);
-  const [rgb, setRgb] = useState(() => hexToRgb(color || FALLBACK_COLOR));
+  const initialColor = normalizeHex(color);
+  const [tempColor, setTempColor] = useState(initialColor);
+  const [hex, setHex] = useState(initialColor);
+  const [rgb, setRgb] = useState(() => hexToRgb(initialColor));
   const [hsv, setHsv] = useState(() => rgbToHsv(rgb.r, rgb.g, rgb.b));
   const [pos, setPos] = useState(position);
+  const lastSyncedColorRef = useRef<string>(initialColor);
 
   // Sync state when prop color changes
   useEffect(() => {
-    const c = color || FALLBACK_COLOR;
+    const c = normalizeHex(color);
+    if (lastSyncedColorRef.current === c) return;
+    lastSyncedColorRef.current = c;
     setTempColor(c);
     setHex(c);
     const { r, g, b } = hexToRgb(c);
@@ -68,11 +82,13 @@ export default function ColorPicker({ color, position, onChange, onClose }: Colo
     const val = e.target.value || FALLBACK_COLOR;
     setHex(val);
     if (/^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$/.test(val)) {
-      const { r, g, b } = hexToRgb(val);
+      const normalized = normalizeHex(val);
+      const { r, g, b } = hexToRgb(normalized);
       setRgb({ r, g, b });
       setHsv(rgbToHsv(r, g, b));
-      setTempColor(val);
-      onChange(val);
+      setTempColor(normalized);
+      lastSyncedColorRef.current = normalized;
+      if (normalizeHex(color) !== normalized) onChange(normalized);
     }
   };
 
@@ -83,7 +99,9 @@ export default function ColorPicker({ color, position, onChange, onClose }: Colo
     setHex(hexVal);
     setHsv(rgbToHsv(newRgb.r, newRgb.g, newRgb.b));
     setTempColor(hexVal);
-    onChange(hexVal);
+    const normalized = normalizeHex(hexVal);
+    lastSyncedColorRef.current = normalized;
+    if (normalizeHex(color) !== normalized) onChange(normalized);
   };
 
   const handleHsvChange = (key: "h" | "s" | "v", value: number) => {
@@ -94,7 +112,9 @@ export default function ColorPicker({ color, position, onChange, onClose }: Colo
     const hexVal = rgbToHex(r, g, b);
     setHex(hexVal);
     setTempColor(hexVal);
-    onChange(hexVal);
+    const normalized = normalizeHex(hexVal);
+    lastSyncedColorRef.current = normalized;
+    if (normalizeHex(color) !== normalized) onChange(normalized);
   };
 
   const rowStyle: React.CSSProperties = {
@@ -148,13 +168,15 @@ export default function ColorPicker({ color, position, onChange, onClose }: Colo
       <HexColorPicker
         color={tempColor || FALLBACK_COLOR}
         onChange={(c) => {
-          const safeColor = c || FALLBACK_COLOR;
+          const safeColor = normalizeHex(c);
+          if (safeColor === tempColor) return;
           setTempColor(safeColor);
           setHex(safeColor);
           const { r, g, b } = hexToRgb(safeColor);
           setRgb({ r, g, b });
           setHsv(rgbToHsv(r, g, b));
-          onChange(safeColor);
+          lastSyncedColorRef.current = safeColor;
+          if (safeColor !== normalizeHex(color)) onChange(safeColor);
         }}
         style={{ width: "100%", height: 160, borderRadius: 6 }}
       />

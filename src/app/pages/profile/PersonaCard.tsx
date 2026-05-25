@@ -32,7 +32,7 @@ const PERSONA_OVERRIDES: Record<
   neutral_evaluator: {
     tagline: "Uniform baseline",
     profile:
-      "Ranks paths purely by information content and fidelity, without persona conditioning. Choose this to inspect an untuned baseline or to compare against the two adaptive modes.",
+      "Ranks paths purely by information content and fidelity, without persona conditioning. Choose this to inspect an untuned baseline.",
   },
 };
 

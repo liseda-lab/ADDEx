@@ -1,4 +1,5 @@
 import { normalizeNodeType } from "../../../styles/typeKey";
+import { getGraphSettings } from "./graphSettings";
 
 interface NodeTypeColors {
   [type: string]: string;
@@ -27,6 +28,7 @@ function wrapLabel(label: any, maxCharsPerLine = 15) {
 
 
 const graphStyles = (nodeTypeColors: NodeTypeColors, elements: any[]): any[] => {
+  const settings = getGraphSettings();
   const maxFontSize = 20;
   const padding = 12;
   // Comfortable default node size — short labels (e.g. "Drd2") stay at this
@@ -71,7 +73,10 @@ const graphStyles = (nodeTypeColors: NodeTypeColors, elements: any[]): any[] => 
     {
       selector: "node",
       style: {
-        shape: "round-rectangle",
+        shape: (ele: any) =>
+          normalizeNodeType(ele.data("type")) === "lca"
+            ? settings.lcaNodeShape
+            : settings.neNodeShape,
         width: (ele: any) => sizeForLabel(ele.data("label")).w,
         height: (ele: any) => sizeForLabel(ele.data("label")).h,
         "background-color": (ele: any) => {
@@ -79,9 +84,11 @@ const graphStyles = (nodeTypeColors: NodeTypeColors, elements: any[]): any[] => 
           return nodeTypeColors[t] || (t === "lca" ? "#d3d3d3" : "#ffffff");
         },
         "border-color": "black",
-        "border-width": 2,
+        "border-width": 3,
         "border-style": (ele: any) =>
-          normalizeNodeType(ele.data("type")) === "lca" ? "dashed" : "solid",
+          normalizeNodeType(ele.data("type")) === "lca"
+            ? settings.lcaBorderStyle
+            : settings.neBorderStyle,
         label: (ele: any) => wrapLabel(ele.data("label")),
         color: "black",
         "text-valign": "center",
@@ -94,11 +101,15 @@ const graphStyles = (nodeTypeColors: NodeTypeColors, elements: any[]): any[] => 
     {
       selector: "edge",
       style: {
-        width: 2,
+        width: settings.edgeThickness,
         "line-color": (ele: any) =>
-          normalizeNodeType(ele.data("type")) === "lca" ? "#8a8a8a" : "black",
+          normalizeNodeType(ele.data("type")) === "lca"
+            ? settings.lcaEdgeColor
+            : settings.neEdgeColor,
         "target-arrow-color": (ele: any) =>
-          normalizeNodeType(ele.data("type")) === "lca" ? "#8a8a8a" : "black",
+          normalizeNodeType(ele.data("type")) === "lca"
+            ? settings.lcaEdgeColor
+            : settings.neEdgeColor,
         "target-arrow-shape": "triangle",
         "curve-style": "bezier",
         "control-point-step-size": 40,
@@ -106,7 +117,9 @@ const graphStyles = (nodeTypeColors: NodeTypeColors, elements: any[]): any[] => 
           normalizeNodeType(ele.data("type")) === "lca" ? "is a" : ele.data("label"),
         "font-size": fontSize,
         color: (ele: any) =>
-          normalizeNodeType(ele.data("type")) === "lca" ? "#4a4a4a" : "black",
+          normalizeNodeType(ele.data("type")) === "lca"
+            ? settings.lcaEdgeColor
+            : settings.neEdgeColor,
         "text-rotation": "autorotate",
         "text-margin-y": -6,
         "text-margin-x": 2,
@@ -125,7 +138,6 @@ const graphStyles = (nodeTypeColors: NodeTypeColors, elements: any[]): any[] => 
         opacity: 1,
         "text-opacity": 1,
         "border-width": 4,
-        "border-color": "#111827",
       },
     },
     {
@@ -134,8 +146,6 @@ const graphStyles = (nodeTypeColors: NodeTypeColors, elements: any[]): any[] => 
         opacity: 1,
         "text-opacity": 1,
         width: 4,
-        "line-color": "#111827",
-        "target-arrow-color": "#111827",
       },
     },
   ];

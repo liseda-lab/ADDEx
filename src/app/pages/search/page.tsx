@@ -84,6 +84,8 @@ export default function SearchPage() {
           : colors.headingAccents[6];
   const [selectedPair, setSelectedPair] = useState<Pair | null>(null);
   const [showSummaryMenu, setShowSummaryMenu] = useState(false);
+  const [showGraphComponent, setShowGraphComponent] = useState(true);
+  const [hasSearchedExplanation, setHasSearchedExplanation] = useState(false);
   const [searchState, setSearchState] = useState<ExplanationSearchState>({
     status: "idle",
   });
@@ -96,6 +98,7 @@ export default function SearchPage() {
 
   const [leftCollapsed, setLeftCollapsed] = useState(false);
   const [rightCollapsed, setRightCollapsed] = useState(false);
+  const [graphCollapsed, setGraphCollapsed] = useState(false);
   const [cancelling, setCancelling] = useState(false);
   const cancelSearchRef = useRef<(() => Promise<void>) | null>(null);
 
@@ -116,14 +119,33 @@ export default function SearchPage() {
     }
   };
 
-  const handleJobStateChange = (state: ExplanationSearchState) => {
+  const handleJobStateChange = useCallback((state: ExplanationSearchState) => {
     setSearchState(state);
+    if (state.status === "checking" || state.status === "queued" || state.status === "running" || state.status === "failed") {
+      setHasSearchedExplanation(true);
+    }
 
     if (state.status === "queued" || state.status === "running") {
       setSelectedPair(null);
       setShowSummaryMenu(false);
     }
-  };
+  }, []);
+
+  const handleOutputModeChange = useCallback(
+    ({ visualization, verbalization }: { visualization: boolean; verbalization: boolean }) => {
+      setShowGraphComponent(visualization);
+      setShowSummaryMenu(hasSearchedExplanation ? verbalization : false);
+      if (visualization) {
+        setGraphCollapsed(false);
+      } else {
+        setGraphCollapsed(true);
+      }
+      if (!verbalization) {
+        setRightCollapsed(false);
+      }
+    },
+    [hasSearchedExplanation]
+  );
 
   // Reset the search session when the user re-enters via a fresh Quick Search
   // link (viaQuickSkip=true) — Next.js keeps the SearchPage mounted across
@@ -148,8 +170,11 @@ export default function SearchPage() {
     setHoveredLcaName(null);
     setHoveredNodeId(null);
     setShowSummaryMenu(false);
+    setShowGraphComponent(true);
+    setHasSearchedExplanation(false);
     setLeftCollapsed(false);
     setRightCollapsed(false);
+    setGraphCollapsed(false);
     setSessionKey((k) => k + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParamsStr]);
@@ -178,6 +203,42 @@ export default function SearchPage() {
       setVisibleLCAs(lcaSet);
     }
   }, [selectedPair]);
+
+  // Layout invariant: never allow both graph and verbalization to be hidden.
+  // If summary is closed while graph is collapsed, reopen the graph.
+  useEffect(() => {
+    if (!showSummaryMenu && graphCollapsed) {
+      setGraphCollapsed(false);
+    }
+  }, [showSummaryMenu, graphCollapsed]);
+
+  const handleSlideRight = useCallback(() => {
+    // Right arrow -> verbalization-only.
+    if (!showSummaryMenu) setShowSummaryMenu(true);
+    setRightCollapsed(false);
+    setGraphCollapsed(true);
+  }, [showSummaryMenu]);
+
+  const handleSlideLeft = useCallback(() => {
+    // Left arrow sequence:
+    // 1) If graph is hidden, bring it back (both visible).
+    // 2) If graph is visible, toggle verbalization panel collapsed/expanded.
+    // Verbalization is never fully hidden by this control.
+    if (graphCollapsed) {
+      setGraphCollapsed(false);
+      if (!showSummaryMenu) setShowSummaryMenu(true);
+      setRightCollapsed(false);
+      return;
+    }
+
+    if (!showSummaryMenu) {
+      setShowSummaryMenu(true);
+      setRightCollapsed(false);
+      return;
+    }
+
+    setRightCollapsed((prev) => !prev);
+  }, [graphCollapsed, showSummaryMenu]);
 
   const togglePath = useCallback(
     (pathId: string) => {
@@ -275,9 +336,20 @@ export default function SearchPage() {
           onSelectFile={(_file: string) => {
             setSelectedPair(null);
             setShowSummaryMenu(false);
+            setShowGraphComponent(true);
           }}
-          onShowGraph={(pair: Pair) => setSelectedPair(pair)}
-          onShowSummary={() => setShowSummaryMenu(true)}
+          onShowGraph={(pair: Pair, show = true) => {
+            setSelectedPair(pair);
+            setHasSearchedExplanation(true);
+            setShowGraphComponent(show);
+            setGraphCollapsed(!show);
+          }}
+          onSetPair={(pair: Pair) => setSelectedPair(pair)}
+          onShowSummary={(show = true) => {
+            setHasSearchedExplanation(true);
+            setShowSummaryMenu(show);
+          }}
+          onOutputModeChange={handleOutputModeChange}
           onJobStateChange={handleJobStateChange}
           onRegisterCancel={handleRegisterCancel}
           collapsed={leftCollapsed}
@@ -285,10 +357,13 @@ export default function SearchPage() {
         />
 
         {/* RIGHT MENU */}
-        {showSummaryMenu && (
+        {showSummaryMenu && hasSearchedExplanation && (
           <SumSideMenu
             collapsed={rightCollapsed}
-            setCollapsed={setRightCollapsed}
+            onSlideLeft={handleSlideRight}
+            onSlideRight={handleSlideLeft}
+            expanded={graphCollapsed}
+            leftOffset={leftCollapsed ? SIDEMENU_COLLAPSED_WIDTH : SIDEMENU_WIDTH}
             pair={selectedPair}
             visiblePaths={visiblePaths}
             togglePath={togglePath}
@@ -314,7 +389,9 @@ export default function SearchPage() {
               ? SIDEMENU_COLLAPSED_WIDTH
               : SIDEMENU_WIDTH,
             marginRight: showSummaryMenu
-              ? rightCollapsed
+              ? graphCollapsed
+                ? 0
+                : rightCollapsed
                 ? RIGHTMENU_COLLAPSED_WIDTH
                 : RIGHTMENU_WIDTH
               : 0,
@@ -598,18 +675,49 @@ export default function SearchPage() {
             </div>
           )}
 
-          {selectedPair && (
-            <GraphVisualizer
-              pair={selectedPair}
-              visiblePaths={visiblePaths}
-              visibleLCAs={visibleLCAs}
-              leftCollapsed={leftCollapsed}
-              rightCollapsed={rightCollapsed}
-              hoveredPathId={hoveredPathId}
-              hoveredLcaName={hoveredLcaName}
-              hoveredNodeId={hoveredNodeId}
-              onNodeHover={handleNodeHover}
-            />
+          {selectedPair && showGraphComponent && (
+            <div
+              style={{
+                position: "relative",
+                display: "flex",
+                alignItems: "stretch",
+              }}
+            >
+              <div
+                style={{
+                  width: graphCollapsed ? 18 : "100%",
+                  minWidth: graphCollapsed ? 18 : 0,
+                  overflow: "hidden",
+                  border: graphCollapsed ? "1px solid #d6d6d6" : "none",
+                  borderRadius: graphCollapsed ? 8 : 0,
+                  backgroundColor: graphCollapsed ? "#ffffff" : "transparent",
+                  transition: "width 0.25s ease",
+                }}
+              >
+                <div
+                  style={{
+                    visibility: graphCollapsed ? "hidden" : "visible",
+                    pointerEvents: graphCollapsed ? "none" : "auto",
+                    transform: graphCollapsed ? "translateX(-12px)" : "translateX(0)",
+                    opacity: graphCollapsed ? 0 : 1,
+                    transition: "transform 0.25s ease, opacity 0.25s ease",
+                  }}
+                >
+                  <GraphVisualizer
+                    pair={selectedPair}
+                    visiblePaths={visiblePaths}
+                    visibleLCAs={visibleLCAs}
+                    isVisible={!graphCollapsed}
+                    leftCollapsed={leftCollapsed}
+                    rightCollapsed={rightCollapsed}
+                    hoveredPathId={hoveredPathId}
+                    hoveredLcaName={hoveredLcaName}
+                    hoveredNodeId={hoveredNodeId}
+                    onNodeHover={handleNodeHover}
+                  />
+                </div>
+              </div>
+            </div>
           )}
         </main>
       </div>

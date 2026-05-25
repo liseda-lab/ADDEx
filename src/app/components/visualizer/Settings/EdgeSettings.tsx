@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useTheme } from "../../../../../styles/ThemeContext";
 import { Triangle, Circle, Square, Minus } from "lucide-react";
+import ColorPicker from "../legend/ColorPicker";
 
 interface EdgeSettingsProps {
   thickness: number;
@@ -12,6 +13,10 @@ interface EdgeSettingsProps {
   setNeLineStyle: (val: string) => void;
   lcaLineStyle: string;
   setLcaLineStyle: (val: string) => void;
+  neEdgeColor: string;
+  setNeEdgeColor: (val: string) => void;
+  lcaEdgeColor: string;
+  setLcaEdgeColor: (val: string) => void;
 }
 
 export default function EdgeSettings({
@@ -23,11 +28,19 @@ export default function EdgeSettings({
   setNeLineStyle,
   lcaLineStyle,
   setLcaLineStyle,
+  neEdgeColor,
+  setNeEdgeColor,
+  lcaEdgeColor,
+  setLcaEdgeColor,
 }: EdgeSettingsProps) {
   const colors = useTheme();
   const [arrowOpen, setArrowOpen] = useState(false);
   const [neOpen, setNeOpen] = useState(false);
   const [lcaOpen, setLcaOpen] = useState(false);
+  const [activeColorPicker, setActiveColorPicker] = useState<{
+    target: "ne" | "lca";
+    position: { x: number; y: number };
+  } | null>(null);
 
   const arrowOptions = [
     { type: "triangle", icon: <Triangle size={20} /> },
@@ -113,6 +126,22 @@ export default function EdgeSettings({
     </div>
   );
 
+  const handleOpenColorPicker = (
+    target: "ne" | "lca",
+    e: React.MouseEvent<HTMLDivElement>
+  ) => {
+    const _rect = e.currentTarget.getBoundingClientRect();
+    const pickerW = 220;
+    const pickerH = 320;
+    const x = Math.max(8, Math.round(window.innerWidth / 2 - pickerW / 2));
+    const y = Math.max(8, Math.round(window.innerHeight / 2 - pickerH / 2));
+
+    setActiveColorPicker({
+      target,
+      position: { x, y },
+    });
+  };
+
   return (
     <div
       style={{
@@ -125,9 +154,40 @@ export default function EdgeSettings({
         gap: "1rem",
       }}
     >
+      <style>{`
+        .edge-color-swatch {
+          position: relative;
+        }
+        .edge-color-swatch:hover {
+          transform: scale(1.2);
+          border-color: #000 !important;
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+        .edge-color-swatch::after {
+          content: "Change color";
+          position: absolute;
+          bottom: calc(100% + 6px);
+          left: 50%;
+          transform: translateX(-50%);
+          background: #333;
+          color: #fff;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 500;
+          white-space: nowrap;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 0.08s ease;
+          z-index: 10;
+        }
+        .edge-color-swatch:hover::after {
+          opacity: 1;
+        }
+      `}</style>
       <h4 style={{ margin: 0 }}>Edges</h4>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
         {/* Thickness */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <span>Thickness:</span>
@@ -149,12 +209,64 @@ export default function EdgeSettings({
         {/* Arrow */}
         {renderDropdown("Arrow", arrowShape, setArrowShape, arrowOptions, arrowOpen, setArrowOpen)}
 
-        {/* NE Line */}
-        {renderDropdown("NE", neLineStyle, setNeLineStyle, lineOptions, neOpen, setNeOpen)}
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            {renderDropdown("NE", neLineStyle, setNeLineStyle, lineOptions, neOpen, setNeOpen)}
+            <span>Color:</span>
+            <div
+              className="edge-color-swatch"
+              onClick={(e) => handleOpenColorPicker("ne", e)}
+              style={{
+                width: 18,
+                height: 18,
+                borderRadius: 3,
+                backgroundColor: neEdgeColor,
+                cursor: "pointer",
+                border: "1px solid #555",
+                boxSizing: "border-box",
+                transition:
+                  "transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease",
+              }}
+            />
+          </div>
 
-        {/* LCA Line */}
-        {renderDropdown("LCA", lcaLineStyle, setLcaLineStyle, lineOptions, lcaOpen, setLcaOpen)}
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            {renderDropdown("LCA", lcaLineStyle, setLcaLineStyle, lineOptions, lcaOpen, setLcaOpen)}
+            <span>Color:</span>
+            <div
+              className="edge-color-swatch"
+              onClick={(e) => handleOpenColorPicker("lca", e)}
+              style={{
+                width: 18,
+                height: 18,
+                borderRadius: 3,
+                backgroundColor: lcaEdgeColor,
+                cursor: "pointer",
+                border: "1px solid #555",
+                boxSizing: "border-box",
+                transition:
+                  "transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease",
+              }}
+            />
+          </div>
+        </div>
       </div>
+
+      {activeColorPicker && (
+        <ColorPicker
+          color={(activeColorPicker.target === "ne" ? neEdgeColor : lcaEdgeColor).toLowerCase()}
+          position={activeColorPicker.position}
+          onChange={(color) => {
+            const next = color.toLowerCase();
+            if (activeColorPicker.target === "ne") {
+              setNeEdgeColor((prev) => (prev.toLowerCase() === next ? prev : next));
+            } else {
+              setLcaEdgeColor((prev) => (prev.toLowerCase() === next ? prev : next));
+            }
+          }}
+          onClose={() => setActiveColorPicker(null)}
+        />
+      )}
     </div>
   );
 }
