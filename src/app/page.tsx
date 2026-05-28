@@ -330,7 +330,7 @@ export default function HomePage() {
               }}
             />
             <Image
-              src="/images/pill_logo.PNG"
+              src="/images/pill_logo.png"
               alt="ADDEx"
               width={150}
               height={150}
