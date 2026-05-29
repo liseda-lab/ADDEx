@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import { useTheme } from "../../../../styles/ThemeContext";
 import { appendVerbalizationToCanvas } from "../../hooks/exportPNG";
 
@@ -115,6 +116,27 @@ export default function ExportPreviewModal({
   const [includeLegend, setIncludeLegend] = useState(true);
   const [includeVerbalization, setIncludeVerbalization] = useState(false);
   const [exporting, setExporting] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Portal to document.body: the graph container has a transform that would
+  // otherwise become the containing block for our position:fixed overlay,
+  // trapping it inside the canvas instead of covering the viewport.
+  useEffect(() => setMounted(true), []);
+
+  // Close on Escape and lock background scroll while the modal is open, so the
+  // preview always has a keyboard exit and doesn't leave the page trapped.
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [onClose]);
 
   const hasVerbalization = !!verbalization;
   const activeCanvas = includeLegend ? canvas : canvasNoLegend;
@@ -235,8 +257,12 @@ export default function ExportPreviewModal({
     ? "Preparing…"
     : `Download ${format.toUpperCase()}`;
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <div
+      onClick={onClose}
+      role="presentation"
       style={{
         position: "fixed",
         top: 0,
@@ -248,13 +274,20 @@ export default function ExportPreviewModal({
         alignItems: "center",
         justifyContent: "center",
         zIndex: 50,
+        boxSizing: "border-box",
+        padding: "1rem",
       }}
     >
       <div
+        onClick={(event) => event.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image graph preview export"
         style={{
           width: "92vw",
           maxWidth: "1200px",
           height: "92vh",
+          maxHeight: "92vh",
           backgroundColor: colors.darkblue,
           borderRadius: 10,
           padding: "1rem",
@@ -263,6 +296,8 @@ export default function ExportPreviewModal({
           gap: "1rem",
           color: colors.white,
           position: "relative",
+          boxSizing: "border-box",
+          overflow: "hidden",
           boxShadow: "0 0 20px rgba(0,0,0,0.4)",
         }}
       >
@@ -457,6 +492,7 @@ export default function ExportPreviewModal({
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
