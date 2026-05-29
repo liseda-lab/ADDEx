@@ -725,7 +725,7 @@ export default function SumSideMenu({
                   <div style={{ flex: 1, minHeight: 0, overflowY: "auto" }}>
                     <p
                       style={{
-                        textAlign: "justify",
+                        textAlign: "left",
                         lineHeight: 1.55,
                         margin: 0,
                         width: "100%",
