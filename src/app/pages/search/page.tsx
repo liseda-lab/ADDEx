@@ -28,9 +28,9 @@ const EXAMPLE_PAIRS: ExamplePair[] = [
     task: "drug_repurposing",
     taskLabel: "Drug Repurposing",
     sourceType: "Compound",
-    sourceName: "Pravastatin",
+    sourceName: "Budesonide",
     targetType: "Disease",
-    targetName: "Atherosclerosis",
+    targetName: "Asthma",
   },
   {
     dataset: "hetionet",
