@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Core } from "cytoscape";
 import NodeSettings from "./NodeSettings";
 import EdgeSettings from "./EdgeSettings";
@@ -41,6 +42,28 @@ export default function EditGraphMenu({ open, onClose, cy }: EditGraphMenuProps)
     savedSettings.lcaEdgeColor ?? "#8a8a8a"
   );
   const [layoutName, setLayoutName] = useState<string>(savedSettings.layoutName ?? "breadthfirst");
+  const [mounted, setMounted] = useState(false);
+
+  // Portal to document.body: the graph container has a transform that would
+  // otherwise become the containing block for our position:fixed overlay,
+  // trapping it inside the canvas instead of covering the viewport.
+  useEffect(() => setMounted(true), []);
+
+  // Close on Escape and lock background scroll while the menu is open, so it
+  // always has a keyboard exit and doesn't leave the page trapped.
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open, onClose]);
 
   // Sync current graph styles when menu opens
   useEffect(() => {
@@ -188,10 +211,12 @@ export default function EditGraphMenu({ open, onClose, cy }: EditGraphMenuProps)
     onClose();
   };
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
 
-  return (
+  return createPortal(
     <div
+      onClick={onClose}
+      role="presentation"
       style={{
         position: "fixed",
         top: 0,
@@ -203,12 +228,21 @@ export default function EditGraphMenu({ open, onClose, cy }: EditGraphMenuProps)
         alignItems: "center",
         justifyContent: "center",
         zIndex: 50,
+        boxSizing: "border-box",
+        padding: "1rem",
       }}
     >
       <div
+        onClick={(event) => event.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Graph settings"
         style={{
           width: "500px",
+          maxWidth: "100%",
           minHeight: "400px",
+          maxHeight: "92vh",
+          overflowY: "auto",
           backgroundColor: colors.darkblue,
           borderRadius: 10,
           padding: "1rem",
@@ -220,6 +254,7 @@ export default function EditGraphMenu({ open, onClose, cy }: EditGraphMenuProps)
           // mode (where colors.white resolves to a dark text color).
           color: colors.white,
           position: "relative",
+          boxSizing: "border-box",
         }}
       >
         <h2 style={{ margin: 0, textAlign: "center" }}>Graph Settings</h2>
@@ -283,7 +318,8 @@ export default function EditGraphMenu({ open, onClose, cy }: EditGraphMenuProps)
           Save
         </button>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
