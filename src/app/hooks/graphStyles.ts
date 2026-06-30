@@ -121,7 +121,12 @@ const graphStyles = (nodeTypeColors: NodeTypeColors, elements: any[]): any[] => 
             ? settings.lcaEdgeColor
             : settings.neEdgeColor,
         "text-rotation": "autorotate",
-        "text-margin-y": -6,
+        // Lift the label clear of the edge line instead of sitting on top of
+        // it. With autorotate, text-margin-y shifts the label perpendicular to
+        // the edge; offsetting by half the font height (so the text fully
+        // clears the line) plus a ~6px gap keeps a consistent few-mm gap at
+        // any font scale.
+        "text-margin-y": -(fontSize / 2 + 6),
         "text-margin-x": 2,
       },
     },
