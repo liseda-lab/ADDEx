@@ -368,26 +368,68 @@ export default function PathList({
                 }}
                 onMouseLeave={() => onPathHover(null)}
               >
-                <label
+                <div
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    gap: "0.5rem",
+                    flexWrap: "wrap",
                     marginBottom: "0.5rem",
-                    color: colors.white,
                   }}
                 >
-                  <input
-                    type="checkbox"
-                    checked={isVisible}
-                    onChange={() => {
-                      if (isVisible) onPathHover(null);
-                      togglePath(path.id);
+                  <label
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      color: colors.white,
                     }}
-                    title={isVisible ? "Hide path" : "Show path"}
-                    style={{ marginRight: "0.5rem", cursor: "pointer" }}
-                  />
-                  <strong>Path {idx + 1}</strong>
-                </label>
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isVisible}
+                      onChange={() => {
+                        if (isVisible) onPathHover(null);
+                        togglePath(path.id);
+                      }}
+                      title={isVisible ? "Hide path" : "Show path"}
+                      style={{ marginRight: "0.5rem", cursor: "pointer" }}
+                    />
+                    <strong>Path {idx + 1}</strong>
+                  </label>
+
+                  {/* Score badge lives in the header row beside the title so it
+                      reserves its own space in normal flow. It used to be
+                      position:absolute and floated over the path steps, which
+                      overlapped the first step once the padding was widened. */}
+                  {(path.score?.ic_mean != null ||
+                    path.score?.agentic_score != null) && (
+                    <div
+                      style={{
+                        padding: "0.5rem 0.75rem",
+                        borderRadius: 6,
+                        border: `1px solid ${colors.white}30`,
+                        backgroundColor: `${colors.white}18`,
+                        color: colors.white,
+                        fontSize: 11,
+                        fontWeight: 700,
+                        lineHeight: 1.35,
+                        textAlign: "right",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {path.score?.ic_mean != null && (
+                        <div>IC score: {formatScore(path.score.ic_mean)}</div>
+                      )}
+
+                      {path.score?.agentic_score != null && (
+                        <div>
+                          Agentic score: {formatScore(path.score.agentic_score)}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
 
                 <ul
                   style={{
@@ -415,31 +457,6 @@ export default function PathList({
                       </li>
                     ))}
                 </ul>
-
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "10px",
-                    right: "10px",
-                    padding: "0.3rem 0.5rem",
-                    borderRadius: 6,
-                    border: `1px solid ${colors.white}30`,
-                    backgroundColor: `${colors.white}18`,
-                    color: colors.white,
-                    fontSize: 11,
-                    fontWeight: 700,
-                    lineHeight: 1.35,
-                    textAlign: "right",
-                  }}
-                >
-                  {path.score?.ic_mean != null && (
-                    <div>IC score: {formatScore(path.score.ic_mean)}</div>
-                  )}
-
-                  {path.score?.agentic_score != null && (
-                    <div>Agentic score: {formatScore(path.score.agentic_score)}</div>
-                  )}
-                </div>
               </div>
             );
           })}
