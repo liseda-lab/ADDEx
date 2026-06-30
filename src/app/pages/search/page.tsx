@@ -598,7 +598,13 @@ export default function SearchPage() {
                                   : personaId === "insight_driven"
                                     ? "ShareNetwork"
                                     : "Lightbulb");
-                              const href = `/pages/search?persona=${personaId}&personaName=${encodeURIComponent(personaName)}&icon=${personaIcon}&dataset=${ex.dataset}&task=${ex.task}&sourceType=${encodeURIComponent(ex.sourceType)}&sourceName=${encodeURIComponent(ex.sourceName)}&targetType=${encodeURIComponent(ex.targetType)}&targetName=${encodeURIComponent(ex.targetName)}`;
+                              // `autorun=1` tells the search page to fire the
+                              // explanation search automatically once the pair
+                              // resolves, so clicking an example loads it
+                              // directly without a second click on the run
+                              // button. Consumed (and stripped) once in
+                              // PairSideMenu's auto-run effect.
+                              const href = `/pages/search?persona=${personaId}&personaName=${encodeURIComponent(personaName)}&icon=${personaIcon}&dataset=${ex.dataset}&task=${ex.task}&sourceType=${encodeURIComponent(ex.sourceType)}&sourceName=${encodeURIComponent(ex.sourceName)}&targetType=${encodeURIComponent(ex.targetType)}&targetName=${encodeURIComponent(ex.targetName)}&autorun=1`;
                               return (
                                 <Link
                                   key={`${ex.dataset}-${ex.task}-${ex.sourceName}-${ex.targetName}`}

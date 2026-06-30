@@ -574,6 +574,49 @@ export default function PairSideMenu({
     return () => window.removeEventListener("keydown", handler);
   }, [source.id, target.id, searchInProgress, hasInitiatedSearch]);
 
+  // Auto-run a search when the user arrives via an example link. Example cards
+  // navigate here with `autorun=1`; once the source + target have resolved from
+  // the URL (the names must exist in the loaded labels, same gate as the manual
+  // flow), we trigger the search automatically so the example loads directly
+  // instead of forcing a second click on the run button. This deliberately
+  // reuses the exact trigger of the manual click and the Enter shortcut —
+  // clicking `searchButtonRef` — so there is one search path, not a duplicate.
+  // A per-pair ref guard keeps it one-shot (re-renders never re-fire), and the
+  // `autorun` flag is stripped from the URL afterwards so a later field edit or
+  // a refresh won't auto-run again; a different example (different pair) still
+  // resolves to a new key and is allowed to run.
+  const autorunFiredKeyRef = useRef<string | null>(null);
+  useEffect(() => {
+    const params = new URLSearchParams(searchParamsStr);
+    if (!params.get("autorun")) return;
+    if (!source.id || !target.id) return;
+    if (searchInProgress || hasInitiatedSearch) return;
+
+    const pairKey = `${selectedPersona?.dataset}|${selectedPersona?.task}|${source.id}|${target.id}`;
+    if (autorunFiredKeyRef.current === pairKey) return;
+    autorunFiredKeyRef.current = pairKey;
+
+    const timer = setTimeout(() => {
+      // Click the freshly-rendered run button (present whenever source + target
+      // are set and a search hasn't started), then drop the one-shot flag.
+      searchButtonRef.current?.click();
+      params.delete("autorun");
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [
+    searchParamsStr,
+    source.id,
+    target.id,
+    searchInProgress,
+    hasInitiatedSearch,
+    selectedPersona?.dataset,
+    selectedPersona?.task,
+    router,
+    pathname,
+  ]);
+
   // Exponential backoff schedule for job polling: cached / pre-warmed pairs
   // resolve on the first or second poll, so the early intervals are short
   // (~300ms). Long-running first-time computations fall back to the 4s cap
@@ -1031,7 +1074,7 @@ export default function PairSideMenu({
                         console.warn("Could not resolve saved explanation lookup.");
                         setJobState({
                           status: "failed",
-                          message: "Could not resolve the selected pair IDs.",
+                          message: "Could not resolve the selected source and target.",
                         });
                         return;
                       }
