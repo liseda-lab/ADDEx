@@ -81,27 +81,34 @@ export default function Banner({ title, subtitle, description, buttonText, butto
                                 {buttonLabel}
                             </span>
                         )}
-                        <Link href={buttonHref} style={{ textDecoration: "none" }}>
-                            <button
-                                style={{
-                                    padding: "0.85rem 1.25rem",
-                                    minWidth: "180px",
-                                    whiteSpace: "nowrap",
-                                    borderRadius: "10px",
-                                    border: "none",
-                                    fontSize: "0.95rem",
-                                    fontWeight: 600,
-                                    cursor: "pointer",
-                                    background: colors.buttons,
-                                    color: "#FFFFFF",
-                                    textAlign: "center",
-                                    transition: "opacity 0.15s ease, transform 0.15s ease",
-                                }}
-                                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.88")}
-                                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
-                            >
-                                {buttonText}
-                            </button>
+                        {/* Render the Link itself as the styled button. A
+                            <button> nested inside <Link> produces invalid
+                            <a><button> markup; the broken nesting stops the
+                            click from navigating. An anchor styled as a button
+                            is valid, still keyboard-accessible, and supports
+                            modifier-click to open in a new tab. */}
+                        <Link
+                            href={buttonHref}
+                            style={{
+                                display: "inline-block",
+                                padding: "0.85rem 1.25rem",
+                                minWidth: "180px",
+                                whiteSpace: "nowrap",
+                                borderRadius: "10px",
+                                border: "none",
+                                fontSize: "0.95rem",
+                                fontWeight: 600,
+                                cursor: "pointer",
+                                background: colors.buttons,
+                                color: "#FFFFFF",
+                                textAlign: "center",
+                                textDecoration: "none",
+                                transition: "opacity 0.15s ease, transform 0.15s ease",
+                            }}
+                            onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.88")}
+                            onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+                        >
+                            {buttonText}
                         </Link>
                     </div>
                 )}
