@@ -32,6 +32,11 @@ interface GraphVisualizerProps {
   pair: Pair;
   visiblePaths: Set<string>;
   visibleLCAs: Set<string>;
+  // Bulk LCA visibility control surfaced in the graph toolbar. `hasLcas` gates
+  // whether the toggle is shown; `lcasShown` drives its label/icon.
+  hasLcas?: boolean;
+  lcasShown?: boolean;
+  onToggleLCAs?: () => void;
   isVisible?: boolean;
   leftCollapsed: boolean;
   rightCollapsed: boolean;
@@ -45,6 +50,9 @@ export default function GraphVisualizer({
   pair,
   visiblePaths,
   visibleLCAs,
+  hasLcas = false,
+  lcasShown = false,
+  onToggleLCAs,
   isVisible = true,
   leftCollapsed,
   rightCollapsed,
@@ -547,6 +555,9 @@ export default function GraphVisualizer({
         cy={cyRef.current}
         onReload={initGraph}
         pair={pair}
+        hasLcas={hasLcas}
+        lcasShown={lcasShown}
+        onToggleLCAs={onToggleLCAs}
         onExport={handleExport}
         paletteOverride={paletteOverride}
         setPaletteOverride={setPaletteOverride}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import SideMenu from "../../components/pairSideMenu/PairSideMenu";
@@ -186,21 +186,11 @@ export default function SearchPage() {
       // Initialize only the first 3 paths as visible
       setVisiblePaths(new Set(selectedPair.paths.slice(0, 3).map((p) => p.id)));
 
-      // Extract and initialize all LCAs as visible
-      const lcaSet = new Set<string>();
-
-      selectedPair.paths.forEach((path) => {
-        if (!path.lowest_common_ancestors) return;
-
-        Object.values(path.lowest_common_ancestors).forEach((lcaList) => {
-          const arr = Array.isArray(lcaList) ? lcaList : [lcaList];
-          arr.forEach((lca) => {
-            if (lca) lcaSet.add(lca);
-          });
-        });
-      });
-
-      setVisibleLCAs(lcaSet);
+      // LCAs are hidden by default — the default explanation stays LCA-free.
+      // The user opts in via the graph toolbar's "Show LCAs" toggle, or the
+      // per-LCA checkboxes in the Paths panel. Every LCA name for the pair is
+      // available through the `allLcaNames` memo below.
+      setVisibleLCAs(new Set());
     }
   }, [selectedPair]);
 
@@ -240,44 +230,17 @@ export default function SearchPage() {
     setRightCollapsed((prev) => !prev);
   }, [graphCollapsed, showSummaryMenu]);
 
-  const togglePath = useCallback(
-    (pathId: string) => {
-      setVisiblePaths((prev) => {
-        const copy = new Set(prev);
-        const willBeVisible = !copy.has(pathId);
-        if (willBeVisible) copy.add(pathId);
-        else copy.delete(pathId);
-
-        // When a path is newly added to the viz, auto-include its LCAs so
-        // the graph shows the full context. Removing a path leaves LCAs
-        // alone so other paths that share them aren't affected.
-        if (willBeVisible && selectedPair) {
-          const addedPath = selectedPair.paths.find((p) => p.id === pathId);
-          if (addedPath?.lowest_common_ancestors) {
-            const lcaNames = new Set<string>();
-            Object.values(addedPath.lowest_common_ancestors).forEach(
-              (lcaList) => {
-                const arr = Array.isArray(lcaList) ? lcaList : [lcaList];
-                arr.forEach((lca) => {
-                  if (lca) lcaNames.add(lca);
-                });
-              }
-            );
-            if (lcaNames.size > 0) {
-              setVisibleLCAs((prevLcas) => {
-                const lcaCopy = new Set(prevLcas);
-                lcaNames.forEach((name) => lcaCopy.add(name));
-                return lcaCopy;
-              });
-            }
-          }
-        }
-
-        return copy;
-      });
-    },
-    [selectedPair]
-  );
+  const togglePath = useCallback((pathId: string) => {
+    setVisiblePaths((prev) => {
+      const copy = new Set(prev);
+      if (copy.has(pathId)) copy.delete(pathId);
+      else copy.add(pathId);
+      return copy;
+    });
+    // LCAs are intentionally NOT auto-included when a path is added. They show
+    // only via the explicit "Show LCAs" toggle / per-LCA checkboxes, keeping
+    // the default explanation LCA-free.
+  }, []);
 
   const toggleLCA = useCallback((lcaName: string) => {
     setVisibleLCAs((prev) => {
@@ -287,6 +250,30 @@ export default function SearchPage() {
       return copy;
     });
   }, []);
+
+  // Every LCA name available for the current pair (across all paths). Drives
+  // the toolbar's bulk Show/Hide toggle and whether that control is shown.
+  const allLcaNames = useMemo(() => {
+    const names = new Set<string>();
+    selectedPair?.paths.forEach((path) => {
+      if (!path.lowest_common_ancestors) return;
+      Object.values(path.lowest_common_ancestors).forEach((lcaList) => {
+        const arr = Array.isArray(lcaList) ? lcaList : [lcaList];
+        arr.forEach((lca) => {
+          if (lca) names.add(lca);
+        });
+      });
+    });
+    return names;
+  }, [selectedPair]);
+
+  // Bulk toggle for the graph toolbar: if any LCAs are showing, hide them all;
+  // otherwise reveal every LCA for the pair. Per-LCA checkboxes still work.
+  const toggleAllLCAs = useCallback(() => {
+    setVisibleLCAs((prev) =>
+      prev.size > 0 ? new Set<string>() : new Set(allLcaNames)
+    );
+  }, [allLcaNames]);
 
   const handlePathHover = useCallback((pathId: string | null) => {
     setHoveredPathId(pathId);
@@ -713,6 +700,9 @@ export default function SearchPage() {
                     pair={selectedPair}
                     visiblePaths={visiblePaths}
                     visibleLCAs={visibleLCAs}
+                    hasLcas={allLcaNames.size > 0}
+                    lcasShown={visibleLCAs.size > 0}
+                    onToggleLCAs={toggleAllLCAs}
                     isVisible={!graphCollapsed}
                     leftCollapsed={leftCollapsed}
                     rightCollapsed={rightCollapsed}

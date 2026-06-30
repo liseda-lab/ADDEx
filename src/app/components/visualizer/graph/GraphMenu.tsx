@@ -4,7 +4,7 @@ import React, { useState, forwardRef, useImperativeHandle, JSX, useEffect, useRe
 import { Core } from "cytoscape";
 import { useTheme } from "../../../../../styles/ThemeContext";
 import type { ThemeName } from "../../../../../styles/themes";
-import { ZoomIn, ZoomOut, RefreshCcw, Settings, Grid, Target, Download, Palette, RotateCcw, Menu, X } from "lucide-react";
+import { ZoomIn, ZoomOut, RefreshCcw, Settings, Grid, Target, Download, Palette, RotateCcw, Menu, X, Eye, EyeOff } from "lucide-react";
 import EditGraphMenu from "../Settings/GraphSettings";
 import { Pair } from "@/app/hooks/types";
 
@@ -16,6 +16,11 @@ export interface GraphMenuProps {
   paletteOverride: ThemeName | null;
   setPaletteOverride: (next: ThemeName | null) => void;
   resetColors: () => void;
+  // Bulk LCA visibility toggle. `hasLcas` gates whether the button renders;
+  // `lcasShown` flips its icon/label; `onToggleLCAs` shows/hides all LCAs.
+  hasLcas?: boolean;
+  lcasShown?: boolean;
+  onToggleLCAs?: () => void;
 }
 
 const PALETTE_OPTIONS: { value: ThemeName | "auto"; label: string }[] = [
@@ -37,6 +42,9 @@ const GraphMenu = forwardRef<() => void, GraphMenuProps>(({
   paletteOverride = null,
   setPaletteOverride = NOOP,
   resetColors = NOOP,
+  hasLcas = false,
+  lcasShown = false,
+  onToggleLCAs = NOOP,
 }, ref) => {
   const colors = useTheme();
 
@@ -216,7 +224,9 @@ const GraphMenu = forwardRef<() => void, GraphMenuProps>(({
         }}
       >
         {icon}
-        {label && <span style={{ marginLeft: 4 }}>{label}</span>}
+        {/* lineHeight:1 keeps a text label from making the button taller than
+            the 16px icon, so labelled buttons match the icon-only ones. */}
+        {label && <span style={{ marginLeft: 4, lineHeight: 1 }}>{label}</span>}
       </button>
       <Tooltip text={tooltip} />
     </div>
@@ -275,6 +285,17 @@ const GraphMenu = forwardRef<() => void, GraphMenuProps>(({
               : null),
           }}
         >
+          {hasLcas &&
+            renderButton(
+              onToggleLCAs,
+              lcasShown ? <EyeOff size={16} /> : <Eye size={16} />,
+              lcasShown
+                ? "Hide ontology (LCA) nodes"
+                : "Show ontology (LCA) nodes",
+              // Always-on label (not just compact) so the control is easy to
+              // find — LCAs are hidden by default and added from here.
+              lcasShown ? "Hide LCAs" : "Show LCAs"
+            )}
           <div
             style={{
               display: "flex",
@@ -382,6 +403,12 @@ const GraphMenu = forwardRef<() => void, GraphMenuProps>(({
           }}
           aria-hidden="true"
         >
+          {hasLcas && (
+            <button style={buttonStyle}>
+              <Eye size={16} />
+              <span style={{ marginLeft: 4 }}>Show LCAs</span>
+            </button>
+          )}
           <div
             style={{
               display: "flex",
