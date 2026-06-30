@@ -28,6 +28,50 @@ const LEGEND_W = 220;
 const LEGEND_H = 120;
 const MARGIN = 12;
 
+// Fit the graph into the viewport, but if any node would render underneath the
+// floating legend, reserve a strip on the legend's side and re-fit so nodes
+// never sit beneath it. (The export already avoids overlap by compositing the
+// legend onto its own canvas; this brings the live view in line.) When nothing
+// overlaps the legend — typically with only a few paths — this behaves exactly
+// like a normal centered fit, so sparse graphs are unaffected.
+function fitAvoidingLegend(
+  cy: Core,
+  legend: { x: number; y: number; w: number; h: number }
+) {
+  cy.fit(cy.elements(), MARGIN);
+
+  const nodes = cy.nodes();
+  if (nodes.empty()) return;
+
+  const legendX2 = legend.x + legend.w;
+  const legendY2 = legend.y + legend.h;
+  const overlaps = nodes.toArray().some((n) => {
+    const b = n.renderedBoundingBox();
+    return (
+      b.x1 < legendX2 && b.x2 > legend.x && b.y1 < legendY2 && b.y2 > legend.y
+    );
+  });
+  if (!overlaps) return;
+
+  const bb = cy.elements().boundingBox();
+  if (bb.w === 0 || bb.h === 0) return;
+
+  const viewW = cy.width();
+  const viewH = cy.height();
+  const legendOnLeft = legend.x + legend.w / 2 < viewW / 2;
+  const reserve = legend.w + 2 * MARGIN;
+  const availW = Math.max(50, viewW - reserve - MARGIN);
+  const availH = Math.max(50, viewH - 2 * MARGIN);
+
+  const zoom = Math.min(availW / bb.w, availH / bb.h);
+  cy.zoom(zoom);
+  const originX = legendOnLeft ? reserve : MARGIN;
+  cy.pan({
+    x: originX + (availW - bb.w * zoom) / 2 - bb.x1 * zoom,
+    y: MARGIN + (availH - bb.h * zoom) / 2 - bb.y1 * zoom,
+  });
+}
+
 interface GraphVisualizerProps {
   pair: Pair;
   visiblePaths: Set<string>;
@@ -114,6 +158,24 @@ export default function GraphVisualizer({
   useEffect(() => {
     onNodeHoverRef.current = onNodeHover;
   }, [onNodeHover]);
+
+  // Current legend rectangle (viewport px), kept in a ref so the fit helper can
+  // read it without stale closures. Width/height fall back to estimates while
+  // the legend is auto-sized.
+  const legendRectRef = useRef<{ x: number; y: number; w: number; h: number }>({
+    x: MARGIN,
+    y: MARGIN,
+    w: 200,
+    h: 170,
+  });
+  useEffect(() => {
+    legendRectRef.current = {
+      x: legendPos?.x ?? MARGIN,
+      y: legendPos?.y ?? MARGIN,
+      w: typeof legendSize.width === "number" ? legendSize.width : 200,
+      h: typeof legendSize.height === "number" ? legendSize.height : 170,
+    };
+  }, [legendPos, legendSize]);
 
   // --- Prepare graph elements ---
   const elements = useMemo(() => {
@@ -241,8 +303,7 @@ export default function GraphVisualizer({
 
     cy.on("layoutstop", () => {
       if (!hasInitialCenteringRun.current) {
-        cy.fit();
-        cy.center();
+        fitAvoidingLegend(cy, legendRectRef.current);
         hasInitialCenteringRun.current = true;
       }
       setLoading(false);
@@ -478,7 +539,7 @@ export default function GraphVisualizer({
     if (!cyRef.current) return;
     const timeout = setTimeout(() => {
       cyRef.current!.resize();
-      cyRef.current!.fit();
+      fitAvoidingLegend(cyRef.current!, legendRectRef.current);
     }, 220);
     return () => clearTimeout(timeout);
   }, [leftCollapsed, rightCollapsed]);
@@ -491,8 +552,7 @@ export default function GraphVisualizer({
       const cy = cyRef.current;
       if (!cy) return;
       cy.resize();
-      cy.fit();
-      cy.center();
+      fitAvoidingLegend(cy, legendRectRef.current);
     }, 280);
     return () => clearTimeout(timeout);
   }, [isVisible]);
