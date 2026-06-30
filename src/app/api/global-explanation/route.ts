@@ -357,7 +357,7 @@ export async function POST(req: NextRequest) {
 
     if (!pair) {
       console.log("[GlobalExplanation] Saved pair not found.");
-      return NextResponse.json({ error: "Saved pair not found." }, { status: 404 });
+      return NextResponse.json({ error: "Saved hypothesis not found." }, { status: 404 });
     }
 
     let filteredPaths = pair.paths.filter((path) => body.visiblePathIds!.includes(path.id));
@@ -389,7 +389,7 @@ export async function POST(req: NextRequest) {
     });
     if (filteredPaths.length === 0) {
       return NextResponse.json(
-        { error: "This pair has no saved paths to verbalize." },
+        { error: "This hypothesis has no saved paths to verbalize." },
         { status: 400 }
       );
     }

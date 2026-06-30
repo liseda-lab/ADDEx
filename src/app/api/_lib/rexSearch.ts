@@ -25,7 +25,7 @@ export type SavedPair = {
 };
 
 export const NO_VALID_PATHS_WARNING =
-  "Unfortunately, no paths were found between this pair.\nTry a different pair, or switch dataset/task.";
+  "Unfortunately, no paths were found for this hypothesis.\nTry a different hypothesis, or switch dataset/task.";
 
 export type JobStatus =
   | "queued"
@@ -625,7 +625,7 @@ async function runRexJob(job: ExplanationJob): Promise<void> {
   jobRegistry.set(job.jobId, true);
   updateJob(job.jobId, {
     status: "running",
-    message: "This is the first time someone is running this pair, it may take a few minutes.",
+    message: "This is the first time someone is exploring this hypothesis, it may take a few minutes.",
   });
 
   fs.mkdirSync(path.dirname(job.logPath), { recursive: true });
@@ -1013,7 +1013,7 @@ export function startExplanationJob(
     source,
     target,
     status: "queued",
-    message: "This is the first time someone is running this pair, it may take a few minutes.",
+    message: "This is the first time someone is exploring this hypothesis, it may take a few minutes.",
     configPath,
     logPath,
     statusPath,
@@ -1035,7 +1035,7 @@ export function startExplanationJob(
 // FIFO QUEUE IMPLEMENTATION
 // Resolve the user-facing message for a queued/running REx job. When the
 // job is sitting behind others in the FIFO line we override the default
-// "first time someone is running this pair" with a queue-position message
+// "first time someone is exploring this hypothesis" with a queue-position message
 // so the UI tells the user how many people are ahead. Returns the original
 // message untouched for any other state.
 export function describeRexJobMessage(jobId: string, defaultMessage: string): string {

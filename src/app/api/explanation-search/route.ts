@@ -122,7 +122,7 @@ export async function GET(req: NextRequest) {
   if (!jobId) {
     return NextResponse.json({
       status: "missing",
-      message: "No running job was found for this pair.",
+      message: "No running job was found for this hypothesis.",
     });
   }
 
@@ -130,7 +130,7 @@ export async function GET(req: NextRequest) {
   if (!job) {
     return NextResponse.json({
       status: "missing",
-      message: "No running job was found for this pair.",
+      message: "No running job was found for this hypothesis.",
     });
   }
 

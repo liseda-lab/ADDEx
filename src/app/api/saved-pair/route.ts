@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
   } catch (err) {
     console.error("Failed to load saved pair:", err);
     return NextResponse.json(
-      { pair: null, error: "Failed to load saved pair" },
+      { pair: null, error: "Failed to load saved hypothesis" },
       { status: 500 }
     );
   }

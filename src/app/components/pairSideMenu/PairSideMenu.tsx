@@ -648,7 +648,7 @@ export default function PairSideMenu({
           status: json.status,
           message:
             json.message ??
-            "This is the first time someone is running this pair, it may take a few minutes.",
+            "This is the first time someone is exploring this hypothesis, it may take a few minutes.",
           jobId: json.jobId ?? jobId,
         });
         pollTimeoutRef.current = setTimeout(() => {
@@ -669,7 +669,7 @@ export default function PairSideMenu({
         status: json.status,
         message:
           json.message ??
-          "REx could not generate an explanation for this pair.",
+          "REx could not generate an explanation for this hypothesis.",
         jobId: json.jobId,
       });
     } catch (error) {
@@ -1081,7 +1081,7 @@ export default function PairSideMenu({
                             status: json.status,
                             message:
                               json.message ??
-                              "This is the first time someone is running this pair, it may take a few minutes.",
+                              "This is the first time someone is exploring this hypothesis, it may take a few minutes.",
                             jobId: json.jobId,
                           });
 
@@ -1119,7 +1119,7 @@ export default function PairSideMenu({
                     {jobState.status === "checking"
                       ? "Checking..."
                       : searchInProgress
-                        ? "Running REx..."
+                        ? "Generating..."
                         : "Search Explanation"}
                   </button>
                 )}

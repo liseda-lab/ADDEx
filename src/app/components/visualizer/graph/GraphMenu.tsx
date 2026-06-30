@@ -99,7 +99,7 @@ const GraphMenu = forwardRef<() => void, GraphMenuProps>(({
   };
 
   const handleExportClick = () => {
-    if (!pair) return alert("No pair selected for export!");
+    if (!pair) return alert("No hypothesis selected for export!");
     onExport();
   };
 

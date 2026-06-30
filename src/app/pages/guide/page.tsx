@@ -65,7 +65,7 @@ export default function GuidePage() {
       Icon: Database,
     },
     {
-      label: "Pair",
+      label: "Hypothesis",
       caption: "Enter a source and a target.",
       Icon: Target,
     },
@@ -121,15 +121,15 @@ export default function GuidePage() {
     },
     {
       q: "My search returned no paths. What should I do?",
-      a: "Not every source–target pair has a valid path in the selected graph. Try a different target, switch to another knowledge graph that covers the pair, or use one of the example pairs from the search page to sanity-check your setup.",
+      a: "Not every source–target hypothesis has a valid path in the selected graph. Try a different target, switch to another knowledge graph that covers the hypothesis, or use one of the example hypotheses from the search page to sanity-check your setup.",
     },
     {
       q: "How long does a search take?",
-      a: "It depends on the knowledge graph and the pair. On a consumer laptop (Apple M1, MPS backend), path generation — the time before the interactive graph appears — averages ~20s on OREGANO, ~30s on Hetionet, and ~50s on PrimeKG. The verbalization runs in parallel afterwards and populates the side panel without blocking exploration; it usually takes another ~70s, longer for hypotheses with many paths. Already-cached pairs return instantly.",
+      a: "It depends on the knowledge graph and the hypothesis. On a consumer laptop (Apple M1, MPS backend), path generation — the time before the interactive graph appears — averages ~20s on OREGANO, ~30s on Hetionet, and ~50s on PrimeKG. The verbalization runs in parallel afterwards and populates the side panel without blocking exploration; it usually takes another ~70s, longer for hypotheses with many paths. Already-cached hypotheses return instantly.",
     },
     {
       q: "Can I change the explanation mode mid-session?",
-      a: "Yes. The left panel on the Search page has a persona selector, so you can switch modes on the fly without returning to the setup. That's also why Quick Search skips the setup step: you can configure persona, dataset, task, and pair directly from the search panel.",
+      a: "Yes. The left panel on the Search page has a persona selector, so you can switch modes on the fly without returning to the setup. That's also why Quick Search skips the setup step: you can configure persona, dataset, task, and hypothesis directly from the search panel.",
     },
     {
       q: "Can I retrain on my own knowledge graph?",

@@ -453,11 +453,11 @@ export default function SearchPage() {
                     }
                   `}</style>
                   <h2 style={{ fontSize: "1.15rem", marginBottom: "0.75rem", color: colors.white }}>
-                    Running REx for this pair
+                    Generating explanation
                   </h2>
                   <p style={{ margin: 0, lineHeight: 1.7, color: `${colors.white}cc` }}>
                     {searchState.message ??
-                      "This is the first time someone is running this pair, it may take a few minutes."}
+                      "This is the first time someone is exploring this hypothesis, it may take a few minutes."}
                   </p>
                   <button
                     type="button"
@@ -487,7 +487,7 @@ export default function SearchPage() {
                     {searchState.status === "failed" ? (() => {
                       const raw =
                         searchState.message ??
-                        "REx could not generate an explanation for this pair.";
+                        "REx could not generate an explanation for this hypothesis.";
                       // Split into the main error line (shown bold + accent)
                       // and any follow-up hint lines (shown plain, matching
                       // the empty-state prompt style).
