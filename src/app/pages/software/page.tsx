@@ -21,7 +21,11 @@ interface TechCard {
   body: string;
   Icon: PhosphorIcon;
   tech: string[];
-  link?: { url: string; label: string };
+  link?: { url: string; label: string; license?: string };
+  // Data-source attribution (name + license + link). When present, rendered in
+  // place of the plain tech chips so each source carries its license and a link
+  // to where it's published.
+  sources?: { name: string; license: string; url: string }[];
   // Legacy theme preserves the OG student-built per-card accents. These are
   // the indices used in the original Software page and must not change.
   legacyAccentIdx: number;
@@ -94,6 +98,7 @@ export default function SoftwarePage() {
         link: {
           url: "https://github.com/liseda-lab/REx_PyTorch/tree/main",
           label: "Repository",
+          license: "Apache 2.0",
         },
         legacyAccentIdx: 9,
       },
@@ -101,7 +106,20 @@ export default function SoftwarePage() {
         title: "Datasets & Knowledge Graphs",
         body: "Biomedical knowledge graphs organized with train/validation/test splits, vocabularies, and human-readable labels, the relational backbone for every prediction.",
         Icon: Database,
-        tech: ["Hetionet", "PrimeKG", "Oregano"],
+        tech: [],
+        sources: [
+          { name: "Hetionet", license: "CC0 1.0", url: "https://het.io/" },
+          {
+            name: "PrimeKG",
+            license: "MIT",
+            url: "https://github.com/mims-harvard/PrimeKG",
+          },
+          {
+            name: "Oregano",
+            license: "CC BY 4.0",
+            url: "https://doi.org/10.5281/zenodo.10103842",
+          },
+        ],
         legacyAccentIdx: 6,
       },
       {
@@ -109,6 +127,11 @@ export default function SoftwarePage() {
         body: "Persona-shaped explanation scoring using local or API-based language models. Tunes explanation style for different expert needs without altering scientific signal.",
         Icon: BracketsCurly,
         tech: ["Qwen", "GPT", "LLM"],
+        link: {
+          url: "https://github.com/liseda-lab/Perspective_XAI/tree/main",
+          label: "Repository",
+          license: "Apache 2.0",
+        },
         legacyAccentIdx: 9,
       },
       {
@@ -145,9 +168,9 @@ export default function SoftwarePage() {
         }
         .tech-card-header {
           display: flex;
-          align-items: center;
-          gap: 0.6rem;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
         }
         .tech-card-title {
           display: inline-flex;
@@ -189,10 +212,43 @@ export default function SoftwarePage() {
           padding: 0.3rem 0.6rem;
           border-radius: 8px;
           border: 1px solid;
+          white-space: nowrap;
           transition: background 0.15s ease;
         }
         .tech-link:hover {
           background: color-mix(in srgb, currentColor 14%, transparent);
+        }
+        .tech-sources {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.4rem;
+          margin-top: auto;
+          padding-top: 0.25rem;
+        }
+        .tech-source {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
+          font-size: 0.72rem;
+          font-weight: 600;
+          text-decoration: none;
+          padding: 0.22rem 0.55rem;
+          border-radius: 999px;
+          border: 1px solid;
+          line-height: 1.2;
+          white-space: nowrap;
+          transition: background 0.15s ease;
+        }
+        .tech-source:hover {
+          background: color-mix(in srgb, currentColor 20%, transparent);
+        }
+        .tech-source-lic {
+          font-weight: 500;
+          opacity: 0.78;
+        }
+        .tech-link-lic {
+          font-weight: 500;
+          opacity: 0.78;
         }
       `}</style>
 
@@ -208,8 +264,10 @@ export default function SoftwarePage() {
             // fits comfortably in one screen.
             minHeight: "calc(100vh - 220px)",
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            gap: "1.5rem",
           }}
         >
           <div className="tech-grid">
@@ -249,6 +307,11 @@ export default function SoftwarePage() {
                     >
                       <GithubLogo size={13} weight="bold" aria-hidden="true" />
                       {card.link.label}
+                      {card.link.license && (
+                        <span className="tech-link-lic">
+                          · {card.link.license}
+                        </span>
+                      )}
                       <ArrowSquareOut size={11} weight="bold" aria-hidden="true" />
                     </a>
                   )}
@@ -261,28 +324,67 @@ export default function SoftwarePage() {
                   {card.body}
                 </p>
 
-                <div className="tech-card-tags">
-                  {card.tech.map((tag) => {
-                    const chipColor = chipColorFor(tag, cardAccent);
-                    return (
-                      <span
-                        key={tag}
-                        className="tech-chip"
-                        style={{
-                          color: chipColor,
-                          borderColor: `${chipColor}60`,
-                          background: `${chipColor}12`,
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    );
-                  })}
-                </div>
+                {card.sources ? (
+                  <div className="tech-sources">
+                    {card.sources.map((s) => {
+                      const chipColor = chipColorFor(s.name, cardAccent);
+                      return (
+                        <a
+                          key={s.name}
+                          href={s.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="tech-source"
+                          style={{
+                            color: chipColor,
+                            borderColor: `${chipColor}60`,
+                            background: `${chipColor}12`,
+                          }}
+                        >
+                          {s.name}
+                          <span className="tech-source-lic">· {s.license}</span>
+                          <ArrowSquareOut size={10} weight="bold" aria-hidden="true" />
+                        </a>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="tech-card-tags">
+                    {card.tech.map((tag) => {
+                      const chipColor = chipColorFor(tag, cardAccent);
+                      return (
+                        <span
+                          key={tag}
+                          className="tech-chip"
+                          style={{
+                            color: chipColor,
+                            borderColor: `${chipColor}60`,
+                            background: `${chipColor}12`,
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      );
+                    })}
+                  </div>
+                )}
               </article>
             );
           })}
           </div>
+
+          <a
+            href="https://github.com/liseda-lab/ADDEx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tech-link"
+            style={{ color: unifiedAccent, borderColor: `${unifiedAccent}60` }}
+          >
+            <GithubLogo size={14} weight="bold" aria-hidden="true" />
+            ADDEx repository
+            <span className="tech-link-lic">· Apache 2.0</span>
+            <ArrowSquareOut size={12} weight="bold" aria-hidden="true" />
+          </a>
         </div>
       </PageText>
     </>
