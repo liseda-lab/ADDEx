@@ -63,7 +63,7 @@ export default function HomePage() {
       },
       {
         key: "how",
-        title: "How ADDEx Works?",
+        title: "How does ADDEx work?",
         body: "ADDEx treats Drug Repurposing and Drug-Target Interaction as link prediction over biomedical knowledge graphs. It generates each hypothesis together with a reasoning path — a chain of meaningful relationships connecting the source and target — then enriches the path with ontological context, verbalizes it, and presents it interactively for the expert.",
         Icon: Graph,
       },

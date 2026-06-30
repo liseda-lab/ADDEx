@@ -372,7 +372,7 @@ export default function AboutPage() {
             }}
           >
             <BookBookmark size={18} weight="bold" aria-hidden="true" />
-            Citation
+            ADDEx
           </h2>
 
           <p
@@ -404,6 +404,39 @@ export default function AboutPage() {
             <Hourglass size={14} weight="bold" color={platformAccent} aria-hidden="true" />
             Citation details coming soon.
           </div>
+
+          <a
+            href="https://github.com/liseda-lab/ADDEx"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              marginTop: "0.7rem",
+              alignSelf: "flex-start",
+              textDecoration: "none",
+              padding: "0.42rem 0.85rem",
+              borderRadius: "8px",
+              background: "transparent",
+              color: platformAccent,
+              fontWeight: 600,
+              fontSize: "0.82rem",
+              border: `1px solid ${platformAccent}60`,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.35rem",
+              minHeight: 32,
+              transition: "background 0.15s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background =
+                "color-mix(in srgb, currentColor 14%, transparent)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+            }}
+          >
+            <GithubLogo size={14} weight="bold" aria-hidden="true" />
+            Repository
+          </a>
         </section>
 
         {/* Section heading for the two algorithm papers */}

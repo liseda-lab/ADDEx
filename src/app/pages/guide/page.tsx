@@ -136,8 +136,8 @@ export default function GuidePage() {
       a: "The REx reasoning engine is released as a standalone PyTorch library under Apache 2.0, so you can train it on your own graph and use the output however you like. Plugging the resulting model into ADDEx itself is only possible if you self-host the ADDEx repo; the hosted version runs with the bundled graphs. For additions or bug reports on the hosted version, open an issue on GitHub.",
     },
     {
-      q: "Where do I cite this work?",
-      a: "The About page lists the ADDEx reference and the two underlying algorithm papers (REx and Perspective REx), with BibTeX and APA snippets ready to copy.",
+      q: "How do I cite this work?",
+      a: "The Research page lists the ADDEx reference and the two underlying algorithm papers (REx and Adaptive REx), with BibTeX and APA snippets ready to copy.",
     },
   ];
 

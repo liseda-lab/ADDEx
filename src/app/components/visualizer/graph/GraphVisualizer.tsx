@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState, useMemo, useCallback } from "react";
-import cytoscape, { Core, LayoutOptions } from "cytoscape";
+import cytoscape, { Core, LayoutOptions, NodeSingular } from "cytoscape";
 import { Pair, Path } from "@/app/hooks/types";
 import GraphMenu from "./GraphMenu";
 import NodeLegend from "../legend/NodeLegend";
@@ -196,6 +196,32 @@ export default function GraphVisualizer({
   return elems;
 }, [pair, visiblePaths, visibleLCAs]);
 
+  // Maps each visible node to the index of the first visible path that
+  // contains it (Path 1 → 0, Path 2 → 1, …). Used by the breadthfirst layout's
+  // `depthSort` so paths stack top-to-bottom in the same order as the Paths
+  // panel, instead of whatever order the layout picks on its own.
+  const nodeOrder = useMemo(() => {
+    const order = new Map<string, number>();
+    pair.paths.forEach((path: Path, idx: number) => {
+      if (!visiblePaths.has(path.id)) return;
+      const assign = (id: string) => {
+        if (!order.has(id)) order.set(id, idx);
+      };
+      path.nodes.forEach((n) => assign(n.id));
+      if (path.lowest_common_ancestors) {
+        Object.values(path.lowest_common_ancestors).forEach((lcaList) => {
+          const arr = Array.isArray(lcaList)
+            ? lcaList
+            : [lcaList].filter(Boolean);
+          arr.forEach((lcaName) => {
+            if (lcaName) assign(lcaName as string);
+          });
+        });
+      }
+    });
+    return order;
+  }, [pair, visiblePaths]);
+
   // --- Initialize Cytoscape ---
   const initGraph = useCallback(() => {
     if (!containerRef.current) return;
@@ -242,7 +268,13 @@ export default function GraphVisualizer({
         ? {
             name: "breadthfirst",
             directed: false,
-            roots: cy.nodes().filter((node) => String(node.data("type")) === "LCA"),
+            // `roots` takes node IDs (string[]), not a node collection — map the
+            // matched LCA nodes to their ids so it's both type-correct and what
+            // the layout consumes at runtime.
+            roots: cy
+              .nodes()
+              .filter((node) => String(node.data("type")) === "LCA")
+              .map((node) => node.id()),
             spacingFactor: 1,
             avoidOverlap: true,
             animate: true,
@@ -265,6 +297,12 @@ export default function GraphVisualizer({
             avoidOverlap: true,
             animate: true,
             direction: "rightward",
+            // Stack paths top-to-bottom in Paths-panel order (Path 1 on top).
+            // For this rightward layout Cytoscape places the first-sorted node
+            // at the bottom of each column, so sort by path index DESCENDING
+            // (highest index first → bottom) to put Path 1 on top.
+            depthSort: (a: NodeSingular, b: NodeSingular) =>
+              (nodeOrder.get(b.id()) ?? 0) - (nodeOrder.get(a.id()) ?? 0),
           }
         : savedLayout === "circle"
             ? {
@@ -292,7 +330,7 @@ export default function GraphVisualizer({
                 };
 
     cy.layout(layout).run();
-  }, [elements]);
+  }, [elements, nodeOrder]);
 
   useEffect(() => {
     ensureColors(elements.map(el => el.data.type));
