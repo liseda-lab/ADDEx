@@ -1230,6 +1230,13 @@ export default function PairSideMenu({
                         params.delete("sourceName");
                         params.delete("targetType");
                         params.delete("targetName");
+                        // Bump viaQuickSkip so SearchPage's session-reset
+                        // effect fires and clears the parent-level result
+                        // state (selectedPair, summary panel, sessionKey).
+                        // Without this, the prior graph/summary stays on
+                        // screen and dataset/task picker changes have no
+                        // visible effect until the user re-runs a search.
+                        params.set("viaQuickSkip", "true");
                         router.replace(
                           `${pathname}?${params.toString()}`,
                           { scroll: false }
