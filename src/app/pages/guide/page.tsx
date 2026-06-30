@@ -125,7 +125,7 @@ export default function GuidePage() {
     },
     {
       q: "How long does a search take?",
-      a: "It depends on the knowledge graph and the hypothesis. On a consumer laptop (Apple M1, MPS backend), path generation — the time before the interactive graph appears — averages ~20s on OREGANO, ~30s on Hetionet, and ~50s on PrimeKG. The verbalization runs in parallel afterwards and populates the side panel without blocking exploration; it usually takes another ~70s, longer for hypotheses with many paths. Already-cached hypotheses return instantly.",
+      a: "It depends on the knowledge graph, task, and persona, and agentic LLM scoring adds some overhead when it is active. On the hosted instance,  path search, the time before the interactive graph appears, averages about 90 seconds. The verbalization then runs asynchronously after the graph renders, so it never blocks exploration; it typically takes around 3 minutes, depending on how many paths are summarized. Once a hypothesis has been searched, its results are cached and return from disk in milliseconds, so repeat queries are instant.",
     },
     {
       q: "Can I change the explanation mode mid-session?",
