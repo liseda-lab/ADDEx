@@ -365,6 +365,13 @@ export default function SumSideMenu({
       setGlobalExplanation(savedVerbalization);
       setExplanationStatus("ready");
       setExplanationError("");
+      // Push the cleaned text up into selectedPair.verbalization so the export
+      // (preview, PNG, and SVG all read pair.verbalization) matches the
+      // dashboard exactly. Guarded to only fire when cleaning changed the text,
+      // so it doesn't re-trigger this effect (which depends on pair.verbalization).
+      if (savedVerbalization !== rawSaved) {
+        onVerbalizationGenerated?.(savedVerbalization);
+      }
       return;
     }
 
