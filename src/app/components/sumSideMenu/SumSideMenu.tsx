@@ -719,15 +719,18 @@ export default function SumSideMenu({
                     </button>
                     <button
                       type="button"
-                      onClick={() =>
-                        setIsEditingVerb((prev) => {
-                          const next = !prev;
-                          // Leaving edit mode commits the edited text so the
-                          // export/copy mirror the dashboard. Not persisted.
-                          if (!next) onVerbalizationGenerated?.(globalExplanation);
-                          return next;
-                        })
-                      }
+                      onClick={() => {
+                        // Leaving edit mode commits the edited text so the
+                        // export/copy mirror the dashboard (not persisted to
+                        // JSON). Call the parent callback here in the event
+                        // handler — NOT inside the setState updater, which runs
+                        // during render and would trigger a "setState while
+                        // rendering" error.
+                        if (isEditingVerb) {
+                          onVerbalizationGenerated?.(globalExplanation);
+                        }
+                        setIsEditingVerb((prev) => !prev);
+                      }}
                       title={isEditingVerb ? "Done editing" : "Edit summary"}
                       aria-label={isEditingVerb ? "Done editing summary" : "Edit summary"}
                       style={{
