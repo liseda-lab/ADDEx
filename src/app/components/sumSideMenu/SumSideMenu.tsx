@@ -1,7 +1,7 @@
 "use client";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { RefreshCw, Copy, Check, Download } from "lucide-react";
+import { RefreshCw, Copy, Check, Download, Pencil } from "lucide-react";
 import { useTheme } from "../../../../styles/ThemeContext";
 import { Pair } from "@/app/hooks/types";
 import { stripScoreMentions } from "@/app/hooks/verbalization";
@@ -47,6 +47,10 @@ export default function SumSideMenu({
   );
   const [otherPathsOpen, setOtherPathsOpen] = useState(false);
   const [globalExplanation, setGlobalExplanation] = useState("");
+  // Lets the expert correct the summary in place. Session-only: the edit drives
+  // the display + export (via onVerbalizationGenerated) but is never written
+  // back to the cached JSON (shared, and the deploy only pulls).
+  const [isEditingVerb, setIsEditingVerb] = useState(false);
   const [explanationStatus, setExplanationStatus] = useState<
     "idle" | "loading" | "ready" | "failed"
   >("idle");
@@ -715,6 +719,36 @@ export default function SumSideMenu({
                     </button>
                     <button
                       type="button"
+                      onClick={() =>
+                        setIsEditingVerb((prev) => {
+                          const next = !prev;
+                          // Leaving edit mode commits the edited text so the
+                          // export/copy mirror the dashboard. Not persisted.
+                          if (!next) onVerbalizationGenerated?.(globalExplanation);
+                          return next;
+                        })
+                      }
+                      title={isEditingVerb ? "Done editing" : "Edit summary"}
+                      aria-label={isEditingVerb ? "Done editing summary" : "Edit summary"}
+                      style={{
+                        width: 28,
+                        height: 28,
+                        borderRadius: 6,
+                        border: `1px solid ${colors.white}30`,
+                        backgroundColor: isEditingVerb
+                          ? `${colors.green}22`
+                          : "transparent",
+                        color: isEditingVerb ? colors.green : colors.white,
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {isEditingVerb ? <Check size={14} /> : <Pencil size={14} />}
+                    </button>
+                    <button
+                      type="button"
                       onClick={downloadVerbalization}
                       title="Download summary as .txt"
                       aria-label="Download summary as text file"
@@ -735,20 +769,47 @@ export default function SumSideMenu({
                     </button>
                   </div>
                   <div style={{ flex: 1, minHeight: 0, overflowY: "auto" }}>
-                    <p
-                      style={{
-                        textAlign: "left",
-                        lineHeight: 1.55,
-                        margin: 0,
-                        width: "100%",
-                        overflowWrap: "break-word",
-                        wordBreak: "break-word",
-                        whiteSpace: "pre-wrap",
-                        fontSize: Math.max(10, verbalizationFontSize * textScale),
-                      }}
-                    >
-                      {globalExplanation}
-                    </p>
+                    {isEditingVerb ? (
+                      <textarea
+                        value={globalExplanation}
+                        onChange={(e) => setGlobalExplanation(e.target.value)}
+                        onBlur={() => onVerbalizationGenerated?.(globalExplanation)}
+                        aria-label="Edit summary text"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          minHeight: 160,
+                          boxSizing: "border-box",
+                          resize: "none",
+                          background: "transparent",
+                          color: colors.white,
+                          border: `1px solid ${colors.white}40`,
+                          borderRadius: 8,
+                          padding: "0.5rem 0.6rem",
+                          textAlign: "left",
+                          lineHeight: 1.55,
+                          whiteSpace: "pre-wrap",
+                          overflowWrap: "break-word",
+                          fontFamily: "inherit",
+                          fontSize: Math.max(10, verbalizationFontSize * textScale),
+                        }}
+                      />
+                    ) : (
+                      <p
+                        style={{
+                          textAlign: "left",
+                          lineHeight: 1.55,
+                          margin: 0,
+                          width: "100%",
+                          overflowWrap: "break-word",
+                          wordBreak: "break-word",
+                          whiteSpace: "pre-wrap",
+                          fontSize: Math.max(10, verbalizationFontSize * textScale),
+                        }}
+                      >
+                        {globalExplanation}
+                      </p>
+                    )}
                   </div>
                 </>
               )}
