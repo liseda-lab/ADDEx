@@ -228,16 +228,11 @@ def _format_paths(paths: list[dict[str, Any]], visible_lcas: set[str]) -> str:
                 joined_sources = ", ".join(source_nodes)
                 lca_lines.append(f"- Lowest common ancestor: {joined_sources} -> {lca_name}")
 
-        score = path.get("score", {}) or {}
-        score_text = []
-        for key in ("final_score", "scientific_validity", "completeness", "relevance"):
-            value = score.get(key)
-            if value is not None:
-                score_text.append(f"{key}={value}")
-
+        # Scores are intentionally NOT fed to the LLM: the verbalization panel
+        # doesn't display them (they live in the Paths tab), so surfacing them
+        # here made the summary reference numbers the reader can't see. The
+        # ranking is conveyed separately in the interface.
         block = [f"Path {index} ({path.get('id', f'path-{index}')}):"]
-        if score_text:
-            block.append("Scores: " + ", ".join(score_text))
         block.extend(edge_lines or ["- No non-LCA edges were provided."])
         block.extend(lca_lines)
         sections.append("\n".join(block))
@@ -323,6 +318,7 @@ def main() -> int:
             "Mention recurring mechanisms, complementary evidence, and uncertainty when appropriate.",
             "Do not use bullet points.",
             "Never include internal identifiers such as TYPE::CODE, DB IDs, DOID IDs, or pair IDs in the final explanation.",
+            "Do not mention, cite, or allude to numeric scores, confidence values, rankings, or probabilities; the ranking is shown separately in the interface. Convey the strength or uncertainty of the evidence only in qualitative words.",
         ]
 
         if persona_text:

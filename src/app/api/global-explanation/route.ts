@@ -10,6 +10,7 @@ import {
   type SavedPair,
   type SavedPath,
 } from "../_lib/rexSearch";
+import { stripScoreMentions } from "@/app/hooks/verbalization";
 // FIFO QUEUE IMPLEMENTATION
 import { cancelQueuedJob, enqueueJob, getJob, queuePosition, touchJob } from "../_lib/heavyQueue";
 
@@ -87,6 +88,7 @@ function sanitizeExplanationIdentifiers(
   }
 
   cleaned = cleaned.replace(/\b([A-Za-z][A-Za-z\s/_-]*)::[A-Za-z0-9:._-]+\b/g, "$1");
+  cleaned = stripScoreMentions(cleaned);
   return cleaned;
 }
 

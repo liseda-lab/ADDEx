@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { RefreshCw, Copy, Check, Download } from "lucide-react";
 import { useTheme } from "../../../../styles/ThemeContext";
 import { Pair } from "@/app/hooks/types";
+import { stripScoreMentions } from "@/app/hooks/verbalization";
 import PathList from "../pathList/PathList";
 
 interface SumSideMenuProps {
@@ -355,7 +356,11 @@ export default function SumSideMenu({
     // stale "1 other user" messages to the next request.
     abortVerbJob();
 
-    const savedVerbalization = pair?.verbalization?.trim();
+    // Sanitize the cached verbalization before it seeds the panel, so the raw
+    // (score-mentioning) text never flashes during bootstrap — matches what the
+    // /api/global-explanation endpoint returns.
+    const rawSaved = pair?.verbalization?.trim();
+    const savedVerbalization = rawSaved ? stripScoreMentions(rawSaved) : rawSaved;
     if (pair && savedVerbalization) {
       setGlobalExplanation(savedVerbalization);
       setExplanationStatus("ready");
