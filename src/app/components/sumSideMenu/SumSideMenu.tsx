@@ -777,6 +777,15 @@ export default function SumSideMenu({
                         value={globalExplanation}
                         onChange={(e) => setGlobalExplanation(e.target.value)}
                         onBlur={() => onVerbalizationGenerated?.(globalExplanation)}
+                        onKeyDown={(e) => {
+                          // ⌘/Ctrl+Enter saves and exits. Plain Enter inserts a
+                          // newline (the summary is multi-paragraph).
+                          if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
+                            e.preventDefault();
+                            onVerbalizationGenerated?.(globalExplanation);
+                            setIsEditingVerb(false);
+                          }
+                        }}
                         aria-label="Edit summary text"
                         style={{
                           width: "100%",
