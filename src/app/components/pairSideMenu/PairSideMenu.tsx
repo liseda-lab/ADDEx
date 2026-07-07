@@ -116,6 +116,21 @@ export default function PairSideMenu({
   });
   const [newSearchOpen, setNewSearchOpen] = useState(false);
   const [hasInitiatedSearch, setHasInitiatedSearch] = useState(false);
+  // "Show only pre-computed" filter. When on, once ONE endpoint is chosen the
+  // other selector is filtered to counterparts that already have a cached
+  // explanation (instant), so users aren't nudged into slow first-time runs.
+  // `cachedFor` says which selector the `cachedNames` set applies to.
+  const [precomputedOnly, setPrecomputedOnly] = useState(true);
+  const [cachedNames, setCachedNames] = useState<Set<string> | null>(null);
+  // Counterparts that were computed but yielded NO explanation (no-paths files).
+  // Shown in the same filtered list but marked, so users don't unknowingly pick
+  // one and trigger a run that can only come back empty.
+  const [noPathNames, setNoPathNames] = useState<Set<string> | null>(null);
+  const [cachedFor, setCachedFor] = useState<"source" | "target" | null>(null);
+  // True when the currently-selected counterpart is a no-paths hypothesis.
+  // Captured at pick time because the cached sets clear once both ends are
+  // chosen; drives the "Show Result" vs "Show Explanation" button label.
+  const [selectedIsNoPath, setSelectedIsNoPath] = useState(false);
   const pollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const searchedPairRef = useRef<{ source: string; target: string } | null>(null);
   // Wrapper around the "New Search" toggle + its popover; used to close the
@@ -154,7 +169,7 @@ export default function PairSideMenu({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const { getLabelNamesForType, printResolvedPairCodes } =
+  const { getLabelNamesForType, printResolvedPairCodes, getNameForCode } =
     useResolvedPairCodes(labelsByType);
 
   // Canonical icon mapping per persona id, source of truth so the symbol
@@ -466,6 +481,85 @@ export default function PairSideMenu({
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [availableTypes, defaultTypes.source, defaultTypes.target, searchParamsStr]);
+
+  // For the "only pre-computed" filter: once exactly one endpoint is chosen,
+  // fetch which entities on the OTHER side already have a cached explanation.
+  // Clears when neither or both are chosen (nothing to filter).
+  useEffect(() => {
+    const dataset = selectedPersona?.dataset;
+    const task = selectedPersona?.task;
+    const persona = selectedPersona?.id;
+    const sourceFilled = !!source.id;
+    const targetFilled = !!target.id;
+    if (
+      !precomputedOnly ||
+      !dataset ||
+      !task ||
+      !persona ||
+      sourceFilled === targetFilled
+    ) {
+      setCachedNames(null);
+      setNoPathNames(null);
+      setCachedFor(null);
+      return;
+    }
+    const { sourceCode, targetCode } = printResolvedPairCodes({
+      dataset,
+      task,
+      source,
+      target,
+    });
+    const params = new URLSearchParams({ dataset, task, persona });
+    let filterSide: "source" | "target";
+    if (sourceFilled) {
+      if (!sourceCode) return;
+      params.set("sourceCode", sourceCode);
+      filterSide = "target";
+    } else {
+      if (!targetCode) return;
+      params.set("targetCode", targetCode);
+      filterSide = "source";
+    }
+    let cancelled = false;
+    fetch(`/api/cached-pairs?${params.toString()}`)
+      .then((r) => r.json())
+      .then(
+        (json: {
+          endpoints?: { name: string }[];
+          noPathCodes?: string[];
+        }) => {
+          if (cancelled) return;
+          setCachedNames(new Set((json.endpoints ?? []).map((e) => e.name)));
+          setNoPathNames(
+            new Set(
+              (json.noPathCodes ?? [])
+                .map((code) => getNameForCode(code))
+                .filter((name) => name)
+            )
+          );
+          setCachedFor(filterSide);
+        }
+      )
+      .catch(() => {
+        if (!cancelled) {
+          setCachedNames(null);
+          setNoPathNames(null);
+          setCachedFor(null);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    precomputedOnly,
+    source,
+    target,
+    selectedPersona?.dataset,
+    selectedPersona?.task,
+    selectedPersona?.id,
+    printResolvedPairCodes,
+    getNameForCode,
+  ]);
 
   const styles = {
     aside: {
@@ -923,6 +1017,40 @@ export default function PairSideMenu({
               padding: 0,
             }}
           >
+            <label
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.45rem",
+                marginBottom: "0.6rem",
+                fontSize: "0.74rem",
+                color: `${colors.white}d0`,
+                fontWeight: 600,
+                cursor: "pointer",
+              }}
+              title="When on, choosing one endpoint filters the other to hypotheses that already have a computed explanation (instant). Turn off to explore any pair — a first-time run takes ~1–3 min."
+            >
+              <input
+                type="checkbox"
+                checked={precomputedOnly}
+                onChange={(e) => {
+                  const next = e.target.checked;
+                  setPrecomputedOnly(next);
+                  setSelectedIsNoPath(false);
+                  // Reset whichever side the filter was narrowing so its list is
+                  // immediately browsable again (the full list when turning the
+                  // filter off) instead of retaining a now-stale filtered value
+                  // that the search box would collapse straight back down to.
+                  if (cachedFor === "source")
+                    setSource((prev) => ({ ...prev, id: "" }));
+                  else if (cachedFor === "target")
+                    setTarget((prev) => ({ ...prev, id: "" }));
+                }}
+                style={{ cursor: "pointer" }}
+              />
+              Only pre-computed hypotheses
+            </label>
+
             {selectorsConfig.map(({ title, role, state, setState }) => (
               <SelectorBlock
                 key={title}
@@ -930,16 +1058,34 @@ export default function PairSideMenu({
                 mainValue={state.type}
                 setMainValue={() => {}}
                 secondaryValue={state.id}
-                setSecondaryValue={(value) =>
-                  setState((prev) => ({
-                    ...prev,
-                    id: value,
-                  }))
-                }
+                setSecondaryValue={(value) => {
+                  setState((prev) => ({ ...prev, id: value }));
+                  // Capture no-paths-ness now, while the sets are still
+                  // populated (they clear once both ends are selected).
+                  setSelectedIsNoPath(
+                    precomputedOnly && role === cachedFor
+                      ? Boolean(noPathNames?.has(value))
+                      : false
+                  );
+                }}
                 mainOptions={state.type ? [state.type] : []}
                 secondaryOptions={
-                  state.type ? getLabelNamesForType(state.type) : []
+                  !state.type
+                    ? []
+                    : precomputedOnly &&
+                        cachedFor === role &&
+                        (cachedNames || noPathNames)
+                      ? getLabelNamesForType(state.type).filter(
+                          (n) =>
+                            Boolean(cachedNames?.has(n)) ||
+                            Boolean(noPathNames?.has(n))
+                        )
+                      : getLabelNamesForType(state.type)
                 }
+                secondaryMutedOptions={
+                  cachedFor === role ? noPathNames ?? undefined : undefined
+                }
+                secondaryMutedGroupLabel="No valid paths found"
                 mainLabel="Type"
                 secondaryLabel="Name"
                 allowDeselect={false}
@@ -1171,10 +1317,16 @@ export default function PairSideMenu({
                     }}
                   >
                     {jobState.status === "checking"
-                      ? "Checking..."
+                      ? precomputedOnly
+                        ? "Loading..."
+                        : "Checking..."
                       : searchInProgress
                         ? "Generating..."
-                        : "Search Explanation"}
+                        : precomputedOnly
+                          ? selectedIsNoPath
+                            ? "Show Result"
+                            : "Show Explanation"
+                          : "Search Explanation"}
                   </button>
                 )}
               </div>

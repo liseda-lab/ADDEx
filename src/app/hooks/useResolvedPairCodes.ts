@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 import { typeMatchesPreference } from "./taskDefaults";
 
 export interface SelectionState {
@@ -81,8 +81,28 @@ export default function useResolvedPairCodes(labelsByType: LabelsByType) {
     [getCodeForSelection]
   );
 
+  // Reverse of getCodeForSelection: resolve a graph_labels code back to its
+  // display name. Used to label no-paths pairs (which have no nodes to read a
+  // name from) recovered from a saved pair id. Codes are globally unique
+  // (type-prefixed), so a single flat map is safe across types.
+  const codeToName = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const labels of Object.values(labelsByType)) {
+      for (const label of labels) {
+        if (label.code) map.set(label.code, label.name);
+      }
+    }
+    return map;
+  }, [labelsByType]);
+
+  const getNameForCode = useCallback(
+    (code: string) => codeToName.get(code) ?? "",
+    [codeToName]
+  );
+
   return {
     getLabelNamesForType,
     printResolvedPairCodes,
+    getNameForCode,
   };
 }

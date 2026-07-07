@@ -12,11 +12,24 @@ interface DropdownProps {
   allowDeselect?: boolean;
   resetKey?: number;
   searchable?: boolean;
+  // When true (default), a list that collapses to exactly one option auto-
+  // commits it — correct for a forced single-choice select. It is WRONG for a
+  // searchable combobox whose options are dynamically filtered: a filter that
+  // happens to leave one result would silently select it (e.g. the
+  // "only pre-computed" filter leaving a single cached target). Such callers
+  // pass false so the choice stays explicit.
+  autoSelectSingle?: boolean;
   // Optional display mapping: when given, options are shown with
   // `displayFor(option)` but the underlying value passed to onChange / stored
   // in state stays the raw option. Used e.g. to show OREGANO "Protein" as
   // "Target" without changing the lookup logic.
   displayFor?: (value: string) => string;
+  // When provided, options in this set are rendered as a separate, dimmed group
+  // below a `mutedGroupLabel` divider (instead of interleaved). Used by the
+  // "only pre-computed" filter to list no-paths hypotheses apart from the ones
+  // that actually have an explanation. Muted options stay selectable.
+  mutedOptions?: Set<string>;
+  mutedGroupLabel?: string;
 }
 
 export function Dropdown({
@@ -28,7 +41,10 @@ export function Dropdown({
   allowDeselect = true,
   resetKey,
   searchable = false,
+  autoSelectSingle = true,
   displayFor,
+  mutedOptions,
+  mutedGroupLabel,
 }: DropdownProps) {
   const colors = useTheme();
   const OPTION_ROW_HEIGHT = 34;
@@ -90,13 +106,13 @@ export function Dropdown({
       isDeselected = true;
     }
 
-    if (options.length === 1 && value === "" && !isDeselected) {
+    if (autoSelectSingle && options.length === 1 && value === "" && !isDeselected) {
       onChange(options[0]);
     }
 
     prevOptionsRef.current = options;
     prevValueRef.current = value;
-  }, [options, value, onChange, userDeselected]);
+  }, [options, value, onChange, userDeselected, autoSelectSingle]);
 
   useEffect(() => {
     setPortalReady(true);
@@ -110,7 +126,7 @@ export function Dropdown({
     };
   }, []);
 
-  const filteredOptions = useMemo(() => {
+  const baseFilteredOptions = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
 
     if (!normalizedQuery) return options;
@@ -119,6 +135,35 @@ export function Dropdown({
       option.toLowerCase().startsWith(normalizedQuery)
     );
   }, [options, query]);
+
+  // Grouping: when `mutedOptions` is supplied, split the filtered list into a
+  // primary group and a muted group shown under `mutedGroupLabel`. The flat
+  // `filteredOptions` below keeps primary-then-muted order (divider excluded)
+  // so keyboard nav and selection stay correct.
+  const grouped = Boolean(mutedOptions && mutedOptions.size > 0);
+
+  const { normalOptions, mutedFilteredOptions } = useMemo(() => {
+    if (!grouped) {
+      return {
+        normalOptions: baseFilteredOptions,
+        mutedFilteredOptions: [] as string[],
+      };
+    }
+    const normal: string[] = [];
+    const muted: string[] = [];
+    for (const option of baseFilteredOptions) {
+      (mutedOptions!.has(option) ? muted : normal).push(option);
+    }
+    return { normalOptions: normal, mutedFilteredOptions: muted };
+  }, [grouped, baseFilteredOptions, mutedOptions]);
+
+  const filteredOptions = useMemo(
+    () =>
+      grouped
+        ? [...normalOptions, ...mutedFilteredOptions]
+        : baseFilteredOptions,
+    [grouped, normalOptions, mutedFilteredOptions, baseFilteredOptions]
+  );
 
   const visibleWindow = useMemo(() => {
     if (!menuPosition) {
@@ -154,20 +199,24 @@ export function Dropdown({
       if (!inputWrapperRef.current) return;
 
       const rect = inputWrapperRef.current.getBoundingClientRect();
-      const viewportPadding = 8;
+      const viewportPadding = 12;
       const viewportWidth = window.innerWidth;
       const viewportHeight = window.innerHeight;
       const preferredTop = rect.bottom + 4;
       const spaceBelow = viewportHeight - preferredTop - viewportPadding;
       const spaceAbove = rect.top - viewportPadding - 4;
-      const maxHeight = Math.max(
-        120,
-        Math.min(220, spaceBelow >= 120 ? spaceBelow : spaceAbove)
-      );
-      const showAbove = spaceBelow < 120 && spaceAbove > spaceBelow;
+      // Flip the menu above the input when there isn't comfortable room below
+      // and there's more room above, so a long list (e.g. the grouped
+      // pre-computed list low in the panel) isn't clipped against the bottom
+      // of the viewport.
+      const showAbove = spaceBelow < 240 && spaceAbove > spaceBelow;
+      const available = showAbove ? spaceAbove : spaceBelow;
+      const maxHeight = Math.max(140, Math.min(280, available));
+      const dividerAllowance =
+        grouped && mutedFilteredOptions.length > 0 ? 28 : 0;
       const naturalMenuHeight = Math.max(
         OPTION_ROW_HEIGHT,
-        filteredOptions.length * OPTION_ROW_HEIGHT
+        filteredOptions.length * OPTION_ROW_HEIGHT + dividerAllowance
       );
       const menuHeight = Math.min(maxHeight, naturalMenuHeight);
 
@@ -365,6 +414,10 @@ export function Dropdown({
                     onChange("");
                     setUserDeselected(true);
                     setIsOpen(false);
+                    // Guard the blur handler from restoring the just-cleared
+                    // value via its stale-closure reset (same reason commitOption
+                    // sets this) — otherwise the first click appears to do nothing.
+                    justCommittedRef.current = true;
                     inputRef.current?.blur();
                   }}
                   title="Clear selection"
@@ -418,55 +471,124 @@ export function Dropdown({
                     setScrollTop(event.currentTarget.scrollTop)
                   }
                 >
-                  <div
-                    style={{
-                      height: filteredOptions.length * OPTION_ROW_HEIGHT,
-                      position: "relative",
-                    }}
-                  >
-                    {visibleWindow.visibleOptions.map((opt, index) => {
-                      const absoluteIndex = visibleWindow.startIndex + index;
-                      const isHighlighted = absoluteIndex === highlightedIndex;
-                      return (
-                        <button
-                          key={opt}
-                          type="button"
-                          onMouseDown={(e) => e.preventDefault()}
-                          onMouseEnter={() => setHighlightedIndex(absoluteIndex)}
-                          onClick={() => commitOption(opt)}
-                          style={{
-                            position: "absolute",
-                            top: absoluteIndex * OPTION_ROW_HEIGHT,
-                            left: 0,
-                            right: 0,
-                            height: OPTION_ROW_HEIGHT,
-                            display: "block",
-                            textAlign: "left" as const,
-                            padding: "8px 10px",
-                            border: "none",
-                            background: isHighlighted
-                              ? `${colors.white}30`
-                              : opt === value
-                              ? `${colors.white}18`
-                              : "transparent",
-                            color: colors.white,
-                            opacity: 1,
-                            cursor: "pointer",
-                            fontSize: "0.84rem",
-                            whiteSpace: "nowrap" as const,
-                            // Truncate ultra-long names with ellipsis instead
-                            // of letting them spill out of the capped menu.
-                            overflow: "hidden" as const,
-                            textOverflow: "ellipsis" as const,
-                            lineHeight: 1.35,
-                            width: "100%",
-                          }}
-                        >
-                          {displayFor ? displayFor(opt) : opt}
-                        </button>
-                      );
-                    })}
-                  </div>
+                  {grouped ? (
+                    // Grouped render (small filtered list): a "no valid paths"
+                    // divider between the primary options and the dimmed muted
+                    // ones. Not virtualized — the pre-computed set for one
+                    // endpoint is bounded, so a flow layout keeps the divider
+                    // trivial to place.
+                    <div>
+                      {filteredOptions.map((opt, absoluteIndex) => {
+                        const isMuted = Boolean(mutedOptions?.has(opt));
+                        const isHighlighted = absoluteIndex === highlightedIndex;
+                        return (
+                          <React.Fragment key={opt}>
+                            {isMuted &&
+                              absoluteIndex === normalOptions.length && (
+                                <div
+                                  style={{
+                                    padding: "5px 10px",
+                                    fontSize: "0.72rem",
+                                    fontWeight: 600,
+                                    color: `${colors.white}80`,
+                                    backgroundColor: `${colors.white}0d`,
+                                    borderTop: `0.5px solid ${colors.white}20`,
+                                    borderBottom: `0.5px solid ${colors.white}20`,
+                                  }}
+                                >
+                                  {mutedGroupLabel ?? "No valid paths found"}
+                                </div>
+                              )}
+                            <button
+                              type="button"
+                              onMouseDown={(e) => e.preventDefault()}
+                              onMouseEnter={() =>
+                                setHighlightedIndex(absoluteIndex)
+                              }
+                              onClick={() => commitOption(opt)}
+                              style={{
+                                height: OPTION_ROW_HEIGHT,
+                                display: "block",
+                                textAlign: "left" as const,
+                                padding: "8px 10px",
+                                border: "none",
+                                background: isHighlighted
+                                  ? `${colors.white}30`
+                                  : opt === value
+                                  ? `${colors.white}18`
+                                  : "transparent",
+                                color: isMuted
+                                  ? `${colors.white}85`
+                                  : colors.white,
+                                cursor: "pointer",
+                                fontSize: "0.84rem",
+                                whiteSpace: "nowrap" as const,
+                                overflow: "hidden" as const,
+                                textOverflow: "ellipsis" as const,
+                                lineHeight: 1.35,
+                                width: "100%",
+                              }}
+                            >
+                              {displayFor ? displayFor(opt) : opt}
+                            </button>
+                          </React.Fragment>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div
+                      style={{
+                        height: filteredOptions.length * OPTION_ROW_HEIGHT,
+                        position: "relative",
+                      }}
+                    >
+                      {visibleWindow.visibleOptions.map((opt, index) => {
+                        const absoluteIndex = visibleWindow.startIndex + index;
+                        const isHighlighted =
+                          absoluteIndex === highlightedIndex;
+                        return (
+                          <button
+                            key={opt}
+                            type="button"
+                            onMouseDown={(e) => e.preventDefault()}
+                            onMouseEnter={() =>
+                              setHighlightedIndex(absoluteIndex)
+                            }
+                            onClick={() => commitOption(opt)}
+                            style={{
+                              position: "absolute",
+                              top: absoluteIndex * OPTION_ROW_HEIGHT,
+                              left: 0,
+                              right: 0,
+                              height: OPTION_ROW_HEIGHT,
+                              display: "block",
+                              textAlign: "left" as const,
+                              padding: "8px 10px",
+                              border: "none",
+                              background: isHighlighted
+                                ? `${colors.white}30`
+                                : opt === value
+                                ? `${colors.white}18`
+                                : "transparent",
+                              color: colors.white,
+                              opacity: 1,
+                              cursor: "pointer",
+                              fontSize: "0.84rem",
+                              whiteSpace: "nowrap" as const,
+                              // Truncate ultra-long names with ellipsis instead
+                              // of letting them spill out of the capped menu.
+                              overflow: "hidden" as const,
+                              textOverflow: "ellipsis" as const,
+                              lineHeight: 1.35,
+                              width: "100%",
+                            }}
+                          >
+                            {displayFor ? displayFor(opt) : opt}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>,
                 document.body
               )}

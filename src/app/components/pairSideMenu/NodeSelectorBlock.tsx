@@ -17,6 +17,11 @@ interface SelectorBlockProps {
   // show alternative labels (e.g. "Target" for OREGANO Proteins) without
   // changing the stored value.
   mainDisplayFor?: (value: string) => string;
+  // When provided, these secondary (name) options render as a dimmed group
+  // under `secondaryMutedGroupLabel` — used to list no-paths hypotheses apart
+  // from the ones with an explanation in the "only pre-computed" filter.
+  secondaryMutedOptions?: Set<string>;
+  secondaryMutedGroupLabel?: string;
 }
 
 export default function SelectorBlock({
@@ -31,6 +36,8 @@ export default function SelectorBlock({
   secondaryLabel = "Name",
   allowDeselect = true,
   mainDisplayFor,
+  secondaryMutedOptions,
+  secondaryMutedGroupLabel,
 }: SelectorBlockProps) {
   const colors = useTheme();
   const isLocked = !allowDeselect;
@@ -130,6 +137,12 @@ export default function SelectorBlock({
             onChange={(val) => setSecondaryValue(val)}
             allowDeselect
             searchable
+            // Never auto-commit the name, even when the "only pre-computed"
+            // filter leaves a single option — the pick must stay explicit so
+            // toggling the filter off doesn't leave a silently-selected value.
+            autoSelectSingle={false}
+            mutedOptions={secondaryMutedOptions}
+            mutedGroupLabel={secondaryMutedGroupLabel}
           />
         </div>
       )}
