@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Database } from "phosphor-react";
 import CardsPage from "../../components/general/CardsPage";
 import DatasetCard from "./DatasetCard";
+import EntityAvailability from "../guide/EntityAvailability";
 import { useTheme } from "../../../../styles/ThemeContext";
 
 export default function DatasetPage() {
@@ -83,6 +84,24 @@ export default function DatasetPage() {
         >
           ← Back to profiles
         </button>
+      }
+      outro={
+        <div
+          style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
+        >
+          <p
+            style={{
+              margin: 0,
+              color: `${colors.white}c0`,
+              fontSize: "0.85rem",
+              lineHeight: 1.5,
+            }}
+          >
+            Not sure a dataset has your drug, disease, gene or protein? Check
+            here:
+          </p>
+          <EntityAvailability />
+        </div>
       }
       actions={
         <Link

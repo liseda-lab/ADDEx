@@ -8,6 +8,7 @@ import { ExplanationSearchState, Pair } from "../../hooks/types";
 import { useTheme, useThemeContext } from "../../../../styles/ThemeContext";
 import SumSideMenu from "../../components/sumSideMenu/SumSideMenu";
 import Navbar from "../../components/general/Navbar";
+import EntityAvailabilityLauncher from "../guide/EntityAvailabilityLauncher";
 
 // Curated example pairs drawn from the ADDEx paper case studies. Each one is
 // known to have paths, so clicking → Search yields a result. Labels match the
@@ -364,6 +365,14 @@ export default function SearchPage() {
       }}
     >
       <Navbar />
+
+      {/* Small corner trigger to check which datasets contain an entity,
+          without leaving the search flow. */}
+      <div
+        style={{ position: "fixed", top: 70, right: 16, zIndex: 1500 }}
+      >
+        <EntityAvailabilityLauncher compact />
+      </div>
 
       <div style={{ display: "flex", flex: 1 }}>
         {/* LEFT MENU */}

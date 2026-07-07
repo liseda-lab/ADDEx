@@ -16,11 +16,13 @@ import {
   LinkSimple,
   DownloadSimple,
   FlowArrow,
+  MagnifyingGlass,
 } from "phosphor-react";
 import type { Icon as PhosphorIcon } from "phosphor-react";
 import Navbar from "../../components/general/Navbar";
 import PageText from "../../components/general/PageText";
 import { useTheme, useThemeContext } from "../../../../styles/ThemeContext";
+import EntityAvailability from "./EntityAvailability";
 
 interface SchemaStep {
   label: string;
@@ -244,6 +246,7 @@ export default function GuidePage() {
           >
             {[
               { id: "how-it-works", label: "How it works" },
+              { id: "entity-check", label: "Find an entity" },
               { id: "reading", label: "Reading the results" },
               { id: "faq", label: "FAQ" },
             ].map((item) => (
@@ -359,6 +362,14 @@ export default function GuidePage() {
             </div>
           ))}
         </div>
+
+        {sectionHeading(
+          "entity-check",
+          "Which dataset has my entity?",
+          MagnifyingGlass,
+          "Type a drug, disease, gene, or protein to see which datasets contain it, and under which tasks — handy for picking a dataset before you search."
+        )}
+        <EntityAvailability />
 
         {sectionHeading(
           "reading",

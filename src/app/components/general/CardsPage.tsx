@@ -19,9 +19,13 @@ interface CardsPageProps {
   children: ReactNode;
   actions?: ReactNode;
   topActions?: ReactNode;
+  // Full-width content rendered between the banner and the card grid.
+  intro?: ReactNode;
+  // Full-width content rendered after the card grid (before actions).
+  outro?: ReactNode;
 }
 
-export default function CardsPage({ title, banner, children, actions, topActions }: CardsPageProps) {
+export default function CardsPage({ title, banner, children, actions, topActions, intro, outro }: CardsPageProps) {
   const colors = useTheme();
   return (
     <>
@@ -78,9 +82,13 @@ export default function CardsPage({ title, banner, children, actions, topActions
 
         {banner && <Banner {...banner} />}
 
+        {intro && <div style={{ marginTop: "1rem" }}>{intro}</div>}
+
         <div className="cards-grid">
           {children}
         </div>
+
+        {outro && <div style={{ marginTop: "1.5rem" }}>{outro}</div>}
 
         {actions && (
           <div className="cards-actions">
