@@ -845,13 +845,18 @@ export default function PairSideMenu({
                     onChange={(event) => {
                       const nextDataset = event.target.value;
                       const datasetEntry = datasetOptions.find((d) => d.name === nextDataset);
-                      // Preserve the user's current task if the new dataset supports it;
-                      // otherwise clear the task so they pick a valid one rather than
-                      // silently auto-assigning.
+                      const tasks = datasetEntry?.tasks ?? [];
+                      // If the dataset supports only one task, auto-select it
+                      // (e.g. PrimeKG → Drug Repurposing) so the user isn't
+                      // forced to pick from a list of one. Otherwise keep the
+                      // current task if the new dataset still supports it, else
+                      // clear it so they pick a valid one.
                       const nextTask =
-                        datasetEntry?.tasks.includes(selectedPersona?.task ?? "")
-                          ? (selectedPersona?.task ?? "")
-                          : "";
+                        tasks.length === 1
+                          ? tasks[0]
+                          : tasks.includes(selectedPersona?.task ?? "")
+                            ? (selectedPersona?.task ?? "")
+                            : "";
                       applySearchContext({
                         dataset: nextDataset,
                         task: nextTask,
@@ -885,7 +890,13 @@ export default function PairSideMenu({
                     onChange={(event) =>
                       applySearchContext({ task: event.target.value })
                     }
-                    disabled={!selectedPersona?.dataset}
+                    // Disabled when no dataset is chosen, or when the dataset
+                    // offers a single task (auto-selected, e.g. PrimeKG) so it
+                    // reads as fixed rather than a one-item dropdown.
+                    disabled={
+                      !selectedPersona?.dataset ||
+                      (currentDatasetOption?.tasks ?? []).length <= 1
+                    }
                     style={personaSelectStyles(colors.white)}
                   >
                     <option value="" disabled>

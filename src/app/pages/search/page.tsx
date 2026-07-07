@@ -14,7 +14,7 @@ import Navbar from "../../components/general/Navbar";
 // graph_labels.tsv entries exactly (verified). Dataset colors follow the
 // semantic palette (purple/blue/green for Hetionet/Oregano/PrimeKG).
 interface ExamplePair {
-  dataset: "hetionet" | "oregano";
+  dataset: "hetionet" | "oregano" | "primekg";
   task: "drug_repurposing" | "drug_target";
   taskLabel: string;
   sourceType: string;
@@ -52,6 +52,46 @@ const EXAMPLE_PAIRS: ExamplePair[] = [
   },
 ];
 
+// Fixed, hand-picked examples shown once the user has chosen a dataset + task
+// (keyed by `${dataset}_${task}`). Every pair is pre-computed — paths cached in
+// all three personas so it loads instantly under any persona — and each combo's
+// first entry is the paper case study. Names/types match the graph labels
+// exactly (verified against the cached pairs). Note OREGANO names follow the
+// source data's casing (e.g. lowercase "warfarin").
+const DATASET_EXAMPLES: Record<string, ExamplePair[]> = {
+  hetionet_drug_repurposing: [
+    { dataset: "hetionet", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Compound", sourceName: "Budesonide", targetType: "Disease", targetName: "Asthma" },
+    { dataset: "hetionet", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Compound", sourceName: "Methotrexate", targetType: "Disease", targetName: "Systemic Lupus Erythematosus" },
+    { dataset: "hetionet", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Compound", sourceName: "Phentermine", targetType: "Disease", targetName: "Obesity" },
+  ],
+  hetionet_drug_target: [
+    { dataset: "hetionet", task: "drug_target", taskLabel: "Drug-Target Interaction", sourceType: "Compound", sourceName: "Apomorphine", targetType: "Gene", targetName: "Drd2" },
+    { dataset: "hetionet", task: "drug_target", taskLabel: "Drug-Target Interaction", sourceType: "Compound", sourceName: "Acetaminophen", targetType: "Gene", targetName: "Abcb1" },
+    { dataset: "hetionet", task: "drug_target", taskLabel: "Drug-Target Interaction", sourceType: "Compound", sourceName: "Fluticasone Propionate", targetType: "Gene", targetName: "Cyp3a4" },
+  ],
+  primekg_drug_repurposing: [
+    { dataset: "primekg", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Drug", sourceName: "Famotidine", targetType: "Disease", targetName: "Peptic Esophagitis" },
+    { dataset: "primekg", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Drug", sourceName: "Lindane", targetType: "Disease", targetName: "Scabies" },
+    { dataset: "primekg", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Drug", sourceName: "Mianserin", targetType: "Disease", targetName: "Endogenous Depression" },
+  ],
+  oregano_drug_repurposing: [
+    { dataset: "oregano", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Compound", sourceName: "warfarin", targetType: "Disease", targetName: "Ataxia" },
+    { dataset: "oregano", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Compound", sourceName: "ethambutol", targetType: "Disease", targetName: "Tremor" },
+    { dataset: "oregano", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Compound", sourceName: "escitalopram", targetType: "Disease", targetName: "Denture stomatitis" },
+  ],
+  oregano_drug_target: [
+    { dataset: "oregano", task: "drug_target", taskLabel: "Drug-Target Interaction", sourceType: "Compound", sourceName: "Apomorphine", targetType: "Protein", targetName: "Dopamine D4 receptor" },
+    { dataset: "oregano", task: "drug_target", taskLabel: "Drug-Target Interaction", sourceType: "Compound", sourceName: "etoposide", targetType: "Protein", targetName: "Ca-Ski" },
+    { dataset: "oregano", task: "drug_target", taskLabel: "Drug-Target Interaction", sourceType: "Compound", sourceName: "Latrunculin A", targetType: "Protein", targetName: "Tankyrase-2" },
+  ],
+};
+
+// Display helper: capitalize just the first letter for the card label. The
+// underlying sourceName/targetName stay verbatim so they still resolve against
+// the (case-sensitive) graph labels — OREGANO stores some names lowercase.
+const capitalizeFirst = (name: string) =>
+  name ? name.charAt(0).toUpperCase() + name.slice(1) : name;
+
 export default function SearchPage() {
   const colors = useTheme();
   const { theme } = useThemeContext();
@@ -60,6 +100,15 @@ export default function SearchPage() {
   const hasDataset = !!searchParams.get("dataset");
   const hasTask = !!searchParams.get("task");
   const contextReady = hasPersona && hasDataset && hasTask;
+
+  // Show dataset-specific examples once a dataset + task are chosen; otherwise
+  // (landing / Quick Search) show the cross-dataset paper examples.
+  const exampleDataset = searchParams.get("dataset");
+  const exampleTask = searchParams.get("task");
+  const exampleSet: ExamplePair[] =
+    exampleDataset && exampleTask
+      ? DATASET_EXAMPLES[`${exampleDataset}_${exampleTask}`] ?? EXAMPLE_PAIRS
+      : EXAMPLE_PAIRS;
 
   // Error text uses the current persona's accent so the message lines up with
   // the symbol color in the left panel. Mirrors `personaAccentFor` in
@@ -550,7 +599,7 @@ export default function SearchPage() {
                               gap: "0.75rem",
                             }}
                           >
-                            {EXAMPLE_PAIRS.map((ex) => {
+                            {exampleSet.map((ex) => {
                               const accentIdx =
                                 ex.dataset === "hetionet"
                                   ? 0
@@ -654,7 +703,7 @@ export default function SearchPage() {
                                       lineHeight: 1.3,
                                     }}
                                   >
-                                    {ex.sourceName} → {ex.targetName}
+                                    {capitalizeFirst(ex.sourceName)} → {capitalizeFirst(ex.targetName)}
                                   </div>
                                 </Link>
                               );
