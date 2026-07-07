@@ -121,7 +121,7 @@ export default function GuidePage() {
     },
     {
       q: "My search returned no paths. What should I do?",
-      a: "Not every source–target hypothesis has a valid path in the selected graph. Try a different target, switch to another knowledge graph that covers the hypothesis, or use one of the example hypotheses from the search page to sanity-check your setup.",
+      a: "Not every source–target pair has a valid path in the selected graph. Try a different target, the “Only pre-computed hypotheses” switch narrows the list to ones that already have a ready explanation, though any other pair can still be run for the first time. The examples on the search page are a quick sanity check.",
     },
     {
       q: "How long does a search take?",
