@@ -8,6 +8,9 @@ import EntityAvailability from "./EntityAvailability";
 interface Props {
   label?: string;
   compact?: boolean;
+  // Render as a small round icon-only button (used as a corner button on the
+  // search page, where a full-width labelled button overlaps the graph toolbar).
+  iconOnly?: boolean;
 }
 
 // Small trigger that opens the entity-availability checker in a modal. Used on
@@ -15,6 +18,7 @@ interface Props {
 export default function EntityAvailabilityLauncher({
   label = "Which dataset has my entity?",
   compact = false,
+  iconOnly = false,
 }: Props) {
   const colors = useTheme();
   const [open, setOpen] = useState(false);
@@ -33,24 +37,47 @@ export default function EntityAvailabilityLauncher({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 6,
-          padding: compact ? "0.35rem 0.65rem" : "0.5rem 0.8rem",
-          borderRadius: 8,
-          border: `1px solid ${colors.white}30`,
-          background: `${colors.white}0d`,
-          color: colors.white,
-          fontSize: compact ? "0.76rem" : "0.82rem",
-          fontWeight: 600,
-          cursor: "pointer",
-          lineHeight: 1.3,
-          whiteSpace: "nowrap",
-        }}
+        title={iconOnly ? label : undefined}
+        aria-label={iconOnly ? label : undefined}
+        style={
+          iconOnly
+            ? {
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 40,
+                height: 40,
+                borderRadius: "50%",
+                border: `1px solid ${colors.white}30`,
+                background: colors.card,
+                color: colors.white,
+                cursor: "pointer",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.22)",
+              }
+            : {
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                padding: compact ? "0.35rem 0.65rem" : "0.5rem 0.9rem",
+                borderRadius: 8,
+                border: "none",
+                background: colors.buttons,
+                color: "#FFFFFF",
+                fontSize: compact ? "0.76rem" : "0.82rem",
+                fontWeight: 600,
+                cursor: "pointer",
+                lineHeight: 1.3,
+                whiteSpace: "nowrap",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.18)",
+              }
+        }
       >
-        <MagnifyingGlass size={14} weight="bold" aria-hidden="true" />
-        {label}
+        <MagnifyingGlass
+          size={iconOnly ? 18 : 14}
+          weight="bold"
+          aria-hidden="true"
+        />
+        {iconOnly ? null : label}
       </button>
 
       {open && (

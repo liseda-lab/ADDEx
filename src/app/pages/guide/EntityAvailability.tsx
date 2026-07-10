@@ -101,6 +101,27 @@ export default function EntityAvailability({
         gap: "0.85rem",
       }}
     >
+      {!bare && (
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <MagnifyingGlass
+            size={18}
+            weight="bold"
+            color={colors.white}
+            aria-hidden="true"
+          />
+          <h3
+            style={{
+              margin: 0,
+              color: colors.white,
+              fontSize: "0.95rem",
+              fontWeight: 700,
+            }}
+          >
+            Which dataset has my entity?
+          </h3>
+        </div>
+      )}
+
       <div style={{ position: "relative" }}>
         <MagnifyingGlass
           size={16}
@@ -122,6 +143,7 @@ export default function EntityAvailability({
           aria-label="Search for an entity to see which datasets contain it"
           style={{
             width: "100%",
+            boxSizing: "border-box",
             padding: "0.6rem 0.75rem 0.6rem 2.1rem",
             borderRadius: 10,
             border: `1px solid ${colors.white}25`,
@@ -258,9 +280,9 @@ export default function EntityAvailability({
           lineHeight: 1.5,
         }}
       >
-        “Available” means the entity exists as a node in that dataset — not that
-        a given pair will have a path. Use the “Only pre-computed hypotheses”
-        switch on the search page to see which pairs are ready.
+        “Available” means the entity exists as a node in that dataset, not that
+        a given hypothesis will have a path. Use the “Only pre-computed
+        hypotheses” switch on the search page to see which hypotheses are ready.
       </p>
     </div>
   );

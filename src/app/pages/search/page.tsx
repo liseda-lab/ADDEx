@@ -366,14 +366,6 @@ export default function SearchPage() {
     >
       <Navbar />
 
-      {/* Small corner trigger to check which datasets contain an entity,
-          without leaving the search flow. */}
-      <div
-        style={{ position: "fixed", top: 70, right: 16, zIndex: 1500 }}
-      >
-        <EntityAvailabilityLauncher compact />
-      </div>
-
       <div style={{ display: "flex", flex: 1 }}>
         {/* LEFT MENU */}
         <SideMenu
@@ -719,6 +711,10 @@ export default function SearchPage() {
                             })}
                           </div>
                         </div>
+
+                        <div style={{ display: "flex", justifyContent: "center" }}>
+                          <EntityAvailabilityLauncher />
+                        </div>
                       </div>
                     )}
                   </div>
@@ -771,6 +767,21 @@ export default function SearchPage() {
                   />
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* Entity-availability checker below the graph so users can look up
+              dataset coverage without leaving the result. Only when the graph
+              is actually on screen (shown and not collapsed). */}
+          {selectedPair && showGraphComponent && !graphCollapsed && (
+            <div
+              style={{
+                marginTop: "1.25rem",
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <EntityAvailabilityLauncher />
             </div>
           )}
         </main>
