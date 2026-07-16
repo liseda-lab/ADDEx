@@ -87,14 +87,7 @@ export default function SoftwarePage() {
         title: "REx Reasoning Engine",
         body: "Path-based link prediction for Drug Repurposing and Drug–Target Interaction. Reinforcement learning discovers and ranks biologically meaningful reasoning paths.",
         Icon: Brain,
-        tech: [
-          "PyTorch",
-          "Torch Geometric",
-          "Reinforcement Learning",
-          "NetworkX",
-          "Pandas",
-          "SciPy",
-        ],
+        tech: ["PyTorch", "Reinforcement Learning"],
         link: {
           url: "https://github.com/liseda-lab/REx_PyTorch/tree/main",
           label: "Repository",
