@@ -15,10 +15,12 @@ import ExamplePairCards, {
 
 // Fixed, hand-picked examples shown once the user has chosen a dataset + task
 // (keyed by `${dataset}_${task}`). Every pair is pre-computed — paths cached in
-// all three personas so it loads instantly under any persona — and each combo's
-// first entry is the paper case study. Names/types match the graph labels
-// exactly (verified against the cached pairs). Note OREGANO names follow the
-// source data's casing (e.g. lowercase "warfarin").
+// all three personas so it loads instantly under any persona. Where the paper
+// has a case study for a combo it leads that combo's list (Hetionet DR/DTI and
+// OREGANO DTI); PrimeKG DR and OREGANO DR have no paper case, so their entries
+// are curated only. Names/types match the graph labels exactly (verified against
+// the cached pairs). Note OREGANO names follow the source data's casing (e.g.
+// lowercase "warfarin").
 const DATASET_EXAMPLES: Record<string, ExamplePair[]> = {
   hetionet_drug_repurposing: [
     { dataset: "hetionet", task: "drug_repurposing", taskLabel: "Drug Repurposing", sourceType: "Compound", sourceName: "Budesonide", targetType: "Disease", targetName: "Asthma" },
