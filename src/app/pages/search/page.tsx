@@ -236,11 +236,25 @@ export default function SearchPage() {
       // Initialize only the first 3 paths as visible
       setVisiblePaths(new Set(selectedPair.paths.slice(0, 3).map((p) => p.id)));
 
-      // LCAs are hidden by default — the default explanation stays LCA-free.
-      // The user opts in via the graph toolbar's "Show LCAs" toggle, or the
-      // per-LCA checkboxes in the Paths panel. Every LCA name for the pair is
-      // available through the `allLcaNames` memo below.
-      setVisibleLCAs(new Set());
+      // LCAs are shown by default. The pre-computed verbalizations are produced
+      // offline with the LCA context and name those ontology classes directly
+      // (e.g. "all involving 20-Oxo Steroids"), so hiding the nodes left the
+      // summary describing entities that were absent from the graph. Showing
+      // them also keeps first-time (on-demand) verbalizations consistent with
+      // pre-computed ones, since the request body sends the visible LCAs.
+      // Mirrors the `allLcaNames` memo below; computed inline to keep this
+      // effect dependent only on `selectedPair`.
+      const lcaNames = new Set<string>();
+      selectedPair.paths.forEach((path) => {
+        if (!path.lowest_common_ancestors) return;
+        Object.values(path.lowest_common_ancestors).forEach((lcaList) => {
+          const arr = Array.isArray(lcaList) ? lcaList : [lcaList];
+          arr.forEach((lca) => {
+            if (lca) lcaNames.add(lca);
+          });
+        });
+      });
+      setVisibleLCAs(lcaNames);
     }
   }, [selectedPair]);
 
@@ -287,9 +301,9 @@ export default function SearchPage() {
       else copy.add(pathId);
       return copy;
     });
-    // LCAs are intentionally NOT auto-included when a path is added. They show
-    // only via the explicit "Show LCAs" toggle / per-LCA checkboxes, keeping
-    // the default explanation LCA-free.
+    // Adding a path does not auto-reveal that path's LCAs; LCA visibility is
+    // controlled independently via the toolbar's Show/Hide LCAs toggle and the
+    // per-LCA checkboxes. LCAs for the pair are shown by default on load.
   }, []);
 
   const toggleLCA = useCallback((lcaName: string) => {
