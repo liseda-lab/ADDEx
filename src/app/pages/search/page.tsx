@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import SideMenu from "../../components/pairSideMenu/PairSideMenu";
 import GraphVisualizer from "../../components/visualizer/graph/GraphVisualizer";
@@ -9,49 +8,10 @@ import { useTheme, useThemeContext } from "../../../../styles/ThemeContext";
 import SumSideMenu from "../../components/sumSideMenu/SumSideMenu";
 import Navbar from "../../components/general/Navbar";
 import EntityAvailabilityLauncher from "../guide/EntityAvailabilityLauncher";
-
-// Curated example pairs drawn from the ADDEx paper case studies. Each one is
-// known to have paths, so clicking → Search yields a result. Labels match the
-// graph_labels.tsv entries exactly (verified). Dataset colors follow the
-// semantic palette (purple/blue/green for Hetionet/Oregano/PrimeKG).
-interface ExamplePair {
-  dataset: "hetionet" | "oregano" | "primekg";
-  task: "drug_repurposing" | "drug_target";
-  taskLabel: string;
-  sourceType: string;
-  sourceName: string;
-  targetType: string;
-  targetName: string;
-}
-const EXAMPLE_PAIRS: ExamplePair[] = [
-  {
-    dataset: "hetionet",
-    task: "drug_repurposing",
-    taskLabel: "Drug Repurposing",
-    sourceType: "Compound",
-    sourceName: "Budesonide",
-    targetType: "Disease",
-    targetName: "Asthma",
-  },
-  {
-    dataset: "hetionet",
-    task: "drug_target",
-    taskLabel: "Drug-Target Interaction",
-    sourceType: "Compound",
-    sourceName: "Apomorphine",
-    targetType: "Gene",
-    targetName: "Drd2",
-  },
-  {
-    dataset: "oregano",
-    task: "drug_target",
-    taskLabel: "Drug-Target Interaction",
-    sourceType: "Compound",
-    sourceName: "Apomorphine",
-    targetType: "Protein",
-    targetName: "Dopamine D4 receptor",
-  },
-];
+import ExamplePairCards, {
+  EXAMPLE_PAIRS,
+  type ExamplePair,
+} from "../../components/general/ExamplePairCards";
 
 // Fixed, hand-picked examples shown once the user has chosen a dataset + task
 // (keyed by `${dataset}_${task}`). Every pair is pre-computed — paths cached in
@@ -90,9 +50,6 @@ const DATASET_EXAMPLES: Record<string, ExamplePair[]> = {
 // Display helper: capitalize just the first letter for the card label. The
 // underlying sourceName/targetName stay verbatim so they still resolve against
 // the (case-sensitive) graph labels — OREGANO stores some names lowercase.
-const capitalizeFirst = (name: string) =>
-  name ? name.charAt(0).toUpperCase() + name.slice(1) : name;
-
 export default function SearchPage() {
   const colors = useTheme();
   const { theme } = useThemeContext();
@@ -456,6 +413,20 @@ export default function SearchPage() {
             transition: "margin 0.2s ease",
           }}
         >
+          {/* Entity lookup sits in the top-right corner as a dropdown, away from
+              the example cards: it is a reference/fact-check tool, not a step in
+              the search flow, and placing it inline read like a third option for
+              picking an entity. Kept in normal flow (rather than positioned over
+              the graph panel) so it never overlaps the visualization toolbar. */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              marginBottom: "0.25rem",
+            }}
+          >
+            <EntityAvailabilityLauncher dropdown iconOnly />
+          </div>
 
           {!selectedPair && (
             <div
@@ -582,153 +553,8 @@ export default function SearchPage() {
                               : "Choose an explanation mode first, then select a dataset and task in the left panel."}
                         </p>
 
-                        <div
-                          style={{
-                            width: "100%",
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "0.75rem",
-                          }}
-                        >
-                          <div
-                            style={{
-                              fontSize: "0.78rem",
-                              fontWeight: 600,
-                              letterSpacing: "0.08em",
-                              textTransform: "uppercase",
-                              color: `${colors.white}88`,
-                              textAlign: "left",
-                            }}
-                          >
-                            Try an example
-                          </div>
-                          <div
-                            style={{
-                              display: "grid",
-                              // 3 equal columns on any reasonable width; wrap
-                              // to single column only when the viewport is
-                              // narrow (≤640px). Fixed columns avoid the
-                              // "Oregano drops to a new row" behavior that
-                              // happened when auto-fit was near its breakpoint.
-                              gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-                              gap: "0.75rem",
-                            }}
-                          >
-                            {exampleSet.map((ex) => {
-                              const accentIdx =
-                                ex.dataset === "hetionet"
-                                  ? 0
-                                  : ex.dataset === "oregano"
-                                    ? 3
-                                    : 6;
-                              const datasetAccent =
-                                theme === "legacy"
-                                  ? colors.firstColor
-                                  : colors.headingAccents[accentIdx];
-                              const isSelected =
-                                searchParams.get("dataset") === ex.dataset &&
-                                searchParams.get("task") === ex.task &&
-                                searchParams.get("sourceName") === ex.sourceName &&
-                                searchParams.get("targetName") === ex.targetName;
-                              // Respect the user's current persona if they've
-                              // already picked one (via wizard or previous
-                              // visit). Fall back to Neutral only when the
-                              // user arrived without selecting a persona.
-                              const personaId = searchParams.get("persona") ?? "neutral_evaluator";
-                              const personaName =
-                                searchParams.get("personaName") ??
-                                (personaId === "mechanistic_analyst"
-                                  ? "Mechanistic Analyst"
-                                  : personaId === "insight_driven"
-                                    ? "Insight Driven"
-                                    : "Neutral");
-                              const personaIcon =
-                                searchParams.get("icon") ??
-                                (personaId === "mechanistic_analyst"
-                                  ? "Gear"
-                                  : personaId === "insight_driven"
-                                    ? "ShareNetwork"
-                                    : "Lightbulb");
-                              // `autorun=1` tells the search page to fire the
-                              // explanation search automatically once the pair
-                              // resolves, so clicking an example loads it
-                              // directly without a second click on the run
-                              // button. Consumed (and stripped) once in
-                              // PairSideMenu's auto-run effect.
-                              const href = `/pages/search?persona=${personaId}&personaName=${encodeURIComponent(personaName)}&icon=${personaIcon}&dataset=${ex.dataset}&task=${ex.task}&sourceType=${encodeURIComponent(ex.sourceType)}&sourceName=${encodeURIComponent(ex.sourceName)}&targetType=${encodeURIComponent(ex.targetType)}&targetName=${encodeURIComponent(ex.targetName)}&autorun=1`;
-                              return (
-                                <Link
-                                  key={`${ex.dataset}-${ex.task}-${ex.sourceName}-${ex.targetName}`}
-                                  href={href}
-                                  aria-current={isSelected ? "true" : undefined}
-                                  style={{
-                                    textAlign: "left",
-                                    textDecoration: "none",
-                                    padding: "0.85rem 1rem",
-                                    borderRadius: 10,
-                                    background: isSelected
-                                      ? `${datasetAccent}33`
-                                      : colors.card,
-                                    border: `1px solid ${datasetAccent}${isSelected ? "" : "55"}`,
-                                    borderLeft: `${isSelected ? "5px" : "3px"} solid ${datasetAccent}`,
-                                    color: colors.white,
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    gap: "0.3rem",
-                                    transition:
-                                      "transform 0.15s ease, border-color 0.15s ease, background 0.15s ease",
-                                    boxShadow: isSelected
-                                      ? `0 6px 18px ${datasetAccent}40`
-                                      : undefined,
-                                    transform: isSelected
-                                      ? "translateY(-2px)"
-                                      : undefined,
-                                    opacity: isSelected ? 1 : 0.85,
-                                  }}
-                                  onMouseEnter={(e) => {
-                                    if (isSelected) return;
-                                    e.currentTarget.style.transform =
-                                      "translateY(-2px)";
-                                    e.currentTarget.style.borderColor = `${datasetAccent}AA`;
-                                    e.currentTarget.style.opacity = "1";
-                                  }}
-                                  onMouseLeave={(e) => {
-                                    if (isSelected) return;
-                                    e.currentTarget.style.transform =
-                                      "translateY(0)";
-                                    e.currentTarget.style.borderColor = `${datasetAccent}55`;
-                                    e.currentTarget.style.opacity = "0.85";
-                                  }}
-                                >
-                                  <div
-                                    style={{
-                                      fontSize: "0.72rem",
-                                      fontWeight: 600,
-                                      color: datasetAccent,
-                                      textTransform: "uppercase",
-                                      letterSpacing: "0.05em",
-                                    }}
-                                  >
-                                    {ex.dataset} · {ex.taskLabel}
-                                  </div>
-                                  <div
-                                    style={{
-                                      fontSize: "0.95rem",
-                                      fontWeight: 600,
-                                      lineHeight: 1.3,
-                                    }}
-                                  >
-                                    {capitalizeFirst(ex.sourceName)} → {capitalizeFirst(ex.targetName)}
-                                  </div>
-                                </Link>
-                              );
-                            })}
-                          </div>
-                        </div>
+                        <ExamplePairCards examples={exampleSet} />
 
-                        <div style={{ display: "flex", justifyContent: "center" }}>
-                          <EntityAvailabilityLauncher />
-                        </div>
                       </div>
                     )}
                   </div>
@@ -784,20 +610,6 @@ export default function SearchPage() {
             </div>
           )}
 
-          {/* Entity-availability checker below the graph so users can look up
-              dataset coverage without leaving the result. Only when the graph
-              is actually on screen (shown and not collapsed). */}
-          {selectedPair && showGraphComponent && !graphCollapsed && (
-            <div
-              style={{
-                marginTop: "1.25rem",
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              <EntityAvailabilityLauncher />
-            </div>
-          )}
         </main>
       </div>
     </div>
