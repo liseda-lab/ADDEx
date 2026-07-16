@@ -726,6 +726,12 @@ export default function GraphVisualizer({
             size={legendSize}
             position={legendPos}
             bounds={containerRef.current} // restrict movement inside canvas
+            // Never start a drag from the interactive bits. Without this the
+            // drag layer owns the pointer, so double-clicking a rename field to
+            // select a word drags the card instead, and text selection is
+            // impossible. stopPropagation on the children is not enough:
+            // react-draggable binds its own listeners on this node.
+            cancel="input, .legend-label, .legend-swatch, .legend-controls"
             onDragStop={(_, d) => setLegendPos({ x: d.x, y: d.y })}
             // Width only. Deriving the text scale from a vertical drag was tried
             // and reverted: the card's height comes from the scaled content, so

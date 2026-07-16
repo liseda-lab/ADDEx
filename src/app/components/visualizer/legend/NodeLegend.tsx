@@ -277,6 +277,9 @@ export default function NodeLegend({
             if (e.key === "Enter") commitTitle();
             if (e.key === "Escape") setEditingTitle(false);
           }}
+          // Keep clicks/drags inside the field from reaching the Rnd drag layer.
+          onMouseDown={(e) => e.stopPropagation()}
+          onClick={(e) => e.stopPropagation()}
           aria-label="Rename legend title"
           style={{
             fontSize: titleSize,
@@ -292,7 +295,13 @@ export default function NodeLegend({
       ) : (
         <h4
           className="legend-label"
-          onClick={startTitleEdit}
+          // stopPropagation, like the swatch does: the card is a react-rnd drag
+          // surface and swallows the event otherwise, so the click never lands.
+          onMouseDown={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            startTitleEdit();
+          }}
           style={{
             margin: 0,
             fontWeight: "bold",
@@ -360,6 +369,9 @@ export default function NodeLegend({
                       if (e.key === "Enter") commitEditing(type);
                       if (e.key === "Escape") setEditingType(null);
                     }}
+                    // Keep clicks/drags inside the field off the Rnd drag layer.
+                    onMouseDown={(e) => e.stopPropagation()}
+                    onClick={(e) => e.stopPropagation()}
                     aria-label={`Rename ${defaultLabelFor(type)}`}
                     style={{
                       fontSize: labelSize,
@@ -379,8 +391,14 @@ export default function NodeLegend({
                   className="legend-label"
                   // Single click, matching the swatch beside it (which opens the
                   // colour picker on one click). Double-click was undiscoverable
-                  // and inconsistent with its own neighbour.
-                  onClick={() => startEditing(type)}
+                  // and inconsistent with its own neighbour. stopPropagation for
+                  // the same reason the swatch does it: react-rnd owns pointer
+                  // events on this card and would otherwise eat the click.
+                  onMouseDown={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    startEditing(type);
+                  }}
                   style={{
                     fontSize: labelSize,
                     lineHeight: 1.3,
