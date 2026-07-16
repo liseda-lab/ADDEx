@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { ArrowRight, ArrowDown, Minus, Plus } from "lucide-react";
 
 // Scale bounds shared with GraphVisualizer, which maps vertical resize-drags
@@ -22,6 +22,14 @@ interface NodeLegendProps {
   // whether long labels are capped to force a wrap, or free to use the width
   // the user dragged to.
   autoWidth: boolean;
+  // Display-only overrides for type names, keyed by raw type. The graph and the
+  // pair resolution keep using the real types; this only relabels the legend
+  // (and therefore the export, which captures this DOM).
+  customLabels: Record<string, string>;
+  onRenameType: (type: string, label: string) => void;
+  // The legend's heading, also user-editable and display-only.
+  title: string;
+  onTitleChange: (next: string) => void;
 }
 
 export default function NodeLegend({
@@ -33,8 +41,40 @@ export default function NodeLegend({
   scale,
   onScaleChange,
   autoWidth,
+  customLabels,
+  onRenameType,
+  title,
+  onTitleChange,
 }: NodeLegendProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [editingType, setEditingType] = useState<string | null>(null);
+  const [draft, setDraft] = useState("");
+  const [editingTitle, setEditingTitle] = useState(false);
+  const [titleDraft, setTitleDraft] = useState("");
+
+  const startTitleEdit = () => {
+    setTitleDraft(title);
+    setEditingTitle(true);
+  };
+  const commitTitle = () => {
+    onTitleChange(titleDraft);
+    setEditingTitle(false);
+  };
+
+  const defaultLabelFor = (type: string) =>
+    type === "LCA" ? "Lowest Common Ancestor" : type.replace(/_/g, " ");
+  const labelFor = (type: string) => customLabels[type] ?? defaultLabelFor(type);
+
+  const startEditing = (type: string) => {
+    setDraft(labelFor(type));
+    setEditingType(type);
+  };
+  // Committing an empty value clears the override and restores the real type
+  // name, so there is a way back without a separate reset control.
+  const commitEditing = (type: string) => {
+    onRenameType(type, draft);
+    setEditingType(null);
+  };
 
   // Legend text scale, owned by GraphVisualizer so a vertical resize-drag can
   // drive the same value. The export draws the legend at 1:1, so whatever is
@@ -119,6 +159,34 @@ export default function NodeLegend({
         .legend-controls:focus-within {
           opacity: 1;
         }
+        /* Hint that labels are editable, without adding a per-row button. */
+        .legend-label {
+          position: relative;
+        }
+        .legend-label:hover {
+          text-decoration: underline dotted;
+          text-underline-offset: 2px;
+        }
+        .legend-label::after {
+          content: "Click to rename";
+          position: absolute;
+          bottom: calc(100% + 6px);
+          left: 0;
+          background: #333;
+          color: #fff;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 500;
+          white-space: nowrap;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 0.08s ease;
+          z-index: 10;
+        }
+        .legend-label:hover::after {
+          opacity: 1;
+        }
         .legend-swatch {
           position: relative;
         }
@@ -134,8 +202,11 @@ export default function NodeLegend({
           content: "Change color";
           position: absolute;
           bottom: calc(100% + 6px);
-          left: 50%;
-          transform: translateX(-50%);
+          /* Left-aligned to the swatch rather than centred on it: the legend
+             sits at the left edge of the canvas, so a centred tooltip hangs off
+             the panel and gets clipped. Growing rightwards keeps it on screen. */
+          left: 0;
+          transform: none;
           background: #333;
           color: #fff;
           padding: 2px 8px;
@@ -196,9 +267,43 @@ export default function NodeLegend({
         </button>
       </div>
 
-      <h4 style={{ margin: 0, fontWeight: "bold", fontSize: titleSize }}>
-        Node Types
-      </h4>
+      {editingTitle ? (
+        <input
+          autoFocus
+          value={titleDraft}
+          onChange={(e) => setTitleDraft(e.target.value)}
+          onBlur={commitTitle}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") commitTitle();
+            if (e.key === "Escape") setEditingTitle(false);
+          }}
+          aria-label="Rename legend title"
+          style={{
+            fontSize: titleSize,
+            fontWeight: "bold",
+            width: Math.max(80, 100 * scale),
+            padding: "0 2px",
+            border: "1px solid #888",
+            borderRadius: 2,
+            background: "#fff",
+            color: "#000",
+          }}
+        />
+      ) : (
+        <h4
+          className="legend-label"
+          onClick={startTitleEdit}
+          style={{
+            margin: 0,
+            fontWeight: "bold",
+            fontSize: titleSize,
+            cursor: "text",
+            width: "fit-content",
+          }}
+        >
+          {title}
+        </h4>
+      )}
 
       <div
         style={{
@@ -245,10 +350,41 @@ export default function NodeLegend({
                   }}
                   onClick={(e) => handleSquareClick(type, e)}
                 />
+                {editingType === type ? (
+                  <input
+                    autoFocus
+                    value={draft}
+                    onChange={(e) => setDraft(e.target.value)}
+                    onBlur={() => commitEditing(type)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") commitEditing(type);
+                      if (e.key === "Escape") setEditingType(null);
+                    }}
+                    aria-label={`Rename ${defaultLabelFor(type)}`}
+                    style={{
+                      fontSize: labelSize,
+                      lineHeight: 1.3,
+                      width: Math.max(70, 90 * scale),
+                      padding: "0 2px",
+                      border: "1px solid #888",
+                      borderRadius: 2,
+                      background: "#fff",
+                      color: "#000",
+                      font: "inherit",
+                      fontSizeAdjust: "none",
+                    }}
+                  />
+                ) : (
                 <div
+                  className="legend-label"
+                  // Single click, matching the swatch beside it (which opens the
+                  // colour picker on one click). Double-click was undiscoverable
+                  // and inconsistent with its own neighbour.
+                  onClick={() => startEditing(type)}
                   style={{
                     fontSize: labelSize,
                     lineHeight: 1.3,
+                    cursor: "text",
                     // Row mode lays the items out side by side, so every label
                     // stays on one line and the legend grows horizontally.
                     whiteSpace: isColumnLayout ? "normal" : "nowrap",
@@ -267,8 +403,9 @@ export default function NodeLegend({
                         : "100%",
                   }}
                 >
-                  {isLCA ? "Lowest Common Ancestor" : type.replace(/_/g, " ")}
+                  {labelFor(type)}
                 </div>
+                )}
               </div>
             );
           })}

@@ -141,6 +141,27 @@ export default function GraphVisualizer({
   // decided by its contents, so a raw height would either clip the items or
   // leave dead space. Scaling makes the content actually follow the drag.
   const [legendScale, setLegendScale] = useState(1);
+  // Display-only legend relabelling (e.g. "Compound" -> "Drug"). Kept out of the
+  // graph and pair resolution, which must keep using the real type names; this
+  // only changes what the legend shows, and therefore what the export captures.
+  const [customTypeLabels, setCustomTypeLabels] = useState<
+    Record<string, string>
+  >({});
+  const [legendTitle, setLegendTitle] = useState("Node Types");
+  const handleLegendTitleChange = useCallback((next: string) => {
+    // Empty restores the default, mirroring how clearing a type label works.
+    setLegendTitle(next.trim() || "Node Types");
+  }, []);
+  const handleRenameType = useCallback((type: string, label: string) => {
+    setCustomTypeLabels((prev) => {
+      const next = { ...prev };
+      const trimmed = label.trim();
+      // Empty clears the override, restoring the real type name.
+      if (trimmed) next[type] = trimmed;
+      else delete next[type];
+      return next;
+    });
+  }, []);
 
   // Scaling the text must also shrink the card, or the box strands dead space
   // beside the smaller labels. Width is "auto" until a drag pins it, so only a
@@ -762,6 +783,10 @@ export default function GraphVisualizer({
                 scale={legendScale}
                 onScaleChange={handleLegendScaleChange}
                 autoWidth={legendSize.width === "auto"}
+                customLabels={customTypeLabels}
+                onRenameType={handleRenameType}
+                title={legendTitle}
+                onTitleChange={handleLegendTitleChange}
               />
             </div>
           </Rnd>
