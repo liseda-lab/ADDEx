@@ -321,6 +321,9 @@ export default function ExportPreviewModal({
           ×
         </button>
 
+        {/* The scroll area is transparent so the only white on screen is the
+            exported sheet itself. Previously this container was white and
+            stretched to fill, which read as margins the PNG does not have. */}
         <div
           style={{
             flex: "1 1 auto",
@@ -329,24 +332,39 @@ export default function ExportPreviewModal({
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 16,
+            justifyContent: "center",
             padding: 12,
-            backgroundColor: "#ffffff",
-            borderRadius: 6,
           }}
         >
-          <img
-            src={previewSrc}
-            alt="Graph Preview"
+          {/* White sheet hugging the content, so what you see is what you get. */}
+          <div
             style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 16,
+              width: "fit-content",
               maxWidth: "100%",
-              maxHeight: includeVerbalization && verbalization ? "60%" : "100%",
-              width: "auto",
-              height: "auto",
-              objectFit: "contain",
+              backgroundColor: "#ffffff",
               borderRadius: 6,
             }}
-          />
+          >
+            <img
+              src={previewSrc}
+              alt="Graph Preview"
+              style={{
+                display: "block",
+                maxWidth: "100%",
+                // vh rather than % : the sheet is auto-height, so a percentage
+                // maxHeight would resolve against nothing and the image would
+                // overflow instead of fitting.
+                maxHeight: includeVerbalization && verbalization ? "45vh" : "70vh",
+                width: "auto",
+                height: "auto",
+                objectFit: "contain",
+                borderRadius: 6,
+              }}
+            />
           {includeVerbalization && verbalization && (
             <div
               style={{
@@ -375,6 +393,7 @@ export default function ExportPreviewModal({
               </div>
             </div>
           )}
+          </div>
         </div>
 
         <div

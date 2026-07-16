@@ -1,7 +1,12 @@
 "use client";
 import React, { useRef } from "react";
-import { ArrowRight, ArrowDown } from "lucide-react";
-import { useTheme } from "../../../../../styles/ThemeContext";
+import { ArrowRight, ArrowDown, Minus, Plus } from "lucide-react";
+
+// Scale bounds shared with GraphVisualizer, which maps vertical resize-drags
+// onto the same factor the -/+ buttons step through.
+export const LEGEND_SCALE_MIN = 0.7;
+export const LEGEND_SCALE_MAX = 1.6;
+export const LEGEND_SCALE_STEP = 0.1;
 
 interface NodeLegendProps {
   getColorForType: (type: string) => string;
@@ -11,6 +16,12 @@ interface NodeLegendProps {
   openColorPicker: (type: string, position: { x: number; y: number }) => void;
   isColumnLayout: boolean;
   onToggleLayout: () => void;
+  scale: number;
+  onScaleChange: (next: number) => void;
+  // True while the card hugs its content (no width pinned by dragging). Drives
+  // whether long labels are capped to force a wrap, or free to use the width
+  // the user dragged to.
+  autoWidth: boolean;
 }
 
 export default function NodeLegend({
@@ -19,9 +30,44 @@ export default function NodeLegend({
   openColorPicker,
   isColumnLayout,
   onToggleLayout,
+  scale,
+  onScaleChange,
+  autoWidth,
 }: NodeLegendProps) {
-  const colors = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Legend text scale, owned by GraphVisualizer so a vertical resize-drag can
+  // drive the same value. The export draws the legend at 1:1, so whatever is
+  // picked here is exactly what lands in the PNG/PDF. Base sizes are the 100%
+  // values.
+  const SCALE_MIN = LEGEND_SCALE_MIN;
+  const SCALE_MAX = LEGEND_SCALE_MAX;
+  const STEP = LEGEND_SCALE_STEP;
+  const bump = (delta: number) =>
+    onScaleChange(
+      Math.min(SCALE_MAX, Math.max(SCALE_MIN, Math.round((scale + delta) * 10) / 10))
+    );
+  const titleSize = 11 * scale;
+  const labelSize = 11 * scale;
+  const swatchSize = 10 * scale;
+
+  // Ghost buttons: these float outside the card (see .legend-controls) so the
+  // card itself matches the export 1:1, and they stay faded until the legend is
+  // hovered so they do not compete with the graph.
+  const stepButtonStyle: React.CSSProperties = {
+    width: 18,
+    height: 18,
+    borderRadius: 4,
+    border: "1px solid #c8c8c8",
+    backgroundColor: "rgba(255,255,255,0.92)",
+    color: "#444",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 0,
+    flexShrink: 0,
+  };
 
   const handleSquareClick = (type: string, e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
@@ -36,12 +82,13 @@ export default function NodeLegend({
   return (
     <div
       ref={containerRef}
+      className="legend-root"
       style={{
         position: "relative",
         display: "flex",
         flexDirection: "column",
-        gap: "0.5rem",
-        padding: "0.5rem 1rem",
+        gap: "0.3rem",
+        padding: "0.35rem 0.5rem",
         color: "#000",
         width: "fit-content",
         height: "fit-content",
@@ -50,6 +97,28 @@ export default function NodeLegend({
       }}
     >
       <style>{`
+        /* Sit just below the card, right-aligned, outside its border. Below
+           rather than above: the legend defaults to the top-left of the canvas,
+           so anything above it is clipped by the Visualization header. The Rnd
+           wrapper has no overflow clipping, so this renders over the graph
+           rather than inside the legend. */
+        .legend-controls {
+          position: absolute;
+          top: calc(100% + 6px);
+          right: 0;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          z-index: 5;
+          /* Always visible, just muted, so the controls are discoverable
+             without hunting for them. They come to full strength on hover. */
+          opacity: 0.6;
+          transition: opacity 0.15s ease;
+        }
+        .legend-root:hover .legend-controls,
+        .legend-controls:focus-within {
+          opacity: 1;
+        }
         .legend-swatch {
           position: relative;
         }
@@ -83,80 +152,59 @@ export default function NodeLegend({
           opacity: 1;
         }
       `}</style>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          gap: "0.75rem",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <h4 style={{ margin: 0, fontWeight: "bold", fontSize: 14 }}>Node Types</h4>
-        <div
-          data-export-hide="true"
-          style={{ position: "relative" }}
-          onMouseEnter={(e) => {
-            const tip = e.currentTarget.querySelector(".legend-layout-tooltip") as HTMLElement | null;
-            if (tip) tip.style.opacity = "1";
-          }}
-          onMouseLeave={(e) => {
-            const tip = e.currentTarget.querySelector(".legend-layout-tooltip") as HTMLElement | null;
-            if (tip) tip.style.opacity = "0";
+      {/* Controls live outside the card: they are export-hidden, so keeping them
+          off the card means what you see on screen is exactly what you export. */}
+      <div className="legend-controls" data-export-hide="true">
+        <button
+          type="button"
+          onClick={() => bump(-STEP)}
+          disabled={scale <= SCALE_MIN}
+          title="Smaller legend"
+          aria-label="Smaller legend"
+          style={{
+            ...stepButtonStyle,
+            opacity: scale <= SCALE_MIN ? 0.35 : 1,
+            cursor: scale <= SCALE_MIN ? "default" : "pointer",
           }}
         >
-          <button
-            type="button"
-            onClick={onToggleLayout}
-            title={isColumnLayout ? "Switch to row layout" : "Switch to column layout"}
-            style={{
-              width: 26,
-              height: 26,
-              borderRadius: 8,
-              border: `1px solid ${colors.white}30`,
-              backgroundColor: colors.darkblue,
-              color: colors.white,
-              fontWeight: 600,
-              fontSize: 12,
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: "0 4px 10px rgba(0,0,0,0.25)",
-              flexShrink: 0,
-            }}
-          >
-            {isColumnLayout ? <ArrowRight size={14} /> : <ArrowDown size={14} />}
-          </button>
-          <span
-            className="legend-layout-tooltip"
-            style={{
-              position: "absolute",
-              top: "110%",
-              right: 0,
-              backgroundColor: "#333",
-              color: "#fff",
-              padding: "2px 6px",
-              borderRadius: 4,
-              fontSize: 10,
-              whiteSpace: "nowrap",
-              zIndex: 200,
-              pointerEvents: "none",
-              opacity: 0,
-              transition: "opacity 0.2s",
-            }}
-          >
-            {isColumnLayout ? "Switch to row layout" : "Switch to column layout"}
-          </span>
-        </div>
+          <Minus size={11} />
+        </button>
+        <button
+          type="button"
+          onClick={() => bump(STEP)}
+          disabled={scale >= SCALE_MAX}
+          title="Larger legend"
+          aria-label="Larger legend"
+          style={{
+            ...stepButtonStyle,
+            opacity: scale >= SCALE_MAX ? 0.35 : 1,
+            cursor: scale >= SCALE_MAX ? "default" : "pointer",
+          }}
+        >
+          <Plus size={11} />
+        </button>
+        <button
+          type="button"
+          onClick={onToggleLayout}
+          title={isColumnLayout ? "Switch to row layout" : "Switch to column layout"}
+          aria-label={
+            isColumnLayout ? "Switch to row layout" : "Switch to column layout"
+          }
+          style={stepButtonStyle}
+        >
+          {isColumnLayout ? <ArrowRight size={11} /> : <ArrowDown size={11} />}
+        </button>
       </div>
+
+      <h4 style={{ margin: 0, fontWeight: "bold", fontSize: titleSize }}>
+        Node Types
+      </h4>
 
       <div
         style={{
           display: "flex",
           flexDirection: isColumnLayout ? "column" : "row",
-          gap: "0.75rem",
+          gap: "0.4rem",
           flexWrap: isColumnLayout ? "nowrap" : "wrap",
           alignItems: isColumnLayout ? "flex-start" : "center",
         }}
@@ -183,9 +231,9 @@ export default function NodeLegend({
                 <div
                   className="legend-swatch"
                   style={{
-                    width: 14,
-                    height: 14,
-                    borderRadius: 3,
+                    width: swatchSize,
+                    height: swatchSize,
+                    borderRadius: 2,
                     backgroundColor: getColorForType(type),
                     cursor: "pointer",
                     border: "1px solid #555",
@@ -199,11 +247,24 @@ export default function NodeLegend({
                 />
                 <div
                   style={{
-                    fontSize: 14,
+                    fontSize: labelSize,
                     lineHeight: 1.3,
-                    whiteSpace: "normal",
-                    wordBreak: "break-word",
-                    maxWidth: isLCA ? "100%" : 160,
+                    // Row mode lays the items out side by side, so every label
+                    // stays on one line and the legend grows horizontally.
+                    whiteSpace: isColumnLayout ? "normal" : "nowrap",
+                    wordBreak: isColumnLayout ? "break-word" : "normal",
+                    // Column mode, auto width: cap "Lowest Common Ancestor" to
+                    // force a second line and keep the card narrow (a % cap
+                    // would resolve to auto against a fit-content parent, so it
+                    // would never wrap). Once a width is pinned by dragging, or
+                    // in row mode, drop the cap so labels use the space
+                    // available: drag right and the label returns to one line.
+                    maxWidth:
+                      autoWidth && isColumnLayout
+                        ? isLCA
+                          ? 90 * scale
+                          : 140 * scale
+                        : "100%",
                   }}
                 >
                   {isLCA ? "Lowest Common Ancestor" : type.replace(/_/g, " ")}

@@ -127,27 +127,48 @@ export default function GraphVisualizer({
   const [previewSvg, setPreviewSvg] = useState<string | null>(null);
   const [previewSvgNoLegend, setPreviewSvgNoLegend] = useState<string | null>(null);
   const [legendPos, setLegendPos] = useState<{ x: number; y: number } | null>(null);
-  // Start at a snug fixed width so "Lowest Common Ancestor" naturally wraps
-  // onto a second line, then height auto-fits. Once the user drags a resize
-  // handle, both flip to concrete pixel numbers.
+  // Both dimensions hug the content by default, so the card tracks the legend's
+  // text scale instead of stranding dead space beside it when the text shrinks.
+  // A width drag pins it to a pixel value (width drives label wrapping); the
+  // scale buttons then keep that pinned width proportional.
   const [legendSize, setLegendSize] = useState<{
     width: number | "auto";
     height: number | "auto";
-  }>({ width: 175, height: "auto" });
+  }>({ width: "auto", height: "auto" });
   const [isLegendColumnLayout, setIsLegendColumnLayout] = useState(true);
+  // Legend text scale (see NodeLegend). Dragging the legend's top/bottom edge
+  // maps onto this instead of setting a pixel height: the card's height is
+  // decided by its contents, so a raw height would either clip the items or
+  // leave dead space. Scaling makes the content actually follow the drag.
+  const [legendScale, setLegendScale] = useState(1);
 
-  // The Rnd's explicit width drives whether row-mode actually flows
-  // horizontally: at 175px the items wrap one-per-line, so row mode would
-  // look identical to column. Snap width to "auto" on row toggle so the
-  // legend grows to fit content; restore the snug column default on toggle
-  // back.
+  // Scaling the text must also shrink the card, or the box strands dead space
+  // beside the smaller labels. Width is "auto" until a drag pins it, so only a
+  // pinned width needs rescaling; auto hugs on its own.
+  const handleLegendScaleChange = useCallback(
+    (next: number) => {
+      setLegendSize((prev) =>
+        typeof prev.width === "number" && legendScale > 0
+          ? {
+              ...prev,
+              width: Math.max(110, Math.round(prev.width * (next / legendScale))),
+            }
+          : prev
+      );
+      setLegendScale(next);
+    },
+    [legendScale]
+  );
+
+  // Toggling layout clears any width pinned by dragging and returns the card to
+  // hugging its content, in both directions: a leftover pixel width would make
+  // row mode wrap one-item-per-line (looking identical to column mode), and
+  // would strand dead space in column mode. NodeLegend decides where labels wrap
+  // from `isColumnLayout` + `autoWidth`.
   const handleToggleLegendLayout = useCallback(() => {
     setIsLegendColumnLayout((prev) => {
-      const next = !prev;
-      setLegendSize(
-        next ? { width: 175, height: "auto" } : { width: "auto", height: "auto" }
-      );
-      return next;
+      setLegendSize({ width: "auto", height: "auto" });
+      return !prev;
     });
   }, []);
   const [activeColorPicker, setActiveColorPicker] =
@@ -685,15 +706,20 @@ export default function GraphVisualizer({
             position={legendPos}
             bounds={containerRef.current} // restrict movement inside canvas
             onDragStop={(_, d) => setLegendPos({ x: d.x, y: d.y })}
+            // Width only. Deriving the text scale from a vertical drag was tried
+            // and reverted: the card's height comes from the scaled content, so
+            // feeding height back into scale is a feedback loop (drag down ->
+            // bigger text -> labels wrap -> taller content -> bigger text) that
+            // runs straight to the maximum. Height auto-fits; the -/+ buttons
+            // are the size control.
             onResizeStop={(_, __, ref, ___, pos) => {
               setLegendSize({
                 width: ref.offsetWidth,
-                height: ref.offsetHeight,
+                height: "auto",
               });
               setLegendPos({ x: pos.x, y: pos.y });
             }}
-            minWidth={140}
-            minHeight={80}
+            minWidth={110}
             style={{
               position: "absolute",
               zIndex: 20,
@@ -708,15 +734,18 @@ export default function GraphVisualizer({
               // (e.g. "Lowest Common Ancestor" on two lines). overflow:auto
               // would clip wrapped text in the export bbox.
             }}
+            // Horizontal handles only. Vertical dragging cannot work here: the
+            // height belongs to the content, so a vertical handle either clips
+            // the items or leaves dead space.
             enableResizing={{
-              bottom: true,
-              bottomLeft: true,
-              bottomRight: true,
+              bottom: false,
+              bottomLeft: false,
+              bottomRight: false,
               left: true,
               right: true,
-              top: true,
-              topLeft: true,
-              topRight: true,
+              top: false,
+              topLeft: false,
+              topRight: false,
             }}
           >
             <div ref={legendRef}>
@@ -730,6 +759,9 @@ export default function GraphVisualizer({
                 }
                 isColumnLayout={isLegendColumnLayout}
                 onToggleLayout={handleToggleLegendLayout}
+                scale={legendScale}
+                onScaleChange={handleLegendScaleChange}
+                autoWidth={legendSize.width === "auto"}
               />
             </div>
           </Rnd>

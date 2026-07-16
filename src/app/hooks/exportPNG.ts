@@ -267,11 +267,13 @@ export async function exportGraphWithLegend(
         Math.max(0, cyViewportH - legendCssH)
       );
 
-      // Render the legend smaller than its on-screen footprint (which is
-      // tuned for an interactive draggable widget, not a print caption). At
-      // 1:1 it reads heavier than a graph node in the exported PDF/PNG;
-      // 0.6x scale brings it visually in line with the node labels.
-      const LEGEND_EXPORT_SCALE = 0.6;
+      // Draw the legend at its true on-screen footprint so the export matches
+      // the dashboard. This used to be 0.6x to stop the legend reading heavier
+      // than a graph node in print, but shrinking it only at export time meant
+      // the canvas could never preview what you would actually get, forcing a
+      // toggle-and-check loop. The legend itself is now sized to read correctly
+      // in both places (see NodeLegend), so no export-time correction is needed.
+      const LEGEND_EXPORT_SCALE = 1;
       const drawnCssW = legendCssW * LEGEND_EXPORT_SCALE;
       const drawnCssH = legendCssH * LEGEND_EXPORT_SCALE;
 
