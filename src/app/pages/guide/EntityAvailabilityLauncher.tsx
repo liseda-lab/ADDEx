@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { MagnifyingGlass, X } from "phosphor-react";
+import { useEffect, useRef, useState } from "react";
+import { CaretDown, MagnifyingGlass, X } from "phosphor-react";
 import { useTheme } from "../../../../styles/ThemeContext";
 import EntityAvailability from "./EntityAvailability";
 
@@ -11,6 +11,10 @@ interface Props {
   // Render as a small round icon-only button (used as a corner button on the
   // search page, where a full-width labelled button overlaps the graph toolbar).
   iconOnly?: boolean;
+  // Render the checker as a dropdown anchored under the trigger instead of a
+  // centered modal. Used in the search page's top-right corner, where a modal
+  // reads like a step in the flow rather than the reference tool it is.
+  dropdown?: boolean;
 }
 
 // Small trigger that opens the entity-availability checker in a modal. Used on
@@ -19,40 +23,136 @@ export default function EntityAvailabilityLauncher({
   label = "Which dataset has my entity?",
   compact = false,
   iconOnly = false,
+  dropdown = false,
 }: Props) {
   const colors = useTheme();
   const [open, setOpen] = useState(false);
+  // "Pinned" means the panel was opened deliberately (clicked, or the user has
+  // focused something inside it). Pinned panels ignore mouse-leave, so drifting
+  // off the panel never discards what someone is typing.
+  const [pinned, setPinned] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const cancelClose = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
+  const closeNow = () => {
+    cancelClose();
+    setOpen(false);
+    setPinned(false);
+  };
+
+  useEffect(() => cancelClose, []);
 
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") closeNow();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
+  // Dropdown mode has no overlay to catch clicks, so close on any outside press.
+  useEffect(() => {
+    if (!open || !dropdown) return;
+    const onDown = (e: MouseEvent) => {
+      if (!wrapperRef.current?.contains(e.target as Node)) closeNow();
+    };
+    window.addEventListener("mousedown", onDown);
+    return () => window.removeEventListener("mousedown", onDown);
+  }, [open, dropdown]);
+
+  // Hover opens the panel; leaving closes it only if it was never pinned. The
+  // delay covers the gap between the trigger and the panel, so moving the
+  // pointer down into the results does not dismiss it mid-travel.
+  const hoverHandlers = dropdown
+    ? {
+        onMouseEnter: () => {
+          cancelClose();
+          setOpen(true);
+        },
+        onMouseLeave: () => {
+          if (pinned) return;
+          cancelClose();
+          closeTimerRef.current = setTimeout(() => setOpen(false), 250);
+        },
+        // Typing in the lookup pins it: focus means intent.
+        onFocusCapture: () => {
+          cancelClose();
+          setOpen(true);
+          setPinned(true);
+        },
+      }
+    : {};
+
+  // An icon-only dropdown trigger grows into a labelled pill while it is open,
+  // so the collapsed state stays out of the way but the hovered state still
+  // says what it is.
+  const expanded = dropdown && iconOnly && open;
+
   return (
-    <>
+    <div
+      ref={wrapperRef}
+      {...hoverHandlers}
+      style={
+        dropdown
+          ? { position: "relative", display: "inline-block" }
+          : { display: "contents" }
+      }
+    >
       <button
         type="button"
-        onClick={() => setOpen(true)}
-        title={iconOnly ? label : undefined}
+        onClick={() => {
+          if (!dropdown) {
+            setOpen((v) => !v);
+            return;
+          }
+          // Hover may have opened it already; the first click pins it open, a
+          // second click dismisses.
+          if (open && pinned) {
+            closeNow();
+          } else {
+            cancelClose();
+            setOpen(true);
+            setPinned(true);
+          }
+        }}
+        // No native tooltip in dropdown mode: hovering already opens the panel,
+        // so a title would just render a duplicate label on top of it.
+        title={iconOnly && !dropdown ? label : undefined}
         aria-label={iconOnly ? label : undefined}
+        aria-expanded={dropdown ? open : undefined}
+        aria-haspopup={dropdown ? "dialog" : undefined}
         style={
           iconOnly
             ? {
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                width: 40,
+                gap: expanded ? 8 : 0,
+                // Collapsed: a 40px circle. Expanded: a pill sized to its label.
+                width: expanded ? "auto" : 40,
                 height: 40,
-                borderRadius: "50%",
+                padding: expanded ? "0 0.95rem" : 0,
+                borderRadius: expanded ? 20 : "50%",
                 border: `1px solid ${colors.white}30`,
                 background: colors.card,
                 color: colors.white,
                 cursor: "pointer",
                 boxShadow: "0 2px 10px rgba(0,0,0,0.22)",
+                fontSize: "0.82rem",
+                fontWeight: 600,
+                lineHeight: 1,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                transition:
+                  "padding 0.15s ease, border-radius 0.15s ease, gap 0.15s ease",
               }
             : {
                 display: "inline-flex",
@@ -77,10 +177,49 @@ export default function EntityAvailabilityLauncher({
           weight="bold"
           aria-hidden="true"
         />
-        {iconOnly ? null : label}
+        {iconOnly && !expanded ? null : label}
+        {dropdown && !iconOnly ? (
+          <CaretDown
+            size={12}
+            weight="bold"
+            aria-hidden="true"
+            style={{
+              transform: open ? "rotate(180deg)" : "none",
+              transition: "transform 0.15s ease",
+            }}
+          />
+        ) : null}
       </button>
 
-      {open && (
+      {open && dropdown && (
+        <div
+          role="dialog"
+          aria-label="Which dataset has my entity?"
+          style={{
+            position: "absolute",
+            top: "calc(100% + 8px)",
+            right: 0,
+            zIndex: 3000,
+            width: 380,
+            maxWidth: "min(380px, calc(100vw - 2rem))",
+            background: colors.card,
+            border: `1px solid ${colors.white}22`,
+            borderRadius: 12,
+            padding: "0.9rem 1rem 1rem",
+            boxShadow: "0 16px 44px rgba(0,0,0,0.4)",
+            maxHeight: "70vh",
+            overflowY: "auto",
+            textAlign: "left",
+          }}
+          // Keep the pointer inside the wrapper's hover region while the panel
+          // is open, so travelling from the trigger into the panel is safe.
+          onMouseEnter={cancelClose}
+        >
+          <EntityAvailability bare />
+        </div>
+      )}
+
+      {open && !dropdown && (
         <div
           role="dialog"
           aria-modal="true"
@@ -150,6 +289,6 @@ export default function EntityAvailabilityLauncher({
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

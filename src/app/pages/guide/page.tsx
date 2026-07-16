@@ -22,7 +22,6 @@ import type { Icon as PhosphorIcon } from "phosphor-react";
 import Navbar from "../../components/general/Navbar";
 import PageText from "../../components/general/PageText";
 import { useTheme, useThemeContext } from "../../../../styles/ThemeContext";
-import EntityAvailability from "./EntityAvailability";
 
 interface SchemaStep {
   label: string;
@@ -367,9 +366,55 @@ export default function GuidePage() {
           "entity-check",
           "Which dataset has my entity?",
           MagnifyingGlass,
-          "Type a drug, disease, gene, or protein to see which datasets contain it, and under which tasks — handy for picking a dataset before you search."
+          "Check which knowledge graphs contain a drug, disease, gene, or protein before you search."
         )}
-        <EntityAvailability />
+        <div
+          style={{
+            borderRadius: 14,
+            background: colors.card,
+            border: `1px solid ${unifiedAccent}40`,
+            padding: "1.1rem 1.2rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            flexWrap: "wrap",
+            gap: "1rem",
+          }}
+        >
+          <span
+            aria-hidden="true"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 40,
+              height: 40,
+              flexShrink: 0,
+              borderRadius: "50%",
+              border: `1px solid ${colors.white}30`,
+              background: colors.card,
+              color: colors.white,
+              boxShadow: "0 2px 10px rgba(0,0,0,0.22)",
+            }}
+          >
+            <MagnifyingGlass size={18} weight="bold" />
+          </span>
+          <p
+            style={{
+              margin: 0,
+              flex: 1,
+              minWidth: 260,
+              color: `${colors.white}c0`,
+              fontSize: "0.9rem",
+              lineHeight: 1.6,
+            }}
+          >
+            Look for this button while picking a dataset or running a search. It
+            lists each matching entity and the graphs that contain it, and
+            because gene and protein names differ between resources, it also
+            flags cross-graph matches.
+          </p>
+        </div>
 
         {sectionHeading(
           "reading",

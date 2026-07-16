@@ -1,35 +1,23 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Database } from "phosphor-react";
 import CardsPage from "../../components/general/CardsPage";
 import DatasetCard from "./DatasetCard";
-import EntityAvailability from "../guide/EntityAvailability";
+import EntityAvailabilityLauncher from "../guide/EntityAvailabilityLauncher";
+import ExamplePairCards, {
+  EXAMPLE_PAIRS,
+} from "../../components/general/ExamplePairCards";
 import { useTheme } from "../../../../styles/ThemeContext";
 
 export default function DatasetPage() {
   const colors = useTheme();
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [datasets, setDatasets] = useState<any[]>([]);
 
-  // Preserve the persona the user picked so clicking the example link on this
-  // page lands them on search with their chosen explanation mode still active.
-  const exampleHref = (() => {
-    const params = new URLSearchParams();
-    params.set("viaQuickSkip", "true");
-    const currentParams = searchParams.toString();
-    if (currentParams) {
-      const existing = new URLSearchParams(currentParams);
-      ["persona", "personaName", "accentColor", "icon"].forEach((key) => {
-        const value = existing.get(key);
-        if (value) params.set(key, value);
-      });
-    }
-    return `/pages/search?${params.toString()}`;
-  })();
+  // ExamplePairCards builds its own hrefs and reads the persona straight from
+  // the query string, so the old hand-rolled example link is no longer needed.
 
   useEffect(() => {
     let mounted = true;
@@ -87,7 +75,13 @@ export default function DatasetPage() {
       }
       outro={
         <div
-          style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.6rem",
+            flexWrap: "wrap",
+          }}
         >
           <p
             style={{
@@ -97,32 +91,19 @@ export default function DatasetPage() {
               lineHeight: 1.5,
             }}
           >
-            Not sure a dataset has your drug, disease, gene or protein? Check
-            here:
+            Look up a specific drug, disease, gene, or protein
           </p>
-          <EntityAvailability />
+          <EntityAvailabilityLauncher dropdown iconOnly />
         </div>
       }
       actions={
-        <Link
-          href={exampleHref}
-          style={{
-            color: colors.gray,
-            fontSize: "0.82rem",
-            textDecoration: "none",
-            padding: "0.4rem 0.6rem",
-            borderRadius: 6,
-            transition: "color 0.15s ease",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.textDecoration = "underline";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.textDecoration = "none";
-          }}
-        >
-          Not sure which dataset? → Try our examples first
-        </Link>
+        <div style={{ width: "100%", maxWidth: 780 }}>
+          <ExamplePairCards
+            examples={EXAMPLE_PAIRS}
+            heading="Not sure which dataset? Try an example"
+            compact
+          />
+        </div>
       }
     >
       {datasets.map((dataset, index) => (
