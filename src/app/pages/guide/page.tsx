@@ -410,9 +410,9 @@ export default function GuidePage() {
             }}
           >
             Look for this button while picking a dataset or running a search. It
-            lists each matching entity and the graphs that contain it, and
-            because gene and protein names differ between resources, it also
-            flags cross-graph matches.
+            lists each matching entity and the graphs that contain it. Because
+            names may differ between graphs, it also flags when the same entity
+            is listed elsewhere under another name.
           </p>
         </div>
 

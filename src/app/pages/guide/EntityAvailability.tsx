@@ -86,7 +86,6 @@ export default function EntityAvailability({
   };
 
   const trimmed = query.trim();
-  const showHint = trimmed.length < 2;
   const showEmpty = trimmed.length >= 2 && !loading && results.length === 0;
 
   return (
@@ -155,20 +154,6 @@ export default function EntityAvailability({
         />
       </div>
 
-      {showHint && (
-        <p
-          style={{
-            margin: 0,
-            color: `${colors.white}90`,
-            fontSize: "0.85rem",
-            lineHeight: 1.55,
-          }}
-        >
-          Type at least two letters to see which datasets contain a drug,
-          disease, gene, or protein, and under which tasks.
-        </p>
-      )}
-
       {loading && (
         <p style={{ margin: 0, color: `${colors.white}80`, fontSize: "0.85rem" }}>
           Searching…
@@ -178,7 +163,7 @@ export default function EntityAvailability({
       {showEmpty && (
         <p style={{ margin: 0, color: `${colors.white}80`, fontSize: "0.85rem" }}>
           No entity matches “{trimmed}”. Check spelling, or try its common name
-          (gene symbols and protein names differ between datasets).
+          (gene symbols and protein names may differ between graphs).
         </p>
       )}
 
@@ -280,9 +265,9 @@ export default function EntityAvailability({
           lineHeight: 1.5,
         }}
       >
-        “Available” means the entity exists as a node in that dataset, not that
-        a given hypothesis will have a path. Use the “Only pre-computed
-        hypotheses” switch on the search page to see which hypotheses are ready.
+        A match means the entity exists in that graph, not that a hypothesis
+        using it has a path. Names may differ between graphs, so the same entity
+        may be listed under another name.
       </p>
     </div>
   );
