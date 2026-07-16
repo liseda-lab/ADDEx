@@ -59,6 +59,13 @@ export default function SearchPage() {
   const hasTask = !!searchParams.get("task");
   const contextReady = hasPersona && hasDataset && hasTask;
 
+  // Example links arrive with `autorun=1` and fire the search once the source
+  // and target resolve from the URL, which needs the labels to load first. Until
+  // then the empty state would flash its prompt and example cards, which is
+  // jarring when the user has already committed to an example. PairSideMenu
+  // strips the flag as soon as it fires, so this only covers the resolve window.
+  const autorunPending = !!searchParams.get("autorun");
+
   // Show dataset-specific examples once a dataset + task are chosen; otherwise
   // (landing / Quick Search) show the cross-dataset paper examples.
   const exampleDataset = searchParams.get("dataset");
@@ -534,7 +541,17 @@ export default function SearchPage() {
                           )}
                         </div>
                       );
-                    })() : (
+                    })() : autorunPending ? (
+                      <p
+                        style={{
+                          margin: 0,
+                          color: `${colors.white}cc`,
+                          lineHeight: 1.7,
+                        }}
+                      >
+                        Loading example...
+                      </p>
+                    ) : (
                       <div
                         style={{
                           display: "flex",
