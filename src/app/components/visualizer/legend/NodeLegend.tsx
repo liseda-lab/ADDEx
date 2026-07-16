@@ -290,6 +290,7 @@ export default function NodeLegend({
             borderRadius: 2,
             background: "#fff",
             color: "#000",
+            fontFamily: "inherit",
           }}
         />
       ) : (
@@ -382,8 +383,10 @@ export default function NodeLegend({
                       borderRadius: 2,
                       background: "#fff",
                       color: "#000",
-                      font: "inherit",
-                      fontSizeAdjust: "none",
+                      // fontFamily only. The `font` shorthand would reset
+                      // font-size to the inherited value and undo labelSize
+                      // above, making the field jump to ~16px on edit.
+                      fontFamily: "inherit",
                     }}
                   />
                 ) : (
