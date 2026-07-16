@@ -80,7 +80,7 @@ export default function SoftwarePage() {
         title: "Graph Visualization",
         body: "Reasoning paths rendered as interactive graphs, so users can inspect how drugs, targets, and diseases connect inside the knowledge graph.",
         Icon: Graph,
-        tech: ["Cytoscape.js", "ELK"],
+        tech: ["Cytoscape.js"],
         legacyAccentIdx: 6,
       },
       {

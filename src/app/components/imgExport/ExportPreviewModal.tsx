@@ -459,6 +459,11 @@ export default function ExportPreviewModal({
           </label>
 
           <label
+            // Labelled "Caption" before, which is what the paper inherited. It
+            // toggles the Node Types legend, not a figure caption, so the label
+            // now matches both the `includeLegend` state and the card's own
+            // heading.
+            title="Include the node type legend in the exported image"
             style={{
               display: "flex",
               alignItems: "center",
@@ -474,7 +479,7 @@ export default function ExportPreviewModal({
               onChange={(event) => setIncludeLegend(event.target.checked)}
               style={{ cursor: "pointer" }}
             />
-            Caption
+            Legend
           </label>
 
           <label
