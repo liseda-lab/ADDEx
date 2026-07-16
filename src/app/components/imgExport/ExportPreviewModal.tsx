@@ -155,6 +155,9 @@ export default function ExportPreviewModal({
     () => activeCanvas.toDataURL("image/png"),
     [activeCanvas]
   );
+  // Drives the preview layout: with a summary the sheet scrolls, without one the
+  // image is sized to always fit.
+  const hasSummary = !!(includeVerbalization && verbalization);
   const safeName = fileName.replace(/\s+/g, "_");
 
   const handleCopy = async () => {
@@ -328,72 +331,95 @@ export default function ExportPreviewModal({
           style={{
             flex: "1 1 auto",
             minHeight: 0,
-            overflow: "auto",
+            // Only scrollable when a summary makes the sheet taller than the
+            // viewport. Image-only always fits, so hidden avoids a scrollbar
+            // that would imply the graph is cropped.
+            overflow: hasSummary ? "auto" : "hidden",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
+            // NOT justifyContent:center — in a scrollable flex container that
+            // clips overflow at the top edge and makes it unreachable, which cut
+            // the head off the graph once the summary made the sheet tall. The
+            // children use auto margins instead: centred when they fit, scrolled
+            // from the top when they do not.
             padding: 12,
           }}
         >
-          {/* White sheet hugging the content, so what you see is what you get. */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 16,
-              width: "fit-content",
-              maxWidth: "100%",
-              backgroundColor: "#ffffff",
-              borderRadius: 6,
-            }}
-          >
+          {hasSummary ? (
+            /* With a summary the sheet is taller than the viewport, so it
+               scrolls. White sheet hugs the content: what you see is the PNG. */
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 16,
+                width: "fit-content",
+                maxWidth: "100%",
+                // Auto margins centre without clipping when it overflows.
+                margin: "auto",
+                backgroundColor: "#ffffff",
+                borderRadius: 6,
+              }}
+            >
+              <img
+                src={previewSrc}
+                alt="Graph Preview"
+                style={{
+                  display: "block",
+                  maxWidth: "100%",
+                  // vh, not %: this sheet is auto-height, so a percentage would
+                  // have nothing to resolve against and the image would overflow.
+                  maxHeight: "60vh",
+                  width: "auto",
+                  height: "auto",
+                  objectFit: "contain",
+                  borderRadius: 6,
+                }}
+              />
+              <div
+                style={{
+                  width: "min(100%, 720px)",
+                  color: "#1f1f1f",
+                  fontFamily:
+                    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif',
+                  fontSize: 14,
+                  lineHeight: 1.6,
+                  padding: "16px 20px",
+                  boxSizing: "border-box",
+                  borderTop: "1px solid #e0e0e0",
+                }}
+              >
+                <h3 style={{ margin: "0 0 12px 0", fontSize: 16, fontWeight: 700 }}>
+                  Summary
+                </h3>
+                <div style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}>
+                  {verbalization}
+                </div>
+              </div>
+            </div>
+          ) : (
+            /* Image only: render it as a direct child of the scroll area, which
+               has a definite height, so maxHeight:100% actually resolves and the
+               image is guaranteed to fit. No scrollbar, which would otherwise
+               read as "this image is cropped". */
             <img
               src={previewSrc}
               alt="Graph Preview"
               style={{
                 display: "block",
                 maxWidth: "100%",
-                // vh rather than % : the sheet is auto-height, so a percentage
-                // maxHeight would resolve against nothing and the image would
-                // overflow instead of fitting.
-                maxHeight: includeVerbalization && verbalization ? "45vh" : "70vh",
+                maxHeight: "100%",
                 width: "auto",
                 height: "auto",
+                margin: "auto",
                 objectFit: "contain",
+                backgroundColor: "#ffffff",
                 borderRadius: 6,
               }}
             />
-          {includeVerbalization && verbalization && (
-            <div
-              style={{
-                width: "min(100%, 720px)",
-                color: "#1f1f1f",
-                fontFamily:
-                  '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif',
-                fontSize: 14,
-                lineHeight: 1.6,
-                padding: "16px 20px",
-                boxSizing: "border-box",
-                borderTop: "1px solid #e0e0e0",
-              }}
-            >
-              <h3
-                style={{
-                  margin: "0 0 12px 0",
-                  fontSize: 16,
-                  fontWeight: 700,
-                }}
-              >
-                Summary
-              </h3>
-              <div style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}>
-                {verbalization}
-              </div>
-            </div>
           )}
-          </div>
         </div>
 
         <div
