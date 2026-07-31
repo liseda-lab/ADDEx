@@ -652,6 +652,18 @@ export function Dropdown({
                   const text = displayFor ? displayFor(opt) : opt;
                   const rowTop =
                     menuPosition.top + highlightedIndex * OPTION_ROW_HEIGHT - scrollTop;
+                  // Hide the tooltip when the highlighted row is scrolled out of
+                  // the menu viewport. Without this, its off-screen position
+                  // clamps to the top of the page and the tooltip floats in the
+                  // corner (e.g. the first option's label stuck at the top while
+                  // the user scrolls further down).
+                  const menuBottom = menuPosition.top + menuPosition.maxHeight;
+                  if (
+                    rowTop + OPTION_ROW_HEIGHT <= menuPosition.top ||
+                    rowTop >= menuBottom
+                  ) {
+                    return null;
+                  }
                   const tipLeft = menuPosition.left + menuWidth + 6;
                   const viewportRightLimit =
                     window.innerWidth - 8 - tipLeft;
