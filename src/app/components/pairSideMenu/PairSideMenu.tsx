@@ -1106,6 +1106,37 @@ export default function PairSideMenu({
               />
             ))}
 
+            {/* Pre-computed filter dead-end: one endpoint is chosen and the
+                cached-pairs fetch returned nothing (no valid pairs and no
+                no-path pairs), so the chosen entity has no pre-computed
+                hypotheses at all and the counterpart list would be silently
+                empty. Explain it and offer the way out. */}
+            {precomputedOnly &&
+              cachedFor !== null &&
+              cachedNames?.size === 0 &&
+              noPathNames?.size === 0 && (
+                <div
+                  style={{
+                    marginTop: "0.4rem",
+                    marginBottom: "0.25rem",
+                    padding: "0.5rem 0.6rem",
+                    borderRadius: 8,
+                    border: `1px solid ${colors.firstColor}66`,
+                    backgroundColor: `${colors.firstColor}14`,
+                    color: `${colors.white}e0`,
+                    fontSize: "0.76rem",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  No pre-computed hypotheses use{" "}
+                  <strong style={{ color: colors.white }}>
+                    {source.id || target.id}
+                  </strong>
+                  . Turn off <em>Only pre-computed hypotheses</em> above to run a
+                  new search, or choose a different entity.
+                </div>
+              )}
+
             <div
               style={{
                 marginTop: "0.2rem",
