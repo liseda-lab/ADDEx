@@ -202,25 +202,12 @@ export default function SearchPage() {
       // Initialize only the first 3 paths as visible
       setVisiblePaths(new Set(selectedPair.paths.slice(0, 3).map((p) => p.id)));
 
-      // LCAs are shown by default. The pre-computed verbalizations are produced
-      // offline with the LCA context and name those ontology classes directly
-      // (e.g. "all involving 20-Oxo Steroids"), so hiding the nodes left the
-      // summary describing entities that were absent from the graph. Showing
-      // them also keeps first-time (on-demand) verbalizations consistent with
-      // pre-computed ones, since the request body sends the visible LCAs.
-      // Mirrors the `allLcaNames` memo below; computed inline to keep this
-      // effect dependent only on `selectedPair`.
-      const lcaNames = new Set<string>();
-      selectedPair.paths.forEach((path) => {
-        if (!path.lowest_common_ancestors) return;
-        Object.values(path.lowest_common_ancestors).forEach((lcaList) => {
-          const arr = Array.isArray(lcaList) ? lcaList : [lcaList];
-          arr.forEach((lca) => {
-            if (lca) lcaNames.add(lca);
-          });
-        });
-      });
-      setVisibleLCAs(lcaNames);
+      // LCAs are hidden by default: the graph opens as the reasoning chain
+      // alone, and the expert reveals ontology (LCA) nodes from the toolbar's
+      // Show LCAs toggle or the per-LCA checkboxes. Note that pre-computed
+      // verbalizations still name these ontology classes; the nodes behind
+      // those mentions appear once the user toggles LCAs on.
+      setVisibleLCAs(new Set());
     }
   }, [selectedPair]);
 
