@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { User, Gear, ShareNetwork, Lightbulb } from "phosphor-react";
+import { User, Gear, ShareNetwork, Lightbulb, Warning } from "phosphor-react";
 
 import { useTheme, useThemeContext } from "../../../../styles/ThemeContext";
 import SelectorBlock from "./NodeSelectorBlock";
@@ -1119,21 +1119,32 @@ export default function PairSideMenu({
                   style={{
                     marginTop: "0.4rem",
                     marginBottom: "0.25rem",
-                    padding: "0.5rem 0.6rem",
+                    padding: "0.55rem 0.65rem",
                     borderRadius: 8,
-                    border: `1px solid ${colors.firstColor}66`,
-                    backgroundColor: `${colors.firstColor}14`,
-                    color: `${colors.white}e0`,
-                    fontSize: "0.76rem",
+                    border: "1px solid #E0A82E",
+                    borderLeft: "4px solid #E0A82E",
+                    backgroundColor: "#E0A82E22",
+                    color: colors.white,
+                    fontSize: "0.78rem",
                     lineHeight: 1.5,
+                    display: "flex",
+                    gap: 8,
+                    alignItems: "flex-start",
                   }}
                 >
-                  No pre-computed hypotheses use{" "}
-                  <strong style={{ color: colors.white }}>
-                    {source.id || target.id}
-                  </strong>
-                  . Turn off <em>Only pre-computed hypotheses</em> above to run a
-                  new search, or choose a different entity.
+                  <Warning
+                    size={16}
+                    weight="fill"
+                    color="#E0A82E"
+                    aria-hidden="true"
+                    style={{ flexShrink: 0, marginTop: 1 }}
+                  />
+                  <span>
+                    No pre-computed hypotheses use{" "}
+                    <strong>{source.id || target.id}</strong>. Turn off{" "}
+                    <em>Only pre-computed hypotheses</em> above to run a new
+                    search, or choose a different entity.
+                  </span>
                 </div>
               )}
 

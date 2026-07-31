@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import {
   Compass,
   UserFocus,
@@ -31,7 +31,7 @@ interface SchemaStep {
 
 interface FaqItem {
   q: string;
-  a: string;
+  a: ReactNode;
 }
 
 export default function GuidePage() {
@@ -138,7 +138,19 @@ export default function GuidePage() {
     },
     {
       q: "How do I cite this work?",
-      a: "The Research page lists the ADDEx reference and the two underlying algorithm papers (REx and Adaptive REx), with BibTeX and APA snippets ready to copy.",
+      a: (
+        <>
+          The{" "}
+          <a
+            href="/pages/about"
+            style={{ color: unifiedAccent, fontWeight: 600 }}
+          >
+            Research page
+          </a>{" "}
+          lists the ADDEx reference and the two underlying algorithm papers (REx
+          and Adaptive REx), with BibTeX and APA snippets ready to copy.
+        </>
+      ),
     },
   ];
 

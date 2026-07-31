@@ -421,7 +421,7 @@ export default function SearchPage() {
               marginBottom: "0.25rem",
             }}
           >
-            <EntityAvailabilityLauncher dropdown iconOnly />
+            <EntityAvailabilityLauncher dropdown iconOnly withLabel />
           </div>
 
           {!selectedPair && (

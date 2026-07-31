@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { MagnifyingGlass } from "phosphor-react";
 import { useTheme } from "../../../../styles/ThemeContext";
+import { getDefaultTypes, typeMatchesPreference } from "../../hooks/taskDefaults";
 
 interface GraphAvail {
   dataset: string;
@@ -37,12 +39,55 @@ const DATASET_ORDER = ["hetionet", "primekg", "oregano"];
 
 export default function EntityAvailability({
   bare = false,
+  onNavigate,
 }: {
   // When true, drop the outer card chrome (used inside the modal launcher,
   // which already provides a container).
   bare?: boolean;
+  // Called after a result is clicked and the search has been navigated to, so a
+  // host (e.g. the launcher dropdown) can close itself.
+  onNavigate?: () => void;
 }) {
   const colors = useTheme();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Clicking a dataset pill jumps to the search with that dataset, task, and the
+  // entity pre-filled into the correct side. Which side depends on the entity's
+  // type for that (dataset, task): a compound/drug is the source, a disease /
+  // gene / protein is the target. The pair is left incomplete on purpose (no
+  // autorun), so the user picks the counterpart and runs it.
+  const openInSearch = (g: GraphAvail, entityName: string) => {
+    const type = g.types[0];
+    const task = g.tasks[0];
+    if (!type || !task) return;
+    const name = g.viaName ?? entityName;
+    const { source: sourceTypes, target: targetTypes } = getDefaultTypes(
+      task,
+      g.dataset
+    );
+    const isSource = sourceTypes.some((t) => typeMatchesPreference(type, t));
+    const isTarget =
+      !isSource && targetTypes.some((t) => typeMatchesPreference(type, t));
+    const params = new URLSearchParams({
+      persona: searchParams.get("persona") ?? "neutral_evaluator",
+      personaName: searchParams.get("personaName") ?? "Neutral",
+      icon: searchParams.get("icon") ?? "Lightbulb",
+      dataset: g.dataset,
+      task,
+    });
+    // Only the target side when the type clearly matches a target; otherwise
+    // default to source (covers compounds/drugs and any ambiguous type).
+    if (isTarget) {
+      params.set("targetType", type);
+      params.set("targetName", name);
+    } else {
+      params.set("sourceType", type);
+      params.set("sourceName", name);
+    }
+    router.push(`/pages/search?${params.toString()}`);
+    onNavigate?.();
+  };
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Result[]>([]);
   const [loading, setLoading] = useState(false);
@@ -212,8 +257,13 @@ export default function EntityAvailability({
                       .join(", ");
                     const types = g.types.join(" / ");
                     return (
-                      <span
+                      <button
                         key={g.dataset}
+                        type="button"
+                        onClick={() => openInSearch(g, r.name)}
+                        title={`Open in ${
+                          DATASET_LABEL[g.dataset.toLowerCase()] ?? g.dataset
+                        } (${TASK_LABEL[g.tasks[0]] ?? g.tasks[0]}) with this entity pre-filled`}
                         style={{
                           display: "inline-flex",
                           alignItems: "baseline",
@@ -226,6 +276,17 @@ export default function EntityAvailability({
                           fontSize: "0.76rem",
                           fontWeight: 600,
                           lineHeight: 1.35,
+                          cursor: "pointer",
+                          fontFamily: "inherit",
+                          transition: "border-color 0.12s ease, background 0.12s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.borderColor = `${accent}aa`;
+                          e.currentTarget.style.background = `${accent}22`;
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.borderColor = `${accent}55`;
+                          e.currentTarget.style.background = `${accent}14`;
                         }}
                       >
                         {DATASET_LABEL[g.dataset.toLowerCase()] ?? g.dataset}
@@ -233,7 +294,7 @@ export default function EntityAvailability({
                           {types ? `· ${types}` : ""}
                           {tasks ? ` · ${tasks}` : ""}
                         </span>
-                      </span>
+                      </button>
                     );
                   })}
               </div>

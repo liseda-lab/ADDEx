@@ -195,8 +195,23 @@ export function Dropdown({
   useEffect(() => {
     if (!isOpen || !inputWrapperRef.current) return;
 
-    const updateMenuPosition = () => {
+    const updateMenuPosition = (event?: Event) => {
       if (!inputWrapperRef.current) return;
+
+      // The scroll listener is registered in capture phase, so it also fires
+      // when the user scrolls *inside* the menu. Repositioning on the menu's own
+      // scroll recomputed menuPosition every frame, which re-ran the virtual
+      // window and reflowed the list mid-scroll (the "jumping scrollbar"). Only
+      // reposition for scrolls that could actually move the input, i.e. those
+      // that did not originate inside the menu.
+      if (
+        event &&
+        menuRef.current &&
+        event.target instanceof Node &&
+        menuRef.current.contains(event.target)
+      ) {
+        return;
+      }
 
       const rect = inputWrapperRef.current.getBoundingClientRect();
       const viewportPadding = 12;
@@ -364,6 +379,27 @@ export function Dropdown({
         width: "100%",
       }}
     >
+      {/* Persistent custom scrollbar for the option menu. The native overlay
+          scrollbar (macOS) auto-hides until you scroll, so users could not tell
+          a long list was scrollable. The menu background is always dark
+          (darkblue), so a light translucent thumb reads on any theme. */}
+      <style>{`
+        .addex-menu-scroll::-webkit-scrollbar { width: 10px; }
+        .addex-menu-scroll::-webkit-scrollbar-track {
+          background: transparent;
+          margin: 4px 0;
+        }
+        .addex-menu-scroll::-webkit-scrollbar-thumb {
+          background-color: rgba(255,255,255,0.32);
+          border-radius: 6px;
+          border: 2px solid transparent;
+          background-clip: padding-box;
+        }
+        .addex-menu-scroll::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(255,255,255,0.5);
+          background-clip: padding-box;
+        }
+      `}</style>
       {inline && label && (
         <span
           style={{
@@ -449,7 +485,14 @@ export function Dropdown({
               createPortal(
                 <div
                   ref={menuRef}
+                  className="addex-menu-scroll"
                   style={{
+                    // Firefox persistent-scrollbar equivalents (WebKit uses the
+                    // ::-webkit-scrollbar rules above); gutter reserves the
+                    // track so options do not shift when it appears.
+                    scrollbarWidth: "thin" as const,
+                    scrollbarColor: "rgba(255,255,255,0.32) transparent",
+                    scrollbarGutter: "stable" as const,
                     position: "fixed",
                     top: menuPosition.top,
                     left: menuPosition.left,

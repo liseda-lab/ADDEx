@@ -57,43 +57,33 @@ export default function DatasetPage() {
         icon: Database,
       }}
       topActions={
-        <button
-          type="button"
-          onClick={() => router.back()}
-          style={{
-            background: "transparent",
-            border: "none",
-            color: `${colors.white}99`,
-            fontSize: "0.82rem",
-            cursor: "pointer",
-            textDecoration: "underline",
-            padding: "0.25rem 0.5rem",
-          }}
-        >
-          ← Back to profiles
-        </button>
-      }
-      outro={
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            gap: "0.6rem",
+            justifyContent: "space-between",
+            gap: "1rem",
             flexWrap: "wrap",
           }}
         >
-          <p
+          <button
+            type="button"
+            onClick={() => router.back()}
             style={{
-              margin: 0,
-              color: `${colors.white}c0`,
-              fontSize: "0.85rem",
-              lineHeight: 1.5,
+              background: "transparent",
+              border: "none",
+              color: `${colors.white}99`,
+              fontSize: "0.82rem",
+              cursor: "pointer",
+              textDecoration: "underline",
+              padding: "0.25rem 0.5rem",
             }}
           >
-            Look up a specific drug, disease, gene, or protein
-          </p>
-          <EntityAvailabilityLauncher dropdown iconOnly />
+            ← Back to profiles
+          </button>
+          {/* Lookup lives top-right as a reference tool, not in the flow below
+              the dataset cards. */}
+          <EntityAvailabilityLauncher dropdown iconOnly withLabel />
         </div>
       }
       actions={

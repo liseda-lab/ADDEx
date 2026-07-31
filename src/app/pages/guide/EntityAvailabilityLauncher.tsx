@@ -15,6 +15,9 @@ interface Props {
   // centered modal. Used in the search page's top-right corner, where a modal
   // reads like a step in the flow rather than the reference tool it is.
   dropdown?: boolean;
+  // With iconOnly, show the label permanently beside the round icon (instead of
+  // only on hover). Used where the bare icon is not self-explanatory.
+  withLabel?: boolean;
 }
 
 // Small trigger that opens the entity-availability checker in a modal. Used on
@@ -24,6 +27,7 @@ export default function EntityAvailabilityLauncher({
   compact = false,
   iconOnly = false,
   dropdown = false,
+  withLabel = false,
 }: Props) {
   const colors = useTheme();
   const [open, setOpen] = useState(false);
@@ -93,8 +97,11 @@ export default function EntityAvailabilityLauncher({
 
   // An icon-only dropdown trigger grows into a labelled pill while it is open,
   // so the collapsed state stays out of the way but the hovered state still
-  // says what it is.
-  const expanded = dropdown && iconOnly && open;
+  // says what it is. Skipped when the label is already shown permanently
+  // (withLabel), where there is nothing to reveal.
+  const expanded = dropdown && iconOnly && open && !withLabel;
+  // Round icon + permanent label beside it.
+  const inlineLabel = iconOnly && withLabel;
 
   return (
     <div
@@ -130,7 +137,22 @@ export default function EntityAvailabilityLauncher({
         aria-expanded={dropdown ? open : undefined}
         aria-haspopup={dropdown ? "dialog" : undefined}
         style={
-          iconOnly
+          inlineLabel
+            ? {
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "transparent",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+                color: colors.white,
+                fontSize: compact ? "0.8rem" : "0.85rem",
+                fontWeight: 600,
+                whiteSpace: "nowrap",
+                lineHeight: 1.2,
+              }
+            : iconOnly
             ? {
                 display: "inline-flex",
                 alignItems: "center",
@@ -172,23 +194,60 @@ export default function EntityAvailabilityLauncher({
               }
         }
       >
-        <MagnifyingGlass
-          size={iconOnly ? 18 : 14}
-          weight="bold"
-          aria-hidden="true"
-        />
-        {iconOnly && !expanded ? null : label}
-        {dropdown && !iconOnly ? (
-          <CaretDown
-            size={12}
-            weight="bold"
-            aria-hidden="true"
-            style={{
-              transform: open ? "rotate(180deg)" : "none",
-              transition: "transform 0.15s ease",
-            }}
-          />
-        ) : null}
+        {inlineLabel ? (
+          <>
+            <span
+              aria-hidden="true"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 38,
+                height: 38,
+                flexShrink: 0,
+                borderRadius: "50%",
+                border: `1px solid ${colors.white}30`,
+                background: colors.card,
+                color: colors.white,
+                boxShadow: "0 2px 10px rgba(0,0,0,0.22)",
+              }}
+            >
+              <MagnifyingGlass size={18} weight="bold" />
+            </span>
+            <span>{label}</span>
+            {dropdown ? (
+              <CaretDown
+                size={12}
+                weight="bold"
+                aria-hidden="true"
+                style={{
+                  transform: open ? "rotate(180deg)" : "none",
+                  transition: "transform 0.15s ease",
+                }}
+              />
+            ) : null}
+          </>
+        ) : (
+          <>
+            <MagnifyingGlass
+              size={iconOnly ? 18 : 14}
+              weight="bold"
+              aria-hidden="true"
+            />
+            {iconOnly && !expanded ? null : label}
+            {dropdown && !iconOnly ? (
+              <CaretDown
+                size={12}
+                weight="bold"
+                aria-hidden="true"
+                style={{
+                  transform: open ? "rotate(180deg)" : "none",
+                  transition: "transform 0.15s ease",
+                }}
+              />
+            ) : null}
+          </>
+        )}
       </button>
 
       {open && dropdown && (
@@ -215,7 +274,7 @@ export default function EntityAvailabilityLauncher({
           // is open, so travelling from the trigger into the panel is safe.
           onMouseEnter={cancelClose}
         >
-          <EntityAvailability bare />
+          <EntityAvailability bare onNavigate={() => setOpen(false)} />
         </div>
       )}
 
@@ -285,7 +344,7 @@ export default function EntityAvailabilityLauncher({
                 <X size={18} weight="bold" aria-hidden="true" />
               </button>
             </div>
-            <EntityAvailability bare />
+            <EntityAvailability bare onNavigate={() => setOpen(false)} />
           </div>
         </div>
       )}
