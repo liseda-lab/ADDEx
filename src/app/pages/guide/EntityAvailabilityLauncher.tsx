@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { CaretDown, MagnifyingGlass, X } from "phosphor-react";
-import { useTheme } from "../../../../styles/ThemeContext";
+import { useTheme, useThemeContext } from "../../../../styles/ThemeContext";
 import EntityAvailability from "./EntityAvailability";
 
 interface Props {
@@ -30,6 +30,11 @@ export default function EntityAvailabilityLauncher({
   withLabel = false,
 }: Props) {
   const colors = useTheme();
+  const { theme } = useThemeContext();
+  // The inline label sits on the page background. `colors.white` is the
+  // foreground for most themes, but in legacy it is literally white on a white
+  // page (its dark cards use it), so the label needs a dark colour there.
+  const inlineLabelColor = theme === "legacy" ? colors.black : colors.white;
   const [open, setOpen] = useState(false);
   // "Pinned" means the panel was opened deliberately (clicked, or the user has
   // focused something inside it). Pinned panels ignore mouse-leave, so drifting
@@ -146,7 +151,7 @@ export default function EntityAvailabilityLauncher({
                 border: "none",
                 padding: 0,
                 cursor: "pointer",
-                color: colors.white,
+                color: inlineLabelColor,
                 fontSize: compact ? "0.8rem" : "0.85rem",
                 fontWeight: 600,
                 whiteSpace: "nowrap",

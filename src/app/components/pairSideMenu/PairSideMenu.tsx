@@ -1148,6 +1148,42 @@ export default function PairSideMenu({
                 </div>
               )}
 
+            {/* Flag when the selected pair is pre-computed but has no valid
+                path. These are hidden from the browse list, so this only shows
+                when the user found one by typing its name. */}
+            {precomputedOnly && selectedIsNoPath && (
+              <div
+                style={{
+                  marginTop: "0.4rem",
+                  marginBottom: "0.25rem",
+                  padding: "0.55rem 0.65rem",
+                  borderRadius: 8,
+                  border: "1px solid #E0A82E",
+                  borderLeft: "4px solid #E0A82E",
+                  backgroundColor: "#E0A82E22",
+                  color: colors.white,
+                  fontSize: "0.78rem",
+                  lineHeight: 1.5,
+                  display: "flex",
+                  gap: 8,
+                  alignItems: "flex-start",
+                }}
+              >
+                <Warning
+                  size={16}
+                  weight="fill"
+                  color="#E0A82E"
+                  aria-hidden="true"
+                  style={{ flexShrink: 0, marginTop: 1 }}
+                />
+                <span>
+                  This hypothesis is pre-computed but has no valid reasoning
+                  path. Running it will show the no-path result rather than an
+                  explanation.
+                </span>
+              </div>
+            )}
+
             <div
               style={{
                 marginTop: "0.2rem",

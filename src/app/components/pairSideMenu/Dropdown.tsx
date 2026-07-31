@@ -30,6 +30,10 @@ interface DropdownProps {
   // that actually have an explanation. Muted options stay selectable.
   mutedOptions?: Set<string>;
   mutedGroupLabel?: string;
+  // Keep muted options out of the browse list until the user types, then reveal
+  // matches. Used so no-path pairs do not clutter the default list but can still
+  // be found (and flagged) by name.
+  hideMutedUntilQuery?: boolean;
 }
 
 export function Dropdown({
@@ -45,6 +49,7 @@ export function Dropdown({
   displayFor,
   mutedOptions,
   mutedGroupLabel,
+  hideMutedUntilQuery = false,
 }: DropdownProps) {
   const colors = useTheme();
   const OPTION_ROW_HEIGHT = 34;
@@ -52,6 +57,11 @@ export function Dropdown({
   const [userDeselected, setUserDeselected] = useState(false);
   const [query, setQuery] = useState(value);
   const [isOpen, setIsOpen] = useState(false);
+  // The "No valid paths found" group is collapsible: a titled header with a
+  // caret that folds the dimmed no-path options away. Collapsed by default to
+  // keep the browse list clean; the header reads as a real section and is a
+  // clear click target to reveal the group.
+  const [mutedCollapsed, setMutedCollapsed] = useState(true);
   const [portalReady, setPortalReady] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
   const [menuPosition, setMenuPosition] = useState<{
@@ -157,13 +167,31 @@ export function Dropdown({
     return { normalOptions: normal, mutedFilteredOptions: muted };
   }, [grouped, baseFilteredOptions, mutedOptions]);
 
+  // Muted options are hidden from the browse list until the user types, when
+  // `hideMutedUntilQuery` is set. Everything downstream (virtual window, render,
+  // keyboard nav, divider allowance) keys off `filteredOptions`, so gating here
+  // is enough.
+  const showMuted =
+    grouped && (!hideMutedUntilQuery || query.trim().length > 0);
+  // The header still renders when muted options exist; `visibleMuted` (used for
+  // keyboard nav, height and the option buttons) additionally folds away while
+  // the group is collapsed, so nav skips the hidden rows.
+  const hasMutedGroup = showMuted && mutedFilteredOptions.length > 0;
+  const visibleMuted =
+    showMuted && !mutedCollapsed ? mutedFilteredOptions : [];
+
   const filteredOptions = useMemo(
     () =>
-      grouped
-        ? [...normalOptions, ...mutedFilteredOptions]
-        : baseFilteredOptions,
-    [grouped, normalOptions, mutedFilteredOptions, baseFilteredOptions]
+      grouped ? [...normalOptions, ...visibleMuted] : baseFilteredOptions,
+    [grouped, normalOptions, visibleMuted, baseFilteredOptions]
   );
+
+  // If the current selection is itself a no-path option, reveal the group so
+  // the selected row stays visible rather than hidden behind the collapsed
+  // header. Only auto-expands; a manual collapse still sticks.
+  useEffect(() => {
+    if (value && mutedOptions?.has(value)) setMutedCollapsed(false);
+  }, [value, mutedOptions]);
 
   const visibleWindow = useMemo(() => {
     if (!menuPosition) {
@@ -227,8 +255,7 @@ export function Dropdown({
       const showAbove = spaceBelow < 240 && spaceAbove > spaceBelow;
       const available = showAbove ? spaceAbove : spaceBelow;
       const maxHeight = Math.max(140, Math.min(280, available));
-      const dividerAllowance =
-        grouped && mutedFilteredOptions.length > 0 ? 28 : 0;
+      const dividerAllowance = hasMutedGroup ? 28 : 0;
       const naturalMenuHeight = Math.max(
         OPTION_ROW_HEIGHT,
         filteredOptions.length * OPTION_ROW_HEIGHT + dividerAllowance
@@ -515,68 +542,147 @@ export function Dropdown({
                   }
                 >
                   {grouped ? (
-                    // Grouped render (small filtered list): a "no valid paths"
-                    // divider between the primary options and the dimmed muted
-                    // ones. Not virtualized — the pre-computed set for one
-                    // endpoint is bounded, so a flow layout keeps the divider
-                    // trivial to place.
+                    // Grouped render (small filtered list): the primary options,
+                    // then a collapsible "No valid paths found" header with a
+                    // caret + count that folds the dimmed no-path options away.
+                    // Not virtualized — the pre-computed set for one endpoint is
+                    // bounded, so a flow layout keeps placement trivial.
                     <div>
-                      {filteredOptions.map((opt, absoluteIndex) => {
-                        const isMuted = Boolean(mutedOptions?.has(opt));
+                      {normalOptions.map((opt, absoluteIndex) => {
                         const isHighlighted = absoluteIndex === highlightedIndex;
                         return (
-                          <React.Fragment key={opt}>
-                            {isMuted &&
-                              absoluteIndex === normalOptions.length && (
-                                <div
-                                  style={{
-                                    padding: "5px 10px",
-                                    fontSize: "0.72rem",
-                                    fontWeight: 600,
-                                    color: `${colors.white}80`,
-                                    backgroundColor: `${colors.white}0d`,
-                                    borderTop: `0.5px solid ${colors.white}20`,
-                                    borderBottom: `0.5px solid ${colors.white}20`,
-                                  }}
-                                >
-                                  {mutedGroupLabel ?? "No valid paths found"}
-                                </div>
-                              )}
-                            <button
-                              type="button"
-                              onMouseDown={(e) => e.preventDefault()}
-                              onMouseEnter={() =>
-                                setHighlightedIndex(absoluteIndex)
-                              }
-                              onClick={() => commitOption(opt)}
-                              style={{
-                                height: OPTION_ROW_HEIGHT,
-                                display: "block",
-                                textAlign: "left" as const,
-                                padding: "8px 10px",
-                                border: "none",
-                                background: isHighlighted
-                                  ? `${colors.white}30`
-                                  : opt === value
-                                  ? `${colors.white}18`
-                                  : "transparent",
-                                color: isMuted
-                                  ? `${colors.white}85`
-                                  : colors.white,
-                                cursor: "pointer",
-                                fontSize: "0.84rem",
-                                whiteSpace: "nowrap" as const,
-                                overflow: "hidden" as const,
-                                textOverflow: "ellipsis" as const,
-                                lineHeight: 1.35,
-                                width: "100%",
-                              }}
-                            >
-                              {displayFor ? displayFor(opt) : opt}
-                            </button>
-                          </React.Fragment>
+                          <button
+                            key={opt}
+                            type="button"
+                            onMouseDown={(e) => e.preventDefault()}
+                            onMouseEnter={() =>
+                              setHighlightedIndex(absoluteIndex)
+                            }
+                            onClick={() => commitOption(opt)}
+                            style={{
+                              height: OPTION_ROW_HEIGHT,
+                              display: "block",
+                              textAlign: "left" as const,
+                              padding: "8px 10px",
+                              border: "none",
+                              background: isHighlighted
+                                ? `${colors.white}30`
+                                : opt === value
+                                ? `${colors.white}18`
+                                : "transparent",
+                              color: colors.white,
+                              cursor: "pointer",
+                              fontSize: "0.84rem",
+                              whiteSpace: "nowrap" as const,
+                              overflow: "hidden" as const,
+                              textOverflow: "ellipsis" as const,
+                              lineHeight: 1.35,
+                              width: "100%",
+                            }}
+                          >
+                            {displayFor ? displayFor(opt) : opt}
+                          </button>
                         );
                       })}
+                      {hasMutedGroup && (
+                        <>
+                          <button
+                            type="button"
+                            onMouseDown={(e) => e.preventDefault()}
+                            onClick={() => setMutedCollapsed((v) => !v)}
+                            aria-expanded={!mutedCollapsed}
+                            title={
+                              mutedCollapsed
+                                ? "Show no-path options"
+                                : "Hide no-path options"
+                            }
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 7,
+                              width: "100%",
+                              textAlign: "left" as const,
+                              padding: "6px 10px",
+                              fontSize: "0.72rem",
+                              fontWeight: 600,
+                              fontFamily: "inherit",
+                              color: `${colors.white}99`,
+                              backgroundColor: `${colors.white}0d`,
+                              borderTop: `0.5px solid ${colors.white}20`,
+                              borderBottom: `0.5px solid ${colors.white}20`,
+                              borderLeft: "none",
+                              borderRight: "none",
+                              cursor: "pointer",
+                            }}
+                          >
+                            <span
+                              aria-hidden="true"
+                              style={{
+                                display: "inline-block",
+                                fontSize: "0.6rem",
+                                lineHeight: 1,
+                                flexShrink: 0,
+                                transform: mutedCollapsed
+                                  ? "rotate(-90deg)"
+                                  : "none",
+                                transition: "transform 0.15s ease",
+                              }}
+                            >
+                              ▾
+                            </span>
+                            <span
+                              style={{
+                                flex: 1,
+                                minWidth: 0,
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                              }}
+                            >
+                              {mutedGroupLabel ?? "No valid paths found"}
+                            </span>
+                          </button>
+                          {visibleMuted.map((opt, mutedIndex) => {
+                            const absoluteIndex =
+                              normalOptions.length + mutedIndex;
+                            const isHighlighted =
+                              absoluteIndex === highlightedIndex;
+                            return (
+                              <button
+                                key={opt}
+                                type="button"
+                                onMouseDown={(e) => e.preventDefault()}
+                                onMouseEnter={() =>
+                                  setHighlightedIndex(absoluteIndex)
+                                }
+                                onClick={() => commitOption(opt)}
+                                style={{
+                                  height: OPTION_ROW_HEIGHT,
+                                  display: "block",
+                                  textAlign: "left" as const,
+                                  padding: "8px 10px",
+                                  border: "none",
+                                  background: isHighlighted
+                                    ? `${colors.white}30`
+                                    : opt === value
+                                    ? `${colors.white}18`
+                                    : "transparent",
+                                  color: `${colors.white}85`,
+                                  cursor: "pointer",
+                                  fontSize: "0.84rem",
+                                  whiteSpace: "nowrap" as const,
+                                  overflow: "hidden" as const,
+                                  textOverflow: "ellipsis" as const,
+                                  lineHeight: 1.35,
+                                  width: "100%",
+                                }}
+                              >
+                                {displayFor ? displayFor(opt) : opt}
+                              </button>
+                            );
+                          })}
+                        </>
+                      )}
                     </div>
                   ) : (
                     <div

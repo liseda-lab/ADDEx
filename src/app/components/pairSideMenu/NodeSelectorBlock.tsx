@@ -22,6 +22,8 @@ interface SelectorBlockProps {
   // from the ones with an explanation in the "only pre-computed" filter.
   secondaryMutedOptions?: Set<string>;
   secondaryMutedGroupLabel?: string;
+  // Hide the muted (no-path) options from the browse list until the user types.
+  secondaryHideMutedUntilQuery?: boolean;
 }
 
 export default function SelectorBlock({
@@ -38,6 +40,7 @@ export default function SelectorBlock({
   mainDisplayFor,
   secondaryMutedOptions,
   secondaryMutedGroupLabel,
+  secondaryHideMutedUntilQuery,
 }: SelectorBlockProps) {
   const colors = useTheme();
   const isLocked = !allowDeselect;
@@ -143,6 +146,7 @@ export default function SelectorBlock({
             autoSelectSingle={false}
             mutedOptions={secondaryMutedOptions}
             mutedGroupLabel={secondaryMutedGroupLabel}
+            hideMutedUntilQuery={secondaryHideMutedUntilQuery}
           />
         </div>
       )}
