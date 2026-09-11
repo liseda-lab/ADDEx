@@ -10,7 +10,7 @@ knowledge graphs. It supports both **drug repurposing** and
 and pairs every prediction with a reasoning path through the graph plus a
 natural-language summary the expert can scrutinize.
 
-> Hosted instance: *coming soon* — no installation required for end users.
+> Hosted instance: [ADDEx](https://addex.lasige.di.fc.ul.pt/)
 
 ---
 
